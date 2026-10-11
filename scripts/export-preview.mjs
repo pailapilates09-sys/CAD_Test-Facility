@@ -1,0 +1,28 @@
+import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {renderDrawings,drawingInfo} from '../src/drawings.mjs';
+const root=new URL('../',import.meta.url),dist=new URL('dist/',root),out=new URL('releases/',root);
+await mkdir(out,{recursive:true});
+const files={};
+for(const [key,path] of Object.entries({core:'vendor/three.core.min.js',three:'vendor/three.module.min.js',orbit:'vendor/OrbitControls.js',spec:'assets/spec.mjs',drawings:'assets/drawings.mjs',model:'assets/model.mjs',app:'assets/app.mjs'}))files[key]=(await readFile(new URL(path,dist))).toString('base64');
+const resources={};
+const add=async(name,type)=>resources[name]={type,data:(await readFile(new URL('downloads/'+name,dist))).toString('base64')};
+await add('Column_Formwork_Inches_Only.pdf','application/pdf');await add('Material_Quantities.csv','text/csv');await add('Column_Formwork_Overview.png','image/png');
+for(const d of drawingInfo)await add(d.filename,'image/svg+xml');
+const css=await readFile(new URL('style.css',dist),'utf8');
+const favicon=(await readFile(new URL('favicon.svg',dist))).toString('base64');
+const boot=`
+const modules=${JSON.stringify(files)};
+const resources=${JSON.stringify(resources)};
+const decode=s=>new TextDecoder().decode(Uint8Array.from(atob(s),c=>c.charCodeAt(0)));
+const js=s=>URL.createObjectURL(new Blob([s],{type:'text/javascript'}));
+const u={};u.core=js(decode(modules.core));u.three=js(decode(modules.three).replaceAll('./three.core.min.js',u.core));u.orbit=js(decode(modules.orbit).replaceAll('./three.module.min.js',u.three));u.spec=js(decode(modules.spec));u.drawings=js(decode(modules.drawings).replaceAll('./spec.mjs',u.spec));u.model=js(decode(modules.model).replaceAll('../vendor/three.module.min.js',u.three).replaceAll('../vendor/OrbitControls.js',u.orbit).replaceAll('./spec.mjs',u.spec));
+window.cadOfflineFiles=Object.fromEntries(Object.entries(resources).map(([name,r])=>[name,URL.createObjectURL(new Blob([Uint8Array.from(atob(r.data),c=>c.charCodeAt(0))],{type:r.type}))]));
+document.querySelectorAll('a[href^="./downloads/"]').forEach(a=>a.href=window.cadOfflineFiles[a.getAttribute('href').split('/').at(-1)]);
+document.querySelectorAll('img[src^="./downloads/"]').forEach(a=>a.src=window.cadOfflineFiles[a.getAttribute('src').split('/').at(-1)]);
+let app=decode(modules.app).replaceAll('./spec.mjs',u.spec).replaceAll('./drawings.mjs',u.drawings).replaceAll('./model.mjs',u.model).replace("'./downloads/'+info.filename","window.cadOfflineFiles[info.filename]");
+await import(js(app));
+`;
+let html=await readFile(new URL('index.html',dist),'utf8');
+html=html.replace('<link rel="stylesheet" href="./style.css">',`<style>${css}</style>`).replace('href="./favicon.svg"',`href="data:image/svg+xml;base64,${favicon}"`).replace('<script type="module" src="./assets/app.mjs"></script>',`<script type="module">${boot}</script>`);
+await writeFile(new URL('Column_Formwork_Interactive_Preview.html',out),html);
+console.log('Exported self-contained preview: open directly in a modern browser. External Drive links still require Internet access.');

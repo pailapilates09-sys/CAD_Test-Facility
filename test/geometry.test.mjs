@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {spec as s,braceLength,materials,sources} from '../src/spec.mjs';
+import {renderDrawings} from '../src/drawings.mjs';
+test('B wraps both A ends while retaining the specified clear opening',()=>{assert.equal(s.panels[0].width,16);assert.ok(Math.abs(s.panels[1].width-2*s.ply-16)<1e-10);assert.equal(s.height,96);});
+test('one of each panel fits a stock sheet with both saw cuts',()=>{assert.ok(s.panels[0].width+s.panels[1].width+2*s.kerf<s.sheet.width);assert.equal(s.panels.reduce((n,p)=>n+p.qty,0),4);});
+test('nail count, end offsets and longest gap agree with the retention schedule',()=>{assert.equal(s.nailPositions.length*3*4,204);assert.ok(Math.abs(s.nailPositions[0]-s.nailEndOffset)<1e-10);assert.ok(Math.abs(96-s.nailPositions.at(-1)-s.nailEndOffset)<1e-10);for(let i=1;i<s.nailPositions.length;i++)assert.ok(s.nailPositions[i]-s.nailPositions[i-1]<=s.nailPitch+1e-10);});
+test('batten edge offsets and rail heights fit the panels',()=>{for(const p of s.panels){assert.equal(p.centres[0],1);assert.ok(Math.abs(p.width-p.centres.at(-1)-1)<1e-10);assert.ok(Math.abs(p.centres[1]-p.width/2)<1e-10);}assert.equal(s.collarDatums[0]-3,0);assert.equal(s.collarDatums.at(-1)+3,96);});
+test('stock cutting can supply rails and brace offcut blocks',()=>{assert.ok(3*s.railLength+3*s.kerf<96);assert.ok(braceLength+2*s.blockLength+3*s.kerf<120);assert.ok(Math.abs(braceLength-96.8837232197)<1e-8);assert.equal(materials.find(m=>m.id==='Y1').qty,36);});
+test('drawing exports contain only inch dimension labels and ten primary sources',()=>{const drawings=renderDrawings();assert.equal(Object.keys(drawings).length,5);for(const svg of Object.values(drawings)){assert.ok(svg.startsWith('<svg'));assert.ok(!/\b(mm|ft|feet|metres|meters)\b/.test(svg));assert.ok(svg.includes('All dimensions in inches'));}assert.equal(sources.length,10);assert.equal(new Set(sources.map(s=>s.url)).size,10);});
