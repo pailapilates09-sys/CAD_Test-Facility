@@ -19,10 +19,10 @@ const u={};u.core=js(decode(modules.core));u.three=js(decode(modules.three).repl
 window.cadOfflineFiles=Object.fromEntries(Object.entries(resources).map(([name,r])=>[name,URL.createObjectURL(new Blob([Uint8Array.from(atob(r.data),c=>c.charCodeAt(0))],{type:r.type}))]));
 document.querySelectorAll('a[href^="./downloads/"]').forEach(a=>a.href=window.cadOfflineFiles[a.getAttribute('href').split('/').at(-1)]);
 document.querySelectorAll('img[src^="./downloads/"]').forEach(a=>a.src=window.cadOfflineFiles[a.getAttribute('src').split('/').at(-1)]);
-let app=decode(modules.app).replaceAll('./spec.mjs',u.spec).replaceAll('./drawings.mjs',u.drawings).replaceAll('./model.mjs',u.model).replace("'./downloads/'+info.filename","window.cadOfflineFiles[info.filename]");
+let app=decode(modules.app).replaceAll('./spec.mjs',u.spec).replaceAll('./drawings.mjs',u.drawings).replaceAll('./model.mjs',u.model).replace("new URL('../downloads/'+info.filename, import.meta.url).href","window.cadOfflineFiles[info.filename]");
 await import(js(app));
 `;
-let html=await readFile(new URL('index.html',dist),'utf8');
-html=html.replace('<link rel="stylesheet" href="./style.css">',`<style>${css}</style>`).replace('href="./favicon.svg"',`href="data:image/svg+xml;base64,${favicon}"`).replace('<script type="module" src="./assets/app.mjs"></script>',`<script type="module">${boot}</script>`);
+let html=await readFile(new URL('cad/index.html',dist),'utf8');
+html=html.replaceAll('../downloads/','./downloads/').replace('<link rel="stylesheet" href="../style.css">',`<style>${css}</style>`).replace('href="../favicon.svg"',`href="data:image/svg+xml;base64,${favicon}"`).replace('<script type="module" src="../assets/app.mjs"></script>',`<script type="module">${boot}</script>`);
 await writeFile(new URL('Column_Formwork_Interactive_Preview.html',out),html);
 console.log('Exported self-contained preview: open directly in a modern browser. External Drive links still require Internet access.');

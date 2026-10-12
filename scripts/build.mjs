@@ -16,4 +16,4 @@ await writeFile(new URL('downloads/Column_Formwork_Specification.json',dist),JSO
 await writeFile(new URL('downloads/Open_Source_Review.json',dist),JSON.stringify(sources,null,2));
 await writeFile(new URL('.nojekyll',dist),'');
 await readFile(new URL('downloads/Column_Formwork_Inches_Only.pdf',dist));
-console.log('Built static site with 5 SVG sheets, PDF, CSV and shared inch specification. No CDN or build dependencies required.');
+console.log('Built workspace home, preserved CAD subpage and verified project-progress subpage. CAD includes 5 SVG sheets, PDF and CSV.');

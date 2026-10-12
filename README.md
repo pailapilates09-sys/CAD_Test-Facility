@@ -2,6 +2,28 @@
 
 Interactive product drawings for the browser, published with GitHub Pages and Actions. First product: a preliminary column formwork assembly, 16 in x 16 in clear, with 96 in panel height. All displayed dimensions are inches.
 
+## Workspace pages
+
+Preservation/rollback baseline: commit `bbf90547c6e11b2754415e234fc310ea42bf62c8`. This release keeps the original CAD geometry and drawing/PDF assets and changes only navigation, resource resolution and the new status projection. Reverting the workspace release restores the prior single-page site.
+
+- `/`: workspace home with separate entries for CAD and project progress.
+- `/cad/`: the original formwork facility, including its model, five drawings, quantities and downloads. Geometry, vendor assets and the inch-only PDF are preserved.
+- `/progress/`: a dated read-only A9 onboarding projection, including the four-lane map, actual Drive parent hierarchy, phase coverage, sequence cursors, debts, access proofs and capability contracts. Legacy root links such as `/#model` redirect to the equivalent CAD section.
+
+The project snapshot is `src/progress-data.mjs`. It contains bounded reviewed status facts, not the full handover or private source bodies. `src/progress.mjs` renders it with native SVG and an expandable tree. It is a one-time snapshot; it has no connected-account credentials, live Drive API access or automatic refresh.
+
+## Onboarding evidence and scope
+
+The complete cross-account handover was independently read through the connected account: 756 paragraphs, 31,854 characters and a complete JSON parse. All 71 supplied Drive IDs were checked; 70 metadata reads passed and the exact AEC Oct9 terminal checkpoint returned 404. This does not prove deletion.
+
+Representative raw readback passed for LSA JSONL (416 records and checkpoint SHA), MSCS SQLite (2,187 records, integrity_check=ok and checkpoint SHA), the 80-page Kaski PDF (page39 rendered; no text-layer/OCR acceptance), MSCH manifest/queue/CP12 (500 records, 99 pending folders), and JP Cost SRC-0005 ZIP (11 total members, 10 JSONL files plus manifest; CRC pass). Six-source JP Cost totals are from the freshly read checkpoint; only the representative archive was downloaded in this account.
+
+Main/Local cursors were read independently from all four Local registrars and Main. AEC is Local11/Main10; the other three agree. Matched MSCS cursors do not clear the registrar narrative's older CP60/B048 pointer versus CP84/B072 machine state.
+
+No project ingestion, source/control change, Main cursor update, permission change or schedule creation/resumption occurred. GitHub website publication is separately authorized by the user's website request. Exposed MSCH source/control edit-link IDs, raw prices, personal contacts, signed file references and raw scientific datasets are excluded from the public projection. Raw upload/update contracts are documented as available but untested under read-only scope.
+
+Reproduction uses the original handover's stable IDs, Google Drive metadata/text/range reads, `fetch(download_raw_file=true, include_base64=false)`, authenticated file materialization, Python json/sqlite3/zipfile/hashlib and Poppler. Relevant successful argument shapes and verification limits are retained in the public capability report; no bearer URLs are retained. Snapshot metrics keep their phase-specific denominators; AEC/MSCH overall percentages remain unknown.
+
 ## What is included
 
 - Three.js r180 viewer: orbit/zoom, assembled and timber-frame presets, separated faces, layer controls, piece inspection, assembly steps and PNG export.
