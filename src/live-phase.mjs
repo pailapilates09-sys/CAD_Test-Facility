@@ -1,24 +1,24 @@
 export const livePhase = {
-  "phase": "04",
-  "title": "MSCH B016 - stopped at verified CP16",
+  "phase": "05",
+  "title": "MSCH B017 - stopped at verified CP17",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT",
-  "completedAt": "2026-10-12T18:54:04.145384+05:45",
-  "checkpoint": "MSCH-CORPUS-CP16 / B016",
+  "completedAt": "2026-10-13T05:43:36.591170+05:45",
+  "checkpoint": "MSCH-CORPUS-CP17 / B017",
   "before": {
-    "rows": 507,
-    "folders": 155,
-    "files": 352,
-    "pending": 102
-  },
-  "after": {
     "rows": 508,
     "folders": 155,
     "files": 353,
     "pending": 101
   },
+  "after": {
+    "rows": 516,
+    "folders": 158,
+    "files": 358,
+    "pending": 103
+  },
   "completedBatches": 1,
-  "scope": "One FIFO ArcGIS folder; Flood_mapping.zip catalogued (12,510,728 metadata-reported bytes). Archive contents remain unextracted.",
-  "providerReadback": "Four original CURRENT IDs and CP16 passed exact byte/SHA readback. PRE archive passed SHA and CRC. Local seq7, pending Main notice and native Local POST snapshots passed provider readback.",
+  "scope": "One FIFO Arcgis folder under Python_Works: 3 subfolders and 5 files catalogued, including the zero-byte Test.py occurrence. Added 176,697,169 metadata-reported bytes. Source contents remain unextracted.",
+  "providerReadback": "Four original CURRENT IDs and CP17 passed exact byte/SHA readback. PRE archive passed SHA and CRC. Local seq8, pending Main notice and native Local POST snapshots passed provider readback.",
   "localRegistration": "LOCAL_FINAL",
   "mainAck": "PENDING_SEPARATE_MAIN_SYNC",
   "budget": {
@@ -59,40 +59,47 @@ export const livePhase = {
     },
     {
       "phase": "05",
+      "lane": "MSCH / Local",
+      "work": "B017: catalogue Arcgis under Python_Works (8 direct occurrences)",
+      "stop": "CP17 + Local seq8 + pending Main notice",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "06",
       "lane": "MSCS",
-      "work": "B073 hash population: at most20 files / 10MB, fewer if needed to close safely",
+      "work": "B073 hash population: at most20 files / 10MB, fewer if needed for safe closure",
       "stop": "One verified hash checkpoint; extraction remains off",
       "status": "Queued"
     },
     {
-      "phase": "06",
+      "phase": "07",
       "lane": "LSA",
       "work": "B055: one complete candidate branch after footprint and idempotency checks",
       "stop": "One native/JSONL-agreed checkpoint; no video transcription",
       "status": "Queued"
     },
     {
-      "phase": "07",
+      "phase": "08",
       "lane": "AEC",
-      "work": "Recover original terminal checkpoint; close existing G076 records in place",
-      "stop": "Verified existing lock/checkpoint closure; no duplicate rate rows",
+      "work": "Recover original terminal checkpoint and close existing G076 records in place",
+      "stop": "Verified original lock/checkpoint closure; no duplicate rate rows",
       "status": "Access blocker"
     },
     {
-      "phase": "08",
+      "phase": "09",
       "lane": "MSCH",
-      "work": "B017: first remaining FIFO folder (Arcgis under Python_Works)",
+      "work": "B018: first remaining FIFO folder (basinStates under HEC HMS/Thesis_01)",
       "stop": "One checkpoint + provider readback + Local registration",
       "status": "Queued"
     }
   ],
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 7,
+  "localHighWater": 8,
   "mainCursor": 3,
-  "nextBatch": "B017",
-  "nextTarget": "Arcgis (Python_Works)",
-  "newRows": 1,
-  "newFolders": 0,
-  "newFiles": 1,
-  "newKnownBytes": 12510728
+  "nextBatch": "B018",
+  "nextTarget": "basinStates (HEC HMS/Thesis_01)",
+  "newRows": 8,
+  "newFolders": 3,
+  "newFiles": 5,
+  "newKnownBytes": 176697169
 };
