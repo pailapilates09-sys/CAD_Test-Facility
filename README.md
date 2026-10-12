@@ -80,3 +80,9 @@ This is a geometry, cutting and assembly guide. The timber section is assumed ac
 ## Open-source notices
 
 Three.js r180 and OrbitControls are bundled locally under the MIT license. See `vendor/THREE-LICENSE.txt`. The ten-project review is in `src/spec.mjs` and the downloadable JSON. Other reviewed libraries are not installed in this release.
+
+## Live phase 01 - 2026-10-12
+
+MSCH B013 advanced the physical catalogue from 500 to 501 rows (150 folders, 351 files, 99 pending folders). The existing manifest, FIFO queue, project-state and read-first IDs were updated in place after a verified PRE rollback archive. All four outputs and finalized CP13 passed exact provider byte/hash readback. Source bodies, original files and schedules were not changed. Local registration and Main ACK remain a separate next phase; no global closeout is claimed. The progress page shows this live result above its explicitly historical onboarding snapshot.
+
+Phase caps: one verified checkpoint per package; maximum 20 minutes, stop new work at 14 weighted work units or approximately 14 minutes, reserve six closeout units. New batches and the scheduler remain off after the stopping point.
