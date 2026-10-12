@@ -1,24 +1,24 @@
 export const livePhase = {
-  "phase": "02",
-  "title": "MSCH B014 - stopped at verified CP14",
+  "phase": "03",
+  "title": "MSCH B015 - stopped at verified CP15",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT",
-  "completedAt": "2026-10-12T10:37:06.132825+05:45",
-  "checkpoint": "MSCH-CORPUS-CP14 / B014",
+  "completedAt": "2026-10-12T16:25:43.135649+05:45",
+  "checkpoint": "MSCH-CORPUS-CP15 / B015",
   "before": {
-    "rows": 501,
-    "folders": 150,
-    "files": 351,
-    "pending": 99
-  },
-  "after": {
     "rows": 504,
     "folders": 152,
     "files": 352,
     "pending": 100
   },
+  "after": {
+    "rows": 507,
+    "folders": 155,
+    "files": 352,
+    "pending": 102
+  },
   "completedBatches": 1,
-  "scope": "One FIFO folder; three physical metadata entries added: two folders and one PNG (470,990 known bytes).",
-  "providerReadback": "Four original CURRENT file IDs passed exact byte/SHA readback; PRE archive passed SHA and CRC. CP13/CP14 Local records and pending Main notice passed provider readback.",
+  "scope": "One FIFO folder (.Rproj.user); three physical child folders catalogued. No source-content extraction.",
+  "providerReadback": "Four original CURRENT file IDs and CP15 passed exact byte/SHA readback. PRE archive passed SHA and CRC. Local seq6 and pending Main notice passed provider readback; native Local POST snapshots are preserved.",
   "localRegistration": "LOCAL_FINAL",
   "mainAck": "PENDING_SEPARATE_MAIN_SYNC",
   "budget": {
@@ -32,59 +32,59 @@ export const livePhase = {
     {
       "phase": "01",
       "lane": "MSCH",
-      "work": "B013: scan one Test folder",
-      "stop": "CP13 + provider readback",
-      "status": "Complete - stopped"
+      "work": "B013: catalogue Test",
+      "stop": "CP13 + exact provider readback",
+      "status": "Complete"
     },
     {
       "phase": "02",
       "lane": "MSCH / Local",
-      "work": "Register CP13 and CP14 with PRE/POST lineage in the existing Local Library; publish its bounded Main notice",
-      "stop": "Local readback + PENDING Main notice; Main cursor unchanged",
-      "status": "Complete - Local seq5; Main cursor3; notice pending"
+      "work": "B014: catalogue Upload problems files; register CP13/CP14",
+      "stop": "CP14 + Local seq5 + pending Main notice",
+      "status": "Complete"
     },
     {
       "phase": "03",
-      "lane": "MSCS",
-      "work": "B073 hash population; at most 20 eligible files and 10 MB, fewer if required to close safely",
-      "stop": "One deeply verified hash checkpoint; extraction remains false",
-      "status": "Queued - requires a separate bounded byte-update package"
+      "lane": "MSCH / Local",
+      "work": "B015: catalogue .Rproj.user (3 direct subfolders)",
+      "stop": "CP15 + Local seq6 + pending Main notice",
+      "status": "Complete - stopped"
     },
     {
       "phase": "04",
-      "lane": "LSA",
-      "work": "B055: catalogue one complete candidate branch after footprint and idempotency checks",
-      "stop": "One native/JSONL-agreed checkpoint; no video transcription",
+      "lane": "MSCS",
+      "work": "B073 hash population: at most20 files / 10MB, fewer if needed for safe closure",
+      "stop": "One verified hash checkpoint; extraction remains off",
       "status": "Queued"
     },
     {
       "phase": "05",
+      "lane": "LSA",
+      "work": "B055: one complete candidate branch after footprint and idempotency checks",
+      "stop": "One native/JSONL-agreed checkpoint; no video transcription",
+      "status": "Queued"
+    },
+    {
+      "phase": "06",
       "lane": "AEC",
-      "work": "Resolve the unavailable original terminal checkpoint; close existing G076 records in place",
+      "work": "Resolve the unavailable original terminal checkpoint and close existing G076 records",
       "stop": "Verified existing lock/checkpoint closure; no duplicate rate rows",
       "status": "Access blocker"
     },
     {
-      "phase": "06",
-      "lane": "MSCH",
-      "work": "B014: catalogue Upload problems files (3 direct children)",
-      "stop": "CP14 + exact CURRENT readback + Local registration",
-      "status": "Complete in live phase 02"
-    },
-    {
       "phase": "07",
       "lane": "MSCH",
-      "work": "B015: first remaining FIFO folder (.Rproj.user)",
-      "stop": "One catalogue checkpoint + provider readback + Local registration",
+      "work": "B016: catalogue the first remaining FIFO folder (ArcGIS)",
+      "stop": "One checkpoint + provider readback + Local registration",
       "status": "Queued"
     }
   ],
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 5,
+  "localHighWater": 6,
   "mainCursor": 3,
-  "nextBatch": "B015",
-  "nextTarget": ".Rproj.user",
+  "nextBatch": "B016",
+  "nextTarget": "ArcGIS",
   "newRows": 3,
-  "newFolders": 2,
-  "newFiles": 1
+  "newFolders": 3,
+  "newFiles": 0
 };
