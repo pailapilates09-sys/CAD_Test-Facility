@@ -1,12 +1,12 @@
 export const livePhase = {
-  "phase": "08",
-  "title": "MSCH B020 - CP20 Local closeout complete",
+  "phase": "09",
+  "title": "MSCH B021 - CP21 Local closeout complete",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT",
-  "completedAt": "2026-10-13T02:33:44.507Z",
-  "checkpoint": "MSCH-CORPUS-CP20 / B020",
+  "completedAt": "2026-10-13T03:20:37.746Z",
+  "checkpoint": "MSCH-CORPUS-CP21 / B021",
   "before": {
-    "rows": 523,
-    "folders": 158,
+    "rows": 524,
+    "folders": 159,
     "files": 365,
     "pending": 101
   },
@@ -14,11 +14,11 @@ export const livePhase = {
     "rows": 524,
     "folders": 159,
     "files": 365,
-    "pending": 101
+    "pending": 100
   },
   "completedBatches": 1,
-  "scope": "CP20 source phase catalogued the sole Practice_1 child folder of Bulletin17Results and queued it at the FIFO tail. This closeout registered the existing checkpoint without replaying B020. No new source batch or content extraction.",
-  "providerReadback": "All four live CURRENT hashes still match CP20. Existing CP20 and PRE reused; Local seq11, five native PRE facets, five native POST facets and Main notice N7 passed provider readback. Native default/color aliases were normalized for style comparison.",
+  "scope": "CP21 source phase independently verified Data empty in two Drive listings and marked that FIFO item scanned. This closeout registered the existing checkpoint without replaying B021. No new source batch or content extraction.",
+  "providerReadback": "All four live CURRENT hashes still match CP21. Existing CP21 and PRE reused; Local seq12, five native PRE facets, five native POST facets and Main notice N8 passed provider readback. Main consumed cursor3 and ACK pending.",
   "localRegistration": "LOCAL_FINAL",
   "mainAck": "PENDING_SEPARATE_MAIN_SYNC",
   "budget": {
@@ -27,7 +27,7 @@ export const livePhase = {
     "closeoutReserve": 6,
     "stopNewWorkMinutes": 14,
     "stop": "First verified checkpoint, work budget, time limit, concurrency change or two provider failures - earliest wins.",
-    "actualUnitStatus": "Registration-only phase: source harvesting remained off. Native mutations returned provider grid readback in their completed responses. Terminal publication/proof may require protected safety calls; stop at CP20 Local closure."
+    "actualUnitStatus": "Registration-only phase: source harvesting remained off. Native mutations returned provider grid readback in completed responses. Stop at CP21 Local closure and publication; final elapsed time recorded after saving."
   },
   "phases": [
     {
@@ -88,40 +88,47 @@ export const livePhase = {
     },
     {
       "phase": "09",
+      "lane": "MSCH / Local",
+      "work": "B021 source checkpoint plus CP21 closeout: verify Data empty and register existing checkpoint with native PRE/POST",
+      "stop": "CP21 + Local seq12 + pending Main notice",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "10",
       "lane": "MSCS",
       "work": "B073 hash population: at most20 files / 10MB, fewer if needed for safe closure",
       "stop": "One verified hash checkpoint; extraction remains off",
       "status": "Queued"
     },
     {
-      "phase": "10",
+      "phase": "11",
       "lane": "LSA",
       "work": "B055: one complete candidate branch after footprint and idempotency checks",
       "stop": "One native/JSONL-agreed checkpoint; no video transcription",
       "status": "Queued"
     },
     {
-      "phase": "11",
+      "phase": "12",
       "lane": "AEC",
       "work": "Recover original terminal checkpoint and close existing G076 records in place",
       "stop": "Verified original lock/checkpoint closure; no duplicate rate rows",
       "status": "Access blocker"
     },
     {
-      "phase": "12",
+      "phase": "13",
       "lane": "MSCH",
-      "work": "B021: first remaining FIFO folder (Data under HEC SSP/Test_02)",
+      "work": "B022: first remaining FIFO folder (datavar under HEC HMS/Thesis_01)",
       "stop": "One checkpoint + provider readback + Local registration",
       "status": "Queued"
     }
   ],
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 11,
+  "localHighWater": 12,
   "mainCursor": 3,
-  "nextBatch": "B021",
-  "nextTarget": "Data (HEC SSP/Test_02)",
-  "newRows": 1,
-  "newFolders": 1,
+  "nextBatch": "B022",
+  "nextTarget": "datavar (HEC HMS/Thesis_01)",
+  "newRows": 0,
+  "newFolders": 0,
   "newFiles": 0,
   "newKnownBytes": 0
 };
