@@ -1,8 +1,8 @@
 export const livePhase = {
   "phase": "20",
   "title": "MSCH live session - MSCH-CORPUS-CP32 / Local 23",
-  "status": "LIVE_SESSION_RUNNING_AT_VERIFIED_CHECKPOINT",
-  "completedAt": "2026-10-14T15:35:05.112Z",
+  "status": "STOPPED_AT_VERIFIED_CHECKPOINT",
+  "completedAt": "2026-10-14T15:39:20.946Z",
   "checkpoint": "MSCH-CORPUS-CP32 / B032",
   "before": {
     "rows": 524,
@@ -208,5 +208,7 @@ export const livePhase = {
   "newRows": 25,
   "newFolders": 5,
   "newFiles": 20,
-  "newKnownBytes": 7652075
+  "newKnownBytes": 7652075,
+  "sessionStartedAt": "2026-10-14T14:46:07.345Z",
+  "sessionElapsedMinutes": 53.226683333333334
 };
