@@ -1,33 +1,34 @@
 export const livePhase = {
-  "phase": "10",
-  "title": "MSCH B022 - CP22 Local closeout complete",
-  "status": "STOPPED_AT_VERIFIED_CHECKPOINT",
-  "completedAt": "2026-10-14T03:38:02.001Z",
-  "checkpoint": "MSCH-CORPUS-CP22 / B022",
+  "phase": "11",
+  "title": "MSCH live session - MSCH-CORPUS-CP23 / Local 14",
+  "status": "LIVE_SESSION_RUNNING_AT_VERIFIED_CHECKPOINT",
+  "completedAt": "2026-10-14T15:00:46.842Z",
+  "checkpoint": "MSCH-CORPUS-CP23 / B023",
   "before": {
-    "rows": 524,
-    "folders": 159,
-    "files": 365,
-    "pending": 100
-  },
-  "after": {
     "rows": 524,
     "folders": 159,
     "files": 365,
     "pending": 99
   },
+  "after": {
+    "rows": 535,
+    "folders": 160,
+    "files": 375,
+    "pending": 99
+  },
   "completedBatches": 1,
-  "scope": "CP22 source phase independently verified datavar empty in two Drive listings and marked that FIFO item scanned. This closeout registered the existing checkpoint without replaying B022. No new source batch or content extraction.",
-  "providerReadback": "All four live CURRENT hashes still match CP22. Existing CP22 and PRE reused; Local seq13, five native PRE facets, five native POST facets and Main notice N9 passed provider readback. Main consumed cursor3 and ACK pending.",
+  "scope": "User-authorized minimum50-minute live session. 1 source checkpoints and Local registrations verified. FIFO folders only; source bodies not extracted, executed or modified.",
+  "providerReadback": "Four CURRENT hashes, immutable source checkpoints, native Local PRE/POST and own Main notices verified through MSCH-CORPUS-CP23. Main cursor3; reconciliation/ACK remains pending.",
   "localRegistration": "LOCAL_FINAL",
   "mainAck": "PENDING_SEPARATE_MAIN_SYNC",
   "budget": {
-    "maxMinutes": 20,
-    "workUnits": 14,
-    "closeoutReserve": 6,
-    "stopNewWorkMinutes": 14,
-    "stop": "First verified checkpoint, work budget, time limit, concurrency change or two provider failures - earliest wins.",
-    "actualUnitStatus": "Registration-only phase: source harvesting remained off. Native mutations returned provider grid readback in completed responses. Stop at CP22 Local closure and publication; final elapsed time recorded after saving."
+    "minimumMinutes": 50,
+    "maxMinutes": 60,
+    "workUnits": 200,
+    "closeoutReserve": 20,
+    "stopNewWorkMinutes": 50,
+    "stop": "Finish at the first verified checkpoint after the minimum live window; stop new writes on concurrent state changes or repeated provider errors.",
+    "actualUnitStatus": "Extended session requested by user; earlier short phase caps superseded. Account usage remaining is not observable. Provider rollback/readback and terminal closeout remain required."
   },
   "phases": [
     {
@@ -102,40 +103,47 @@ export const livePhase = {
     },
     {
       "phase": "11",
+      "lane": "MSCH / Local",
+      "work": "B023: date; 1 folders + 10 files / 169343 metadata bytes",
+      "stop": "MSCH-CORPUS-CP23 + Local seq14 + pending Main N10",
+      "status": "Complete"
+    },
+    {
+      "phase": "12",
       "lane": "MSCS",
       "work": "B073 hash population: at most20 files / 10MB, fewer if needed for safe closure",
       "stop": "One verified hash checkpoint; extraction remains off",
       "status": "Queued"
     },
     {
-      "phase": "12",
+      "phase": "13",
       "lane": "LSA",
       "work": "B055: one complete candidate branch after footprint and idempotency checks",
       "stop": "One native/JSONL-agreed checkpoint; no video transcription",
       "status": "Queued"
     },
     {
-      "phase": "13",
+      "phase": "14",
       "lane": "AEC",
       "work": "Recover original terminal checkpoint and close existing G076 records in place",
       "stop": "Verified original lock/checkpoint closure; no duplicate rate rows",
       "status": "Access blocker"
     },
     {
-      "phase": "14",
+      "phase": "15",
       "lane": "MSCH",
-      "work": "B023: first remaining FIFO folder (date under Python_Works/Saved data for Python)",
+      "work": "B024: first remaining FIFO folder (DistributionFitting)",
       "stop": "One checkpoint + provider readback + Local registration",
       "status": "Queued"
     }
   ],
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 13,
+  "localHighWater": 14,
   "mainCursor": 3,
-  "nextBatch": "B023",
-  "nextTarget": "date (Python_Works/Saved data for Python)",
-  "newRows": 0,
-  "newFolders": 0,
-  "newFiles": 0,
-  "newKnownBytes": 0
+  "nextBatch": "B024",
+  "nextTarget": "DistributionFitting",
+  "newRows": 11,
+  "newFolders": 1,
+  "newFiles": 10,
+  "newKnownBytes": 169343
 };
