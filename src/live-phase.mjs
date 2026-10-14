@@ -1,9 +1,9 @@
 export const livePhase = {
-  "phase": "11",
-  "title": "MSCH live session - MSCH-CORPUS-CP23 / Local 14",
+  "phase": "12",
+  "title": "MSCH live session - MSCH-CORPUS-CP24 / Local 15",
   "status": "LIVE_SESSION_RUNNING_AT_VERIFIED_CHECKPOINT",
-  "completedAt": "2026-10-14T15:00:46.842Z",
-  "checkpoint": "MSCH-CORPUS-CP23 / B023",
+  "completedAt": "2026-10-14T15:13:17.446Z",
+  "checkpoint": "MSCH-CORPUS-CP24 / B024",
   "before": {
     "rows": 524,
     "folders": 159,
@@ -14,11 +14,11 @@ export const livePhase = {
     "rows": 535,
     "folders": 160,
     "files": 375,
-    "pending": 99
+    "pending": 98
   },
-  "completedBatches": 1,
-  "scope": "User-authorized minimum50-minute live session. 1 source checkpoints and Local registrations verified. FIFO folders only; source bodies not extracted, executed or modified.",
-  "providerReadback": "Four CURRENT hashes, immutable source checkpoints, native Local PRE/POST and own Main notices verified through MSCH-CORPUS-CP23. Main cursor3; reconciliation/ACK remains pending.",
+  "completedBatches": 2,
+  "scope": "User-authorized minimum50-minute live session. 2 source checkpoints and Local registrations verified. FIFO folders only; source bodies not extracted, executed or modified.",
+  "providerReadback": "Four CURRENT hashes, immutable source checkpoints, native Local PRE/POST and own Main notices verified through MSCH-CORPUS-CP24. Main cursor3; reconciliation/ACK remains pending.",
   "localRegistration": "LOCAL_FINAL",
   "mainAck": "PENDING_SEPARATE_MAIN_SYNC",
   "budget": {
@@ -110,38 +110,45 @@ export const livePhase = {
     },
     {
       "phase": "12",
+      "lane": "MSCH / Local",
+      "work": "B024: DistributionFitting; 0 folders + 0 files / 0 metadata bytes",
+      "stop": "MSCH-CORPUS-CP24 + Local seq15 + pending Main N11",
+      "status": "Complete"
+    },
+    {
+      "phase": "13",
       "lane": "MSCS",
       "work": "B073 hash population: at most20 files / 10MB, fewer if needed for safe closure",
       "stop": "One verified hash checkpoint; extraction remains off",
       "status": "Queued"
     },
     {
-      "phase": "13",
+      "phase": "14",
       "lane": "LSA",
       "work": "B055: one complete candidate branch after footprint and idempotency checks",
       "stop": "One native/JSONL-agreed checkpoint; no video transcription",
       "status": "Queued"
     },
     {
-      "phase": "14",
+      "phase": "15",
       "lane": "AEC",
       "work": "Recover original terminal checkpoint and close existing G076 records in place",
       "stop": "Verified original lock/checkpoint closure; no duplicate rate rows",
       "status": "Access blocker"
     },
     {
-      "phase": "15",
+      "phase": "16",
       "lane": "MSCH",
-      "work": "B024: first remaining FIFO folder (DistributionFitting)",
+      "work": "B025: first remaining FIFO folder (DSSfiles)",
       "stop": "One checkpoint + provider readback + Local registration",
       "status": "Queued"
     }
   ],
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 14,
+  "localHighWater": 15,
   "mainCursor": 3,
-  "nextBatch": "B024",
-  "nextTarget": "DistributionFitting",
+  "nextBatch": "B025",
+  "nextTarget": "DSSfiles",
   "newRows": 11,
   "newFolders": 1,
   "newFiles": 10,
