@@ -1,0 +1,773 @@
+{
+  "schema_version": "1.0",
+  "view_version": "v2",
+  "locale": "en-IN",
+  "currency": null,
+  "source_data": "../data/estimate.json",
+  "notes": [
+    "Titles are editorial summaries; full source descriptions remain authoritative.",
+    "Includes edges express cost containment, not construction sequence.",
+    "Summary allowances have no invented detailed items."
+  ],
+  "nodes": [
+    {
+      "id": "grand-total",
+      "kind": "total",
+      "title": "Grand Total Including VAT",
+      "amount": "6645762.90"
+    },
+    {
+      "id": "subtotal",
+      "kind": "subtotal",
+      "title": "Works Subtotal Before VAT",
+      "amount": "5881206.11"
+    },
+    {
+      "id": "vat",
+      "kind": "tax",
+      "title": "Value Added Tax 13%",
+      "amount": "764556.79"
+    },
+    {
+      "id": "reception",
+      "kind": "area",
+      "title": "Reception Area Interior Works",
+      "amount": "669487.10",
+      "source_pages": [
+        2,
+        3
+      ],
+      "coverage": "detailed"
+    },
+    {
+      "id": "coffee-lounge",
+      "kind": "area",
+      "title": "Coffee Lounge Interior Works",
+      "amount": "591770.88",
+      "source_pages": [
+        4
+      ],
+      "coverage": "detailed"
+    },
+    {
+      "id": "locker-space",
+      "kind": "area",
+      "title": "Locker Space Interior Works",
+      "amount": "1524552.00",
+      "source_pages": [
+        5
+      ],
+      "coverage": "detailed"
+    },
+    {
+      "id": "studio",
+      "kind": "area",
+      "title": "Studio Area Interior Works",
+      "amount": "1964709.40",
+      "source_pages": [
+        6
+      ],
+      "coverage": "detailed"
+    },
+    {
+      "id": "changing-room",
+      "kind": "area",
+      "title": "Changing Room Interior Works",
+      "amount": "258127.80",
+      "source_pages": [
+        7
+      ],
+      "coverage": "detailed"
+    },
+    {
+      "id": "washroom",
+      "kind": "area",
+      "title": "Washroom Area Interior Works",
+      "amount": "42501.50",
+      "source_pages": [
+        8
+      ],
+      "coverage": "detailed"
+    },
+    {
+      "id": "laminate-flooring",
+      "kind": "area",
+      "title": "Laminate Flooring Summary Allowance",
+      "amount": "550000.00",
+      "source_pages": [],
+      "coverage": "summary_only"
+    },
+    {
+      "id": "electrical",
+      "kind": "area",
+      "title": "Electrical Works Summary Allowance",
+      "amount": "280057.43",
+      "source_pages": [],
+      "coverage": "summary_only"
+    },
+    {
+      "id": "reception-001",
+      "kind": "item",
+      "title": "Curved Formica Storage Cupboard",
+      "amount": "54953.50",
+      "source_page": 2
+    },
+    {
+      "id": "reception-002",
+      "kind": "item",
+      "title": "Marble Slab Finish Works",
+      "amount": "33195.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-003",
+      "kind": "item",
+      "title": "WPC Panel Reception Desk",
+      "amount": "124348.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-004",
+      "kind": "item",
+      "title": "Finished Shoe Storage Rack",
+      "amount": "37974.50",
+      "source_page": 2
+    },
+    {
+      "id": "reception-005",
+      "kind": "item",
+      "title": "Finished Ratten Board Works",
+      "amount": "27227.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-006",
+      "kind": "item",
+      "title": "Glass Door And Fittings",
+      "amount": "0.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-007",
+      "kind": "item",
+      "title": "1.5 MT AC Installation",
+      "amount": "110000.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-008",
+      "kind": "item",
+      "title": "Strip Lighting Electrical Works",
+      "amount": "22197.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-009",
+      "kind": "item",
+      "title": "Ceiling And Wardrobe Lights",
+      "amount": "10500.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-010",
+      "kind": "item",
+      "title": "Chandelier With Electrical Fittings",
+      "amount": "35000.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-011",
+      "kind": "item",
+      "title": "Wall Putty And Painting",
+      "amount": "44650.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-012",
+      "kind": "item",
+      "title": "Gypsum Board Lighting Points",
+      "amount": "41942.10",
+      "source_page": 2
+    },
+    {
+      "id": "reception-013",
+      "kind": "item",
+      "title": "Brand Name Signage Board",
+      "amount": "20000.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-014",
+      "kind": "item",
+      "title": "False Ceiling Lighting Points",
+      "amount": "22500.00",
+      "source_page": 2
+    },
+    {
+      "id": "reception-015",
+      "kind": "item",
+      "title": "Reception Area Couch Installation",
+      "amount": "50000.00",
+      "source_page": 3
+    },
+    {
+      "id": "reception-016",
+      "kind": "item",
+      "title": "Granite Centre Table Installation",
+      "amount": "35000.00",
+      "source_page": 3
+    },
+    {
+      "id": "coffee-lounge-001",
+      "kind": "item",
+      "title": "Hardwood Frame Upholstered Sofa",
+      "amount": "95000.00",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-002",
+      "kind": "item",
+      "title": "Marble Slab Finish Works",
+      "amount": "82927.50",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-003",
+      "kind": "item",
+      "title": "Finished Counter Table Installation",
+      "amount": "105242.50",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-004",
+      "kind": "item",
+      "title": "Counter Skirting Finish Works",
+      "amount": "11625.00",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-005",
+      "kind": "item",
+      "title": "PVC Panel Finish Works",
+      "amount": "71829.00",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-006",
+      "kind": "item",
+      "title": "Ceiling Mounted Light Installation",
+      "amount": "22500.00",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-007",
+      "kind": "item",
+      "title": "Wall Putty And Painting",
+      "amount": "28975.00",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-008",
+      "kind": "item",
+      "title": "1 Ton Split AC",
+      "amount": "85000.00",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-009",
+      "kind": "item",
+      "title": "False Ceiling Lighting Points",
+      "amount": "12721.88",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-010",
+      "kind": "item",
+      "title": "Irregular Glass Table Seating",
+      "amount": "40000.00",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-011",
+      "kind": "item",
+      "title": "Strip Lighting Fixture Works",
+      "amount": "3450.00",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-012",
+      "kind": "item",
+      "title": "Hanging Light Fixture Installation",
+      "amount": "7500.00",
+      "source_page": 4
+    },
+    {
+      "id": "coffee-lounge-013",
+      "kind": "item",
+      "title": "Kitchen Sink And Tap",
+      "amount": "25000.00",
+      "source_page": 4
+    },
+    {
+      "id": "locker-space-001",
+      "kind": "item",
+      "title": "Plywood And Formica Lockers",
+      "amount": "173450.00",
+      "source_page": 5
+    },
+    {
+      "id": "locker-space-002",
+      "kind": "item",
+      "title": "Cleaning Supply Storage Closet",
+      "amount": "87500.00",
+      "source_page": 5
+    },
+    {
+      "id": "locker-space-003",
+      "kind": "item",
+      "title": "PVC Panel Framing Works",
+      "amount": "155884.50",
+      "source_page": 5
+    },
+    {
+      "id": "locker-space-004",
+      "kind": "item",
+      "title": "Hanging Lights Electrical Works",
+      "amount": "15000.00",
+      "source_page": 5
+    },
+    {
+      "id": "locker-space-005",
+      "kind": "item",
+      "title": "Wall Putty Surface Finish",
+      "amount": "167200.00",
+      "source_page": 5
+    },
+    {
+      "id": "locker-space-006",
+      "kind": "item",
+      "title": "1 Ton Split AC",
+      "amount": "85000.00",
+      "source_page": 5
+    },
+    {
+      "id": "locker-space-007",
+      "kind": "item",
+      "title": "Curved Gypsum Board Installation",
+      "amount": "69517.50",
+      "source_page": 5
+    },
+    {
+      "id": "locker-space-008",
+      "kind": "item",
+      "title": "Strip Lighting Electrical Works",
+      "amount": "13200.00",
+      "source_page": 5
+    },
+    {
+      "id": "locker-space-009",
+      "kind": "item",
+      "title": "Brand Name Signage Board",
+      "amount": "20000.00",
+      "source_page": 5
+    },
+    {
+      "id": "locker-space-010",
+      "kind": "item",
+      "title": "Sliding Doors And Fixtures",
+      "amount": "737800.00",
+      "source_page": 5
+    },
+    {
+      "id": "studio-001",
+      "kind": "item",
+      "title": "Formica Cabinet With Doors",
+      "amount": "298825.00",
+      "source_page": 6
+    },
+    {
+      "id": "studio-002",
+      "kind": "item",
+      "title": "Wooden Framed Mirror Installation",
+      "amount": "135387.00",
+      "source_page": 6
+    },
+    {
+      "id": "studio-003",
+      "kind": "item",
+      "title": "Full Length Sheer Curtains",
+      "amount": "627763.50",
+      "source_page": 6
+    },
+    {
+      "id": "studio-004",
+      "kind": "item",
+      "title": "PVC Panel Framing Works",
+      "amount": "165676.00",
+      "source_page": 6
+    },
+    {
+      "id": "studio-005",
+      "kind": "item",
+      "title": "Wall Putty And Paint",
+      "amount": "171989.90",
+      "source_page": 6
+    },
+    {
+      "id": "studio-006",
+      "kind": "item",
+      "title": "Strip Lighting Electrical Works",
+      "amount": "121968.00",
+      "source_page": 6
+    },
+    {
+      "id": "studio-007",
+      "kind": "item",
+      "title": "1.5 MT AC Installation",
+      "amount": "330000.00",
+      "source_page": 6
+    },
+    {
+      "id": "studio-008",
+      "kind": "item",
+      "title": "Cement Board Drywall Partition",
+      "amount": "113100.00",
+      "source_page": 6
+    },
+    {
+      "id": "changing-room-001",
+      "kind": "item",
+      "title": "Cement Board Drywall Partition",
+      "amount": "144512.80",
+      "source_page": 7
+    },
+    {
+      "id": "changing-room-002",
+      "kind": "item",
+      "title": "Full Length Curtain Installation",
+      "amount": "113615.00",
+      "source_page": 7
+    },
+    {
+      "id": "washroom-001",
+      "kind": "item",
+      "title": "Decorative Mirror With Fittings",
+      "amount": "12500.00",
+      "source_page": 8
+    },
+    {
+      "id": "washroom-002",
+      "kind": "item",
+      "title": "Wall Decoration Painting Works",
+      "amount": "30001.50",
+      "source_page": 8
+    }
+  ],
+  "edges": [
+    {
+      "source": "grand-total",
+      "target": "subtotal",
+      "relation": "includes"
+    },
+    {
+      "source": "grand-total",
+      "target": "vat",
+      "relation": "includes"
+    },
+    {
+      "source": "subtotal",
+      "target": "reception",
+      "relation": "includes"
+    },
+    {
+      "source": "subtotal",
+      "target": "coffee-lounge",
+      "relation": "includes"
+    },
+    {
+      "source": "subtotal",
+      "target": "locker-space",
+      "relation": "includes"
+    },
+    {
+      "source": "subtotal",
+      "target": "studio",
+      "relation": "includes"
+    },
+    {
+      "source": "subtotal",
+      "target": "changing-room",
+      "relation": "includes"
+    },
+    {
+      "source": "subtotal",
+      "target": "washroom",
+      "relation": "includes"
+    },
+    {
+      "source": "subtotal",
+      "target": "laminate-flooring",
+      "relation": "includes"
+    },
+    {
+      "source": "subtotal",
+      "target": "electrical",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-001",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-002",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-003",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-004",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-005",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-006",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-007",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-008",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-009",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-010",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-011",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-012",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-013",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-014",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-015",
+      "relation": "includes"
+    },
+    {
+      "source": "reception",
+      "target": "reception-016",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-001",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-002",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-003",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-004",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-005",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-006",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-007",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-008",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-009",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-010",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-011",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-012",
+      "relation": "includes"
+    },
+    {
+      "source": "coffee-lounge",
+      "target": "coffee-lounge-013",
+      "relation": "includes"
+    },
+    {
+      "source": "locker-space",
+      "target": "locker-space-001",
+      "relation": "includes"
+    },
+    {
+      "source": "locker-space",
+      "target": "locker-space-002",
+      "relation": "includes"
+    },
+    {
+      "source": "locker-space",
+      "target": "locker-space-003",
+      "relation": "includes"
+    },
+    {
+      "source": "locker-space",
+      "target": "locker-space-004",
+      "relation": "includes"
+    },
+    {
+      "source": "locker-space",
+      "target": "locker-space-005",
+      "relation": "includes"
+    },
+    {
+      "source": "locker-space",
+      "target": "locker-space-006",
+      "relation": "includes"
+    },
+    {
+      "source": "locker-space",
+      "target": "locker-space-007",
+      "relation": "includes"
+    },
+    {
+      "source": "locker-space",
+      "target": "locker-space-008",
+      "relation": "includes"
+    },
+    {
+      "source": "locker-space",
+      "target": "locker-space-009",
+      "relation": "includes"
+    },
+    {
+      "source": "locker-space",
+      "target": "locker-space-010",
+      "relation": "includes"
+    },
+    {
+      "source": "studio",
+      "target": "studio-001",
+      "relation": "includes"
+    },
+    {
+      "source": "studio",
+      "target": "studio-002",
+      "relation": "includes"
+    },
+    {
+      "source": "studio",
+      "target": "studio-003",
+      "relation": "includes"
+    },
+    {
+      "source": "studio",
+      "target": "studio-004",
+      "relation": "includes"
+    },
+    {
+      "source": "studio",
+      "target": "studio-005",
+      "relation": "includes"
+    },
+    {
+      "source": "studio",
+      "target": "studio-006",
+      "relation": "includes"
+    },
+    {
+      "source": "studio",
+      "target": "studio-007",
+      "relation": "includes"
+    },
+    {
+      "source": "studio",
+      "target": "studio-008",
+      "relation": "includes"
+    },
+    {
+      "source": "changing-room",
+      "target": "changing-room-001",
+      "relation": "includes"
+    },
+    {
+      "source": "changing-room",
+      "target": "changing-room-002",
+      "relation": "includes"
+    },
+    {
+      "source": "washroom",
+      "target": "washroom-001",
+      "relation": "includes"
+    },
+    {
+      "source": "washroom",
+      "target": "washroom-002",
+      "relation": "includes"
+    }
+  ]
+}
