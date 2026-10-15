@@ -1,33 +1,33 @@
 export const livePhase = {
-  "phase": "37",
-  "title": "MSCH live session - MSCH-CORPUS-CP49 / Local 40",
+  "phase": "41",
+  "title": "Four-project live session — 3 lanes advanced; AEC blocked",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT",
-  "completedAt": "2026-10-15T00:45:05.002Z",
-  "checkpoint": "MSCH-CORPUS-CP49 / B049",
+  "completedAt": "2026-10-15T02:35:32.958Z",
+  "checkpoint": "MSCH-CORPUS-CP50 / B050",
   "before": {
-    "rows": 549,
-    "folders": 164,
-    "files": 385,
-    "pending": 94
-  },
-  "after": {
     "rows": 983,
     "folders": 189,
     "files": 794,
     "pending": 102
   },
-  "completedBatches": 17,
-  "scope": "User-authorized minimum 50-minute live session completed. CP33–CP49: 17 source checkpoints and Local registrations verified. Metadata cataloguing only; source bodies remain unextracted and unexecuted. Workspace connection failed during B049 readback; CP49 recovered and cloud closeout completed. B050 was not started.",
-  "providerReadback": "Four CURRENT SHA-256 hashes, PRE archives, checkpoint identity/count/byte chain and native Local PRE/POST verified through CP49. All17 new target statuses agree. Five older B009–B013 queue/manifest status discrepancies remain for review; 102 pending is the FIFO queue count. Main cursor3; N36 acknowledgment pending.",
+  "after": {
+    "rows": 984,
+    "folders": 190,
+    "files": 794,
+    "pending": 102
+  },
+  "completedBatches": 4,
+  "scope": "Minimum 50-minute four-lane live session completed. Catalogue totals above refer to MSCH. MSCS: 40 more source hashes, now1,055/1,867; LSA: 20 more metadata records, now436/1,244. AEC original terminal permissions block recovery; no new rates. Original source files and CAD preserved. No schedule created or resumed.",
+  "providerReadback": "MSCS five CURRENT hashes + JSONL/SQLite/integrity; LSA native/JSONL/progress/lock; MSCH four CURRENT/PRE hashes; native Local PRE/POST and own Main notices verified. AEC original lock unchanged and prior rate rows retained. Main reconciliation remains pending.",
   "localRegistration": "LOCAL_FINAL",
   "mainAck": "PENDING_SEPARATE_MAIN_SYNC",
   "budget": {
     "minimumMinutes": 50,
-    "checkpointsPerPhase": 1,
     "minimumWindowMet": true,
-    "elapsedAtFinalProjectionMinutes": 51.31,
-    "stop": "CP49 verified and registered after workspace connection failure; cloud closeout passed. B050 remains queued. No schedule/background extraction.",
-    "actualUnitStatus": "Account usage remaining is not observable; session completed the requested minimum live window."
+    "checkpointsPerPhase": 1,
+    "elapsedAtFinalProjectionMinutes": 55.26,
+    "stop": "Source work stopped at verified checkpoints; all ready lanes received phases. Original AEC recovery remains blocked. Next rotation: LSA, AEC, MSCH, MSCS.",
+    "accountUsageRemaining": "Not observable"
   },
   "phases": [
     {
@@ -291,279 +291,133 @@ export const livePhase = {
     },
     {
       "phase": "38",
-      "lane": "MSCS",
-      "work": "B073 hash population: at most20 files / 10MB, fewer if needed for safe closure",
-      "stop": "One verified hash checkpoint; extraction remains off",
-      "status": "Queued"
+      "lane": "LSA / Local",
+      "work": "B055: +1 folder /19 files; 416→436 metadata records",
+      "stop": "CP55 / Local6 / Main N2 pending",
+      "status": "Complete"
     },
     {
       "phase": "39",
-      "lane": "LSA",
-      "work": "B055: one complete candidate branch after footprint and idempotency checks",
-      "stop": "One native/JSONL-agreed checkpoint; no video transcription",
-      "status": "Queued"
+      "lane": "MSCS / Local",
+      "work": "B073: +20 source hashes /9,933,223 bytes",
+      "stop": "AQ-CP85 / Local4 / Main N1 pending",
+      "status": "Complete"
     },
     {
       "phase": "40",
-      "lane": "AEC",
-      "work": "Recover original terminal checkpoint and close existing G076 records in place",
-      "stop": "Verified original lock/checkpoint closure; no duplicate rate rows",
-      "status": "Access blocker"
+      "lane": "MSCH / Local",
+      "work": "B050: +1 folder; 983→984 catalogue entries",
+      "stop": "CP50 / Local41 / Main N37 pending",
+      "status": "Complete"
     },
     {
       "phase": "41",
+      "lane": "MSCS / Local",
+      "work": "B074: +20 source hashes /9,725,457 bytes",
+      "stop": "AQ-CP86 / Local5 / Main N2 pending",
+      "status": "Complete"
+    },
+    {
+      "lane": "LSA",
+      "work": "B056: fresh deterministic metadata/profile check",
+      "stop": "One source checkpoint + Local + own Main notice",
+      "status": "Queued",
+      "phase": "42"
+    },
+    {
+      "lane": "AEC",
+      "work": "G076 recovery: original terminal document permission denied; rate rows retained",
+      "stop": "Restore access to original checkpoint; never replay committed rate rows or make a replacement",
+      "status": "Access blocker",
+      "phase": "43"
+    },
+    {
       "lane": "MSCH",
-      "work": "B050: first remaining FIFO folder (Research_01)",
-      "stop": "One checkpoint + provider readback + Local registration",
-      "status": "Queued"
+      "work": "B051: next FIFO folder, Sem IV",
+      "stop": "One source checkpoint + Local + own Main notice",
+      "status": "Queued",
+      "phase": "44"
+    },
+    {
+      "lane": "MSCS",
+      "work": "B075: next policy-bounded SHA-256 batch",
+      "stop": "One source checkpoint + Local + own Main notice",
+      "status": "Queued",
+      "phase": "45"
     }
   ],
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 40,
+  "localHighWater": 41,
   "mainCursor": 3,
-  "nextBatch": "B050",
-  "nextTarget": "Research_01",
-  "newRows": 434,
-  "newFolders": 25,
-  "newFiles": 409,
-  "newKnownBytes": 1182862855,
+  "nextBatch": "B051",
+  "nextTarget": "Sem IV",
+  "newRows": 1,
+  "newFolders": 1,
+  "newFiles": 0,
+  "newKnownBytes": 0,
   "sessionStartedAt": "2026-10-14T14:46:07.345Z",
   "sessionElapsedMinutes": 53.226683333333334,
   "knownBytes": 5433731030,
   "sessionReport": {
-    "startedAt": "2026-10-14T23:53:46.525Z",
-    "checkpointRange": "CP33–CP49",
-    "sourceCheckpoints": 17,
-    "localSequenceRange": "24–40",
-    "Main": {
-      "cursor": 3,
-      "notice": "N36",
-      "ack": "PENDING"
+    "startedAt": "2026-10-15T01:40:15.777Z",
+    "milestones": 4,
+    "advancedLanes": 3,
+    "MSCS": {
+      "checkpoint": "AQ-CP86 / B074",
+      "beforeHashed": 1015,
+      "afterHashed": 1055,
+      "addedHashes": 40,
+      "addedHashedBytes": 19658680,
+      "pending": 812,
+      "physicalRecords": 2187,
+      "local": 5,
+      "mainCursor": 3,
+      "notice": "N2",
+      "next": "B075"
     },
-    "terminalChecks": {
-      "fourCURRENT_SHA256": "PASS",
-      "checkpointChainIdentityAndAllDeltas": "PASS",
-      "uniqueManifestIDs": 983,
-      "uniqueQueuedFolderIDs": 143,
-      "newFoldersQueued": 25,
-      "all17SessionTargetsScannedInManifestAndQueue": "PASS",
-      "nativePREPOST": "PASS_VALUES_AND_STYLES",
-      "MainMailboxOnlyOwnPUYChanged": "PASS",
-      "originalFourDriveScopes": "READABLE_SAME_IDS"
+    "LSA": {
+      "checkpoint": "CP55 / B055",
+      "beforeRows": 416,
+      "afterRows": 436,
+      "addedFolders": 1,
+      "addedFiles": 19,
+      "addedMetadataBytes": 4347307871,
+      "local": 6,
+      "mainCursor": 5,
+      "notice": "N2",
+      "next": "B056"
     },
-    "legacyReview": "Five pre-session B009–B013 queue items retain PENDING_RECURSIVE_SCAN flags in the manifest despite SCANNED queue status. Retained without replay or repair.",
-    "workspaceFailure": "Runtime disconnected during B049. Provider CP49, four CURRENT hashes and PRE hash were independently verified; native Local40/N36 closeout completed through connected cloud tools.",
-    "preservation": "Original CURRENT IDs and Drive parents retained. Original source bodies, CAD facility and schedules preserved.",
-    "next": {
-      "batch": "B050",
-      "target": "Research_01",
-      "prerequisite": "Restore workspace, re-read CP49 and live SyncState. Do not replay B049."
+    "MSCH": {
+      "checkpoint": "CP50 / B050",
+      "beforeRows": 983,
+      "afterRows": 984,
+      "addedFolders": 1,
+      "addedFiles": 0,
+      "pending": 102,
+      "local": 41,
+      "mainCursor": 3,
+      "notice": "N37",
+      "next": "B051"
     },
-    "milestones": [
-      {
-        "checkpoint": "MSCH-CORPUS-CP33",
-        "batch": "B033",
-        "target": "layouts",
-        "newFolders": 0,
-        "newFiles": 2,
-        "newEntries": 2,
-        "metadataBytes": 5615,
-        "catalogue": 551,
-        "pendingFIFO": 93,
-        "localSequence": 24
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP34",
-        "batch": "B034",
-        "target": "layouts",
-        "newFolders": 0,
-        "newFiles": 2,
-        "newEntries": 2,
-        "metadataBytes": 13157,
-        "catalogue": 553,
-        "pendingFIFO": 92,
-        "localSequence": 25
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP35",
-        "batch": "B035",
-        "target": "maps",
-        "newFolders": 0,
-        "newFiles": 6,
-        "newEntries": 6,
-        "metadataBytes": 159573,
-        "catalogue": 559,
-        "pendingFIFO": 91,
-        "localSequence": 26
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP36",
-        "batch": "B036",
-        "target": "maps",
-        "newFolders": 0,
-        "newFiles": 13,
-        "newEntries": 13,
-        "metadataBytes": 6328,
-        "catalogue": 572,
-        "pendingFIFO": 90,
-        "localSequence": 27
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP37",
-        "batch": "B037",
-        "target": "montecarlo",
-        "newFolders": 0,
-        "newFiles": 0,
-        "newEntries": 0,
-        "metadataBytes": 0,
-        "catalogue": 572,
-        "pendingFIFO": 89,
-        "localSequence": 28
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP38",
-        "batch": "B038",
-        "target": "MScS_Engineering",
-        "newFolders": 9,
-        "newFiles": 28,
-        "newEntries": 37,
-        "metadataBytes": 201906,
-        "catalogue": 609,
-        "pendingFIFO": 97,
-        "localSequence": 29
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP39",
-        "batch": "B039",
-        "target": "OG & B",
-        "newFolders": 0,
-        "newFiles": 1,
-        "newEntries": 1,
-        "metadataBytes": 128496,
-        "catalogue": 610,
-        "pendingFIFO": 96,
-        "localSequence": 30
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP40",
-        "batch": "B040",
-        "target": "OG & B",
-        "newFolders": 0,
-        "newFiles": 24,
-        "newEntries": 24,
-        "metadataBytes": 13745196,
-        "catalogue": 634,
-        "pendingFIFO": 95,
-        "localSequence": 31
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP41",
-        "batch": "B041",
-        "target": "optimizer",
-        "newFolders": 0,
-        "newFiles": 0,
-        "newEntries": 0,
-        "metadataBytes": 0,
-        "catalogue": 634,
-        "pendingFIFO": 94,
-        "localSequence": 32
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP42",
-        "batch": "B042",
-        "target": "Original and Backlog",
-        "newFolders": 8,
-        "newFiles": 209,
-        "newEntries": 217,
-        "metadataBytes": 1077255481,
-        "catalogue": 851,
-        "pendingFIFO": 101,
-        "localSequence": 33
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP43",
-        "batch": "B043",
-        "target": "Packages",
-        "newFolders": 2,
-        "newFiles": 22,
-        "newEntries": 24,
-        "metadataBytes": 41582,
-        "catalogue": 875,
-        "pendingFIFO": 102,
-        "localSequence": 34
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP44",
-        "batch": "B044",
-        "target": "Photos",
-        "newFolders": 1,
-        "newFiles": 76,
-        "newEntries": 77,
-        "metadataBytes": 61426451,
-        "catalogue": 952,
-        "pendingFIFO": 102,
-        "localSequence": 35
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP45",
-        "batch": "B045",
-        "target": "PlagiarismTest",
-        "newFolders": 0,
-        "newFiles": 5,
-        "newEntries": 5,
-        "metadataBytes": 27672368,
-        "catalogue": 957,
-        "pendingFIFO": 101,
-        "localSequence": 36
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP46",
-        "batch": "B046",
-        "target": "Project",
-        "newFolders": 1,
-        "newFiles": 0,
-        "newEntries": 1,
-        "metadataBytes": 0,
-        "catalogue": 958,
-        "pendingFIFO": 101,
-        "localSequence": 37
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP47",
-        "batch": "B047",
-        "target": "R_Progamming",
-        "newFolders": 1,
-        "newFiles": 2,
-        "newEntries": 3,
-        "metadataBytes": 2614,
-        "catalogue": 961,
-        "pendingFIFO": 101,
-        "localSequence": 38
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP48",
-        "batch": "B048",
-        "target": "Raster_files",
-        "newFolders": 1,
-        "newFiles": 16,
-        "newEntries": 17,
-        "metadataBytes": 2168147,
-        "catalogue": 978,
-        "pendingFIFO": 101,
-        "localSequence": 39
-      },
-      {
-        "checkpoint": "MSCH-CORPUS-CP49",
-        "batch": "B049",
-        "target": "renv",
-        "newFolders": 2,
-        "newFiles": 3,
-        "newEntries": 5,
-        "metadataBytes": 35941,
-        "catalogue": 983,
-        "pendingFIFO": 102,
-        "localSequence": 40
-      }
+    "AEC": {
+      "status": "BLOCKED_ORIGINAL_TERMINAL_PERMISSION",
+      "local": 11,
+      "mainCursor": 10,
+      "newRateWrites": 0
+    },
+    "sourceContentExtraction": false,
+    "sourceMutation": "NONE",
+    "nextRotation": [
+      "LSA",
+      "AEC",
+      "MSCH",
+      "MSCS"
+    ],
+    "remaining": [
+      "AEC original terminal checkpoint access denied; no replacement or source replay.",
+      "Main reconciliation/ACKs pending for notified Local high-waters; no consumed cursor advanced.",
+      "Five older MSCH B009–B013 queue/manifest status discrepancies remain.",
+      "LSA Sangitas ancestor occurrence gap retained for prospective deterministic traversal review."
     ]
   }
 };
