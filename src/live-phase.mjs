@@ -1,32 +1,33 @@
 export const livePhase = {
-  "phase": "52",
-  "title": "100-minute four-project live session — in progress",
-  "status": "LIVE_CHECKPOINT_ROTATION",
-  "completedAt": "2026-10-15T04:30:08.901Z",
-  "checkpoint": "MSCH-CORPUS-CP55 / B055",
+  "phase": "61",
+  "title": "100-minute four-project live session — stopped at verified checkpoints",
+  "status": "STOPPED_AT_VERIFIED_CHECKPOINT",
+  "completedAt": "2026-10-15T05:14:35.177Z",
+  "checkpoint": "MSCH-CORPUS-CP59 / B059",
   "before": {
-    "rows": 1054,
-    "folders": 228,
-    "files": 826,
-    "pending": 136
+    "rows": 1068,
+    "folders": 229,
+    "files": 839,
+    "pending": 133
   },
   "after": {
-    "rows": 1056,
-    "folders": 228,
-    "files": 828,
-    "pending": 135
+    "rows": 1074,
+    "folders": 229,
+    "files": 845,
+    "pending": 132
   },
-  "completedBatches": 11,
-  "scope": "100-minute live session in progress. Cards show the latest MSCH phase only; session totals remain separate by lane. LSA790/1,244 occurrence rows; MSCS1,059/1,867 files hashed. Four-lane rotation retained: AEC access-blocked; MSCS Tier3 policy exhausted. Original repositories/CAD preserved. No schedule.",
-  "providerReadback": "MSCH CP55; LSA CP60 including296 new metadata records; MSCS CP87. Source/native Local PRE/POST and own Main notices verified. Main acknowledgment separate.",
+  "completedBatches": 20,
+  "scope": "Minimum100-minute four-lane live session completed;20 source checkpoints. Cards show the latest MSCH phase only. Session: MSCH+90 catalogue entries, now1,074; LSA+593 metadata records, now1,029/1,244; MSCS+4 verified hashes, now1,059/1,867. AEC original terminal access remains blocked. Original Drive repositories, source files and CAD preserved. No schedule created or resumed.",
+  "providerReadback": "Terminal exact byte/hash/parent checks passed for12 CURRENT files,3 checkpoints and AEC's unchanged original lock. LSA native1,029 unique IDs/JSONL and1500-row grid agree; Local native PRE/POST and own Main notices verified. AEC protected rates retained. Main ACKs remain pending.",
   "localRegistration": "LOCAL_FINAL",
   "mainAck": "PENDING_SEPARATE_MAIN_SYNC",
   "budget": {
     "minimumMinutes": 100,
-    "minimumWindowMet": false,
+    "minimumWindowMet": true,
     "checkpointsPerPhase": 1,
-    "elapsedAtLatestProjectionMinutes": 62.76,
-    "stop": "Continue ready lanes to minimum100-minute window, then stop after verified source/Local checkpoints and terminal closeout.",
+    "sourceElapsedMinutes": 103.02,
+    "elapsedAtFinalProjectionMinutes": 107.19,
+    "stop": "Source work stopped after20 verified checkpoints. All ready lanes advanced; AEC access-blocked and MSCS current-tier eligibility exhausted. Next rotation: LSA, AEC, MSCH, MSCS.",
     "accountUsageRemaining": "Not observable"
   },
   "phases": [
@@ -395,49 +396,113 @@ export const livePhase = {
       "status": "Complete"
     },
     {
-      "lane": "LSA",
-      "work": "B061: residual direct metadata in NEA Class files",
-      "status": "Queued",
       "phase": "53",
-      "stop": "One source checkpoint + Local + own Main notice"
+      "lane": "LSA / Local",
+      "work": "LSA CP61 / B061: verified source milestone and Local closeout",
+      "stop": "Local12 / Main N8 pending",
+      "status": "Complete"
+    },
+    {
+      "phase": "54",
+      "lane": "MSCH / Local",
+      "work": "MSCH CP56 / B056: verified source milestone and Local closeout",
+      "stop": "Local47 / Main N43 pending",
+      "status": "Complete"
+    },
+    {
+      "phase": "55",
+      "lane": "LSA / Local",
+      "work": "LSA CP62 / B062: verified source milestone and Local closeout",
+      "stop": "Local13 / Main N9 pending",
+      "status": "Complete"
+    },
+    {
+      "phase": "56",
+      "lane": "MSCH / Local",
+      "work": "MSCH CP57 / B057: verified source milestone and Local closeout",
+      "stop": "Local48 / Main N44 pending",
+      "status": "Complete"
+    },
+    {
+      "phase": "57",
+      "lane": "LSA / Local",
+      "work": "LSA CP63 / B063: verified source milestone and Local closeout",
+      "stop": "Local14 / Main N10 pending",
+      "status": "Complete"
+    },
+    {
+      "phase": "58",
+      "lane": "MSCH / Local",
+      "work": "MSCH CP58 / B058: verified source milestone and Local closeout",
+      "stop": "Local49 / Main N45 pending",
+      "status": "Complete"
+    },
+    {
+      "phase": "59",
+      "lane": "LSA / Local",
+      "work": "LSA CP64 / B064: verified source milestone and Local closeout",
+      "stop": "Local15 / Main N11 pending",
+      "status": "Complete"
+    },
+    {
+      "phase": "60",
+      "lane": "MSCH / Local",
+      "work": "MSCH CP59 / B059: verified source milestone and Local closeout",
+      "stop": "Local50 / Main N46 pending",
+      "status": "Complete"
+    },
+    {
+      "phase": "61",
+      "lane": "LSA / Local",
+      "work": "LSA CP65 / B065: verified source milestone and Local closeout",
+      "stop": "Local16 / Main N12 pending",
+      "status": "Complete"
+    },
+    {
+      "lane": "LSA",
+      "work": "B066: next deterministic metadata branch",
+      "status": "Queued",
+      "phase": "62",
+      "stop": "One verified source checkpoint + Local + own Main notice"
     },
     {
       "lane": "AEC",
-      "work": "Original terminal still permission-blocked; existing rates retained",
+      "work": "Original terminal checkpoint still permission-blocked; existing rates retained",
       "status": "Access blocker",
-      "phase": "54",
-      "stop": "Original checkpoint access; no replay/replacement"
+      "phase": "63",
+      "stop": "Original checkpoint access; no replacement or replay"
     },
     {
       "lane": "MSCH",
-      "work": "B056: next FIFO metadata folder",
+      "work": "B060: next FIFO metadata phase",
       "status": "Queued",
-      "phase": "55",
-      "stop": "One source checkpoint + Local + own Main notice"
+      "phase": "64",
+      "stop": "One verified source checkpoint + Local + own Main notice"
     },
     {
       "lane": "MSCS",
-      "work": "Tier3 eligibility exhausted;808 files deferred pending new policy",
+      "work": "Tier3 eligible files exhausted;808 files deferred",
       "status": "Policy gate",
-      "phase": "56",
-      "stop": "Separate governed oversized/native policy"
+      "phase": "65",
+      "stop": "Separately governed oversized/native policy"
     }
   ],
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 46,
+  "localHighWater": 50,
   "mainCursor": 3,
-  "nextBatch": "B056",
+  "nextBatch": "B060",
   "nextTarget": "Next FIFO folder",
-  "newRows": 2,
+  "newRows": 6,
   "newFolders": 0,
-  "newFiles": 2,
-  "newKnownBytes": 12588020,
+  "newFiles": 6,
+  "newKnownBytes": 2825682,
   "sessionStartedAt": "2026-10-15T03:27:23.478Z",
-  "sessionElapsedMinutes": 62.75705,
-  "knownBytes": 7007838741,
+  "sessionElapsedMinutes": 107.19498333333334,
+  "knownBytes": 7041400018,
   "sessionReport": {
     "startedAt": "2026-10-15T03:27:23.478Z",
-    "milestones": 11,
+    "sourceStoppedAt": "2026-10-15T05:10:24.391Z",
+    "milestones": 20,
     "advancedLanes": 3,
     "MSCS": {
       "checkpoint": "AQ-CP87 / B075",
@@ -450,33 +515,34 @@ export const livePhase = {
       "local": 6,
       "mainCursor": 3,
       "notice": "N3",
-      "next": "B076 gated: new oversized/native policy required",
-      "tier3EligibleRemaining": 0
+      "tier3EligibleRemaining": 0,
+      "next": "B076 gated: separate oversized/native policy"
     },
     "LSA": {
-      "checkpoint": "CP60 / B060",
+      "checkpoint": "CP65 / B065",
       "beforeRows": 436,
-      "afterRows": 790,
-      "addedFolders": 30,
-      "addedFiles": 324,
-      "addedMetadataBytes": 20297818884,
-      "local": 11,
+      "afterRows": 1029,
+      "addedFolders": 55,
+      "addedFiles": 538,
+      "addedMetadataBytes": 21010646981,
+      "local": 16,
       "mainCursor": 5,
-      "notice": "N7",
-      "next": "B061",
-      "APEXCoverage": "All487 physical occurrences represented"
+      "notice": "N12",
+      "nativeGridRows": 1500,
+      "next": "B066"
     },
     "MSCH": {
-      "checkpoint": "MSCH-CORPUS-CP55 / B055",
+      "checkpoint": "CP59 / B059",
       "beforeRows": 984,
-      "afterRows": 1056,
-      "addedFolders": 38,
-      "addedFiles": 34,
-      "pending": 135,
-      "local": 46,
+      "afterRows": 1074,
+      "addedFolders": 39,
+      "addedFiles": 51,
+      "addedMetadataBytes": 1607668988,
+      "pending": 132,
+      "local": 50,
       "mainCursor": 3,
-      "notice": "N42",
-      "next": "B056"
+      "notice": "N46",
+      "next": "B060"
     },
     "AEC": {
       "status": "BLOCKED_ORIGINAL_TERMINAL_PERMISSION",
@@ -493,10 +559,10 @@ export const livePhase = {
       "MSCS"
     ],
     "remaining": [
-      "AEC original terminal access denied.",
-      "MSCS needs a separately governed policy for oversized/native hashes.",
-      "Main reconciliation/ACKs pending; no consumed cursor advanced.",
-      "Five older MSCH queue/manifest status discrepancies remain."
+      "AEC original terminal access denied; no replacement/replay.",
+      "MSCS oversized/native hashing requires a separately governed policy.",
+      "Main reconciliation/ACKs pending; consumed cursors unchanged.",
+      "Older MSCH and MSCS metadata discrepancies remain for separate review."
     ]
   }
 };
