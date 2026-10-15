@@ -1,0 +1,32 @@
+{
+  "pages": 8,
+  "line_items": 51,
+  "sections": 8,
+  "section_item_counts": {
+    "reception": 16,
+    "coffee-lounge": 13,
+    "locker-space": 10,
+    "studio": 8,
+    "changing-room": 2,
+    "washroom": 2,
+    "laminate-flooring": 0,
+    "electrical": 0
+  },
+  "interior_sum": "5601148.68",
+  "subtotal_calculated": "5881206.11",
+  "vat_unrounded": "764556.7943",
+  "vat_calculated": "764556.79",
+  "grand_total_calculated": "6645762.90",
+  "all_line_products_match_at_two_decimals": true,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "review_method": "All 8 rendered pages visually reviewed against extracted tables; full text and word coordinates retained."
+}

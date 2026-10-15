@@ -4,6 +4,9 @@ import {renderDrawings,drawingInfo} from '../src/drawings.mjs';
 const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
 await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
 await cp(new URL('public/',root),dist,{recursive:true});
+// Construction evidence is isolated from the CAD model and A9 progress datasets.
+const estimatePath='construction/estimates/pilates-astra-2026-10-15/';
+for(const folder of ['data','source'])await cp(new URL(estimatePath+folder+'/',root),new URL(estimatePath+folder+'/',dist),{recursive:true});
 await cp(new URL('src/',root),new URL('assets/',dist),{recursive:true});
 await cp(new URL('vendor/',root),new URL('vendor/',dist),{recursive:true});
 await mkdir(new URL('downloads/',dist),{recursive:true});

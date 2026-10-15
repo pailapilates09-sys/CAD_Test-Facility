@@ -1,0 +1,76 @@
+{
+  "document_id": "pilates-astra-2026-10-15",
+  "extractor": "pdfplumber 0.11.9",
+  "files": [
+    {
+      "path": "data/estimate.json",
+      "bytes": 86719,
+      "sha256": "33980603546c5ed91d988895d24dd6570a2a157704a487d8b5271794ad7d06df"
+    },
+    {
+      "path": "data/estimate.schema.json",
+      "bytes": 3046,
+      "sha256": "2262fea863d3957383d9681cd9be5d3cff87aad682084290b3a6821d06fdf46e"
+    },
+    {
+      "path": "data/estimate.sql",
+      "bytes": 451162,
+      "sha256": "6147e9d31c43abe37284f129984f0d7050b502d6f3c1c74864f261c5fe37a073"
+    },
+    {
+      "path": "data/estimate.sqlite",
+      "bytes": 503808,
+      "sha256": "3db4fbc881f59a65e1eb267606eebc5d14bcb8b8b5ee6f239bbe733aa69e8221"
+    },
+    {
+      "path": "data/full-text.txt",
+      "bytes": 11251,
+      "sha256": "33d7b91256cab3544006a4f78f64fc49958742f29f71fc09dbd4e689b1ac2b4e"
+    },
+    {
+      "path": "data/issues.jsonl",
+      "bytes": 3251,
+      "sha256": "f589df63148a5f621536b504cde055b6fcc104101c765ffd29f9aec65a517e0c"
+    },
+    {
+      "path": "data/layout-text.txt",
+      "bytes": 15759,
+      "sha256": "c3dd3769c39a24255e12eebf2fd303fb5dc0f89328987e777b34fb52a069641a"
+    },
+    {
+      "path": "data/line-items.csv",
+      "bytes": 13321,
+      "sha256": "de9e986dd214a36d8db9a831345f2a690791528ff7bf80cb659dbeecafde802e"
+    },
+    {
+      "path": "data/line-items.jsonl",
+      "bytes": 59499,
+      "sha256": "d8f1f5ee40731b62e7cab9bfdef1dab614360e33184ccb55b5481f85ee8970f0"
+    },
+    {
+      "path": "data/pages.jsonl",
+      "bytes": 410479,
+      "sha256": "4c825bcc2393a04987bf1c027b1773d47e0fc07bd32b8c7a227cbabd5326f9f9"
+    },
+    {
+      "path": "data/sections.csv",
+      "bytes": 640,
+      "sha256": "d9d10e385c661612b093926c0b56376a02a21c762dc7e57ee1db426f332522dd"
+    },
+    {
+      "path": "data/tables.jsonl",
+      "bytes": 19831,
+      "sha256": "303bc3d2db0d13ac79629ff55ee1b8c8086d03442ebe05b4a94015ca9cff1850"
+    },
+    {
+      "path": "data/validation.json",
+      "bytes": 705,
+      "sha256": "19e3a186e628c2b8a7f6cdafed80a263208b1840080093444bd41eead60bb6a8"
+    },
+    {
+      "path": "source/pilates-estimate-astra.pdf",
+      "bytes": 290057,
+      "sha256": "d1592c3c08d0fc37543a904e69bd728ae3c8a2edcef6ebf039cc583be1f70df7"
+    }
+  ]
+}

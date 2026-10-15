@@ -1,0 +1,17 @@
+{"id": "reception-duplicate-sn", "type": "duplicate_number", "section_id": "reception", "message": "Source item numbers are duplicated: ['10']. Stable IDs use row order instead."}
+{"id": "coffee-lounge-sn-gaps", "type": "numbering_gap", "section_id": "coffee-lounge", "message": "Source numbering skips [5, 13]; no missing line items were invented."}
+{"id": "coffee-lounge-display-total", "type": "display_precision", "section_id": "coffee-lounge", "message": "Detail total printed as 591770.9; sum of displayed item amounts is 591770.88; summary is 591770.88. Values are retained independently."}
+{"id": "locker-space-sn-gaps", "type": "numbering_gap", "section_id": "locker-space", "message": "Source numbering skips [9, 11]; no missing line items were invented."}
+{"id": "studio-sn-gaps", "type": "numbering_gap", "section_id": "studio", "message": "Source numbering skips [2, 6]; no missing line items were invented."}
+{"id": "studio-display-total", "type": "display_precision", "section_id": "studio", "message": "Detail total printed as 1964709; sum of displayed item amounts is 1964709.40; summary is 1964709.40. Values are retained independently."}
+{"id": "laminate-flooring-no-detail", "type": "missing_breakdown", "section_id": "laminate-flooring", "message": "Laminate Flooring appears on page 1 only; no quantities, rates or detailed scope are supplied."}
+{"id": "electrical-no-detail", "type": "missing_breakdown", "section_id": "electrical", "message": "Electrical Works appears on page 1 only; no quantities, rates or detailed scope are supplied."}
+{"id": "reception-006-zero", "type": "zero_quantity", "item_id": "reception-006", "message": "Glass door is listed with zero quantity and zero amount; it is retained, not omitted."}
+{"id": "reception-015-unit", "type": "missing_unit", "item_id": "reception-015", "message": "Reception couch has a blank unit in the source; it remains null."}
+{"id": "coffee-lounge-009-rounding", "type": "line_rounding", "item_id": "coffee-lounge-009", "message": "Unrounded product is 12721.875000; source amount is 12721.88. Two-decimal half-up result is 12721.88."}
+{"id": "currency-unspecified", "type": "source_ambiguity", "message": "Currency is not stated anywhere in this PDF. NPR is plausible from project context, but has not been assigned as a source fact."}
+{"id": "estimate-date-unspecified", "type": "source_ambiguity", "message": "No estimate date or revision number is printed. The document ID uses the PDF creation day (2026-10-15), not an asserted estimate date."}
+{"id": "unpriced-heading", "type": "source_ambiguity", "message": "Design and Supervision is an unpriced summary heading; no separate fee or inclusion/exclusion is inferred."}
+{"id": "summary-sn-duplicate", "type": "duplicate_number", "message": "Summary SN 4 labels both Studio and Electrical Works."}
+{"id": "capacity-as-printed", "type": "source_ambiguity", "message": "AC capacity 1.5 MT and source spelling are preserved. MT has not been silently converted to ton."}
+{"id": "electrical-scope-overlap", "type": "scope_review", "message": "Area details already include lighting and AC electrical works; the separate Electrical Works allowance has no breakdown. Confirm scope before interpreting this as duplication."}

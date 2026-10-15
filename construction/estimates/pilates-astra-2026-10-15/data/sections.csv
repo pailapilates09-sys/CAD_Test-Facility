@@ -1,0 +1,9 @@
+id,name,summary_amount,detail_total,line_sum,detail_minus_summary,item_count,detail_state
+reception,Reception Area,669487.10,669487.10,669487.10,0.00,16,detailed
+coffee-lounge,Coffee lounge,591770.88,591770.90,591770.88,0.00,13,detailed
+locker-space,Locker Space,1524552.00,1524552.00,1524552.00,0.00,10,detailed
+studio,Studio,1964709.40,1964709.00,1964709.40,0.00,8,detailed
+changing-room,Changing Room,258127.80,258127.80,258127.80,0.00,2,detailed
+washroom,Washroom,42501.50,42501.50,42501.50,0.00,2,detailed
+laminate-flooring,Laminate Flooring,550000.00,,,,0,summary_only
+electrical,Electrical Works,280057.43,,,,0,summary_only
