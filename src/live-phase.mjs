@@ -1,9 +1,9 @@
 export const livePhase = {
-  "phase": "27",
-  "title": "MSCH live session - MSCH-CORPUS-CP39 / Local 30",
+  "phase": "29",
+  "title": "MSCH live session - MSCH-CORPUS-CP41 / Local 32",
   "status": "LIVE_SESSION_RUNNING_AT_VERIFIED_CHECKPOINT",
-  "completedAt": "2026-10-15T00:14:48.621Z",
-  "checkpoint": "MSCH-CORPUS-CP39 / B039",
+  "completedAt": "2026-10-15T00:19:18.405Z",
+  "checkpoint": "MSCH-CORPUS-CP41 / B041",
   "before": {
     "rows": 549,
     "folders": 164,
@@ -11,14 +11,14 @@ export const livePhase = {
     "pending": 94
   },
   "after": {
-    "rows": 610,
+    "rows": 634,
     "folders": 173,
-    "files": 437,
-    "pending": 96
+    "files": 461,
+    "pending": 94
   },
-  "completedBatches": 7,
-  "scope": "User-authorized minimum50-minute live session. 7 source checkpoints and Local registrations verified. FIFO folders only; source bodies not extracted, executed or modified.",
-  "providerReadback": "Four CURRENT hashes, immutable source checkpoints, native Local PRE/POST and own Main notices verified through MSCH-CORPUS-CP39. Main cursor3; reconciliation/ACK remains pending.",
+  "completedBatches": 9,
+  "scope": "User-authorized minimum50-minute live session. 9 source checkpoints and Local registrations verified. FIFO folders only; source bodies not extracted, executed or modified.",
+  "providerReadback": "Four CURRENT hashes, immutable source checkpoints, native Local PRE/POST and own Main notices verified through MSCH-CORPUS-CP41. Main cursor3; reconciliation/ACK remains pending.",
   "localRegistration": "LOCAL_FINAL",
   "mainAck": "PENDING_SEPARATE_MAIN_SYNC",
   "budget": {
@@ -220,42 +220,56 @@ export const livePhase = {
     },
     {
       "phase": "28",
+      "lane": "MSCH / Local",
+      "work": "B040: OG & B; 0 folders + 24 files / 13745196 metadata bytes",
+      "stop": "MSCH-CORPUS-CP40 + Local seq31 + pending Main N27",
+      "status": "Complete"
+    },
+    {
+      "phase": "29",
+      "lane": "MSCH / Local",
+      "work": "B041: optimizer; 0 folders + 0 files / 0 metadata bytes",
+      "stop": "MSCH-CORPUS-CP41 + Local seq32 + pending Main N28",
+      "status": "Complete"
+    },
+    {
+      "phase": "30",
       "lane": "MSCS",
       "work": "B073 hash population: at most20 files / 10MB, fewer if needed for safe closure",
       "stop": "One verified hash checkpoint; extraction remains off",
       "status": "Queued"
     },
     {
-      "phase": "29",
+      "phase": "31",
       "lane": "LSA",
       "work": "B055: one complete candidate branch after footprint and idempotency checks",
       "stop": "One native/JSONL-agreed checkpoint; no video transcription",
       "status": "Queued"
     },
     {
-      "phase": "30",
+      "phase": "32",
       "lane": "AEC",
       "work": "Recover original terminal checkpoint and close existing G076 records in place",
       "stop": "Verified original lock/checkpoint closure; no duplicate rate rows",
       "status": "Access blocker"
     },
     {
-      "phase": "31",
+      "phase": "33",
       "lane": "MSCH",
-      "work": "B040: first remaining FIFO folder (OG & B)",
+      "work": "B042: first remaining FIFO folder (Original and Backlog)",
       "stop": "One checkpoint + provider readback + Local registration",
       "status": "Queued"
     }
   ],
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 30,
+  "localHighWater": 32,
   "mainCursor": 3,
-  "nextBatch": "B040",
-  "nextTarget": "OG & B",
-  "newRows": 61,
+  "nextBatch": "B042",
+  "nextTarget": "Original and Backlog",
+  "newRows": 85,
   "newFolders": 9,
-  "newFiles": 52,
-  "newKnownBytes": 515075,
+  "newFiles": 76,
+  "newKnownBytes": 14260271,
   "sessionStartedAt": "2026-10-14T14:46:07.345Z",
   "sessionElapsedMinutes": 53.226683333333334
 };
