@@ -1,35 +1,122 @@
 export const livePhase = {
-  "phase": "72",
-  "title": "60-minute four-project extraction run — verified checkpoints",
-  "status": "STOPPED_AT_VERIFIED_CHECKPOINT",
-  "completedAt": "2026-10-16T03:36:41.732Z",
-  "checkpoint": "LSA CP71/B071 · MSCH CP64/B064",
+  "phase": "91",
+  "title": "Debt cleared · 61-minute catalogue run",
+  "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
+  "completedAt": "2026-10-16T08:44:44.003Z",
+  "checkpoint": "LSA CP80/B080 · MSCH CP74/B074",
   "before": {
-    "rows": 1074,
-    "folders": 229,
-    "files": 845,
-    "pending": 132
-  },
-  "after": {
     "rows": 1114,
     "folders": 242,
     "files": 872,
     "pending": 140
   },
-  "completedBatches": 11,
-  "scope": "User minimum60-minute run completed11 source checkpoints. LSA+100 records, now1129/1244. MSCH+40 entries, now1114. AEC terminal and MSCS policy remain blocked. Source bodies and schedules unchanged.",
-  "providerReadback": "Raw CURRENT stable IDs/parents/bytes/SHA, PRE ZIP CRC, LSA native/JSONL IDs and Local native PRE/POST verified. Local22/Main5 and Local55/Main3; own notices pending.",
-  "localRegistration": "LOCAL_FINAL",
-  "mainAck": "PENDING_SEPARATE_MAIN_SYNC",
+  "after": {
+    "rows": 1310,
+    "folders": 249,
+    "files": 1061,
+    "pending": 137
+  },
+  "completedBatches": 19,
+  "scope": "19 source/audit checkpoints closed in61.33 minutes. LSA +113 records, all 1,242 live occurrences represented; historicalbaseline gap 2 files remains. MSCH +196 entries, now 1,310;137 FIFO folders pending. Source bodies and schedules unchanged.",
+  "providerReadback": "Raw CURRENT bytes/hash/identity and native POST checks passed. Main/Local MSCS6/6,LSA31/31,AEC11/11,MSCH65/65; reciprocal ACK and frozen Main readback verified.",
+  "localRegistration": "LOCAL_AND_MAIN_ACK_VERIFIED",
+  "mainAck": "ACKED",
   "budget": {
     "minimumMinutes": 60,
     "minimumWindowMet": true,
     "checkpointsPerPhase": 1,
-    "sourceElapsedMinutes": 60.359883333333336,
-    "elapsedAtFinalProjectionMinutes": 64.09779298333333,
-    "stop": "Stopped at11 source checkpoints, all Local-final. Next LSA B072 and MSCH B065; AEC/MSCS gates remain. No automation created.",
+    "sourceElapsedMinutes": 61.32653333333333,
+    "elapsedAtFinalProjectionMinutes": 71.92778333333334,
+    "stop": "Stopped new source work after the 60-minute minimum; final checkpoint, Local/Main acknowledgement and publication closeout followed.",
     "accountUsageRemaining": "Not observable"
   },
+  "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
+  "localHighWater": 65,
+  "mainCursor": 65,
+  "nextBatch": "B075",
+  "nextTarget": ".Rproj.user (next distinct FIFO folder)",
+  "newRows": 196,
+  "newFolders": 7,
+  "newFiles": 189,
+  "newKnownBytes": 8753923220,
+  "sessionStartedAt": "2026-10-16T07:43:24.411Z",
+  "sessionElapsedMinutes": 61.32653333333333,
+  "knownBytes": 15803066892,
+  "sessionReport": {
+    "startedAt": "2026-10-16T07:43:24.411Z",
+    "sourceStoppedAt": "2026-10-16T08:44:44.003Z",
+    "milestones": 19,
+    "advancedLanes": 2,
+    "MSCS": {
+      "checkpoint": "AQ-CP87 /B075",
+      "beforeHashed": 1059,
+      "afterHashed": 1059,
+      "addedHashes": 0,
+      "pending": 808,
+      "physicalRecords": 2187,
+      "local": 6,
+      "mainCursor": 6,
+      "notice": "N3 acknowledged",
+      "tier3EligibleRemaining": 0,
+      "next": "B076 policy gate"
+    },
+    "LSA": {
+      "checkpoint": "CP80 /B080",
+      "beforeRows": 1129,
+      "afterRows": 1242,
+      "addedFolders": 10,
+      "addedFiles": 103,
+      "addedMetadataBytes": 20264453729,
+      "local": 31,
+      "mainCursor": 31,
+      "notice": "N27 acknowledged",
+      "nativeGridRows": 1500,
+      "next": "B081 baseline reconciliation"
+    },
+    "MSCH": {
+      "checkpoint": "CP74 /B074",
+      "beforeRows": 1114,
+      "afterRows": 1310,
+      "addedFolders": 7,
+      "addedFiles": 189,
+      "addedMetadataBytes": 8753923220,
+      "pending": 137,
+      "local": 65,
+      "mainCursor": 65,
+      "notice": "N61 acknowledged",
+      "next": "B075"
+    },
+    "AEC": {
+      "status": "BLOCKED_ORIGINAL_TERMINAL_UNAVAILABLE",
+      "local": 11,
+      "mainCursor": 11,
+      "newRateWrites": 0
+    },
+    "sourceContentExtraction": false,
+    "sourceMutation": "NONE",
+    "nextRotation": [
+      "MSCH",
+      "LSA",
+      "AEC",
+      "MSCS"
+    ],
+    "debtClearance": {
+      "initialEvents": 73,
+      "newEvents": 19,
+      "totalAcknowledgedEvents": 92,
+      "remainingEvents": 0,
+      "initialClearedAt": "2026-10-16T07:43:24.411Z",
+      "allAcknowledgedAt": "2026-10-16T08:52:22.203Z",
+      "finalMainSealedAt": "2026-10-16T08:55:20.078Z"
+    },
+    "remaining": [
+      "LSA historicalbaseline2 files 9,304 bytes unresolved.",
+      "AEC original terminal404.",
+      "MSCS oversized/native policy gate.",
+      "MSCH137 FIFO folders; source-content extraction remains."
+    ]
+  },
+  "scannedFolders": 10,
   "phases": [
     {
       "phase": "01",
@@ -538,108 +625,163 @@ export const livePhase = {
     {
       "phase": "73",
       "lane": "LSA",
-      "work": "B072: next deterministic metadata branch",
-      "stop": "One verified checkpoint, Local and own Main notice",
-      "status": "Queued"
-    },
-    {
-      "phase": "—",
-      "lane": "AEC",
-      "work": "Original terminal checkpoint unavailable; existing rows retained",
-      "stop": "Original checkpoint recovery; no replay",
-      "status": "Blocked"
+      "work": "B072 /CP72: NEA/Videos/Estimation Costing-Running Bill-Ebidding-Barbending Schedule; +12 records, now 1141",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
     },
     {
       "phase": "74",
       "lane": "MSCH",
-      "work": "B065: next FIFO folder",
-      "stop": "One verified checkpoint, Local and own Main notice",
+      "work": "B065 /CP65: .vscode; +1 records, now 1115",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "75",
+      "lane": "LSA",
+      "work": "B073 /CP73: NEA/Videos/ETABS; +39 records, now 1180",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "76",
+      "lane": "MSCH",
+      "work": "B066 /CP66: Image; +4 records, now 1119",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "77",
+      "lane": "LSA",
+      "work": "B074 /CP74: NEA/Videos/Installation Videos; +9 records, now 1189",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "78",
+      "lane": "MSCH",
+      "work": "B067 /CP67: LatexCode; +129 records, now 1248",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "79",
+      "lane": "LSA",
+      "work": "B075 /CP75: NEA/Videos/Revit Videos; +19 records, now 1208",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "80",
+      "lane": "MSCH",
+      "work": "B068 /CP68: LatexToWord; +17 records, now 1265",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "81",
+      "lane": "LSA",
+      "work": "B076 /CP76: NEA/Videos/Sketchup; +7 records, now 1215",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "82",
+      "lane": "MSCH",
+      "work": "B069 /CP69: Module_1; +18 records, now 1283",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "83",
+      "lane": "LSA",
+      "work": "B077 /CP77: NEA/Videos/Sketchup & Luminon 2024 - Updating; +16 records, now 1231",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "84",
+      "lane": "MSCH",
+      "work": "B070 /CP70: myenv; +6 records, now 1289",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "85",
+      "lane": "LSA",
+      "work": "B078 /CP78: NEA/Videos/SW-DTM; +3 records, now 1234",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "86",
+      "lane": "LSA",
+      "work": "B079 /CP79: NEA/Videos/Property Valuation; +8 records, now 1,242",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "87",
+      "lane": "MSCH",
+      "work": "B071 /CP71: OnHold; +4 records, now 1293",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "88",
+      "lane": "LSA",
+      "work": "B080 /CP80: Full live source tree reconciliation; +0 records, now 1,242",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Audit complete; baseline gap retained"
+    },
+    {
+      "phase": "89",
+      "lane": "MSCH",
+      "work": "B072 /CP72: Packages; +2 records, now 1295",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "90",
+      "lane": "MSCH",
+      "work": "B073 /CP73: Past; +13 records, now 1308",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "91",
+      "lane": "MSCH",
+      "work": "B074 /CP74: .Rproj.user; +2 records, now 1,310",
+      "stop": "Source and Local readback; final Main acknowledgement verified",
+      "status": "Complete"
+    },
+    {
+      "phase": "92",
+      "lane": "MSCH",
+      "work": "B075: next distinct FIFO folder (.Rproj.user)",
+      "stop": "One verified checkpoint with governed Local closeout",
       "status": "Queued"
+    },
+    {
+      "phase": "—",
+      "lane": "LSA",
+      "work": "B081 historical baseline identity reconciliation",
+      "stop": "Resolve2 files /9,304 bytes before Phase1B freeze",
+      "status": "Blocked"
+    },
+    {
+      "phase": "—",
+      "lane": "AEC",
+      "work": "Original G076 terminal remains unavailable",
+      "stop": "Recover original checkpoint without rate replay",
+      "status": "Blocked"
     },
     {
       "phase": "—",
       "lane": "MSCS",
       "work": "Oversized/native hashing policy gate",
-      "stop": "Separately governed policy",
+      "stop": "Separately governed eligible byte policy",
       "status": "Policy gate"
     }
-  ],
-  "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 55,
-  "mainCursor": 3,
-  "nextBatch": "B065",
-  "nextTarget": ".vscode (next FIFO folder)",
-  "newRows": 40,
-  "newFolders": 13,
-  "newFiles": 27,
-  "newKnownBytes": 7743654,
-  "sessionStartedAt": "2026-10-16T02:36:20.139Z",
-  "sessionElapsedMinutes": 60.359883333333336,
-  "knownBytes": 7049143672,
-  "sessionReport": {
-    "startedAt": "2026-10-16T02:36:20.139Z",
-    "sourceStoppedAt": "2026-10-16T03:36:41.732Z",
-    "milestones": 11,
-    "advancedLanes": 2,
-    "MSCS": {
-      "checkpoint": "AQ-CP87 / B075",
-      "beforeHashed": 1059,
-      "afterHashed": 1059,
-      "addedHashes": 0,
-      "pending": 808,
-      "physicalRecords": 2187,
-      "local": 6,
-      "mainCursor": 3,
-      "notice": "N3",
-      "tier3EligibleRemaining": 0,
-      "next": "B076 policy gate"
-    },
-    "LSA": {
-      "checkpoint": "CP71 / B071",
-      "beforeRows": 1029,
-      "afterRows": 1129,
-      "addedFolders": 8,
-      "addedFiles": 92,
-      "addedMetadataBytes": 13787518532,
-      "local": 22,
-      "mainCursor": 5,
-      "notice": "N18",
-      "nativeGridRows": 1500,
-      "next": "B072"
-    },
-    "MSCH": {
-      "checkpoint": "CP64 / B064",
-      "beforeRows": 1074,
-      "afterRows": 1114,
-      "addedFolders": 13,
-      "addedFiles": 27,
-      "addedMetadataBytes": 7743654,
-      "pending": 140,
-      "local": 55,
-      "mainCursor": 3,
-      "notice": "N51",
-      "next": "B065"
-    },
-    "AEC": {
-      "status": "BLOCKED_ORIGINAL_TERMINAL_UNAVAILABLE",
-      "local": 11,
-      "mainCursor": 10,
-      "newRateWrites": 0
-    },
-    "sourceContentExtraction": false,
-    "sourceMutation": "NONE",
-    "nextRotation": [
-      "LSA",
-      "AEC",
-      "MSCH",
-      "MSCS"
-    ],
-    "remaining": [
-      "AEC original terminal404.",
-      "MSCS oversized/native policy gate.",
-      "Main ACKs pending; consumed cursors unchanged.",
-      "LSA/MSCH catalogue work and all source-content extraction remain."
-    ]
-  },
-  "scannedFolders": 5
+  ]
 };

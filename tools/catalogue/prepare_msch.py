@@ -22,6 +22,8 @@ folder=next(x for x in m if x['drive_id']==target['folder_drive_id'])
 assert inp['target']['parent_ids']==[folder['parent_drive_id']]
 def listing_key(xs):return sorted((x['id'],x['title'],x['mime_type'],x.get('size')) for x in xs)
 assert listing_key(inp['list'])==listing_key(inp['confirmation'])
+confirmation_route=inp.get('confirmation_route','FULL_FOLDER_FETCH')
+assert confirmation_route in ['FULL_FOLDER_FETCH','SECOND_COMPLETE_DIRECT_LIST']
 assert {x['id'] for x in inp['children']}=={x['id'] for x in inp['list']}
 assert all(x['parent_ids']==[folder['drive_id']] for x in inp['children'])
 assert not {x['id'] for x in inp['children']} & {x['drive_id'] for x in m}
@@ -29,7 +31,7 @@ children=sorted(inp['children'],key=lambda x:(x['title'].strip().casefold(),x['i
 folders=sum(x['mime_type']=='application/vnd.google-apps.folder' for x in children)
 files=len(children)-folders
 known_bytes=sum(int(x['size']) for x in children if x.get('size') is not None and x['mime_type']!='application/vnd.google-apps.folder')
-notes=f'{batch}: {folders} direct folders and {files} files; {known_bytes} metadata-reported bytes; two direct folder routes agree; source mutation NONE.'
+notes=f'{batch}: {folders} direct folders and {files} files; {known_bytes} metadata-reported bytes; complete list and {confirmation_route} agree; source mutation NONE.'
 parent_path=folder['parent_path']+'/'+folder['name']; added=[]
 for x in children:
     isfolder=x['mime_type']=='application/vnd.google-apps.folder'
@@ -56,6 +58,6 @@ with zipfile.ZipFile(out/'pre-archive.zip','w',zipfile.ZIP_DEFLATED) as z:
     for filename in ['manifest.jsonl','queue.jsonl','state.json','readfirst.md']:z.write(base/filename,filename)
     z.write(Path(sys.argv[1]),'source-evidence.json')
 assert zipfile.ZipFile(out/'pre-archive.zip').testzip() is None
-rec=dict(checkpoint=cp,batch=batch,run_id=f'LIVE-MSCH-{batch}-20261016',mode='LIVE_USER_MINIMUM_60_MINUTES',status='PROJECT_PROVIDER_READBACK_VERIFIED_LOCAL_PENDING',previous_checkpoint=dict(id=inp['previousCheckpoint'],checkpoint=f'MSCH-CORPUS-CP{n-1:02}'),target=dict(name=folder['name'],drive_id=folder['drive_id']),added=added,empty_folder_verified=not children,source_evidence=dict(direct_folder_list=len(children),direct_folder_fetch=len(children),matching_ids_names_mimes_sizes=True,source_read_at=now,completeness_basis='FULL_FOLDER_FETCH_AND_DIRECT_LIST_AGREE_AND_EXACT_METADATA_PARENTS'),post=post,delta=dict(new_rows=len(added),new_folders=folders,new_files=files,new_file_bytes=known_bytes,pending_folders_change=folders-1),post_artifacts={k:meta(out/f) for k,f in [('manifest','manifest.jsonl'),('queue','queue.jsonl'),('state','state.json'),('readfirst','readfirst.md')]},pre=meta(out/'pre-archive.zip'),next=dict(batch=f'B{n+1:03}',name=nxt['folder_name'],drive_id=nxt['folder_drive_id'],parent_path=nxt['parent_path']),content_extraction=False,source_mutation='NONE',scheduler_mutation='NONE',local_registration_at_creation='PENDING',expected_local_sequence=inp['localSequence'],main_ack='PENDING_SEPARATE_MAIN_SYNC',created_at=now)
+rec=dict(checkpoint=cp,batch=batch,run_id=f'LIVE-MSCH-{batch}-20261016',mode='LIVE_USER_MINIMUM_60_MINUTES',status='PROJECT_PROVIDER_READBACK_VERIFIED_LOCAL_PENDING',previous_checkpoint=dict(id=inp['previousCheckpoint'],checkpoint=f'MSCH-CORPUS-CP{n-1:02}'),target=dict(name=folder['name'],drive_id=folder['drive_id']),added=added,empty_folder_verified=not children,source_evidence=dict(direct_folder_list=len(children),confirmation_count=len(children),confirmation_route=confirmation_route,partial_folder_fetch_count=inp.get('partial_folder_fetch_count'),matching_ids_names_mimes_sizes=True,source_read_at=now,completeness_basis='COMPLETE_DIRECT_LIST_AND_'+confirmation_route+'_AGREE_WITH_EXACT_METADATA_PARENTS'),post=post,delta=dict(new_rows=len(added),new_folders=folders,new_files=files,new_file_bytes=known_bytes,pending_folders_change=folders-1),post_artifacts={k:meta(out/f) for k,f in [('manifest','manifest.jsonl'),('queue','queue.jsonl'),('state','state.json'),('readfirst','readfirst.md')]},pre=meta(out/'pre-archive.zip'),next=dict(batch=f'B{n+1:03}',name=nxt['folder_name'],drive_id=nxt['folder_drive_id'],parent_path=nxt['parent_path']),content_extraction=False,source_mutation='NONE',scheduler_mutation='NONE',local_registration_at_creation='PENDING',expected_local_sequence=inp['localSequence'],main_ack='PENDING_SEPARATE_MAIN_SYNC',created_at=now)
 dump(out/'checkpoint-draft.json',rec)
 print(json.dumps({k:v for k,v in rec.items() if k not in ['added']},ensure_ascii=False))

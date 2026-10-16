@@ -10,7 +10,7 @@ Preservation/rollback baseline: commit `bbf90547c6e11b2754415e234fc310ea42bf62c8
 - `/cad/`: the original formwork facility, including its model, five drawings, quantities and downloads. Geometry, vendor assets and the inch-only PDF are preserved.
 - `/progress/`: the current recovered four-project summary, followed by the preserved 15 October source session and expandable 12 October onboarding charts. Legacy root links such as `/#model` redirect to the equivalent CAD section.
 
-The current recovery pointer is `progress/recovery/current.json`; it selects a dated status JSON and report. The build renders the current summary directly into HTML and publishes JSON/report downloads. This section is available without JavaScript. See [the recovery report](progress/recovery/2026-10-16/report.md).
+The current recovery pointer is `progress/recovery/current.json`; it selects a dated status JSON and report. The build renders the current summary directly into HTML and publishes JSON/report downloads. This section is available without JavaScript. See [the current run report](progress/recovery/2026-10-16-debt-clear-run60/report.md).
 
 The historical onboarding snapshot is `src/progress-data.mjs`. It contains bounded reviewed status facts, not the full handover or private source bodies. `src/progress.mjs` renders it with native SVG and an expandable tree. It is a one-time snapshot; it has no connected-account credentials, live Drive API access or automatic refresh.
 
@@ -88,3 +88,10 @@ Three.js r180 and OrbitControls are bundled locally under the MIT license. See `
 MSCH B013 advanced the physical catalogue from 500 to 501 rows (150 folders, 351 files, 99 pending folders). The existing manifest, FIFO queue, project-state and read-first IDs were updated in place after a verified PRE rollback archive. All four outputs and finalized CP13 passed exact provider byte/hash readback. Source bodies, original files and schedules were not changed. Local registration and Main ACK remain a separate next phase; no global closeout is claimed. The progress page shows this live result above its explicitly historical onboarding snapshot.
 
 Phase caps: one verified checkpoint per package; maximum 20 minutes, stop new work at 14 weighted work units or approximately 14 minutes, reserve six closeout units. New batches and the scheduler remain off after the stopping point.
+
+
+## Debt clearance and source continuation — 16 October 2026
+
+A new 61.33-minute source checkpoint window closed 19 checkpoints and added 309 catalogue records: LSA113 and MSCH196. All four Local/Main acknowledgements now agree: MSCS6/6, LSA31/31, AEC11/11 and MSCH65/65. Initial 73 backlog events and 19 new source/audit events were reconciled without replaying source work.
+
+LSA's full140-folder live tree matches1242 catalogue occurrences. Its historical1244-row baseline retains a2-file /9,304-byte discrepancy. MSCH has 1,310 entries and 137 pending FIFO folders; its full denominator is unknown. MSCS hashing policy and the original AEC terminal remain source gates. Source-content extraction and scheduler changes did not occur. The current report and timeline preserve all earlier session history.

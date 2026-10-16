@@ -17,7 +17,8 @@ test('current recovery retains the last saved checkpoint of every source lane',(
   assert.equal(lane.sync.local,prior.local);
   assert.equal(lane.sync.mainConsumed,prior.mainCursor);
   assert.equal(lane.sync.pendingSequences,lane.sync.local-lane.sync.mainConsumed);
-  assert.equal(lane.sync.mainAck,'PENDING');
+  assert.equal(lane.sync.mainAck,'ACKED');
+  assert.equal(lane.sync.pendingSequences,0);
   if(lane.id==='MSCS')assert.equal(lane.metric.done,prior.afterHashed);
   if(lane.id==='LSA')assert.equal(lane.metric.done,prior.afterRows);
   if(lane.id==='MSCH')assert.equal(lane.inventory.rows,prior.afterRows);
@@ -39,6 +40,14 @@ test('recovery reports stage-specific progress and preserves unknown totals and 
  assert.ok(!/NaN|undefined|Infinity/.test(visible));
  assert.ok(visible.includes('Terminal closure incomplete'));
  assert.ok(visible.includes('total unknown'));
+ assert.ok(visible.includes('Main acknowledgements verified'));
+ assert.ok(visible.includes('No pending notice'));
+ assert.ok(!visible.includes('Local work is ahead'));
+ const lsa=recovery.lanes.find(l=>l.id==='LSA');
+ assert.equal(lsa.sourceTreeAudit.folderListings,140);
+ assert.equal(lsa.sourceTreeAudit.observedRows,lsa.inventory.rows);
+ assert.equal(lsa.sourceTreeAudit.historicalFileGap,lsa.metric.remaining);
+ assert.equal(lsa.sourceTreeAudit.historicalBytesGap,9304);
 });
 
 test('resumed run meets its time window and its checkpoint deltas reconcile to current lanes',()=>{
@@ -48,6 +57,9 @@ test('resumed run meets its time window and its checkpoint deltas reconcile to c
  assert.ok(elapsed>=run.minimumMinutes);
  assert.ok(Math.abs(elapsed-run.elapsedMinutes)<0.01);
  assert.equal(run.checkpoints.length,recovery.session.lastSessionCheckpoints);
+ assert.equal(run.debtClearance.initialEvents+run.debtClearance.newEvents,run.debtClearance.totalAcknowledgedEvents);
+ assert.equal(run.debtClearance.newEvents,run.checkpoints.length);
+ assert.equal(run.debtClearance.remainingEvents,0);
  for(const id of ['LSA','MSCH']){
   const rows=run.checkpoints.filter(r=>r.lane===id);
   const prior=livePhase.sessionReport[id].beforeRows;
@@ -66,5 +78,5 @@ test('resumed run meets its time window and its checkpoint deltas reconcile to c
  }
  const html=renderRecovery(recovery);
  assert.ok(!html.includes('No new source batch was performed'));
- assert.ok(html.includes('B072')&&html.includes('B065'));
+ assert.ok(html.includes('CP80')&&html.includes('CP74'));
 });
