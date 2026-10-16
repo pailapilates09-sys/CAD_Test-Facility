@@ -1,0 +1,1715 @@
+{
+  "schema_version": "si-view-1.0.0",
+  "document_id": "pilates-astra-2026-10-15-si",
+  "source_document_id": "pilates-astra-2026-10-15",
+  "source_pdf_sha256": "d1592c3c08d0fc37543a904e69bd728ae3c8a2edcef6ebf039cc583be1f70df7",
+  "source_data": "../data/estimate.json",
+  "currency": null,
+  "summary": {
+    "interior_total": "5601148.68",
+    "electrical": "280057.43",
+    "subtotal": "5881206.11",
+    "vat_rate": "0.13",
+    "vat_amount": "764556.79",
+    "grand_total": "6645762.90",
+    "page": 1
+  },
+  "sections": [
+    {
+      "id": "reception",
+      "name": "Reception Area",
+      "source_sn": "1",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "669487.10",
+      "summary_amount_minor": 66948710,
+      "summary_amount_raw": "669,487.10",
+      "detail_total_raw": "669487.1",
+      "detail_total": "669487.10",
+      "line_sum": "669487.10",
+      "detail_minus_summary": "0.00",
+      "item_count": 16,
+      "pages": [
+        2,
+        3
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "coffee-lounge",
+      "name": "Coffee lounge",
+      "source_sn": "2",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "591770.88",
+      "summary_amount_minor": 59177088,
+      "summary_amount_raw": "591,770.88",
+      "detail_total_raw": "591770.9",
+      "detail_total": "591770.90",
+      "line_sum": "591770.88",
+      "detail_minus_summary": "0.00",
+      "item_count": 13,
+      "pages": [
+        4
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "locker-space",
+      "name": "Locker Space",
+      "source_sn": "3",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "1524552.00",
+      "summary_amount_minor": 152455200,
+      "summary_amount_raw": "1 ,524,552.00",
+      "detail_total_raw": "1524552",
+      "detail_total": "1524552.00",
+      "line_sum": "1524552.00",
+      "detail_minus_summary": "0.00",
+      "item_count": 10,
+      "pages": [
+        5
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "studio",
+      "name": "Studio",
+      "source_sn": "4",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "1964709.40",
+      "summary_amount_minor": 196470940,
+      "summary_amount_raw": "1 ,964,709.40",
+      "detail_total_raw": "1964709",
+      "detail_total": "1964709.00",
+      "line_sum": "1964709.40",
+      "detail_minus_summary": "0.00",
+      "item_count": 8,
+      "pages": [
+        6
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "changing-room",
+      "name": "Changing Room",
+      "source_sn": "5",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "258127.80",
+      "summary_amount_minor": 25812780,
+      "summary_amount_raw": "2 58,127.80",
+      "detail_total_raw": "258127.8",
+      "detail_total": "258127.80",
+      "line_sum": "258127.80",
+      "detail_minus_summary": "0.00",
+      "item_count": 2,
+      "pages": [
+        7
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "washroom",
+      "name": "Washroom",
+      "source_sn": "6",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "42501.50",
+      "summary_amount_minor": 4250150,
+      "summary_amount_raw": "4 2,501.50",
+      "detail_total_raw": "42501.5",
+      "detail_total": "42501.50",
+      "line_sum": "42501.50",
+      "detail_minus_summary": "0.00",
+      "item_count": 2,
+      "pages": [
+        8
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "WASHROOM-AOC heading and matching summary total."
+    },
+    {
+      "id": "laminate-flooring",
+      "name": "Laminate Flooring",
+      "source_sn": "7",
+      "summary_item_raw": "1nos.",
+      "summary_amount": "550000.00",
+      "summary_amount_minor": 55000000,
+      "summary_amount_raw": "5 50,000.00",
+      "detail_total_raw": null,
+      "detail_total": null,
+      "line_sum": null,
+      "detail_minus_summary": null,
+      "item_count": 0,
+      "pages": [],
+      "detail_state": "summary_only",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "electrical",
+      "name": "Electrical Works",
+      "source_sn": "4",
+      "summary_item_raw": "1 nos",
+      "summary_amount": "280057.43",
+      "summary_amount_minor": 28005743,
+      "summary_amount_raw": "2 80,057.43",
+      "detail_total_raw": null,
+      "detail_total": null,
+      "line_sum": null,
+      "detail_minus_summary": null,
+      "item_count": 0,
+      "pages": [],
+      "detail_state": "summary_only",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    }
+  ],
+  "conventions": {
+    "length": "1 ft = 0.3048 m exactly; running feet are length.",
+    "area": "1 ft² = 0.09290304 m² exactly.",
+    "rate": "Converted rate = original rate ÷ quantity factor. Exact rational rate is authoritative; decimal rate is rounded to 12 places.",
+    "display": "Web quantities round to 4 decimals and rates to 2. Original printed line amounts and totals remain authoritative; display rounding can change a manually multiplied result.",
+    "counts": "Counts are shown as each. Source point and missing units are retained without dimensional conversion.",
+    "capacity": "Source AC ton / MT notation remains verbatim; its meaning is not confirmed, so no W or kg conversion is asserted."
+  },
+  "conversion_counts": {
+    "area": 28,
+    "length": 5,
+    "count": 16,
+    "point": 1,
+    "missing": 1
+  },
+  "line_items": [
+    {
+      "id": "reception-001",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and placing curved Shaped Cupboard including formica necessary partitions, shelves and all hardware accessories, complete with polishing/painting and all works as per approved design, detail drawings, and instruction of the Site Engineer.",
+      "source_page": 2,
+      "source_sn": "1",
+      "no": "1",
+      "quantity": "2.0838151872",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "26371.58052093882",
+      "amount": "54953.50",
+      "amount_minor": 5495350,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "3828125000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "22.43",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "2450.00",
+        "amount": "54953.50"
+      }
+    },
+    {
+      "id": "reception-002",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and placing marble slab with adhesive, polishing/painting, complete in all respects as per approved design and instruction of the Site Engineer.",
+      "source_page": 2,
+      "source_sn": "2",
+      "no": "1",
+      "quantity": "4.1118885504",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "8072.932812532292",
+      "amount": "33195.00",
+      "amount_minor": 3319500,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "390625000",
+          "denominator": "48387"
+        }
+      },
+      "original": {
+        "quantity": "44.26",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "750.00",
+        "amount": "33195.00"
+      }
+    },
+    {
+      "id": "reception-003",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and placing reception desk with WPC panel and complete finish, including all necessary accessories, fittings, and fixtures, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 2,
+      "source_sn": "3",
+      "no": "1",
+      "quantity": "4.1258240064",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "30138.949166787222",
+      "amount": "124348.00",
+      "amount_minor": 12434800,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "4375000000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "44.41",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "2800.00",
+        "amount": "124348.00"
+      }
+    },
+    {
+      "id": "reception-004",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and placing Shoe rack with complete finish, including all necessary fittings, accessories, and fixtures, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 2,
+      "source_sn": "4",
+      "no": "1",
+      "quantity": "1.3313005632",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "28524.362604280764",
+      "amount": "37974.50",
+      "amount_minor": 3797450,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "4140625000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "14.33",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "2650.00",
+        "amount": "37974.50"
+      }
+    },
+    {
+      "id": "reception-005",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and placing ratten board with complete finish, including all necessary fittings, accessories, and fixtures, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 2,
+      "source_sn": "5",
+      "no": "1",
+      "quantity": "1.3313005632",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "20451.429791748472",
+      "amount": "27227.00",
+      "amount_minor": 2722700,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "2968750000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "14.33",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "1900.00",
+        "amount": "27227.00"
+      }
+    },
+    {
+      "id": "reception-006",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and fixing glass door with all necessary ftiings and materials as approved by design and instruction of site engineer",
+      "source_page": 2,
+      "source_sn": "6",
+      "no": "1",
+      "quantity": "0",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "18298.647708406528",
+      "amount": "0.00",
+      "amount_minor": 0,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "2656250000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "0.00",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "1700.00",
+        "amount": "0.00"
+      }
+    },
+    {
+      "id": "reception-007",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing and fixing AC of 1.5 MT capacity with all necessary electrical works,support frame as approved by the design and instruction of site engineer",
+      "source_page": 2,
+      "source_sn": "7",
+      "no": "1",
+      "quantity": "1.00",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "110000.00",
+      "amount": "110000.00",
+      "amount_minor": 11000000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "110000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "1.00",
+        "unit_raw": "Nos",
+        "unit_code": "each",
+        "rate": "110000.00",
+        "amount": "110000.00"
+      }
+    },
+    {
+      "id": "reception-008",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing and laying Strip lighting with all necessary electrical works as approved by the design and instruction of site engineer",
+      "source_page": 2,
+      "source_sn": "8",
+      "no": "1",
+      "quantity": "22.552152",
+      "unit_raw": "m",
+      "unit_code": "m",
+      "rate": "984.251968503937",
+      "amount": "22197.00",
+      "amount_minor": 2219700,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.3048",
+        "rate_exact_fraction": {
+          "numerator": "125000",
+          "denominator": "127"
+        }
+      },
+      "original": {
+        "quantity": "73.99",
+        "unit_raw": "R.ft",
+        "unit_code": "ft",
+        "rate": "300.00",
+        "amount": "22197.00"
+      }
+    },
+    {
+      "id": "reception-009",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and installing ceiling- mounted lights,Wardrobe lights including wiring connection, fittings, accessories, and all related electrical works, complete as per approved design and instruction of the Site Engineer",
+      "source_page": 2,
+      "source_sn": "9",
+      "no": "1",
+      "quantity": "7",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "1500.00",
+      "amount": "10500.00",
+      "amount_minor": 1050000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "1500",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "7",
+        "unit_raw": "Nos",
+        "unit_code": "each",
+        "rate": "1500.00",
+        "amount": "10500.00"
+      }
+    },
+    {
+      "id": "reception-010",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and installing Chandelier including wiring connection, fittings, accessories, and all related electrical works, complete as per approved design and instruction of the Site Engineer",
+      "source_page": 2,
+      "source_sn": "10",
+      "no": "1",
+      "quantity": "1",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "35000.00",
+      "amount": "35000.00",
+      "amount_minor": 3500000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "35000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "1",
+        "unit_raw": "Nos.",
+        "unit_code": "each",
+        "rate": "35000.00",
+        "amount": "35000.00"
+      }
+    },
+    {
+      "id": "reception-011",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing and applying wall putty with paintingon prepared plastered surface to achieve smooth finish, including necessary surface preparation, sanding, and finishing, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 2,
+      "source_sn": "10",
+      "no": "1",
+      "quantity": "21.8322144",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "2045.142979174847",
+      "amount": "44650.00",
+      "amount_minor": 4465000,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "296875000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "235",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "190.00",
+        "amount": "44650.00"
+      }
+    },
+    {
+      "id": "reception-012",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and installing Gypsum Board with points for ceiling mounted lights",
+      "source_page": 2,
+      "source_sn": "11",
+      "no": "1",
+      "quantity": "25.97699062656",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "1614.586562506458",
+      "amount": "41942.10",
+      "amount_minor": 4194210,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "78125000",
+          "denominator": "48387"
+        }
+      },
+      "original": {
+        "quantity": "279.614",
+        "unit_raw": "SQ FT",
+        "unit_code": "ft2",
+        "rate": "150.00",
+        "amount": "41942.10"
+      }
+    },
+    {
+      "id": "reception-013",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and installing Signage Board with Brand Name",
+      "source_page": 2,
+      "source_sn": "12",
+      "no": "1",
+      "quantity": "2",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "10000.00",
+      "amount": "20000.00",
+      "amount_minor": 2000000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "10000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "2",
+        "unit_raw": "No.",
+        "unit_code": "each",
+        "rate": "10000.00",
+        "amount": "20000.00"
+      }
+    },
+    {
+      "id": "reception-014",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing, supplying and installing false ceiling with points for ceiling mounted lights",
+      "source_page": 2,
+      "source_sn": "13",
+      "no": "1",
+      "quantity": "5",
+      "unit_raw": "point",
+      "unit_code": "point",
+      "rate": "4500.00",
+      "amount": "22500.00",
+      "amount_minor": 2250000,
+      "conversion": {
+        "status": "source_point_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "4500",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "5",
+        "unit_raw": "point",
+        "unit_code": "point",
+        "rate": "4500.00",
+        "amount": "22500.00"
+      }
+    },
+    {
+      "id": "reception-015",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing and installing couch in reception area as per the instruction of site engineer",
+      "source_page": 3,
+      "source_sn": "14",
+      "no": "1",
+      "quantity": "2",
+      "unit_raw": null,
+      "unit_code": null,
+      "rate": "25000.00",
+      "amount": "50000.00",
+      "amount_minor": 5000000,
+      "conversion": {
+        "status": "missing_unit",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "25000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "2",
+        "unit_raw": null,
+        "unit_code": null,
+        "rate": "25000.00",
+        "amount": "50000.00"
+      }
+    },
+    {
+      "id": "reception-016",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "description": "Providing and installation of granite centre table all complete with necessary fixtures as per the instruction of site engineer",
+      "source_page": 3,
+      "source_sn": "15",
+      "no": "1",
+      "quantity": "1",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "35000.00",
+      "amount": "35000.00",
+      "amount_minor": 3500000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "35000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "1",
+        "unit_raw": "nos.",
+        "unit_code": "each",
+        "rate": "35000.00",
+        "amount": "35000.00"
+      }
+    },
+    {
+      "id": "coffee-lounge-001",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing, supplying and placing Sofa with hardwood frame and laminated/commercial board finish with appropriate thick sponges, fabrics and cushions, complete with polishing/painting and all necessary accessories as per design and instruction of the Site Engineer.",
+      "source_page": 4,
+      "source_sn": "1",
+      "no": "1",
+      "quantity": "1.00",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "95000.00",
+      "amount": "95000.00",
+      "amount_minor": 9500000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "95000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "1.00",
+        "unit_raw": "No",
+        "unit_code": "each",
+        "rate": "95000.00",
+        "amount": "95000.00"
+      }
+    },
+    {
+      "id": "coffee-lounge-002",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing, supplying and placing marble slab with adhesive, polishing/painting, complete in all respects as per approved design and instruction of the Site Engineer.",
+      "source_page": 4,
+      "source_sn": "2",
+      "no": "1",
+      "quantity": "10.2722891328",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "8072.932812532292",
+      "amount": "82927.50",
+      "amount_minor": 8292750,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "390625000",
+          "denominator": "48387"
+        }
+      },
+      "original": {
+        "quantity": "110.57",
+        "unit_raw": "Sq ft",
+        "unit_code": "ft2",
+        "rate": "750.00",
+        "amount": "82927.50"
+      }
+    },
+    {
+      "id": "coffee-lounge-003",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing, supplying and fixing counter table, including necessary fixing arrangements, adhesive, polishing/painting, and all hardware accessories, complete in all respects as per approved design and instruction of the Site Engineer.",
+      "source_page": 4,
+      "source_sn": "3",
+      "no": "1",
+      "quantity": "3.5553993408",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "29600.753645951736",
+      "amount": "105242.50",
+      "amount_minor": 10524250,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "4296875000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "38.27",
+        "unit_raw": "Sq ft",
+        "unit_code": "ft2",
+        "rate": "2750.00",
+        "amount": "105242.50"
+      }
+    },
+    {
+      "id": "coffee-lounge-004",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing, supplying and installing counter skirting counter with complete fixing and finish, including all necessary fittings, accessories, and fixtures, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 4,
+      "source_sn": "4",
+      "no": "1",
+      "quantity": "4.7244",
+      "unit_raw": "m",
+      "unit_code": "m",
+      "rate": "2460.629921259843",
+      "amount": "11625.00",
+      "amount_minor": 1162500,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.3048",
+        "rate_exact_fraction": {
+          "numerator": "312500",
+          "denominator": "127"
+        }
+      },
+      "original": {
+        "quantity": "15.50",
+        "unit_raw": "Rft",
+        "unit_code": "ft",
+        "rate": "750.00",
+        "amount": "11625.00"
+      }
+    },
+    {
+      "id": "coffee-lounge-005",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing and fixing PVC panel for including all necessary fixing accessories, and finishing works, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 4,
+      "source_sn": "6",
+      "no": "1",
+      "quantity": "14.8291832448",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "4843.759687519375",
+      "amount": "71829.00",
+      "amount_minor": 7182900,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "78125000",
+          "denominator": "16129"
+        }
+      },
+      "original": {
+        "quantity": "159.62",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "450.00",
+        "amount": "71829.00"
+      }
+    },
+    {
+      "id": "coffee-lounge-006",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing, supplying and installing ceiling-mounted lights including wiring connection, fittings, accessories, and all related electrical works, complete as per approved design and instruction of the Site Engineer",
+      "source_page": 4,
+      "source_sn": "7",
+      "no": "1",
+      "quantity": "15.00",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "1500.00",
+      "amount": "22500.00",
+      "amount_minor": 2250000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "1500",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "15.00",
+        "unit_raw": "Nos",
+        "unit_code": "each",
+        "rate": "1500.00",
+        "amount": "22500.00"
+      }
+    },
+    {
+      "id": "coffee-lounge-007",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing and applying wall putty with painting on prepared plastered surface to achieve smooth finish, including necessary surface preparation, sanding, and finishing, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 4,
+      "source_sn": "8",
+      "no": "1",
+      "quantity": "14.1677136",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "2045.142979174847",
+      "amount": "28975.00",
+      "amount_minor": 2897500,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "296875000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "152.50",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "190.00",
+        "amount": "28975.00"
+      }
+    },
+    {
+      "id": "coffee-lounge-008",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing, supplying and installing 1-ton split air conditioner of specified brand with indoor and outdoor units, copper piping, drain pipe, electrical connections, and necessary fittings, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 4,
+      "source_sn": "9",
+      "no": "1",
+      "quantity": "1",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "85000.00",
+      "amount": "85000.00",
+      "amount_minor": 8500000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "85000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "1",
+        "unit_raw": "No",
+        "unit_code": "each",
+        "rate": "85000.00",
+        "amount": "85000.00"
+      }
+    },
+    {
+      "id": "coffee-lounge-009",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing, supplying and installing false ceiling with points for ceiling mounted lights",
+      "source_page": 4,
+      "source_sn": "10",
+      "no": "1",
+      "quantity": "7.87933908",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "1614.586562506458",
+      "amount": "12721.88",
+      "amount_minor": 1272188,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "78125000",
+          "denominator": "48387"
+        }
+      },
+      "original": {
+        "quantity": "84.8125",
+        "unit_raw": "Sq ft",
+        "unit_code": "ft2",
+        "rate": "150.00",
+        "amount": "12721.88"
+      }
+    },
+    {
+      "id": "coffee-lounge-010",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Supplying and fixing of irregular glass table with sitting tool",
+      "source_page": 4,
+      "source_sn": "11",
+      "no": "1",
+      "quantity": "1",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "40000.00",
+      "amount": "40000.00",
+      "amount_minor": 4000000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "40000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "1",
+        "unit_raw": "Nos.",
+        "unit_code": "each",
+        "rate": "40000.00",
+        "amount": "40000.00"
+      }
+    },
+    {
+      "id": "coffee-lounge-011",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing and laying Strip lighting with all necessary fixtures works as approved by the design and instruction of site engineer",
+      "source_page": 4,
+      "source_sn": "12",
+      "no": "1",
+      "quantity": "3.5052",
+      "unit_raw": "m",
+      "unit_code": "m",
+      "rate": "984.251968503937",
+      "amount": "3450.00",
+      "amount_minor": 345000,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.3048",
+        "rate_exact_fraction": {
+          "numerator": "125000",
+          "denominator": "127"
+        }
+      },
+      "original": {
+        "quantity": "11.50",
+        "unit_raw": "Rft",
+        "unit_code": "ft",
+        "rate": "300.00",
+        "amount": "3450.00"
+      }
+    },
+    {
+      "id": "coffee-lounge-012",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Providing and installing of hanging lights with all necessary fixtures as approved by the design and instruction of site engineer",
+      "source_page": 4,
+      "source_sn": "14",
+      "no": "1",
+      "quantity": "1.00",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "7500.00",
+      "amount": "7500.00",
+      "amount_minor": 750000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "7500",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "1.00",
+        "unit_raw": "nos.",
+        "unit_code": "each",
+        "rate": "7500.00",
+        "amount": "7500.00"
+      }
+    },
+    {
+      "id": "coffee-lounge-013",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "description": "Supplying and fixing of kitchen sink including all necessary fixtures including water tap as per the instruction of site engineer",
+      "source_page": 4,
+      "source_sn": "15",
+      "no": "1",
+      "quantity": "1.00",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "25000.00",
+      "amount": "25000.00",
+      "amount_minor": 2500000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "25000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "1.00",
+        "unit_raw": "nos.",
+        "unit_code": "each",
+        "rate": "25000.00",
+        "amount": "25000.00"
+      }
+    },
+    {
+      "id": "locker-space-001",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "description": "Providing, supplying and fixing Lockers with plywood and formica includingall necessary accessories, complete in all respects as per approved design and instruction of the Site Engineer.",
+      "source_page": 5,
+      "source_sn": "1",
+      "no": "1",
+      "quantity": "6.4456129152",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "26909.776041774306",
+      "amount": "173450.00",
+      "amount_minor": 17345000,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "3906250000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "69.38",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "2500.00",
+        "amount": "173450.00"
+      }
+    },
+    {
+      "id": "locker-space-002",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "description": "Providing, supplying and fixing Cleaning Supply Closet with plywood and formica including all necessary accessories, complete in all respects as per approved design and instruction of the Site Engineer.",
+      "source_page": 5,
+      "source_sn": "2",
+      "no": "1",
+      "quantity": "3.2516064",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "26909.776041774306",
+      "amount": "87500.00",
+      "amount_minor": 8750000,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "3906250000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "35.00",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "2500.00",
+        "amount": "87500.00"
+      }
+    },
+    {
+      "id": "locker-space-003",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "description": "Providing and fixing PVCpanels including all necessary framing, fixing accessories, and finishing works, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 5,
+      "source_sn": "3",
+      "no": "1",
+      "quantity": "10.7275140288",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "14531.279062558125",
+      "amount": "155884.50",
+      "amount_minor": 15588450,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "234375000",
+          "denominator": "16129"
+        }
+      },
+      "original": {
+        "quantity": "115.47",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "1350.00",
+        "amount": "155884.50"
+      }
+    },
+    {
+      "id": "locker-space-004",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "description": "Providing, supplying and installing hanging lights including wiring connection, fittings, accessories, and all related electrical works, complete as per approved design and instruction of the Site Engineer",
+      "source_page": 5,
+      "source_sn": "4",
+      "no": "1",
+      "quantity": "2.00",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "7500.00",
+      "amount": "15000.00",
+      "amount_minor": 1500000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "7500",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "2.00",
+        "unit_raw": "Nos",
+        "unit_code": "each",
+        "rate": "7500.00",
+        "amount": "15000.00"
+      }
+    },
+    {
+      "id": "locker-space-005",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "description": "Providing and applying wall putty on prepared plastered surface to achieve smooth finish, including necessary surface preparation, sanding, and finishing, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 5,
+      "source_sn": "5",
+      "no": "1",
+      "quantity": "81.7546752",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "2045.142979174847",
+      "amount": "167200.00",
+      "amount_minor": 16720000,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "296875000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "880",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "190.00",
+        "amount": "167200.00"
+      }
+    },
+    {
+      "id": "locker-space-006",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "description": "Providing, supplying and installing 1- ton split air conditioner of specified brand with indoor and outdoor units, copper piping, drain pipe, electrical connections, and necessary fittings, complete as per approved design and instruction of the Site Engineer",
+      "source_page": 5,
+      "source_sn": "6",
+      "no": "1",
+      "quantity": "1",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "85000.00",
+      "amount": "85000.00",
+      "amount_minor": 8500000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "85000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "1",
+        "unit_raw": "No",
+        "unit_code": "each",
+        "rate": "85000.00",
+        "amount": "85000.00"
+      }
+    },
+    {
+      "id": "locker-space-007",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "description": "Providing, supplying and installing Curved Gypsum Board with all necessary fixtures as per the instruction os site engineer",
+      "source_page": 5,
+      "source_sn": "7",
+      "no": "1",
+      "quantity": "33.11993376",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "2098.962531258396",
+      "amount": "69517.50",
+      "amount_minor": 6951750,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "101562500",
+          "denominator": "48387"
+        }
+      },
+      "original": {
+        "quantity": "356.50",
+        "unit_raw": "Sqft",
+        "unit_code": "ft2",
+        "rate": "195",
+        "amount": "69517.50"
+      }
+    },
+    {
+      "id": "locker-space-008",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "description": "Providing and laying Strip lighting with all necessary electrical works as approved by the design and instruction of site engineer",
+      "source_page": 5,
+      "source_sn": "8",
+      "no": "1",
+      "quantity": "13.4112",
+      "unit_raw": "m",
+      "unit_code": "m",
+      "rate": "984.251968503937",
+      "amount": "13200.00",
+      "amount_minor": 1320000,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.3048",
+        "rate_exact_fraction": {
+          "numerator": "125000",
+          "denominator": "127"
+        }
+      },
+      "original": {
+        "quantity": "44.00",
+        "unit_raw": "Rft.",
+        "unit_code": "ft",
+        "rate": "300",
+        "amount": "13200.00"
+      }
+    },
+    {
+      "id": "locker-space-009",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "description": "Providing, supplying and installing Signage Board with Brand Name",
+      "source_page": 5,
+      "source_sn": "10",
+      "no": "1",
+      "quantity": "2.00",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "10000",
+      "amount": "20000.00",
+      "amount_minor": 2000000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "10000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "2.00",
+        "unit_raw": "Nos.",
+        "unit_code": "each",
+        "rate": "10000",
+        "amount": "20000.00"
+      }
+    },
+    {
+      "id": "locker-space-010",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "description": "Providing and fixing sliding doors all complete with all necessary fixtures as per the instruction of site engineer",
+      "source_page": 5,
+      "source_sn": "12",
+      "no": "1",
+      "quantity": "40.31991936",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "18298.647708406528",
+      "amount": "737800.00",
+      "amount_minor": 73780000,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "2656250000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "434.00",
+        "unit_raw": "Sqft",
+        "unit_code": "ft2",
+        "rate": "1700",
+        "amount": "737800.00"
+      }
+    },
+    {
+      "id": "studio-001",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "description": "Providing, supplying Cabinet with Doors and Formica with all necessary accessories as per design and instruction of the Site Engineer.",
+      "source_page": 6,
+      "source_sn": "1",
+      "no": "1",
+      "quantity": "11.1047003712",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "26909.776041774306",
+      "amount": "298825.00",
+      "amount_minor": 29882500,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "3906250000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "119.53",
+        "unit_raw": "Sqft",
+        "unit_code": "ft2",
+        "rate": "2500.00",
+        "amount": "298825.00"
+      }
+    },
+    {
+      "id": "studio-002",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "description": "Providing, supplying and fixing Mirrors with Wooden Frame with formica, glass and all hardware accessories, complete in all respects as per approved design and instruction of the Site Engineer.",
+      "source_page": 6,
+      "source_sn": "3",
+      "no": "1",
+      "quantity": "13.9754043072",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "9687.51937503875",
+      "amount": "135387.00",
+      "amount_minor": 13538700,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "156250000",
+          "denominator": "16129"
+        }
+      },
+      "original": {
+        "quantity": "150.43",
+        "unit_raw": "Sq ft",
+        "unit_code": "ft2",
+        "rate": "900.00",
+        "amount": "135387.00"
+      }
+    },
+    {
+      "id": "studio-003",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "description": "Providing, supplying and fixing Full Length Sheer curtains with curtain rods, hooks, rings, and all necessary accessories, complete in all respects as per approved design and instruction of the Site Engineer.",
+      "source_page": 6,
+      "source_sn": "4",
+      "no": "1",
+      "quantity": "43.2008426304",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "14531.279062558125",
+      "amount": "627763.50",
+      "amount_minor": 62776350,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "234375000",
+          "denominator": "16129"
+        }
+      },
+      "original": {
+        "quantity": "465.01",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "1350.00",
+        "amount": "627763.50"
+      }
+    },
+    {
+      "id": "studio-004",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "description": "Providing and fixing PVC panel , including all necessary framing, fixing accessories, and finishing works, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 6,
+      "source_sn": "5",
+      "no": "1",
+      "quantity": "21.9882915072",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "7534.737291696806",
+      "amount": "165676.00",
+      "amount_minor": 16567600,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "1093750000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "236.68",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "700.00",
+        "amount": "165676.00"
+      }
+    },
+    {
+      "id": "studio-005",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "description": "Providing and applying wall putty with paint prepared plastered surface to achieve smooth finish, including necessary surface preparation, sanding, and finishing, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 6,
+      "source_sn": "7",
+      "no": "1",
+      "quantity": "84.0967608384",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "2045.142979174847",
+      "amount": "171989.90",
+      "amount_minor": 17198990,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "296875000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "905.21",
+        "unit_raw": "sq ft",
+        "unit_code": "ft2",
+        "rate": "190.00",
+        "amount": "171989.90"
+      }
+    },
+    {
+      "id": "studio-006",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "description": "Providing and laying Strip lighting with all necessary electrical works as approved by the design and instruction of site engineer",
+      "source_page": 6,
+      "source_sn": "8",
+      "no": "1",
+      "quantity": "33.796224",
+      "unit_raw": "m",
+      "unit_code": "m",
+      "rate": "3608.923884514436",
+      "amount": "121968.00",
+      "amount_minor": 12196800,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.3048",
+        "rate_exact_fraction": {
+          "numerator": "1375000",
+          "denominator": "381"
+        }
+      },
+      "original": {
+        "quantity": "110.88",
+        "unit_raw": "Rft",
+        "unit_code": "ft",
+        "rate": "1100.00",
+        "amount": "121968.00"
+      }
+    },
+    {
+      "id": "studio-007",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "description": "Providing and fixing AC of 1.5 MT capacity with all necessary electrical works,support frame as approved by the design and instruction of site engineer",
+      "source_page": 6,
+      "source_sn": "9",
+      "no": "1",
+      "quantity": "3.00",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "110000.00",
+      "amount": "330000.00",
+      "amount_minor": 33000000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "110000",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "3.00",
+        "unit_raw": "Nos.",
+        "unit_code": "each",
+        "rate": "110000.00",
+        "amount": "330000.00"
+      }
+    },
+    {
+      "id": "studio-008",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "description": "Fixing and installation of dry wall partition complete with aluminium framing and cement board including all necessary fixtures as per the instruction of site engineer",
+      "source_page": 6,
+      "source_sn": "10",
+      "no": "1",
+      "quantity": "18.1160928",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "6243.068041691639",
+      "amount": "113100.00",
+      "amount_minor": 11310000,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "906250000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "195.00",
+        "unit_raw": "Sqft",
+        "unit_code": "ft2",
+        "rate": "580.00",
+        "amount": "113100.00"
+      }
+    },
+    {
+      "id": "changing-room-001",
+      "section_id": "changing-room",
+      "section_name": "Changing Room",
+      "description": "Fixing and installation of dry wall partition complete with aluminium framing and cement board including all necessary fixtures as per the instruction of site engineer",
+      "source_page": 7,
+      "source_sn": "1",
+      "no": "1",
+      "quantity": "23.1477214464",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "6243.068041691639",
+      "amount": "144512.80",
+      "amount_minor": 14451280,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "906250000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "249.16",
+        "unit_raw": "Sqft",
+        "unit_code": "ft2",
+        "rate": "580.00",
+        "amount": "144512.80"
+      }
+    },
+    {
+      "id": "changing-room-002",
+      "section_id": "changing-room",
+      "section_name": "Changing Room",
+      "description": "Providing, supplying and fixing Full Length curtains with curtain rods, hooks, rings, and all necessary accessories, complete in all respects as per approved design and instruction of the Site Engineer.",
+      "source_page": 7,
+      "source_sn": "2",
+      "no": "1",
+      "quantity": "6.809792832",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "16684.06114590007",
+      "amount": "113615.00",
+      "amount_minor": 11361500,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "2421875000",
+          "denominator": "145161"
+        }
+      },
+      "original": {
+        "quantity": "73.30",
+        "unit_raw": "Sq ft",
+        "unit_code": "ft2",
+        "rate": "1550.00",
+        "amount": "113615.00"
+      }
+    },
+    {
+      "id": "washroom-001",
+      "section_id": "washroom",
+      "section_name": "Washroom",
+      "description": "Providing, supplying and fixing Decorative Mirror with necessary supports, fittings, and accessories, complete as per approved design and instruction of the Site Engineer.",
+      "source_page": 8,
+      "source_sn": "1",
+      "no": "1",
+      "quantity": "1.00",
+      "unit_raw": "each",
+      "unit_code": "each",
+      "rate": "12500.000",
+      "amount": "12500.00",
+      "amount_minor": 1250000,
+      "conversion": {
+        "status": "count_retained",
+        "quantity_factor": "1",
+        "rate_exact_fraction": {
+          "numerator": "12500",
+          "denominator": "1"
+        }
+      },
+      "original": {
+        "quantity": "1.00",
+        "unit_raw": "No",
+        "unit_code": "each",
+        "rate": "12500.000",
+        "amount": "12500.00"
+      }
+    },
+    {
+      "id": "washroom-002",
+      "section_id": "washroom",
+      "section_name": "Washroom",
+      "description": "Providing, supplying and installing wall decoration with all necessary paintings fixtures as per the instruction of site engineer",
+      "source_page": 8,
+      "source_sn": "2",
+      "no": "1",
+      "quantity": "6.1938456768",
+      "unit_raw": "m²",
+      "unit_code": "m2",
+      "rate": "4843.759687519375",
+      "amount": "30001.50",
+      "amount_minor": 3000150,
+      "conversion": {
+        "status": "converted",
+        "quantity_factor": "0.09290304",
+        "rate_exact_fraction": {
+          "numerator": "78125000",
+          "denominator": "16129"
+        }
+      },
+      "original": {
+        "quantity": "66.67",
+        "unit_raw": "Sqft",
+        "unit_code": "ft2",
+        "rate": "450.000",
+        "amount": "30001.50"
+      }
+    }
+  ]
+}
