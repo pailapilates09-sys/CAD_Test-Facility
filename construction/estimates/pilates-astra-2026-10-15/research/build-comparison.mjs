@@ -1,0 +1,10 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {buildComparison} from '../../../../public/construction/estimates/pilates-astra-2026-10-15/v5/comparison-model.js';
+const base=new URL('../../../../public/construction/estimates/pilates-astra-2026-10-15/',import.meta.url);
+const original=JSON.parse(await readFile(new URL('../data/estimate.json',import.meta.url),'utf8'));
+const si=JSON.parse(await readFile(new URL('v3/estimate-si.json',base),'utf8'));
+const research=JSON.parse(await readFile(new URL('v4/market-rates.json',base),'utf8'));
+const data=buildComparison(original,si,research),out=new URL('v5/',base);await mkdir(out,{recursive:true});
+await writeFile(new URL('comparison.json',out),JSON.stringify(data,null,2)+'\n');
+await writeFile(new URL('comparison.jsonl',out),data.items.map(x=>JSON.stringify(x)).join('\n')+'\n');
+console.log('V5 comparison prepared:',JSON.stringify(data.coverage));

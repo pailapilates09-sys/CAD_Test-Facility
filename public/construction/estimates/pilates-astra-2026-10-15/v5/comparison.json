@@ -1,0 +1,3099 @@
+{
+  "schema_version": "comparison-1.0.0",
+  "version": "v5",
+  "created_date": "2026-10-17",
+  "reference_snapshot_date": "2026-10-16",
+  "original_document_id": "pilates-astra-2026-10-15",
+  "source_pdf_sha256": "d1592c3c08d0fc37543a904e69bd728ae3c8a2edcef6ebf039cc583be1f70df7",
+  "policy": {
+    "six_items": "On hold; original amounts and rates retained.",
+    "currency": "Unconfirmed. Estimate is not plotted on the NPR axis unless the reader explicitly enables the NPR assumption.",
+    "scope": "Unit compatibility is checked; scope equivalence is unverified. Reference ranges are published ranges, not confidence intervals.",
+    "replacement_rates": "None assigned. No midpoint, market total, saving, percentage difference or financial conclusion is calculated.",
+    "model": "SKP extraction and duplicate analysis deferred with the existing download blocker.",
+    "stop": "V5 only. V6 images not started."
+  },
+  "coverage": {
+    "all_items": 51,
+    "held_items": 6,
+    "reference_items": 45,
+    "unit_compatible_items": 36,
+    "exact_scope_quotes": 0,
+    "held_original_amount_minor": 88165350
+  },
+  "summary": {
+    "interior_total": "5601148.68",
+    "electrical": "280057.43",
+    "subtotal": "5881206.11",
+    "vat_rate": "0.13",
+    "vat_amount": "764556.79",
+    "grand_total": "6645762.90",
+    "page": 1
+  },
+  "sections": [
+    {
+      "id": "reception",
+      "name": "Reception Area",
+      "source_sn": "1",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "669487.10",
+      "summary_amount_minor": 66948710,
+      "summary_amount_raw": "669,487.10",
+      "detail_total_raw": "669487.1",
+      "detail_total": "669487.10",
+      "line_sum": "669487.10",
+      "detail_minus_summary": "0.00",
+      "item_count": 16,
+      "pages": [
+        2,
+        3
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "coffee-lounge",
+      "name": "Coffee lounge",
+      "source_sn": "2",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "591770.88",
+      "summary_amount_minor": 59177088,
+      "summary_amount_raw": "591,770.88",
+      "detail_total_raw": "591770.9",
+      "detail_total": "591770.90",
+      "line_sum": "591770.88",
+      "detail_minus_summary": "0.00",
+      "item_count": 13,
+      "pages": [
+        4
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "locker-space",
+      "name": "Locker Space",
+      "source_sn": "3",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "1524552.00",
+      "summary_amount_minor": 152455200,
+      "summary_amount_raw": "1 ,524,552.00",
+      "detail_total_raw": "1524552",
+      "detail_total": "1524552.00",
+      "line_sum": "1524552.00",
+      "detail_minus_summary": "0.00",
+      "item_count": 10,
+      "pages": [
+        5
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "studio",
+      "name": "Studio",
+      "source_sn": "4",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "1964709.40",
+      "summary_amount_minor": 196470940,
+      "summary_amount_raw": "1 ,964,709.40",
+      "detail_total_raw": "1964709",
+      "detail_total": "1964709.00",
+      "line_sum": "1964709.40",
+      "detail_minus_summary": "0.00",
+      "item_count": 8,
+      "pages": [
+        6
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "changing-room",
+      "name": "Changing Room",
+      "source_sn": "5",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "258127.80",
+      "summary_amount_minor": 25812780,
+      "summary_amount_raw": "2 58,127.80",
+      "detail_total_raw": "258127.8",
+      "detail_total": "258127.80",
+      "line_sum": "258127.80",
+      "detail_minus_summary": "0.00",
+      "item_count": 2,
+      "pages": [
+        7
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "washroom",
+      "name": "Washroom",
+      "source_sn": "6",
+      "summary_item_raw": "1 nos.",
+      "summary_amount": "42501.50",
+      "summary_amount_minor": 4250150,
+      "summary_amount_raw": "4 2,501.50",
+      "detail_total_raw": "42501.5",
+      "detail_total": "42501.50",
+      "line_sum": "42501.50",
+      "detail_minus_summary": "0.00",
+      "item_count": 2,
+      "pages": [
+        8
+      ],
+      "detail_state": "detailed",
+      "section_mapping": "WASHROOM-AOC heading and matching summary total."
+    },
+    {
+      "id": "laminate-flooring",
+      "name": "Laminate Flooring",
+      "source_sn": "7",
+      "summary_item_raw": "1nos.",
+      "summary_amount": "550000.00",
+      "summary_amount_minor": 55000000,
+      "summary_amount_raw": "5 50,000.00",
+      "detail_total_raw": null,
+      "detail_total": null,
+      "line_sum": null,
+      "detail_minus_summary": null,
+      "item_count": 0,
+      "pages": [],
+      "detail_state": "summary_only",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    },
+    {
+      "id": "electrical",
+      "name": "Electrical Works",
+      "source_sn": "4",
+      "summary_item_raw": "1 nos",
+      "summary_amount": "280057.43",
+      "summary_amount_minor": 28005743,
+      "summary_amount_raw": "2 80,057.43",
+      "detail_total_raw": null,
+      "detail_total": null,
+      "line_sum": null,
+      "detail_minus_summary": null,
+      "item_count": 0,
+      "pages": [],
+      "detail_state": "summary_only",
+      "section_mapping": "Page-to-summary mapping inferred from sequence and matching totals; most detail pages say only AOC."
+    }
+  ],
+  "items": [
+    {
+      "id": "reception-001",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Curved Formica Storage Cupboard",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "22.43",
+        "unit": "sq ft",
+        "rate": "2450.00",
+        "amount": "54953.50",
+        "amount_minor": 5495350,
+        "currency": null
+      },
+      "si": {
+        "quantity": "2.0838151872",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "26371.58052093882"
+      },
+      "working_amount": "54953.50",
+      "working_amount_minor": 5495350,
+      "working_rate": "26371.58052093882",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R01"
+      ],
+      "references": [
+        {
+          "id": "R01",
+          "source_id": "S01",
+          "publisher": "Vastuveda Designs",
+          "url": "https://vastuvedadesigns.com/guide/interior-design-cost-nepal-2026",
+          "label": "Custom laminate / veneer wardrobe elevation",
+          "low": "12916.69",
+          "high": "26909.78",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "similar_installed_work",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Front-elevation measurement; not curved cupboards, shoe racks or multi-compartment lockers.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "similar_scope_reference",
+      "qualification": "Cabinet depth, curved work, partitions, board grade and measurement basis need a matching contractor quote."
+    },
+    {
+      "id": "reception-002",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Marble Slab Finish Works",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "44.26",
+        "unit": "sq ft",
+        "rate": "750.00",
+        "amount": "33195.00",
+        "amount_minor": 3319500,
+        "currency": null
+      },
+      "si": {
+        "quantity": "4.1118885504",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "8072.932812532292"
+      },
+      "working_amount": "33195.00",
+      "working_amount_minor": 3319500,
+      "working_rate": "8072.932812532292",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R25"
+      ],
+      "references": [
+        {
+          "id": "R25",
+          "source_id": "S19",
+          "publisher": "Gharbanau",
+          "url": "https://www.gharbanau.com/products/marble-per-square-feet-20356",
+          "label": "Marble material historical range",
+          "low": "2260.42",
+          "high": "7534.74",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_only",
+          "qualifier": "historical_indexed_range",
+          "availability": "not_confirmed",
+          "source_access": "search_snippet_only",
+          "published_date": "2022-08-10",
+          "retrieved_date": "2026-10-16",
+          "qualification": "2022 search-index listing only; slab grade and fitting not specified.",
+          "source_note": "Historical listing; page body did not load. Not adopted as a current installed rate.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "historical_reference",
+      "qualification": "Historical material-only range; no current exact installed marble price verified."
+    },
+    {
+      "id": "reception-003",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "WPC Panel Reception Desk",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "44.41",
+        "unit": "sq ft",
+        "rate": "2800.00",
+        "amount": "124348.00",
+        "amount_minor": 12434800,
+        "currency": null
+      },
+      "si": {
+        "quantity": "4.1258240064",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "30138.949166787222"
+      },
+      "working_amount": "124348.00",
+      "working_amount_minor": 12434800,
+      "working_rate": "30138.949166787222",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R15"
+      ],
+      "references": [
+        {
+          "id": "R15",
+          "source_id": "S09",
+          "publisher": "OMH Nepal",
+          "url": "https://omhnepal.com/shop/item/reception-desk-with-logo-panel",
+          "label": "Standard reception desk with logo panel",
+          "low": "66000",
+          "high": "66000",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "similar_installed_work",
+          "qualifier": "listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Plywood / laminate or PU standard piece; source estimate is WPC and measured by area. No each-to-area conversion.",
+          "source_note": "",
+          "unit_matches_estimate": false,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "different_unit_reference",
+      "qualification": "Retail standard desk is per piece; project desk is priced by area and includes WPC. No normalized project rate assigned."
+    },
+    {
+      "id": "reception-004",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Finished Shoe Storage Rack",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "14.33",
+        "unit": "sq ft",
+        "rate": "2650.00",
+        "amount": "37974.50",
+        "amount_minor": 3797450,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.3313005632",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "28524.362604280764"
+      },
+      "working_amount": "37974.50",
+      "working_amount_minor": 3797450,
+      "working_rate": "28524.362604280764",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R01"
+      ],
+      "references": [
+        {
+          "id": "R01",
+          "source_id": "S01",
+          "publisher": "Vastuveda Designs",
+          "url": "https://vastuvedadesigns.com/guide/interior-design-cost-nepal-2026",
+          "label": "Custom laminate / veneer wardrobe elevation",
+          "low": "12916.69",
+          "high": "26909.78",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "similar_installed_work",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Front-elevation measurement; not curved cupboards, shoe racks or multi-compartment lockers.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "similar_scope_reference",
+      "qualification": "Cabinet depth, curved work, partitions, board grade and measurement basis need a matching contractor quote."
+    },
+    {
+      "id": "reception-005",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Finished Ratten Board Works",
+      "source_page": 2,
+      "status": "on_hold_original_retained",
+      "hold_reason": "User instruction on 2026-10-17: keep original values and leave rate research on hold.",
+      "original": {
+        "quantity": "14.33",
+        "unit": "sq ft",
+        "rate": "1900.00",
+        "amount": "27227.00",
+        "amount_minor": 2722700,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.3313005632",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "20451.429791748472"
+      },
+      "working_amount": "27227.00",
+      "working_amount_minor": 2722700,
+      "working_rate": "20451.429791748472",
+      "replacement_rate": null,
+      "reference_ids": [],
+      "references": [],
+      "research_state": "quote_needed",
+      "qualification": "No verified local installed ratten-board rate found. Confirm natural rattan / synthetic mesh / backing, frame and finish."
+    },
+    {
+      "id": "reception-006",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Glass Door And Fittings",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "0.00",
+        "unit": "sq ft",
+        "rate": "1700.00",
+        "amount": "0.00",
+        "amount_minor": 0,
+        "currency": null
+      },
+      "si": {
+        "quantity": "0",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "18298.647708406528"
+      },
+      "working_amount": "0.00",
+      "working_amount_minor": 0,
+      "working_rate": "18298.647708406528",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R23",
+        "R26"
+      ],
+      "references": [
+        {
+          "id": "R23",
+          "source_id": "S15",
+          "publisher": "Prospace Designing & Engineering",
+          "url": "https://prospace.com.np/toughened-glass-partation-price-in-kathmandu-nepal/",
+          "label": "Toughened-glass partition starting rate",
+          "low": "12916.69",
+          "high": null,
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "similar_installed_work",
+          "qualifier": "starting_from",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-05-12",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Partition reference only; door hardware / glass specification unresolved.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        },
+        {
+          "id": "R26",
+          "source_id": "S20",
+          "publisher": "Bimba Glass",
+          "url": "https://bimbaglass.com.np/toughened-glass/",
+          "label": "12 mm toughened glass only",
+          "low": "3767.37",
+          "high": "4843.76",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Excludes cutting, hardware, transport and installation; not door work.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "similar_scope_reference",
+      "qualification": "Glass-door quantity is zero; partition and raw glass references do not price door fittings. No cost inferred."
+    },
+    {
+      "id": "reception-007",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "1.5 MT AC Installation",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "1.00",
+        "unit": "Nos",
+        "rate": "110000.00",
+        "amount": "110000.00",
+        "amount_minor": 11000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "110000.00"
+      },
+      "working_amount": "110000.00",
+      "working_amount_minor": 11000000,
+      "working_rate": "110000.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R09",
+        "R10"
+      ],
+      "references": [
+        {
+          "id": "R09",
+          "source_id": "S05",
+          "publisher": "Air Experts Nepal",
+          "url": "https://airexperts.com.np/shop",
+          "label": "Midea Xtreme Plus inverter 1.5 ton",
+          "low": "103550",
+          "high": "103550",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Model MSEZCU-18HRFN8; only relevant if source 1.5 MT means refrigeration tonnage.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        },
+        {
+          "id": "R10",
+          "source_id": "S06",
+          "publisher": "Air Experts Nepal",
+          "url": "https://airexperts.com.np/products/midea-xtreme-series-1-5-ton-inverter-ac",
+          "label": "Midea Xtreme Series inverter 1.5 ton",
+          "low": "91800",
+          "high": "91800",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "listed_price",
+          "availability": "out_of_stock",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Model MSAGC-18HRFN8; page says out of stock; installation varies.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "conditional_product_reference",
+      "qualification": "Source says 1.5 MT. Confirm capacity, brand, piping length, support and electrical scope before comparison."
+    },
+    {
+      "id": "reception-008",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Strip Lighting Electrical Works",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "73.99",
+        "unit": "R.ft",
+        "rate": "300.00",
+        "amount": "22197.00",
+        "amount_minor": 2219700,
+        "currency": null
+      },
+      "si": {
+        "quantity": "22.552152",
+        "unit": "m",
+        "unit_label": "m",
+        "rate": "984.251968503937"
+      },
+      "working_amount": "22197.00",
+      "working_amount_minor": 2219700,
+      "working_rate": "984.251968503937",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R05"
+      ],
+      "references": [
+        {
+          "id": "R05",
+          "source_id": "S04",
+          "publisher": "Sixkey",
+          "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+          "label": "LED strip light",
+          "low": "125",
+          "high": "200",
+          "unit": "m",
+          "unit_label": "m",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-08-26",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Driver, channel, cable and fitting excluded.",
+          "source_note": "Page also displays September 26, 2026; retail products only, no installation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "Fixture supply only; quote includes electrical work or fixtures. Driver/channel/installation price still required."
+    },
+    {
+      "id": "reception-009",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Ceiling And Wardrobe Lights",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "7",
+        "unit": "Nos",
+        "rate": "1500.00",
+        "amount": "10500.00",
+        "amount_minor": 1050000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "7",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "1500.00"
+      },
+      "working_amount": "10500.00",
+      "working_amount_minor": 1050000,
+      "working_rate": "1500.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R06"
+      ],
+      "references": [
+        {
+          "id": "R06",
+          "source_id": "S04",
+          "publisher": "Sixkey",
+          "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+          "label": "Concealed LED panel, 18–24 W",
+          "low": "1000",
+          "high": "1000",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "approximate",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-08-26",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Approximate fixture price; wardrobe lights and wiring are not included.",
+          "source_note": "Page also displays September 26, 2026; retail products only, no installation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "Panel-light reference only; design, wattage, wardrobe-light content and installed wiring differ."
+    },
+    {
+      "id": "reception-010",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Chandelier With Electrical Fittings",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "1",
+        "unit": "Nos.",
+        "rate": "35000.00",
+        "amount": "35000.00",
+        "amount_minor": 3500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "35000.00"
+      },
+      "working_amount": "35000.00",
+      "working_amount_minor": 3500000,
+      "working_rate": "35000.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R07"
+      ],
+      "references": [
+        {
+          "id": "R07",
+          "source_id": "S04",
+          "publisher": "Sixkey",
+          "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+          "label": "Chandelier / jhumar",
+          "low": "7000",
+          "high": "200000",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-08-26",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Different designs, sizes and lamp arrangements; not an installed quote.",
+          "source_note": "Page also displays September 26, 2026; retail products only, no installation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "Chandelier design and fixture installation remain unspecified."
+    },
+    {
+      "id": "reception-011",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Wall Putty And Painting",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "235",
+        "unit": "sq ft",
+        "rate": "190.00",
+        "amount": "44650.00",
+        "amount_minor": 4465000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "21.8322144",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "2045.142979174847"
+      },
+      "working_amount": "44650.00",
+      "working_amount_minor": 4465000,
+      "working_rate": "2045.142979174847",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R24",
+        "R27"
+      ],
+      "references": [
+        {
+          "id": "R24",
+          "source_id": "S16",
+          "publisher": "Reshape Home",
+          "url": "https://reshapehome.com/blogs/paint-price-in-nepal/",
+          "label": "Standard interior painting",
+          "low": "269.10",
+          "high": "430.56",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "painting_reference",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Putty and primer listed as additional; not a full putty-plus-paint price.",
+          "source_note": "Putty and primer are listed as additional costs, not a complete putty-plus-paint quote.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        },
+        {
+          "id": "R27",
+          "source_id": "S21",
+          "publisher": "Prolink Nepal",
+          "url": "https://www.prolinknepal.com/painter-service-in-kathmandu",
+          "label": "Wall putty application indexed range",
+          "low": "215.28",
+          "high": "322.92",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "scope_unconfirmed",
+          "qualifier": "indexed_range",
+          "availability": "not_confirmed",
+          "source_access": "search_snippet_only",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Search index only, page 403; labour / material inclusion is not verified.",
+          "source_note": "Page returned 403. Indexed putty range is provisional and needs direct confirmation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "partial_scope_reference",
+      "qualification": "Painting and indexed putty references are separate and unverified as a combined installed system. Do not sum into an accepted rate."
+    },
+    {
+      "id": "reception-012",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Gypsum Board Lighting Points",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "279.614",
+        "unit": "SQ FT",
+        "rate": "150.00",
+        "amount": "41942.10",
+        "amount_minor": 4194210,
+        "currency": null
+      },
+      "si": {
+        "quantity": "25.97699062656",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "1614.586562506458"
+      },
+      "working_amount": "41942.10",
+      "working_amount_minor": 4194210,
+      "working_rate": "1614.586562506458",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R03"
+      ],
+      "references": [
+        {
+          "id": "R03",
+          "source_id": "S03",
+          "publisher": "ConstructionSewa",
+          "url": "https://www.constructionsewa.com/blogs/gypsum-false-ceiling-price-nepal",
+          "label": "Basic flat gypsum ceiling",
+          "low": "968.75",
+          "high": "1937.50",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_and_labour",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-09-10",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Electrical wiring, light fixtures and final paint may be separate; source inclusion wording is inconsistent.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "scope_reference",
+      "qualification": "Basic gypsum benchmark only; board thickness, framework and lighting-point exclusions require confirmation."
+    },
+    {
+      "id": "reception-013",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Brand Name Signage Board",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "2",
+        "unit": "No.",
+        "rate": "10000.00",
+        "amount": "20000.00",
+        "amount_minor": 2000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "2",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "10000.00"
+      },
+      "working_amount": "20000.00",
+      "working_amount_minor": 2000000,
+      "working_rate": "10000.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R17"
+      ],
+      "references": [
+        {
+          "id": "R17",
+          "source_id": "S11",
+          "publisher": "Glow N Sign Nepal",
+          "url": "https://glownsign.com.np/products/acrylic-signage",
+          "label": "Acrylic signage with printed vinyl",
+          "low": "19375.04",
+          "high": "37673.69",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "fabrication_reference",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Project sign dimensions and lighting are absent; no conversion into a per-sign price.",
+          "source_note": "",
+          "unit_matches_estimate": false,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "different_unit_reference",
+      "qualification": "Brand signs are counted per sign; supplier reference is per area. Sign dimensions, material and illumination are missing."
+    },
+    {
+      "id": "reception-014",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "False Ceiling Lighting Points",
+      "source_page": 2,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "5",
+        "unit": "point",
+        "rate": "4500.00",
+        "amount": "22500.00",
+        "amount_minor": 2250000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "5",
+        "unit": "point",
+        "unit_label": "point",
+        "rate": "4500.00"
+      },
+      "working_amount": "22500.00",
+      "working_amount_minor": 2250000,
+      "working_rate": "4500.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R03"
+      ],
+      "references": [
+        {
+          "id": "R03",
+          "source_id": "S03",
+          "publisher": "ConstructionSewa",
+          "url": "https://www.constructionsewa.com/blogs/gypsum-false-ceiling-price-nepal",
+          "label": "Basic flat gypsum ceiling",
+          "low": "968.75",
+          "high": "1937.50",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_and_labour",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-09-10",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Electrical wiring, light fixtures and final paint may be separate; source inclusion wording is inconsistent.",
+          "source_note": "",
+          "unit_matches_estimate": false,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "different_unit_reference",
+      "qualification": "Source ceiling is measured in points; public reference is area-based. No area or rate per point inferred."
+    },
+    {
+      "id": "reception-015",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Reception Area Couch Installation",
+      "source_page": 3,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "2",
+        "unit": null,
+        "rate": "25000.00",
+        "amount": "50000.00",
+        "amount_minor": 5000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "2",
+        "unit": null,
+        "unit_label": "unspecified unit",
+        "rate": "25000.00"
+      },
+      "working_amount": "50000.00",
+      "working_amount_minor": 5000000,
+      "working_rate": "25000.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R11"
+      ],
+      "references": [
+        {
+          "id": "R11",
+          "source_id": "S07",
+          "publisher": "Lacasa Decors",
+          "url": "https://lacasadecors.com/sofa-set-price-in-nepal-best-deals-from-lacasa-decors/",
+          "label": "Bumble couch",
+          "low": "44000",
+          "high": "44000",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "historical_listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2025-04-14",
+          "retrieved_date": "2026-10-16",
+          "qualification": "2025 catalogue; size, upholstery and frame do not establish exact project equivalence.",
+          "source_note": "Historical 2025 collection; refresh quote before purchasing.",
+          "unit_matches_estimate": false,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "missing_source_unit",
+      "qualification": "Couch reference is per piece but the source unit is missing; two quantities are preserved without assigning each."
+    },
+    {
+      "id": "reception-016",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Granite Centre Table Installation",
+      "source_page": 3,
+      "status": "on_hold_original_retained",
+      "hold_reason": "User instruction on 2026-10-17: keep original values and leave rate research on hold.",
+      "original": {
+        "quantity": "1",
+        "unit": "nos.",
+        "rate": "35000.00",
+        "amount": "35000.00",
+        "amount_minor": 3500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "35000.00"
+      },
+      "working_amount": "35000.00",
+      "working_amount_minor": 3500000,
+      "working_rate": "35000.00",
+      "replacement_rate": null,
+      "reference_ids": [],
+      "references": [],
+      "research_state": "quote_needed",
+      "qualification": "No exact local granite centre-table listing verified. Need overall dimensions, granite grade, base, fabrication and fixing."
+    },
+    {
+      "id": "coffee-lounge-001",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Hardwood Frame Upholstered Sofa",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "1.00",
+        "unit": "No",
+        "rate": "95000.00",
+        "amount": "95000.00",
+        "amount_minor": 9500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "95000.00"
+      },
+      "working_amount": "95000.00",
+      "working_amount_minor": 9500000,
+      "working_rate": "95000.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R12"
+      ],
+      "references": [
+        {
+          "id": "R12",
+          "source_id": "S07",
+          "publisher": "Lacasa Decors",
+          "url": "https://lacasadecors.com/sofa-set-price-in-nepal-best-deals-from-lacasa-decors/",
+          "label": "Living sofa",
+          "low": "95000",
+          "high": "95000",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "historical_listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2025-04-14",
+          "retrieved_date": "2026-10-16",
+          "qualification": "2025 catalogue; hardwood specification and seats need confirmation.",
+          "source_note": "Historical 2025 collection; refresh quote before purchasing.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "Historical sofa model reference; seats, dimensions, hardwood frame and upholstery must match."
+    },
+    {
+      "id": "coffee-lounge-002",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Marble Slab Finish Works",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "110.57",
+        "unit": "Sq ft",
+        "rate": "750.00",
+        "amount": "82927.50",
+        "amount_minor": 8292750,
+        "currency": null
+      },
+      "si": {
+        "quantity": "10.2722891328",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "8072.932812532292"
+      },
+      "working_amount": "82927.50",
+      "working_amount_minor": 8292750,
+      "working_rate": "8072.932812532292",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R25"
+      ],
+      "references": [
+        {
+          "id": "R25",
+          "source_id": "S19",
+          "publisher": "Gharbanau",
+          "url": "https://www.gharbanau.com/products/marble-per-square-feet-20356",
+          "label": "Marble material historical range",
+          "low": "2260.42",
+          "high": "7534.74",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_only",
+          "qualifier": "historical_indexed_range",
+          "availability": "not_confirmed",
+          "source_access": "search_snippet_only",
+          "published_date": "2022-08-10",
+          "retrieved_date": "2026-10-16",
+          "qualification": "2022 search-index listing only; slab grade and fitting not specified.",
+          "source_note": "Historical listing; page body did not load. Not adopted as a current installed rate.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "historical_reference",
+      "qualification": "Historical material-only range; no current exact installed marble price verified."
+    },
+    {
+      "id": "coffee-lounge-003",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Finished Counter Table Installation",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "38.27",
+        "unit": "Sq ft",
+        "rate": "2750.00",
+        "amount": "105242.50",
+        "amount_minor": 10524250,
+        "currency": null
+      },
+      "si": {
+        "quantity": "3.5553993408",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "29600.753645951736"
+      },
+      "working_amount": "105242.50",
+      "working_amount_minor": 10524250,
+      "working_rate": "29600.753645951736",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R16"
+      ],
+      "references": [
+        {
+          "id": "R16",
+          "source_id": "S10",
+          "publisher": "OMH Nepal",
+          "url": "https://omhnepal.com/shop/item/cash-counter-with-drawer",
+          "label": "Standard laminate cash counter with drawer",
+          "low": "27500",
+          "high": "27500",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "similar_installed_work",
+          "qualifier": "listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Different dimensions and function from coffee counter; no each-to-area conversion.",
+          "source_note": "",
+          "unit_matches_estimate": false,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "different_unit_reference",
+      "qualification": "Standard cash counter is per piece, not this project counter per area."
+    },
+    {
+      "id": "coffee-lounge-004",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Counter Skirting Finish Works",
+      "source_page": 4,
+      "status": "on_hold_original_retained",
+      "hold_reason": "User instruction on 2026-10-17: keep original values and leave rate research on hold.",
+      "original": {
+        "quantity": "15.50",
+        "unit": "Rft",
+        "rate": "750.00",
+        "amount": "11625.00",
+        "amount_minor": 1162500,
+        "currency": null
+      },
+      "si": {
+        "quantity": "4.7244",
+        "unit": "m",
+        "unit_label": "m",
+        "rate": "2460.629921259843"
+      },
+      "working_amount": "11625.00",
+      "working_amount_minor": 1162500,
+      "working_rate": "2460.629921259843",
+      "replacement_rate": null,
+      "reference_ids": [],
+      "references": [],
+      "research_state": "quote_needed",
+      "qualification": "Counter skirting is running length. Profile, height, substrate and finish are not specified; no verified exact local rate."
+    },
+    {
+      "id": "coffee-lounge-005",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "PVC Panel Finish Works",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "159.62",
+        "unit": "sq ft",
+        "rate": "450.00",
+        "amount": "71829.00",
+        "amount_minor": 7182900,
+        "currency": null
+      },
+      "si": {
+        "quantity": "14.8291832448",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "4843.759687519375"
+      },
+      "working_amount": "71829.00",
+      "working_amount_minor": 7182900,
+      "working_rate": "4843.759687519375",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R02"
+      ],
+      "references": [
+        {
+          "id": "R02",
+          "source_id": "S02",
+          "publisher": "Manasukh Flooring",
+          "url": "https://flooringinnepal.com/blog/pvc-flooring-cost-in-nepal/",
+          "label": "PVC wall panelling",
+          "low": "2475.70",
+          "high": "6458.35",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_and_labour",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Grade, framing arrangement and finish must be matched.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "scope_reference",
+      "qualification": "Installed PVC panelling range; panel thickness, framing, trims and material grade require confirmation."
+    },
+    {
+      "id": "coffee-lounge-006",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Ceiling Mounted Light Installation",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "15.00",
+        "unit": "Nos",
+        "rate": "1500.00",
+        "amount": "22500.00",
+        "amount_minor": 2250000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "15.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "1500.00"
+      },
+      "working_amount": "22500.00",
+      "working_amount_minor": 2250000,
+      "working_rate": "1500.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R06"
+      ],
+      "references": [
+        {
+          "id": "R06",
+          "source_id": "S04",
+          "publisher": "Sixkey",
+          "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+          "label": "Concealed LED panel, 18–24 W",
+          "low": "1000",
+          "high": "1000",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "approximate",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-08-26",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Approximate fixture price; wardrobe lights and wiring are not included.",
+          "source_note": "Page also displays September 26, 2026; retail products only, no installation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "Panel-light reference only; design, wattage, wardrobe-light content and installed wiring differ."
+    },
+    {
+      "id": "coffee-lounge-007",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Wall Putty And Painting",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "152.50",
+        "unit": "sq ft",
+        "rate": "190.00",
+        "amount": "28975.00",
+        "amount_minor": 2897500,
+        "currency": null
+      },
+      "si": {
+        "quantity": "14.1677136",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "2045.142979174847"
+      },
+      "working_amount": "28975.00",
+      "working_amount_minor": 2897500,
+      "working_rate": "2045.142979174847",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R24",
+        "R27"
+      ],
+      "references": [
+        {
+          "id": "R24",
+          "source_id": "S16",
+          "publisher": "Reshape Home",
+          "url": "https://reshapehome.com/blogs/paint-price-in-nepal/",
+          "label": "Standard interior painting",
+          "low": "269.10",
+          "high": "430.56",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "painting_reference",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Putty and primer listed as additional; not a full putty-plus-paint price.",
+          "source_note": "Putty and primer are listed as additional costs, not a complete putty-plus-paint quote.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        },
+        {
+          "id": "R27",
+          "source_id": "S21",
+          "publisher": "Prolink Nepal",
+          "url": "https://www.prolinknepal.com/painter-service-in-kathmandu",
+          "label": "Wall putty application indexed range",
+          "low": "215.28",
+          "high": "322.92",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "scope_unconfirmed",
+          "qualifier": "indexed_range",
+          "availability": "not_confirmed",
+          "source_access": "search_snippet_only",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Search index only, page 403; labour / material inclusion is not verified.",
+          "source_note": "Page returned 403. Indexed putty range is provisional and needs direct confirmation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "partial_scope_reference",
+      "qualification": "Painting and indexed putty references are separate and unverified as a combined installed system. Do not sum into an accepted rate."
+    },
+    {
+      "id": "coffee-lounge-008",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "1 Ton Split AC",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "1",
+        "unit": "No",
+        "rate": "85000.00",
+        "amount": "85000.00",
+        "amount_minor": 8500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "85000.00"
+      },
+      "working_amount": "85000.00",
+      "working_amount_minor": 8500000,
+      "working_rate": "85000.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R08"
+      ],
+      "references": [
+        {
+          "id": "R08",
+          "source_id": "S05",
+          "publisher": "Air Experts Nepal",
+          "url": "https://airexperts.com.np/shop",
+          "label": "Midea Xtreme Plus inverter 1.0 ton",
+          "low": "75050",
+          "high": "75050",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Model MSEZBU-12HRFN8; electrical work and fitting require confirmation.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "1-ton equipment reference only; copper piping, drainage, wiring and fitting scope still need quotation."
+    },
+    {
+      "id": "coffee-lounge-009",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "False Ceiling Lighting Points",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "84.8125",
+        "unit": "Sq ft",
+        "rate": "150.00",
+        "amount": "12721.88",
+        "amount_minor": 1272188,
+        "currency": null
+      },
+      "si": {
+        "quantity": "7.87933908",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "1614.586562506458"
+      },
+      "working_amount": "12721.88",
+      "working_amount_minor": 1272188,
+      "working_rate": "1614.586562506458",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R03"
+      ],
+      "references": [
+        {
+          "id": "R03",
+          "source_id": "S03",
+          "publisher": "ConstructionSewa",
+          "url": "https://www.constructionsewa.com/blogs/gypsum-false-ceiling-price-nepal",
+          "label": "Basic flat gypsum ceiling",
+          "low": "968.75",
+          "high": "1937.50",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_and_labour",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-09-10",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Electrical wiring, light fixtures and final paint may be separate; source inclusion wording is inconsistent.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "scope_reference",
+      "qualification": "Basic gypsum benchmark only; board thickness, framework and lighting-point exclusions require confirmation."
+    },
+    {
+      "id": "coffee-lounge-010",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Irregular Glass Table Seating",
+      "source_page": 4,
+      "status": "on_hold_original_retained",
+      "hold_reason": "User instruction on 2026-10-17: keep original values and leave rate research on hold.",
+      "original": {
+        "quantity": "1",
+        "unit": "Nos.",
+        "rate": "40000.00",
+        "amount": "40000.00",
+        "amount_minor": 4000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "40000.00"
+      },
+      "working_amount": "40000.00",
+      "working_amount_minor": 4000000,
+      "working_rate": "40000.00",
+      "replacement_rate": null,
+      "reference_ids": [],
+      "references": [],
+      "research_state": "quote_needed",
+      "qualification": "Irregular glass table plus seating tool is a custom assembly; glass thickness, base and stool quantity are missing."
+    },
+    {
+      "id": "coffee-lounge-011",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Strip Lighting Fixture Works",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "11.50",
+        "unit": "Rft",
+        "rate": "300.00",
+        "amount": "3450.00",
+        "amount_minor": 345000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "3.5052",
+        "unit": "m",
+        "unit_label": "m",
+        "rate": "984.251968503937"
+      },
+      "working_amount": "3450.00",
+      "working_amount_minor": 345000,
+      "working_rate": "984.251968503937",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R05"
+      ],
+      "references": [
+        {
+          "id": "R05",
+          "source_id": "S04",
+          "publisher": "Sixkey",
+          "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+          "label": "LED strip light",
+          "low": "125",
+          "high": "200",
+          "unit": "m",
+          "unit_label": "m",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-08-26",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Driver, channel, cable and fitting excluded.",
+          "source_note": "Page also displays September 26, 2026; retail products only, no installation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "Fixture supply only; quote includes electrical work or fixtures. Driver/channel/installation price still required."
+    },
+    {
+      "id": "coffee-lounge-012",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Hanging Light Fixture Installation",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "1.00",
+        "unit": "nos.",
+        "rate": "7500.00",
+        "amount": "7500.00",
+        "amount_minor": 750000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "7500.00"
+      },
+      "working_amount": "7500.00",
+      "working_amount_minor": 750000,
+      "working_rate": "7500.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R07"
+      ],
+      "references": [
+        {
+          "id": "R07",
+          "source_id": "S04",
+          "publisher": "Sixkey",
+          "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+          "label": "Chandelier / jhumar",
+          "low": "7000",
+          "high": "200000",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-08-26",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Different designs, sizes and lamp arrangements; not an installed quote.",
+          "source_note": "Page also displays September 26, 2026; retail products only, no installation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "related_category_reference",
+      "qualification": "Decorative-light catalogue range is only a broad category reference; pendant design and fitting remain unknown."
+    },
+    {
+      "id": "coffee-lounge-013",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Kitchen Sink And Tap",
+      "source_page": 4,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "1.00",
+        "unit": "nos.",
+        "rate": "25000.00",
+        "amount": "25000.00",
+        "amount_minor": 2500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "25000.00"
+      },
+      "working_amount": "25000.00",
+      "working_amount_minor": 2500000,
+      "working_rate": "25000.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R18"
+      ],
+      "references": [
+        {
+          "id": "R18",
+          "source_id": "S12",
+          "publisher": "Hardware Pasal",
+          "url": "https://hardwarepasal.com/category/basin",
+          "label": "18 × 24 matte silver sink",
+          "low": "2600",
+          "high": "2600",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Tap, waste fittings, cabinet cut-out, plumbing and installation not established.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "Sink supply reference excludes the complete tap, plumbing and installation package in the estimate."
+    },
+    {
+      "id": "locker-space-001",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Plywood And Formica Lockers",
+      "source_page": 5,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "69.38",
+        "unit": "sq ft",
+        "rate": "2500.00",
+        "amount": "173450.00",
+        "amount_minor": 17345000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "6.4456129152",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "26909.776041774306"
+      },
+      "working_amount": "173450.00",
+      "working_amount_minor": 17345000,
+      "working_rate": "26909.776041774306",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R01"
+      ],
+      "references": [
+        {
+          "id": "R01",
+          "source_id": "S01",
+          "publisher": "Vastuveda Designs",
+          "url": "https://vastuvedadesigns.com/guide/interior-design-cost-nepal-2026",
+          "label": "Custom laminate / veneer wardrobe elevation",
+          "low": "12916.69",
+          "high": "26909.78",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "similar_installed_work",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Front-elevation measurement; not curved cupboards, shoe racks or multi-compartment lockers.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "similar_scope_reference",
+      "qualification": "Cabinet depth, curved work, partitions, board grade and measurement basis need a matching contractor quote."
+    },
+    {
+      "id": "locker-space-002",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Cleaning Supply Storage Closet",
+      "source_page": 5,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "35.00",
+        "unit": "sq ft",
+        "rate": "2500.00",
+        "amount": "87500.00",
+        "amount_minor": 8750000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "3.2516064",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "26909.776041774306"
+      },
+      "working_amount": "87500.00",
+      "working_amount_minor": 8750000,
+      "working_rate": "26909.776041774306",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R01"
+      ],
+      "references": [
+        {
+          "id": "R01",
+          "source_id": "S01",
+          "publisher": "Vastuveda Designs",
+          "url": "https://vastuvedadesigns.com/guide/interior-design-cost-nepal-2026",
+          "label": "Custom laminate / veneer wardrobe elevation",
+          "low": "12916.69",
+          "high": "26909.78",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "similar_installed_work",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Front-elevation measurement; not curved cupboards, shoe racks or multi-compartment lockers.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "similar_scope_reference",
+      "qualification": "Cabinet depth, curved work, partitions, board grade and measurement basis need a matching contractor quote."
+    },
+    {
+      "id": "locker-space-003",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "PVC Panel Framing Works",
+      "source_page": 5,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "115.47",
+        "unit": "sq ft",
+        "rate": "1350.00",
+        "amount": "155884.50",
+        "amount_minor": 15588450,
+        "currency": null
+      },
+      "si": {
+        "quantity": "10.7275140288",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "14531.279062558125"
+      },
+      "working_amount": "155884.50",
+      "working_amount_minor": 15588450,
+      "working_rate": "14531.279062558125",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R02"
+      ],
+      "references": [
+        {
+          "id": "R02",
+          "source_id": "S02",
+          "publisher": "Manasukh Flooring",
+          "url": "https://flooringinnepal.com/blog/pvc-flooring-cost-in-nepal/",
+          "label": "PVC wall panelling",
+          "low": "2475.70",
+          "high": "6458.35",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_and_labour",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Grade, framing arrangement and finish must be matched.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "scope_reference",
+      "qualification": "Installed PVC panelling range; panel thickness, framing, trims and material grade require confirmation."
+    },
+    {
+      "id": "locker-space-004",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Hanging Lights Electrical Works",
+      "source_page": 5,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "2.00",
+        "unit": "Nos",
+        "rate": "7500.00",
+        "amount": "15000.00",
+        "amount_minor": 1500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "2.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "7500.00"
+      },
+      "working_amount": "15000.00",
+      "working_amount_minor": 1500000,
+      "working_rate": "7500.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R07"
+      ],
+      "references": [
+        {
+          "id": "R07",
+          "source_id": "S04",
+          "publisher": "Sixkey",
+          "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+          "label": "Chandelier / jhumar",
+          "low": "7000",
+          "high": "200000",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-08-26",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Different designs, sizes and lamp arrangements; not an installed quote.",
+          "source_note": "Page also displays September 26, 2026; retail products only, no installation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "related_category_reference",
+      "qualification": "Decorative-light catalogue range is only a broad category reference; pendant design and fitting remain unknown."
+    },
+    {
+      "id": "locker-space-005",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Wall Putty Surface Finish",
+      "source_page": 5,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "880",
+        "unit": "sq ft",
+        "rate": "190.00",
+        "amount": "167200.00",
+        "amount_minor": 16720000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "81.7546752",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "2045.142979174847"
+      },
+      "working_amount": "167200.00",
+      "working_amount_minor": 16720000,
+      "working_rate": "2045.142979174847",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R27"
+      ],
+      "references": [
+        {
+          "id": "R27",
+          "source_id": "S21",
+          "publisher": "Prolink Nepal",
+          "url": "https://www.prolinknepal.com/painter-service-in-kathmandu",
+          "label": "Wall putty application indexed range",
+          "low": "215.28",
+          "high": "322.92",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "scope_unconfirmed",
+          "qualifier": "indexed_range",
+          "availability": "not_confirmed",
+          "source_access": "search_snippet_only",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Search index only, page 403; labour / material inclusion is not verified.",
+          "source_note": "Page returned 403. Indexed putty range is provisional and needs direct confirmation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "unverified_index_reference",
+      "qualification": "Putty range comes from search-index text only because the service page returns 403; confirm directly."
+    },
+    {
+      "id": "locker-space-006",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "1 Ton Split AC",
+      "source_page": 5,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "1",
+        "unit": "No",
+        "rate": "85000.00",
+        "amount": "85000.00",
+        "amount_minor": 8500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "85000.00"
+      },
+      "working_amount": "85000.00",
+      "working_amount_minor": 8500000,
+      "working_rate": "85000.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R08"
+      ],
+      "references": [
+        {
+          "id": "R08",
+          "source_id": "S05",
+          "publisher": "Air Experts Nepal",
+          "url": "https://airexperts.com.np/shop",
+          "label": "Midea Xtreme Plus inverter 1.0 ton",
+          "low": "75050",
+          "high": "75050",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Model MSEZBU-12HRFN8; electrical work and fitting require confirmation.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "1-ton equipment reference only; copper piping, drainage, wiring and fitting scope still need quotation."
+    },
+    {
+      "id": "locker-space-007",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Curved Gypsum Board Installation",
+      "source_page": 5,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "356.50",
+        "unit": "Sqft",
+        "rate": "195",
+        "amount": "69517.50",
+        "amount_minor": 6951750,
+        "currency": null
+      },
+      "si": {
+        "quantity": "33.11993376",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "2098.962531258396"
+      },
+      "working_amount": "69517.50",
+      "working_amount_minor": 6951750,
+      "working_rate": "2098.962531258396",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R04"
+      ],
+      "references": [
+        {
+          "id": "R04",
+          "source_id": "S03",
+          "publisher": "ConstructionSewa",
+          "url": "https://www.constructionsewa.com/blogs/gypsum-false-ceiling-price-nepal",
+          "label": "Curved or multi-level gypsum ceiling",
+          "low": "2690.98",
+          "high": "4305.56",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_and_labour",
+          "qualifier": "open_upper_bound",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-09-10",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Upper value is 400+; curved board orientation and framing must be confirmed.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "scope_reference",
+      "qualification": "Curved ceiling benchmark; confirm whether the project board is ceiling or vertical fascia and match framework."
+    },
+    {
+      "id": "locker-space-008",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Strip Lighting Electrical Works",
+      "source_page": 5,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "44.00",
+        "unit": "Rft.",
+        "rate": "300",
+        "amount": "13200.00",
+        "amount_minor": 1320000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "13.4112",
+        "unit": "m",
+        "unit_label": "m",
+        "rate": "984.251968503937"
+      },
+      "working_amount": "13200.00",
+      "working_amount_minor": 1320000,
+      "working_rate": "984.251968503937",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R05"
+      ],
+      "references": [
+        {
+          "id": "R05",
+          "source_id": "S04",
+          "publisher": "Sixkey",
+          "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+          "label": "LED strip light",
+          "low": "125",
+          "high": "200",
+          "unit": "m",
+          "unit_label": "m",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-08-26",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Driver, channel, cable and fitting excluded.",
+          "source_note": "Page also displays September 26, 2026; retail products only, no installation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "Fixture supply only; quote includes electrical work or fixtures. Driver/channel/installation price still required."
+    },
+    {
+      "id": "locker-space-009",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Brand Name Signage Board",
+      "source_page": 5,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "2.00",
+        "unit": "Nos.",
+        "rate": "10000",
+        "amount": "20000.00",
+        "amount_minor": 2000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "2.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "10000"
+      },
+      "working_amount": "20000.00",
+      "working_amount_minor": 2000000,
+      "working_rate": "10000",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R17"
+      ],
+      "references": [
+        {
+          "id": "R17",
+          "source_id": "S11",
+          "publisher": "Glow N Sign Nepal",
+          "url": "https://glownsign.com.np/products/acrylic-signage",
+          "label": "Acrylic signage with printed vinyl",
+          "low": "19375.04",
+          "high": "37673.69",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "fabrication_reference",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Project sign dimensions and lighting are absent; no conversion into a per-sign price.",
+          "source_note": "",
+          "unit_matches_estimate": false,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "different_unit_reference",
+      "qualification": "Brand signs are counted per sign; supplier reference is per area. Sign dimensions, material and illumination are missing."
+    },
+    {
+      "id": "locker-space-010",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Sliding Doors And Fixtures",
+      "source_page": 5,
+      "status": "on_hold_original_retained",
+      "hold_reason": "User instruction on 2026-10-17: keep original values and leave rate research on hold.",
+      "original": {
+        "quantity": "434.00",
+        "unit": "Sqft",
+        "rate": "1700",
+        "amount": "737800.00",
+        "amount_minor": 73780000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "40.31991936",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "18298.647708406528"
+      },
+      "working_amount": "737800.00",
+      "working_amount_minor": 73780000,
+      "working_rate": "18298.647708406528",
+      "replacement_rate": null,
+      "reference_ids": [],
+      "references": [],
+      "research_state": "quote_needed",
+      "qualification": "Sliding door material, frame, glass or laminate, runners and hardware are unspecified. No exact installed rate verified."
+    },
+    {
+      "id": "studio-001",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Formica Cabinet With Doors",
+      "source_page": 6,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "119.53",
+        "unit": "Sqft",
+        "rate": "2500.00",
+        "amount": "298825.00",
+        "amount_minor": 29882500,
+        "currency": null
+      },
+      "si": {
+        "quantity": "11.1047003712",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "26909.776041774306"
+      },
+      "working_amount": "298825.00",
+      "working_amount_minor": 29882500,
+      "working_rate": "26909.776041774306",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R01"
+      ],
+      "references": [
+        {
+          "id": "R01",
+          "source_id": "S01",
+          "publisher": "Vastuveda Designs",
+          "url": "https://vastuvedadesigns.com/guide/interior-design-cost-nepal-2026",
+          "label": "Custom laminate / veneer wardrobe elevation",
+          "low": "12916.69",
+          "high": "26909.78",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "similar_installed_work",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Front-elevation measurement; not curved cupboards, shoe racks or multi-compartment lockers.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "similar_scope_reference",
+      "qualification": "Cabinet depth, curved work, partitions, board grade and measurement basis need a matching contractor quote."
+    },
+    {
+      "id": "studio-002",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Wooden Framed Mirror Installation",
+      "source_page": 6,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "150.43",
+        "unit": "Sq ft",
+        "rate": "900.00",
+        "amount": "135387.00",
+        "amount_minor": 13538700,
+        "currency": null
+      },
+      "si": {
+        "quantity": "13.9754043072",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "9687.51937503875"
+      },
+      "working_amount": "135387.00",
+      "working_amount_minor": 13538700,
+      "working_rate": "9687.51937503875",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R13"
+      ],
+      "references": [
+        {
+          "id": "R13",
+          "source_id": "S08",
+          "publisher": "Om Frame House",
+          "url": "https://www.omframehouse.com.np/category/wall-mirrors/",
+          "label": "1.5 × 5 ft wooden framed standing mirror",
+          "low": "5500",
+          "high": "5500",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Fixed-size retail unit; not a fixed full-studio mirror wall.",
+          "source_note": "",
+          "unit_matches_estimate": false,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "different_unit_reference",
+      "qualification": "Retail standing mirror is per piece; project mirror is area-priced, fixed and wooden framed. No area conversion applied."
+    },
+    {
+      "id": "studio-003",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Full Length Sheer Curtains",
+      "source_page": 6,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "465.01",
+        "unit": "sq ft",
+        "rate": "1350.00",
+        "amount": "627763.50",
+        "amount_minor": 62776350,
+        "currency": null
+      },
+      "si": {
+        "quantity": "43.2008426304",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "14531.279062558125"
+      },
+      "working_amount": "627763.50",
+      "working_amount_minor": 62776350,
+      "working_rate": "14531.279062558125",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R19"
+      ],
+      "references": [
+        {
+          "id": "R19",
+          "source_id": "S13",
+          "publisher": "Thulo Bazaar",
+          "url": "https://thulobazaar.com.np/en/blog/curtain-blinds-buying-guide-nepal",
+          "label": "Sheer curtain fabric",
+          "low": "300",
+          "high": "800",
+          "unit": "fabric_m",
+          "unit_label": "linear metre of fabric",
+          "currency": "NPR",
+          "basis": "material_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2025-11-07",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Linear metre of cloth, width unstated; cannot convert to m² without width and fullness.",
+          "source_note": "",
+          "unit_matches_estimate": false,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "different_unit_reference",
+      "qualification": "Fabric price is per linear metre; completed curtain area, width, fullness, rods, stitching and installation are unresolved."
+    },
+    {
+      "id": "studio-004",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "PVC Panel Framing Works",
+      "source_page": 6,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "236.68",
+        "unit": "sq ft",
+        "rate": "700.00",
+        "amount": "165676.00",
+        "amount_minor": 16567600,
+        "currency": null
+      },
+      "si": {
+        "quantity": "21.9882915072",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "7534.737291696806"
+      },
+      "working_amount": "165676.00",
+      "working_amount_minor": 16567600,
+      "working_rate": "7534.737291696806",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R02"
+      ],
+      "references": [
+        {
+          "id": "R02",
+          "source_id": "S02",
+          "publisher": "Manasukh Flooring",
+          "url": "https://flooringinnepal.com/blog/pvc-flooring-cost-in-nepal/",
+          "label": "PVC wall panelling",
+          "low": "2475.70",
+          "high": "6458.35",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_and_labour",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Grade, framing arrangement and finish must be matched.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "scope_reference",
+      "qualification": "Installed PVC panelling range; panel thickness, framing, trims and material grade require confirmation."
+    },
+    {
+      "id": "studio-005",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Wall Putty And Paint",
+      "source_page": 6,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "905.21",
+        "unit": "sq ft",
+        "rate": "190.00",
+        "amount": "171989.90",
+        "amount_minor": 17198990,
+        "currency": null
+      },
+      "si": {
+        "quantity": "84.0967608384",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "2045.142979174847"
+      },
+      "working_amount": "171989.90",
+      "working_amount_minor": 17198990,
+      "working_rate": "2045.142979174847",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R24",
+        "R27"
+      ],
+      "references": [
+        {
+          "id": "R24",
+          "source_id": "S16",
+          "publisher": "Reshape Home",
+          "url": "https://reshapehome.com/blogs/paint-price-in-nepal/",
+          "label": "Standard interior painting",
+          "low": "269.10",
+          "high": "430.56",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "painting_reference",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Putty and primer listed as additional; not a full putty-plus-paint price.",
+          "source_note": "Putty and primer are listed as additional costs, not a complete putty-plus-paint quote.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        },
+        {
+          "id": "R27",
+          "source_id": "S21",
+          "publisher": "Prolink Nepal",
+          "url": "https://www.prolinknepal.com/painter-service-in-kathmandu",
+          "label": "Wall putty application indexed range",
+          "low": "215.28",
+          "high": "322.92",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "scope_unconfirmed",
+          "qualifier": "indexed_range",
+          "availability": "not_confirmed",
+          "source_access": "search_snippet_only",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Search index only, page 403; labour / material inclusion is not verified.",
+          "source_note": "Page returned 403. Indexed putty range is provisional and needs direct confirmation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "partial_scope_reference",
+      "qualification": "Painting and indexed putty references are separate and unverified as a combined installed system. Do not sum into an accepted rate."
+    },
+    {
+      "id": "studio-006",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Strip Lighting Electrical Works",
+      "source_page": 6,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "110.88",
+        "unit": "Rft",
+        "rate": "1100.00",
+        "amount": "121968.00",
+        "amount_minor": 12196800,
+        "currency": null
+      },
+      "si": {
+        "quantity": "33.796224",
+        "unit": "m",
+        "unit_label": "m",
+        "rate": "3608.923884514436"
+      },
+      "working_amount": "121968.00",
+      "working_amount_minor": 12196800,
+      "working_rate": "3608.923884514436",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R05"
+      ],
+      "references": [
+        {
+          "id": "R05",
+          "source_id": "S04",
+          "publisher": "Sixkey",
+          "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+          "label": "LED strip light",
+          "low": "125",
+          "high": "200",
+          "unit": "m",
+          "unit_label": "m",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2026-08-26",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Driver, channel, cable and fitting excluded.",
+          "source_note": "Page also displays September 26, 2026; retail products only, no installation.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "Fixture supply only; quote includes electrical work or fixtures. Driver/channel/installation price still required."
+    },
+    {
+      "id": "studio-007",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "1.5 MT AC Installation",
+      "source_page": 6,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "3.00",
+        "unit": "Nos.",
+        "rate": "110000.00",
+        "amount": "330000.00",
+        "amount_minor": 33000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "3.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "110000.00"
+      },
+      "working_amount": "330000.00",
+      "working_amount_minor": 33000000,
+      "working_rate": "110000.00",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R09",
+        "R10"
+      ],
+      "references": [
+        {
+          "id": "R09",
+          "source_id": "S05",
+          "publisher": "Air Experts Nepal",
+          "url": "https://airexperts.com.np/shop",
+          "label": "Midea Xtreme Plus inverter 1.5 ton",
+          "low": "103550",
+          "high": "103550",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Model MSEZCU-18HRFN8; only relevant if source 1.5 MT means refrigeration tonnage.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        },
+        {
+          "id": "R10",
+          "source_id": "S06",
+          "publisher": "Air Experts Nepal",
+          "url": "https://airexperts.com.np/products/midea-xtreme-series-1-5-ton-inverter-ac",
+          "label": "Midea Xtreme Series inverter 1.5 ton",
+          "low": "91800",
+          "high": "91800",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "listed_price",
+          "availability": "out_of_stock",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Model MSAGC-18HRFN8; page says out of stock; installation varies.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "conditional_product_reference",
+      "qualification": "Source says 1.5 MT. Confirm capacity, brand, piping length, support and electrical scope before comparison."
+    },
+    {
+      "id": "studio-008",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Cement Board Drywall Partition",
+      "source_page": 6,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "195.00",
+        "unit": "Sqft",
+        "rate": "580.00",
+        "amount": "113100.00",
+        "amount_minor": 11310000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "18.1160928",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "6243.068041691639"
+      },
+      "working_amount": "113100.00",
+      "working_amount_minor": 11310000,
+      "working_rate": "6243.068041691639",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R21",
+        "R22"
+      ],
+      "references": [
+        {
+          "id": "R21",
+          "source_id": "S14",
+          "publisher": "AS Design / House Design in Nepal",
+          "url": "https://housedesigninnepal.com/gypsum-board-vs-cement-board-in-nepal-which-is-right-for-your-construction-project/",
+          "label": "Standard 8–12 mm cement board",
+          "low": "3767.37",
+          "high": "5381.96",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Historical 2025 guide; excludes separately listed labour and does not establish aluminium frame price.",
+          "source_note": "2025 values; material and installation labour listed separately.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        },
+        {
+          "id": "R22",
+          "source_id": "S14",
+          "publisher": "AS Design / House Design in Nepal",
+          "url": "https://housedesigninnepal.com/gypsum-board-vs-cement-board-in-nepal-which-is-right-for-your-construction-project/",
+          "label": "Cement-board installation labour",
+          "low": "1614.59",
+          "high": "2690.98",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "labour_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Historical 2025 guide; not added to material rate as a verified turnkey quotation.",
+          "source_note": "2025 values; material and installation labour listed separately.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "partial_scope_reference",
+      "qualification": "Board and labour are historical component references; aluminium frame, board faces and complete assembly are not priced."
+    },
+    {
+      "id": "changing-room-001",
+      "section_id": "changing-room",
+      "section_name": "Changing Room",
+      "title": "Cement Board Drywall Partition",
+      "source_page": 7,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "249.16",
+        "unit": "Sqft",
+        "rate": "580.00",
+        "amount": "144512.80",
+        "amount_minor": 14451280,
+        "currency": null
+      },
+      "si": {
+        "quantity": "23.1477214464",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "6243.068041691639"
+      },
+      "working_amount": "144512.80",
+      "working_amount_minor": 14451280,
+      "working_rate": "6243.068041691639",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R21",
+        "R22"
+      ],
+      "references": [
+        {
+          "id": "R21",
+          "source_id": "S14",
+          "publisher": "AS Design / House Design in Nepal",
+          "url": "https://housedesigninnepal.com/gypsum-board-vs-cement-board-in-nepal-which-is-right-for-your-construction-project/",
+          "label": "Standard 8–12 mm cement board",
+          "low": "3767.37",
+          "high": "5381.96",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "material_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Historical 2025 guide; excludes separately listed labour and does not establish aluminium frame price.",
+          "source_note": "2025 values; material and installation labour listed separately.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        },
+        {
+          "id": "R22",
+          "source_id": "S14",
+          "publisher": "AS Design / House Design in Nepal",
+          "url": "https://housedesigninnepal.com/gypsum-board-vs-cement-board-in-nepal-which-is-right-for-your-construction-project/",
+          "label": "Cement-board installation labour",
+          "low": "1614.59",
+          "high": "2690.98",
+          "unit": "m2",
+          "unit_label": "m²",
+          "currency": "NPR",
+          "basis": "labour_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Historical 2025 guide; not added to material rate as a verified turnkey quotation.",
+          "source_note": "2025 values; material and installation labour listed separately.",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "partial_scope_reference",
+      "qualification": "Board and labour are historical component references; aluminium frame, board faces and complete assembly are not priced."
+    },
+    {
+      "id": "changing-room-002",
+      "section_id": "changing-room",
+      "section_name": "Changing Room",
+      "title": "Full Length Curtain Installation",
+      "source_page": 7,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "73.30",
+        "unit": "Sq ft",
+        "rate": "1550.00",
+        "amount": "113615.00",
+        "amount_minor": 11361500,
+        "currency": null
+      },
+      "si": {
+        "quantity": "6.809792832",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "16684.06114590007"
+      },
+      "working_amount": "113615.00",
+      "working_amount_minor": 11361500,
+      "working_rate": "16684.06114590007",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R20",
+        "R19"
+      ],
+      "references": [
+        {
+          "id": "R20",
+          "source_id": "S13",
+          "publisher": "Thulo Bazaar",
+          "url": "https://thulobazaar.com.np/en/blog/curtain-blinds-buying-guide-nepal",
+          "label": "Blackout curtain fabric",
+          "low": "600",
+          "high": "1500",
+          "unit": "fabric_m",
+          "unit_label": "linear metre of fabric",
+          "currency": "NPR",
+          "basis": "material_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2025-11-07",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Different fabric option; not a complete installed curtain assembly.",
+          "source_note": "",
+          "unit_matches_estimate": false,
+          "scope_verified": false
+        },
+        {
+          "id": "R19",
+          "source_id": "S13",
+          "publisher": "Thulo Bazaar",
+          "url": "https://thulobazaar.com.np/en/blog/curtain-blinds-buying-guide-nepal",
+          "label": "Sheer curtain fabric",
+          "low": "300",
+          "high": "800",
+          "unit": "fabric_m",
+          "unit_label": "linear metre of fabric",
+          "currency": "NPR",
+          "basis": "material_only",
+          "qualifier": "range",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": "2025-11-07",
+          "retrieved_date": "2026-10-16",
+          "qualification": "Linear metre of cloth, width unstated; cannot convert to m² without width and fullness.",
+          "source_note": "",
+          "unit_matches_estimate": false,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "different_unit_reference",
+      "qualification": "Source does not specify fabric; linear fabric metre prices cannot become an installed area rate."
+    },
+    {
+      "id": "washroom-001",
+      "section_id": "washroom",
+      "section_name": "Washroom",
+      "title": "Decorative Mirror With Fittings",
+      "source_page": 8,
+      "status": "reference_comparison",
+      "hold_reason": null,
+      "original": {
+        "quantity": "1.00",
+        "unit": "No",
+        "rate": "12500.000",
+        "amount": "12500.00",
+        "amount_minor": 1250000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "12500.000"
+      },
+      "working_amount": "12500.00",
+      "working_amount_minor": 1250000,
+      "working_rate": "12500.000",
+      "replacement_rate": null,
+      "reference_ids": [
+        "R14"
+      ],
+      "references": [
+        {
+          "id": "R14",
+          "source_id": "S08",
+          "publisher": "Om Frame House",
+          "url": "https://www.omframehouse.com.np/category/wall-mirrors/",
+          "label": "Gold ornate large decorative mirror",
+          "low": "13500",
+          "high": "13500",
+          "unit": "each",
+          "unit_label": "each",
+          "currency": "NPR",
+          "basis": "product_only",
+          "qualifier": "listed_price",
+          "availability": "not_confirmed",
+          "source_access": "page_read",
+          "published_date": null,
+          "retrieved_date": "2026-10-16",
+          "qualification": "Design and dimensions must match the washroom requirement.",
+          "source_note": "",
+          "unit_matches_estimate": true,
+          "scope_verified": false
+        }
+      ],
+      "research_state": "product_only_reference",
+      "qualification": "Decorative mirror product reference; dimensions and support / fixing package must be confirmed."
+    },
+    {
+      "id": "washroom-002",
+      "section_id": "washroom",
+      "section_name": "Washroom",
+      "title": "Wall Decoration Painting Works",
+      "source_page": 8,
+      "status": "on_hold_original_retained",
+      "hold_reason": "User instruction on 2026-10-17: keep original values and leave rate research on hold.",
+      "original": {
+        "quantity": "66.67",
+        "unit": "Sqft",
+        "rate": "450.000",
+        "amount": "30001.50",
+        "amount_minor": 3000150,
+        "currency": null
+      },
+      "si": {
+        "quantity": "6.1938456768",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "4843.759687519375"
+      },
+      "working_amount": "30001.50",
+      "working_amount_minor": 3000150,
+      "working_rate": "4843.759687519375",
+      "replacement_rate": null,
+      "reference_ids": [],
+      "references": [],
+      "research_state": "quote_needed",
+      "qualification": "Wall decoration design, materials and painting details are absent; no matching rate verified."
+    }
+  ]
+}
