@@ -53,7 +53,12 @@ export async function init(){
   const rows=d.line_items.filter(x=>(!area||x.section_id===area)&&(!q||`${nodes.get(x.id).title} ${x.description} ${x.section_name} ${x.id}`.toLowerCase().includes(q)));
   if(sort!=='source')rows.sort((a,b)=>(a.amount_minor-b.amount_minor)*(sort==='desc'?-1:1));
   $('count').textContent=`${rows.length} of 51 items · displayed amount ${money(rows.reduce((sum,x)=>sum+x.amount_minor,0)/100)} · before allowances and VAT`;
-  $('items').innerHTML=rows.length?rows.map(x=>`<tr><td>${esc(x.section_name)}</td><td><button class="scope-link" data-detail="${esc(x.id)}">${esc(nodes.get(x.id).title)}</button><small class="item-id">${esc(x.id)} · source no. ${esc(x.source_sn)}</small></td><td class="num">${quantity(x.quantity)}</td><td>${esc(x.unit_raw??'—')}</td><td class="num">${money(x.rate)}</td><td class="num">${money(x.amount)}</td></tr>`).join(''):'<tr><td colspan="6">No matching items.</td></tr>';
+  $('items').innerHTML=rows.length?d.sections.map(section=>{
+   const areaRows=rows.filter(x=>x.section_id===section.id);
+   if(!areaRows.length)return '';
+   const areaTotal=areaRows.reduce((sum,x)=>sum+x.amount_minor,0)/100;
+   return `<section class="area-table" aria-labelledby="table-${esc(section.id)}"><header class="area-table-head"><h3 id="table-${esc(section.id)}">${esc(section.name)}</h3><p>${areaRows.length} items · ${areaRows.length===section.item_count?'Area total':'Matching items total'} <strong>${money(areaTotal)}</strong></p></header><div class="table-scroll"><table><caption class="sr-only">${esc(section.name)} — concise source-linked estimate items</caption><thead><tr><th>Scope title · click for details</th><th class="num">Quantity</th><th>Unit</th><th class="num">Rate</th><th class="num">Amount</th></tr></thead><tbody>${areaRows.map(x=>`<tr><td><button class="scope-link" data-detail="${esc(x.id)}">${esc(nodes.get(x.id).title)}</button><small class="item-id">${esc(x.id)} · source no. ${esc(x.source_sn)}</small></td><td class="num">${quantity(x.quantity)}</td><td>${esc(x.unit_raw??'—')}</td><td class="num">${money(x.rate)}</td><td class="num">${money(x.amount)}</td></tr>`).join('')}</tbody><tfoot><tr><th scope="row" colspan="4">${areaRows.length===section.item_count?'Area total':'Matching items total'} · before VAT</th><td class="num">${money(areaTotal)}</td></tr></tfoot></table></div></section>`;
+  }).join(''):'<p class="empty">No matching items.</p>';
  }
  for(const id of ['area','search','sort'])$(id).addEventListener(id==='search'?'input':'change',render);
  $('issues').innerHTML=d.issues.map(x=>`<li>${esc(x.message)}</li>`).join('');
