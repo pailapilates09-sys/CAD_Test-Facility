@@ -1,0 +1,52 @@
+item_id,area,title,research_state,reference_ids,exact_scope_verified,accepted_market_rate,qualification
+reception-001,Reception Area,Curved Formica Storage Cupboard,similar_scope_reference,R01,False,,"Cabinet depth, curved work, partitions, board grade and measurement basis need a matching contractor quote."
+reception-002,Reception Area,Marble Slab Finish Works,historical_reference,R25,False,,Historical material-only range; no current exact installed marble price verified.
+reception-003,Reception Area,WPC Panel Reception Desk,different_unit_reference,R15,False,,Retail standard desk is per piece; project desk is priced by area and includes WPC. No normalized project rate assigned.
+reception-004,Reception Area,Finished Shoe Storage Rack,similar_scope_reference,R01,False,,"Cabinet depth, curved work, partitions, board grade and measurement basis need a matching contractor quote."
+reception-005,Reception Area,Finished Ratten Board Works,quote_needed,,False,,"No verified local installed ratten-board rate found. Confirm natural rattan / synthetic mesh / backing, frame and finish."
+reception-006,Reception Area,Glass Door And Fittings,similar_scope_reference,R23;R26,False,,Glass-door quantity is zero; partition and raw glass references do not price door fittings. No cost inferred.
+reception-007,Reception Area,1.5 MT AC Installation,conditional_product_reference,R09;R10,False,,"Source says 1.5 MT. Confirm capacity, brand, piping length, support and electrical scope before comparison."
+reception-008,Reception Area,Strip Lighting Electrical Works,product_only_reference,R05,False,,Fixture supply only; quote includes electrical work or fixtures. Driver/channel/installation price still required.
+reception-009,Reception Area,Ceiling And Wardrobe Lights,product_only_reference,R06,False,,"Panel-light reference only; design, wattage, wardrobe-light content and installed wiring differ."
+reception-010,Reception Area,Chandelier With Electrical Fittings,product_only_reference,R07,False,,Chandelier design and fixture installation remain unspecified.
+reception-011,Reception Area,Wall Putty And Painting,partial_scope_reference,R24;R27,False,,Painting and indexed putty references are separate and unverified as a combined installed system. Do not sum into an accepted rate.
+reception-012,Reception Area,Gypsum Board Lighting Points,scope_reference,R03,False,,"Basic gypsum benchmark only; board thickness, framework and lighting-point exclusions require confirmation."
+reception-013,Reception Area,Brand Name Signage Board,different_unit_reference,R17,False,,"Brand signs are counted per sign; supplier reference is per area. Sign dimensions, material and illumination are missing."
+reception-014,Reception Area,False Ceiling Lighting Points,different_unit_reference,R03,False,,Source ceiling is measured in points; public reference is area-based. No area or rate per point inferred.
+reception-015,Reception Area,Reception Area Couch Installation,missing_source_unit,R11,False,,Couch reference is per piece but the source unit is missing; two quantities are preserved without assigning each.
+reception-016,Reception Area,Granite Centre Table Installation,quote_needed,,False,,"No exact local granite centre-table listing verified. Need overall dimensions, granite grade, base, fabrication and fixing."
+coffee-lounge-001,Coffee lounge,Hardwood Frame Upholstered Sofa,product_only_reference,R12,False,,"Historical sofa model reference; seats, dimensions, hardwood frame and upholstery must match."
+coffee-lounge-002,Coffee lounge,Marble Slab Finish Works,historical_reference,R25,False,,Historical material-only range; no current exact installed marble price verified.
+coffee-lounge-003,Coffee lounge,Finished Counter Table Installation,different_unit_reference,R16,False,,"Standard cash counter is per piece, not this project counter per area."
+coffee-lounge-004,Coffee lounge,Counter Skirting Finish Works,quote_needed,,False,,"Counter skirting is running length. Profile, height, substrate and finish are not specified; no verified exact local rate."
+coffee-lounge-005,Coffee lounge,PVC Panel Finish Works,scope_reference,R02,False,,"Installed PVC panelling range; panel thickness, framing, trims and material grade require confirmation."
+coffee-lounge-006,Coffee lounge,Ceiling Mounted Light Installation,product_only_reference,R06,False,,"Panel-light reference only; design, wattage, wardrobe-light content and installed wiring differ."
+coffee-lounge-007,Coffee lounge,Wall Putty And Painting,partial_scope_reference,R24;R27,False,,Painting and indexed putty references are separate and unverified as a combined installed system. Do not sum into an accepted rate.
+coffee-lounge-008,Coffee lounge,1 Ton Split AC,product_only_reference,R08,False,,"1-ton equipment reference only; copper piping, drainage, wiring and fitting scope still need quotation."
+coffee-lounge-009,Coffee lounge,False Ceiling Lighting Points,scope_reference,R03,False,,"Basic gypsum benchmark only; board thickness, framework and lighting-point exclusions require confirmation."
+coffee-lounge-010,Coffee lounge,Irregular Glass Table Seating,quote_needed,,False,,"Irregular glass table plus seating tool is a custom assembly; glass thickness, base and stool quantity are missing."
+coffee-lounge-011,Coffee lounge,Strip Lighting Fixture Works,product_only_reference,R05,False,,Fixture supply only; quote includes electrical work or fixtures. Driver/channel/installation price still required.
+coffee-lounge-012,Coffee lounge,Hanging Light Fixture Installation,related_category_reference,R07,False,,Decorative-light catalogue range is only a broad category reference; pendant design and fitting remain unknown.
+coffee-lounge-013,Coffee lounge,Kitchen Sink And Tap,product_only_reference,R18,False,,"Sink supply reference excludes the complete tap, plumbing and installation package in the estimate."
+locker-space-001,Locker Space,Plywood And Formica Lockers,similar_scope_reference,R01,False,,"Cabinet depth, curved work, partitions, board grade and measurement basis need a matching contractor quote."
+locker-space-002,Locker Space,Cleaning Supply Storage Closet,similar_scope_reference,R01,False,,"Cabinet depth, curved work, partitions, board grade and measurement basis need a matching contractor quote."
+locker-space-003,Locker Space,PVC Panel Framing Works,scope_reference,R02,False,,"Installed PVC panelling range; panel thickness, framing, trims and material grade require confirmation."
+locker-space-004,Locker Space,Hanging Lights Electrical Works,related_category_reference,R07,False,,Decorative-light catalogue range is only a broad category reference; pendant design and fitting remain unknown.
+locker-space-005,Locker Space,Wall Putty Surface Finish,unverified_index_reference,R27,False,,Putty range comes from search-index text only because the service page returns 403; confirm directly.
+locker-space-006,Locker Space,1 Ton Split AC,product_only_reference,R08,False,,"1-ton equipment reference only; copper piping, drainage, wiring and fitting scope still need quotation."
+locker-space-007,Locker Space,Curved Gypsum Board Installation,scope_reference,R04,False,,Curved ceiling benchmark; confirm whether the project board is ceiling or vertical fascia and match framework.
+locker-space-008,Locker Space,Strip Lighting Electrical Works,product_only_reference,R05,False,,Fixture supply only; quote includes electrical work or fixtures. Driver/channel/installation price still required.
+locker-space-009,Locker Space,Brand Name Signage Board,different_unit_reference,R17,False,,"Brand signs are counted per sign; supplier reference is per area. Sign dimensions, material and illumination are missing."
+locker-space-010,Locker Space,Sliding Doors And Fixtures,quote_needed,,False,,"Sliding door material, frame, glass or laminate, runners and hardware are unspecified. No exact installed rate verified."
+studio-001,Studio,Formica Cabinet With Doors,similar_scope_reference,R01,False,,"Cabinet depth, curved work, partitions, board grade and measurement basis need a matching contractor quote."
+studio-002,Studio,Wooden Framed Mirror Installation,different_unit_reference,R13,False,,"Retail standing mirror is per piece; project mirror is area-priced, fixed and wooden framed. No area conversion applied."
+studio-003,Studio,Full Length Sheer Curtains,different_unit_reference,R19,False,,"Fabric price is per linear metre; completed curtain area, width, fullness, rods, stitching and installation are unresolved."
+studio-004,Studio,PVC Panel Framing Works,scope_reference,R02,False,,"Installed PVC panelling range; panel thickness, framing, trims and material grade require confirmation."
+studio-005,Studio,Wall Putty And Paint,partial_scope_reference,R24;R27,False,,Painting and indexed putty references are separate and unverified as a combined installed system. Do not sum into an accepted rate.
+studio-006,Studio,Strip Lighting Electrical Works,product_only_reference,R05,False,,Fixture supply only; quote includes electrical work or fixtures. Driver/channel/installation price still required.
+studio-007,Studio,1.5 MT AC Installation,conditional_product_reference,R09;R10,False,,"Source says 1.5 MT. Confirm capacity, brand, piping length, support and electrical scope before comparison."
+studio-008,Studio,Cement Board Drywall Partition,partial_scope_reference,R21;R22,False,,"Board and labour are historical component references; aluminium frame, board faces and complete assembly are not priced."
+changing-room-001,Changing Room,Cement Board Drywall Partition,partial_scope_reference,R21;R22,False,,"Board and labour are historical component references; aluminium frame, board faces and complete assembly are not priced."
+changing-room-002,Changing Room,Full Length Curtain Installation,different_unit_reference,R20;R19,False,,Source does not specify fabric; linear fabric metre prices cannot become an installed area rate.
+washroom-001,Washroom,Decorative Mirror With Fittings,product_only_reference,R14,False,,Decorative mirror product reference; dimensions and support / fixing package must be confirmed.
+washroom-002,Washroom,Wall Decoration Painting Works,quote_needed,,False,,"Wall decoration design, materials and painting details are absent; no matching rate verified."
