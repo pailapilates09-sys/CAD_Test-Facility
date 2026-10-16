@@ -1,9 +1,22 @@
 import {cp,mkdir,rm,writeFile,readFile} from 'node:fs/promises';
 import {spec,materials,sources,braceLength} from '../src/spec.mjs';
 import {renderDrawings,drawingInfo} from '../src/drawings.mjs';
+import {renderRecovery} from './render-progress-recovery.mjs';
 const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
 await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
 await cp(new URL('public/',root),dist,{recursive:true});
+// The dated recovery record is the single source for the current four-lane view.
+const recoveryRoot=new URL('progress/recovery/',root);
+const currentRecovery=JSON.parse(await readFile(new URL('current.json',recoveryRoot),'utf8'));
+const recoveryStatus=await readFile(new URL(currentRecovery.path,recoveryRoot),'utf8');
+const recoveryReport=await readFile(new URL(currentRecovery.report,recoveryRoot),'utf8');
+const progressPage=new URL('progress/index.html',dist);
+const progressTemplate=await readFile(progressPage,'utf8');
+if(!progressTemplate.includes('<!-- CURRENT_PROGRESS -->'))throw new Error('Missing current progress template marker');
+await writeFile(progressPage,progressTemplate.replace('<!-- CURRENT_PROGRESS -->',renderRecovery(JSON.parse(recoveryStatus))));
+await mkdir(new URL('progress/recovery/',dist),{recursive:true});
+await writeFile(new URL('progress/recovery/status.json',dist),recoveryStatus);
+await writeFile(new URL('progress/recovery/report.md',dist),recoveryReport);
 // Construction evidence is isolated from the CAD model and A9 progress datasets.
 const estimatePath='construction/estimates/pilates-astra-2026-10-15/';
 for(const folder of ['data','source'])await cp(new URL(estimatePath+folder+'/',root),new URL(estimatePath+folder+'/',dist),{recursive:true});

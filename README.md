@@ -8,11 +8,13 @@ Preservation/rollback baseline: commit `bbf90547c6e11b2754415e234fc310ea42bf62c8
 
 - `/`: workspace home with separate entries for CAD and project progress.
 - `/cad/`: the original formwork facility, including its model, five drawings, quantities and downloads. Geometry, vendor assets and the inch-only PDF are preserved.
-- `/progress/`: a dated read-only A9 onboarding projection, including the four-lane map, actual Drive parent hierarchy, phase coverage, sequence cursors, debts, access proofs and capability contracts. Legacy root links such as `/#model` redirect to the equivalent CAD section.
+- `/progress/`: the current recovered four-project summary, followed by the preserved 15 October source session and expandable 12 October onboarding charts. Legacy root links such as `/#model` redirect to the equivalent CAD section.
 
-The project snapshot is `src/progress-data.mjs`. It contains bounded reviewed status facts, not the full handover or private source bodies. `src/progress.mjs` renders it with native SVG and an expandable tree. It is a one-time snapshot; it has no connected-account credentials, live Drive API access or automatic refresh.
+The current recovery pointer is `progress/recovery/current.json`; it selects a dated status JSON and report. The build renders the current summary directly into HTML and publishes JSON/report downloads. This section is available without JavaScript. See [the recovery report](progress/recovery/2026-10-16/report.md).
 
-## Onboarding evidence and scope
+The historical onboarding snapshot is `src/progress-data.mjs`. It contains bounded reviewed status facts, not the full handover or private source bodies. `src/progress.mjs` renders it with native SVG and an expandable tree. It is a one-time snapshot; it has no connected-account credentials, live Drive API access or automatic refresh.
+
+## Historical onboarding evidence and scope — 12 October 2026
 
 The complete cross-account handover was independently read through the connected account: 756 paragraphs, 31,854 characters and a complete JSON parse. All 71 supplied Drive IDs were checked; 70 metadata reads passed and the exact AEC Oct9 terminal checkpoint returned 404. This does not prove deletion.
 

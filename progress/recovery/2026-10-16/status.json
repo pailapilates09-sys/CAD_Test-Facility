@@ -1,0 +1,251 @@
+{
+  "schema": "cad-facility.four-project-recovery.v1",
+  "checkedAt": "2026-10-16T01:54:38Z",
+  "timezone": "Asia/Kathmandu",
+  "lastSourceSessionCompletedAt": "2026-10-15T05:14:35.177Z",
+  "recoveryStatus": "RECOVERED_WITH_OPEN_DEBTS",
+  "basis": "Current Drive manifests, progress and state; four Local SyncState rows; Main registry notices; original AEC lock and exact terminal access test; Git history.",
+  "scope": "Recovery and status projection only. No new source batch, source-content extraction, Main ACK, permission change or scheduler restart.",
+  "preservedSourceCommit": "3ea40881bf64f8910cf58ef8fe7fee0594b9564c",
+  "rollbackCommit": "f92b3242a3949ff63cd4a57a488110c79bf5652f",
+  "session": {
+    "completedPhases": 61,
+    "lastSessionCheckpoints": 20,
+    "sourceElapsedMinutes": 103.02
+  },
+  "findings": [
+    "The four-project state and version history survived outside the archived chats.",
+    "The page mixed a 15 October MSCH/session panel with the 12 October onboarding charts. Historical charts are now grouped below the current recovery summary.",
+    "Local work is ahead of Main acknowledgement in all four lanes. Pending notices are evidence of completed Local work, not Main ACK.",
+    "Catalogue metadata, byte hashing and source-content extraction are separate stages."
+  ],
+  "lanes": [
+    {
+      "id": "MSCS",
+      "name": "MSc Structural Engineering",
+      "checkpoint": "AQ-CP87",
+      "batch": "B075",
+      "stage": "Source byte hashing",
+      "state": "POLICY_GATE",
+      "stateLabel": "Hashing policy gate",
+      "metric": {
+        "label": "Source files hashed",
+        "done": 1059,
+        "total": 1867,
+        "remaining": 808,
+        "unit": "files"
+      },
+      "inventory": {
+        "rows": 2187,
+        "folders": 320,
+        "files": 1867
+      },
+      "evidence": {
+        "type": "CURRENT JSONL independently downloaded and parsed",
+        "bytes": 2253033,
+        "sha256": "b785742928367c6043258a1f45eb7d96db986c6e573cdffeb9f37c8695e9ff39",
+        "uniqueIds": 2187,
+        "hashValuesPresent": 1059,
+        "agreement": "Progress JSON and Main N3 notice agree with manifest counts. Existing source hashes counted; source bodies were not rehashed during recovery."
+      },
+      "sync": {
+        "local": 6,
+        "mainConsumed": 3,
+        "pendingSequences": 3,
+        "notice": "N3",
+        "mainAck": "PENDING"
+      },
+      "contentExtraction": "Not started",
+      "blocker": "No files remain eligible under the current Tier3 policy; 808 files are deferred.",
+      "next": {
+        "batch": "B076",
+        "target": "Oversized or Google-native files",
+        "action": "Define the separately governed hashing policy before another source batch."
+      },
+      "comparison": {
+        "onboardingDone": 1015,
+        "addedSinceOnboarding": 44
+      }
+    },
+    {
+      "id": "LSA",
+      "name": "Lok Sewa Study Archive",
+      "checkpoint": "CP65",
+      "batch": "B065",
+      "stage": "Physical occurrence catalogue",
+      "state": "READY_FOR_NEXT_METADATA_BATCH",
+      "stateLabel": "Ready for next metadata batch",
+      "metric": {
+        "label": "Catalogue records",
+        "done": 1029,
+        "total": 1244,
+        "remaining": 215,
+        "unit": "rows"
+      },
+      "inventory": {
+        "rows": 1029,
+        "folders": 122,
+        "files": 907,
+        "metadataBytes": 114066082058
+      },
+      "evidence": {
+        "type": "CURRENT JSONL independently downloaded and parsed",
+        "bytes": 605179,
+        "sha256": "3c3e7d04baf14319ef5dfb285ec92d6ab199171bda2653f404a46c221e28aed2",
+        "uniqueIds": 1029,
+        "checkpointHashMatch": true,
+        "agreement": "Exact byte length and SHA-256 match CP65. Progress, Local16 and pending Main N12 agree."
+      },
+      "sync": {
+        "local": 16,
+        "mainConsumed": 5,
+        "pendingSequences": 11,
+        "notice": "N12",
+        "mainAck": "PENDING"
+      },
+      "contentExtraction": "PDF/OCR, video transcription and semantic extraction not started",
+      "blocker": "Catalogue remains incomplete; completed Local work awaits Main reconciliation.",
+      "next": {
+        "batch": "B066",
+        "target": "Property Valuation",
+        "action": "Fresh source metadata and idempotency checks, then one bounded metadata checkpoint."
+      },
+      "comparison": {
+        "onboardingDone": 416,
+        "addedSinceOnboarding": 613
+      }
+    },
+    {
+      "id": "AEC",
+      "name": "AEC Cost & Rate Intelligence",
+      "checkpoint": "G075 closed / G076 PART1",
+      "batch": "G076",
+      "stage": "Original terminal recovery",
+      "state": "BLOCKED_ORIGINAL_TERMINAL_UNAVAILABLE",
+      "stateLabel": "Original checkpoint unavailable",
+      "metric": null,
+      "inventory": null,
+      "evidence": {
+        "type": "Original lock, exact terminal metadata test and bounded canonical rate read",
+        "rateIds": [
+          "RO-2436",
+          "RO-2437"
+        ],
+        "ratesPresent": true,
+        "originalLockBoundary": "G075 / expected next RO-2436",
+        "terminalReadStatus": 404,
+        "agreement": "Both G076 rate rows still exist. Original lock remains at G075. Exact original terminal checkpoint returns 404; absence and access denial cannot be distinguished by this response."
+      },
+      "sync": {
+        "local": 11,
+        "mainConsumed": 10,
+        "pendingSequences": 1,
+        "notice": null,
+        "mainAck": "PENDING"
+      },
+      "contentExtraction": "Two G076 rate rows exist; terminal closure incomplete",
+      "blocker": "The original terminal checkpoint is unavailable to the connected account. Existing G076 rows must not be replayed.",
+      "next": {
+        "batch": "G076 recovery",
+        "target": "Original terminal checkpoint and original lock",
+        "action": "Resolve the original checkpoint access/existence, then reconcile existing terminal records without creating duplicate rates."
+      }
+    },
+    {
+      "id": "MSCH",
+      "name": "MSc Hydropower Research Corpus",
+      "checkpoint": "CP59",
+      "batch": "B059",
+      "stage": "Recursive physical catalogue",
+      "state": "READY_FOR_NEXT_METADATA_BATCH",
+      "stateLabel": "Ready for next metadata batch",
+      "metric": null,
+      "inventory": {
+        "rows": 1074,
+        "folders": 229,
+        "files": 845,
+        "pendingFolders": 132,
+        "metadataBytes": 7041400018,
+        "overallDenominator": null
+      },
+      "evidence": {
+        "type": "CURRENT JSONL and project state independently read",
+        "bytes": 573606,
+        "sha256": "ff105e5b1159395969098810e1555e8717e34d181c090843a001b91951e4d1fb",
+        "uniqueIds": 1074,
+        "checkpointHashMatch": true,
+        "agreement": "Exact byte length and SHA-256 match CP59; state counts, Local50 and Main N46 agree. Source/control edit links remain omitted."
+      },
+      "sync": {
+        "local": 50,
+        "mainConsumed": 3,
+        "pendingSequences": 47,
+        "notice": "N46",
+        "mainAck": "PENDING"
+      },
+      "contentExtraction": "Source-content extraction and model execution not started",
+      "blocker": "132 FIFO folders remain; final corpus size is unknown. Completed Local work awaits Main reconciliation.",
+      "next": {
+        "batch": "B060",
+        "target": "VolumeFrequencyAnalysisResults",
+        "action": "Re-read Local closeout and FIFO, then one bounded metadata checkpoint."
+      },
+      "comparison": {
+        "onboardingDone": 500,
+        "addedSinceOnboarding": 574
+      }
+    }
+  ],
+  "continuation": {
+    "rotation": [
+      "LSA",
+      "AEC",
+      "MSCH",
+      "MSCS"
+    ],
+    "phases": [
+      {
+        "lane": "LSA",
+        "phase": "62",
+        "batch": "B066",
+        "state": "QUEUED"
+      },
+      {
+        "lane": "AEC",
+        "phase": "63",
+        "batch": "G076 recovery",
+        "state": "BLOCKED"
+      },
+      {
+        "lane": "MSCH",
+        "phase": "64",
+        "batch": "B060",
+        "state": "QUEUED"
+      },
+      {
+        "lane": "MSCS",
+        "phase": "65",
+        "batch": "B076",
+        "state": "POLICY_GATE"
+      }
+    ],
+    "limits": {
+      "checkpointsPerPhase": 1,
+      "maxMinutesPerPhase": 20,
+      "workUnits": 14,
+      "protectedCloseoutUnits": 6
+    },
+    "mainSync": "All four Local/Main gaps remain open; no acknowledgement was manufactured by this recovery.",
+    "scheduler": "Historical handover records the master disabled by user request. No automation was created or restarted in this recovery; originating-account scheduler state was not queried."
+  },
+  "separatePipeline": {
+    "id": "JP Cost",
+    "checkpoint": "M02 v0.5.14",
+    "pages": 697,
+    "sources": 6,
+    "state": "RAW_ARCHIVE_REPORTED_COMPLETE_SEMANTIC_QA_PENDING",
+    "basis": "Historical handover and onboarding snapshot only; source archives not reverified in this recovery.",
+    "note": "Separate from the four lanes and from AEC G076 terminal debt."
+  }
+}
+
