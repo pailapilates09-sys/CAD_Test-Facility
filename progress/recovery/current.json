@@ -1,6 +1,5 @@
 {
   "schema": "cad-facility.recovery-pointer.v1",
-  "path": "2026-10-16/status.json",
-  "report": "2026-10-16/report.md"
+  "path": "2026-10-16-run60/status.json",
+  "report": "2026-10-16-run60/report.md"
 }
-

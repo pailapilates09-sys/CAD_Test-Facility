@@ -40,3 +40,31 @@ test('recovery reports stage-specific progress and preserves unknown totals and 
  assert.ok(visible.includes('Terminal closure incomplete'));
  assert.ok(visible.includes('total unknown'));
 });
+
+test('resumed run meets its time window and its checkpoint deltas reconcile to current lanes',()=>{
+ const run=recovery.execution;
+ assert.ok(run);
+ const elapsed=(Date.parse(run.stoppedAt)-Date.parse(run.startedAt))/60000;
+ assert.ok(elapsed>=run.minimumMinutes);
+ assert.ok(Math.abs(elapsed-run.elapsedMinutes)<0.01);
+ assert.equal(run.checkpoints.length,recovery.session.lastSessionCheckpoints);
+ for(const id of ['LSA','MSCH']){
+  const rows=run.checkpoints.filter(r=>r.lane===id);
+  const prior=livePhase.sessionReport[id].beforeRows;
+  let total=prior;
+  for(const row of rows){
+   total+=row.added.rows;
+   assert.equal(row.after.rows,total);
+   assert.equal(row.added.files+row.added.folders,row.added.rows);
+   assert.match(row.manifest.sha256,/^[a-f0-9]{64}$/);
+   assert.ok(Date.parse(row.completedAt)>=Date.parse(run.startedAt));
+   assert.ok(Date.parse(row.completedAt)<=Date.parse(run.stoppedAt));
+  }
+  assert.equal(total-prior,run.added[id]);
+  const lane=recovery.lanes.find(l=>l.id===id);
+  assert.equal(total,lane.metric?.done??lane.inventory.rows);
+ }
+ const html=renderRecovery(recovery);
+ assert.ok(!html.includes('No new source batch was performed'));
+ assert.ok(html.includes('B072')&&html.includes('B065'));
+});

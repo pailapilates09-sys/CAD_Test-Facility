@@ -1,0 +1,588 @@
+{
+  "schema": "cad-facility.four-project-recovery.v1",
+  "checkedAt": "2026-10-16T03:40:26.005383Z",
+  "timezone": "Asia/Kathmandu",
+  "lastSourceSessionCompletedAt": "2026-10-16T03:36:41.732Z",
+  "recoveryStatus": "LOCAL_FINAL_WITH_OPEN_DEBTS",
+  "basis": "Eleven fresh source metadata checkpoints, exact raw-file readbacks, native Sheet/POST agreement, Local SyncState and own pending Main notices; original AEC terminal/lock/rate checks and MSCS policy eligibility audit.",
+  "scope": "User-authorized minimum60-minute resumption of the four-lane metadata/hash workflow. LSA B066-B071 and MSCH B060-B064 advanced. No source-body extraction, source mutation, Main ACK or scheduler mutation.",
+  "preservedSourceCommit": "3ea40881bf64f8910cf58ef8fe7fee0594b9564c",
+  "rollbackCommit": "2983b8c460a87820c5902821d7d4310e080897f8",
+  "session": {
+    "completedPhases": 72,
+    "lastSessionCheckpoints": 11,
+    "sourceElapsedMinutes": 60.359883333333336
+  },
+  "findings": [
+    "The resumed session closed11 new source metadata checkpoints in60.36 minutes.",
+    "LSA added100 physical records:92 files +8 folders. MSCH added40 entries:27 files +13 folders.",
+    "Main acknowledgements remain separate and pending; notices and Local high-waters advanced without changing consumed cursors.",
+    "Metadata cataloguing, byte hashing and source-content extraction remain separate stages."
+  ],
+  "lanes": [
+    {
+      "id": "MSCS",
+      "name": "MSc Structural Engineering",
+      "checkpoint": "AQ-CP87",
+      "batch": "B075",
+      "stage": "Source byte hashing",
+      "state": "POLICY_GATE",
+      "stateLabel": "Hashing policy gate",
+      "metric": {
+        "label": "Source files hashed",
+        "done": 1059,
+        "total": 1867,
+        "remaining": 808,
+        "unit": "files"
+      },
+      "inventory": {
+        "rows": 2187,
+        "folders": 320,
+        "files": 1867
+      },
+      "evidence": {
+        "type": "CURRENT JSONL independently downloaded and parsed",
+        "bytes": 2253033,
+        "sha256": "b785742928367c6043258a1f45eb7d96db986c6e573cdffeb9f37c8695e9ff39",
+        "uniqueIds": 2187,
+        "hashValuesPresent": 1059,
+        "agreement": "Progress JSON and Main N3 notice agree with manifest counts. Existing source hashes counted; source bodies were not rehashed during recovery."
+      },
+      "sync": {
+        "local": 6,
+        "mainConsumed": 3,
+        "pendingSequences": 3,
+        "notice": "N3",
+        "mainAck": "PENDING"
+      },
+      "contentExtraction": "Not started",
+      "blocker": "Current Tier3 eligibility is zero:798 oversized files and10 Google-native files remain deferred.",
+      "next": {
+        "batch": "B076",
+        "target": "Oversized or Google-native files",
+        "action": "Define the separately governed hashing policy before another source batch."
+      },
+      "comparison": {
+        "onboardingDone": 1015,
+        "addedSinceOnboarding": 44
+      }
+    },
+    {
+      "id": "LSA",
+      "name": "Lok Sewa Study Archive",
+      "checkpoint": "CP71",
+      "batch": "B071",
+      "stage": "Physical occurrence catalogue",
+      "state": "READY_FOR_NEXT_METADATA_BATCH",
+      "stateLabel": "Ready for next metadata batch",
+      "metric": {
+        "label": "Catalogue records",
+        "done": 1129,
+        "total": 1244,
+        "remaining": 115,
+        "unit": "rows"
+      },
+      "inventory": {
+        "rows": 1129,
+        "folders": 130,
+        "files": 999,
+        "metadataBytes": 127853600590
+      },
+      "evidence": {
+        "type": "CURRENT JSONL independently downloaded and parsed",
+        "bytes": 661943,
+        "sha256": "b9f4b40798756f746e2816e4e9a43ede0cfe5cb0b30db001f73f80aeb347f2d6",
+        "uniqueIds": 1129,
+        "checkpointHashMatch": true,
+        "agreement": "Latest immutable checkpoint hash agrees with exact CURRENT raw-file readback. Native Local PRE/POST, SyncState and own Main notice verified; Main ACK pending."
+      },
+      "sync": {
+        "local": 22,
+        "mainConsumed": 5,
+        "pendingSequences": 17,
+        "notice": "N18",
+        "mainAck": "PENDING"
+      },
+      "contentExtraction": "PDF/OCR, video transcription and semantic extraction not started",
+      "blocker": "115 records remain against the recorded1244-row target; Local22 awaits Main acknowledgement.",
+      "next": {
+        "batch": "B072",
+        "target": "Estimation / Costing class videos",
+        "action": "Fresh deterministic branch profile, exact-ID idempotency and one bounded metadata checkpoint."
+      },
+      "comparison": {
+        "onboardingDone": 416,
+        "addedSinceOnboarding": 713
+      }
+    },
+    {
+      "id": "AEC",
+      "name": "AEC Cost & Rate Intelligence",
+      "checkpoint": "G075 closed / G076 PART1",
+      "batch": "G076",
+      "stage": "Original terminal recovery",
+      "state": "BLOCKED_ORIGINAL_TERMINAL_UNAVAILABLE",
+      "stateLabel": "Original checkpoint unavailable",
+      "metric": null,
+      "inventory": null,
+      "evidence": {
+        "type": "Original lock, exact terminal metadata test and bounded canonical rate read",
+        "rateIds": [
+          "RO-2436",
+          "RO-2437"
+        ],
+        "ratesPresent": true,
+        "originalLockBoundary": "G075 / expected next RO-2436",
+        "terminalReadStatus": 404,
+        "agreement": "Both G076 rate rows still exist. Original lock remains at G075. Exact original terminal checkpoint returns 404; absence and access denial cannot be distinguished by this response."
+      },
+      "sync": {
+        "local": 11,
+        "mainConsumed": 10,
+        "pendingSequences": 1,
+        "notice": null,
+        "mainAck": "PENDING"
+      },
+      "contentExtraction": "Two G076 rate rows exist; terminal closure incomplete",
+      "blocker": "The original terminal checkpoint is unavailable to the connected account. Existing G076 rows must not be replayed.",
+      "next": {
+        "batch": "G076 recovery",
+        "target": "Original terminal checkpoint and original lock",
+        "action": "Resolve the original checkpoint access/existence, then reconcile existing terminal records without creating duplicate rates."
+      }
+    },
+    {
+      "id": "MSCH",
+      "name": "MSc Hydropower Research Corpus",
+      "checkpoint": "CP64",
+      "batch": "B064",
+      "stage": "Recursive physical catalogue",
+      "state": "READY_FOR_NEXT_METADATA_BATCH",
+      "stateLabel": "Ready for next metadata batch",
+      "metric": null,
+      "inventory": {
+        "rows": 1114,
+        "folders": 242,
+        "files": 872,
+        "pendingFolders": 140,
+        "metadataBytes": 7049143672,
+        "overallDenominator": null
+      },
+      "evidence": {
+        "type": "CURRENT JSONL and project state independently read",
+        "bytes": 572628,
+        "sha256": "c0f788b2fcc90b229670d8112ff32d26082d4913d93054c82b24cbd54c90e17a",
+        "uniqueIds": 1114,
+        "checkpointHashMatch": true,
+        "agreement": "Latest immutable checkpoint hash agrees with exact CURRENT raw-file readback. Native Local PRE/POST, SyncState and own Main notice verified; Main ACK pending."
+      },
+      "sync": {
+        "local": 55,
+        "mainConsumed": 3,
+        "pendingSequences": 52,
+        "notice": "N51",
+        "mainAck": "PENDING"
+      },
+      "contentExtraction": "Source-content extraction and model execution not started",
+      "blocker": "140 FIFO folders remain; final corpus size is unknown. Local55 awaits Main acknowledgement.",
+      "next": {
+        "batch": "B065",
+        "target": ".vscode (next FIFO folder)",
+        "action": "Re-read Local closeout and FIFO, then one bounded metadata checkpoint."
+      },
+      "comparison": {
+        "onboardingDone": 500,
+        "addedSinceOnboarding": 614
+      }
+    }
+  ],
+  "continuation": {
+    "rotation": [
+      "LSA",
+      "AEC",
+      "MSCH",
+      "MSCS"
+    ],
+    "phases": [
+      {
+        "lane": "LSA",
+        "phase": "73",
+        "batch": "B072",
+        "state": "QUEUED"
+      },
+      {
+        "lane": "AEC",
+        "phase": "—",
+        "batch": "G076 recovery",
+        "state": "BLOCKED"
+      },
+      {
+        "lane": "MSCH",
+        "phase": "74",
+        "batch": "B065",
+        "state": "QUEUED"
+      },
+      {
+        "lane": "MSCS",
+        "phase": "—",
+        "batch": "B076",
+        "state": "POLICY_GATE"
+      }
+    ],
+    "limits": {
+      "checkpointsPerPhase": 1,
+      "maxMinutesPerPhase": 20,
+      "workUnits": 14,
+      "protectedCloseoutUnits": 6
+    },
+    "mainSync": "All four Local/Main gaps remain open. LSA Local22/Main5 noticeN18; MSCH Local55/Main3 noticeN51. No Main acknowledgement manufactured.",
+    "scheduler": "Historical handover records the master disabled by user request. No automation was created or restarted in this recovery; originating-account scheduler state was not queried."
+  },
+  "separatePipeline": {
+    "id": "JP Cost",
+    "checkpoint": "M02 v0.5.14",
+    "pages": 697,
+    "sources": 6,
+    "state": "RAW_ARCHIVE_REPORTED_COMPLETE_SEMANTIC_QA_PENDING",
+    "basis": "Historical handover and onboarding snapshot only; source archives not reverified in this recovery.",
+    "note": "Separate from the four lanes and from AEC G076 terminal debt."
+  },
+  "execution": {
+    "startedAt": "2026-10-16T02:36:20.139Z",
+    "stoppedAt": "2026-10-16T03:36:41.732Z",
+    "minimumMinutes": 60,
+    "minimumWindowMet": true,
+    "elapsedMinutes": 60.359883333333336,
+    "added": {
+      "LSA": 100,
+      "MSCH": 40
+    },
+    "checkpoints": [
+      {
+        "lane": "LSA",
+        "batch": "B066",
+        "checkpoint": "CP66",
+        "target": "NEA/Standard files-Package/Property Valuation",
+        "after": {
+          "rows": 1051,
+          "folders": 124,
+          "files": 927,
+          "metadataBytes": 114249709312
+        },
+        "added": {
+          "rows": 22,
+          "folders": 2,
+          "files": 20,
+          "metadataBytes": 183627254
+        },
+        "manifest": {
+          "bytes": 618458,
+          "sha256": "a5f0089a5b4039578b8f3ec5c978c81a1b634d2875969d5f8092134380b337cc"
+        },
+        "localSequence": 17,
+        "mainConsumed": 5,
+        "notice": "N13",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T02:48:52.334Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B060",
+        "checkpoint": "CP60",
+        "target": "VolumeFrequencyAnalysisResults",
+        "after": {
+          "rows": 1076,
+          "folders": 231,
+          "files": 845,
+          "metadataBytes": 7041400018,
+          "pendingFolders": 133
+        },
+        "added": {
+          "rows": 2,
+          "folders": 2,
+          "files": 0,
+          "metadataBytes": 0
+        },
+        "manifest": {
+          "bytes": 552263,
+          "sha256": "6fc348d2451563ca56a84dc7206aa85971bcc62b4586dee4c0bf9ac7eff6d346"
+        },
+        "localSequence": 51,
+        "mainConsumed": 3,
+        "notice": "N47",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T02:56:32.542Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      },
+      {
+        "lane": "LSA",
+        "batch": "B067",
+        "checkpoint": "CP67",
+        "target": "NEA/Standard files-Package/SW-DTM",
+        "after": {
+          "rows": 1054,
+          "folders": 125,
+          "files": 929,
+          "metadataBytes": 114249838110
+        },
+        "added": {
+          "rows": 3,
+          "folders": 1,
+          "files": 2,
+          "metadataBytes": 128798
+        },
+        "manifest": {
+          "bytes": 620144,
+          "sha256": "f22759ed1613497e03a314e807bdbdcb988100abec84be497b197de52b9fc752"
+        },
+        "localSequence": 18,
+        "mainConsumed": 5,
+        "notice": "N14",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T03:02:54.454Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B061",
+        "checkpoint": "CP61",
+        "target": "Work",
+        "after": {
+          "rows": 1083,
+          "folders": 235,
+          "files": 848,
+          "metadataBytes": 7041423701,
+          "pendingFolders": 136
+        },
+        "added": {
+          "rows": 7,
+          "folders": 4,
+          "files": 3,
+          "metadataBytes": 23683
+        },
+        "manifest": {
+          "bytes": 556039,
+          "sha256": "ad742b7f068c9d911c6f3e748168041c5dda995638241deedbf7a94c7ae2a2cf"
+        },
+        "localSequence": 52,
+        "mainConsumed": 3,
+        "notice": "N48",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T03:07:06.267Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      },
+      {
+        "lane": "LSA",
+        "batch": "B068",
+        "checkpoint": "CP68",
+        "target": "NEA/Standard files-Package/FIles.zip",
+        "after": {
+          "rows": 1055,
+          "folders": 125,
+          "files": 930,
+          "metadataBytes": 114692421022
+        },
+        "added": {
+          "rows": 1,
+          "folders": 0,
+          "files": 1,
+          "metadataBytes": 442582912
+        },
+        "manifest": {
+          "bytes": 620674,
+          "sha256": "d953269321686b52066602f84db83d92c1ee3f5533ac2af98bb2f8e91f5d42a6"
+        },
+        "localSequence": 19,
+        "mainConsumed": 5,
+        "notice": "N15",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T03:12:04.599Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B062",
+        "checkpoint": "CP62",
+        "target": "workingSets",
+        "after": {
+          "rows": 1087,
+          "folders": 235,
+          "files": 852,
+          "metadataBytes": 7041424307,
+          "pendingFolders": 135
+        },
+        "added": {
+          "rows": 4,
+          "folders": 0,
+          "files": 4,
+          "metadataBytes": 606
+        },
+        "manifest": {
+          "bytes": 558236,
+          "sha256": "102ce442019f610f73a524a7b701eb29b4349a8de87dbd82a4672a272fc0b3ec"
+        },
+        "localSequence": 53,
+        "mainConsumed": 3,
+        "notice": "N49",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T03:15:27.438Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      },
+      {
+        "lane": "LSA",
+        "batch": "B069",
+        "checkpoint": "CP69",
+        "target": "NEA/Videos/AutoCAD",
+        "after": {
+          "rows": 1102,
+          "folders": 128,
+          "files": 974,
+          "metadataBytes": 122533625157
+        },
+        "added": {
+          "rows": 47,
+          "folders": 3,
+          "files": 44,
+          "metadataBytes": 7841204135
+        },
+        "manifest": {
+          "bytes": 647006,
+          "sha256": "290235cec817be03c44ad878f9a8b5e7e5486b2e820cbb98b6f769eee5be3244"
+        },
+        "localSequence": 20,
+        "mainConsumed": 5,
+        "notice": "N16",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T03:21:02.786Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B063",
+        "checkpoint": "CP63",
+        "target": "workingSets",
+        "after": {
+          "rows": 1099,
+          "folders": 235,
+          "files": 864,
+          "metadataBytes": 7041426091,
+          "pendingFolders": 134
+        },
+        "added": {
+          "rows": 12,
+          "folders": 0,
+          "files": 12,
+          "metadataBytes": 1784
+        },
+        "manifest": {
+          "bytes": 564613,
+          "sha256": "96fcce2ef8f05600967d4ed271bd249a772a3dfe071d96a6d6a2d780af44cadb"
+        },
+        "localSequence": 54,
+        "mainConsumed": 3,
+        "notice": "N50",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T03:24:40.781Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      },
+      {
+        "lane": "LSA",
+        "batch": "B070",
+        "checkpoint": "CP70",
+        "target": "NEA/Videos/Civil 3D-Advance",
+        "after": {
+          "rows": 1116,
+          "folders": 129,
+          "files": 987,
+          "metadataBytes": 125575795860
+        },
+        "added": {
+          "rows": 14,
+          "folders": 1,
+          "files": 13,
+          "metadataBytes": 3042170703
+        },
+        "manifest": {
+          "bytes": 654491,
+          "sha256": "e9fa99f1d21ce87bc644839f801f666b12b769f11cf2fd9d491a9c5361778740"
+        },
+        "localSequence": 21,
+        "mainConsumed": 5,
+        "notice": "N17",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T03:29:04.249Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B064",
+        "checkpoint": "CP64",
+        "target": ".git",
+        "after": {
+          "rows": 1114,
+          "folders": 242,
+          "files": 872,
+          "metadataBytes": 7049143672,
+          "pendingFolders": 140
+        },
+        "added": {
+          "rows": 15,
+          "folders": 7,
+          "files": 8,
+          "metadataBytes": 7717581
+        },
+        "manifest": {
+          "bytes": 572628,
+          "sha256": "c0f788b2fcc90b229670d8112ff32d26082d4913d93054c82b24cbd54c90e17a"
+        },
+        "localSequence": 55,
+        "mainConsumed": 3,
+        "notice": "N51",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T03:32:11.019Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      },
+      {
+        "lane": "LSA",
+        "batch": "B071",
+        "checkpoint": "CP71",
+        "target": "NEA/Videos/Civil 3D-Basic",
+        "after": {
+          "rows": 1129,
+          "folders": 130,
+          "files": 999,
+          "metadataBytes": 127853600590
+        },
+        "added": {
+          "rows": 13,
+          "folders": 1,
+          "files": 12,
+          "metadataBytes": 2277804730
+        },
+        "manifest": {
+          "bytes": 661943,
+          "sha256": "b9f4b40798756f746e2816e4e9a43ede0cfe5cb0b30db001f73f80aeb347f2d6"
+        },
+        "localSequence": 22,
+        "mainConsumed": 5,
+        "notice": "N18",
+        "status": "LOCAL_FINAL_MAIN_SYNC_PENDING",
+        "completedAt": "2026-10-16T03:35:57.960Z",
+        "providerReadback": "EXACT_BYTES_HASH_IDENTITIES_AND_NATIVE_LOCAL_POST_VERIFIED"
+      }
+    ],
+    "blockedReviews": {
+      "AEC": "Original terminal404; existing rate rows and original lock retained.",
+      "MSCS": "Current Tier3 eligibility0;798 oversized and10 native files deferred."
+    },
+    "transportIncident": {
+      "stage": "B069 native PRE copy",
+      "observed": "Copy action returned an error; no matching snapshot found by bounded lookup. No canonical mutation had begun.",
+      "recovery": "One retry after live readback succeeded; snapshot verified before mutation.",
+      "cause": "UNKNOWN",
+      "duplicatesCreated": 0
+    },
+    "budget": "Source phases retained one checkpoint and20-minute maximum; work split into preparation, raw promotion and Local closeout packages with14 work +6 protected units."
+  }
+}
