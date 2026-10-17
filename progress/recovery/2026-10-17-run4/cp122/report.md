@@ -43,3 +43,10 @@ This run advances metadata cataloguing, not document/video/semantic content extr
 Earlier CAD, estimate versions and progress snapshots remain available. Rollback branch: rollback/before-recovered-extraction-run4-20261017.
 
 Incomplete / Remaining: 0 MSCH acknowledgements; 184 FIFO folders; LSA baseline reconciliation; MSCS oversized/native hashing policy; AEC original terminal recovery; source-content extraction and semantic QA.
+
+
+## Runtime incident and continuation
+
+The host executor/file-transfer runtime disconnected during the final combined ACK POST upload. Source checkpoints and their Local records were already saved. The failed upload was checked for existence; the final ACK POST was recovered as five native Sheets tables with exact provider readback. Local/Main113/113 and N109 ACK were verified.
+
+49 exact-ID/parent source items in four upcoming FIFO folders are preserved as unpromoted preflight evidence. Canonical CP122 remains unchanged; B123 is next. Restore file-transfer access before promoting those raw CURRENT changes. Source objects and source bodies were unchanged.

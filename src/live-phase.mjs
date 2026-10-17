@@ -2,7 +2,7 @@ export const livePhase = {
   "phase": "139",
   "title": "Recovered extraction — minimum60-minute window closed",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-17T13:03:01.096Z",
+  "completedAt": "2026-10-17T13:03:44.612Z",
   "checkpoint": "MSCH-CORPUS-CP122",
   "before": {
     "rows": 1549,
