@@ -8,7 +8,7 @@ export function renderRecovery(status) {
   const allAcknowledged = status.lanes.every(lane => lane.sync.pendingSequences === 0 && lane.sync.mainAck === 'ACKED');
   const heading = run?.inProgress ? 'Extraction running — saved checkpoint' : run ? 'Four-project extraction progress' : 'Four-project work recovered';
   const introduction = run?.inProgress
-    ? `${number(run.checkpoints.length)} new source checkpoints are saved. The source window is still running; ${run.elapsedMinutes.toFixed(2)} minutes recorded toward the minimum ${run.minimumMinutes} minutes. LSA added ${number(run.added.LSA)} records; MSCH added ${number(run.added.MSCH)} entries.`
+    ? `${number(run.checkpoints.length)} new source checkpoints are saved. The source window is still running; ${run.elapsedMinutes.toFixed(2)} minutes recorded ${run.durationPolicy === 'maximum' ? `within the maximum ${run.maximumMinutes} minutes` : `toward the minimum ${run.minimumMinutes} minutes`}. LSA added ${number(run.added.LSA)} records; MSCH added ${number(run.added.MSCH)} entries.`
     : run
     ? `${number(run.checkpoints.length)} source and audit checkpoints passed provider readback and Local closeout in ${run.elapsedMinutes.toFixed(2)} minutes. LSA added ${number(run.added.LSA)} catalogue records; MSCH added ${number(run.added.MSCH)} entries.`
     : `The saved source data and Git history survived. ${number(status.session.completedPhases)} completed phases are recorded, including ${number(status.session.lastSessionCheckpoints)} verified checkpoints in the last source session.`;

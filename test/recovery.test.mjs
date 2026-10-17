@@ -58,8 +58,15 @@ test('resumed run meets its time window and its checkpoint deltas reconcile to c
  const elapsed=(Date.parse(end)-Date.parse(run.startedAt))/60000;
  assert.ok(elapsed>=0);
  if(run.inProgress)assert.equal(run.stoppedAt,null);
- else assert.ok(elapsed>=run.minimumMinutes);
- assert.equal(run.minimumWindowMet,elapsed>=run.minimumMinutes);
+ if(run.durationPolicy==='maximum'){
+  assert.ok(Number.isFinite(run.maximumMinutes)&&run.maximumMinutes>0);
+  assert.ok(elapsed<=run.maximumMinutes);
+  assert.equal(Date.parse(run.deadline),Date.parse(run.startedAt)+run.maximumMinutes*60000);
+  assert.equal(run.maximumWindowRespected,elapsed<=run.maximumMinutes);
+ }else{
+  if(!run.inProgress)assert.ok(elapsed>=run.minimumMinutes);
+  assert.equal(run.minimumWindowMet,elapsed>=run.minimumMinutes);
+ }
  assert.ok(Math.abs(elapsed-run.elapsedMinutes)<0.01);
  assert.equal(run.checkpoints.length,recovery.session.lastSessionCheckpoints);
  assert.equal(run.debtClearance.initialEvents+run.debtClearance.newEvents-run.debtClearance.remainingEvents,run.debtClearance.totalAcknowledgedEvents);
