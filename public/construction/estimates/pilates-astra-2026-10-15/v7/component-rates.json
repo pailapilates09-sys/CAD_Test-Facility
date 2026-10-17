@@ -1,0 +1,3061 @@
+{
+  "schema_version": "component-rates-1.0.0",
+  "version": "v7",
+  "based_on": "v6",
+  "researched_date": "2026-10-17",
+  "currency": "NPR",
+  "estimate_currency": null,
+  "policy": [
+    "Original quote rates and amounts are preserved; accepted original labour/material splits remain null.",
+    "Public labour and supply references are separate, qualified evidence, not an allocation of the quote.",
+    "Daily wages, product supply units, sheet areas and project measurement bases are not interchanged without productivity or take-off.",
+    "Finished products can contain factory labour; their purchase price is supply-side reference, not a raw-material bill.",
+    "Missing values mean unknown, never zero. No arbitrary percentage, midpoint or subtraction residual is called material.",
+    "Six holds and two allowances remain unsplit. Draft calculator entries do not alter the estimate or create an accepted quote."
+  ],
+  "coverage": {
+    "all_items": 51,
+    "held_items": 6,
+    "labour_reference_items": 45,
+    "material_reference_items": 40,
+    "both_component_reference_items": 40,
+    "same_unit_both_items": 14,
+    "accepted_original_splits": 0,
+    "summary_only_areas": 2
+  },
+  "summary": {
+    "interior_total": "5601148.68",
+    "electrical": "280057.43",
+    "subtotal": "5881206.11",
+    "vat_rate": "0.13",
+    "vat_amount": "764556.79",
+    "grand_total": "6645762.90",
+    "page": 1
+  },
+  "sources": [
+    {
+      "id": "N01",
+      "publisher": "Kathmandu District Administration Office",
+      "url": "https://daokathmandu.moha.gov.np/assets/3/%E0%A4%95%E0%A4%BE%E0%A4%A0%E0%A4%AE%E0%A4%BE%E0%A4%A1%E0%A5%8C%E0%A4%82_%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%95%E0%A5%8B_%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A4%BE_%E0%A4%A6%E0%A4%B0%E0%A4%B0%E0%A5%87%E0%A4%9F_%E0%A5%A8%E0%A5%A6%E0%A5%AE%E0%A5%A9.%E0%A5%AE%E0%A5%AA.pdf/file",
+      "locator": "FY 2083/84; PDF page 8/printed 1, p48/printed 41, p49/printed 42",
+      "published_date": "2083-03-32 BS",
+      "retrieved_date": "2026-10-17",
+      "kind": "official_schedule",
+      "note": "Current-year column visually transcribed from scanned source. Material header excludes VAT. Day wages are not item piece rates.",
+      "source_sha256": "697cb38b48e9f22384239e145411e4762ebffb1e7f908d3910f5fc454c40fa16",
+      "source_bytes": 15344169,
+      "preserved_copy_url": "https://drive.google.com/file/d/1owVlzGOBrwKxZrxnEsqWdrPfXyh0KgXk/view?usp=drivesdk"
+    },
+    {
+      "id": "N02",
+      "publisher": "Homeplex",
+      "url": "https://homeplexnepal.com/services/carpenter-services-in-kathmandu",
+      "locator": "Modular kitchen daraz/drawer fitting: labour-only and with-material cards",
+      "published_date": null,
+      "retrieved_date": "2026-10-17",
+      "kind": "provider",
+      "note": "Standard-complexity guide; measurement face and full inclusions require confirmation."
+    },
+    {
+      "id": "N03",
+      "publisher": "Shreya Interiors",
+      "url": "https://shreyainterior.com.np/product-category/materials-and-finishes/?per_page=24",
+      "locator": "18 mm 8×4 C/G plywood 2720; 18 mm 8×4 plywood 3072",
+      "published_date": null,
+      "retrieved_date": "2026-10-17",
+      "kind": "provider",
+      "note": "Kathmandu retailer; alternative products, stock and VAT need confirmation."
+    },
+    {
+      "id": "N04",
+      "publisher": "Sajilo Sewa",
+      "url": "https://sajilosewa.com/service/wall-mounted-ac-installation",
+      "locator": "Price description: labour 4972 per unit; spare parts separate",
+      "published_date": null,
+      "retrieved_date": "2026-10-17",
+      "kind": "provider",
+      "note": ""
+    },
+    {
+      "id": "N05",
+      "publisher": "Sajilo Sewa",
+      "url": "https://www.sajilosewa.com/service/ceiling-light-installation",
+      "locator": "Price description: labour 650 per unit; spare parts separate",
+      "published_date": null,
+      "retrieved_date": "2026-10-17",
+      "kind": "provider",
+      "note": ""
+    },
+    {
+      "id": "N06",
+      "publisher": "Sajilo Sewa",
+      "url": "https://www.sajilosewa.com/service/decorative-light-installation",
+      "locator": "Price description: labour 650 per unit; parts separate",
+      "published_date": null,
+      "retrieved_date": "2026-10-17",
+      "kind": "provider",
+      "note": ""
+    },
+    {
+      "id": "N07",
+      "publisher": "Reshape Home",
+      "url": "https://reshapehome.com/blogs/paint-price-in-nepal/",
+      "locator": "Emulsion per litre; two-coat coverage; labour per ft²",
+      "published_date": null,
+      "retrieved_date": "2026-10-17",
+      "kind": "provider",
+      "note": "Painting only; excludes full putty/primer system and unquoted repairs."
+    },
+    {
+      "id": "N08",
+      "publisher": "Expert Sewa",
+      "url": "https://expertsewa.com/blog/marble-price-in-nepal-2026-types-costs-top-suppliers",
+      "locator": "White marble range; installation labour section",
+      "published_date": "2026-06-24",
+      "retrieved_date": "2026-10-17",
+      "kind": "provider",
+      "note": "Broad contractor market guide; project marble grade not specified."
+    },
+    {
+      "id": "N09",
+      "publisher": "Fashion Paints",
+      "url": "https://fashionpaints.com.np/all-products/fashion-paints-smooth-wall-putty/",
+      "locator": "40 kg pack; MRP 2642",
+      "published_date": null,
+      "retrieved_date": "2026-10-17",
+      "kind": "provider",
+      "note": "Manufacturer in Nepal; page does not explicitly state the price currency or current quote date."
+    },
+    {
+      "id": "V4-S04",
+      "publisher": "Sixkey",
+      "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+      "source_type": "supplier_guide",
+      "published_date": "2026-08-26",
+      "retrieved_date": "2026-10-16",
+      "location": "Kathmandu Valley / Nepal",
+      "locator": "Price bands in Nepal; Does Sixkey install lighting?",
+      "access_status": "page_read",
+      "note": "Page also displays September 26, 2026; retail products only, no installation.",
+      "kind": "prior_supply_snapshot"
+    },
+    {
+      "id": "V4-S05",
+      "publisher": "Air Experts Nepal",
+      "url": "https://airexperts.com.np/shop",
+      "source_type": "supplier",
+      "published_date": null,
+      "retrieved_date": "2026-10-16",
+      "location": "Kathmandu Valley / Nepal",
+      "locator": "Midea Xtreme Plus 1.0 and 1.5 Ton product listings",
+      "access_status": "page_read",
+      "note": "",
+      "kind": "prior_supply_snapshot"
+    },
+    {
+      "id": "V4-S06",
+      "publisher": "Air Experts Nepal",
+      "url": "https://airexperts.com.np/products/midea-xtreme-series-1-5-ton-inverter-ac",
+      "source_type": "supplier",
+      "published_date": null,
+      "retrieved_date": "2026-10-16",
+      "location": "Kathmandu Valley / Nepal",
+      "locator": "MSAGC-18HRFN8; price and stock; other information",
+      "access_status": "page_read",
+      "note": "",
+      "kind": "prior_supply_snapshot"
+    },
+    {
+      "id": "V4-S07",
+      "publisher": "Lacasa Decors",
+      "url": "https://lacasadecors.com/sofa-set-price-in-nepal-best-deals-from-lacasa-decors/",
+      "source_type": "supplier_guide",
+      "published_date": "2025-04-14",
+      "retrieved_date": "2026-10-16",
+      "location": "Kathmandu Valley / Nepal",
+      "locator": "Latest Sofa Set Prices in Nepal (2025)",
+      "access_status": "page_read",
+      "note": "Historical 2025 collection; refresh quote before purchasing.",
+      "kind": "prior_supply_snapshot"
+    },
+    {
+      "id": "V4-S08",
+      "publisher": "Om Frame House",
+      "url": "https://www.omframehouse.com.np/category/wall-mirrors/",
+      "source_type": "supplier",
+      "published_date": null,
+      "retrieved_date": "2026-10-16",
+      "location": "Kathmandu Valley / Nepal",
+      "locator": "Wooden framed standing mirror; large decorative mirror; Samakhusi address",
+      "access_status": "page_read",
+      "note": "",
+      "kind": "prior_supply_snapshot"
+    },
+    {
+      "id": "V4-S12",
+      "publisher": "Hardware Pasal",
+      "url": "https://hardwarepasal.com/category/basin",
+      "source_type": "supplier",
+      "published_date": null,
+      "retrieved_date": "2026-10-16",
+      "location": "Kathmandu Valley / Nepal",
+      "locator": "18×24 matte sink silver; 16×18 matte sink silver",
+      "access_status": "page_read",
+      "note": "",
+      "kind": "prior_supply_snapshot"
+    },
+    {
+      "id": "V4-S13",
+      "publisher": "Thulo Bazaar",
+      "url": "https://thulobazaar.com.np/en/blog/curtain-blinds-buying-guide-nepal",
+      "source_type": "marketplace_guide",
+      "published_date": "2025-11-07",
+      "retrieved_date": "2026-10-16",
+      "location": "Kathmandu Valley / Nepal",
+      "locator": "Sheer Curtains; Blackout Curtains; Installation Tips",
+      "access_status": "page_read",
+      "note": "",
+      "kind": "prior_supply_snapshot"
+    },
+    {
+      "id": "V4-S20",
+      "publisher": "Bimba Glass",
+      "url": "https://bimbaglass.com.np/toughened-glass/",
+      "source_type": "supplier",
+      "published_date": null,
+      "retrieved_date": "2026-10-16",
+      "location": "Kathmandu Valley / Nepal",
+      "locator": "Toughened Glass Price in Nepal; glass-only and installed exclusions",
+      "access_status": "page_read",
+      "note": "",
+      "kind": "prior_supply_snapshot"
+    }
+  ],
+  "observations": [
+    {
+      "id": "C01",
+      "source_id": "N01",
+      "component": "labour",
+      "label": "Skilled trade daily wage",
+      "currency": "NPR",
+      "low": "1330",
+      "high": "1330",
+      "unit": "day",
+      "normalized": {
+        "low": "1330.00",
+        "high": "1330.00",
+        "unit": "day",
+        "factor": "1"
+      },
+      "basis": "daily_wage",
+      "kind": "published_reference",
+      "qualification": "General skilled-trade schedule benchmark. Crew composition, worker-days per item/unit and specialist premiums are unknown.",
+      "source_pdf_page": 8,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C02",
+      "source_id": "N01",
+      "component": "labour",
+      "label": "General construction helper wage",
+      "currency": "NPR",
+      "low": "1000",
+      "high": "1000",
+      "unit": "day",
+      "normalized": {
+        "low": "1000.00",
+        "high": "1000.00",
+        "unit": "day",
+        "factor": "1"
+      },
+      "basis": "daily_wage",
+      "kind": "published_reference",
+      "qualification": "Helper daily wage, not a skilled-worker substitute. Productivity and helper count are unknown.",
+      "source_pdf_page": 8,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C03",
+      "source_id": "N01",
+      "component": "material",
+      "label": "Fibre cement wall board options, 8–12 mm",
+      "currency": "NPR",
+      "low": "67",
+      "high": "94",
+      "unit": "ft2",
+      "normalized": {
+        "low": "721.18",
+        "high": "1011.81",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "board_face_area",
+      "kind": "published_reference",
+      "qualification": "Material-only alternatives: 8 mm=67; 9 mm=75; 10 mm=85; 12 mm=94 NPR/ft². Not a complete partition, two faces, aluminium frame or fixings.",
+      "source_pdf_page": 48,
+      "exact_scope_verified": false,
+      "vat_status": "excludes_VAT"
+    },
+    {
+      "id": "C04",
+      "source_id": "N01",
+      "component": "material",
+      "label": "Vinyl laminated gypsum ceiling board, 7 mm",
+      "currency": "NPR",
+      "low": "95",
+      "high": "95",
+      "unit": "ft2",
+      "normalized": {
+        "low": "1022.57",
+        "high": "1022.57",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "board_face_area",
+      "kind": "published_reference",
+      "qualification": "Board supply benchmark for a named 7 mm variant, not the approved project board or complete ceiling; frames, cutting, fixings and lights excluded.",
+      "source_pdf_page": 49,
+      "exact_scope_verified": false,
+      "vat_status": "excludes_VAT"
+    },
+    {
+      "id": "C05",
+      "source_id": "N01",
+      "component": "material",
+      "label": "Both-side laminated hybrid board, 18 mm",
+      "currency": "NPR",
+      "low": "141",
+      "high": "141",
+      "unit": "ft2",
+      "normalized": {
+        "low": "1517.71",
+        "high": "1517.71",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "board_face_area",
+      "kind": "published_reference",
+      "qualification": "One listed WPC/hybrid board option; material face area only. Desk construction, backing, hardware and required board take-off are unknown.",
+      "source_pdf_page": 48,
+      "exact_scope_verified": false,
+      "vat_status": "excludes_VAT"
+    },
+    {
+      "id": "C06",
+      "source_id": "N01",
+      "component": "combined",
+      "label": "Supply and fix 12.5 mm gypsum false ceiling",
+      "currency": "NPR",
+      "low": "88",
+      "high": "88",
+      "unit": "ft2",
+      "normalized": {
+        "low": "947.22",
+        "high": "947.22",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "installed_work",
+      "kind": "published_reference",
+      "qualification": "Explicit supply-and-fix benchmark. It is not a material-only price and is never moved into the material column.",
+      "source_pdf_page": 48,
+      "exact_scope_verified": false,
+      "vat_status": "excludes_VAT"
+    },
+    {
+      "id": "C07",
+      "source_id": "N02",
+      "component": "labour",
+      "label": "Modular cabinet labour benchmark",
+      "currency": "NPR",
+      "low": "550",
+      "high": "550",
+      "unit": "ft2",
+      "normalized": {
+        "low": "5920.15",
+        "high": "5920.15",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "cabinet_measurement_unconfirmed",
+      "kind": "published_reference",
+      "qualification": "Kitchen-cabinet benchmark; curved cupboards, shoe racks, lockers and project cabinet depth/measurement basis may differ.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C08",
+      "source_id": "N02",
+      "component": "combined",
+      "label": "Modular cabinet with-material package",
+      "currency": "NPR",
+      "low": "2200",
+      "high": "3200",
+      "unit": "ft2",
+      "normalized": {
+        "low": "23680.60",
+        "high": "34444.51",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "cabinet_measurement_unconfirmed",
+      "kind": "published_reference",
+      "qualification": "With-material package includes labour. Subtracting labour does not prove a pure material price; no residual is classified as material.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C09",
+      "source_id": "N03",
+      "component": "material",
+      "label": "18 mm plywood, 8×4 ft sheet options",
+      "currency": "NPR",
+      "low": "2720",
+      "high": "3072",
+      "unit": "sheet",
+      "normalized": {
+        "low": "2720.00",
+        "high": "3072.00",
+        "unit": "sheet",
+        "factor": "1"
+      },
+      "basis": "sheet_supply",
+      "kind": "published_reference",
+      "qualification": "Sheet prices, not the cabinet-front rate. Grade differs; cut list, number of faces, laminate, hardware, adhesive and wastage are not included.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C10",
+      "source_id": "N04",
+      "component": "labour",
+      "label": "Wall-mounted split AC installation labour",
+      "currency": "NPR",
+      "low": "4972",
+      "high": "4972",
+      "unit": "each",
+      "normalized": {
+        "low": "4972.00",
+        "high": "4972.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "unit_installation",
+      "kind": "published_reference",
+      "qualification": "Labour for one supported 1/1.5/2-ton wall-mounted unit. Consumables, extra piping, brackets and electrical scope need confirmation; source 1.5 MT remains ambiguous.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C11",
+      "source_id": "N05",
+      "component": "labour",
+      "label": "Ceiling light installation labour",
+      "currency": "NPR",
+      "low": "650",
+      "high": "650",
+      "unit": "each",
+      "normalized": {
+        "low": "650.00",
+        "high": "650.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "unit_installation",
+      "kind": "published_reference",
+      "qualification": "One ceiling fixture; does not establish wardrobe-light content, new circuits or all wiring in the project.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C12",
+      "source_id": "N06",
+      "component": "labour",
+      "label": "Decorative light installation labour",
+      "currency": "NPR",
+      "low": "650",
+      "high": "650",
+      "unit": "each",
+      "normalized": {
+        "low": "650.00",
+        "high": "650.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "unit_installation",
+      "kind": "published_reference",
+      "qualification": "Generic decorative fixture only; heavy chandeliers, special supports and new wiring can cost extra.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C13",
+      "source_id": "N07",
+      "component": "labour",
+      "label": "Painting labour, partial scope",
+      "currency": "NPR",
+      "low": "8",
+      "high": "15",
+      "unit": "ft2",
+      "normalized": {
+        "low": "86.11",
+        "high": "161.46",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "painted_surface",
+      "kind": "published_reference",
+      "qualification": "Paint application benchmark; putty, sanding, primer and repairs are not confirmed as part of this labour rate.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C14",
+      "source_id": "N07",
+      "component": "material",
+      "label": "Standard plastic emulsion supply",
+      "currency": "NPR",
+      "low": "250",
+      "high": "800",
+      "unit": "L",
+      "normalized": {
+        "low": "250.00",
+        "high": "800.00",
+        "unit": "L",
+        "factor": "1"
+      },
+      "basis": "paint_volume",
+      "kind": "published_reference",
+      "qualification": "Per litre only. Published two-coat coverage is 40–60 ft²/L; brand, coats, primer, putty and waste remain project choices.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C15",
+      "source_id": "N07",
+      "component": "material",
+      "label": "Two-coat emulsion paint consumption example",
+      "currency": "NPR",
+      "low": "4.166666666666666666666666667",
+      "high": "20",
+      "unit": "ft2",
+      "normalized": {
+        "low": "44.85",
+        "high": "215.28",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "painted_surface",
+      "kind": "derived_from_published_inputs",
+      "qualification": "Derived paint-only envelope: 250÷60 to 800÷40 NPR/ft², using published 40–60 ft²/L for two coats. No wastage, primer or putty included.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "formula": {
+        "price_npr_per_litre": [
+          "250",
+          "800"
+        ],
+        "two_coat_coverage_ft2_per_litre": [
+          "40",
+          "60"
+        ],
+        "low": "250/60",
+        "high": "800/40",
+        "wastage_assumed": null
+      }
+    },
+    {
+      "id": "C16",
+      "source_id": "N08",
+      "component": "labour",
+      "label": "Marble installation labour",
+      "currency": "NPR",
+      "low": "80",
+      "high": "200",
+      "unit": "ft2",
+      "normalized": {
+        "low": "861.11",
+        "high": "2152.78",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "stone_surface",
+      "kind": "published_reference",
+      "qualification": "General floor/slab installation benchmark. Small counters, adhesive, polishing, edges and surface preparation differ.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C17",
+      "source_id": "N08",
+      "component": "material",
+      "label": "White marble grade alternatives",
+      "currency": "NPR",
+      "low": "1800",
+      "high": "3500",
+      "unit": "ft2",
+      "normalized": {
+        "low": "19375.04",
+        "high": "37673.69",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "stone_surface",
+      "kind": "published_reference",
+      "qualification": "Indian to premium white marble alternatives, not the project grade. Range is markedly above the older source; do not replace the quote or average conflicting grades.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "C18",
+      "source_id": "N09",
+      "component": "material",
+      "label": "Smooth wall putty, 40 kg pack",
+      "currency": null,
+      "low": "2642",
+      "high": "2642",
+      "unit": "bag_40kg",
+      "normalized": {
+        "low": "2642.00",
+        "high": "2642.00",
+        "unit": "bag_40kg",
+        "factor": "1"
+      },
+      "basis": "pack_supply",
+      "kind": "published_reference",
+      "qualification": "Manufacturer MRP; currency is unstated. No bag-to-covered-area conversion without consumption and coats.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated"
+    },
+    {
+      "id": "V4-R05",
+      "source_id": "V4-S04",
+      "component": "material",
+      "label": "LED strip light",
+      "currency": "NPR",
+      "low": "125",
+      "high": "200",
+      "unit": "m",
+      "normalized": {
+        "low": "125.00",
+        "high": "200.00",
+        "unit": "m",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "range",
+      "qualification": "Driver, channel, cable and fitting excluded. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "range"
+    },
+    {
+      "id": "V4-R06",
+      "source_id": "V4-S04",
+      "component": "material",
+      "label": "Concealed LED panel, 18–24 W",
+      "currency": "NPR",
+      "low": "1000",
+      "high": "1000",
+      "unit": "each",
+      "normalized": {
+        "low": "1000.00",
+        "high": "1000.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "approximate",
+      "qualification": "Approximate fixture price; wardrobe lights and wiring are not included. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "approximate"
+    },
+    {
+      "id": "V4-R07",
+      "source_id": "V4-S04",
+      "component": "material",
+      "label": "Chandelier / jhumar",
+      "currency": "NPR",
+      "low": "7000",
+      "high": "200000",
+      "unit": "each",
+      "normalized": {
+        "low": "7000.00",
+        "high": "200000.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "range",
+      "qualification": "Different designs, sizes and lamp arrangements; not an installed quote. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "range"
+    },
+    {
+      "id": "V4-R08",
+      "source_id": "V4-S05",
+      "component": "material",
+      "label": "Midea Xtreme Plus inverter 1.0 ton",
+      "currency": "NPR",
+      "low": "75050",
+      "high": "75050",
+      "unit": "each",
+      "normalized": {
+        "low": "75050.00",
+        "high": "75050.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "listed_price",
+      "qualification": "Model MSEZBU-12HRFN8; electrical work and fitting require confirmation. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "listed_price"
+    },
+    {
+      "id": "V4-R09",
+      "source_id": "V4-S05",
+      "component": "material",
+      "label": "Midea Xtreme Plus inverter 1.5 ton",
+      "currency": "NPR",
+      "low": "103550",
+      "high": "103550",
+      "unit": "each",
+      "normalized": {
+        "low": "103550.00",
+        "high": "103550.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "listed_price",
+      "qualification": "Model MSEZCU-18HRFN8; only relevant if source 1.5 MT means refrigeration tonnage. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "listed_price"
+    },
+    {
+      "id": "V4-R10",
+      "source_id": "V4-S06",
+      "component": "material",
+      "label": "Midea Xtreme Series inverter 1.5 ton",
+      "currency": "NPR",
+      "low": "91800",
+      "high": "91800",
+      "unit": "each",
+      "normalized": {
+        "low": "91800.00",
+        "high": "91800.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "listed_price",
+      "qualification": "Model MSAGC-18HRFN8; page says out of stock; installation varies. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "out_of_stock",
+      "price_qualifier": "listed_price"
+    },
+    {
+      "id": "V4-R11",
+      "source_id": "V4-S07",
+      "component": "material",
+      "label": "Bumble couch",
+      "currency": "NPR",
+      "low": "44000",
+      "high": "44000",
+      "unit": "each",
+      "normalized": {
+        "low": "44000.00",
+        "high": "44000.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "historical_listed_price",
+      "qualification": "2025 catalogue; size, upholstery and frame do not establish exact project equivalence. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "historical_listed_price"
+    },
+    {
+      "id": "V4-R12",
+      "source_id": "V4-S07",
+      "component": "material",
+      "label": "Living sofa",
+      "currency": "NPR",
+      "low": "95000",
+      "high": "95000",
+      "unit": "each",
+      "normalized": {
+        "low": "95000.00",
+        "high": "95000.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "historical_listed_price",
+      "qualification": "2025 catalogue; hardwood specification and seats need confirmation. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "historical_listed_price"
+    },
+    {
+      "id": "V4-R13",
+      "source_id": "V4-S08",
+      "component": "material",
+      "label": "1.5 × 5 ft wooden framed standing mirror",
+      "currency": "NPR",
+      "low": "5500",
+      "high": "5500",
+      "unit": "each",
+      "normalized": {
+        "low": "5500.00",
+        "high": "5500.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "listed_price",
+      "qualification": "Fixed-size retail unit; not a fixed full-studio mirror wall. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "listed_price"
+    },
+    {
+      "id": "V4-R14",
+      "source_id": "V4-S08",
+      "component": "material",
+      "label": "Gold ornate large decorative mirror",
+      "currency": "NPR",
+      "low": "13500",
+      "high": "13500",
+      "unit": "each",
+      "normalized": {
+        "low": "13500.00",
+        "high": "13500.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "listed_price",
+      "qualification": "Design and dimensions must match the washroom requirement. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "listed_price"
+    },
+    {
+      "id": "V4-R18",
+      "source_id": "V4-S12",
+      "component": "material",
+      "label": "18 × 24 matte silver sink",
+      "currency": "NPR",
+      "low": "2600",
+      "high": "2600",
+      "unit": "each",
+      "normalized": {
+        "low": "2600.00",
+        "high": "2600.00",
+        "unit": "each",
+        "factor": "1"
+      },
+      "basis": "finished_product_supply",
+      "kind": "listed_price",
+      "qualification": "Tap, waste fittings, cabinet cut-out, plumbing and installation not established. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "listed_price"
+    },
+    {
+      "id": "V4-R19",
+      "source_id": "V4-S13",
+      "component": "material",
+      "label": "Sheer curtain fabric",
+      "currency": "NPR",
+      "low": "300",
+      "high": "800",
+      "unit": "fabric_m",
+      "normalized": {
+        "low": "300.00",
+        "high": "800.00",
+        "unit": "fabric_m",
+        "factor": "1"
+      },
+      "basis": "raw_material_supply",
+      "kind": "range",
+      "qualification": "Linear metre of cloth, width unstated; cannot convert to m² without width and fullness. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "range"
+    },
+    {
+      "id": "V4-R20",
+      "source_id": "V4-S13",
+      "component": "material",
+      "label": "Blackout curtain fabric",
+      "currency": "NPR",
+      "low": "600",
+      "high": "1500",
+      "unit": "fabric_m",
+      "normalized": {
+        "low": "600.00",
+        "high": "1500.00",
+        "unit": "fabric_m",
+        "factor": "1"
+      },
+      "basis": "raw_material_supply",
+      "kind": "range",
+      "qualification": "Different fabric option; not a complete installed curtain assembly. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "range"
+    },
+    {
+      "id": "V4-R26",
+      "source_id": "V4-S20",
+      "component": "material",
+      "label": "12 mm toughened glass only",
+      "currency": "NPR",
+      "low": "350",
+      "high": "450",
+      "unit": "ft2",
+      "normalized": {
+        "low": "3767.37",
+        "high": "4843.76",
+        "unit": "m2",
+        "factor": "0.09290304"
+      },
+      "basis": "raw_material_supply",
+      "kind": "range",
+      "qualification": "Excludes cutting, hardware, transport and installation; not door work. V4 snapshot retrieved 16 October 2026; current stock/price not revalidated.",
+      "source_pdf_page": null,
+      "exact_scope_verified": false,
+      "vat_status": "not_stated",
+      "availability": "not_confirmed",
+      "price_qualifier": "range"
+    }
+  ],
+  "items": [
+    {
+      "item_id": "reception-001",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Curved Formica Storage Cupboard",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "22.43",
+        "unit": "sq ft",
+        "rate": "2450.00",
+        "amount": "54953.50",
+        "amount_minor": 5495350,
+        "currency": null
+      },
+      "si": {
+        "quantity": "2.0838151872",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "26371.58052093882"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "26371.58052093882",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C07",
+        "C01"
+      ],
+      "material_reference_ids": [
+        "C09"
+      ],
+      "combined_reference_ids": [
+        "C08"
+      ],
+      "same_unit_labour_ids": [
+        "C07"
+      ],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-002",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Marble Slab Finish Works",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "44.26",
+        "unit": "sq ft",
+        "rate": "750.00",
+        "amount": "33195.00",
+        "amount_minor": 3319500,
+        "currency": null
+      },
+      "si": {
+        "quantity": "4.1118885504",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "8072.932812532292"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "8072.932812532292",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C16",
+        "C01"
+      ],
+      "material_reference_ids": [
+        "C17"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C16"
+      ],
+      "same_unit_material_ids": [
+        "C17"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-003",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "WPC Panel Reception Desk",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "44.41",
+        "unit": "sq ft",
+        "rate": "2800.00",
+        "amount": "124348.00",
+        "amount_minor": 12434800,
+        "currency": null
+      },
+      "si": {
+        "quantity": "4.1258240064",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "30138.949166787222"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "30138.949166787222",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "C05",
+        "C09"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "C05"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-004",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Finished Shoe Storage Rack",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "14.33",
+        "unit": "sq ft",
+        "rate": "2650.00",
+        "amount": "37974.50",
+        "amount_minor": 3797450,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.3313005632",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "28524.362604280764"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "28524.362604280764",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C07",
+        "C01"
+      ],
+      "material_reference_ids": [
+        "C09"
+      ],
+      "combined_reference_ids": [
+        "C08"
+      ],
+      "same_unit_labour_ids": [
+        "C07"
+      ],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-005",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Finished Ratten Board Works",
+      "status": "on_hold_original_retained",
+      "original": {
+        "quantity": "14.33",
+        "unit": "sq ft",
+        "rate": "1900.00",
+        "amount": "27227.00",
+        "amount_minor": 2722700,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.3313005632",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "20451.429791748472"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "20451.429791748472",
+      "accepted_split": false,
+      "labour_reference_ids": [],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "On hold by user; original values retained. No new component prices assigned."
+      ]
+    },
+    {
+      "item_id": "reception-006",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Glass Door And Fittings",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "0.00",
+        "unit": "sq ft",
+        "rate": "1700.00",
+        "amount": "0.00",
+        "amount_minor": 0,
+        "currency": null
+      },
+      "si": {
+        "quantity": "0",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "18298.647708406528"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "18298.647708406528",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R26"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "V4-R26"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-007",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "1.5 MT AC Installation",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "1.00",
+        "unit": "Nos",
+        "rate": "110000.00",
+        "amount": "110000.00",
+        "amount_minor": 11000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "110000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "110000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C10"
+      ],
+      "material_reference_ids": [
+        "V4-R09",
+        "V4-R10"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C10"
+      ],
+      "same_unit_material_ids": [
+        "V4-R09",
+        "V4-R10"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-008",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Strip Lighting Electrical Works",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "73.99",
+        "unit": "R.ft",
+        "rate": "300.00",
+        "amount": "22197.00",
+        "amount_minor": 2219700,
+        "currency": null
+      },
+      "si": {
+        "quantity": "22.552152",
+        "unit": "m",
+        "unit_label": "m",
+        "rate": "984.251968503937"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "984.251968503937",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R05"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "V4-R05"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-009",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Ceiling And Wardrobe Lights",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "7",
+        "unit": "Nos",
+        "rate": "1500.00",
+        "amount": "10500.00",
+        "amount_minor": 1050000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "7",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "1500.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "1500.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C11"
+      ],
+      "material_reference_ids": [
+        "V4-R06"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C11"
+      ],
+      "same_unit_material_ids": [
+        "V4-R06"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-010",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Chandelier With Electrical Fittings",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "1",
+        "unit": "Nos.",
+        "rate": "35000.00",
+        "amount": "35000.00",
+        "amount_minor": 3500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "35000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "35000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C12"
+      ],
+      "material_reference_ids": [
+        "V4-R07"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C12"
+      ],
+      "same_unit_material_ids": [
+        "V4-R07"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-011",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Wall Putty And Painting",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "235",
+        "unit": "sq ft",
+        "rate": "190.00",
+        "amount": "44650.00",
+        "amount_minor": 4465000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "21.8322144",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "2045.142979174847"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "2045.142979174847",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C13",
+        "C01"
+      ],
+      "material_reference_ids": [
+        "C15",
+        "C14",
+        "C18"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C13"
+      ],
+      "same_unit_material_ids": [
+        "C15"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-012",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Gypsum Board Lighting Points",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "279.614",
+        "unit": "SQ FT",
+        "rate": "150.00",
+        "amount": "41942.10",
+        "amount_minor": 4194210,
+        "currency": null
+      },
+      "si": {
+        "quantity": "25.97699062656",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "1614.586562506458"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "1614.586562506458",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "C04"
+      ],
+      "combined_reference_ids": [
+        "C06"
+      ],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "C04"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-013",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Brand Name Signage Board",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "2",
+        "unit": "No.",
+        "rate": "10000.00",
+        "amount": "20000.00",
+        "amount_minor": 2000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "2",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "10000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "10000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No verified material-only price for the stated work; existing public package is not split.",
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-014",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "False Ceiling Lighting Points",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "5",
+        "unit": "point",
+        "rate": "4500.00",
+        "amount": "22500.00",
+        "amount_minor": 2250000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "5",
+        "unit": "point",
+        "unit_label": "point",
+        "rate": "4500.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "4500.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "C04"
+      ],
+      "combined_reference_ids": [
+        "C06"
+      ],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-015",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Reception Area Couch Installation",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "2",
+        "unit": null,
+        "rate": "25000.00",
+        "amount": "50000.00",
+        "amount_minor": 5000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "2",
+        "unit": null,
+        "unit_label": "unspecified unit",
+        "rate": "25000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "25000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R11"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "reception-016",
+      "section_id": "reception",
+      "section_name": "Reception Area",
+      "title": "Granite Centre Table Installation",
+      "status": "on_hold_original_retained",
+      "original": {
+        "quantity": "1",
+        "unit": "nos.",
+        "rate": "35000.00",
+        "amount": "35000.00",
+        "amount_minor": 3500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "35000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "35000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "On hold by user; original values retained. No new component prices assigned."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-001",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Hardwood Frame Upholstered Sofa",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "1.00",
+        "unit": "No",
+        "rate": "95000.00",
+        "amount": "95000.00",
+        "amount_minor": 9500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "95000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "95000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R12"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "V4-R12"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-002",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Marble Slab Finish Works",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "110.57",
+        "unit": "Sq ft",
+        "rate": "750.00",
+        "amount": "82927.50",
+        "amount_minor": 8292750,
+        "currency": null
+      },
+      "si": {
+        "quantity": "10.2722891328",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "8072.932812532292"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "8072.932812532292",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C16",
+        "C01"
+      ],
+      "material_reference_ids": [
+        "C17"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C16"
+      ],
+      "same_unit_material_ids": [
+        "C17"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-003",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Finished Counter Table Installation",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "38.27",
+        "unit": "Sq ft",
+        "rate": "2750.00",
+        "amount": "105242.50",
+        "amount_minor": 10524250,
+        "currency": null
+      },
+      "si": {
+        "quantity": "3.5553993408",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "29600.753645951736"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "29600.753645951736",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "C09"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-004",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Counter Skirting Finish Works",
+      "status": "on_hold_original_retained",
+      "original": {
+        "quantity": "15.50",
+        "unit": "Rft",
+        "rate": "750.00",
+        "amount": "11625.00",
+        "amount_minor": 1162500,
+        "currency": null
+      },
+      "si": {
+        "quantity": "4.7244",
+        "unit": "m",
+        "unit_label": "m",
+        "rate": "2460.629921259843"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "2460.629921259843",
+      "accepted_split": false,
+      "labour_reference_ids": [],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "On hold by user; original values retained. No new component prices assigned."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-005",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "PVC Panel Finish Works",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "159.62",
+        "unit": "sq ft",
+        "rate": "450.00",
+        "amount": "71829.00",
+        "amount_minor": 7182900,
+        "currency": null
+      },
+      "si": {
+        "quantity": "14.8291832448",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "4843.759687519375"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "4843.759687519375",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No verified material-only price for the stated work; existing public package is not split.",
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-006",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Ceiling Mounted Light Installation",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "15.00",
+        "unit": "Nos",
+        "rate": "1500.00",
+        "amount": "22500.00",
+        "amount_minor": 2250000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "15.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "1500.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "1500.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C11"
+      ],
+      "material_reference_ids": [
+        "V4-R06"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C11"
+      ],
+      "same_unit_material_ids": [
+        "V4-R06"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-007",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Wall Putty And Painting",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "152.50",
+        "unit": "sq ft",
+        "rate": "190.00",
+        "amount": "28975.00",
+        "amount_minor": 2897500,
+        "currency": null
+      },
+      "si": {
+        "quantity": "14.1677136",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "2045.142979174847"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "2045.142979174847",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C13",
+        "C01"
+      ],
+      "material_reference_ids": [
+        "C15",
+        "C14",
+        "C18"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C13"
+      ],
+      "same_unit_material_ids": [
+        "C15"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-008",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "1 Ton Split AC",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "1",
+        "unit": "No",
+        "rate": "85000.00",
+        "amount": "85000.00",
+        "amount_minor": 8500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "85000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "85000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C10"
+      ],
+      "material_reference_ids": [
+        "V4-R08"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C10"
+      ],
+      "same_unit_material_ids": [
+        "V4-R08"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-009",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "False Ceiling Lighting Points",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "84.8125",
+        "unit": "Sq ft",
+        "rate": "150.00",
+        "amount": "12721.88",
+        "amount_minor": 1272188,
+        "currency": null
+      },
+      "si": {
+        "quantity": "7.87933908",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "1614.586562506458"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "1614.586562506458",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "C04"
+      ],
+      "combined_reference_ids": [
+        "C06"
+      ],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "C04"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-010",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Irregular Glass Table Seating",
+      "status": "on_hold_original_retained",
+      "original": {
+        "quantity": "1",
+        "unit": "Nos.",
+        "rate": "40000.00",
+        "amount": "40000.00",
+        "amount_minor": 4000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "40000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "40000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "On hold by user; original values retained. No new component prices assigned."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-011",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Strip Lighting Fixture Works",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "11.50",
+        "unit": "Rft",
+        "rate": "300.00",
+        "amount": "3450.00",
+        "amount_minor": 345000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "3.5052",
+        "unit": "m",
+        "unit_label": "m",
+        "rate": "984.251968503937"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "984.251968503937",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R05"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "V4-R05"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-012",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Hanging Light Fixture Installation",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "1.00",
+        "unit": "nos.",
+        "rate": "7500.00",
+        "amount": "7500.00",
+        "amount_minor": 750000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "7500.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "7500.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C12"
+      ],
+      "material_reference_ids": [
+        "V4-R07"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C12"
+      ],
+      "same_unit_material_ids": [
+        "V4-R07"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "coffee-lounge-013",
+      "section_id": "coffee-lounge",
+      "section_name": "Coffee lounge",
+      "title": "Kitchen Sink And Tap",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "1.00",
+        "unit": "nos.",
+        "rate": "25000.00",
+        "amount": "25000.00",
+        "amount_minor": 2500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "25000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "25000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R18"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "V4-R18"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "locker-space-001",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Plywood And Formica Lockers",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "69.38",
+        "unit": "sq ft",
+        "rate": "2500.00",
+        "amount": "173450.00",
+        "amount_minor": 17345000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "6.4456129152",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "26909.776041774306"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "26909.776041774306",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C07",
+        "C01"
+      ],
+      "material_reference_ids": [
+        "C09"
+      ],
+      "combined_reference_ids": [
+        "C08"
+      ],
+      "same_unit_labour_ids": [
+        "C07"
+      ],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "locker-space-002",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Cleaning Supply Storage Closet",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "35.00",
+        "unit": "sq ft",
+        "rate": "2500.00",
+        "amount": "87500.00",
+        "amount_minor": 8750000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "3.2516064",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "26909.776041774306"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "26909.776041774306",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C07",
+        "C01"
+      ],
+      "material_reference_ids": [
+        "C09"
+      ],
+      "combined_reference_ids": [
+        "C08"
+      ],
+      "same_unit_labour_ids": [
+        "C07"
+      ],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "locker-space-003",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "PVC Panel Framing Works",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "115.47",
+        "unit": "sq ft",
+        "rate": "1350.00",
+        "amount": "155884.50",
+        "amount_minor": 15588450,
+        "currency": null
+      },
+      "si": {
+        "quantity": "10.7275140288",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "14531.279062558125"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "14531.279062558125",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No verified material-only price for the stated work; existing public package is not split.",
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "locker-space-004",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Hanging Lights Electrical Works",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "2.00",
+        "unit": "Nos",
+        "rate": "7500.00",
+        "amount": "15000.00",
+        "amount_minor": 1500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "2.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "7500.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "7500.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C12"
+      ],
+      "material_reference_ids": [
+        "V4-R07"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C12"
+      ],
+      "same_unit_material_ids": [
+        "V4-R07"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "locker-space-005",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Wall Putty Surface Finish",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "880",
+        "unit": "sq ft",
+        "rate": "190.00",
+        "amount": "167200.00",
+        "amount_minor": 16720000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "81.7546752",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "2045.142979174847"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "2045.142979174847",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "C18"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "locker-space-006",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "1 Ton Split AC",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "1",
+        "unit": "No",
+        "rate": "85000.00",
+        "amount": "85000.00",
+        "amount_minor": 8500000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "85000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "85000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C10"
+      ],
+      "material_reference_ids": [
+        "V4-R08"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C10"
+      ],
+      "same_unit_material_ids": [
+        "V4-R08"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "locker-space-007",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Curved Gypsum Board Installation",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "356.50",
+        "unit": "Sqft",
+        "rate": "195",
+        "amount": "69517.50",
+        "amount_minor": 6951750,
+        "currency": null
+      },
+      "si": {
+        "quantity": "33.11993376",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "2098.962531258396"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "2098.962531258396",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "C04"
+      ],
+      "combined_reference_ids": [
+        "C06"
+      ],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "C04"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "locker-space-008",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Strip Lighting Electrical Works",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "44.00",
+        "unit": "Rft.",
+        "rate": "300",
+        "amount": "13200.00",
+        "amount_minor": 1320000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "13.4112",
+        "unit": "m",
+        "unit_label": "m",
+        "rate": "984.251968503937"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "984.251968503937",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R05"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "V4-R05"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "locker-space-009",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Brand Name Signage Board",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "2.00",
+        "unit": "Nos.",
+        "rate": "10000",
+        "amount": "20000.00",
+        "amount_minor": 2000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "2.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "10000"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "10000",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No verified material-only price for the stated work; existing public package is not split.",
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "locker-space-010",
+      "section_id": "locker-space",
+      "section_name": "Locker Space",
+      "title": "Sliding Doors And Fixtures",
+      "status": "on_hold_original_retained",
+      "original": {
+        "quantity": "434.00",
+        "unit": "Sqft",
+        "rate": "1700",
+        "amount": "737800.00",
+        "amount_minor": 73780000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "40.31991936",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "18298.647708406528"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "18298.647708406528",
+      "accepted_split": false,
+      "labour_reference_ids": [],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "On hold by user; original values retained. No new component prices assigned."
+      ]
+    },
+    {
+      "item_id": "studio-001",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Formica Cabinet With Doors",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "119.53",
+        "unit": "Sqft",
+        "rate": "2500.00",
+        "amount": "298825.00",
+        "amount_minor": 29882500,
+        "currency": null
+      },
+      "si": {
+        "quantity": "11.1047003712",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "26909.776041774306"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "26909.776041774306",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C07",
+        "C01"
+      ],
+      "material_reference_ids": [
+        "C09"
+      ],
+      "combined_reference_ids": [
+        "C08"
+      ],
+      "same_unit_labour_ids": [
+        "C07"
+      ],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "studio-002",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Wooden Framed Mirror Installation",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "150.43",
+        "unit": "Sq ft",
+        "rate": "900.00",
+        "amount": "135387.00",
+        "amount_minor": 13538700,
+        "currency": null
+      },
+      "si": {
+        "quantity": "13.9754043072",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "9687.51937503875"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "9687.51937503875",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R13"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "studio-003",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Full Length Sheer Curtains",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "465.01",
+        "unit": "sq ft",
+        "rate": "1350.00",
+        "amount": "627763.50",
+        "amount_minor": 62776350,
+        "currency": null
+      },
+      "si": {
+        "quantity": "43.2008426304",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "14531.279062558125"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "14531.279062558125",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R19"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "studio-004",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "PVC Panel Framing Works",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "236.68",
+        "unit": "sq ft",
+        "rate": "700.00",
+        "amount": "165676.00",
+        "amount_minor": 16567600,
+        "currency": null
+      },
+      "si": {
+        "quantity": "21.9882915072",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "7534.737291696806"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "7534.737291696806",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No verified material-only price for the stated work; existing public package is not split.",
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "studio-005",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Wall Putty And Paint",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "905.21",
+        "unit": "sq ft",
+        "rate": "190.00",
+        "amount": "171989.90",
+        "amount_minor": 17198990,
+        "currency": null
+      },
+      "si": {
+        "quantity": "84.0967608384",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "2045.142979174847"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "2045.142979174847",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C13",
+        "C01"
+      ],
+      "material_reference_ids": [
+        "C15",
+        "C14",
+        "C18"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C13"
+      ],
+      "same_unit_material_ids": [
+        "C15"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "studio-006",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Strip Lighting Electrical Works",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "110.88",
+        "unit": "Rft",
+        "rate": "1100.00",
+        "amount": "121968.00",
+        "amount_minor": 12196800,
+        "currency": null
+      },
+      "si": {
+        "quantity": "33.796224",
+        "unit": "m",
+        "unit_label": "m",
+        "rate": "3608.923884514436"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "3608.923884514436",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R05"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "V4-R05"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "studio-007",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "1.5 MT AC Installation",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "3.00",
+        "unit": "Nos.",
+        "rate": "110000.00",
+        "amount": "330000.00",
+        "amount_minor": 33000000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "3.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "110000.00"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "110000.00",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C10"
+      ],
+      "material_reference_ids": [
+        "V4-R09",
+        "V4-R10"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [
+        "C10"
+      ],
+      "same_unit_material_ids": [
+        "V4-R09",
+        "V4-R10"
+      ],
+      "gaps": [
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "studio-008",
+      "section_id": "studio",
+      "section_name": "Studio",
+      "title": "Cement Board Drywall Partition",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "195.00",
+        "unit": "Sqft",
+        "rate": "580.00",
+        "amount": "113100.00",
+        "amount_minor": 11310000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "18.1160928",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "6243.068041691639"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "6243.068041691639",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "C03"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "C03"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "changing-room-001",
+      "section_id": "changing-room",
+      "section_name": "Changing Room",
+      "title": "Cement Board Drywall Partition",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "249.16",
+        "unit": "Sqft",
+        "rate": "580.00",
+        "amount": "144512.80",
+        "amount_minor": 14451280,
+        "currency": null
+      },
+      "si": {
+        "quantity": "23.1477214464",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "6243.068041691639"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "6243.068041691639",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "C03"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "C03"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "changing-room-002",
+      "section_id": "changing-room",
+      "section_name": "Changing Room",
+      "title": "Full Length Curtain Installation",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "73.30",
+        "unit": "Sq ft",
+        "rate": "1550.00",
+        "amount": "113615.00",
+        "amount_minor": 11361500,
+        "currency": null
+      },
+      "si": {
+        "quantity": "6.809792832",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "16684.06114590007"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "16684.06114590007",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R20",
+        "V4-R19"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "Supply units differ from estimate units; material take-off or dimensions required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "washroom-001",
+      "section_id": "washroom",
+      "section_name": "Washroom",
+      "title": "Decorative Mirror With Fittings",
+      "status": "component_references_only",
+      "original": {
+        "quantity": "1.00",
+        "unit": "No",
+        "rate": "12500.000",
+        "amount": "12500.00",
+        "amount_minor": 1250000,
+        "currency": null
+      },
+      "si": {
+        "quantity": "1.00",
+        "unit": "each",
+        "unit_label": "each",
+        "rate": "12500.000"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "12500.000",
+      "accepted_split": false,
+      "labour_reference_ids": [
+        "C01",
+        "C02"
+      ],
+      "material_reference_ids": [
+        "V4-R14"
+      ],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [
+        "V4-R14"
+      ],
+      "gaps": [
+        "No labour price in the estimate unit; worker-days or a matching installation quote required.",
+        "A complete matching bill of materials, site labour, transport, equipment, overhead/profit and VAT breakdown is still required."
+      ]
+    },
+    {
+      "item_id": "washroom-002",
+      "section_id": "washroom",
+      "section_name": "Washroom",
+      "title": "Wall Decoration Painting Works",
+      "status": "on_hold_original_retained",
+      "original": {
+        "quantity": "66.67",
+        "unit": "Sqft",
+        "rate": "450.000",
+        "amount": "30001.50",
+        "amount_minor": 3000150,
+        "currency": null
+      },
+      "si": {
+        "quantity": "6.1938456768",
+        "unit": "m2",
+        "unit_label": "m²",
+        "rate": "4843.759687519375"
+      },
+      "original_labour_rate": null,
+      "original_material_rate": null,
+      "original_unallocated_rate": "4843.759687519375",
+      "accepted_split": false,
+      "labour_reference_ids": [],
+      "material_reference_ids": [],
+      "combined_reference_ids": [],
+      "same_unit_labour_ids": [],
+      "same_unit_material_ids": [],
+      "gaps": [
+        "On hold by user; original values retained. No new component prices assigned."
+      ]
+    }
+  ],
+  "allowances": [
+    {
+      "section_id": "laminate-flooring",
+      "name": "Laminate Flooring",
+      "original_amount": "550000.00",
+      "labour_amount": null,
+      "material_amount": null,
+      "unit_rate": null,
+      "status": "summary_only_unallocated",
+      "reason": "No detailed quantities or specification. Original allowance remains unsplit."
+    },
+    {
+      "section_id": "electrical",
+      "name": "Electrical Works",
+      "original_amount": "280057.43",
+      "labour_amount": null,
+      "material_amount": null,
+      "unit_rate": null,
+      "status": "summary_only_unallocated",
+      "reason": "No detailed quantities or specification. Original allowance remains unsplit."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "reviewed_date": "2026-10-17",
+  "scope": "Pilates estimate v7; earlier versions preserved",
+  "resolved": [
+    {
+      "id": "district-pdf",
+      "state": "resolved_download_and_selected_pages_reviewed",
+      "detail": "Official Kathmandu FY 2083/84 PDF downloaded; selected labour and board rows visually reviewed. Full 277-page transcription is not claimed.",
+      "bytes": 15344169,
+      "sha256": "697cb38b48e9f22384239e145411e4762ebffb1e7f908d3910f5fc454c40fa16",
+      "url": "https://daokathmandu.moha.gov.np/assets/3/%E0%A4%95%E0%A4%BE%E0%A4%A0%E0%A4%AE%E0%A4%BE%E0%A4%A1%E0%A5%8C%E0%A4%82_%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%95%E0%A5%8B_%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A4%BE_%E0%A4%A6%E0%A4%B0%E0%A4%B0%E0%A5%87%E0%A4%9F_%E0%A5%A8%E0%A5%A6%E0%A5%AE%E0%A5%A9.%E0%A5%AE%E0%A5%AA.pdf/file",
+      "preserved_copy_url": "https://drive.google.com/file/d/1owVlzGOBrwKxZrxnEsqWdrPfXyh0KgXk/view?usp=drivesdk",
+      "reviewed_pdf_pages": [
+        1,
+        6,
+        7,
+        8,
+        48,
+        49
+      ]
+    },
+    {
+      "id": "v6-integrity",
+      "state": "resolved",
+      "detail": "All 51 item-image mappings, 29 local image hashes and v5.1 table/graph preservation are covered by regression checks."
+    }
+  ],
+  "remaining": [
+    {
+      "id": "skp-download",
+      "state": "blocked_external_limit",
+      "detail": "Streamed raw-file fetch with include_base64=false retried 2026-10-17; HTTP 413 persists: 295205462 bytes exceeds 268435456. No geometry/duplicate claim."
+    },
+    {
+      "id": "source-currency",
+      "state": "needs_source_confirmation",
+      "detail": "Original estimate currency remains unstated. A public NPR source does not establish the original currency."
+    },
+    {
+      "id": "original-component-split",
+      "state": "needs_supplier_breakdown",
+      "detail": "Original quote contains one rate per item and no labour/material allocation. All original accepted component fields remain null; public references are separate."
+    },
+    {
+      "id": "six-held-items",
+      "state": "on_hold_by_user",
+      "detail": "Six holds and original values remain; no new component rates assigned to them."
+    },
+    {
+      "id": "two-summary-areas",
+      "state": "needs_scope_and_quantities",
+      "detail": "Laminate Flooring and Electrical Works are allowances without quantities or unit rates. No lump-sum split inferred."
+    },
+    {
+      "id": "scope-equivalence",
+      "state": "needs_matching_quote",
+      "detail": "Reference product, thickness, measurement basis, installation inclusions and current availability differ; exact-scope quotations remain zero."
+    }
+  ],
+  "old_reference_review": [
+    {
+      "id": "v4-board-guide",
+      "state": "historical_component_rates_not_promoted",
+      "detail": "Historical 2025 board/labour guide differs substantially from the newly readable official schedule. V7 uses clearly labeled current schedule material benchmarks and day wages instead of adopting that guide as an exact split."
+    },
+    {
+      "id": "homeplex-painting",
+      "state": "unit_omitted_not_normalized",
+      "detail": "Provider lists interior/exterior prices but no measurement unit. Values are not treated as NPR per square foot."
+    }
+  ],
+  "archive_folder_url": "https://drive.google.com/drive/folders/1EkyoN-MHfJy_F8OjnQSFqkLJysvoHrzx"
+}
