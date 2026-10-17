@@ -37,15 +37,15 @@ async function harness(init){
  globalThis.ResizeObserver=class{observe(){}};globalThis.requestAnimationFrame=()=>{};
  try{await init();return {element,documentEvents,cleanup(){Object.assign(globalThis,previous)}}}catch(e){Object.assign(globalThis,previous);throw e}
 }
-test('v6 keeps revised v5.1 table cells and filtered totals, while retaining its own original graphs',async()=>{
+test('v6 keeps revised v5.1 table cells and filtered totals, while adding permanent markers, a range overview and cost treemap',async()=>{
  const filters=[{}, {area:'studio',sort:'desc'}, {'evidence-filter':'quote-needed',sort:'asc'}, {search:'gypsum'}, {search:'no such scope xyz'}];
  async function snapshots(init){const h=await harness(init);try{return filters.map(f=>{
   for(const id of ['area','search','evidence-filter','sort'])h.element(id).value=f[id]??(id==='sort'?'source':'');h.element('search').events.input.forEach(fn=>fn());
-  return {tables:h.element('items').innerHTML,count:h.element('count').textContent,graphs:['graph-summary','graph-area','graph-items','graph-evidence'].map(id=>h.element(id).innerHTML||h.element(id).textContent),held:h.element('held-items').innerHTML};
+  return {tables:h.element('items').innerHTML,count:h.element('count').textContent,graphs:['range-board-summary','range-board','position-overview','cost-treemap'].map(id=>h.element(id).innerHTML||h.element(id).textContent),held:h.element('held-items').innerHTML};
  })}finally{h.cleanup()}}
  const before=await snapshots(initV51),after=await snapshots(initV6);
  for(let i=0;i<filters.length;i++){
-  assert.equal(after[i].tables.replace(/<figure class="scope-photo"[\s\S]*?<\/figure>/g,''),before[i].tables);assert.equal(after[i].count,before[i].count);assert.ok(after[i].graphs[0].includes(before[i].count.split(' of ')[0]+' matching items'));if(i===4)assert.ok(after[i].graphs.slice(1).every(x=>!x.includes('<svg')));else assert.ok(after[i].graphs.slice(1).every(x=>x.includes('<svg')));assert.equal(after[i].held,before[i].held);
+  assert.equal(after[i].tables.replace(/<figure class="scope-photo"[\s\S]*?<\/figure>/g,''),before[i].tables);assert.equal(after[i].count,before[i].count);assert.ok(after[i].graphs[0].includes(before[i].count.split(' of ')[0]+' matching items'));if(i===4)assert.ok(after[i].graphs.slice(1).every(x=>!x.includes('<svg')));else assert.ok(after[i].graphs[1].includes('data-range-item='));if(i===0){assert.ok(after[i].graphs[1].includes('data-estimate-marker='));assert.ok(after[i].graphs[2].includes('<svg'));assert.ok(after[i].graphs[3].includes('<svg'))}assert.equal(after[i].held,before[i].held);
  }
  assert.equal((after[0].tables.match(/data-image-item=/g)||[]).length,51);assert.equal((after[2].tables.match(/data-image-item=/g)||[]).length,6);assert.equal((after[4].tables.match(/data-image-item=/g)||[]).length,0);
  const html=await readFile(new URL('v6/index.html',base),'utf8');assert.ok(html.indexOf('id="table-graphs"')>html.indexOf('id="items"'));assert.match(html,/src="\.\/v6.js"/);

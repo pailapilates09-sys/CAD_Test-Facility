@@ -1,3 +1,30 @@
+# V6 status
+
+## Current visualization revision — 17 October 2026
+
+The earlier lower amount/ranking/evidence graphs have been replaced with the revised v5.1 every-item ranges, now with permanent original estimate markers. No marker button or checkbox is needed in this version, including the retained top comparison. The original source currency is still unstated: overlays visibly assume NPR and matching measurement units. Incompatible units and six holds do not receive fabricated overlays.
+
+Two additional views use the existing source-backed data:
+
+- **Range-position overview:** 31 closed-range source comparisons on a shared scale, where source low = 0% and high = 100%. Each source stays separate. The displayed window is −50% to 200%; off-window observations use arrows and full numeric position labels. This is a within-range coordinate, not a market percentile or proof of fair pricing. Single prices/open bounds remain in individual plots.
+- **Original cost treemap:** nested area/item rectangles are proportional to the original detailed line amounts. Fifty positive amounts occupy rectangles; the one zero-amount item remains listed without fabricated area. Six held amounts are hatched and included once. No public market total, VAT or summary allowances are added to the map. Hover, keyboard focus, item selection and item-detail links expose exact values and the existing full scope/image dialog.
+
+All views follow the original area, description-search, amount-sort and evidence filters. The 51 item images, six area tables, original totals, original data and later component research remain intact. V5.1 retains its optional marker controls; only v6/v7 now use permanent markers.
+
+Design sources, read 17 October 2026:
+
+- Datawrapper dot/range examples: https://www.datawrapper.de/academy/examples-of-datawrapper-dot-charts
+- Tableau treemap geometry: https://help.tableau.com/current/pro/desktop/en-us/buildexamples_treemap.htm
+- Tableau chart selection: https://www.tableau.com/en-gb/learn/get-started/desktop-viz-design
+
+These are visualization-method references. Public price values remain the preserved 16 October snapshot, not a new price refresh. Geographic maps would require location/geometry data that this item estimate does not contain; this treemap is a cost-composition view.
+
+Validation: 48 automated tests and production build pass. Tests verify exact treemap cost proportions and non-overlap, original totals and holds, empty/zero filters, all source rows, off-window labels, permanent-marker initialization without checkbox access, pointer/focus/select inspection, original table/image preservation and v7 component calculations. Browser layout QA is unavailable in this runtime; no rendered-browser verification is claimed. Live deployment/readback is verified separately in the delivery.
+
+---
+
+## Original delivery record (historical)
+
 # V6 status — 17 October 2026
 
 V6 builds on V5.1 and adds a sourced reference image to each of the 51 detailed work items. It stops before V7.
