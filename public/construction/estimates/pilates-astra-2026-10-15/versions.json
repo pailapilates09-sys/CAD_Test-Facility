@@ -1,0 +1,111 @@
+{
+  "schema_version": "estimate-versions-1.0.0",
+  "updated_date": "2026-10-17",
+  "latest_version": "v7",
+  "milestone_tag": "pilates-estimates-m1-2026-10-17",
+  "versions": [
+    {
+      "id": "original",
+      "label": "Original",
+      "path": "./",
+      "purpose": "Source values and complete descriptions",
+      "units": "Source units",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": false,
+      "component_evidence": false
+    },
+    {
+      "id": "v2",
+      "label": "Concise v2",
+      "path": "./v2/",
+      "purpose": "Indian number grouping, short scope titles and area hierarchy",
+      "units": "Source units",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": false,
+      "component_evidence": false
+    },
+    {
+      "id": "v3",
+      "label": "SI v3",
+      "path": "./v3/",
+      "purpose": "Metric quantities and inverse-converted rates",
+      "units": "SI / counts",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": false,
+      "component_evidence": false
+    },
+    {
+      "id": "v4",
+      "label": "Rates v4",
+      "path": "./v4/",
+      "purpose": "Preserved public-price research snapshot and scope qualifications",
+      "units": "SI / counts",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": false,
+      "component_evidence": false
+    },
+    {
+      "id": "v5",
+      "label": "Compare v5",
+      "path": "./v5/",
+      "purpose": "Permanent original markers, every-item ranges, position overview and cost treemap",
+      "units": "SI / counts",
+      "permanent_original_markers": true,
+      "position_overview": true,
+      "cost_treemap": true,
+      "reference_images": false,
+      "component_evidence": false
+    },
+    {
+      "id": "v5.1",
+      "label": "Graphs v5.1",
+      "path": "./v5.1/",
+      "purpose": "Synchronized comparison visuals with original area tables",
+      "units": "SI / counts",
+      "permanent_original_markers": true,
+      "position_overview": true,
+      "cost_treemap": true,
+      "reference_images": false,
+      "component_evidence": false
+    },
+    {
+      "id": "v6",
+      "label": "Images v6",
+      "path": "./v6/",
+      "purpose": "Latest comparison visuals plus all 51 reference-image mappings",
+      "units": "SI / counts",
+      "permanent_original_markers": true,
+      "position_overview": true,
+      "cost_treemap": true,
+      "reference_images": true,
+      "component_evidence": false
+    },
+    {
+      "id": "v7",
+      "label": "Components v7",
+      "path": "./v7/",
+      "purpose": "Latest visuals/images plus separate labour/material evidence and temporary rate builder",
+      "units": "SI / counts",
+      "permanent_original_markers": true,
+      "position_overview": true,
+      "cost_treemap": true,
+      "reference_images": true,
+      "component_evidence": true
+    }
+  ],
+  "current_view_policy": {
+    "original_marker_mode": "permanent_when_measurement_units_match",
+    "currency_assumption": "NPR; requested by the owner; original source currency remains unconfirmed",
+    "replacement_rates": "None; original estimate values remain unchanged",
+    "scope": "Measurement compatibility does not establish matching labour, material, grade, installation, VAT or stock",
+    "snapshot_note": "V4/V5 research and comparison exports retain their dated historical policy/planning notes. This version register describes the current maintained website behavior."
+  }
+}

@@ -95,3 +95,10 @@ Phase caps: one verified checkpoint per package; maximum 20 minutes, stop new wo
 A new 61.33-minute source checkpoint window closed 19 checkpoints and added 309 catalogue records: LSA113 and MSCH196. All four Local/Main acknowledgements now agree: MSCS6/6, LSA31/31, AEC11/11 and MSCH65/65. Initial 73 backlog events and 19 new source/audit events were reconciled without replaying source work.
 
 LSA's full140-folder live tree matches1242 catalogue occurrences. Its historical1244-row baseline retains a2-file /9,304-byte discrepancy. MSCH has 1,310 entries and 137 pending FIFO folders; its full denominator is unknown. MSCS hashing policy and the original AEC terminal remain source gates. Source-content extraction and scheduler changes did not occur. The current report and timeline preserve all earlier session history.
+
+
+## Pilates estimate milestone M1
+
+[Version/milestone register](https://pailapilates09-sys.github.io/CAD_Test-Facility/construction/estimates/pilates-astra-2026-10-15/milestone.html) · [latest full v7](https://pailapilates09-sys.github.io/CAD_Test-Facility/construction/estimates/pilates-astra-2026-10-15/v7/) · [release notes](construction/estimates/pilates-astra-2026-10-15/MILESTONE-M1.md).
+
+All original/source and conversion views remain available. V5, v5.1, v6 and v7 share permanent NPR-assumed original markers, every-item public ranges, a range-position overview and original-cost treemap. V6/v7 retain images; v7 retains component evidence. Remaining source/supplier/SKP and browser-verification gaps are documented explicitly.

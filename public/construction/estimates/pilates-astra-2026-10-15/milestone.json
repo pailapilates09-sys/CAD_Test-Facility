@@ -1,0 +1,63 @@
+{
+  "schema_version": "estimate-milestone-1.0.0",
+  "tag": "pilates-estimates-m1-2026-10-17",
+  "title": "Paila Pilates estimates — M1: synchronized comparisons and component evidence",
+  "date": "2026-10-17",
+  "scope": "Pilates estimate pages only; unrelated CAD and project-progress work retained",
+  "latest_version": "v7",
+  "versions": [
+    "original",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v5.1",
+    "v6",
+    "v7"
+  ],
+  "synchronized_comparison_versions": [
+    "v5",
+    "v5.1",
+    "v6",
+    "v7"
+  ],
+  "source_pdf_sha256": "d1592c3c08d0fc37543a904e69bd728ae3c8a2edcef6ebf039cc583be1f70df7",
+  "original_summary": {
+    "interior_total": "5601148.68",
+    "electrical": "280057.43",
+    "subtotal": "5881206.11",
+    "vat_rate": "0.13",
+    "vat_amount": "764556.79",
+    "grand_total": "6645762.90",
+    "page": 1
+  },
+  "coverage": {
+    "detailed_items": 51,
+    "detailed_areas": 6,
+    "summary_allowances": 2,
+    "held_items": 6,
+    "same_unit_reference_items": 36,
+    "different_unit_only_items": 9,
+    "reference_image_mappings": 51,
+    "image_assets": 29,
+    "both_component_reference_items": 40,
+    "accepted_original_component_splits": 0
+  },
+  "release_notes_path": "construction/estimates/pilates-astra-2026-10-15/MILESTONE-M1.md",
+  "site_url": "https://pailapilates09-sys.github.io/CAD_Test-Facility/construction/estimates/pilates-astra-2026-10-15/",
+  "remaining_debt": [
+    "Original quote currency is unstated; NPR overlays are labeled assumptions.",
+    "Original labour/material allocations and exact-scope quotes require supplier confirmation.",
+    "Six user-held items retain original rates and amounts.",
+    "Two summary allowances still lack detailed quantities and component breakdowns.",
+    "SKP download remains blocked at the 256 MiB connector limit; no geometry or duplicate conclusion.",
+    "Browser layout QA unavailable; automated and live-file checks are reported."
+  ],
+  "preservation_sha256": {
+    "v3/estimate-si.json": "864ccd9e5df3ca08e4a383da21017912eb9ffcd34031c10a8fb7fe49604eded3",
+    "v4/market-rates.json": "fb3fcfeac68a629d1a0977d617309bf9a13cf06e0a1298a37b97730e120be515",
+    "v5/comparison.json": "df22bfef647b782d1a73cfa76c22230bf7813bfc83fd6b22a4553223b8280906",
+    "v6/image-register.json": "bd4c405ec90f390bd02b5b3ba5e780c9a63d634720662e2ddb0ff5a50eb6d4a9",
+    "v7/component-rates.json": "58a5352e81e83fa70bc68542badfc7b768a788d92add0ed919836ccf777bee53"
+  }
+}

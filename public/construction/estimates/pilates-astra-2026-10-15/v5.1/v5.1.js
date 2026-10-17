@@ -1,5 +1,6 @@
 import {initComparison} from '../v5/comparison-ui.js';
 import {createRangeBoard} from './range-board.js';
+import {createReviewVisuals} from '../v6/review-visuals.js';
 const $=id=>document.getElementById(id);
 export const money=n=>Number(n).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
 export const quantity=n=>Number(n).toLocaleString('en-IN',{maximumFractionDigits:4});
@@ -63,7 +64,7 @@ export async function init(){
  $('expand-all').addEventListener('click',()=>document.querySelectorAll('[data-toggle]').forEach(b=>toggle(b,true)));
  $('collapse-all').addEventListener('click',()=>document.querySelectorAll('[data-toggle]').forEach(b=>toggle(b,false)));
  $('area').innerHTML+=d.sections.filter(s=>s.item_count).map(s=>`<option value="${esc(s.id)}">${esc(s.name)}</option>`).join('');
- const renderRangeBoard=createRangeBoard(comparison);
+ const renderRangeBoard=createRangeBoard(comparison,{permanentOriginal:true}),renderReviewVisuals=createReviewVisuals(comparison,{detailLabel:'Full scope + sources'});
  function render(){
   const area=$('area').value,q=$('search').value.trim().toLowerCase(),sort=$('sort').value;
   const evidenceFilter=$('evidence-filter').value;
@@ -76,11 +77,11 @@ export async function init(){
    const areaTotal=areaRows.reduce((sum,x)=>sum+x.amount_minor,0)/100;
    return `<section class="area-table" aria-labelledby="table-${esc(section.id)}"><header class="area-table-head"><h3 id="table-${esc(section.id)}">${esc(section.name)}</h3><p>${areaRows.length} items · ${areaRows.length===section.item_count?'Area total':'Matching items total'} <strong>${money(areaTotal)}</strong></p></header><div class="table-scroll"><table><caption class="sr-only">${esc(section.name)} — concise source-linked estimate items</caption><thead><tr><th>Scope title · click for details</th><th class="num">SI / count quantity</th><th>Unit</th><th class="num">Rate / unit</th><th class="num">Amount</th><th>Public rate evidence · NPR</th></tr></thead><tbody>${areaRows.map(x=>`<tr><td><button class="scope-link" data-detail="${esc(x.id)}">${esc(nodes.get(x.id).title)}</button><small class="item-id">${esc(x.id)} · source no. ${esc(x.source_sn)}</small></td><td class="num">${quantity(x.quantity)}</td><td>${esc(x.unit_raw??'—')}</td><td class="num">${money(x.rate)}</td><td class="num">${money(x.amount)}</td><td class="market-cell">${evidence(x)}</td></tr>`).join('')}</tbody><tfoot><tr><th scope="row" colspan="4">${areaRows.length===section.item_count?'Area total':'Matching items total'} · before VAT</th><td class="num">${money(areaTotal)}</td><td>Original amount retained</td></tr></tfoot></table></div></section>`;
   }).join(''):'<p class="empty">No matching items.</p>';
-  renderRangeBoard(rows);
+  renderRangeBoard(rows);renderReviewVisuals(rows);
  }
  for(const id of ['area','search','sort','evidence-filter'])$(id).addEventListener(id==='search'?'input':'change',render);
  $('issues').innerHTML=d.issues.map(x=>`<li>${esc(x.message)}</li>`).join('');
- render();await initComparison('../v5/comparison.json');$('status').hidden=true;$('content').hidden=false;
+ render();await initComparison('../v5/comparison.json',{permanentOriginal:true});$('status').hidden=true;$('content').hidden=false;
  new ResizeObserver(redraw).observe($('chart'));redraw();
 }
 if(typeof document!=='undefined')init().catch(error=>{$('status').textContent=`Unable to load v5.1. ${error.message}. Use the original estimate or refresh.`});

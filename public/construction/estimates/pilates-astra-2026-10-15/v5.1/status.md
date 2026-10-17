@@ -1,3 +1,17 @@
+# V5.1 milestone status
+
+## Current milestone M1 — 17 October 2026
+
+All comparison versions (v5, v5.1, v6, v7) now share permanent original-rate markers where units match, every-item range comparisons, the range-position overview and original-cost treemap. NPR is visibly assumed because the original source currency is unspecified. Original tables/values, six holds and source data remain intact. V6/v7 retain the images; v7 retains component research/calculation tools. No replacement rate or accepted original component allocation is created.
+
+All source and conversion versions remain available with synchronized navigation. See [version/milestone register](../milestone.html), [version JSON](../versions.json) and [milestone JSON](../milestone.json) for current coverage, release links and remaining debt. Public prices remain the preserved 16 October snapshot; the recovered official PDF is used separately in v7.
+
+The source currency, matching supplier scope/component splits, six user holds, two allowance breakdowns, the SKP download size limit and unavailable browser layout QA remain explicit. These are not marked resolved by the milestone.
+
+---
+
+## Earlier delivery record (historical)
+
 # V5.1 — every-item range comparison revision
 
 Updated 17 October 2026 following the owner's screenshots. No v8 was predefined; this revises the existing v5.1 page.
