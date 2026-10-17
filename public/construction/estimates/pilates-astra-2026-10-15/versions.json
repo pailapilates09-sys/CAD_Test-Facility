@@ -107,5 +107,19 @@
     "replacement_rates": "None; original estimate values remain unchanged",
     "scope": "Measurement compatibility does not establish matching labour, material, grade, installation, VAT or stock",
     "snapshot_note": "V4/V5 research and comparison exports retain their dated historical policy/planning notes. This version register describes the current maintained website behavior."
+  },
+  "workspace_navigation": {
+    "primary_sections": [
+      "Construction",
+      "Versions + milestone",
+      "Progress"
+    ],
+    "construction_contents": [
+      "Latest Pilates estimate v7",
+      "Column formwork CAD drawings",
+      "Pilates SketchUp workspace"
+    ],
+    "history_location": "milestone.html",
+    "existing_urls_retained": true
   }
 }

@@ -27,11 +27,11 @@ test('v2 hierarchy is an acyclic complete cost tree with no duplicated costs',()
  for(const x of d.line_items){assert.equal(nodes.get(x.id).amount,x.amount);assert.ok(g.edges.some(e=>e.source===x.section_id&&e.target===x.id))}
  for(const s of d.sections.filter(s=>!s.item_count))assert.equal(g.edges.filter(e=>e.source===s.id).length,0);
 });
-test('v2 retains access to original evidence and links from the original and department pages',async()=>{
+test('v2 retains access to original evidence and links through the original page and version register',async()=>{
  const html=await readFile(new URL(base+'index.html',root),'utf8');
  const original=await readFile(new URL('public/construction/estimates/pilates-astra-2026-10-15/index.html',root),'utf8');
  const hub=await readFile(new URL('public/construction/index.html',root),'utf8');
- assert.match(original,/href="\.\/v2\/"/);assert.match(hub,/pilates-astra-2026-10-15\/v2\//);
+ const register=await readFile(new URL('public/construction/estimates/pilates-astra-2026-10-15/milestone.html',root),'utf8');assert.match(original,/href="\.\/v2\/"/);assert.match(hub,/pilates-astra-2026-10-15\/milestone\.html/);assert.match(register,/href="\.\/v2\/"/);
  assert.match(html,/<dialog[^>]+aria-labelledby="detail-title"/);
  assert.match(html,/href="\.\.\/data\/estimate.json"/);
  assert.match(html,/href="\.\/hierarchy.json"/);
