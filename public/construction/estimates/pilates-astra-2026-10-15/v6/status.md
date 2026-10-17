@@ -1,0 +1,16 @@
+# V6 status — 17 October 2026
+
+V6 builds on V5.1 and adds a sourced reference image to each of the 51 detailed work items. It stops before V7.
+
+- 51 item-image mappings, using 29 locally stored reference images. Related items can share an image; every mapping has its own caption, alternative text and scope note.
+- Click an image or item title to open its full source description, original/SI quantities and rates, full reference image, image credit/license and existing Kathmandu rate evidence.
+- Images illustrate related work, products, materials, textures or methods. They are **not photos of the Paila project, approved design drawings, exact specification matches or extracted SKP views**. A material detail or broader example is explicitly qualified; for example, the PVC sample is a translucent hollow panel, the granite example is a dining tabletop, and the sheer curtain example does not establish changing-room privacy.
+- Original and earlier pages are preserved. V5.1 detailed table cells, all six area tables, the held-item table, original totals, SI units, Indian number grouping, hierarchy and three graphs below the detailed tables remain intact. Only image figures are added within item-title cells.
+- The six holds retain their original rates and amounts, totaling 8,81,653.50 and included once. No market rate, accepted quote, revised total or currency confirmation is introduced.
+- All 29 image files are stored with the site as WebP files, with SHA-256 hashes, dimensions, source URLs, dates, credits and individual license links. Attribution/license metadata is preserved from Wikimedia Commons. The public-domain ceiling-light source has no machine-readable author; it is labeled accordingly. One marble reference is a photographic material texture and the cane weave image contains source annotations. No images were AI-generated.
+- Public rate references remain the existing 16 October 2026 snapshot. Source estimate currency and exact scope equivalence remain unconfirmed. SKP extraction and duplicate inspection remain blocked as previously recorded.
+- **V7 is deferred:** separate the current combined/unsplit rate into labour and material components for every work item. No labour/material allocation is inferred or assigned in V6.
+
+Reusable files: image-register.json, image-items.jsonl, image-assets.json, image-source-metadata.json and IMAGE-CREDITS.md. The register rebuilds from the preserved metadata using `node construction/estimates/pilates-astra-2026-10-15/research/build-images.mjs`; asset hashes are checked before writing the register.
+
+Validation: all 35 automated tests and the production build pass. The tests check all 51 item mappings, image bytes/hashes and provenance, all item-detail interactions, held and empty filters, and exact preservation of V5.1 table markup after removing the new image figures. All three graphs produce identical output for the same filter population. Selected image contact sheets were visually inspected. Browser page visual QA is unavailable in this runtime; responsive behavior is checked from the preserved styles and static markup. Deployment and live file readback are reported separately in the delivery message.

@@ -1,0 +1,3042 @@
+{
+  "retrieved_date": "2026-10-17",
+  "provider": "Wikimedia Commons imageinfo API",
+  "pages": [
+    {
+      "pageid": 159882868,
+      "ns": 6,
+      "title": "File:A nice large cupboard - Room 411 - The Holiday Inn - Whitechapel.jpg",
+      "index": 2,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/A_nice_large_cupboard_-_Room_411_-_The_Holiday_Inn_-_Whitechapel.jpg/960px-A_nice_large_cupboard_-_Room_411_-_The_Holiday_Inn_-_Whitechapel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 1436,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/A_nice_large_cupboard_-_Room_411_-_The_Holiday_Inn_-_Whitechapel.jpg/1920px-A_nice_large_cupboard_-_Room_411_-_The_Holiday_Inn_-_Whitechapel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/A_nice_large_cupboard_-_Room_411_-_The_Holiday_Inn_-_Whitechapel.jpg/960px-A_nice_large_cupboard_-_Room_411_-_The_Holiday_Inn_-_Whitechapel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 1436,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/A_nice_large_cupboard_-_Room_411_-_The_Holiday_Inn_-_Whitechapel.jpg/1920px-A_nice_large_cupboard_-_Room_411_-_The_Holiday_Inn_-_Whitechapel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/A_nice_large_cupboard_-_Room_411_-_The_Holiday_Inn_-_Whitechapel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:A_nice_large_cupboard_-_Room_411_-_The_Holiday_Inn_-_Whitechapel.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=159882868",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2025-02-16 22:10:53",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "A nice large cupboard - Room 411 - The Holiday Inn - Whitechapel",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Flickr images reviewed by FlickreviewR 2|Hotels in the United Kingdom photographed in 2025|London photographs taken on 2025-02-14|Photographs by Haydn Blackey|Holiday Inn London - Whitechapel",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "5 Cavell Street, London E1 2BP",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "Taken on 14 February 2025, 16:12:44",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/haydn/54327460978/\">https://www.flickr.com/photos/haydn/54327460978/</a>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/54549113@N00\">Haydn Blackey</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 2.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 2.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/2.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-2.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 145987160,
+      "ns": 6,
+      "title": "File:Marble tiles diff 8k (Charlotte Baglioni via Poly Haven).png",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Marble_tiles_diff_8k_%28Charlotte_Baglioni_via_Poly_Haven%29.png/960px-Marble_tiles_diff_8k_%28Charlotte_Baglioni_via_Poly_Haven%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 960,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Marble_tiles_diff_8k_%28Charlotte_Baglioni_via_Poly_Haven%29.png/1920px-Marble_tiles_diff_8k_%28Charlotte_Baglioni_via_Poly_Haven%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Marble_tiles_diff_8k_%28Charlotte_Baglioni_via_Poly_Haven%29.png/960px-Marble_tiles_diff_8k_%28Charlotte_Baglioni_via_Poly_Haven%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 960,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Marble_tiles_diff_8k_%28Charlotte_Baglioni_via_Poly_Haven%29.png/1920px-Marble_tiles_diff_8k_%28Charlotte_Baglioni_via_Poly_Haven%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Marble_tiles_diff_8k_%28Charlotte_Baglioni_via_Poly_Haven%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Marble_tiles_diff_8k_(Charlotte_Baglioni_via_Poly_Haven).png",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=145987160",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2024-03-01 20:32:22",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Marble tiles diff 8k (Charlotte Baglioni via Poly Haven)",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "CC-Zero|Files uploaded by PantheraLeo1359531|Files from Poly Haven (flat list)|Marble Tiles (Poly Haven)",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Texture of a marble tiling. The length is two meters, the resolution 41 pixels per centimeter. In addition to color textures, normal textures, roughness textures and more are included.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2024-02-27",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<ul><li><a rel=\"mw:ExtLink nofollow\" href=\"https://polyhaven.com/a/marble_tiles\" class=\"external free\">https://polyhaven.com/a/marble_tiles</a></li>\n<li><a rel=\"mw:ExtLink nofollow\" href=\"https://web.archive.org/web/20240301202554/https://polyhaven.com/a/marble_tiles\" class=\"external free\">https://web.archive.org/web/20240301202554/https://polyhaven.com/a/marble_tiles</a></li></ul>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<ul><li>Charlotte Baglioni (<a rel=\"mw:ExtLink nofollow\" href=\"https://polyhaven.com/all?a=Charlotte%20Baglioni\" class=\"external free\">https://polyhaven.com/all?a=Charlotte%20Baglioni</a> / <a rel=\"mw:ExtLink nofollow\" href=\"https://web.archive.org/web/20230901122646/https://polyhaven.com/all?a=Charlotte%20Baglioni\" class=\"external free\">https://web.archive.org/web/20230901122646/https://polyhaven.com/all?a=Charlotte%20Baglioni</a>) via Poly Haven</li></ul>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Zero, Public Domain Dedication",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 138420215,
+      "ns": 6,
+      "title": "File:Reception desks of Amantaka luxury Resort & Hotel in Luang Prabang Laos.jpg",
+      "index": 1,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Reception_desks_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/960px-Reception_desks_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 640,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Reception_desks_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/1920px-Reception_desks_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Reception_desks_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/960px-Reception_desks_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 640,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Reception_desks_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/1920px-Reception_desks_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Reception_desks_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Reception_desks_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=138420215",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2023-10-03 02:04:09",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Reception desks of Amantaka luxury Resort & Hotel in Luang Prabang Laos",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Taken with Canon EOS 5D Mark IV and Canon EF 11-24mm F4L USM|Amantaka Hotel|Self-published work|Hotel lobbies in Laos|Interiors of hotels in Laos|Files with coordinates missing SDC location of creation|Hotels photographed in 2023|Photographs by Basile Morin|Symmetry impressions of building interiors|Long exposure photography in architecture|Vertical symmetry impressions|2023 in Luang Prabang Province|Hotel furniture - Chairs|Hotel furniture - Tables|Hotel lamps|Hotel doors",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "quality",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "GPSLatitude": {
+              "value": "19.886563",
+              "source": "commons-desc-page"
+            },
+            "GPSLongitude": {
+              "value": "102.135283",
+              "source": "commons-desc-page"
+            },
+            "GPSMapDatum": {
+              "value": "WGS-84",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Reception desks (<a href=\"https://en.wikipedia.org/wiki/Front_office\" class=\"extiw\" title=\"en:Front office\">front office</a>) of <b><a href=\"https://en.wikipedia.org/wiki/Amantaka\" class=\"extiw\" title=\"en:Amantaka\">Amantaka</a></b> luxury resort and hotel in <a href=\"https://en.wikipedia.org/wiki/Luang_Prabang\" class=\"extiw\" title=\"en:Luang Prabang\">Luang Prabang</a>, <a href=\"https://en.wikipedia.org/wiki/Laos\" class=\"extiw\" title=\"en:Laos\">Laos</a>. Amantaka is one of the 34 properties operated by <a href=\"https://en.wikipedia.org/wiki/Aman_Resorts\" class=\"extiw\" title=\"en:Aman Resorts\">Aman Resorts</a>, hospitality company founded by Indonesian hotelier <a href=\"https://en.wikipedia.org/wiki/Adrian_Zecha\" class=\"extiw\" title=\"en:Adrian Zecha\">Adrian Zecha</a> in 1988, present in more than 20 countries. The hotel, located in a French colonial building, opened in September 2009. A boutique hotel, it contains 24 lavish suites, encircling a central courtyard and is designed with a mixture of traditional Lao furnishings and modern. <a rel=\"nofollow\" class=\"external text\" href=\"https://www.aman.com/resorts/amantaka/accommodation/suites\">The suites</a> range in size from 70 to 120 square metres and include eight suites, four pool suites, eight Khan pool suites, two Mekong pool suites and two Amantaka pool suites. All of the rooms have a king-sized bed centre of the suites beneath a traditional high ceiling. They are painted in white and have mahogany or dark wood furnishings and windows. The rooms are reported to be between 1,100 USD and 1,900 USD a night.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2023-09-18 17:24:30",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 49317001,
+      "ns": 6,
+      "title": "File:Tobang with shoe rack.jpg",
+      "index": 2,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Tobang_with_shoe_rack.jpg/960px-Tobang_with_shoe_rack.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 1280,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Tobang_with_shoe_rack.jpg/1920px-Tobang_with_shoe_rack.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Tobang_with_shoe_rack.jpg/960px-Tobang_with_shoe_rack.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 1280,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Tobang_with_shoe_rack.jpg/1920px-Tobang_with_shoe_rack.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Tobang_with_shoe_rack.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tobang_with_shoe_rack.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=49317001",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2016-06-08 12:03:10",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Tobang with shoe rack",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Taken with Samsung PL150|Architecture of Korea|Genkan|Shoe racks|Self-published work|PD-self|Doffing shoes",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "토방 (Tobang) in Korea, with shoe shelf aside",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2016-03-25",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User_talk:Sarang\" title=\"User talk:Sarang\">Sarang</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "Public domain",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Public domain",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Copyrighted": {
+              "value": "False",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "pd",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 18234214,
+      "ns": 6,
+      "title": "File:Cannage 6 fils.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Cannage_6_fils.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "thumbwidth": 960,
+          "thumbheight": 732,
+          "thumbattribs": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/0/02/Cannage_6_fils.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 732
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Cannage_6_fils.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cannage_6_fils.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=18234214",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2012-01-31 14:55:23",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Cannage 6 fils",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Caning (furniture)|Self-published work",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Principe du cannage à 6 fils, dit \"à la française\".",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2012-01-31",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Nerijp\" title=\"User:Nerijp\">Nerijp</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 3.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 3.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/3.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-3.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 8277188,
+      "ns": 6,
+      "title": "File:HK Disney's Hollywood Hotel Cafe sunshine glass door.JPG",
+      "index": 4,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/HK_Disney%27s_Hollywood_Hotel_Cafe_sunshine_glass_door.JPG/960px-HK_Disney%27s_Hollywood_Hotel_Cafe_sunshine_glass_door.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "responsiveUrls": {
+            "2": "https://upload.wikimedia.org/wikipedia/commons/7/71/HK_Disney%27s_Hollywood_Hotel_Cafe_sunshine_glass_door.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/HK_Disney%27s_Hollywood_Hotel_Cafe_sunshine_glass_door.JPG/960px-HK_Disney%27s_Hollywood_Hotel_Cafe_sunshine_glass_door.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720,
+            "srcset": "https://upload.wikimedia.org/wikipedia/commons/7/71/HK_Disney%27s_Hollywood_Hotel_Cafe_sunshine_glass_door.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/HK_Disney%27s_Hollywood_Hotel_Cafe_sunshine_glass_door.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:HK_Disney%27s_Hollywood_Hotel_Cafe_sunshine_glass_door.JPG",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=8277188",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2009-10-27 07:47:27",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "HK Disney's Hollywood Hotel Cafe sunshine glass door",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Taken with Casio Exilim EX-Z60|Self-published work|Photographs by Anonymous Hong Kong Photographer 1|Hong Kong photographs taken on 2009-10-24|Hollywood & Dine @ Disney's Hollywood Hotel, HK",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "​香港<a rel=\"mw:WikiLink/Interwiki\" href=\"https://zh.wikipedia.org/wiki/%E8%BF%AA%E5%A3%AB%E5%B0%BC%E5%A5%BD%E8%90%8A%E5%A1%A2%E9%85%92%E5%BA%97\" title=\"zh:迪士尼好萊塢酒店\" class=\"extiw\">zh:迪士尼好萊塢酒店</a> 出入口 <a rel=\"mw:WikiLink/Interwiki\" href=\"https://zh.wikipedia.org/wiki/%E7%8E%BB%E7%92%83%E9%96%80\" title=\"zh:玻璃門\" class=\"extiw\">zh:玻璃門</a>",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2009-10-24 13:33:02",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a rel=\"mw:WikiLink\" href=\"https://commons.wikimedia.org/wiki/User:Bvld11?action=edit&amp;redlink=1\" title=\"User:Bvld11 (page does not exist)\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User:Bvld11\"]}}'>Bvld11</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 3.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 3.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/3.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-3.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 148438392,
+      "ns": 6,
+      "title": "File:Modern split-type air conditioner at a school.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Modern_split-type_air_conditioner_at_a_school.jpg/960px-Modern_split-type_air_conditioner_at_a_school.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Modern_split-type_air_conditioner_at_a_school.jpg/1920px-Modern_split-type_air_conditioner_at_a_school.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Modern_split-type_air_conditioner_at_a_school.jpg/960px-Modern_split-type_air_conditioner_at_a_school.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Modern_split-type_air_conditioner_at_a_school.jpg/1920px-Modern_split-type_air_conditioner_at_a_school.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Modern_split-type_air_conditioner_at_a_school.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Modern_split-type_air_conditioner_at_a_school.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=148438392",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2024-05-17 11:35:22",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Modern split-type air conditioner at a school",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Self-published work|Files with coordinates missing SDC location of creation|Split type air conditioners - evaporators",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "GPSLatitude": {
+              "value": "10.824958",
+              "source": "commons-desc-page"
+            },
+            "GPSLongitude": {
+              "value": "122.534023",
+              "source": "commons-desc-page"
+            },
+            "GPSMapDatum": {
+              "value": "WGS-84",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "A modern split-type Panasonic air conditioner with the company's logo removed at a school.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2024-05-09 14:09:19",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Curpharar\" title=\"User:Curpharar\">Curpharar</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 21104476,
+      "ns": 6,
+      "title": "File:LED strip on reel.jpg",
+      "index": 1,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/LED_strip_on_reel.jpg/960px-LED_strip_on_reel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 726,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/LED_strip_on_reel.jpg/1920px-LED_strip_on_reel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/LED_strip_on_reel.jpg/960px-LED_strip_on_reel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 726,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/LED_strip_on_reel.jpg/1920px-LED_strip_on_reel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/LED_strip_on_reel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:LED_strip_on_reel.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=21104476",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2012-09-05 09:36:39",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "LED strip on reel",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Taken with Canon PowerShot A450|LED strips|Self-published work",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "LED strip on reel",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2012-08-11 09:35:18",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Andrey_Gvrv&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Andrey Gvrv (page does not exist)\">Andrey Gvrv</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 3.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 3.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/3.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-3.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 20484826,
+      "ns": 6,
+      "title": "File:Target interior.JPG",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Target_interior.JPG/960px-Target_interior.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Target_interior.JPG/1920px-Target_interior.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Target_interior.JPG/960px-Target_interior.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Target_interior.JPG/1920px-Target_interior.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Target_interior.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Target_interior.JPG",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=20484826",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2012-07-31 20:14:41",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Target interior",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Taken with Sony DSC-W1|PD-user|Files with no machine-readable author|Media lacking author information|Unidentified locations in the United States|United States photographs taken on 2006-06-15|Interiors of Target stores|Recessed light fixtures",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "The interior of a <a href=\"https://en.wikipedia.org/wiki/Target_Corporation\" class=\"extiw\" title=\"en:Target Corporation\">Target</a> store.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "Taken on 15 June 2006",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "Public domain",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Public domain",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Copyrighted": {
+              "value": "False",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "pd",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 95683493,
+      "ns": 6,
+      "title": "File:Hanging Light Bulb Chandelier.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Hanging_Light_Bulb_Chandelier.jpg/960px-Hanging_Light_Bulb_Chandelier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 640,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Hanging_Light_Bulb_Chandelier.jpg/1920px-Hanging_Light_Bulb_Chandelier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Hanging_Light_Bulb_Chandelier.jpg/960px-Hanging_Light_Bulb_Chandelier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 640,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Hanging_Light_Bulb_Chandelier.jpg/1920px-Hanging_Light_Bulb_Chandelier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Hanging_Light_Bulb_Chandelier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hanging_Light_Bulb_Chandelier.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=95683493",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2020-10-31 17:20:37",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Hanging Light Bulb Chandelier",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Light bulbs|Self-published work|United States photographs taken on 2017-10-27|October 2017 in Las Vegas",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "A modern chandelier hanging in a home in Las Vegas, Nevada.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2017-10-27 13:12:35",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Noah_Wulf\" title=\"User:Noah Wulf\">Noah Wulf</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 2565186,
+      "ns": 6,
+      "title": "File:Farbroller.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Farbroller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "thumbattribs": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Farbroller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Farbroller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Farbroller.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2565186",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2007-08-15 07:40:39",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Farbroller",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Paint rollers|Flickr images reviewed by FlickreviewR",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "paint roller beside paint brush at paint reservoir",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2007-08-15",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/photocapy/146214216/\">https://www.flickr.com/photos/photocapy/146214216/</a>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/photocapy/\">Photocapy</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 2.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 2.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/2.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-2.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 180538296,
+      "ns": 6,
+      "title": "File:Gib board aka plasterboard tapered edges 01.jpg",
+      "index": 1,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Gib_board_aka_plasterboard_tapered_edges_01.jpg/960px-Gib_board_aka_plasterboard_tapered_edges_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Gib_board_aka_plasterboard_tapered_edges_01.jpg/1920px-Gib_board_aka_plasterboard_tapered_edges_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Gib_board_aka_plasterboard_tapered_edges_01.jpg/960px-Gib_board_aka_plasterboard_tapered_edges_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Gib_board_aka_plasterboard_tapered_edges_01.jpg/1920px-Gib_board_aka_plasterboard_tapered_edges_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Gib_board_aka_plasterboard_tapered_edges_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gib_board_aka_plasterboard_tapered_edges_01.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=180538296",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2025-12-23 07:10:16",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Gib board aka plasterboard tapered edges 01",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Drywalls|Self-published work|Images by Panamitsu",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "It's not easy to see, but the part where the \"tapering\" begins is the light and dark lines above and below the screws",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2025-12-23 17:26:10",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Panamitsu\" title=\"User:Panamitsu\">Panamitsu</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 87467312,
+      "ns": 6,
+      "title": "File:Dropped Ceiling 1.tiff",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Dropped_Ceiling_1.tiff/lossless-page1-960px-Dropped_Ceiling_1.tiff.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 686,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Dropped_Ceiling_1.tiff/lossless-page1-1920px-Dropped_Ceiling_1.tiff.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Dropped_Ceiling_1.tiff/lossless-page1-960px-Dropped_Ceiling_1.tiff.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 686,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Dropped_Ceiling_1.tiff/lossless-page1-1920px-Dropped_Ceiling_1.tiff.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Dropped_Ceiling_1.tiff?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dropped_Ceiling_1.tiff",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=87467312",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2020-02-26 04:43:42",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Dropped Ceiling 1",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "CC-Zero|Dropped ceilings|Self-published work",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Dropped ceiling.",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "Uploader",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Zero, Public Domain Dedication",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 184932971,
+      "ns": 6,
+      "title": "File:I Love Makkah illuminated sign inside shopping mall, Mecca, Saudi Arabia.jpg",
+      "index": 1,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/I_Love_Makkah_illuminated_sign_inside_shopping_mall%2C_Mecca%2C_Saudi_Arabia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "thumbwidth": 960,
+          "thumbheight": 1246,
+          "thumbattribs": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/e/ec/I_Love_Makkah_illuminated_sign_inside_shopping_mall%2C_Mecca%2C_Saudi_Arabia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 1246
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/I_Love_Makkah_illuminated_sign_inside_shopping_mall%2C_Mecca%2C_Saudi_Arabia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:I_Love_Makkah_illuminated_sign_inside_shopping_mall,_Mecca,_Saudi_Arabia.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=184932971",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2026-02-24 18:42:14",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "I Love Makkah illuminated sign inside shopping mall, Mecca, Saudi Arabia",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Self-published work|Images from Wiki Loves Folklore 2026|Images from Wiki Loves Folklore 2026 in Saudi Arabia|All media needing categories as of 2026|Media needing categories as of 24 February 2026|Images from Wiki Loves Folklore 2026 to check|Uploaded via Campaign:wlf 2026",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Illuminated “I Love Makkah” display sign inside a shopping mall in Mecca, Saudi Arabia. The installation features a red heart symbol and glowing white letters spelling “MAKKAH,” with a decorative mural of the Kaaba",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2026-02-14",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Mohammad_Anees_Qamar\" title=\"User:Mohammad Anees Qamar\">Mohammad Anees Qamar </a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 168615958,
+      "ns": 6,
+      "title": "File:New sofa.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/New_sofa.jpg/960px-New_sofa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "responsiveUrls": {
+            "2": "https://upload.wikimedia.org/wikipedia/commons/3/32/New_sofa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/New_sofa.jpg/960px-New_sofa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720,
+            "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/32/New_sofa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/New_sofa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:New_sofa.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=168615958",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2025-06-27 02:38:10",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "New sofa",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Flickr images reviewed by FlickreviewR 2|IKEA couches|Flickr images missing SDC published in",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "What you don't see is that the rest of the apt is a disaster area due to all the packaging this thing came in.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2007-08-12 12:34:10",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/77619789@N00/1096167291/\">https://www.flickr.com/photos/77619789@N00/1096167291/</a>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "a rancid amoeba",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 2.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 2.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/2.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-2.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 100510373,
+      "ns": 6,
+      "title": "File:Granite table.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Granite_table.jpg/960px-Granite_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Granite_table.jpg/1920px-Granite_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Granite_table.jpg/960px-Granite_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Granite_table.jpg/1920px-Granite_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Granite_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Granite_table.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=100510373",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2021-02-28 07:26:58",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Granite table",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Taken with Huawei Y5 Lite|Granite|Self-published work|Stone tables|Union tiles",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "granite dinning table",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2020-05-25",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Marblestonecountertops&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Marblestonecountertops (page does not exist)\">Marblestonecountertops</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 112505702,
+      "ns": 6,
+      "title": "File:Kitchencounter1.png",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Kitchencounter1.png/960px-Kitchencounter1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 960,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Kitchencounter1.png/1920px-Kitchencounter1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Kitchencounter1.png/960px-Kitchencounter1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 960,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Kitchencounter1.png/1920px-Kitchencounter1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Kitchencounter1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kitchencounter1.png",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=112505702",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2021-11-14 16:59:05",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Kitchencounter1",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "CC-Zero|Textures|Self-published work",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "zoomed in kitchen counter",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2021-11-14",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Sastofficial\" title=\"User:Sastofficial\">Simon Svensson Thunman</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Zero, Public Domain Dedication",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 9663307,
+      "ns": 6,
+      "title": "File:Fußbodenleiste.JPG",
+      "index": 1,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Fu%C3%9Fbodenleiste.JPG/960px-Fu%C3%9Fbodenleiste.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 622,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Fu%C3%9Fbodenleiste.JPG/1920px-Fu%C3%9Fbodenleiste.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Fu%C3%9Fbodenleiste.JPG/960px-Fu%C3%9Fbodenleiste.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 622,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Fu%C3%9Fbodenleiste.JPG/1920px-Fu%C3%9Fbodenleiste.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Fu%C3%9Fbodenleiste.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fu%C3%9Fbodenleiste.JPG",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=9663307",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2010-03-06 10:54:36",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Fußbodenleiste",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "GFDL|Taken with Sony DSC-W50|License migration redundant|Baseboards|Self-published work|Photographs taken on 2010-03-06",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Eine Fußleiste aus Holz, weiß lackiert. Unterer Teil in Natur.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "6 March 2010, 11:49:29 (according to <span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Exif\" class=\"extiw\" title=\"en:Exif\">Exif</a></span> data)",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Porsche_997_Carrera\" title=\"User:Porsche 997 Carrera\">Porsche 997 Carrera</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 3.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 3.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/3.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-3.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 52611418,
+      "ns": 6,
+      "title": "File:Guttagliss PVC-Hohlkammerpaneele.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Guttagliss_PVC-Hohlkammerpaneele.jpg/960px-Guttagliss_PVC-Hohlkammerpaneele.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Guttagliss_PVC-Hohlkammerpaneele.jpg/1920px-Guttagliss_PVC-Hohlkammerpaneele.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Guttagliss_PVC-Hohlkammerpaneele.jpg/960px-Guttagliss_PVC-Hohlkammerpaneele.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Guttagliss_PVC-Hohlkammerpaneele.jpg/1920px-Guttagliss_PVC-Hohlkammerpaneele.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Guttagliss_PVC-Hohlkammerpaneele.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Guttagliss_PVC-Hohlkammerpaneele.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=52611418",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2016-10-29 16:52:11",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Guttagliss PVC-Hohlkammerpaneele",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "CC-BY-SA-4.0,3.0,2.5,2.0,1.0|Self-published work|Objects made of plastic|Polyvinyl chloride objects|Photographs taken on 2016-09-08|Construction panels|Files by User:Reise Reise",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "PVC-Hohlkammerpaneele (Stärke: 16 mm; Breite: 200 mm) von Gutta",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2016-09-08",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a rel=\"mw:WikiLink\" href=\"https://commons.wikimedia.org/wiki/User:Reise_Reise\" title=\"User:Reise Reise\">Reise Reise</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 86439862,
+      "ns": 6,
+      "title": "File:Glass coffee table.jpg",
+      "index": 1,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Glass_coffee_table.jpg/960px-Glass_coffee_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Glass_coffee_table.jpg/1920px-Glass_coffee_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Glass_coffee_table.jpg/960px-Glass_coffee_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Glass_coffee_table.jpg/1920px-Glass_coffee_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Glass_coffee_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glass_coffee_table.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=86439862",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2020-01-30 16:58:46",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Glass coffee table",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Coffee tables|Self-published work",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Glass coffee table",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2006-10-29 09:24:58",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a rel=\"mw:WikiLink\" href=\"https://commons.wikimedia.org/wiki/User:Sridharao?action=edit&amp;redlink=1\" title=\"User:Sridharao (page does not exist)\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User:Sridharao\"]}}'>Sridhar Rao</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 61857150,
+      "ns": 6,
+      "title": "File:Light bulb under light pendant (Unsplash).jpg",
+      "index": 1,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Light_bulb_under_light_pendant_%28Unsplash%29.jpg/960px-Light_bulb_under_light_pendant_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 640,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Light_bulb_under_light_pendant_%28Unsplash%29.jpg/1920px-Light_bulb_under_light_pendant_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Light_bulb_under_light_pendant_%28Unsplash%29.jpg/960px-Light_bulb_under_light_pendant_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 640,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Light_bulb_under_light_pendant_%28Unsplash%29.jpg/1920px-Light_bulb_under_light_pendant_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Light_bulb_under_light_pendant_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Light_bulb_under_light_pendant_(Unsplash).jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=61857150",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2017-08-22 12:18:30",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Light bulb under light pendant (Unsplash)",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "CC-Zero|Images uploaded by Fæ|Pendant lights|Images from Unsplash|Images from Unsplash (review needed)|Lamps in Denmark|Files with coordinates missing SDC location of creation|Denmark photographs taken on 2016-04-23|Torvehallerne - interiors",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "GPSLatitude": {
+              "value": "55.683920",
+              "source": "commons-desc-page"
+            },
+            "GPSLongitude": {
+              "value": "12.569190",
+              "source": "commons-desc-page"
+            },
+            "GPSMapDatum": {
+              "value": "WGS-84",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Torvehallerne, Copenhagen, Denmark",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2016-04-23",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<p><a rel=\"mw:ExtLink nofollow\" href=\"https://unsplash.com/photos/_1h39ZUXDbE\" class=\"external free\">https://unsplash.com/photos/_1h39ZUXDbE</a>\n<bdi lang=\"en\" dir=\"ltr\" title=\"archived on 12 July 2017 at the Wayback Machine\"><a rel=\"mw:ExtLink nofollow\" href=\"https://web.archive.org/web/20170712014351/https%3A//images.unsplash.com/photo-1461438820504-6d00ea0157a5\" class=\"external text\">Image</a> at the <span lang=\"en\" dir=\"ltr\"><a rel=\"mw:WikiLink/Interwiki\" href=\"https://en.wikipedia.org/wiki/Wayback%20Machine\" title=\"en:Wayback Machine\" class=\"extiw\"><span lang=\"en\" dir=\"ltr\">Wayback Machine</span></a></span></bdi></p>\n<bdi lang=\"en\" dir=\"ltr\" title=\"archived on 3 May 2017 at the Wayback Machine\"><a rel=\"mw:ExtLink nofollow\" href=\"https://web.archive.org/web/20170503064155/https%3A//unsplash.com/photos/_1h39ZUXDbE\" class=\"external text\">Gallery</a> at the <span lang=\"en\" dir=\"ltr\"><a rel=\"mw:WikiLink/Interwiki\" href=\"https://en.wikipedia.org/wiki/Wayback%20Machine\" title=\"en:Wayback Machine\" class=\"extiw\"><span lang=\"en\" dir=\"ltr\">Wayback Machine</span></a></span></bdi>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "Thomas Martinsen <a rel=\"mw:ExtLink nofollow\" href=\"https://unsplash.com/@faceline\" class=\"external text\">faceline</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Zero, Public Domain Dedication",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 58312697,
+      "ns": 6,
+      "title": "File:Castorama à Coignières le 12 avril 2017 - 11.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Castorama_%C3%A0_Coigni%C3%A8res_le_12_avril_2017_-_11.jpg/960px-Castorama_%C3%A0_Coigni%C3%A8res_le_12_avril_2017_-_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 640,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Castorama_%C3%A0_Coigni%C3%A8res_le_12_avril_2017_-_11.jpg/1920px-Castorama_%C3%A0_Coigni%C3%A8res_le_12_avril_2017_-_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Castorama_%C3%A0_Coigni%C3%A8res_le_12_avril_2017_-_11.jpg/960px-Castorama_%C3%A0_Coigni%C3%A8res_le_12_avril_2017_-_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 640,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Castorama_%C3%A0_Coigni%C3%A8res_le_12_avril_2017_-_11.jpg/1920px-Castorama_%C3%A0_Coigni%C3%A8res_le_12_avril_2017_-_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Castorama_%C3%A0_Coigni%C3%A8res_le_12_avril_2017_-_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Castorama_%C3%A0_Coigni%C3%A8res_le_12_avril_2017_-_11.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=58312697",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2017-04-25 17:10:58",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Castorama à Coignières le 12 avril 2017 - 11",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "GFDL|Taken with Canon EOS 600D|FAL|License migration redundant|Kitchen sinks|Self-published work|Uploaded with Commonist|April 2017 in Yvelines|Interiors of shops in Yvelines|Sinks in France|Photographs taken on 2017-04-12|Shops in France photographed in 2017|Files with coordinates missing SDC location of creation (48° N, 1° E)|Castorama in Coignières",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "GPSLatitude": {
+              "value": "48.751900",
+              "source": "commons-desc-page"
+            },
+            "GPSLongitude": {
+              "value": "1.928000",
+              "source": "commons-desc-page"
+            },
+            "GPSMapDatum": {
+              "value": "WGS-84",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Castorama hardware shop in <a href=\"https://en.wikipedia.org/wiki/Coigni%C3%A8res\" class=\"extiw\" title=\"en:Coignières\">Coignières</a>, <a href=\"//commons.wikimedia.org/wiki/France\" title=\"France\">France</a>.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2017-04-12 17:06:02",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Lionel_Allorge\" title=\"User:Lionel Allorge\">Lionel Allorge</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 3.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 3.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/3.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-3.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 200379283,
+      "ns": 6,
+      "title": "File:DSC 6896 Rows of numbered wooden lockers with metal handles in a quiet changing room - locker 193 and 194 in focus.jpg",
+      "index": 2,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/DSC_6896_Rows_of_numbered_wooden_lockers_with_metal_handles_in_a_quiet_changing_room_-_locker_193_and_194_in_focus.jpg/960px-DSC_6896_Rows_of_numbered_wooden_lockers_with_metal_handles_in_a_quiet_changing_room_-_locker_193_and_194_in_focus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 639,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/DSC_6896_Rows_of_numbered_wooden_lockers_with_metal_handles_in_a_quiet_changing_room_-_locker_193_and_194_in_focus.jpg/1920px-DSC_6896_Rows_of_numbered_wooden_lockers_with_metal_handles_in_a_quiet_changing_room_-_locker_193_and_194_in_focus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/DSC_6896_Rows_of_numbered_wooden_lockers_with_metal_handles_in_a_quiet_changing_room_-_locker_193_and_194_in_focus.jpg/960px-DSC_6896_Rows_of_numbered_wooden_lockers_with_metal_handles_in_a_quiet_changing_room_-_locker_193_and_194_in_focus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 639,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/DSC_6896_Rows_of_numbered_wooden_lockers_with_metal_handles_in_a_quiet_changing_room_-_locker_193_and_194_in_focus.jpg/1920px-DSC_6896_Rows_of_numbered_wooden_lockers_with_metal_handles_in_a_quiet_changing_room_-_locker_193_and_194_in_focus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/DSC_6896_Rows_of_numbered_wooden_lockers_with_metal_handles_in_a_quiet_changing_room_-_locker_193_and_194_in_focus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:DSC_6896_Rows_of_numbered_wooden_lockers_with_metal_handles_in_a_quiet_changing_room_-_locker_193_and_194_in_focus.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=200379283",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2026-09-27 10:10:27",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "DSC 6896 Rows of numbered wooden lockers with metal handles in a quiet changing room - locker 193 and 194 in focus",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Si Racha District|Creative Commons Attribution-Share Alike missing SDC copyright status|Creative Commons Attribution-Share Alike 4.0 missing SDC copyright license|Flickr images missing SDC copyright status|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "GPSLatitude": {
+              "value": "13.086383",
+              "source": "commons-desc-page"
+            },
+            "GPSLongitude": {
+              "value": "101.144786",
+              "source": "commons-desc-page"
+            },
+            "GPSMapDatum": {
+              "value": "WGS-84",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "This photograph captures a close-up, angled view of wooden lockers in a quiet changing room, likely located in Khao Khansong Subdistrict, Si Racha District, Chon Buri Province, Thailand. The focus is on lockers numbered 193 and 194, with their numbers displayed on aged brass or metal plates affixed to the warm-toned wooden doors. Each locker features a sleek, vertical metal handle and decorative vertical slot ventilation cutouts. The shallow depth of field creates a soft blur that draws the eye down the row, revealing additional lockers receding into the background. The space is well-lit and orderly, with a glimpse of a wooden bench visible in the lower right corner, and clean white walls in the distance, lending the scene a tranquil and tidy atmosphere.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2024-12-18 09:57:18",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/194424926@N05/54212263017\">Flickr</a>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/PattayaPatrol/\">PattayaPatrol</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 70913465,
+      "ns": 6,
+      "title": "File:Applying drywall joint compound (5891937812).jpg",
+      "index": 1,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Applying_drywall_joint_compound_%285891937812%29.jpg/960px-Applying_drywall_joint_compound_%285891937812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 783,
+          "responsiveUrls": {
+            "2": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Applying_drywall_joint_compound_%285891937812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Applying_drywall_joint_compound_%285891937812%29.jpg/960px-Applying_drywall_joint_compound_%285891937812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 783,
+            "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Applying_drywall_joint_compound_%285891937812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Applying_drywall_joint_compound_%285891937812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Applying_drywall_joint_compound_(5891937812).jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=70913465",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2018-07-16 20:26:33",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Applying drywall joint compound (5891937812)",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Spackling|Georgia National Guard|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "GPSLatitude": {
+              "value": "35.670848",
+              "source": "commons-desc-page"
+            },
+            "GPSLongitude": {
+              "value": "-109.059158",
+              "source": "commons-desc-page"
+            },
+            "GPSMapDatum": {
+              "value": "WGS-84",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "<p>Tech. Sgt. Russell Hunt of the Georgia Air National Guard's 116th Civil Engineering Squadron, headquartered at Robins Air Force Base, applies drywall joint compound during the renovation of the Double Hogan building at St. Michaels Association for Special Education, Window Rock, Ariz., June 8, 2011.  Hunt and more than 40 members of his squadron deployed to the Navajo Nation as a part of the Department of Defense Innovative Readiness Training program. \n</p>\n(U.S. Air Force photo by Master Sgt. Roger Parsons/Released)",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2011-07-01 15:42",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/ganatlguard/5891937812/\">Applying drywall joint compound</a>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/40994485@N04\">Georgia National Guard</a> from United States",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY 2.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution 2.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by/2.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-2.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 34907232,
+      "ns": 6,
+      "title": "File:The old sliding glass door (1454063839).jpg",
+      "index": 1,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/The_old_sliding_glass_door_%281454063839%29.jpg/960px-The_old_sliding_glass_door_%281454063839%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "responsiveUrls": {
+            "2": "https://upload.wikimedia.org/wikipedia/commons/2/2a/The_old_sliding_glass_door_%281454063839%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/The_old_sliding_glass_door_%281454063839%29.jpg/960px-The_old_sliding_glass_door_%281454063839%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720,
+            "srcset": "https://upload.wikimedia.org/wikipedia/commons/2/2a/The_old_sliding_glass_door_%281454063839%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/The_old_sliding_glass_door_%281454063839%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_old_sliding_glass_door_(1454063839).jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=34907232",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2014-08-23 19:30:45",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "The old sliding glass door (1454063839)",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Sliding doors|Houses in Seminole County, Florida|Glass doors|Flickr images reviewed by FlickreviewR|Yellow walls|Files with coordinates missing SDC location of creation",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "GPSLatitude": {
+              "value": "28.676582",
+              "source": "commons-desc-page"
+            },
+            "GPSLongitude": {
+              "value": "-81.409206",
+              "source": "commons-desc-page"
+            },
+            "GPSMapDatum": {
+              "value": "WGS-84",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "A <a href=\"https://en.wikipedia.org/wiki/sliding_glass_door\" class=\"extiw\" title=\"en:sliding glass door\">sliding glass door</a> and some chairs seen from outside a building.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2007-09-28 16:48",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/jdigger/1454063839/\">The old sliding glass door</a>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/77919685@N00\">Jim Moore</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY 2.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution 2.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by/2.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-2.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 51902000,
+      "ns": 6,
+      "title": "File:Espejo de la Fonda Garufa en la Colonia Condesa, Ciudad de México.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Espejo_de_la_Fonda_Garufa_en_la_Colonia_Condesa%2C_Ciudad_de_M%C3%A9xico.jpg/960px-Espejo_de_la_Fonda_Garufa_en_la_Colonia_Condesa%2C_Ciudad_de_M%C3%A9xico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 540,
+          "responsiveUrls": {
+            "2": "https://upload.wikimedia.org/wikipedia/commons/3/37/Espejo_de_la_Fonda_Garufa_en_la_Colonia_Condesa%2C_Ciudad_de_M%C3%A9xico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Espejo_de_la_Fonda_Garufa_en_la_Colonia_Condesa%2C_Ciudad_de_M%C3%A9xico.jpg/960px-Espejo_de_la_Fonda_Garufa_en_la_Colonia_Condesa%2C_Ciudad_de_M%C3%A9xico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 540,
+            "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/37/Espejo_de_la_Fonda_Garufa_en_la_Colonia_Condesa%2C_Ciudad_de_M%C3%A9xico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Espejo_de_la_Fonda_Garufa_en_la_Colonia_Condesa%2C_Ciudad_de_M%C3%A9xico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Espejo_de_la_Fonda_Garufa_en_la_Colonia_Condesa,_Ciudad_de_M%C3%A9xico.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=51902000",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2016-09-29 21:06:42",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Espejo de la Fonda Garufa en la Colonia Condesa, Ciudad de México",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Self-published work|Fonda Garufa photos taken during Semana i 2016",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Rectangular mirror with the word Garufa white, wooden frame, yellow wall, reflecting the tables and windows.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2016-09-29",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Karinadejesus\" title=\"User:Karinadejesus\">Karinadejesus</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 16762498,
+      "ns": 6,
+      "title": "File:Hanky Linen Sheer Curtains with pleats and rings.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Hanky_Linen_Sheer_Curtains_with_pleats_and_rings.jpg/960px-Hanky_Linen_Sheer_Curtains_with_pleats_and_rings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "responsiveUrls": {
+            "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Hanky_Linen_Sheer_Curtains_with_pleats_and_rings.jpg/1920px-Hanky_Linen_Sheer_Curtains_with_pleats_and_rings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Hanky_Linen_Sheer_Curtains_with_pleats_and_rings.jpg/960px-Hanky_Linen_Sheer_Curtains_with_pleats_and_rings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720,
+            "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Hanky_Linen_Sheer_Curtains_with_pleats_and_rings.jpg/1920px-Hanky_Linen_Sheer_Curtains_with_pleats_and_rings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Hanky_Linen_Sheer_Curtains_with_pleats_and_rings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hanky_Linen_Sheer_Curtains_with_pleats_and_rings.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=16762498",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2011-09-29 08:09:37",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Hanky Linen Sheer Curtains with pleats and rings",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Taken with Canon Digital IXUS 70|Curtain rods|Rings (objects)|Flickr images uploaded by Flickr upload bot|Curtains from inside",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "<p>Original caption:\n</p>\nOur Hanky Linen Sheer  is perfect for curtains on the beach, filtering the sunrise and adding breezy romance.  Elegant 100% linen can be pleated or draped; we recommend using it unlined for a light and airy look.  Large wood poles and rings add to the cottage appeal.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2009-01-06 02:01:32",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/Flickr\" class=\"mw-redirect\" title=\"Flickr\">Flickr</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/9243453@N02/3374590952\">Hanky Linen Sheer Curtains at the Beach</a>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/9243453@N02\">Posh Living, LLC</a>",
+              "source": "commons-desc-page"
+            },
+            "Permission": {
+              "value": "<table id=\"FlickrReview\" style=\"width:100%; margin:0.3em auto; text-align:start; background-color:var(--background-color-success-subtle,#d5fdf4); padding: 3px; border:1px solid var(--border-color-base,#a2a9b1); color:inherit;\" dir=\"ltr\" lang=\"en\">\n\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Checked_copyright_icon.svg/60px-Checked_copyright_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"50\" height=\"48\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Checked_copyright_icon.svg/120px-Checked_copyright_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"160\" data-file-height=\"153\"></span></span>\n</td>\n<td>This image, which was originally posted to <b><a href=\"https://en.wikipedia.org/wiki/Flickr\" class=\"extiw\" title=\"en:Flickr\">Flickr</a></b>, was uploaded to Commons using <b><a href=\"//commons.wikimedia.org/wiki/User:Flickr_upload_bot\" title=\"User:Flickr upload bot\">Flickr upload bot</a></b> on 29 September 2011, 08:08 by <span id=\"flickr_upload_bot_reviewer\"><b><a href=\"//commons.wikimedia.org/wiki/User:Ranveig\" title=\"User:Ranveig\">Ranveig</a></b></span>. On that date, it was confirmed to be licensed under the terms of the license indicated.\n</td>\n<td><span typeof=\"mw:File\"><span><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Flickr_dots.svg/60px-Flickr_dots.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"50\" height=\"50\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Flickr_dots.svg/120px-Flickr_dots.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></span></span>\n</td></tr></tbody></table>\n<div class=\"responsive-license-cc layouttemplate licensetpl\" dir=\"ltr\" lang=\"en\"><div class=\"rlicense-icons\"><span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"w:en:Creative Commons\"><img alt=\"w:en:Creative Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/120px-CC_some_rights_reserved.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"90\" height=\"36\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/250px-CC_some_rights_reserved.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"744\" data-file-height=\"300\"></span></span><br>\n<span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"attribution\"><img alt=\"attribution\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/40px-Cc-by_new_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/60px-Cc-by_new_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"64\" data-file-height=\"64\"></span></span> <span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"share alike\"><img alt=\"share alike\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Cc-sa_white.svg/40px-Cc-sa_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Cc-sa_white.svg/60px-Cc-sa_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"64\" data-file-height=\"64\"></span></span></div><div class=\"rlicense-text\"><div class=\"rlicense-declaration\">This file is licensed under the <a href=\"https://en.wikipedia.org/wiki/en:Creative_Commons\" class=\"extiw\" title=\"w:en:Creative Commons\">Creative Commons</a> <a href=\"//creativecommons.org/licenses/by-sa/2.0/deed.en\" class=\"extiw\" title=\"creativecommons:by-sa/2.0/deed.en\">Attribution-Share Alike 2.0 Generic</a> license.</div><div class=\"rlicense-desc\" style=\"text-align:start;\" lang=\"en\">\n<dl><dd>You are free:\n<ul><li><b>to share</b> – to copy, distribute and transmit the work</li>\n<li><b>to remix</b> – to adapt the work</li></ul></dd>\n<dd>Under the following conditions:\n<ul><li><b>attribution</b> – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li>\n<li><b>share alike</b> – If you remix, transform, or build upon the material, you must distribute your contributions under the <a href=\"https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses\" class=\"extiw\" title=\"ccorg:share-your-work/licensing-considerations/compatible-licenses\">same or compatible license</a> as the original.</li></ul></dd></dl></div><span class=\"licensetpl_link\" style=\"display:none;\">https://creativecommons.org/licenses/by-sa/2.0</span><span class=\"licensetpl_short\" style=\"display:none;\">CC BY-SA 2.0 </span><span class=\"licensetpl_long\" style=\"display:none;\">Creative Commons Attribution-Share Alike 2.0 </span><span class=\"licensetpl_link_req\" style=\"display:none;\">true</span><span class=\"licensetpl_attr_req\" style=\"display:none;\">true</span></div></div>",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 2.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 2.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/2.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-2.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 103301084,
+      "ns": 6,
+      "title": "File:Cement board.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Cement_board.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "thumbwidth": 960,
+          "thumbheight": 720,
+          "thumbattribs": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Cement_board.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 720
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Cement_board.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cement_board.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=103301084",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2021-04-08 14:45:29",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Cement board",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Cement board",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "A cement board is a combination of cement and reinforcing fibers formed into sheets, of varying thickness that are typically used as a tile backing board.[1] Cement board can be nailed or screwed to wood or steel studs to create a substrate for vertical tile and attached horizontally to plywood for tile floors, kitchen counters and backsplashes. It can be used on the exterior of buildings as a base for exterior plaster (stucco) systems and sometimes as the finish system itself.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2017-12-19 06:27:41",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://vatlieuplus.com/tam-cemboard-thai-lan/\">https://vatlieuplus.com/tam-cemboard-thai-lan/</a>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "Vật Liệu Plus",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 64097840,
+      "ns": 6,
+      "title": "File:HK Wan Chai North 中環廣場 Central Plaza 46 floor Sky lift lobby interior Nov 2017 IX1 wall art painting.jpg",
+      "index": 3,
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/HK_Wan_Chai_North_%E4%B8%AD%E7%92%B0%E5%BB%A3%E5%A0%B4_Central_Plaza_46_floor_Sky_lift_lobby_interior_Nov_2017_IX1_wall_art_painting.jpg/960px-HK_Wan_Chai_North_%E4%B8%AD%E7%92%B0%E5%BB%A3%E5%A0%B4_Central_Plaza_46_floor_Sky_lift_lobby_interior_Nov_2017_IX1_wall_art_painting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "thumbwidth": 960,
+          "thumbheight": 1437,
+          "responsiveUrls": {
+            "2": "https://upload.wikimedia.org/wikipedia/commons/0/0d/HK_Wan_Chai_North_%E4%B8%AD%E7%92%B0%E5%BB%A3%E5%A0%B4_Central_Plaza_46_floor_Sky_lift_lobby_interior_Nov_2017_IX1_wall_art_painting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+          },
+          "thumbattribs": {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/HK_Wan_Chai_North_%E4%B8%AD%E7%92%B0%E5%BB%A3%E5%A0%B4_Central_Plaza_46_floor_Sky_lift_lobby_interior_Nov_2017_IX1_wall_art_painting.jpg/960px-HK_Wan_Chai_North_%E4%B8%AD%E7%92%B0%E5%BB%A3%E5%A0%B4_Central_Plaza_46_floor_Sky_lift_lobby_interior_Nov_2017_IX1_wall_art_painting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "decoding": "async",
+            "loading": "lazy",
+            "width": 960,
+            "height": 1437,
+            "srcset": "https://upload.wikimedia.org/wikipedia/commons/0/0d/HK_Wan_Chai_North_%E4%B8%AD%E7%92%B0%E5%BB%A3%E5%A0%B4_Central_Plaza_46_floor_Sky_lift_lobby_interior_Nov_2017_IX1_wall_art_painting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+          },
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/HK_Wan_Chai_North_%E4%B8%AD%E7%92%B0%E5%BB%A3%E5%A0%B4_Central_Plaza_46_floor_Sky_lift_lobby_interior_Nov_2017_IX1_wall_art_painting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:HK_Wan_Chai_North_%E4%B8%AD%E7%92%B0%E5%BB%A3%E5%A0%B4_Central_Plaza_46_floor_Sky_lift_lobby_interior_Nov_2017_IX1_wall_art_painting.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=64097840",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2017-11-16 04:37:59",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "HK Wan Chai North 中環廣場 Central Plaza 46 floor Sky lift lobby interior Nov 2017 IX1 wall art painting",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Self-published work|November 2017 in Wan Chai North|Photographs by Anonymous Hong Kong Photographer 1|Central Plaza, Hong Kong - Sky Lobby|Office buildings in Wan Chai North|Central Plaza, Hong Kong - Art|Building interiors in Wan Chai|2017 in Central Plaza, Hong Kong",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "HK Wan Chai North <a href=\"https://zh.wikipedia.org/wiki/%E4%B8%AD%E7%92%B0%E5%BB%A3%E5%A0%B4\" class=\"extiw\" title=\"zh:中環廣場\">zh:中環廣場</a> Central Plaza in November 2017",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2017-11-08 16:24:05",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Han_Chon_Hau_Gielaln&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Han Chon Hau Gielaln (page does not exist)\">Han Chon Hau Gielaln</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
