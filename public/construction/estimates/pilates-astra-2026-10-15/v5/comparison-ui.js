@@ -21,8 +21,8 @@ export function svgChart(item,rows,assumeNPR){
  const description=`Public rate evidence for ${item.title}. ${plot.map(r=>r.publisher+': '+range(r)+' NPR per '+r.unit_label).join('; ')}. ${showEstimate?'Original estimate overlaid under an explicit unconfirmed NPR assumption.':'Original estimate currency is unconfirmed and is not on the NPR axis.'} Scope equivalence is unverified.`;
  return `<svg viewBox="0 0 1030 ${height}" role="img" aria-labelledby="comparison-svg-title comparison-svg-desc"><title id="comparison-svg-title">${esc(item.title)} · public rate references</title><desc id="comparison-svg-desc">${esc(description)}</desc><text class="small" x="${left}" y="16">NPR per ${esc(plot[0].unit_label)} · zero baseline</text><line x1="${left}" x2="${right}" y1="${height-45}" y2="${height-45}" stroke="#93a7aa"/>${marks}</svg>`;
 }
-export async function initComparison(){
- const response=await fetch('./comparison.json');if(!response.ok)throw new Error('Comparison data unavailable');const d=await response.json();
+export async function initComparison(dataPath='./comparison.json'){
+ const response=await fetch(dataPath);if(!response.ok)throw new Error('Comparison data unavailable');const d=await response.json();
  const held=d.items.filter(x=>x.status==='on_hold_original_retained');
  $('comparison-summary').innerHTML=`<div><strong>${d.coverage.reference_items}</strong>Items with public references</div><div><strong>${d.coverage.unit_compatible_items}</strong>Items with same-unit references</div><div><strong>${held.length}</strong>On hold · old values kept</div>`;
  $('comparison-area').innerHTML+=d.sections.filter(s=>s.item_count).map(s=>`<option value="${esc(s.id)}">${esc(s.name)}</option>`).join('');
