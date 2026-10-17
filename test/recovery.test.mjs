@@ -17,8 +17,9 @@ test('current recovery retains the last saved checkpoint of every source lane',(
   assert.equal(lane.sync.local,prior.local);
   assert.equal(lane.sync.mainConsumed,prior.mainCursor);
   assert.equal(lane.sync.pendingSequences,lane.sync.local-lane.sync.mainConsumed);
-  assert.equal(lane.sync.mainAck,'ACKED');
-  assert.equal(lane.sync.pendingSequences,0);
+  assert.equal(lane.sync.mainAck,lane.sync.pendingSequences===0?'ACKED':'PENDING');
+  assert.ok(lane.sync.pendingSequences>=0);
+  if(!recovery.execution.inProgress)assert.equal(lane.sync.pendingSequences,0);
   if(lane.id==='MSCS')assert.equal(lane.metric.done,prior.afterHashed);
   if(lane.id==='LSA')assert.equal(lane.metric.done,prior.afterRows);
   if(lane.id==='MSCH')assert.equal(lane.inventory.rows,prior.afterRows);
@@ -40,9 +41,9 @@ test('recovery reports stage-specific progress and preserves unknown totals and 
  assert.ok(!/NaN|undefined|Infinity/.test(visible));
  assert.ok(visible.includes('Terminal closure incomplete'));
  assert.ok(visible.includes('total unknown'));
- assert.ok(visible.includes('Main acknowledgements verified'));
+ assert.ok(visible.includes(recovery.lanes.every(l=>l.sync.pendingSequences===0)?'Main acknowledgements verified':'Local verified · Main pending'));
  assert.ok(visible.includes('No pending notice'));
- assert.ok(!visible.includes('Local work is ahead'));
+ assert.equal(visible.includes('Local work is ahead'),recovery.lanes.some(l=>l.sync.pendingSequences>0));
  const lsa=recovery.lanes.find(l=>l.id==='LSA');
  assert.equal(lsa.sourceTreeAudit.folderListings,140);
  assert.equal(lsa.sourceTreeAudit.observedRows,lsa.inventory.rows);
@@ -53,13 +54,18 @@ test('recovery reports stage-specific progress and preserves unknown totals and 
 test('resumed run meets its time window and its checkpoint deltas reconcile to current lanes',()=>{
  const run=recovery.execution;
  assert.ok(run);
- const elapsed=(Date.parse(run.stoppedAt)-Date.parse(run.startedAt))/60000;
- assert.ok(elapsed>=run.minimumMinutes);
+ const end=run.inProgress?recovery.checkedAt:run.stoppedAt;
+ const elapsed=(Date.parse(end)-Date.parse(run.startedAt))/60000;
+ assert.ok(elapsed>=0);
+ if(run.inProgress)assert.equal(run.stoppedAt,null);
+ else assert.ok(elapsed>=run.minimumMinutes);
+ assert.equal(run.minimumWindowMet,elapsed>=run.minimumMinutes);
  assert.ok(Math.abs(elapsed-run.elapsedMinutes)<0.01);
  assert.equal(run.checkpoints.length,recovery.session.lastSessionCheckpoints);
- assert.equal(run.debtClearance.initialEvents+run.debtClearance.newEvents,run.debtClearance.totalAcknowledgedEvents);
+ assert.equal(run.debtClearance.initialEvents+run.debtClearance.newEvents-run.debtClearance.remainingEvents,run.debtClearance.totalAcknowledgedEvents);
  assert.equal(run.debtClearance.newEvents,run.checkpoints.length);
- assert.equal(run.debtClearance.remainingEvents,0);
+ assert.equal(run.debtClearance.remainingEvents,recovery.lanes.reduce((n,l)=>n+l.sync.pendingSequences,0));
+ if(!run.inProgress)assert.equal(run.debtClearance.remainingEvents,0);
  for(const id of ['LSA','MSCH']){
   const rows=run.checkpoints.filter(r=>r.lane===id);
   const prior=livePhase.sessionReport[id].beforeRows;
@@ -70,7 +76,7 @@ test('resumed run meets its time window and its checkpoint deltas reconcile to c
    assert.equal(row.added.files+row.added.folders,row.added.rows);
    assert.match(row.manifest.sha256,/^[a-f0-9]{64}$/);
    assert.ok(Date.parse(row.completedAt)>=Date.parse(run.startedAt));
-   assert.ok(Date.parse(row.completedAt)<=Date.parse(run.stoppedAt));
+   assert.ok(Date.parse(row.completedAt)<=Date.parse(end));
   }
   assert.equal(total-prior,run.added[id]);
   const lane=recovery.lanes.find(l=>l.id===id);
@@ -78,5 +84,5 @@ test('resumed run meets its time window and its checkpoint deltas reconcile to c
  }
  const html=renderRecovery(recovery);
  assert.ok(!html.includes('No new source batch was performed'));
- assert.ok(html.includes('CP80')&&html.includes('CP74'));
+ for(const lane of recovery.lanes)assert.ok(html.includes(lane.checkpoint));
 });

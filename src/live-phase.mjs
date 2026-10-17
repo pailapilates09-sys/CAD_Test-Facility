@@ -1,52 +1,50 @@
 export const livePhase = {
-  "phase": "91",
-  "title": "Debt cleared · 61-minute catalogue run",
-  "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-16T08:44:44.003Z",
-  "checkpoint": "LSA CP80/B080 · MSCH CP74/B074",
+  "phase": "125",
+  "title": "Recovered extraction — active saved checkpoint",
+  "status": "ACTIVE_SAVED_CHECKPOINT",
+  "completedAt": "2026-10-17T12:22:05.682Z",
+  "checkpoint": "MSCH-CORPUS-CP108",
   "before": {
-    "rows": 1114,
-    "folders": 242,
-    "files": 872,
-    "pending": 140
+    "rows": 1549,
+    "folders": 286,
+    "files": 1263,
+    "pending": 144
   },
   "after": {
-    "rows": 1310,
-    "folders": 249,
-    "files": 1061,
-    "pending": 137
+    "rows": 1589,
+    "folders": 302,
+    "files": 1287,
+    "pending": 156
   },
-  "completedBatches": 19,
-  "scope": "19 source/audit checkpoints closed in61.33 minutes. LSA +113 records, all 1,242 live occurrences represented; historicalbaseline gap 2 files remains. MSCH +196 entries, now 1,310;137 FIFO folders pending. Source bodies and schedules unchanged.",
-  "providerReadback": "Raw CURRENT bytes/hash/identity and native POST checks passed. Main/Local MSCS6/6,LSA31/31,AEC11/11,MSCH65/65; reciprocal ACK and frozen Main readback verified.",
-  "localRegistration": "LOCAL_AND_MAIN_ACK_VERIFIED",
-  "mainAck": "ACKED",
+  "completedBatches": 4,
+  "scope": "MSCH FIFO metadata extraction; other three lanes retain their source gates.",
+  "providerReadback": "PASS",
+  "localRegistration": "VERIFIED",
+  "mainAck": "PENDING",
   "budget": {
     "minimumMinutes": 60,
-    "minimumWindowMet": true,
+    "minimumWindowMet": false,
     "checkpointsPerPhase": 1,
-    "sourceElapsedMinutes": 61.32653333333333,
-    "elapsedAtFinalProjectionMinutes": 71.92778333333334,
-    "stop": "Stopped new source work after the 60-minute minimum; final checkpoint, Local/Main acknowledgement and publication closeout followed.",
+    "sourceElapsedMinutes": 20.68065,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 65,
-  "mainCursor": 65,
-  "nextBatch": "B075",
-  "nextTarget": ".Rproj.user (next distinct FIFO folder)",
-  "newRows": 196,
-  "newFolders": 7,
-  "newFiles": 189,
-  "newKnownBytes": 8753923220,
-  "sessionStartedAt": "2026-10-16T07:43:24.411Z",
-  "sessionElapsedMinutes": 61.32653333333333,
-  "knownBytes": 15803066892,
+  "localHighWater": 99,
+  "mainCursor": 98,
+  "nextBatch": "B109",
+  "nextTarget": "renv",
+  "newRows": 40,
+  "newFolders": 16,
+  "newFiles": 24,
+  "newKnownBytes": 224732554,
+  "sessionStartedAt": "2026-10-17T12:01:24.843Z",
+  "sessionElapsedMinutes": 20.68065,
+  "knownBytes": 17654596547,
   "sessionReport": {
-    "startedAt": "2026-10-16T07:43:24.411Z",
-    "sourceStoppedAt": "2026-10-16T08:44:44.003Z",
-    "milestones": 19,
-    "advancedLanes": 2,
+    "startedAt": "2026-10-17T12:01:24.843Z",
+    "sourceStoppedAt": null,
+    "milestones": 4,
+    "advancedLanes": 1,
     "MSCS": {
       "checkpoint": "AQ-CP87 /B075",
       "beforeHashed": 1059,
@@ -62,11 +60,11 @@ export const livePhase = {
     },
     "LSA": {
       "checkpoint": "CP80 /B080",
-      "beforeRows": 1129,
+      "beforeRows": 1242,
       "afterRows": 1242,
-      "addedFolders": 10,
-      "addedFiles": 103,
-      "addedMetadataBytes": 20264453729,
+      "addedFolders": 0,
+      "addedFiles": 0,
+      "addedMetadataBytes": 0,
       "local": 31,
       "mainCursor": 31,
       "notice": "N27 acknowledged",
@@ -74,17 +72,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP74 /B074",
-      "beforeRows": 1114,
-      "afterRows": 1310,
-      "addedFolders": 7,
-      "addedFiles": 189,
-      "addedMetadataBytes": 8753923220,
-      "pending": 137,
-      "local": 65,
-      "mainCursor": 65,
-      "notice": "N61 acknowledged",
-      "next": "B075"
+      "checkpoint": "CP108 /B108",
+      "beforeRows": 1549,
+      "afterRows": 1589,
+      "addedFolders": 16,
+      "addedFiles": 24,
+      "addedMetadataBytes": 224732554,
+      "pending": 156,
+      "local": 99,
+      "mainCursor": 98,
+      "notice": "N95 PENDING",
+      "next": "B109"
     },
     "AEC": {
       "status": "BLOCKED_ORIGINAL_TERMINAL_UNAVAILABLE",
@@ -101,22 +99,22 @@ export const livePhase = {
       "MSCS"
     ],
     "debtClearance": {
-      "initialEvents": 73,
-      "newEvents": 19,
-      "totalAcknowledgedEvents": 92,
-      "remainingEvents": 0,
-      "initialClearedAt": "2026-10-16T07:43:24.411Z",
-      "allAcknowledgedAt": "2026-10-16T08:52:22.203Z",
-      "finalMainSealedAt": "2026-10-16T08:55:20.078Z"
+      "initialEvents": 30,
+      "newEvents": 4,
+      "totalAcknowledgedEvents": 33,
+      "remainingEvents": 1,
+      "recoveredEventsAcknowledged": 30,
+      "newEventsAcknowledged": 3,
+      "pending": 1
     },
     "remaining": [
-      "LSA historicalbaseline2 files 9,304 bytes unresolved.",
-      "AEC original terminal404.",
+      "LSA historical2 files /9304 bytes unresolved.",
+      "AEC original terminal unavailable.",
       "MSCS oversized/native policy gate.",
-      "MSCH137 FIFO folders; source-content extraction remains."
+      "MSCH156 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 10,
+  "scannedFolders": 100,
   "phases": [
     {
       "phase": "01",
@@ -756,13 +754,6 @@ export const livePhase = {
       "status": "Complete"
     },
     {
-      "phase": "92",
-      "lane": "MSCH",
-      "work": "B075: next distinct FIFO folder (.Rproj.user)",
-      "stop": "One verified checkpoint with governed Local closeout",
-      "status": "Queued"
-    },
-    {
       "phase": "—",
       "lane": "LSA",
       "work": "B081 historical baseline identity reconciliation",
@@ -782,6 +773,251 @@ export const livePhase = {
       "work": "Oversized/native hashing policy gate",
       "stop": "Separately governed eligible byte policy",
       "status": "Policy gate"
+    },
+    {
+      "phase": "92",
+      "lane": "MSCH",
+      "work": "Recovered CP75: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "93",
+      "lane": "MSCH",
+      "work": "Recovered CP76: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "94",
+      "lane": "MSCH",
+      "work": "Recovered CP77: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "95",
+      "lane": "MSCH",
+      "work": "Recovered CP78: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "96",
+      "lane": "MSCH",
+      "work": "Recovered CP79: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "97",
+      "lane": "MSCH",
+      "work": "Recovered CP80: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "98",
+      "lane": "MSCH",
+      "work": "Recovered CP81: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "99",
+      "lane": "MSCH",
+      "work": "Recovered CP82: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "100",
+      "lane": "MSCH",
+      "work": "Recovered CP83: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "101",
+      "lane": "MSCH",
+      "work": "Recovered CP84: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "102",
+      "lane": "MSCH",
+      "work": "Recovered CP85: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "103",
+      "lane": "MSCH",
+      "work": "Recovered CP86: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "104",
+      "lane": "MSCH",
+      "work": "Recovered CP87: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "105",
+      "lane": "MSCH",
+      "work": "Recovered CP88: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "106",
+      "lane": "MSCH",
+      "work": "Recovered CP89: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "107",
+      "lane": "MSCH",
+      "work": "Recovered CP90: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "108",
+      "lane": "MSCH",
+      "work": "Recovered CP91: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "109",
+      "lane": "MSCH",
+      "work": "Recovered CP92: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "110",
+      "lane": "MSCH",
+      "work": "Recovered CP93: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "111",
+      "lane": "MSCH",
+      "work": "Recovered CP94: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "112",
+      "lane": "MSCH",
+      "work": "Recovered CP95: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "113",
+      "lane": "MSCH",
+      "work": "Recovered CP96: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "114",
+      "lane": "MSCH",
+      "work": "Recovered CP97: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "115",
+      "lane": "MSCH",
+      "work": "Recovered CP98: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "116",
+      "lane": "MSCH",
+      "work": "Recovered CP99: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "117",
+      "lane": "MSCH",
+      "work": "Recovered CP100: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "118",
+      "lane": "MSCH",
+      "work": "Recovered CP101: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "119",
+      "lane": "MSCH",
+      "work": "Recovered CP102: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "120",
+      "lane": "MSCH",
+      "work": "Recovered CP103: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "121",
+      "lane": "MSCH",
+      "work": "Recovered CP104: preserved source/Local checkpoint",
+      "stop": "Main acknowledgement recovered without source replay",
+      "status": "Complete"
+    },
+    {
+      "phase": "122",
+      "lane": "MSCH",
+      "work": "B105 /CP105: +0 records; 1549 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "123",
+      "lane": "MSCH",
+      "work": "B106 /CP106: +19 records; 1568 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "124",
+      "lane": "MSCH",
+      "work": "B107 /CP107: +15 records; 1583 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "125",
+      "lane": "MSCH",
+      "work": "B108 /CP108: +6 records; 1589 total",
+      "stop": "Source/Local readback; Main pending",
+      "status": "Complete"
+    },
+    {
+      "phase": "126",
+      "lane": "MSCH",
+      "work": "B109: renv",
+      "stop": "One verified checkpoint and Local closeout",
+      "status": "Queued"
     }
   ]
 };
