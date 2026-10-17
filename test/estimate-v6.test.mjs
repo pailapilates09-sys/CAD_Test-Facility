@@ -37,7 +37,7 @@ async function harness(init){
  globalThis.ResizeObserver=class{observe(){}};globalThis.requestAnimationFrame=()=>{};
  try{await init();return {element,documentEvents,cleanup(){Object.assign(globalThis,previous)}}}catch(e){Object.assign(globalThis,previous);throw e}
 }
-test('v6 adds images while keeping v5.1 table cells, filtered totals and all three bottom graphs unchanged',async()=>{
+test('v6 keeps revised v5.1 table cells and filtered totals, while retaining its own original graphs',async()=>{
  const filters=[{}, {area:'studio',sort:'desc'}, {'evidence-filter':'quote-needed',sort:'asc'}, {search:'gypsum'}, {search:'no such scope xyz'}];
  async function snapshots(init){const h=await harness(init);try{return filters.map(f=>{
   for(const id of ['area','search','evidence-filter','sort'])h.element(id).value=f[id]??(id==='sort'?'source':'');h.element('search').events.input.forEach(fn=>fn());
@@ -45,7 +45,7 @@ test('v6 adds images while keeping v5.1 table cells, filtered totals and all thr
  })}finally{h.cleanup()}}
  const before=await snapshots(initV51),after=await snapshots(initV6);
  for(let i=0;i<filters.length;i++){
-  assert.equal(after[i].tables.replace(/<figure class="scope-photo"[\s\S]*?<\/figure>/g,''),before[i].tables);assert.equal(after[i].count,before[i].count);assert.deepEqual(after[i].graphs,before[i].graphs);assert.equal(after[i].held,before[i].held);
+  assert.equal(after[i].tables.replace(/<figure class="scope-photo"[\s\S]*?<\/figure>/g,''),before[i].tables);assert.equal(after[i].count,before[i].count);assert.ok(after[i].graphs[0].includes(before[i].count.split(' of ')[0]+' matching items'));if(i===4)assert.ok(after[i].graphs.slice(1).every(x=>!x.includes('<svg')));else assert.ok(after[i].graphs.slice(1).every(x=>x.includes('<svg')));assert.equal(after[i].held,before[i].held);
  }
  assert.equal((after[0].tables.match(/data-image-item=/g)||[]).length,51);assert.equal((after[2].tables.match(/data-image-item=/g)||[]).length,6);assert.equal((after[4].tables.match(/data-image-item=/g)||[]).length,0);
  const html=await readFile(new URL('v6/index.html',base),'utf8');assert.ok(html.indexOf('id="table-graphs"')>html.indexOf('id="items"'));assert.match(html,/src="\.\/v6.js"/);

@@ -1,17 +1,23 @@
-# V5.1 status — 17 October 2026
+# V5.1 — every-item range comparison revision
 
-V5.1 preserves the current V5 tables and appends three derived graphs immediately after the last detailed area table.
+Updated 17 October 2026 following the owner's screenshots. No v8 was predefined; this revises the existing v5.1 page.
 
-- **Original amount by area:** horizontal bars sum the matching table rows by area. Amounts and shares are labeled directly.
-- **Largest original item amounts:** horizontal bars rank the top 10 matching items, with an option to show all matching items. Held items retain their original amounts and are labeled and colored separately.
-- **Rate evidence by area:** stacked item counts distinguish same-unit references, different-unit references only, and items on hold. Each item is counted exactly once. Matching units do not establish matching scope.
-- Graphs follow the same area, search and evidence filters as the detailed tables. Ranking always uses descending printed line amounts, independent of the table sort order.
-- The full detailed population is 51 items in six areas, totaling **50,51,148.68** before VAT and the two summary-only allowances. Evidence counts are 36 same-unit, 9 different-unit only, and 6 held. The six held original amounts total **8,81,653.50**, included once.
-- All amount axes start at zero. Source currency remains unspecified; these amount bars do not claim NPR. No mixed-unit rates are added together.
-- V5's item-level public rate chart, exact reference table, six-held-item table, area tables, source details, hierarchy, SI conversions and downloads remain available. Public references reuse the snapshot retrieved 16 October 2026.
-- Original source data, totals, earlier versions, CAD pages and project-progress records remain preserved. No replacement rates, revised market total, savings or new exact-scope quote are assigned.
-- Currency/scope confirmation and SKP extraction/duplicate inspection remain deferred. V6, planned to add an actual image to each work item, has not started.
+Live page: https://pailapilates09-sys.github.io/CAD_Test-Facility/construction/estimates/pilates-astra-2026-10-15/v5.1/
 
-Implementation: `graphs.js` derives charts in the browser directly from the current table population and the existing V5 comparison register. No external chart service or tracking is added. Narrow screens can scroll each labeled SVG horizontally; the graph containers are keyboard focusable. SVG titles and descriptions expose the plotted values.
+The three lower amount/ranking/evidence graphs were removed from this page. Their place, after the final detailed table, now contains an area-by-area comparison for all 51 exact work items.
 
-Validation: all 32 automated tests and the production build pass. Tests reconcile amounts and categorical counts, exercise held-only and empty filters, verify graph placement after the detailed tables, and compare V5 and V5.1 rendered table markup exactly under the same filters. Browser visual QA is unavailable in this runtime. Deployment and live asset verification are reported separately in the delivery message.
+- Each public reference has its own range/point plot, exact published values, actual measurement unit, source link and expandable scope/date/availability details. No sources are combined into an invented market range.
+- Show or hide the original diamond per item, or enable all compatible items together. The global control stays synchronized with the original top comparison's NPR checkbox. Per-item overrides persist through filters; changing the global assumption resets them.
+- The original currency remains unspecified. Showing a diamond explicitly assumes NPR and does not establish scope equivalence. Different units or currencies cannot overlay. All numeric distance statements belong to this unconfirmed scenario.
+- For closed ranges, the page shows distance from both published bounds and the original's position within the span. Comparisons use the displayed SI rates rounded to 2 decimals so the numeric labels and distances agree. Position = (original − low) ÷ (high − low) × 100; 0% means the low and 100% the high. This is not a market percentile, price-quality judgment or projected saving. Values outside the range show their distance below the minimum or above the maximum.
+- Single listed prices remain points. Starting/open prices keep an unknown maximum and never get a closed-range percentage.
+- All plots use independent, labeled zero-based axes. Do not compare horizontal lengths between different plots; use the printed rates and positions. Readable chart labels have horizontal scrolling on narrow screens.
+- Six held items retain their original values without newly assigned public prices. Nine other items have different-unit references only; 36 have at least one same-unit reference. Matching units do not prove matching scope. Two summary-only allowances remain unsplit.
+- Area, full-description search, amount sort and evidence filters operate on the tables and the new comparison cards together. All 51 cards appear without a top-N limit when no filters apply.
+- Original SI tables, hierarchy, totals, source data, top comparison and downloads are preserved. Public rates reuse the 16 October snapshot; no new price research is claimed. V6/v7 and their shared legacy graphs remain unchanged.
+
+Design reference: Datawrapper's documented range plots and benchmark markers support this form of value-versus-interval comparison: https://www.datawrapper.de/academy/examples-of-datawrapper-dot-charts . This implementation uses the website's existing local HTML/CSS/SVG/JavaScript approach. It introduces no external chart service. There is no geographic dataset requiring a map.
+
+Validation: all 44 automated tests pass and the production site builds. Tests cover every item and reference, unique chart IDs, exact bound distances, range-position arithmetic, point/open-bound cases, currency/unit gating, per-item/global controls, filtering, held values and unchanged table markup. Existing v6/v7 preservation checks also pass. Browser layout QA is unavailable in this runtime; no rendered-browser verification is claimed.
+
+Remaining input/external debt is unchanged: source currency and exact-scope confirmation, supplier component breakdowns, summary allowance details and the SketchUp download limit. V7 records the subsequently recovered official district PDF separately.

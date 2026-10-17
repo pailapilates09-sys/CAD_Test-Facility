@@ -48,22 +48,22 @@ async function harness(init){
  globalThis.ResizeObserver=class{observe(){}};globalThis.requestAnimationFrame=()=>{};
  try{await init();return {elements,element,cleanup(){Object.assign(globalThis,previous)}}}catch(e){Object.assign(globalThis,previous);throw e}
 }
-test('v5.1 preserves v5 table markup and filtering exactly while updating the appended graphs',async()=>{
+test('revised v5.1 preserves v5 tables while all-item range comparisons follow their filters',async()=>{
  const filters=[{}, {area:'studio'}, {'evidence-filter':'quote-needed'}, {search:'gypsum'}, {search:'no such scope xyz'}];
  async function snapshots(init){
   const h=await harness(init);try{return filters.map(f=>{
    for(const id of ['area','search','evidence-filter'])h.element(id).value=f[id]??'';
    h.element('search').events.input.forEach(fn=>fn());
-   return {tables:h.element('items').innerHTML,count:h.element('count').textContent,graphs:h.element('graph-summary').textContent,svg:h.element('graph-items').innerHTML};
+   return {tables:h.element('items').innerHTML,count:h.element('count').textContent,graphs:h.element('range-board-summary').textContent,svg:h.element('range-board').innerHTML};
   })}finally{h.cleanup()}
  }
  const old=await snapshots(initV5),current=await snapshots(initV51);
  for(let i=0;i<filters.length;i++){assert.equal(current[i].tables,old[i].tables);assert.equal(current[i].count,old[i].count)}
  assert.equal((current[0].tables.match(/<table>/g)||[]).length,6);assert.equal((current[0].tables.match(/class="market-cell"/g)||[]).length,51);
- assert.match(current[0].graphs,/51 matching items.*50,51,148.68/);assert.match(current[1].graphs,/8 matching items.*19,64,709.40/);
- assert.match(current[2].graphs,/6 matching items.*8,81,653.50.*6 on hold/);assert.match(current[4].graphs,/0 matching items/);
+ assert.match(current[0].graphs,/51 matching items.*36 with same-unit references/);assert.match(current[1].graphs,/8 matching items/);
+ assert.match(current[2].graphs,/6 matching items.*6 on hold/);assert.match(current[4].graphs,/0 matching items/);
  assert.doesNotMatch(current[4].svg,/<svg/);
- const h=await harness(initV51);try{h.element('graph-show-all').events.click[0]();assert.equal((h.element('graph-items').innerHTML.match(/data-item=/g)||[]).length,51);assert.equal(h.element('graph-show-all').attributes['aria-expanded'],'true')}finally{h.cleanup()}
+ assert.equal((current[0].svg.match(/data-range-item=/g)||[]).length,51);assert.equal((current[2].svg.match(/data-range-item=/g)||[]).length,6);
  const html=await readFile(new URL('v5.1/index.html',base),'utf8');
- assert.ok(html.indexOf('id="table-graphs"')>html.indexOf('id="items"'));assert.ok(html.indexOf('id="table-graphs"')<html.indexOf('<summary>Conversion notes'));
+ assert.ok(html.indexOf('id="table-graphs"')>html.indexOf('id="items"'));assert.ok(html.indexOf('id="table-graphs"')<html.indexOf('<summary>Conversion notes'));assert.doesNotMatch(html,/id="graph-area"|id="graph-items"|id="graph-evidence"/);
 });
