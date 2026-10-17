@@ -1,9 +1,9 @@
 export const livePhase = {
-  "phase": "125",
+  "phase": "129",
   "title": "Recovered extraction — active saved checkpoint",
   "status": "ACTIVE_SAVED_CHECKPOINT",
-  "completedAt": "2026-10-17T12:22:05.682Z",
-  "checkpoint": "MSCH-CORPUS-CP108",
+  "completedAt": "2026-10-17T12:31:28.358Z",
+  "checkpoint": "MSCH-CORPUS-CP112",
   "before": {
     "rows": 1549,
     "folders": 286,
@@ -11,39 +11,39 @@ export const livePhase = {
     "pending": 144
   },
   "after": {
-    "rows": 1589,
-    "folders": 302,
-    "files": 1287,
-    "pending": 156
+    "rows": 1616,
+    "folders": 318,
+    "files": 1298,
+    "pending": 168
   },
-  "completedBatches": 4,
+  "completedBatches": 8,
   "scope": "MSCH FIFO metadata extraction; other three lanes retain their source gates.",
   "providerReadback": "PASS",
   "localRegistration": "VERIFIED",
-  "mainAck": "PENDING",
+  "mainAck": "ACKED",
   "budget": {
     "minimumMinutes": 60,
     "minimumWindowMet": false,
     "checkpointsPerPhase": 1,
-    "sourceElapsedMinutes": 20.68065,
+    "sourceElapsedMinutes": 30.058583333333335,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 99,
-  "mainCursor": 98,
-  "nextBatch": "B109",
-  "nextTarget": "renv",
-  "newRows": 40,
-  "newFolders": 16,
-  "newFiles": 24,
-  "newKnownBytes": 224732554,
+  "localHighWater": 103,
+  "mainCursor": 103,
+  "nextBatch": "B113",
+  "nextTarget": "failure 2 reupload",
+  "newRows": 67,
+  "newFolders": 32,
+  "newFiles": 35,
+  "newKnownBytes": 224963660,
   "sessionStartedAt": "2026-10-17T12:01:24.843Z",
-  "sessionElapsedMinutes": 20.68065,
-  "knownBytes": 17654596547,
+  "sessionElapsedMinutes": 30.058583333333335,
+  "knownBytes": 17654827653,
   "sessionReport": {
     "startedAt": "2026-10-17T12:01:24.843Z",
     "sourceStoppedAt": null,
-    "milestones": 4,
+    "milestones": 8,
     "advancedLanes": 1,
     "MSCS": {
       "checkpoint": "AQ-CP87 /B075",
@@ -72,17 +72,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP108 /B108",
+      "checkpoint": "CP112 /B112",
       "beforeRows": 1549,
-      "afterRows": 1589,
-      "addedFolders": 16,
-      "addedFiles": 24,
-      "addedMetadataBytes": 224732554,
-      "pending": 156,
-      "local": 99,
-      "mainCursor": 98,
-      "notice": "N95 PENDING",
-      "next": "B109"
+      "afterRows": 1616,
+      "addedFolders": 32,
+      "addedFiles": 35,
+      "addedMetadataBytes": 224963660,
+      "pending": 168,
+      "local": 103,
+      "mainCursor": 103,
+      "notice": "N99 ACKED",
+      "next": "B113"
     },
     "AEC": {
       "status": "BLOCKED_ORIGINAL_TERMINAL_UNAVAILABLE",
@@ -100,21 +100,21 @@ export const livePhase = {
     ],
     "debtClearance": {
       "initialEvents": 30,
-      "newEvents": 4,
-      "totalAcknowledgedEvents": 33,
-      "remainingEvents": 1,
+      "newEvents": 8,
+      "totalAcknowledgedEvents": 38,
+      "remainingEvents": 0,
       "recoveredEventsAcknowledged": 30,
-      "newEventsAcknowledged": 3,
-      "pending": 1
+      "newEventsAcknowledged": 8,
+      "pending": 0
     },
     "remaining": [
       "LSA historical2 files /9304 bytes unresolved.",
       "AEC original terminal unavailable.",
       "MSCS oversized/native policy gate.",
-      "MSCH156 FIFO folders; source-content extraction remains."
+      "MSCH168 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 100,
+  "scannedFolders": 104,
   "phases": [
     {
       "phase": "01",
@@ -1009,13 +1009,41 @@ export const livePhase = {
       "phase": "125",
       "lane": "MSCH",
       "work": "B108 /CP108: +6 records; 1589 total",
-      "stop": "Source/Local readback; Main pending",
+      "stop": "Source/Local readback; Main ACKED",
       "status": "Complete"
     },
     {
       "phase": "126",
       "lane": "MSCH",
-      "work": "B109: renv",
+      "work": "B109 /CP109: +4 records; 1593 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "127",
+      "lane": "MSCH",
+      "work": "B110 /CP110: +2 records; 1595 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "128",
+      "lane": "MSCH",
+      "work": "B111 /CP111: +1 records; 1596 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "129",
+      "lane": "MSCH",
+      "work": "B112 /CP112: +20 records; 1616 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "130",
+      "lane": "MSCH",
+      "work": "B113: failure 2 reupload",
       "stop": "One verified checkpoint and Local closeout",
       "status": "Queued"
     }
