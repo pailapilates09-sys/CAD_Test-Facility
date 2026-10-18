@@ -1,49 +1,49 @@
 export const livePhase = {
-  "phase": "178",
-  "title": "Extraction continuation — maximum60-minute run closed",
+  "phase": "179",
+  "title": "Branch recovered \u2014 CP162 acknowledged",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-18T02:43:56.630Z",
-  "checkpoint": "MSCH-CORPUS-CP161",
+  "completedAt": "2026-10-18T03:26:41.958961+00:00",
+  "checkpoint": "MSCH-CORPUS-CP162",
   "before": {
-    "rows": 1852,
-    "folders": 364,
-    "files": 1488,
-    "pending": 186
-  },
-  "after": {
     "rows": 2064,
     "folders": 412,
     "files": 1652,
     "pending": 213
   },
-  "completedBatches": 21,
-  "scope": "User-authorized remaining-debt clearance and maximum60-minute MSCH FIFO metadata catalogue continuation. Source bodies, source objects and schedules unchanged.",
+  "after": {
+    "rows": 2066,
+    "folders": 412,
+    "files": 1654,
+    "pending": 212
+  },
+  "completedBatches": 1,
+  "scope": "User-authorized branch recovery and one bounded FIFO metadata checkpoint. Existing source-content restrictions retained.",
   "providerReadback": "PASS",
   "localRegistration": "VERIFIED",
   "mainAck": "ACKED",
   "budget": {
-    "maximumMinutes": 60,
+    "maximumMinutes": 20,
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
-    "sourceElapsedMinutes": 49.88313333333333,
+    "sourceElapsedMinutes": 5.649706699999999,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 152,
-  "mainCursor": 152,
-  "nextBatch": "B162",
-  "nextTarget": "PythonSavedFiles",
-  "newRows": 212,
-  "newFolders": 48,
-  "newFiles": 164,
-  "newKnownBytes": 5237188554,
-  "sessionStartedAt": "2026-10-18T01:51:16.603Z",
-  "sessionElapsedMinutes": 49.88313333333333,
-  "knownBytes": 27197459626,
+  "localHighWater": 153,
+  "mainCursor": 153,
+  "nextBatch": "B163",
+  "nextTarget": "Kmz files",
+  "newRows": 2,
+  "newFolders": 0,
+  "newFiles": 2,
+  "newKnownBytes": 3058506384,
+  "sessionStartedAt": "2026-10-18T03:21:02.976559+00:00",
+  "sessionElapsedMinutes": 5.649706699999999,
+  "knownBytes": 30255966010,
   "sessionReport": {
-    "startedAt": "2026-10-18T01:51:16.603Z",
-    "sourceStoppedAt": "2026-10-18T02:41:09.591Z",
-    "milestones": 21,
+    "startedAt": "2026-10-18T03:21:02.976559+00:00",
+    "sourceStoppedAt": "2026-10-18T03:26:41.958961+00:00",
+    "milestones": 1,
     "advancedLanes": 1,
     "MSCS": {
       "checkpoint": "AQ-CP87 /B075",
@@ -72,17 +72,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP161 /B161",
-      "beforeRows": 1852,
-      "afterRows": 2064,
-      "addedFolders": 48,
-      "addedFiles": 164,
-      "addedMetadataBytes": 5237188554,
-      "pending": 213,
-      "local": 152,
-      "mainCursor": 152,
-      "notice": "N148 ACKED",
-      "next": "B162"
+      "checkpoint": "CP162 /B162",
+      "beforeRows": 2064,
+      "afterRows": 2066,
+      "addedFolders": 0,
+      "addedFiles": 2,
+      "addedMetadataBytes": 3058506384,
+      "pending": 212,
+      "local": 153,
+      "mainCursor": 153,
+      "notice": "N149 ACKED",
+      "next": "B163"
     },
     "AEC": {
       "status": "BLOCKED_ORIGINAL_TERMINAL_UNAVAILABLE",
@@ -100,21 +100,21 @@ export const livePhase = {
     ],
     "debtClearance": {
       "initialEvents": 0,
-      "newEvents": 21,
-      "totalAcknowledgedEvents": 21,
+      "newEvents": 1,
+      "totalAcknowledgedEvents": 1,
       "remainingEvents": 0,
       "recoveredEventsAcknowledged": 0,
-      "newEventsAcknowledged": 21,
+      "newEventsAcknowledged": 1,
       "pending": 0
     },
     "remaining": [
       "LSA historical2 files /9304 bytes unresolved.",
       "AEC original terminal unavailable (fresh404).",
       "MSCS oversized/native policy gate.",
-      "MSCH 213 FIFO folders; source-content extraction remains."
+      "MSCH 212 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 153,
+  "scannedFolders": 154,
   "phases": [
     {
       "phase": "01",
@@ -378,7 +378,7 @@ export const livePhase = {
     {
       "phase": "38",
       "lane": "LSA / Local",
-      "work": "B055: +1 folder /19 files; 416→436 metadata records",
+      "work": "B055: +1 folder /19 files; 416\u2192436 metadata records",
       "stop": "CP55 / Local6 / Main N2 pending",
       "status": "Complete"
     },
@@ -392,7 +392,7 @@ export const livePhase = {
     {
       "phase": "40",
       "lane": "MSCH / Local",
-      "work": "B050: +1 folder; 983→984 catalogue entries",
+      "work": "B050: +1 folder; 983\u2192984 catalogue entries",
       "stop": "CP50 / Local41 / Main N37 pending",
       "status": "Complete"
     },
@@ -754,21 +754,21 @@ export const livePhase = {
       "status": "Complete"
     },
     {
-      "phase": "—",
+      "phase": "\u2014",
       "lane": "LSA",
       "work": "B081 historical baseline identity reconciliation",
       "stop": "Resolve2 files /9,304 bytes before Phase1B freeze",
       "status": "Blocked"
     },
     {
-      "phase": "—",
+      "phase": "\u2014",
       "lane": "AEC",
       "work": "Original G076 terminal remains unavailable",
       "stop": "Recover original checkpoint without rate replay",
       "status": "Blocked"
     },
     {
-      "phase": "—",
+      "phase": "\u2014",
       "lane": "MSCS",
       "work": "Oversized/native hashing policy gate",
       "stop": "Separately governed eligible byte policy",
@@ -1389,6 +1389,13 @@ export const livePhase = {
       "work": "B162: PythonSavedFiles",
       "stop": "One verified checkpoint and Local closeout",
       "status": "Queued"
+    },
+    {
+      "phase": "179",
+      "lane": "MSCH / Local / Main",
+      "work": "Recover CP161 branch state; B162 PythonSavedFiles: two CSV metadata records",
+      "stop": "CP162 + Local/Main153/153 + N149 ACK + native PRE/POST",
+      "status": "Complete - stopped"
     }
   ]
 };
