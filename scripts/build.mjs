@@ -4,6 +4,8 @@ import {renderDrawings,drawingInfo} from '../src/drawings.mjs';
 import {renderRecovery} from './render-progress-recovery.mjs';
 import {buildConstructionStatus,renderConstructionStatus} from './render-construction-progress.mjs';
 import {buildV8,renderIndex,renderWork,pageFromTemplate} from './material-v8.mjs';
+import {applySiteExperience} from './site-experience.mjs';
+import {fileURLToPath} from 'node:url';
 const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
 await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
 await cp(new URL('public/',root),dist,{recursive:true});
@@ -52,4 +54,5 @@ await writeFile(new URL('downloads/Column_Formwork_Specification.json',dist),JSO
 await writeFile(new URL('downloads/Open_Source_Review.json',dist),JSON.stringify(sources,null,2));
 await writeFile(new URL('.nojekyll',dist),'');
 await readFile(new URL('downloads/Column_Formwork_Inches_Only.pdf',dist));
-console.log('Built workspace home, preserved CAD subpage and verified project-progress subpage. CAD includes 5 SVG sheets, PDF and CSV.');
+const themedPages=await applySiteExperience(fileURLToPath(dist));
+console.log(`Built ${themedPages} pages with shared light/dark themes and companion. CAD includes 5 SVG sheets, PDF and CSV.`);
