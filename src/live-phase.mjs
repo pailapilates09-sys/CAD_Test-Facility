@@ -1,49 +1,50 @@
 export const livePhase = {
-  "phase": "179",
-  "title": "Branch recovered \u2014 CP162 acknowledged",
+  "phase": "193",
+  "title": "Run7 complete \u201414 checkpoints through CP176",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-18T03:26:41.958961+00:00",
-  "checkpoint": "MSCH-CORPUS-CP162",
+  "completedAt": "2026-10-18T05:52:37.957501+00:00",
+  "checkpoint": "MSCH-CORPUS-CP176",
   "before": {
-    "rows": 2064,
-    "folders": 412,
-    "files": 1652,
-    "pending": 213
-  },
-  "after": {
     "rows": 2066,
     "folders": 412,
     "files": 1654,
     "pending": 212
   },
-  "completedBatches": 1,
-  "scope": "User-authorized branch recovery and one bounded FIFO metadata checkpoint. Existing source-content restrictions retained.",
+  "after": {
+    "rows": 2386,
+    "folders": 488,
+    "files": 1898,
+    "pending": 274
+  },
+  "completedBatches": 14,
+  "scope": "User-authorized maximum60-minute four-lane run;14 MSCH metadata checkpoints. Source-stage gates preserved.",
   "providerReadback": "PASS",
   "localRegistration": "VERIFIED",
   "mainAck": "ACKED",
   "budget": {
-    "maximumMinutes": 20,
+    "maximumMinutes": 60,
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
-    "sourceElapsedMinutes": 5.649706699999999,
+    "maxMinutesPerPhase": 20,
+    "sourceElapsedMinutes": 33.55073333333333,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 153,
-  "mainCursor": 153,
-  "nextBatch": "B163",
-  "nextTarget": "Kmz files",
-  "newRows": 2,
-  "newFolders": 0,
-  "newFiles": 2,
-  "newKnownBytes": 3058506384,
-  "sessionStartedAt": "2026-10-18T03:21:02.976559+00:00",
-  "sessionElapsedMinutes": 5.649706699999999,
-  "knownBytes": 30255966010,
+  "localHighWater": 167,
+  "mainCursor": 167,
+  "nextBatch": "B177",
+  "nextTarget": "CHRS Data Portal",
+  "newRows": 320,
+  "newFolders": 76,
+  "newFiles": 244,
+  "newKnownBytes": 13945536903,
+  "sessionStartedAt": "2026-10-18T05:11:25.936Z",
+  "sessionElapsedMinutes": 41.20035835,
+  "knownBytes": 44201502913,
   "sessionReport": {
-    "startedAt": "2026-10-18T03:21:02.976559+00:00",
-    "sourceStoppedAt": "2026-10-18T03:26:41.958961+00:00",
-    "milestones": 1,
+    "startedAt": "2026-10-18T05:11:25.936Z",
+    "sourceStoppedAt": "2026-10-18T05:44:58.980Z",
+    "milestones": 14,
     "advancedLanes": 1,
     "MSCS": {
       "checkpoint": "AQ-CP87 /B075",
@@ -72,17 +73,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP162 /B162",
-      "beforeRows": 2064,
-      "afterRows": 2066,
-      "addedFolders": 0,
-      "addedFiles": 2,
-      "addedMetadataBytes": 3058506384,
-      "pending": 212,
-      "local": 153,
-      "mainCursor": 153,
-      "notice": "N149 ACKED",
-      "next": "B163"
+      "checkpoint": "CP176 /B176",
+      "beforeRows": 2066,
+      "afterRows": 2386,
+      "addedFolders": 76,
+      "addedFiles": 244,
+      "addedMetadataBytes": 13945536903,
+      "pending": 274,
+      "local": 167,
+      "mainCursor": 167,
+      "notice": "N154 ACKED",
+      "next": "B177"
     },
     "AEC": {
       "status": "BLOCKED_ORIGINAL_TERMINAL_UNAVAILABLE",
@@ -100,21 +101,21 @@ export const livePhase = {
     ],
     "debtClearance": {
       "initialEvents": 0,
-      "newEvents": 1,
-      "totalAcknowledgedEvents": 1,
+      "newEvents": 14,
+      "totalAcknowledgedEvents": 14,
       "remainingEvents": 0,
       "recoveredEventsAcknowledged": 0,
-      "newEventsAcknowledged": 1,
+      "newEventsAcknowledged": 14,
       "pending": 0
     },
     "remaining": [
       "LSA historical2 files /9304 bytes unresolved.",
       "AEC original terminal unavailable (fresh404).",
       "MSCS oversized/native policy gate.",
-      "MSCH 212 FIFO folders; source-content extraction remains."
+      "MSCH274 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 154,
+  "scannedFolders": 168,
   "phases": [
     {
       "phase": "01",
@@ -1395,6 +1396,104 @@ export const livePhase = {
       "lane": "MSCH / Local / Main",
       "work": "Recover CP161 branch state; B162 PythonSavedFiles: two CSV metadata records",
       "stop": "CP162 + Local/Main153/153 + N149 ACK + native PRE/POST",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "180",
+      "lane": "MSCH /Local /Main",
+      "work": "B163 Kmz files: 43 metadata records",
+      "stop": "MSCH-CORPUS-CP163 +Local/Main154/154 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "181",
+      "lane": "MSCH /Local /Main",
+      "work": "B164 Landsat: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP164 +Local/Main155/155 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "182",
+      "lane": "MSCH /Local /Main",
+      "work": "B165 Georeferenced photos: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP165 +Local/Main156/156 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "183",
+      "lane": "MSCH /Local /Main",
+      "work": "B166 FAO_UNESCO Soil Map of the World: 5 metadata records",
+      "stop": "MSCH-CORPUS-CP166 +Local/Main157/157 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "184",
+      "lane": "MSCH /Local /Main",
+      "work": "B167 ICIMOD: 4 metadata records",
+      "stop": "MSCH-CORPUS-CP167 +Local/Main158/158 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "185",
+      "lane": "MSCH /Local /Main",
+      "work": "B168 India remote sensing and GIS: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP168 +Local/Main159/159 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "186",
+      "lane": "MSCH /Local /Main",
+      "work": "B169 Excel location files: 182 metadata records",
+      "stop": "MSCH-CORPUS-CP169 +Local/Main160/160 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "187",
+      "lane": "MSCH /Local /Main",
+      "work": "B170 Esri LULC: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP170 +Local/Main161/161 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "188",
+      "lane": "MSCH /Local /Main",
+      "work": "B171 EARTHDATA_Login: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP171 +Local/Main162/162 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "189",
+      "lane": "MSCH /Local /Main",
+      "work": "B172 DIVA GIS: 14 metadata records",
+      "stop": "MSCH-CORPUS-CP172 +Local/Main163/163 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "190",
+      "lane": "MSCH /Local /Main",
+      "work": "B173 Earth Engine Apps: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP173 +Local/Main164/164 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "191",
+      "lane": "MSCH /Local /Main",
+      "work": "B174 HDX OCHA Services: 25 metadata records",
+      "stop": "MSCH-CORPUS-CP174 +Local/Main165/165 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "192",
+      "lane": "MSCH /Local /Main",
+      "work": "B175 DEM files: 34 metadata records",
+      "stop": "MSCH-CORPUS-CP175 +Local/Main166/166 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "193",
+      "lane": "MSCH /Local /Main",
+      "work": "B176 APHRODITEs WATER RESOURCES: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP176 +Local/Main167/167 acknowledged by final reconciliation",
       "status": "Complete - stopped"
     }
   ]
