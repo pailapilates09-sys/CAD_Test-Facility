@@ -129,12 +129,15 @@
       "Progress"
     ],
     "construction_contents": [
-      "Latest Pilates estimate v7",
+      "Latest material details v8",
+      "Latest full Pilates estimate v7",
       "Column formwork CAD drawings",
       "Pilates SketchUp workspace"
     ],
     "history_location": "milestone.html",
     "existing_urls_retained": true
   },
-  "latest_full_estimate_version": "v7"
+  "latest_full_estimate_version": "v7",
+  "workspace_milestone_tag": "workspace-m2-2026-10-18",
+  "workspace_milestone_manifest": "../../../milestones/workspace-m2-2026-10-18.json"
 }

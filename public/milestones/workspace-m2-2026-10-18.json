@@ -1,0 +1,72 @@
+{
+  "schema_version": "workspace-milestone-1.0.0",
+  "id": "M2",
+  "tag": "workspace-m2-2026-10-18",
+  "title": "Workspace M2 — Studio theme + fluffy Pip",
+  "date": "2026-10-18",
+  "timezone": "Asia/Kathmandu",
+  "scope": "Shared workspace presentation and navigation; existing construction evidence and extraction records retained",
+  "base_commit": "7fb3231af33f6689b8cd4a52bde304b32b4e5e39",
+  "previous_milestone_tag": "pilates-estimates-m1-2026-10-17",
+  "site_url": "https://pailapilates09-sys.github.io/CAD_Test-Facility/",
+  "release_notes_path": "public/milestones/WORKSPACE-M2-2026-10-18.md",
+  "features": [
+    "Studio typography and contrast on all pages",
+    "Persistent light and dark themes",
+    "Chubby fluffy Pip with free flight across the viewport",
+    "Scroll/navigation response and pointer avoidance",
+    "Click-through layer, saved flight position, pause/resume and reduced-motion support"
+  ],
+  "coverage": {
+    "generated_pages": 66,
+    "primary_sections": 3,
+    "estimate_views": 9,
+    "latest_estimate_version": "v8",
+    "latest_full_estimate_version": "v7",
+    "work_detail_pages": 51,
+    "held_works": 6,
+    "summary_allowances": 2,
+    "progress_checkpoint": "CP176"
+  },
+  "verification": {
+    "source_commit": "7fb3231af33f6689b8cd4a52bde304b32b4e5e39",
+    "automated_tests": 69,
+    "live_files_verified": 79,
+    "local_links_assets": 1644,
+    "svg_artwork_rendered_and_inspected": true,
+    "browser_animation_qa": "unverified",
+    "publication_policy": "Tag and release the milestone-record commit only after its checks and Pages deployment succeed",
+    "milestone_record_automated_tests": 72
+  },
+  "remaining_debt": [
+    "Browser animation and layout QA remain unverified.",
+    "Original estimate currency is unspecified.",
+    "Original supplier labour/material allocations require confirmation.",
+    "Six held works retain original values.",
+    "Two summary allowances lack detailed quantities and component breakdowns.",
+    "V8 quantity models use explicit planning assumptions; supplier/site confirmation remains necessary.",
+    "Reference images are not confirmed project photographs.",
+    "SKP geometry and duplicate inspection remain blocked by the download size limit."
+  ],
+  "preservation_sha256": {
+    "public/theme/boot.js": "211d351388b7d51a3923fe5de50e560f5ab1dd6ee241f476103d4555848f679d",
+    "public/theme/experience.js": "096f9248655643a1b22fc91c790ca7679a9a4c4625919cb203106378abc8576a",
+    "public/theme/studio.css": "f1e84bee95d988dfaaa752fb014025ceb88a4267616096c6f577e14b8ddd1df1",
+    "public/theme/fonts/Manrope.ttf": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+    "public/theme/fonts/OFL.txt": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+    "scripts/site-experience.mjs": "c0472c79d75b40ad29f3bab9bc205fc5897ab8f4e7448cae84d3540210cb8f55",
+    "public/construction/estimates/pilates-astra-2026-10-15/milestone.json": "9577442802c16f512752b7ffa1f2c66ab24d3d2144688f45e143d8eaf2fef9a0",
+    "public/construction/estimates/pilates-astra-2026-10-15/versions.json": "3d5b427d7977d11ad35578d5b885756122a47b68b3609e935690f9260b5c1838",
+    "public/construction/estimates/pilates-astra-2026-10-15/v3/estimate-si.json": "864ccd9e5df3ca08e4a383da21017912eb9ffcd34031c10a8fb7fe49604eded3",
+    "public/construction/estimates/pilates-astra-2026-10-15/v4/market-rates.json": "fb3fcfeac68a629d1a0977d617309bf9a13cf06e0a1298a37b97730e120be515",
+    "public/construction/estimates/pilates-astra-2026-10-15/v5/comparison.json": "df22bfef647b782d1a73cfa76c22230bf7813bfc83fd6b22a4553223b8280906",
+    "public/construction/estimates/pilates-astra-2026-10-15/v6/image-register.json": "bd4c405ec90f390bd02b5b3ba5e780c9a63d634720662e2ddb0ff5a50eb6d4a9",
+    "public/construction/estimates/pilates-astra-2026-10-15/v7/component-rates.json": "58a5352e81e83fa70bc68542badfc7b768a788d92add0ed919836ccf777bee53",
+    "public/construction/estimates/pilates-astra-2026-10-15/v8/material-catalog.json": "729f8a9d1c212888c833c9baab9b66fb847f932e5a7d9a833da3010fbf6fa77d",
+    "public/construction/estimates/pilates-astra-2026-10-15/v8/quantity-models.js": "f968020318cd0d983f3284c3e51ce3b13f5479b06a89b136232a6babd2dc97fd",
+    "public/construction/estimates/pilates-astra-2026-10-15/v8/calculations.js": "ea978952f4fd59922744bc4dcc2df4c3948b426586aea24ed0412bdf5bceafcb",
+    "progress/recovery/current.json": "ca48a0d180bf54c2662f03623a3fb4fae78f2286a6e3c113f1cba9c071dea2e8",
+    "src/live-phase.mjs": "c2f908a916c1466dcebf04279b59001ece5050c3f1cb1cba21bc128dd53ad81f",
+    "construction/estimates/pilates-astra-2026-10-15/data/estimate.json": "33980603546c5ed91d988895d24dd6570a2a157704a487d8b5271794ad7d06df"
+  }
+}

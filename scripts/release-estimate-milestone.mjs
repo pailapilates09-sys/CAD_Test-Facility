@@ -1,6 +1,7 @@
 import {readFileSync,appendFileSync} from 'node:fs';
 import {spawnSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
+import {runWorkspaceRelease} from './release-workspace-milestone.mjs';
 const manifestPath='public/construction/estimates/pilates-astra-2026-10-15/milestone.json';
 const notesPath='construction/estimates/pilates-astra-2026-10-15/MILESTONE-M1.md';
 export function validateMilestone(m){
@@ -37,4 +38,4 @@ export function runRelease(){
  const report={tag,sha,url:release.html_url,release_id:release.id,draft:release.draft,verified:true};console.log(JSON.stringify(report));
  if(process.env.GITHUB_STEP_SUMMARY)appendFileSync(process.env.GITHUB_STEP_SUMMARY,`## Estimate milestone published\n\n[${tag}](${release.html_url})\n\nCommit: ${sha}\n\nSource currency, supplier breakdowns, six holds, two allowances, SKP extraction and browser QA limits remain documented.\n`);
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)runRelease();
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){runRelease();runWorkspaceRelease()}
