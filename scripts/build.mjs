@@ -3,6 +3,7 @@ import {spec,materials,sources,braceLength} from '../src/spec.mjs';
 import {renderDrawings,drawingInfo} from '../src/drawings.mjs';
 import {renderRecovery} from './render-progress-recovery.mjs';
 import {buildConstructionStatus,renderConstructionStatus} from './render-construction-progress.mjs';
+import {buildV8,renderIndex,renderWork,pageFromTemplate} from './material-v8.mjs';
 const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
 await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
 await cp(new URL('public/',root),dist,{recursive:true});
@@ -26,6 +27,14 @@ const [original,comparison,components,images,versions,model,debt]=await Promise.
 const constructionStatus=buildConstructionStatus({original,comparison,components,images,versions,model,debt,drawingCount:drawingInfo.length});
 await writeFile(progressPage,progressTemplate.replace('<!-- CURRENT_PROGRESS -->',renderRecovery(JSON.parse(recoveryStatus))).replace('<!-- CONSTRUCTION_PROGRESS -->',renderConstructionStatus(constructionStatus)));
 await writeFile(new URL('progress/construction-status.json',dist),JSON.stringify(constructionStatus,null,2)+'\n');
+// V8 is an additive material-detail view. Historical source and estimate views stay intact.
+const v8Catalog=await readJSON('public/'+estimatePath+'v8/material-catalog.json');
+const v8Data=buildV8({original,components,images,catalog:v8Catalog});
+const v8Dir=new URL(estimatePath+'v8/',dist),v8Template=await readFile(new URL('index.html',v8Dir),'utf8');
+if(!v8Template.includes('<!-- V8_CONTENT -->'))throw new Error('Missing V8 content marker');
+await writeFile(new URL('index.html',v8Dir),pageFromTemplate(v8Template,renderIndex(v8Data),'Materials by work'));
+await writeFile(new URL('material-takeoff.json',v8Dir),JSON.stringify(v8Data,null,2)+'\n');
+for(const item of v8Data.items)await writeFile(new URL(item.id+'.html',v8Dir),pageFromTemplate(v8Template,renderWork(item,v8Data),item.title));
 await mkdir(new URL('progress/recovery/',dist),{recursive:true});
 await writeFile(new URL('progress/recovery/status.json',dist),recoveryStatus);
 await writeFile(new URL('progress/recovery/report.md',dist),recoveryReport);

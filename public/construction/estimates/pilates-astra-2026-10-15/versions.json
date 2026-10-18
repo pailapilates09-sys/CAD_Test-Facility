@@ -1,7 +1,7 @@
 {
   "schema_version": "estimate-versions-1.0.0",
-  "updated_date": "2026-10-17",
-  "latest_version": "v7",
+  "updated_date": "2026-10-18",
+  "latest_version": "v8",
   "milestone_tag": "pilates-estimates-m1-2026-10-17",
   "versions": [
     {
@@ -99,6 +99,20 @@
       "cost_treemap": true,
       "reference_images": true,
       "component_evidence": true
+    },
+    {
+      "id": "v8",
+      "label": "Materials v8",
+      "path": "./v8/",
+      "purpose": "Open each work for its materials, provisional quantities, Kathmandu supply rates and partial amounts",
+      "units": "SI / purchase units",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": true,
+      "component_evidence": true,
+      "material_takeoff": true,
+      "release_status": "After M1; original milestone unchanged"
     }
   ],
   "current_view_policy": {
@@ -121,5 +135,6 @@
     ],
     "history_location": "milestone.html",
     "existing_urls_retained": true
-  }
+  },
+  "latest_full_estimate_version": "v7"
 }

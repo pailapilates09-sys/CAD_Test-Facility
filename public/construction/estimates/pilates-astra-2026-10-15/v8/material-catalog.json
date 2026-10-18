@@ -1,0 +1,676 @@
+{
+  "schema_version": "material-catalog-1.0.0",
+  "researched_date": "2026-10-18",
+  "currency": "NPR",
+  "price_policy": "Public supply references, not confirmed project quotations. VAT, delivery and stock require confirmation. Finished products may contain factory labour. No installed package is classified as raw material. Unpriced rows remain null.",
+  "sources": [
+    {
+      "id": "S01",
+      "publisher": "Shreya Interiors",
+      "url": "https://shreyainterior.com.np/product/18-mm-84-plywood/",
+      "checked": "2026-10-18",
+      "kind": "retailer",
+      "location": "Khusibu-17, Kathmandu",
+      "finding": "18 mm C/G 8×4 ft plywood sheet: NPR 2720. Grade is an example, not an approved project selection."
+    },
+    {
+      "id": "S02",
+      "publisher": "Shreya Interiors",
+      "url": "https://shreyainterior.com.np/product-category/materials-and-finishes/",
+      "checked": "2026-10-18",
+      "kind": "retailer",
+      "location": "Kathmandu",
+      "finding": "12 mm C-grade 8×4 ft sheet: NPR 1792. Cabinet backs require approved thickness and a cut list."
+    },
+    {
+      "id": "S03",
+      "publisher": "Shreya Interiors",
+      "url": "https://shreyainterior.com.np/product/fevicol-sh-10-kg-synthetic-adhesive/",
+      "checked": "2026-10-18",
+      "kind": "retailer",
+      "location": "Kathmandu",
+      "finding": "Fevicol SH 10 kg pack: NPR 4200; use only after confirming substrate and adhesive system."
+    },
+    {
+      "id": "S04",
+      "publisher": "Nebha Traders",
+      "url": "https://nebhatraders.com/blog/formica-price-in-nepal-types-finishes-cost/",
+      "checked": "2026-10-18",
+      "kind": "supplier_guide",
+      "location": "Pepsicola, Kathmandu",
+      "finding": "Decorative laminate alternatives: NPR 600–6200 per sheet. Thickness, finish, brand and sheet dimensions must be selected; this is a broad alternatives envelope."
+    },
+    {
+      "id": "S05",
+      "publisher": "Hardware Pasal",
+      "url": "https://hardwarepasal.com/product/hettich-soft-close-hinge-8645i-th52-16-crank-9071207-s",
+      "checked": "2026-10-18",
+      "kind": "retailer",
+      "location": "Kathmandu delivery",
+      "finding": "Hettich 9071207 hinge listing: NPR 2070. Mounting plate is separate; confirm sale-unit contents."
+    },
+    {
+      "id": "S06",
+      "publisher": "Hardware Pasal",
+      "url": "https://hardwarepasal.com/product/asian-wall-putty-40-kgs",
+      "checked": "2026-10-18",
+      "kind": "retailer",
+      "location": "Kathmandu delivery",
+      "finding": "Asian Wall Putty 40 kg: NPR 1600. Retail text also mentions acrylic putty, so confirm product code 8079 and bag before purchase."
+    },
+    {
+      "id": "S07",
+      "publisher": "Asian Paints Nepal",
+      "url": "https://static.asianpaints.com/content/dam/ap-np-revamp/products/waterproofing/product-information-sheets/Asian-Wall-Putty.pdf-revised.pdf",
+      "checked": "2026-10-18",
+      "kind": "manufacturer_technical_sheet",
+      "location": "Nepal",
+      "finding": "PDF page 1 visually checked: wall putty code 8079, 40 kg pack, coverage 20–25 ft²/kg/coat. Scenario uses two coats and conservative 20 ft²/kg/coat."
+    },
+    {
+      "id": "S08",
+      "publisher": "Hardware Pasal",
+      "url": "https://hardwarepasal.com/product/asian-paints-1-ltr-tractor-emulsion-advanced",
+      "checked": "2026-10-18",
+      "kind": "retailer",
+      "location": "Kathmandu delivery",
+      "finding": "Tractor Emulsion Advanced 1 L pack: NPR 473. Colour and approved paint grade require confirmation."
+    },
+    {
+      "id": "S09",
+      "publisher": "Reshape Home",
+      "url": "https://reshapehome.com/blogs/paint-price-in-nepal/",
+      "checked": "2026-10-18",
+      "kind": "contractor_guide",
+      "location": "Nepal",
+      "finding": "General two-coat emulsion coverage 40–60 ft²/L; 10% extra recommended. Scenario uses 50 ft²/L, not a product-specific performance guarantee."
+    },
+    {
+      "id": "S10",
+      "publisher": "Sixkey",
+      "url": "https://sixkey.com.np/blog/modern-lighting-ideas-for-nepali-homes/",
+      "checked": "2026-10-18",
+      "kind": "supplier_guide",
+      "location": "Kathmandu Valley",
+      "finding": "Supply-only guide: LED strip NPR 125–200/m; concealed 18–24 W panel about NPR 1000 each; chandelier NPR 7000–200000 each. Designs and electrical accessories differ."
+    },
+    {
+      "id": "S11",
+      "publisher": "Air Experts Nepal",
+      "url": "https://airexperts.com.np/shop",
+      "checked": "2026-10-18",
+      "kind": "supplier",
+      "location": "Kathmandu Valley",
+      "finding": "Midea Xtreme Plus 1.0 ton MSEZBU-12HRFN8 NPR 75050; 1.5 ton MSEZCU-18HRFN8 NPR 103550. Included piping and installation not established."
+    },
+    {
+      "id": "S12",
+      "publisher": "Expert Sewa",
+      "url": "https://expertsewa.com/blog/marble-price-in-nepal-2026-types-costs-top-suppliers",
+      "checked": "2026-10-18",
+      "kind": "contractor_guide",
+      "location": "Kathmandu market guide",
+      "finding": "Standard Indian white marble range NPR 1800–2500/ft². Source has inconsistent 18/20 mm thickness discussion; confirm grade and thickness. Project stone unspecified."
+    },
+    {
+      "id": "S13",
+      "publisher": "Bimba Glass",
+      "url": "https://bimbaglass.com.np/toughened-glass/",
+      "checked": "2026-10-18",
+      "kind": "supplier_guide",
+      "location": "Nepal / Kathmandu supplier",
+      "finding": "Raw 12 mm toughened glass NPR 350–450/ft². Cutting, hardware, transport and installation excluded. Not mirror glass."
+    },
+    {
+      "id": "S14",
+      "publisher": "Hardware Pasal",
+      "url": "https://hardwarepasal.com/category/basin",
+      "checked": "2026-10-18",
+      "kind": "retailer",
+      "location": "Kathmandu delivery",
+      "finding": "18×24 matte silver sink listing NPR 2600; tap, waste and pipework are separate."
+    },
+    {
+      "id": "S15",
+      "publisher": "Thulo Bazaar",
+      "url": "https://thulobazaar.com.np/en/blog/curtain-blinds-buying-guide-nepal",
+      "checked": "2026-10-18",
+      "kind": "marketplace_guide",
+      "location": "Ason / Mangal Bazaar",
+      "finding": "Sheer cloth NPR 300–800 per linear metre; blackout NPR 600–1500/m. Fabric width and fullness are required before deriving cloth metres from curtain area."
+    },
+    {
+      "id": "S16",
+      "publisher": "Fashion Paints",
+      "url": "https://fashionpaints.com.np/all-products/connect-interior-primer/",
+      "checked": "2026-10-18",
+      "kind": "manufacturer",
+      "location": "Kathmandu Valley",
+      "finding": "1 L primer MRP 675, but currency not printed. Numeric price excluded from NPR calculations pending confirmation; product coverage also required."
+    },
+    {
+      "id": "S17",
+      "publisher": "GM Gypsum / Monika Group",
+      "url": "https://gmceiling.com/best-gypsum-board-in-nepal/",
+      "checked": "2026-10-18",
+      "kind": "supplier",
+      "location": "Tinkune, Kathmandu",
+      "finding": "Board, metal profiles, fibre tape and screws identified; no numeric board supply price published. Quote required for correct board, including curved application."
+    },
+    {
+      "id": "S18",
+      "publisher": "Interio Decor",
+      "url": "https://interiodecor.com.np/pvc-panel-price-in-nepal/",
+      "checked": "2026-10-18",
+      "kind": "supplier",
+      "location": "Nepal",
+      "finding": "PVC panel supplier page gives no numeric price. No installed price substituted as supply-only."
+    },
+    {
+      "id": "S19",
+      "publisher": "Kathmandu District Administration Office",
+      "url": "../v7/component-rates.json",
+      "checked": "2026-10-17",
+      "kind": "preserved_official_schedule",
+      "location": "Kathmandu FY 2083/84",
+      "finding": "Previously verified C03 / PDF page 48: fibre cement board 8 mm NPR 67/ft², excluding VAT. Retained snapshot, not reread today. Original official URL and PDF hash in v7 source N01."
+    },
+    {
+      "id": "S20",
+      "publisher": "Om Frame House",
+      "url": "https://www.omframehouse.com.np/category/wall-mirrors/",
+      "checked": "2026-10-16",
+      "refresh_attempt": "2026-10-18",
+      "kind": "prior_retail_snapshot",
+      "location": "Samakhusi, Kathmandu",
+      "finding": "Preserved v4/v7 decorative mirror listing NPR 13500 each. Refresh blocked by website verification; dimensions and current price remain unconfirmed."
+    }
+  ],
+  "materials": [
+    {
+      "id": "ply18",
+      "name": "18 mm C/G plywood",
+      "unit": "sheet",
+      "rate_low": 2720,
+      "rate_high": 2720,
+      "source_id": "S01",
+      "whole_units": true,
+      "cut_sheet": true,
+      "note": "8×4 ft = 2.97289728 m². Sum all carcass, shelf and door cut areas first; cupboard face area is insufficient."
+    },
+    {
+      "id": "ply12",
+      "name": "12 mm plywood backing",
+      "unit": "sheet",
+      "rate_low": 1792,
+      "rate_high": 1792,
+      "source_id": "S02",
+      "whole_units": true,
+      "cut_sheet": true,
+      "note": "Optional construction choice; backing thickness and full cut list need approval."
+    },
+    {
+      "id": "laminate",
+      "name": "Decorative laminate / Formica",
+      "unit": "sheet",
+      "rate_low": 600,
+      "rate_high": 6200,
+      "source_id": "S04",
+      "whole_units": true,
+      "note": "Broad grade alternatives; measure each laminated face. Sheet dimensions are unconfirmed; no automatic sheet conversion."
+    },
+    {
+      "id": "glue",
+      "name": "Fevicol SH 10 kg",
+      "unit": "pack (10 kg)",
+      "rate_low": 4200,
+      "rate_high": 4200,
+      "source_id": "S03",
+      "whole_units": true,
+      "note": "Required kg and coverage need confirmation; pack count is not inferred from furniture face area."
+    },
+    {
+      "id": "hinge",
+      "name": "Hettich soft-close hinge",
+      "unit": "sale unit",
+      "rate_low": 2070,
+      "rate_high": 2070,
+      "source_id": "S05",
+      "whole_units": true,
+      "note": "Example hardware choice; confirm hinges per sale unit, door sizes, opening and mounting plate."
+    },
+    {
+      "id": "hardware",
+      "name": "Handles, locks and drawer runners",
+      "unit": "set",
+      "note": "Count doors, drawers and lockers; specify every fitting and set contents."
+    },
+    {
+      "id": "edges",
+      "name": "Edge banding / lipping",
+      "unit": "m",
+      "note": "Sum exposed cut-edge lengths; edge profile and width unspecified."
+    },
+    {
+      "id": "screws",
+      "name": "Screws, anchors and brackets",
+      "unit": "set",
+      "note": "Fixing schedule and substrate needed; set contents and supplier price unknown."
+    },
+    {
+      "id": "finish",
+      "name": "Polish, sealer and finish",
+      "unit": "L",
+      "note": "Confirm coating system, face area, coats and coverage."
+    },
+    {
+      "id": "marble",
+      "name": "Standard white marble slab",
+      "unit": "m²",
+      "rate_low": 19375.039,
+      "rate_high": 26909.776,
+      "source_id": "S12",
+      "rate_conversion": {
+        "low_ft2": 1800,
+        "high_ft2": 2500
+      },
+      "note": "White marble is a reference option; quoted stone grade is unknown. Supply only; excludes edge work and polishing labour."
+    },
+    {
+      "id": "stoneglue",
+      "name": "Stone adhesive / bedding",
+      "unit": "kg",
+      "note": "Select compatible adhesive and bed thickness; coverage needs supplier data."
+    },
+    {
+      "id": "stonefinish",
+      "name": "Stone joint filler and sealer",
+      "unit": "L",
+      "note": "Joint length, porosity and approved system required."
+    },
+    {
+      "id": "wpc",
+      "name": "WPC desk facing panels",
+      "unit": "m²",
+      "note": "Confirm panel product, thickness and desk cut list; a hybrid-board alternative does not establish the specified WPC panel price."
+    },
+    {
+      "id": "pvc",
+      "name": "PVC decorative panels",
+      "unit": "m²",
+      "source_id": "S18",
+      "note": "Panel model, effective cover width, stock length and supply-only quotation required."
+    },
+    {
+      "id": "frame",
+      "name": "Panel battens / framing",
+      "unit": "m",
+      "note": "Material, section, spacing, perimeter and support details required."
+    },
+    {
+      "id": "trim",
+      "name": "Corner, joint and edge trims",
+      "unit": "m",
+      "note": "Measure perimeters and internal/external corners; identify compatible profile."
+    },
+    {
+      "id": "panelglue",
+      "name": "Panel adhesive / sealant",
+      "unit": "cartridge",
+      "whole_units": true,
+      "note": "Product compatibility and bead length per cartridge required."
+    },
+    {
+      "id": "glass",
+      "name": "12 mm toughened glass",
+      "unit": "m²",
+      "rate_low": 3767.369,
+      "rate_high": 4843.76,
+      "source_id": "S13",
+      "rate_conversion": {
+        "low_ft2": 350,
+        "high_ft2": 450
+      },
+      "note": "Glass supply only; cut size, door hardware and edge processing separate."
+    },
+    {
+      "id": "doorhardware",
+      "name": "Door fittings and handles",
+      "unit": "set",
+      "note": "Count leaves; select pivots/hinges/closer/lock. Exact door system unknown."
+    },
+    {
+      "id": "ac1",
+      "name": "Midea 1.0 ton AC unit",
+      "unit": "each",
+      "rate_low": 75050,
+      "rate_high": 75050,
+      "source_id": "S11",
+      "whole_units": true,
+      "note": "MSEZBU-12HRFN8 supply example; approved brand and included accessories unknown."
+    },
+    {
+      "id": "ac15",
+      "name": "Midea 1.5 ton AC option",
+      "unit": "each",
+      "rate_low": 103550,
+      "rate_high": 103550,
+      "source_id": "S11",
+      "whole_units": true,
+      "note": "MSEZCU-18HRFN8. Conditional: source says 1.5 MT; confirm cooling tonnage before selection."
+    },
+    {
+      "id": "copper",
+      "name": "Insulated copper pipe pair",
+      "unit": "m (pair)",
+      "note": "Measure indoor–outdoor route; diameter, insulation and factory-included pipe length unknown."
+    },
+    {
+      "id": "drain",
+      "name": "Condensate drain pipe",
+      "unit": "m",
+      "note": "Route, diameter and drainage endpoint required."
+    },
+    {
+      "id": "acmount",
+      "name": "Outdoor support and isolators",
+      "unit": "set",
+      "whole_units": true,
+      "note": "One provisional support set per outdoor unit; section and mounting details need approval."
+    },
+    {
+      "id": "cable",
+      "name": "Electrical cable and conduit",
+      "unit": "m (route)",
+      "note": "Measure circuit routes, conductor sizes and conduit separately; a route metre is not a conductor metre."
+    },
+    {
+      "id": "electrical",
+      "name": "Connectors, boxes and switches",
+      "unit": "set",
+      "note": "Circuit schedule and bill of fittings required; avoid overlap with electrical allowance."
+    },
+    {
+      "id": "strip",
+      "name": "LED strip supply",
+      "unit": "m",
+      "rate_low": 125,
+      "rate_high": 200,
+      "source_id": "S10",
+      "note": "Wattage, voltage, colour, IP rating and purchase reel length unselected; length is net installed run."
+    },
+    {
+      "id": "driver",
+      "name": "LED driver / power supply",
+      "unit": "each",
+      "whole_units": true,
+      "note": "Determine from strip watts per metre, voltage, circuit lengths and driver rating; not one arbitrary driver per item."
+    },
+    {
+      "id": "channel",
+      "name": "LED channel and diffuser",
+      "unit": "m",
+      "note": "One channel run per strip is a planning option; recess-only design may not need it."
+    },
+    {
+      "id": "panelLight",
+      "name": "18–24 W concealed LED panel",
+      "unit": "each",
+      "rate_low": 1000,
+      "rate_high": 1000,
+      "source_id": "S10",
+      "whole_units": true,
+      "note": "Approximate supply example; reception combines ceiling and wardrobe lights, so this is a conditional count scenario."
+    },
+    {
+      "id": "chandelier",
+      "name": "Chandelier supply option",
+      "unit": "each",
+      "rate_low": 7000,
+      "rate_high": 200000,
+      "source_id": "S10",
+      "whole_units": true,
+      "note": "Broad design alternatives; not a specification-matched product."
+    },
+    {
+      "id": "pendant",
+      "name": "Pendant / hanging fixture",
+      "unit": "each",
+      "whole_units": true,
+      "note": "Choose luminaire model and bulb inclusion; chandelier price is not substituted."
+    },
+    {
+      "id": "bulbs",
+      "name": "Lamps / bulbs if separate",
+      "unit": "each",
+      "whole_units": true,
+      "note": "Lamp count and included lamps require fixture selection."
+    },
+    {
+      "id": "putty",
+      "name": "Asian wall putty, 40 kg",
+      "unit": "bag (40 kg)",
+      "rate_low": 1600,
+      "rate_high": 1600,
+      "source_id": "S06",
+      "whole_units": true,
+      "note": "Code 8079 assumption; retailer wording needs verification against manufacturer sheet S07."
+    },
+    {
+      "id": "paint",
+      "name": "Tractor Advanced paint, 1 L",
+      "unit": "pack (1 L)",
+      "rate_low": 473,
+      "rate_high": 473,
+      "source_id": "S08",
+      "whole_units": true,
+      "note": "Planning grade; one-litre purchase packs rounded up. Bulk pack prices differ."
+    },
+    {
+      "id": "primer",
+      "name": "Compatible interior wall primer",
+      "unit": "L",
+      "source_id": "S16",
+      "note": "Manufacturer 1 L MRP 675 has unstated currency; excluded from NPR rate. Confirm compatible primer, currency and coverage."
+    },
+    {
+      "id": "abrasives",
+      "name": "Sandpaper and surface repair",
+      "unit": "set",
+      "note": "Surface inspection, repair quantity and abrasive specification required."
+    },
+    {
+      "id": "gypsum",
+      "name": "Approved gypsum board",
+      "unit": "m²",
+      "source_id": "S17",
+      "note": "Board thickness, type, bend radius and layer count need design approval; standard board supply price requested."
+    },
+    {
+      "id": "metalframe",
+      "name": "Ceiling channels and hangers",
+      "unit": "m",
+      "source_id": "S17",
+      "note": "Channel gauge, grid spacing, hangers and perimeter need a ceiling plan; split into profiles for procurement."
+    },
+    {
+      "id": "joint",
+      "name": "Joint compound and fibre tape",
+      "unit": "set",
+      "source_id": "S17",
+      "note": "Joint lengths and compatible system required; compound kg and tape m must be measured separately."
+    },
+    {
+      "id": "sign",
+      "name": "Sign substrate and brand letters",
+      "unit": "each",
+      "whole_units": true,
+      "note": "Board dimensions, letter material, illumination and fixing specification missing."
+    },
+    {
+      "id": "sofa",
+      "name": "Hardwood sofa frame timber",
+      "unit": "m³",
+      "note": "Member cut list and timber section/species needed; finished sofa price is not a raw-timber price."
+    },
+    {
+      "id": "foam",
+      "name": "Seat and back foam",
+      "unit": "m³",
+      "note": "Seat dimensions, foam thickness and density required."
+    },
+    {
+      "id": "fabric",
+      "name": "Upholstery fabric",
+      "unit": "linear m",
+      "note": "Fabric width, cutting pattern, cushions and seam allowances required."
+    },
+    {
+      "id": "upholstery",
+      "name": "Webbing, lining and upholstery fittings",
+      "unit": "set",
+      "note": "Support pattern, feet and fixing details required."
+    },
+    {
+      "id": "mirror",
+      "name": "Mirror glass cut panels",
+      "unit": "m²",
+      "note": "Mirror thickness, panel dimensions and finish unspecified. Toughened clear-glass rate does not price mirror glass."
+    },
+    {
+      "id": "woodframe",
+      "name": "Mirror frame timber",
+      "unit": "m",
+      "note": "Panel perimeter and timber section/profile required."
+    },
+    {
+      "id": "mirrorfix",
+      "name": "Mirror-safe adhesive and supports",
+      "unit": "set",
+      "note": "Panel weights, substrate, brackets and compatible adhesive required."
+    },
+    {
+      "id": "decorMirror",
+      "name": "Decorative mirror supply example",
+      "unit": "each",
+      "rate_low": 13500,
+      "rate_high": 13500,
+      "source_id": "S20",
+      "whole_units": true,
+      "note": "Historical retail example; refresh blocked. Actual design and dimensions unconfirmed."
+    },
+    {
+      "id": "sheer",
+      "name": "Sheer curtain cloth",
+      "unit": "linear m",
+      "rate_low": 300,
+      "rate_high": 800,
+      "source_id": "S15",
+      "note": "Cloth width, drop, fullness and pattern repeat required. Curtain m² is not directly cloth metres."
+    },
+    {
+      "id": "curtain",
+      "name": "Curtain cloth, grade unselected",
+      "unit": "linear m",
+      "note": "Changing-room privacy specification not given; do not assume sheer or blackout fabric."
+    },
+    {
+      "id": "rod",
+      "name": "Curtain rods / tracks",
+      "unit": "m",
+      "note": "Opening spans and number of runs required."
+    },
+    {
+      "id": "rings",
+      "name": "Hooks, rings and brackets",
+      "unit": "set",
+      "note": "Track type, hook spacing and fixing substrate required."
+    },
+    {
+      "id": "cementboard",
+      "name": "8 mm fibre cement board option",
+      "unit": "m²",
+      "rate_low": 721.18199,
+      "rate_high": 721.18199,
+      "source_id": "S19",
+      "rate_conversion": {
+        "low_ft2": 67,
+        "high_ft2": 67
+      },
+      "vat_status": "excludes_VAT",
+      "note": "Dated official supply benchmark; 8 mm is a planning option. Number of faces/layers and approved thickness unknown."
+    },
+    {
+      "id": "aluminium",
+      "name": "Aluminium partition framing",
+      "unit": "m",
+      "note": "Retains aluminium as specified. Member sizes, spacing, wall height and frame layout needed."
+    },
+    {
+      "id": "sink",
+      "name": "18×24 matte silver sink",
+      "unit": "each",
+      "rate_low": 2600,
+      "rate_high": 2600,
+      "source_id": "S14",
+      "whole_units": true,
+      "note": "Supply example; size and cabinet cut-out need confirmation."
+    },
+    {
+      "id": "tap",
+      "name": "Kitchen sink tap",
+      "unit": "each",
+      "whole_units": true,
+      "note": "One provisional tap per sink; model, finish and hot/cold arrangement unknown."
+    },
+    {
+      "id": "waste",
+      "name": "Waste fitting, trap and hoses",
+      "unit": "set",
+      "whole_units": true,
+      "note": "One provisional set per sink; list components after plumbing layout."
+    },
+    {
+      "id": "plumbing",
+      "name": "Water and waste pipework",
+      "unit": "m (route)",
+      "note": "Measure water and drain separately; diameters and fittings required."
+    },
+    {
+      "id": "heldRattan",
+      "name": "Rattan board and backing",
+      "unit": "m²",
+      "note": "Held; product and dimensions deferred."
+    },
+    {
+      "id": "heldGranite",
+      "name": "Granite tabletop and support",
+      "unit": "set",
+      "note": "Held; tabletop dimensions and support construction deferred."
+    },
+    {
+      "id": "heldGlassTable",
+      "name": "Shaped glass top and base",
+      "unit": "set",
+      "note": "Held; glass cut pattern and base deferred."
+    },
+    {
+      "id": "heldStool",
+      "name": "Seating stool components",
+      "unit": "set",
+      "note": "Held; seat count and design deferred."
+    },
+    {
+      "id": "heldSliding",
+      "name": "Sliding leaves, tracks and rollers",
+      "unit": "set",
+      "note": "Held; door system, leaf dimensions and count deferred."
+    },
+    {
+      "id": "heldDecor",
+      "name": "Decorative backing and paint system",
+      "unit": "set",
+      "note": "Held; artwork and fixture details deferred."
+    }
+  ]
+}

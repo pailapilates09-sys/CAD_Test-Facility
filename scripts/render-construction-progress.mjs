@@ -7,7 +7,7 @@ export function buildConstructionStatus({original,comparison,components,images,v
   evidence_as_of:[versions.updated_date,debt.reviewed_date,model.reviewed_at].filter(Boolean).sort().at(-1),
   reference_snapshot_date:comparison.reference_snapshot_date,
   scope:'Construction website, estimate evidence, column formwork and Pilates model status; separate from the four extraction lanes',
-  latest_version:versions.latest_version,milestone_tag:versions.milestone_tag,
+  latest_version:versions.latest_full_estimate_version??versions.latest_version,milestone_tag:versions.milestone_tag,
   estimate:{detailed_items:original.line_items.length,detailed_areas:original.sections.filter(x=>x.item_count).length,summary_allowances:original.sections.filter(x=>!x.item_count).map(x=>({id:x.id,name:x.name,amount:x.summary_amount})),currency:original.currency,held_items:held.map(x=>({id:x.id,title:x.title,amount:x.original.amount})),same_unit_reference_items:items.filter(x=>x.references.some(r=>r.unit_matches_estimate)).length,different_unit_only_items:items.filter(x=>x.references.length&&!x.references.some(r=>r.unit_matches_estimate)).length,missing_unit_items:items.filter(x=>x.si.unit===null).map(x=>x.id),original_values_retained:true},
   components:{both_reference_items:components.items.filter(x=>x.labour_reference_ids.length&&x.material_reference_ids.length).length,both_same_unit_reference_items:components.items.filter(x=>x.same_unit_labour_ids.length&&x.same_unit_material_ids.length).length,accepted_original_splits:components.items.filter(x=>x.accepted_split).length},
   images:{mapped_items:images.items.length,reference_assets:images.assets.length,project_photographs:images.coverage.project_photographs},
