@@ -1,6 +1,6 @@
 {
   "schema_version": "estimate-versions-1.0.0",
-  "updated_date": "2026-10-18",
+  "updated_date": "2026-10-19",
   "latest_version": "v8",
   "milestone_tag": "pilates-estimates-m1-2026-10-17",
   "versions": [
@@ -138,6 +138,6 @@
     "existing_urls_retained": true
   },
   "latest_full_estimate_version": "v7",
-  "workspace_milestone_tag": "workspace-m2-2026-10-18",
-  "workspace_milestone_manifest": "../../../milestones/workspace-m2-2026-10-18.json"
+  "workspace_milestone_tag": "workspace-m3-2026-10-19",
+  "workspace_milestone_manifest": "../../../milestones/workspace-m3-2026-10-19.json"
 }

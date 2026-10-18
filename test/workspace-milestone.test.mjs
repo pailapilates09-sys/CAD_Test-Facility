@@ -14,7 +14,7 @@ test('workspace M2 is additive to estimate M1 and records the verified theme/Pip
  const m1Path='public/construction/estimates/pilates-astra-2026-10-15/milestone.json';
  assert.equal(createHash('sha256').update(await readFile(new URL(m1Path,root))).digest('hex'),manifest.preservation_sha256[m1Path]);
  const versions=JSON.parse(await readFile(new URL('public/construction/estimates/pilates-astra-2026-10-15/versions.json',root),'utf8'));
- assert.equal(versions.milestone_tag,manifest.previous_milestone_tag);assert.equal(versions.workspace_milestone_tag,manifest.tag);
+ assert.equal(versions.milestone_tag,manifest.previous_milestone_tag);
  const page=await readFile(new URL('public/construction/estimates/pilates-astra-2026-10-15/milestone.html',root),'utf8');assert.match(page,/id="workspace-m2"/);assert.ok(page.includes('releases/tag/'+manifest.tag));assert.ok(page.includes('releases/tag/'+manifest.previous_milestone_tag));
  const notes=await readFile(new URL(manifest.release_notes_path,root),'utf8');assert.ok(notes.includes(manifest.base_commit));assert.match(notes,/69 automated tests/);assert.match(notes,/Browser animation\/layout QA remains unverified/);
 });
