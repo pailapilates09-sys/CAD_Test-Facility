@@ -488,10 +488,10 @@
     },
     {
       "id": "metalframe",
-      "name": "Ceiling channels and hangers",
+      "name": "Ceiling channel lengths",
       "unit": "m",
       "source_id": "S17",
-      "note": "Channel gauge, grid spacing, hangers and perimeter need a ceiling plan; split into profiles for procurement."
+      "note": "Total primary, secondary and perimeter member lengths from the planning layout. Profiles, gauge and stock lengths need separate supplier quotations."
     },
     {
       "id": "joint",
@@ -671,6 +671,14 @@
       "name": "Decorative backing and paint system",
       "unit": "set",
       "note": "Held; artwork and fixture details deferred."
+    },
+    {
+      "id": "hangers",
+      "name": "Ceiling hanger assemblies",
+      "unit": "each",
+      "whole_units": true,
+      "source_id": "S17",
+      "note": "Planning support count only. Suspension drops, fixing types and rated system require the selected ceiling design."
     }
   ]
 }

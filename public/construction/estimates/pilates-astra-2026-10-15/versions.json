@@ -104,7 +104,7 @@
       "id": "v8",
       "label": "Materials v8",
       "path": "./v8/",
-      "purpose": "Open each work for its materials, provisional quantities, Kathmandu supply rates and partial amounts",
+      "purpose": "Open each work for materials, editable work-based quantity models, Kathmandu supply rates and partial amounts",
       "units": "SI / purchase units",
       "permanent_original_markers": false,
       "position_overview": false,

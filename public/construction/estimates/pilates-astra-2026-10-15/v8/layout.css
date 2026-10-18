@@ -1,0 +1,30 @@
+/* V8 only: shared workspace headers intentionally use nowrap; material notes must wrap. */
+.v8-page .notes{padding:20px 24px;overflow-wrap:anywhere}
+.v8-page .container>*{min-width:0}
+.v8-page .page-title>div,.v8-page .v8-work-intro>*,.v8-page .v8-facts>div{min-width:0}
+.v8-page .page-title,.v8-page .v8-facts,.v8-page .v8-breadcrumb,.v8-page .v8-pager,.v8-page .workspace-footer{overflow-wrap:anywhere}
+.v8-page .plain-button{white-space:normal;overflow-wrap:anywhere;text-align:center}
+.v8-page .table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain}
+.v8-index-table,.v8-material-table{table-layout:fixed;width:100%}
+.v8-index-table{min-width:850px}
+.v8-material-table{min-width:1180px}
+.v8-index-table th,.v8-index-table td,.v8-material-table th,.v8-material-table td{white-space:normal;overflow-wrap:anywhere;word-break:normal;vertical-align:top;min-width:0;max-width:none}
+.v8-index-table th:first-child,.v8-material-table th,.v8-material-table td:last-child{min-width:0;max-width:none}
+.v8-index-table th[scope=row],.v8-material-table th[scope=row]{font-weight:600;border-bottom:1px solid #edf1f2}
+.v8-index-table small,.v8-material-table small{white-space:normal;overflow-wrap:anywhere;font-weight:400}
+.v8-index-table a,.v8-material-table a,.v8-material-table summary{white-space:normal;overflow-wrap:anywhere}
+.v8-index-table .index-work{width:28%}.v8-index-table .index-quantity{width:18%}.v8-index-table .index-original{width:16%}.v8-index-table .index-rows{width:14%}.v8-index-table .index-subtotal{width:24%}
+.v8-material-table .material-name{width:24%}.v8-material-table .material-quantity{width:16%}.v8-material-table .material-rate{width:10%}.v8-material-table .material-amount{width:16%}.v8-material-table .material-basis{width:24%}
+.v8-material-table input[type=number]{width:100%;max-width:145px;min-width:0;box-sizing:border-box;font-variant-numeric:tabular-nums}
+.v8-material-table output{display:block;white-space:normal;overflow-wrap:anywhere;font-variant-numeric:tabular-nums;line-height:1.6}
+.v8-material-table details{max-width:100%}.v8-material-table details input{max-width:100%}
+.v8-page .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
+.v8-model-summary{border-left:3px solid var(--teal);padding:6px 14px;background:#f3f7f5;font-size:13px;margin:16px 0}.v8-model-summary p{margin:4px 0}
+.v8-model-inputs{margin:18px 0}.v8-model-inputs summary{font-weight:600;cursor:pointer}
+.v8-model-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.v8-model-grid label{display:grid;gap:5px;font-size:12px;min-width:0;align-content:start}
+.v8-model-grid input{width:100%;min-width:0;border:1px solid #a3aaa5;border-radius:4px;padding:9px;background:#fff;color:var(--ink);min-height:42px}
+.v8-model li{margin:8px 0;font-size:13px}.v8-model #model-status{font-size:12px}
+@media(max-width:700px){.v8-page .notes{padding:18px}.v8-model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v8-page .v8-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.v8-page .v8-tools label{min-width:0}.v8-page .v8-tools input{width:100%}.v8-page .page-title .plain-button{display:inline-block;margin-top:12px}}
+@media(max-width:400px){.v8-model-grid{grid-template-columns:1fr}.v8-page .v8-facts{grid-template-columns:1fr}}
+@media print{.v8-page .table-scroll{overflow:visible}.v8-material-table,.v8-index-table{min-width:0;width:100%;table-layout:fixed}.v8-page .v8-model-inputs form{display:none}.v8-model-summary{border:0;padding:0}.v8-page .v8-model li{font-size:9px}.v8-page .notes{padding:12px}.v8-page .v8-material-table input[type=number]{max-width:none;padding:0}.v8-material-table .material-name{width:23%}.v8-material-table .material-quantity{width:11%}.v8-material-table .material-rate{width:10%}.v8-material-table .material-amount{width:16%}.v8-material-table .material-basis{width:30%}}

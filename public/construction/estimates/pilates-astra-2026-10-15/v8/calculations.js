@@ -7,6 +7,7 @@ export function numberOrNull(value) {
  const n=Number(value); return Number.isFinite(n) && n>=0 ? n : null;
 }
 export const moneyRound=n=>Math.round((n+Number.EPSILON)*100)/100;
+export const quantityRound=(n,whole=false)=>n===null?null:Math.max(0,whole?Math.ceil(n):Math.ceil((n-1e-9)*1000)/1000);
 export function calculateRow(row, draft={}) {
  const q=numberOrNull(Object.hasOwn(draft,'quantity')?draft.quantity:row.quantity);
  const low=numberOrNull(Object.hasOwn(draft,'rate_low')?draft.rate_low:row.rate_low);
