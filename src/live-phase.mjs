@@ -2,7 +2,7 @@ export const livePhase = {
   "phase": "235",
   "title": "Run10 complete \u201414 checkpoints through CP218",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-18T13:41:51.255563+00:00",
+  "completedAt": "2026-10-18T13:44:29.796980+00:00",
   "checkpoint": "MSCH-CORPUS-CP218",
   "before": {
     "rows": 2867,
@@ -39,7 +39,7 @@ export const livePhase = {
   "newFiles": 64,
   "newKnownBytes": 35639658,
   "sessionStartedAt": "2026-10-18T13:02:32.881Z",
-  "sessionElapsedMinutes": 39.30624271666667,
+  "sessionElapsedMinutes": 41.948599666666674,
   "knownBytes": 46387637722,
   "sessionReport": {
     "startedAt": "2026-10-18T13:02:32.881Z",

@@ -1,6 +1,6 @@
 {
   "schema": "cad-facility.four-project-recovery.v1",
-  "checkedAt": "2026-10-18T13:41:51.255563+00:00",
+  "checkedAt": "2026-10-18T13:44:29.796980+00:00",
   "timezone": "Asia/Kathmandu",
   "lastSourceSessionCompletedAt": "2026-10-18T13:37:08.697Z",
   "recoveryStatus": "RUN10_CP218_MAIN_ACKED",
@@ -279,14 +279,14 @@
   },
   "execution": {
     "startedAt": "2026-10-18T13:02:32.881Z",
-    "stoppedAt": "2026-10-18T13:41:51.255563+00:00",
+    "stoppedAt": "2026-10-18T13:44:29.796980+00:00",
     "sourceStoppedAt": "2026-10-18T13:37:08.697Z",
     "inProgress": false,
     "durationPolicy": "maximum",
     "maximumMinutes": 60,
     "deadline": "2026-10-18T14:02:32.881000+00:00",
     "maximumWindowRespected": true,
-    "elapsedMinutes": 39.30624271666667,
+    "elapsedMinutes": 41.948599666666674,
     "sourceElapsedMinutes": 34.59693333333333,
     "added": {
       "LSA": 0,
@@ -702,6 +702,6 @@
     "mainNativePostExcludesOnlyOwnRegistration": true,
     "otherLaneGateRechecks": "All three Local SyncStates re-read and Main cursors agree; raw-progress fetch results recorded in closeout package; source gates retained.",
     "sourceCheckpointCount": 14,
-    "closeoutElapsedMinutes": 4.709309383333334
+    "closeoutElapsedMinutes": 7.351666333333341
   }
 }

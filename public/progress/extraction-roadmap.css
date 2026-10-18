@@ -1,0 +1,13 @@
+/* The extraction roadmap keeps stage order and gates readable at narrow widths. */
+.extraction-stages{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;padding:0;margin:4px 0 22px;counter-reset:none}
+.extraction-stages li{min-width:0;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:18px}
+.extraction-stages .stage-number{display:inline-block;color:var(--blue);font-size:13px;font-weight:800;letter-spacing:.08em;margin-bottom:10px}
+.extraction-stages h3{font-size:16px;margin:0 0 8px}.extraction-stages p{font-size:13px;line-height:1.65;color:var(--muted);margin:0}
+.extraction-lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:24px 0}
+.extraction-lane{min-width:0;border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--surface)}
+.roadmap-card-head{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}.roadmap-card-head h3{margin:4px 0 0}.roadmap-card-head p{margin:0}
+.roadmap-current{font-size:14px;color:var(--muted);margin:20px 0}.roadmap-current b{color:var(--ink)}
+.roadmap-next{background:var(--blue-soft);border-left:3px solid var(--blue);padding:14px 16px;border-radius:0 10px 10px 0}.roadmap-next h4{font-size:13px;color:var(--blue);margin:0 0 5px}.roadmap-next p{font-size:14px;margin:0;color:var(--ink)}
+.extraction-lane details{margin-top:18px}.extraction-lane summary{cursor:pointer;font-size:14px;font-weight:750;color:var(--teal);padding:6px 0}.extraction-lane details p{font-size:14px;line-height:1.75;color:var(--muted);margin:12px 0 0}
+@media(max-width:1000px){.extraction-stages{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.extraction-stages,.extraction-lanes{grid-template-columns:minmax(0,1fr)}.extraction-stages li{padding:16px}.extraction-stages .stage-number{float:left;margin-right:16px;margin-bottom:0}.extraction-stages h3,.extraction-stages p{margin-left:40px}.extraction-lane{padding:18px}.extraction-roadmap .chart-body{min-width:0}}
