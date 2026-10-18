@@ -1,13 +1,14 @@
+import {mobileQuery} from './mobile-config.js';
 export const storageKeys={theme:'cad-theme',flight:'cad-flight',position:'cad-pip-position'};
 export const clamp=(value,low,high)=>Math.min(high,Math.max(low,value));
 export function readPreference(storage,key){try{return storage.getItem(key)}catch{return null}}
 export function writePreference(storage,key,value){try{storage.setItem(key,value)}catch{/* Private modes can block storage; controls still work. */}}
 
-export function flightBounds(width,height){
- const size=width<=700?92:116;
+export function flightBounds(width,height,compact=width<=700){
+ const size=compact?72:116;
  const left=Math.min(12,Math.max(0,(width-size)/2)),right=Math.max(left,width-size-left);
- const top=Math.min(width<=700?164:100,Math.max(0,height-size-12));
- return {left,right,top,bottom:Math.max(top,height-size-108),size};
+ const top=Math.min(compact?(height<=500?64:144):100,Math.max(0,height-size-12));
+ return {left,right,top,bottom:Math.max(top,height-size-(compact?90:108)),size};
 }
 export function flightPoint(elapsed,scroll=0){
  return {x:0.5+0.47*Math.sin(elapsed/6500),y:0.5+0.44*Math.sin(elapsed/4300+scroll*Math.PI*2+0.4)};
@@ -27,6 +28,7 @@ export function initExperience(win=window,doc=document){
  const controls=rail.querySelector('.experience-controls'),themes=[...rail.querySelectorAll('[data-theme-choice]')];
  const flightButton=doc.getElementById('flight-control'),position=doc.getElementById('pip-position'),facing=doc.getElementById('pip-facing');
  const reduced=win.matchMedia('(prefers-reduced-motion: reduce)'),systemTheme=win.matchMedia('(prefers-color-scheme: dark)');
+ const compact=win.matchMedia(mobileQuery);
  // Accessing storage itself can throw (not just getItem).
  const storage=name=>{try{return win[name]}catch{return null}};
  const local=storage('localStorage'),session=storage('sessionStorage');
@@ -41,7 +43,7 @@ export function initExperience(win=window,doc=document){
  const initial=restoreFlight(readPreference(session,storageKeys.position));
  let current={x:initial.x,y:initial.y},frame=0,last=0,elapsed=initial.elapsed,scroll=0,navTarget=null,pointer=null,direction=1;
  function place(){
-  const bounds=flightBounds(win.innerWidth,win.innerHeight);
+  const bounds=flightBounds(win.innerWidth,win.innerHeight,compact.matches||win.innerWidth<=700);
   position.style.transform=`translate3d(${Math.round(bounds.left+current.x*(bounds.right-bounds.left))}px, ${Math.round(bounds.top+current.y*(bounds.bottom-bounds.top))}px, 0)`;
   facing.style.transform=`scaleX(${direction})`;
   position.dataset.ready='true';
@@ -52,7 +54,7 @@ export function initExperience(win=window,doc=document){
   // A broad, smooth flight crosses the viewport; scrolling bends the route.
   const destination=navTarget&&elapsed<navTarget.until?navTarget:flightPoint(elapsed,scroll);
   let goal={x:destination.x,y:destination.y};
-  const bounds=flightBounds(win.innerWidth,win.innerHeight),width=bounds.right-bounds.left,height=bounds.bottom-bounds.top;
+  const bounds=flightBounds(win.innerWidth,win.innerHeight,compact.matches||win.innerWidth<=700),width=bounds.right-bounds.left,height=bounds.bottom-bounds.top;
   if(pointer){
    const dx=bounds.left+current.x*width+bounds.size/2-pointer.x,dy=bounds.top+current.y*height+bounds.size/2-pointer.y;
    if(Math.hypot(dx,dy)<140){
@@ -79,6 +81,7 @@ export function initExperience(win=window,doc=document){
  function scrollTarget(){const range=root.scrollHeight-win.innerHeight;scroll=range>0?clamp(win.scrollY/range,0,1):0;navTarget=null}
  flightButton.addEventListener('click',()=>{flightPaused=!flightPaused;writePreference(local,storageKeys.flight,flightPaused?'paused':'active');applyFlight()});
  reduced.addEventListener('change',applyFlight);
+ compact.addEventListener('change',place);
  win.addEventListener('scroll',scrollTarget,{passive:true});
  win.addEventListener('resize',()=>{scrollTarget();place()},{passive:true});
  doc.addEventListener('pointermove',event=>{pointer={x:event.clientX,y:event.clientY}},{passive:true});
