@@ -1,9 +1,9 @@
 export const livePhase = {
-  "phase": "169",
-  "title": "Extraction continuation — active saved checkpoint",
-  "status": "ACTIVE_SAVED_CHECKPOINT",
-  "completedAt": "2026-10-18T02:19:55.585Z",
-  "checkpoint": "MSCH-CORPUS-CP152",
+  "phase": "178",
+  "title": "Extraction continuation — maximum60-minute run closed",
+  "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
+  "completedAt": "2026-10-18T02:43:56.630Z",
+  "checkpoint": "MSCH-CORPUS-CP161",
   "before": {
     "rows": 1852,
     "folders": 364,
@@ -11,12 +11,12 @@ export const livePhase = {
     "pending": 186
   },
   "after": {
-    "rows": 1891,
-    "folders": 383,
-    "files": 1508,
-    "pending": 193
+    "rows": 2064,
+    "folders": 412,
+    "files": 1652,
+    "pending": 213
   },
-  "completedBatches": 12,
+  "completedBatches": 21,
   "scope": "User-authorized remaining-debt clearance and maximum60-minute MSCH FIFO metadata catalogue continuation. Source bodies, source objects and schedules unchanged.",
   "providerReadback": "PASS",
   "localRegistration": "VERIFIED",
@@ -25,25 +25,25 @@ export const livePhase = {
     "maximumMinutes": 60,
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
-    "sourceElapsedMinutes": 28.6497,
+    "sourceElapsedMinutes": 49.88313333333333,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 143,
-  "mainCursor": 143,
-  "nextBatch": "B153",
-  "nextTarget": "WorldClim_Climate Data",
-  "newRows": 39,
-  "newFolders": 19,
-  "newFiles": 20,
-  "newKnownBytes": 687390876,
+  "localHighWater": 152,
+  "mainCursor": 152,
+  "nextBatch": "B162",
+  "nextTarget": "PythonSavedFiles",
+  "newRows": 212,
+  "newFolders": 48,
+  "newFiles": 164,
+  "newKnownBytes": 5237188554,
   "sessionStartedAt": "2026-10-18T01:51:16.603Z",
-  "sessionElapsedMinutes": 28.6497,
-  "knownBytes": 22647661948,
+  "sessionElapsedMinutes": 49.88313333333333,
+  "knownBytes": 27197459626,
   "sessionReport": {
     "startedAt": "2026-10-18T01:51:16.603Z",
-    "sourceStoppedAt": null,
-    "milestones": 12,
+    "sourceStoppedAt": "2026-10-18T02:41:09.591Z",
+    "milestones": 21,
     "advancedLanes": 1,
     "MSCS": {
       "checkpoint": "AQ-CP87 /B075",
@@ -72,17 +72,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP152 /B152",
+      "checkpoint": "CP161 /B161",
       "beforeRows": 1852,
-      "afterRows": 1891,
-      "addedFolders": 19,
-      "addedFiles": 20,
-      "addedMetadataBytes": 687390876,
-      "pending": 193,
-      "local": 143,
-      "mainCursor": 143,
-      "notice": "N139 ACKED",
-      "next": "B153"
+      "afterRows": 2064,
+      "addedFolders": 48,
+      "addedFiles": 164,
+      "addedMetadataBytes": 5237188554,
+      "pending": 213,
+      "local": 152,
+      "mainCursor": 152,
+      "notice": "N148 ACKED",
+      "next": "B162"
     },
     "AEC": {
       "status": "BLOCKED_ORIGINAL_TERMINAL_UNAVAILABLE",
@@ -100,21 +100,21 @@ export const livePhase = {
     ],
     "debtClearance": {
       "initialEvents": 0,
-      "newEvents": 12,
-      "totalAcknowledgedEvents": 12,
+      "newEvents": 21,
+      "totalAcknowledgedEvents": 21,
       "remainingEvents": 0,
       "recoveredEventsAcknowledged": 0,
-      "newEventsAcknowledged": 12,
+      "newEventsAcknowledged": 21,
       "pending": 0
     },
     "remaining": [
       "LSA historical2 files /9304 bytes unresolved.",
       "AEC original terminal unavailable (fresh404).",
       "MSCS oversized/native policy gate.",
-      "MSCH 193 FIFO folders; source-content extraction remains."
+      "MSCH 213 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 144,
+  "scannedFolders": 153,
   "phases": [
     {
       "phase": "01",
@@ -1323,7 +1323,70 @@ export const livePhase = {
     {
       "phase": "170",
       "lane": "MSCH",
-      "work": "B153: WorldClim_Climate Data",
+      "work": "B153 /CP153: +3 records; 1894 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "171",
+      "lane": "MSCH",
+      "work": "B154 /CP154: +8 records; 1902 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "172",
+      "lane": "MSCH",
+      "work": "B155 /CP155: +3 records; 1905 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "173",
+      "lane": "MSCH",
+      "work": "B156 /CP156: +98 records; 2003 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "174",
+      "lane": "MSCH",
+      "work": "B157 /CP157: +2 records; 2005 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "175",
+      "lane": "MSCH",
+      "work": "B158 /CP158: +39 records; 2044 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "176",
+      "lane": "MSCH",
+      "work": "B159 /CP159: +2 records; 2046 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "177",
+      "lane": "MSCH",
+      "work": "B160 /CP160: +6 records; 2052 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "178",
+      "lane": "MSCH",
+      "work": "B161 /CP161: +12 records; 2064 total",
+      "stop": "Source/Local readback; Main ACKED",
+      "status": "Complete"
+    },
+    {
+      "phase": "179",
+      "lane": "MSCH",
+      "work": "B162: PythonSavedFiles",
       "stop": "One verified checkpoint and Local closeout",
       "status": "Queued"
     }
