@@ -1,13 +1,10 @@
 # CAD Test Facility
 
-## Current extraction checkpoint — Run 12, 19 October 2026
+## Current extraction checkpoint — Run 13, 20 October 2026
 
-CP246 / Local/Main237/237 is verified and acknowledged. Fourteen metadata checkpoints added 199 identities; the MSCH catalogue has 3,682 records (832 folders, 2,850 files), with 548 folders queued. Next: B247 — Basin_1. Source text/OCR and model execution remain pending. AEC G075 checkpoint is readable; G076 terminal recovery remains incomplete.
+CP260 / Local/Main251/251 is verified and acknowledged. Fourteen metadata checkpoints added 20 identities; the MSCH catalogue has 3,702 records (836 folders, 2,866 files), with 538 folders queued. Next: B261 — datacasts-main. Source text/OCR and model execution remain pending. AEC G075 checkpoint is readable; G076 terminal recovery remains incomplete.
 
-[Current Progress](https://pailapilates09-sys.github.io/CAD_Test-Facility/progress/) · [Run12 report](progress/recovery/2026-10-19-run12/cp246/report.md).
-
-
-Interactive product drawings for the browser, published with GitHub Pages and Actions. First product: a preliminary column formwork assembly, 16 in x 16 in clear, with 96 in panel height. All displayed dimensions are inches.
+[Current Progress](https://pailapilates09-sys.github.io/CAD_Test-Facility/progress/) · [Run13 report](progress/recovery/2026-10-20-run13/cp260/report.md).
 
 ## Workspace pages
 
@@ -17,7 +14,7 @@ Preservation/rollback baseline: commit `bbf90547c6e11b2754415e234fc310ea42bf62c8
 - `/cad/`: the original formwork facility, including its model, five drawings, quantities and downloads. Geometry, vendor assets and the inch-only PDF are preserved.
 - `/progress/`: the current recovered four-project summary, followed by the preserved 15 October source session and expandable 12 October onboarding charts. Legacy root links such as `/#model` redirect to the equivalent CAD section.
 
-The current recovery pointer is `progress/recovery/current.json`; it selects a dated status JSON and report. The build renders the current summary directly into HTML and publishes JSON/report downloads. This section is available without JavaScript. See [the current run report](progress/recovery/2026-10-19-run12/cp246/report.md).
+The current recovery pointer is `progress/recovery/current.json`; it selects a dated status JSON and report. The build renders the current summary directly into HTML and publishes JSON/report downloads. This section is available without JavaScript. See [the current run report](progress/recovery/2026-10-20-run13/cp260/report.md).
 
 The historical onboarding snapshot is `src/progress-data.mjs`. It contains bounded reviewed status facts, not the full handover or private source bodies. `src/progress.mjs` renders it with native SVG and an expandable tree. It is a one-time snapshot; it has no connected-account credentials, live Drive API access or automatic refresh.
 
