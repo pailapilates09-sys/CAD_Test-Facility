@@ -1,19 +1,19 @@
 export const livePhase = {
-  "phase": "249",
-  "title": "Run11 complete — 14 checkpoints through CP232",
+  "phase": "263",
+  "title": "Run12 complete — 14 checkpoints through CP246",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-19T00:29:48.373Z",
-  "checkpoint": "MSCH-CORPUS-CP232",
+  "completedAt": "2026-10-19T05:11:17.758961+00:00",
+  "checkpoint": "MSCH-CORPUS-CP246",
   "before": {
-    "rows": 2968,
-    "folders": 813,
-    "files": 2155,
-    "pending": 557
-  },
-  "after": {
     "rows": 3483,
     "folders": 818,
     "files": 2665,
+    "pending": 548
+  },
+  "after": {
+    "rows": 3682,
+    "folders": 832,
+    "files": 2850,
     "pending": 548
   },
   "completedBatches": 14,
@@ -26,24 +26,24 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 41.4327,
+    "sourceElapsedMinutes": 39.8571,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 223,
-  "mainCursor": 223,
-  "nextBatch": "B233",
-  "nextTarget": "Thesis_pro_01_PRJ.gdb",
-  "newRows": 515,
-  "newFolders": 5,
-  "newFiles": 510,
-  "newKnownBytes": 4931883,
-  "sessionStartedAt": "2026-10-18T23:44:27.626Z",
-  "sessionElapsedMinutes": 45.34578333333334,
-  "knownBytes": 46392569605,
+  "localHighWater": 237,
+  "mainCursor": 237,
+  "nextBatch": "B247",
+  "nextTarget": "Basin_1",
+  "newRows": 199,
+  "newFolders": 14,
+  "newFiles": 185,
+  "newKnownBytes": 2790534930,
+  "sessionStartedAt": "2026-10-19T04:25:50.461Z",
+  "sessionElapsedMinutes": 45.45495,
+  "knownBytes": 49183104535,
   "sessionReport": {
-    "startedAt": "2026-10-18T23:44:27.626Z",
-    "sourceStoppedAt": "2026-10-19T00:25:53.588Z",
+    "startedAt": "2026-10-19T04:25:50.461Z",
+    "sourceStoppedAt": "2026-10-19T05:05:41.887Z",
     "milestones": 14,
     "advancedLanes": 1,
     "MSCS": {
@@ -73,23 +73,25 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP232 /B232",
-      "beforeRows": 2968,
-      "afterRows": 3483,
-      "addedFolders": 5,
-      "addedFiles": 510,
-      "addedMetadataBytes": 4931883,
+      "checkpoint": "CP246 /B246",
+      "beforeRows": 3483,
+      "afterRows": 3682,
+      "addedFolders": 14,
+      "addedFiles": 185,
+      "addedMetadataBytes": 2790534930,
       "pending": 548,
-      "local": 223,
-      "mainCursor": 223,
-      "notice": "N180 ACKED",
-      "next": "B233"
+      "local": 237,
+      "mainCursor": 237,
+      "notice": "N191 ACKED",
+      "next": "B247"
     },
     "AEC": {
-      "status": "BLOCKED_ORIGINAL_TERMINAL_UNAVAILABLE",
+      "status": "TERMINAL_RECONCILIATION_REQUIRED",
       "local": 11,
       "mainCursor": 11,
-      "newRateWrites": 0
+      "newRateWrites": 0,
+      "g075CheckpointReadable": true,
+      "g076TerminalRecovered": false
     },
     "sourceContentExtraction": false,
     "sourceMutation": "NONE",
@@ -110,12 +112,12 @@ export const livePhase = {
     },
     "remaining": [
       "LSA historical 2 files /9,304 bytes unresolved.",
-      "AEC original terminal unavailable (fresh404).",
+      "AEC G075 checkpoint readable; G076 terminal not recovered.",
       "MSCS oversized/native hashing-policy gate.",
       "MSCH 548 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 224,
+  "scannedFolders": 238,
   "phases": [
     {
       "phase": "01",
@@ -1886,6 +1888,104 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B232 scratch.gdb: 44 metadata records",
       "stop": "MSCH-CORPUS-CP232 +Local/Main223/223 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "250",
+      "lane": "MSCH /Local /Main",
+      "work": "B233 Thesis_pro_01_PRJ.gdb: 133 metadata records",
+      "stop": "MSCH-CORPUS-CP233 +Local/Main224/224 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "251",
+      "lane": "MSCH /Local /Main",
+      "work": "B234 Trash: 4 metadata records",
+      "stop": "MSCH-CORPUS-CP234 +Local/Main225/225 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "252",
+      "lane": "MSCH /Local /Main",
+      "work": "B235 .backups: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP235 +Local/Main226/226 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "253",
+      "lane": "MSCH /Local /Main",
+      "work": "B236 Index: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP236 +Local/Main227/227 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "254",
+      "lane": "MSCH /Local /Main",
+      "work": "B237 .backups: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP237 +Local/Main228/228 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "255",
+      "lane": "MSCH /Local /Main",
+      "work": "B238 GpMessages: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP238 +Local/Main229/229 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "256",
+      "lane": "MSCH /Local /Main",
+      "work": "B239 ImportLog: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP239 +Local/Main230/230 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "257",
+      "lane": "MSCH /Local /Main",
+      "work": "B240 Index: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP240 +Local/Main231/231 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "258",
+      "lane": "MSCH /Local /Main",
+      "work": "B241 Topo_pro_01.gdb: 41 metadata records",
+      "stop": "MSCH-CORPUS-CP241 +Local/Main232/232 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "259",
+      "lane": "MSCH /Local /Main",
+      "work": "B242 .renv-backup-44340-rasterad34c603c8: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP242 +Local/Main233/233 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "260",
+      "lane": "MSCH /Local /Main",
+      "work": "B243 2021: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP243 +Local/Main234/234 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "261",
+      "lane": "MSCH /Local /Main",
+      "work": "B244 2022: 6 metadata records",
+      "stop": "MSCH-CORPUS-CP244 +Local/Main235/235 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "262",
+      "lane": "MSCH /Local /Main",
+      "work": "B245 data: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP245 +Local/Main236/236 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "263",
+      "lane": "MSCH /Local /Main",
+      "work": "B246 Terrain_1: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP246 +Local/Main237/237 acknowledged by final reconciliation",
       "status": "Complete - stopped"
     }
   ]
