@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {money,quantity} from '../public/construction/estimates/pilates-astra-2026-10-15/v2/v2.js';
+import {renderVersionRegister} from '../scripts/linked-estimate-views.mjs';
 const root=new URL('../',import.meta.url),base='public/construction/estimates/pilates-astra-2026-10-15/v2/';
 const g=JSON.parse(await readFile(new URL(base+'hierarchy.json',root)));
 const d=JSON.parse(await readFile(new URL('construction/estimates/pilates-astra-2026-10-15/data/estimate.json',root)));
@@ -31,7 +32,7 @@ test('v2 retains access to original evidence and links through the original page
  const html=await readFile(new URL(base+'index.html',root),'utf8');
  const original=await readFile(new URL('public/construction/estimates/pilates-astra-2026-10-15/index.html',root),'utf8');
  const hub=await readFile(new URL('public/construction/index.html',root),'utf8');
- const register=await readFile(new URL('public/construction/estimates/pilates-astra-2026-10-15/milestone.html',root),'utf8');assert.match(original,/href="\.\/v2\/"/);assert.match(hub,/pilates-astra-2026-10-15\/milestone\.html/);assert.match(register,/href="\.\/v2\/"/);
+ const register=renderVersionRegister(JSON.parse(await readFile(new URL('public/construction/estimates/pilates-astra-2026-10-15/versions.json',root),'utf8')));assert.match(original,/href="\.\/v2\/"/);assert.match(hub,/pilates-astra-2026-10-15\/milestone\.html/);assert.match(register,/href="\.\/v2\/"/);
  assert.match(html,/<dialog[^>]+aria-labelledby="detail-title"/);
  assert.match(html,/href="\.\.\/data\/estimate.json"/);
  assert.match(html,/href="\.\/hierarchy.json"/);

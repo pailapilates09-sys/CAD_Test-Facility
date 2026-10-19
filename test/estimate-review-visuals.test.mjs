@@ -29,7 +29,8 @@ test('permanent boards and top comparison show original markers immediately, wit
   const expected=data.items.flatMap(x=>x.references).filter(r=>r.unit_matches_estimate&&r.currency==='NPR').length;assert.equal((html.match(/data-estimate-marker=/g)||[]).length,expected);assert.doesNotMatch(html,/data-range-toggle|Show original marker|Hide original marker/);assert.equal((html.match(/data-range-item=/g)||[]).length,51);assert.match(html,/Original shown · NPR assumed/);
   globalThis.fetch=async()=>({ok:true,json:async()=>structuredClone(data)});await initComparison('test',{permanentOriginal:true});assert.match(h.el('comparison-chart').innerHTML,/Original estimate overlaid/);assert.match(h.el('comparison-note').textContent,/Scenario only/);
  }finally{h.cleanup()}
- for(const version of ['v6','v7']){const html=await readFile(new URL(version+'/index.html',base),'utf8');assert.doesNotMatch(html,/id="assume-npr"|id="board-assume-npr"|id="graph-area"|id="graph-items"|id="graph-evidence"/);for(const id of ['range-board','position-overview','cost-treemap'])assert.ok(html.includes('id="'+id+'"'))}
+ const graphModule=await readFile(new URL('shared/graphs.js',base),'utf8');assert.match(graphModule,/permanentOriginal:true/);
+ for(const version of ['v6','v7']){const html=await readFile(new URL(version+'/index.html',base),'utf8');assert.doesNotMatch(html,/id="assume-npr"|id="board-assume-npr"|id="graph-area"|id="graph-items"|id="graph-evidence"|shared\/graphs.js/);assert.match(html,/<!-- LINKED_VIEW -->/);}
 });
 test('treemap and position inspection work by pointer, keyboard focus and selection, and recompute for filtered and empty populations',()=>{
  const h=harness();try{

@@ -1,7 +1,7 @@
 {
   "schema_version": "estimate-versions-1.0.0",
   "updated_date": "2026-10-19",
-  "latest_version": "v8",
+  "latest_version": "v10",
   "milestone_tag": "pilates-estimates-m1-2026-10-17",
   "versions": [
     {
@@ -54,65 +54,96 @@
     },
     {
       "id": "v5",
-      "label": "Compare v5",
+      "label": "Comparisons v5",
       "path": "./v5/",
-      "purpose": "Permanent original markers, every-item ranges, position overview and cost treemap",
+      "purpose": "Original quoted rates against source-specific public references",
       "units": "SI / counts",
-      "permanent_original_markers": true,
-      "position_overview": true,
-      "cost_treemap": true,
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
       "reference_images": false,
-      "component_evidence": false
+      "component_evidence": false,
+      "source_register": "v9/register.json"
     },
     {
       "id": "v5.1",
       "label": "Graphs v5.1",
       "path": "./v5.1/",
-      "purpose": "Synchronized comparison visuals with original area tables",
+      "purpose": "Permanent original markers, every-work ranges, position overview and cost treemap",
       "units": "SI / counts",
       "permanent_original_markers": true,
       "position_overview": true,
       "cost_treemap": true,
       "reference_images": false,
-      "component_evidence": false
+      "component_evidence": false,
+      "source_register": "v9/register.json"
     },
     {
       "id": "v6",
       "label": "Images v6",
       "path": "./v6/",
-      "purpose": "Latest comparison visuals plus all 51 reference-image mappings",
+      "purpose": "Reference images, scope qualifications and image credits",
       "units": "SI / counts",
-      "permanent_original_markers": true,
-      "position_overview": true,
-      "cost_treemap": true,
-      "reference_images": true,
-      "component_evidence": false
-    },
-    {
-      "id": "v7",
-      "label": "Components v7",
-      "path": "./v7/",
-      "purpose": "Latest visuals/images plus separate labour/material evidence and temporary rate builder",
-      "units": "SI / counts",
-      "permanent_original_markers": true,
-      "position_overview": true,
-      "cost_treemap": true,
-      "reference_images": true,
-      "component_evidence": true
-    },
-    {
-      "id": "v8",
-      "label": "Materials v8",
-      "path": "./v8/",
-      "purpose": "Open each work for materials, editable work-based quantity models, Kathmandu supply rates and partial amounts",
-      "units": "SI / purchase units",
       "permanent_original_markers": false,
       "position_overview": false,
       "cost_treemap": false,
       "reference_images": true,
+      "component_evidence": false,
+      "source_register": "v9/register.json"
+    },
+    {
+      "id": "v7",
+      "label": "Labour + materials v7",
+      "path": "./v7/",
+      "purpose": "Separate labour, material and combined-package evidence",
+      "units": "SI / counts",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": false,
       "component_evidence": true,
+      "source_register": "v9/register.json"
+    },
+    {
+      "id": "v8",
+      "label": "Material quantities v8",
+      "path": "./v8/",
+      "purpose": "Editable material quantity scenarios and partial amounts",
+      "units": "SI / purchase units",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": false,
+      "component_evidence": false,
       "material_takeoff": true,
-      "release_status": "After M1; original milestone unchanged"
+      "release_status": "After M1; original milestone unchanged",
+      "source_register": "v9/register.json"
+    },
+    {
+      "id": "v9",
+      "label": "Shared source v9",
+      "path": "./v9/",
+      "purpose": "Normalized source register for all current estimate views",
+      "units": "Source, SI and purchase units",
+      "source_register": "v9/register.json",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": false,
+      "component_evidence": false
+    },
+    {
+      "id": "v10",
+      "label": "All data tables v10",
+      "path": "./v10/",
+      "purpose": "Every source field and derived quantity/amount in coloured tables with at most five columns",
+      "units": "Source, SI and purchase units",
+      "source_register": "v9/register.json",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": false,
+      "component_evidence": false
     }
   ],
   "current_view_policy": {
@@ -120,7 +151,7 @@
     "currency_assumption": "NPR; requested by the owner; original source currency remains unconfirmed",
     "replacement_rates": "None; original estimate values remain unchanged",
     "scope": "Measurement compatibility does not establish matching labour, material, grade, installation, VAT or stock",
-    "snapshot_note": "V4/V5 research and comparison exports retain their dated historical policy/planning notes. This version register describes the current maintained website behavior."
+    "snapshot_note": "V5–V10 are focused views of the shared v9 register. Dated research exports and frozen milestones retain their original scope."
   },
   "workspace_navigation": {
     "primary_sections": [
@@ -129,15 +160,23 @@
       "Progress"
     ],
     "construction_contents": [
-      "Latest material details v8",
-      "Latest full Pilates estimate v7",
+      "All data tables v10",
+      "Editable material details v8",
       "Column formwork CAD drawings",
       "Pilates SketchUp workspace"
     ],
     "history_location": "milestone.html",
     "existing_urls_retained": true
   },
-  "latest_full_estimate_version": "v7",
+  "latest_full_estimate_version": "v10",
   "workspace_milestone_tag": "workspace-m3-2026-10-19",
-  "workspace_milestone_manifest": "../../../milestones/workspace-m3-2026-10-19.json"
+  "workspace_milestone_manifest": "../../../milestones/workspace-m3-2026-10-19.json",
+  "latest_material_version": "v8",
+  "data_architecture": {
+    "canonical_current_register": "v9/register.json",
+    "derivations": "shared/source-model.js",
+    "publication": "Every source commit runs the existing GitHub Actions build and refreshes all derived views together.",
+    "historical_evidence": "Original PDF/raw extraction, dated research exports and released milestones remain evidence snapshots.",
+    "draft_policy": "V8 browser edits are temporary local scenarios until their intended values are incorporated into the shared register."
+  }
 }

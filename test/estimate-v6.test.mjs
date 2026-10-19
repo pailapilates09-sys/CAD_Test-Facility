@@ -48,7 +48,7 @@ test('v6 keeps revised v5.1 table cells and filtered totals, while adding perman
   assert.equal(after[i].tables.replace(/<figure class="scope-photo"[\s\S]*?<\/figure>/g,''),before[i].tables);assert.equal(after[i].count,before[i].count);assert.ok(after[i].graphs[0].includes(before[i].count.split(' of ')[0]+' matching items'));if(i===4)assert.ok(after[i].graphs.slice(1).every(x=>!x.includes('<svg')));else assert.ok(after[i].graphs[1].includes('data-range-item='));if(i===0){assert.ok(after[i].graphs[1].includes('data-estimate-marker='));assert.ok(after[i].graphs[2].includes('<svg'));assert.ok(after[i].graphs[3].includes('<svg'))}assert.equal(after[i].held,before[i].held);
  }
  assert.equal((after[0].tables.match(/data-image-item=/g)||[]).length,51);assert.equal((after[2].tables.match(/data-image-item=/g)||[]).length,6);assert.equal((after[4].tables.match(/data-image-item=/g)||[]).length,0);
- const html=await readFile(new URL('v6/index.html',base),'utf8');assert.ok(html.indexOf('id="table-graphs"')>html.indexOf('id="items"'));assert.match(html,/src="\.\/v6.js"/);
+ const html=await readFile(new URL('v6/index.html',base),'utf8');assert.match(html,/<!-- LINKED_VIEW -->/);assert.doesNotMatch(html,/shared\/graphs.js|src="\.\/v6.js"/);
 });
 test('v6 photo buttons open the matching full scope, original facts, photo credits and supplier evidence',async()=>{
  const h=await harness(initV6);try{

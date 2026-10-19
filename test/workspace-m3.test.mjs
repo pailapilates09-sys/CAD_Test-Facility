@@ -22,7 +22,7 @@ test('M3 preserves both earlier milestones, all work scopes and the saved source
 
 test('latest milestone navigation includes M3, retains M2/M1 and distinguishes device QA from automated evidence',async()=>{
  const versions=JSON.parse(await readFile(new URL(estimatePath+'versions.json',root),'utf8'));
- assert.equal(versions.workspace_milestone_tag,manifest.tag);assert.equal(versions.milestone_tag,'pilates-estimates-m1-2026-10-17');assert.equal(versions.latest_version,'v8');
+ assert.equal(versions.workspace_milestone_tag,manifest.tag);assert.equal(versions.milestone_tag,'pilates-estimates-m1-2026-10-17');assert.equal(manifest.coverage.latest_estimate_version,'v8');
  const page=await readFile(new URL(estimatePath+'milestone.html',root),'utf8');
  for(const id of ['workspace-m3','workspace-m2'])assert.ok(page.includes('id="'+id+'"'));
  for(const tag of [manifest.tag,manifest.previous_milestone_tag,versions.milestone_tag])assert.ok(page.includes('releases/tag/'+tag));

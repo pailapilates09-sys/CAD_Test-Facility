@@ -65,5 +65,5 @@ test('revised v5.1 preserves v5 tables while all-item range comparisons follow t
  assert.doesNotMatch(current[4].svg,/<svg/);
  assert.equal((current[0].svg.match(/data-range-item=/g)||[]).length,51);assert.equal((current[2].svg.match(/data-range-item=/g)||[]).length,6);
  const html=await readFile(new URL('v5.1/index.html',base),'utf8');
- assert.ok(html.indexOf('id="table-graphs"')>html.indexOf('id="items"'));assert.ok(html.indexOf('id="table-graphs"')<html.indexOf('<summary>Conversion notes'));assert.doesNotMatch(html,/id="graph-area"|id="graph-items"|id="graph-evidence"/);
+ assert.match(html,/<!-- LINKED_VIEW -->/);assert.match(html,/shared\/graphs.js/);assert.doesNotMatch(html,/id="items"|<summary>Conversion notes|id="graph-area"|id="graph-items"|id="graph-evidence"/);
 });

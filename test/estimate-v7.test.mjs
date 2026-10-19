@@ -38,7 +38,7 @@ test('v7 keeps the v6 tables, images, held values and graphs while component tab
  const filters=[{}, {area:'studio',sort:'desc'}, {'evidence-filter':'quote-needed',sort:'asc'}, {search:'gypsum'}, {search:'no such scope xyz'}];
  async function snapshots(init){const h=await harness(init);try{return filters.map(f=>{for(const id of ['area','search','evidence-filter','sort'])h.element(id).value=f[id]??(id==='sort'?'source':'');h.element('search').events.input.forEach(fn=>fn());return {tables:h.element('items').innerHTML.replaceAll('../v6/images/','./images/'),count:h.element('count').textContent,graphs:['range-board-summary','range-board','position-overview','cost-treemap'].map(id=>h.element(id).innerHTML||h.element(id).textContent),held:h.element('held-items').innerHTML,components:h.element('component-tables').innerHTML}})}finally{h.cleanup()}}
  const before=await snapshots(initV6),after=await snapshots(initV7);for(let i=0;i<filters.length;i++){for(const key of ['tables','count','graphs','held'])assert.deepEqual(after[i][key],before[i][key]);assert.equal((after[i].components.match(/data-component-item=/g)||[]).length,(after[i].tables.match(/data-image-item=/g)||[]).length)}
- const html=await readFile(new URL('v7/index.html',base),'utf8');assert.ok(html.indexOf('id="table-graphs"')>html.indexOf('id="component-tables"'));assert.match(html,/src="\.\/v7.js"/);
+ const html=await readFile(new URL('v7/index.html',base),'utf8');assert.match(html,/<!-- LINKED_VIEW -->/);assert.doesNotMatch(html,/shared\/graphs.js|src="\.\/v7.js"/);
 });
 test('v7 exposes components and source scope for all 51 image detail buttons and calculates only a temporary draft',async()=>{
  const h=await harness(initV7);try{
