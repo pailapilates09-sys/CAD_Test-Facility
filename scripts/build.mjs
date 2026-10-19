@@ -68,7 +68,7 @@ for(const version of ['v5','v5.1','v6','v7','v8','v9','v10']){
  const folder=new URL(estimatePath+version+'/',dist);
  for(const entry of await readdir(folder))if(entry.endsWith('.html')){
   const file=new URL(entry,folder),html=await readFile(file,'utf8');
-  await writeFile(file,html.replace('<head>','<head><meta name="estimate-source-revision" content="'+sourceRevision+'">').replace('./v8.js?revision=quantity-2','./v8.js?source='+sourceRevision));
+  await writeFile(file,html.replace('<head>','<head><meta name="estimate-source-revision" content="'+sourceRevision+'">').replace('v8.js?revision=quantity-2','v8.js?source='+sourceRevision));
  }
 }
 await mkdir(new URL('progress/recovery/',dist),{recursive:true});

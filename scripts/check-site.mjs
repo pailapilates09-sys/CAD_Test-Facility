@@ -10,6 +10,7 @@ export async function checkSite(directory){
   if(/\/v(?:5|5\.1|6|7|8|9|10)\/[^/]+\.html$/.test(file)){
    const revision=text.match(/name="estimate-source-revision" content="([a-f0-9]{16})"/);
    if(!revision)throw Error('Missing shared source revision in '+file);revisions.add(revision[1]);
+   if(file.includes('/v8/')&&!text.includes('v8.js?source='+revision[1]))throw Error('Material page script cache key differs from its source in '+file);
   }
   if(/v(?:5|5\.1|6|7|9|10)\/index.html$/.test(file)){
    const ids=[...text.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);if(ids.length!==new Set(ids).size)throw Error('Duplicate HTML id in '+file);
