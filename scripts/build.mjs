@@ -6,7 +6,8 @@ import {buildConstructionStatus,renderConstructionStatus} from './render-constru
 import {buildV8,renderIndex,renderWork,pageFromTemplate} from './material-v8.mjs';
 import {applySiteExperience} from './site-experience.mjs';
 import {deriveViews} from '../public/construction/estimates/pilates-astra-2026-10-15/shared/source-model.js';
-import {renderComparisons,renderGraphs,renderImages,renderComponents,renderSource,renderAllData} from './linked-estimate-views.mjs';
+import {renderComparisons,renderGraphs,renderImages,renderComponents,renderSource} from './linked-estimate-views.mjs';
+import {contractorData,renderContractorIndex,contractorPage} from './contractor-v10.mjs';
 import {renderVersionRegister} from './linked-estimate-views.mjs';
 import {checkSite} from './check-site.mjs';
 import {fileURLToPath} from 'node:url';
@@ -27,7 +28,7 @@ const estimatePath='construction/estimates/pilates-astra-2026-10-15/';
 const readJSON=async path=>JSON.parse(await readFile(new URL(path,root),'utf8'));
 const registry=await readJSON('public/'+estimatePath+'v9/register.json');
 const sourceHash=createHash('sha256').update(JSON.stringify(registry));
-for(const path of ['shared/source-model.js','shared/material-model.js','v8/quantity-models.js','v8/calculations.js'])sourceHash.update(await readFile(new URL('public/'+estimatePath+path,root)));
+for(const path of ['shared/source-model.js','shared/material-model.js','v8/quantity-models.js','v8/calculations.js','v10/contractor-model.js'])sourceHash.update(await readFile(new URL('public/'+estimatePath+path,root)));
 const sourceRevision=sourceHash.digest('hex').slice(0,16);
 const views=deriveViews(registry),{original,comparison,components,images}=views;
 const [versions,model,debt]=await Promise.all([
@@ -42,7 +43,7 @@ const constructionStatus=buildConstructionStatus({original,comparison,components
 await writeFile(progressPage,progressTemplate.replace('<!-- CURRENT_PROGRESS -->',renderRecovery(JSON.parse(recoveryStatus))).replace('<!-- CONSTRUCTION_PROGRESS -->',renderConstructionStatus(constructionStatus)));
 await writeFile(new URL('progress/construction-status.json',dist),JSON.stringify(constructionStatus,null,2)+'\n');
 // Current views and compatibility exports are derived from the one v9 source register.
-for(const [version,render] of [['v5',()=>renderComparisons(views)],['v5.1',()=>renderGraphs(views)],['v6',()=>renderImages(views)],['v7',()=>renderComponents(views)],['v9',()=>renderSource(registry,views)],['v10',()=>renderAllData(registry,views)]]){
+for(const [version,render] of [['v5',()=>renderComparisons(views)],['v5.1',()=>renderGraphs(views)],['v6',()=>renderImages(views)],['v7',()=>renderComponents(views)],['v9',()=>renderSource(registry,views)],['v10',()=>renderContractorIndex(contractorData(views))]]){
  const file=new URL(estimatePath+version+'/index.html',dist),template=await readFile(file,'utf8');
  if(!template.includes('<!-- LINKED_VIEW -->'))throw Error('Missing linked view template '+version);
  await writeFile(file,template.replace('<!-- LINKED_VIEW -->',render()));
@@ -64,11 +65,17 @@ const v8Script=new URL('v8.js',v8Dir);
 await writeFile(v8Script,(await readFile(v8Script,'utf8')).replaceAll('revision=quantity-2','source='+sourceRevision).replace("'./quantity-models.js'","'./quantity-models.js?source="+sourceRevision+"'"));
 const quantityScript=new URL('quantity-models.js',v8Dir);
 await writeFile(quantityScript,(await readFile(quantityScript,'utf8')).replace("'./calculations.js'","'./calculations.js?source="+sourceRevision+"'"));
+const v10Data=contractorData(views),v10Dir=new URL(estimatePath+'v10/',dist);
+await writeFile(new URL('contractor-data.json',v10Dir),JSON.stringify({...v10Data,derivation:{source:'../v9/register.json',revision:sourceRevision,generated:true}},null,2)+'\n');
+for(const work of v10Data.items)await writeFile(new URL(work.id+'.html',v10Dir),contractorPage(work,v10Data));
+for(const name of ['v10.js','contractor-model.js']){
+ const file=new URL(name,v10Dir);await writeFile(file,(await readFile(file,'utf8')).replaceAll('SOURCE_REVISION',sourceRevision));
+}
 for(const version of ['v5','v5.1','v6','v7','v8','v9','v10']){
  const folder=new URL(estimatePath+version+'/',dist);
  for(const entry of await readdir(folder))if(entry.endsWith('.html')){
   const file=new URL(entry,folder),html=await readFile(file,'utf8');
-  await writeFile(file,html.replace('<head>','<head><meta name="estimate-source-revision" content="'+sourceRevision+'">').replace('v8.js?revision=quantity-2','v8.js?source='+sourceRevision));
+  await writeFile(file,html.replace('<head>','<head><meta name="estimate-source-revision" content="'+sourceRevision+'">').replace('v8.js?revision=quantity-2','v8.js?source='+sourceRevision).replaceAll('SOURCE_REVISION',sourceRevision));
  }
 }
 await mkdir(new URL('progress/recovery/',dist),{recursive:true});

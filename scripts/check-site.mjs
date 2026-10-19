@@ -10,14 +10,15 @@ export async function checkSite(directory){
   if(/\/v(?:5|5\.1|6|7|8|9|10)\/[^/]+\.html$/.test(file)){
    const revision=text.match(/name="estimate-source-revision" content="([a-f0-9]{16})"/);
    if(!revision)throw Error('Missing shared source revision in '+file);revisions.add(revision[1]);
+   if(file.includes('/v10/')&&!text.includes('v10.js?source='+revision[1]))throw Error('Contractor page script cache key differs from its source in '+file);
    if(file.includes('/v8/')&&!text.includes('v8.js?source='+revision[1]))throw Error('Material page script cache key differs from its source in '+file);
   }
   if(/v(?:5|5\.1|6|7|9|10)\/index.html$/.test(file)){
    const ids=[...text.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);if(ids.length!==new Set(ids).size)throw Error('Duplicate HTML id in '+file);
   }
-  if(file.endsWith('/v10/index.html')){
+  if(file.includes('/v10/')){
    for(const head of text.matchAll(/<thead>(.*?)<\/thead>/gs))if((head[1].match(/<th /g)??[]).length>5)throw Error('V10 table exceeds five columns');
-   if(/<details|<dialog/.test(text))throw Error('V10 hides fields behind interaction');
+   if(/schema_version|created_at|modified_at/.test(text))throw Error('Database metadata appeared in contractor tables');
   }
   for(const match of text.matchAll(/\s(?:href|src)="([^"]+)"/g)){
    const url=match[1].replaceAll('&amp;','&');if(/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(url))continue;
@@ -34,6 +35,13 @@ export async function checkSite(directory){
  }
  if(revisions.size!==1)throw Error('Current views use different source revisions');
  const revision=[...revisions][0];
+ const contractorRoot=resolve(root,'construction/estimates/pilates-astra-2026-10-15/v10');
+ const contractor=await readFile(resolve(contractorRoot,'v10.js'),'utf8'),contractorModel=await readFile(resolve(contractorRoot,'contractor-model.js'),'utf8');
+ if(!contractor.includes('contractor-data.json?source='+revision)||!contractor.includes('contractor-model.js?source='+revision)||!contractorModel.includes('calculations.js?source='+revision))throw Error('Contractor data/model cache keys differ from the view source');
+ const data=JSON.parse(await readFile(resolve(contractorRoot,'contractor-data.json'),'utf8'));
+ if(data.derivation.revision!==revision||data.items.length!==51)throw Error('Contractor projection does not match current source');
+ for(const work of data.items){const html=await readFile(resolve(contractorRoot,work.id+'.html'),'utf8');if((html.match(/data-order-row=/g)||[]).length!==work.rows.length)throw Error('Contractor material coverage differs: '+work.id);}
+
  const script=await readFile(resolve(root,'construction/estimates/pilates-astra-2026-10-15/v8/v8.js'),'utf8');
  if(!script.includes('material-takeoff.json?source='+revision)||!script.includes('quantity-models.js?source='+revision))throw Error('Material data/model cache keys differ from the view source');
  console.log(`Verified ${pages.length} HTML pages, ${links} local links/assets and ${imports} module imports; current views share source ${revision}.`);

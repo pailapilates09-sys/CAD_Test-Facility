@@ -4,7 +4,7 @@ async function init(){
  const response=await fetch('../v5/comparison.json',{cache:'no-cache'});if(!response.ok)throw Error('Chart source unavailable');
  const data=await response.json();
  createRangeBoard(data,{permanentOriginal:true})(data.items);
- createReviewVisuals(data,{detailLabel:'All work data'})(data.items);
- document.addEventListener('click',event=>{const button=event.target.closest('[data-detail]');if(button)location.href='../v10/#work-'+encodeURIComponent(button.dataset.detail);});
+ createReviewVisuals(data,{detailLabel:'Contractor worksheet'})(data.items);
+ document.addEventListener('click',event=>{const button=event.target.closest('[data-detail]');if(button)location.href='../v10/'+encodeURIComponent(button.dataset.detail)+'.html';});
 }
 init().catch(error=>{document.getElementById('range-board-summary').textContent='Interactive inspection unavailable; the published charts remain visible. '+error.message;});

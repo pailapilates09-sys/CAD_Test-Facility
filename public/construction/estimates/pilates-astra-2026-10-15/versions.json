@@ -121,29 +121,32 @@
     },
     {
       "id": "v9",
-      "label": "Shared source v9",
+      "label": "Technical source register v9",
       "path": "./v9/",
-      "purpose": "Normalized source register for all current estimate views",
+      "purpose": "Internal shared data register introduced from existing v8-era data; not another construction estimate",
       "units": "Source, SI and purchase units",
       "source_register": "v9/register.json",
       "permanent_original_markers": false,
       "position_overview": false,
       "cost_treemap": false,
       "reference_images": false,
-      "component_evidence": false
+      "component_evidence": false,
+      "technical_only": true
     },
     {
       "id": "v10",
-      "label": "All data tables v10",
+      "label": "Contractor worksheets v10",
       "path": "./v10/",
-      "purpose": "Every source field and derived quantity/amount in coloured tables with at most five columns",
-      "units": "Source, SI and purchase units",
+      "purpose": "Work schedule → per-work material order tables with specifications, quantities, unit prices and amounts; separate labour inputs",
+      "units": "SI work units; material purchase units; NPR planning prices",
       "source_register": "v9/register.json",
       "permanent_original_markers": false,
       "position_overview": false,
       "cost_treemap": false,
       "reference_images": false,
-      "component_evidence": false
+      "component_evidence": false,
+      "material_takeoff": true,
+      "contractor_worksheets": true
     }
   ],
   "current_view_policy": {
@@ -160,7 +163,7 @@
       "Progress"
     ],
     "construction_contents": [
-      "All data tables v10",
+      "Contractor worksheets v10",
       "Editable material details v8",
       "Column formwork CAD drawings",
       "Pilates SketchUp workspace"
@@ -177,6 +180,6 @@
     "derivations": "shared/source-model.js",
     "publication": "Every source commit runs the existing GitHub Actions build and refreshes all derived views together.",
     "historical_evidence": "Original PDF/raw extraction, dated research exports and released milestones remain evidence snapshots.",
-    "draft_policy": "V8 browser edits are temporary local scenarios until their intended values are incorporated into the shared register."
+    "draft_policy": "V8 browser models are temporary scenarios. V10 contractor inputs save on the current browser by source revision and can export as a material CSV. Neither changes the published register or other views until the chosen values are committed to the shared source."
   }
 }
