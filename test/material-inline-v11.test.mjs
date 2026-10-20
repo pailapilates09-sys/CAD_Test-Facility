@@ -16,7 +16,7 @@ test('v11 renders all 51 works and 261 material lines visibly on one page with f
  assert.equal((html.match(/data-inline-area=/g)||[]).length,6);assert.doesNotMatch(html,/<details|<dialog|<iframe|href="(?!https?:|#)[^"]*\.html/);
  for(const work of data.items){
   assert.equal((html.match(new RegExp('data-inline-work="'+work.id+'"','g'))||[]).length,1);
-  const panel=renderInlineWork(work,data);assert.ok(panel.includes(esc(work.title)));assert.ok(panel.includes(esc(work.description)));
+  const panel=renderInlineWork(work,data);assert.ok(panel.includes(esc(work.title)));assert.ok(panel.includes('href="../#work-'+work.id+'"'));
   for(const row of work.rows){assert.ok(panel.includes('data-inline-material="'+row.id+'"'));assert.ok(panel.includes(esc(row.name)));assert.ok(panel.includes(esc(row.unit)));}
   assert.doesNotMatch(panel.match(/<section[^>]+>/)[0],/\shidden(?:\s|>)/);
  }

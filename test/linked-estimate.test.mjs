@@ -64,7 +64,7 @@ test('v10 lists every work and opens five-column contractor tables without datab
 
 test('focused views carry their own feature and link to related views without repeating whole sections',()=>{
  const compare=renderComparisons(d),graphs=renderGraphs(d),images=renderImages(d),components=renderComponents(d);
- assert.doesNotMatch(compare,/<svg|<img|id="component-title"/);assert.equal((graphs.match(/data-range-item=/g)||[]).length,51);assert.match(graphs,/data-estimate-marker=/);
+ assert.doesNotMatch(compare,/<svg|<img|id="component-title"/);assert.equal((graphs.match(/data-range-item=/g)||[]).length,51);assert.match(graphs,/data-estimate-marker=/);assert.match(graphs,/id="graphs-title"/);
  assert.equal((images.match(/<img /g)||[]).length,51);assert.doesNotMatch(images,/<svg|class="linked-table"/);
  assert.equal((components.match(/data-component-item=/g)||[]).length,51);assert.doesNotMatch(components,/<svg|<img/);
  assert.match(renderSource(r,d),/register.json/);

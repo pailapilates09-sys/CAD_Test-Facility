@@ -1,0 +1,830 @@
+{
+  "schema_version": "paila-procurement-1.0.0",
+  "view": "v12",
+  "reviewed_date": "2026-10-20",
+  "source_register": "../v9/register.json",
+  "scope": "Planning recommendations inferred from the quoted works and linked research; no site inspection, approval, order or budget replacement.",
+  "policy": {
+    "owner_managed": "Owner buys and organises a suitable supplier or finish trade; this does not mean untrained DIY for services, heavy glass, overhead supports or building alterations.",
+    "professional": "Owner may still buy or hire directly, but the named specialist must execute and any specified engineering/design review must happen first. A general contractor is one coordination option, not an automatic requirement for every row.",
+    "approvals": "The quote specifies approved designs and Site Engineer instructions for many works. Direct procurement and substitutions require agreement with the appointed consultant and any landlord requirements.",
+    "holds": "Six existing held works remain on hold. Classification does not release any of them.",
+    "quantity": "Display quoted SI scope quantities only. Retail panels, rugs, cabinets and packs require a separate confirmed take-off. New options and unsplit allowances have unknown purchase quantities.",
+    "market": "Retail/category listings are leads, not verified design equivalents or accepted quotes. Confirm stock, package contents, VAT, delivery, returns and installation before payment.",
+    "rates": "Original rates, amounts, currency qualifications and accepted component splits are unchanged. Product examples are separate catalogue observations, not replacements for v4/v7 prices or the original quote."
+  },
+  "sources": [
+    {
+      "id": "NBC207",
+      "kind": "technical",
+      "publisher": "Government of Nepal / DUDBC",
+      "title": "NBC 207:2003 · Electrical design for public buildings",
+      "url": "https://giwmscdnone.gov.np/media/pdf_upload/NBC%20207-2003%20ELECTRICAL%20DESIGN%20REQUIREMENTS%20FOR%20PUBLIC%20BUILDINGS_oo96yzp.pdf",
+      "access": "full_text",
+      "locator": "Sections 2.2, 3.1, 7 and 8",
+      "supports": "Electrical contractor competence, engineering advice at planning, earthing, inspection and testing. Project and current local requirements still need the appointed engineer.",
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "NBC105",
+      "kind": "technical",
+      "publisher": "Government of Nepal / DUDBC",
+      "title": "NBC 105:2025 · Seismic design",
+      "url": "https://giwmscdnone.gov.np/media/files/NBC_105_2025_Seismic%20Design%20of%20Buildings%20in%20Nepal_lqqvx6a.pdf",
+      "access": "indexed_only",
+      "locator": "Official building-code listing and indexed PDF",
+      "supports": "Current Nepal seismic-design reference for the engineer. Full PDF retrieval failed during this review; no new numerical anchorage design is claimed.",
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "NBC208",
+      "kind": "technical",
+      "publisher": "Government of Nepal / DUDBC",
+      "title": "NBC 208:2003 · Sanitary and plumbing design",
+      "url": "https://dudbc.gov.np/content/2419/2419-nbc-208-sanitary-and-plumbing/",
+      "access": "indexed_only",
+      "locator": "Official code listing",
+      "supports": "Identifies the sanitary/plumbing design reference. Full code text was not retrieved; plumber and engineering review recommendations below are scope-based planning judgments.",
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "KNAUF",
+      "kind": "technical",
+      "publisher": "Knauf",
+      "title": "Partitions and ceiling systems manual",
+      "url": "https://knauf.com/api/download-center/v1/assets/72f4ccc1-63bd-4251-b5e0-cb64610991d7?download=true",
+      "access": "retrieved_excerpt",
+      "locator": "Ceiling suspension, loading and luminaire supports",
+      "supports": "Suspension spacing depends on loading and fixtures can require additional support. Use the selected system manufacturer’s current details; this is technical guidance, not Nepal approval.",
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "DIKON",
+      "kind": "market",
+      "publisher": "Dikon Business Group",
+      "title": "Kathmandu flooring, curtains, furniture and panels",
+      "url": "https://www.dikonbusinessgroup.com/",
+      "access": "full_page",
+      "supports": "The supplier advertises curtains, carpet tiles, flooring, sofas, ceilings and wall panels, with a Kathmandu showroom. Obtain a measured supply/install quote; exact project matches were not verified.",
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "CURTAIN",
+      "kind": "market",
+      "publisher": "Daraz Nepal / Muskan Enterprises",
+      "title": "Sheer curtain · 4 × 7 ft · one panel",
+      "url": "https://www.daraz.com.np/products/sheer-curtain-4x7-ft-1-pc-i127027468.html",
+      "access": "cached_page",
+      "supports": "Demonstrates direct purchase by panel. The retrieved page contains stale delivery information; the price is catalogue evidence, not a current delivered quote.",
+      "example": {
+        "price_npr": 1500,
+        "quantity": 1,
+        "unit": "panel",
+        "size": "4 × 7 ft (about 1.22 × 2.13 m)",
+        "stock": "not independently confirmed"
+      },
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "RUG",
+      "kind": "market",
+      "publisher": "Daraz Nepal",
+      "title": "Hand-knotted wool carpet runner · 0.62 × 2 m",
+      "url": "https://www.daraz.com.np/products/premium-hand-knotted-nepali-woolen-carpet-runner-60-knots-traditional-allover-design-multicolor-rug-for-hallway-living-room-62cm-x-200cm-i1528588588.html",
+      "access": "retrieved_page",
+      "supports": "A loose runner is sold as a finished product, distinct from fitted carpet or laminate flooring. Confirm suitability, backing and delivery.",
+      "example": {
+        "price_npr": 13640,
+        "quantity": 1,
+        "unit": "runner",
+        "size": "0.62 × 2 m",
+        "stock": "not independently confirmed"
+      },
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "RACK",
+      "kind": "market",
+      "publisher": "Daraz Nepal",
+      "title": "Wooden shoe-rack category",
+      "url": "https://www.daraz.com.np/tag/shoe-rack-wooden-furniture/",
+      "access": "indexed_page",
+      "supports": "Ready-made racks are listed in Nepal. Size, capacity and construction vary; this does not establish equivalence with the quoted fitted rack.",
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "FURNITURE",
+      "kind": "market",
+      "publisher": "Furniture Hub Nepal",
+      "title": "Shoe racks and furniture catalogue",
+      "url": "https://www.furniturehub.com.np/bench-shoes-rack",
+      "access": "indexed_only",
+      "supports": "Direct furniture purchase is an available route. The detailed page timed out; dimensions, stock, delivery and any installation remain quote-required.",
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "PAINT",
+      "kind": "market",
+      "publisher": "Berger Paints Nepal",
+      "title": "Interior paint system and painting-service enquiry",
+      "url": "https://bergernepal.com/product-detail/easy-clean",
+      "access": "full_page",
+      "supports": "The manufacturer describes putty/primer/topcoat preparation and offers direct painting-service enquiries in Nepal. Product choice must match the substrate; no quantity or coverage is inferred here.",
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "VANITY",
+      "kind": "market",
+      "publisher": "Bathroom Nepal",
+      "title": "Bathluxe BV-888T wall-hung vanity",
+      "url": "https://bathroomnepal.com/product/bathluxe-bv-888t-bathroom-vanity/",
+      "access": "full_page",
+      "supports": "A vanity can be purchased separately. This example is wall-hung, with a basin and mirror cabinet; it requires a suitable support and coordinated plumbing.",
+      "example": {
+        "price_npr": 33000,
+        "quantity": 1,
+        "unit": "listed vanity package",
+        "size": "main cabinet 0.60 × 0.47 × 0.44 m",
+        "stock": "not independently confirmed; confirm package inclusions"
+      },
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "BASIN",
+      "kind": "market",
+      "publisher": "Hardwarepasal Nepal",
+      "title": "Bathroom hardware supply",
+      "url": "https://hardwarepasal.com/category/bathroom-hardware",
+      "access": "indexed_page",
+      "supports": "Bathroom fittings are sold directly for Kathmandu delivery. Exact sink/vanity compatibility, valve/trap inclusions and current stock need confirmation.",
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "AC",
+      "kind": "market",
+      "publisher": "LG Nepal",
+      "title": "Find a dealer for sales, installation and service",
+      "url": "https://www.lg.com/np/business/find-the-dealer",
+      "access": "full_page",
+      "supports": "The manufacturer provides a direct dealer route covering sales, installation and service. Confirm the selected brand’s installation package and warranty rather than assuming product price includes all works.",
+      "reviewed_date": "2026-10-20"
+    },
+    {
+      "id": "RETURNS",
+      "kind": "policy",
+      "publisher": "Daraz Nepal",
+      "title": "Returns policy by product category",
+      "url": "https://www.daraz.com.np/wow/i/np/help-pages/return-policy",
+      "access": "full_page",
+      "supports": "The home/living category policy excludes change-of-mind returns. Product-page badges may differ; confirm the applicable terms, dimensions and inclusions with the seller before payment.",
+      "reviewed_date": "2026-10-20"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "joinery",
+      "group": "professional",
+      "lead": "Measured joinery / cabinetmaker",
+      "engineer_review": "conditional",
+      "buy_route": "Yes: owner can source boards/hardware after approved shop drawings; obtain a fabrication quote.",
+      "execution": "Direct-hire a cabinetmaker, or use the interior contractor. Review tall/heavy fixed units and unknown anchorage with the engineer.",
+      "reason": "The quoted work is custom fitted fabrication, not a loose retail product.",
+      "checks": "Measure depth, curves, doors, board grade, edge finish and fixings. Approve any ready-made substitution.",
+      "source_ids": [
+        "NBC105"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "stone",
+      "group": "professional",
+      "lead": "Stone fabricator / installer",
+      "engineer_review": "conditional",
+      "buy_route": "Yes: select slab and finish after the fabricator measures and accepts the support.",
+      "execution": "Use a stone fabricator for cutting, handling, joints and fixing. Engineer review for uncertain support or significant added load.",
+      "reason": "Stone size, support and fixing determine both fit and safe handling.",
+      "checks": "Approve slab thickness, substrate, adhesive, edges and carrying access.",
+      "source_ids": [
+        "NBC105"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "glass-door",
+      "group": "professional",
+      "lead": "Glazier / door installer",
+      "engineer_review": "review_before_order",
+      "buy_route": "Buy only against the glazier’s measured specification and approved opening details.",
+      "execution": "Engineer/design review of opening, safety glazing, tracks/hinges and supports; glazier installs.",
+      "reason": "Large glass doors and sliding systems need coordinated supports and safe movement.",
+      "checks": "Check glass type/thickness, hardware load rating, track, stops and escape route. Zero quoted quantity remains zero.",
+      "source_ids": [
+        "NBC105"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "ac",
+      "group": "professional",
+      "lead": "Authorised HVAC installer + electrician",
+      "engineer_review": "review_before_order",
+      "buy_route": "Yes: owner can purchase from a brand dealer after capacity, electrical supply and installation scope are confirmed.",
+      "execution": "Have the services engineer confirm load/location/supports; dealer installs and commissions with an electrician.",
+      "reason": "Product supply does not complete refrigeration, drainage, wiring or outdoor support work.",
+      "checks": "Clarify the quote’s “1.5 MT” wording, copper length, drain, isolator, outdoor bracket, testing and warranty.",
+      "source_ids": [
+        "AC",
+        "NBC207"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "wiring",
+      "group": "professional",
+      "lead": "Qualified electrical contractor",
+      "engineer_review": "review_before_order",
+      "buy_route": "Yes: buy the electrician’s specified strip, driver, cable and accessories; do not select by price alone.",
+      "execution": "Electrical planning/review, qualified installation and testing; direct booking still needs this handoff.",
+      "reason": "These lines include fixed electrical work, not only a plug-in retail strip.",
+      "checks": "Agree driver rating, voltage, heat dissipation, circuit protection, access and testing.",
+      "source_ids": [
+        "NBC207"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "lights",
+      "group": "professional",
+      "lead": "Qualified electrician",
+      "engineer_review": "review_before_order",
+      "buy_route": "Yes: choose fittings after wattage, driver and cut-out/support requirements are approved.",
+      "execution": "Electrician installs and tests; engineer coordinates circuits and ceiling supports.",
+      "reason": "Fixed ceiling/wardrobe lights connect to the building’s electrical installation.",
+      "checks": "Confirm fitting counts, compatibility, access, earthing and support before ceiling closure.",
+      "source_ids": [
+        "NBC207",
+        "KNAUF"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "hanging-lights",
+      "group": "professional",
+      "lead": "Electrician + competent fixing installer",
+      "engineer_review": "review_before_order",
+      "buy_route": "Yes: owner may select/buy after weight, support point and electrical specification are accepted.",
+      "execution": "Engineer reviews support/anchorage; electrician and installer fit and test the suspended fixture.",
+      "reason": "A hanging fixture combines a falling-object risk with electrical work.",
+      "checks": "Confirm fixture weight and independent support, height, wiring and commissioning.",
+      "source_ids": [
+        "NBC207",
+        "KNAUF",
+        "NBC105"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "ceiling",
+      "group": "professional",
+      "lead": "Ceiling system contractor",
+      "engineer_review": "review_before_order",
+      "buy_route": "Yes: buy a coordinated board/frame/fixing system after drawings and quantities are approved.",
+      "execution": "Engineer/designer reviews suspension, anchors and service openings; ceiling contractor installs.",
+      "reason": "A ceiling is an overhead system with concealed fixings and coordinated lights.",
+      "checks": "Agree system details, board type, curvature, support, access panels and light supports.",
+      "source_ids": [
+        "KNAUF",
+        "NBC105",
+        "DIKON"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "sign",
+      "group": "professional",
+      "lead": "Sign maker / fixing installer",
+      "engineer_review": "conditional",
+      "buy_route": "Yes: order the brand sign directly after size, material and illumination are defined.",
+      "execution": "Sign maker fits. Add an electrician if lit; engineering review if heavy, high or external.",
+      "reason": "The quotation does not specify the sign’s weight, support or electrical scope.",
+      "checks": "Resolve those details first; a lightweight unlit indoor sign may then be owner-managed.",
+      "source_ids": [
+        "NBC207",
+        "NBC105"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "framed-panels",
+      "group": "professional",
+      "lead": "Interior panel / framing contractor",
+      "engineer_review": "review_before_order",
+      "buy_route": "Yes: source approved panels with the matching framing and fixings; request an installed quote.",
+      "execution": "Engineer/designer reviews attachment and material suitability; specialist installs the frame and panels.",
+      "reason": "The quoted scope includes framing, not a simple decorative surface sheet.",
+      "checks": "Confirm frame layout, substrate, fixings, services and material fire performance.",
+      "source_ids": [
+        "DIKON",
+        "NBC105"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "mirror",
+      "group": "professional",
+      "lead": "Glazier / mirror fitter",
+      "engineer_review": "conditional",
+      "buy_route": "Yes: select a mirror only after measured glass, edge, backing and support details are agreed.",
+      "execution": "Glazier/fitter installs. Engineer reviews large/heavy mirrors or uncertain substrate and fixing.",
+      "reason": "Wall-mounted glass needs reliable support and handling; the studio mirror is a large measured area.",
+      "checks": "Confirm safety backing, joints, wall condition, clips/adhesive and nearby wet/electrical services.",
+      "source_ids": [
+        "NBC105",
+        "BASIN"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "partition",
+      "group": "professional",
+      "lead": "Drywall / cement-board contractor",
+      "engineer_review": "review_before_order",
+      "buy_route": "Yes: purchase the approved framing, board and fixing system against a take-off.",
+      "execution": "Engineer/designer reviews non-load-bearing layout, attachment, services and egress; contractor installs.",
+      "reason": "A framed partition changes the internal layout and needs a complete connection detail.",
+      "checks": "Check height, stud/frame specification, openings, moisture/fire needs and service routes.",
+      "source_ids": [
+        "KNAUF",
+        "NBC105"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "glass-furniture",
+      "group": "professional",
+      "lead": "Furniture maker / glazier",
+      "engineer_review": "not_routinely",
+      "buy_route": "Owner may commission the complete item directly; an exact online match was not verified.",
+      "execution": "Have the maker/glazier fabricate and assemble to the approved shape and stable base.",
+      "reason": "The irregular glass shape and seating arrangement need a measured fabrication package.",
+      "checks": "Confirm glass specification, finished edges, base support, seating clearance and delivery.",
+      "source_ids": [
+        "FURNITURE"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "plumbing",
+      "group": "professional",
+      "lead": "Plumber + sink/counter fitter",
+      "engineer_review": "conditional",
+      "buy_route": "Yes: owner can buy the sink/tap after the plumber and counter maker confirm sizes and connections.",
+      "execution": "Plumber connects and checks leaks; seek services/engineering review for changed routes, penetrations or uncertain support.",
+      "reason": "The item includes water and drainage connections, not only a sink purchase.",
+      "checks": "Confirm cut-out, tap holes, trap, waste, isolation valves and a leak-test handover.",
+      "source_ids": [
+        "BASIN",
+        "NBC208"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "rack",
+      "group": "owner",
+      "lead": "Furniture seller / assembler",
+      "engineer_review": "not_routinely",
+      "buy_route": "Yes: compare ready-made racks on Daraz or a local furniture catalogue.",
+      "execution": "Owner arranges delivery/assembly; use a fitter for any required anti-tip fixing.",
+      "reason": "A suitable freestanding rack can be procured without a general interior package.",
+      "checks": "Check capacity, width/depth, finish and stability. A fitted/custom replacement needs design approval.",
+      "source_ids": [
+        "RACK",
+        "FURNITURE",
+        "RETURNS"
+      ],
+      "diy_scope": "Select, buy and assemble to the supplied instructions; get help for anchoring or heavy handling."
+    },
+    {
+      "id": "rattan",
+      "group": "owner",
+      "lead": "Decorative finish carpenter",
+      "engineer_review": "not_routinely",
+      "buy_route": "Yes: owner can select a sample and order decorative rattan board through a finish supplier. Exact match not verified.",
+      "execution": "Hire a finish carpenter directly for cutting/edging and surface fixing.",
+      "reason": "Decorative surface finishing can be separately commissioned if no new frame or structural work is added.",
+      "checks": "Confirm what “ratten board” means, backing, edge finish and fixation. Framing/heavy hanging work needs specialist review.",
+      "source_ids": [],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "paint",
+      "group": "owner",
+      "lead": "Owner-managed painter",
+      "engineer_review": "not_routinely",
+      "buy_route": "Yes: choose the approved putty/primer/paint system and obtain supply or direct painting quotes.",
+      "execution": "Hire a painter directly for preparation and application; competent owners may do small accessible touch-ups.",
+      "reason": "Ordinary surface finishing can be managed independently of a main contractor.",
+      "checks": "Assess dampness/cracks first; repairs, unsafe access or unknown coatings need the relevant specialist. Confirm coats and shade.",
+      "source_ids": [
+        "PAINT"
+      ],
+      "diy_scope": "Colour selection, procurement and small accessible touch-ups; no structural repair, risky access or electrical alteration."
+    },
+    {
+      "id": "putty",
+      "group": "owner",
+      "lead": "Owner-managed finishing painter",
+      "engineer_review": "not_routinely",
+      "buy_route": "Yes: source the specified putty/primer system and agree labour separately.",
+      "execution": "Hire a finisher directly for preparation and smoothness; this quote says putty, not a separate full paint system.",
+      "reason": "Surface preparation is a finish trade; the material and coats still need agreement.",
+      "checks": "Confirm substrate soundness, dampness and whether primer/paint is excluded. Escalate repairs before finishing.",
+      "source_ids": [
+        "PAINT"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "sofa",
+      "group": "owner",
+      "lead": "Furniture supplier",
+      "engineer_review": "not_routinely",
+      "buy_route": "Yes: buy or commission the completed sofa/couch directly from a furniture supplier.",
+      "execution": "Supplier delivers and assembles; owner places it within the approved layout.",
+      "reason": "A loose upholstered item can be ordered independently.",
+      "checks": "Confirm actual unit/count, upholstery, dimensions, access, cleaning needs and warranty. Keep exits clear.",
+      "source_ids": [
+        "DIKON",
+        "FURNITURE",
+        "RETURNS"
+      ],
+      "diy_scope": "Selection and placement of a completed product; arrange help for carrying and assembly."
+    },
+    {
+      "id": "stone-table",
+      "group": "owner",
+      "lead": "Finished furniture supplier",
+      "engineer_review": "conditional",
+      "buy_route": "Yes, for an approved finished freestanding granite table; supplier handling/assembly should be included.",
+      "execution": "Supplier delivers/assembles. Custom stone cutting or fixed supports belong with a fabricator.",
+      "reason": "A completed loose table can be owner-procured, with its weight and support confirmed.",
+      "checks": "Approve the ready-made alternative, base stability, weight, access and any unusual floor loading.",
+      "source_ids": [
+        "FURNITURE"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "skirting",
+      "group": "owner",
+      "lead": "Finish carpenter / installer",
+      "engineer_review": "not_routinely",
+      "buy_route": "Yes: order matching decorative trim after the material/profile is approved. Exact quoted material is unspecified.",
+      "execution": "Hire the finish installer directly for cutting and fixing to an existing sound surface.",
+      "reason": "Simple finish trim can be separately commissioned.",
+      "checks": "Confirm material, linear measurement, mitres and substrate; stone work, framing or service changes need a specialist.",
+      "source_ids": [],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "surface-panel",
+      "group": "owner",
+      "lead": "Decorative panel installer",
+      "engineer_review": "not_routinely",
+      "buy_route": "Yes: source an approved surface panel and matching finishing accessories.",
+      "execution": "Hire a finish installer directly for surface fixing on a sound existing wall.",
+      "reason": "This route is limited to non-framed decorative cladding.",
+      "checks": "Confirm backing and fire suitability; if a new frame, overhead work or changed partition is required, move to the professional route.",
+      "source_ids": [
+        "DIKON"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "curtain",
+      "group": "owner",
+      "lead": "Curtain supplier / fitter",
+      "engineer_review": "not_routinely",
+      "buy_route": "Yes: buy ready-made panels on Daraz or commission measured curtains from a Nepal furnishing supplier.",
+      "execution": "Supplier/curtain fitter measures, stitches and fits tracks; owner can hang fabric on an already sound suitable rail.",
+      "reason": "Fabric selection and direct fitting do not normally need a main construction contractor.",
+      "checks": "Measure track length, finished drop, fullness, header, panel count and fixing surface. Quoted m² is not the number of retail panels. Heavy/high or uncertain supports need review.",
+      "source_ids": [
+        "CURTAIN",
+        "DIKON",
+        "RETURNS"
+      ],
+      "diy_scope": "Fabric selection and hanging on an existing sound rail; hire a fitter for new tracks, drilling, high access or heavy fabrics."
+    },
+    {
+      "id": "decor",
+      "group": "owner",
+      "lead": "Painter / light-art fitter",
+      "engineer_review": "not_routinely",
+      "buy_route": "Yes: select paint or lightweight wall art directly once the design scope is agreed. Exact fixtures are unspecified.",
+      "execution": "Owner/painter can manage accessible surface decoration; hire a fitter for the approved lightweight fixtures.",
+      "reason": "Simple decoration can be separated from the main construction package.",
+      "checks": "This route excludes heavy, suspended, powered or structurally fixed art; use the appropriate specialist for those.",
+      "source_ids": [
+        "PAINT",
+        "RETURNS"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "floor-allowance",
+      "group": "professional",
+      "lead": "Flooring supplier / installer",
+      "engineer_review": "conditional",
+      "buy_route": "Owner can compare supply-only and supply/install quotes after the actual floor area and grade are specified.",
+      "execution": "Flooring specialist assesses the subfloor and installation; engineer review for structural, moisture or level changes.",
+      "reason": "This is an unsplit allowance with no area, thickness, grade or material take-off.",
+      "checks": "Measure first. A loose rug is not a substitute for the laminate scope; keep the allowance unallocated.",
+      "source_ids": [
+        "DIKON"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "electrical-allowance",
+      "group": "professional",
+      "lead": "Electrical engineer + qualified contractor",
+      "engineer_review": "review_before_order",
+      "buy_route": "Purchase only after an approved point/load schedule, material list and installation quote exist.",
+      "execution": "Engineer plans/reviews the system; qualified contractor installs and tests.",
+      "reason": "The lump-sum allowance has no circuit, point, cable or equipment breakdown.",
+      "checks": "Keep the original allowance unallocated; obtain a detailed scope, test plan and contractor quote.",
+      "source_ids": [
+        "NBC207"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    },
+    {
+      "id": "rug",
+      "group": "owner",
+      "lead": "Retail rug / flooring supplier",
+      "engineer_review": "not_routinely",
+      "buy_route": "Yes: purchase a finished loose rug/runner directly; ask a flooring supplier for fitted carpet.",
+      "execution": "Owner can place a suitable loose rug; use a fitter for fitted carpet or edge treatments.",
+      "reason": "Loose rugs are retail products; this is a new option outside the quoted laminate allowance.",
+      "checks": "Measure its intended position; agree commercial-use suitability, secure non-slip backing, edges and trip/exit clearances.",
+      "source_ids": [
+        "RUG",
+        "DIKON",
+        "RETURNS"
+      ],
+      "diy_scope": "Place a suitable loose rug with secure backing; fitted carpet and floor alterations need a flooring installer."
+    },
+    {
+      "id": "vanity",
+      "group": "professional",
+      "lead": "Plumber + cabinet/support fitter",
+      "engineer_review": "conditional",
+      "buy_route": "Yes: owner can choose and buy a vanity package after dimensions, inclusions and connections are approved.",
+      "execution": "Plumber connects/tests it; fitter verifies supports. Engineer reviews wall-hung anchorage or uncertain substrate; electrician handles any powered mirror.",
+      "reason": "A purchasable cabinet still has plumbing and potentially heavy wall-mounted support requirements.",
+      "checks": "Measure available width/depth, drain and water positions; confirm trap/tap, mounting hardware, waterproofing interface and installation cost.",
+      "source_ids": [
+        "VANITY",
+        "BASIN",
+        "NBC208",
+        "NBC105"
+      ],
+      "diy_scope": "Selection and procurement only; hire the named trade for execution."
+    }
+  ],
+  "work_decisions": [
+    {
+      "work_id": "reception-001",
+      "profile_id": "joinery"
+    },
+    {
+      "work_id": "reception-002",
+      "profile_id": "stone"
+    },
+    {
+      "work_id": "reception-003",
+      "profile_id": "joinery"
+    },
+    {
+      "work_id": "reception-004",
+      "profile_id": "rack"
+    },
+    {
+      "work_id": "reception-005",
+      "profile_id": "rattan"
+    },
+    {
+      "work_id": "reception-006",
+      "profile_id": "glass-door"
+    },
+    {
+      "work_id": "reception-007",
+      "profile_id": "ac"
+    },
+    {
+      "work_id": "reception-008",
+      "profile_id": "wiring"
+    },
+    {
+      "work_id": "reception-009",
+      "profile_id": "lights"
+    },
+    {
+      "work_id": "reception-010",
+      "profile_id": "hanging-lights"
+    },
+    {
+      "work_id": "reception-011",
+      "profile_id": "paint"
+    },
+    {
+      "work_id": "reception-012",
+      "profile_id": "ceiling"
+    },
+    {
+      "work_id": "reception-013",
+      "profile_id": "sign"
+    },
+    {
+      "work_id": "reception-014",
+      "profile_id": "ceiling"
+    },
+    {
+      "work_id": "reception-015",
+      "profile_id": "sofa"
+    },
+    {
+      "work_id": "reception-016",
+      "profile_id": "stone-table"
+    },
+    {
+      "work_id": "coffee-lounge-001",
+      "profile_id": "sofa"
+    },
+    {
+      "work_id": "coffee-lounge-002",
+      "profile_id": "stone"
+    },
+    {
+      "work_id": "coffee-lounge-003",
+      "profile_id": "joinery"
+    },
+    {
+      "work_id": "coffee-lounge-004",
+      "profile_id": "skirting"
+    },
+    {
+      "work_id": "coffee-lounge-005",
+      "profile_id": "surface-panel"
+    },
+    {
+      "work_id": "coffee-lounge-006",
+      "profile_id": "lights"
+    },
+    {
+      "work_id": "coffee-lounge-007",
+      "profile_id": "paint"
+    },
+    {
+      "work_id": "coffee-lounge-008",
+      "profile_id": "ac"
+    },
+    {
+      "work_id": "coffee-lounge-009",
+      "profile_id": "ceiling"
+    },
+    {
+      "work_id": "coffee-lounge-010",
+      "profile_id": "glass-furniture"
+    },
+    {
+      "work_id": "coffee-lounge-011",
+      "profile_id": "wiring"
+    },
+    {
+      "work_id": "coffee-lounge-012",
+      "profile_id": "hanging-lights"
+    },
+    {
+      "work_id": "coffee-lounge-013",
+      "profile_id": "plumbing"
+    },
+    {
+      "work_id": "locker-space-001",
+      "profile_id": "joinery"
+    },
+    {
+      "work_id": "locker-space-002",
+      "profile_id": "joinery"
+    },
+    {
+      "work_id": "locker-space-003",
+      "profile_id": "framed-panels"
+    },
+    {
+      "work_id": "locker-space-004",
+      "profile_id": "hanging-lights"
+    },
+    {
+      "work_id": "locker-space-005",
+      "profile_id": "putty"
+    },
+    {
+      "work_id": "locker-space-006",
+      "profile_id": "ac"
+    },
+    {
+      "work_id": "locker-space-007",
+      "profile_id": "ceiling"
+    },
+    {
+      "work_id": "locker-space-008",
+      "profile_id": "wiring"
+    },
+    {
+      "work_id": "locker-space-009",
+      "profile_id": "sign"
+    },
+    {
+      "work_id": "locker-space-010",
+      "profile_id": "glass-door"
+    },
+    {
+      "work_id": "studio-001",
+      "profile_id": "joinery"
+    },
+    {
+      "work_id": "studio-002",
+      "profile_id": "mirror"
+    },
+    {
+      "work_id": "studio-003",
+      "profile_id": "curtain"
+    },
+    {
+      "work_id": "studio-004",
+      "profile_id": "framed-panels"
+    },
+    {
+      "work_id": "studio-005",
+      "profile_id": "paint"
+    },
+    {
+      "work_id": "studio-006",
+      "profile_id": "wiring"
+    },
+    {
+      "work_id": "studio-007",
+      "profile_id": "ac"
+    },
+    {
+      "work_id": "studio-008",
+      "profile_id": "partition"
+    },
+    {
+      "work_id": "changing-room-001",
+      "profile_id": "partition"
+    },
+    {
+      "work_id": "changing-room-002",
+      "profile_id": "curtain"
+    },
+    {
+      "work_id": "washroom-001",
+      "profile_id": "mirror"
+    },
+    {
+      "work_id": "washroom-002",
+      "profile_id": "decor"
+    }
+  ],
+  "allowance_decisions": [
+    {
+      "area_id": "laminate-flooring",
+      "profile_id": "floor-allowance"
+    },
+    {
+      "area_id": "electrical",
+      "profile_id": "electrical-allowance"
+    }
+  ],
+  "options": [
+    {
+      "id": "option-carpet",
+      "title": "Loose carpet or rug",
+      "profile_id": "rug",
+      "quantity": null,
+      "unit": null,
+      "scope_note": "New owner-requested option. No separate carpet line exists in the quoted estimate; do not allocate the laminate allowance to it."
+    },
+    {
+      "id": "option-vanity",
+      "title": "Bathroom vanity package",
+      "profile_id": "vanity",
+      "quantity": null,
+      "unit": null,
+      "scope_note": "Assumes a bathroom basin/cabinet vanity. A freestanding dressing-table vanity without plumbing follows the owner-managed furniture route. No bathroom vanity quantity is defined by the quoted decorative mirror or coffee-lounge sink; measure and agree the intended scope."
+    }
+  ]
+}

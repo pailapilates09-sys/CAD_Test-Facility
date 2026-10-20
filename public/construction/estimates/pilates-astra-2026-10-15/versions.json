@@ -1,56 +1,60 @@
 {
   "schema_version": "estimate-versions-1.0.0",
   "updated_date": "2026-10-20",
-  "latest_version": "v11",
+  "latest_version": "v12",
   "milestone_tag": "pilates-estimates-m1-2026-10-17",
   "versions": [
     {
       "id": "original",
-      "label": "Original",
+      "label": "Original source · v0",
       "path": "./",
-      "purpose": "Source values and complete descriptions",
+      "purpose": "Original quoted scope, source quantities, rates, amounts and evidence only",
       "units": "Source units",
       "permanent_original_markers": false,
       "position_overview": false,
       "cost_treemap": false,
       "reference_images": false,
-      "component_evidence": false
+      "component_evidence": false,
+      "source_register": "v9/register.json"
     },
     {
       "id": "v2",
       "label": "Concise v2",
       "path": "./v2/",
-      "purpose": "Indian number grouping, short scope titles and area hierarchy",
+      "purpose": "Concise area scope and cost hierarchy; full source descriptions open on request",
       "units": "Source units",
       "permanent_original_markers": false,
       "position_overview": false,
       "cost_treemap": false,
       "reference_images": false,
-      "component_evidence": false
+      "component_evidence": false,
+      "source_register": "v9/register.json"
     },
     {
       "id": "v3",
       "label": "SI v3",
       "path": "./v3/",
-      "purpose": "Metric quantities and inverse-converted rates",
+      "purpose": "Source-to-SI measurement and rate conversion only",
       "units": "SI / counts",
       "permanent_original_markers": false,
       "position_overview": false,
       "cost_treemap": false,
       "reference_images": false,
-      "component_evidence": false
+      "component_evidence": false,
+      "source_register": "v9/register.json"
     },
     {
       "id": "v4",
       "label": "Rates v4",
       "path": "./v4/",
-      "purpose": "Preserved public-price research snapshot and scope qualifications",
+      "purpose": "One row per public price observation, its source and linked works; historical downloads retained",
       "units": "SI / counts",
       "permanent_original_markers": false,
       "position_overview": false,
       "cost_treemap": false,
       "reference_images": false,
-      "component_evidence": false
+      "component_evidence": false,
+      "source_register": "v9/register.json"
     },
     {
       "id": "v5",
@@ -164,6 +168,22 @@
       "component_evidence": false,
       "material_takeoff": true,
       "single_page": true
+    },
+    {
+      "id": "v12",
+      "label": "Buy or delegate v12",
+      "path": "./v12/",
+      "purpose": "Two responsibility tables: engineer/specialist packages and owner-managed purchases/direct hires; Nepal market leads and reasons",
+      "units": "SI scope quantities; retail pack units kept separate",
+      "source_register": "v9/register.json",
+      "decision_register": "v12/procurement.json",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": false,
+      "component_evidence": false,
+      "procurement_decisions": true,
+      "single_page": true
     }
   ],
   "current_view_policy": {
@@ -171,7 +191,7 @@
     "currency_assumption": "NPR; requested by the owner; original source currency remains unconfirmed",
     "replacement_rates": "None; original estimate values remain unchanged",
     "scope": "Measurement compatibility does not establish matching labour, material, grade, installation, VAT or stock",
-    "snapshot_note": "V5–V11 are focused views of the shared v9 register. Dated research exports and frozen milestones retain their original scope."
+    "snapshot_note": "Original/v0–v12 are focused views. The v9 register defines current works, quantities and price evidence; v12 adds only responsibility rules, research and work-ID links. Dated exports and frozen milestones retain their original evidence."
   },
   "workspace_navigation": {
     "primary_sections": [
@@ -181,6 +201,7 @@
       "Memory Posters"
     ],
     "construction_contents": [
+      "Buy or delegate v12",
       "All materials inline v11",
       "Contractor worksheets v10",
       "Editable material details v8",
@@ -201,6 +222,8 @@
     "publication": "Every source commit runs the existing GitHub Actions build and refreshes all derived views together.",
     "historical_evidence": "Original PDF/raw extraction, dated research exports and released milestones remain evidence snapshots.",
     "draft_policy": "V8 browser models are temporary scenarios. V10 and v11 share contractor inputs saved on the same browser by source revision and can export as a material CSV. Neither changes the published register or other views until the chosen values are committed to the shared source.",
-    "inline_material_view": "V11 renders the v10 projection and loads the same generated v10 contractor-data.json; no separately edited material register."
+    "inline_material_view": "V11 renders the v10 projection and loads the same generated v10 contractor-data.json; no separately edited material register.",
+    "current_views": "Original/v0: quoted source; v2: concise scope/hierarchy; v3: SI conversion; v4: price observations; v5: comparisons; v5.1: graphs; v6: images; v7: components; v8: quantity models; v9: internal register; v10: worksheets; v11: inline materials; v12: responsibility decisions.",
+    "procurement_view": "V12 stores no copied work titles, quantities or quoted rates. Work-ID and area-ID decisions join the shared register at build time. New carpet/vanity options are outside the quote and have unknown quantities."
   }
 }

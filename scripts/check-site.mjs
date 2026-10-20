@@ -10,7 +10,7 @@ export async function checkSite(directory){
   const text=await readFile(file,'utf8');
   const navigation=[...text.matchAll(/<nav\b[^>]*aria-label="Workspace"[^>]*>([\s\S]*?)<\/nav>/g)];
   if(navigation.length!==1||navigation[0][1]!==workspaceNavigation(file,root))throw Error('Workspace navigation differs in '+relative(root,file));
-  if(/\/v(?:5|5\.1|6|7|8|9|10|11)\/[^/]+\.html$/.test(file)){
+  if(/\/v(?:2|3|4|5|5\.1|6|7|8|9|10|11|12)\/[^/]+\.html$/.test(file)||file.endsWith('/pilates-astra-2026-10-15/index.html')){
    const revision=text.match(/name="estimate-source-revision" content="([a-f0-9]{16})"/);
    if(!revision)throw Error('Missing shared source revision in '+file);revisions.add(revision[1]);
    if(file.includes('/v10/')&&!text.includes('v10.js?source='+revision[1]))throw Error('Contractor page script cache key differs from its source in '+file);
@@ -30,6 +30,15 @@ export async function checkSite(directory){
    const css=text.match(/v11\.css\?v=([a-f0-9]{16})/),script=text.match(/v11\.js\?v=([a-f0-9]{16})/);
    if(!css||!script||css[1]!==script[1])throw Error('V11 asset revisions differ');
   }
+  if(file.endsWith('/v12/index.html')){
+   if((text.match(/<table\b/g)??[]).length!==2||(text.match(/data-decision-subject=/g)??[]).length!==55)throw Error('V12 must have exactly two tables and complete responsibility coverage');
+   if((text.match(/data-subject-type="work"/g)??[]).length!==51||(text.match(/data-subject-type="allowance"/g)??[]).length!==2||(text.match(/data-subject-type="option"/g)??[]).length!==2)throw Error('V12 lost a work, allowance or new option');
+   if((text.match(/ON HOLD · route only; no order/g)??[]).length!==6)throw Error('V12 released a held work');
+   for(const head of text.matchAll(/<thead>(.*?)<\/thead>/gs))if((head[1].match(/<th /g)??[]).length!==4)throw Error('V12 responsibility tables must have four columns');
+   const ids=[...text.matchAll(/\sid="([^"]+)"/g)].map(match=>match[1]);if(ids.length!==new Set(ids).size)throw Error('V12 has duplicate anchors');
+   if(/V12_REVISION|SOURCE_REVISION/.test(text))throw Error('Unresolved V12 cache revision');
+   const css=text.match(/v12\.css\?v=([a-f0-9]{16})/),script=text.match(/v12\.js\?v=([a-f0-9]{16})/);if(!css||!script||css[1]!==script[1])throw Error('V12 assets use different cache revisions');
+  }
   for(const match of text.matchAll(/\s(?:href|src)="([^"]+)"/g)){
    const url=match[1].replaceAll('&amp;','&');if(/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(url))continue;
    const pathname=decodeURIComponent(url.split(/[?#]/)[0]);if(!pathname)continue;
@@ -45,6 +54,11 @@ export async function checkSite(directory){
  }
  if(revisions.size!==1)throw Error('Current views use different source revisions');
  const revision=[...revisions][0];
+ const projectRoot=resolve(root,'construction/estimates/pilates-astra-2026-10-15');
+ const quote=JSON.parse(await readFile(resolve(projectRoot,'shared/quote-view.json'),'utf8')),hierarchy=JSON.parse(await readFile(resolve(projectRoot,'v2/hierarchy.json'),'utf8'));
+ if(quote.derivation.revision!==revision||hierarchy.derivation.revision!==revision)throw Error('Early views have stale source projections');
+ const scopeScript=await readFile(resolve(projectRoot,'v2/v2.js'),'utf8');if(!scopeScript.includes('quote-view.json?source='+revision)||scopeScript.includes("fetchJSON('../data/estimate.json')"))throw Error('V2 reads an independent historical estimate');
+ for(const version of ['v3','v4']){const html=await readFile(resolve(projectRoot,version+'/index.html'),'utf8');if(/id="chart"|id="chart-root"|id="total"|src="\.\/v[34]\.js"/.test(html))throw Error('SI/research view repeated the full estimate hierarchy')}
  const versions=JSON.parse(await readFile(resolve(root,'construction/estimates/pilates-astra-2026-10-15/versions.json'),'utf8'));
  if(JSON.stringify(versions.workspace_navigation.primary_sections)!==JSON.stringify(workspaceSections.map(section=>section.label)))throw Error('Workspace section register differs from navigation');
  const memory=await readFile(resolve(root,'memory-posters/index.html'),'utf8');
