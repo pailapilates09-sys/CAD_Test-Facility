@@ -1,20 +1,20 @@
 export const livePhase = {
-  "phase": "277",
-  "title": "Run13 complete — 14 checkpoints through CP260",
+  "phase": "291",
+  "title": "Run14 complete — 14 checkpoints through CP274",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-19T23:21:03.349Z",
-  "checkpoint": "MSCH-CORPUS-CP260",
+  "completedAt": "2026-10-20T12:17:03.346Z",
+  "checkpoint": "MSCH-CORPUS-CP274",
   "before": {
-    "rows": 3682,
-    "folders": 832,
-    "files": 2850,
-    "pending": 548
-  },
-  "after": {
     "rows": 3702,
     "folders": 836,
     "files": 2866,
     "pending": 538
+  },
+  "after": {
+    "rows": 3818,
+    "folders": 857,
+    "files": 2961,
+    "pending": 545
   },
   "completedBatches": 14,
   "scope": "User-authorized maximum 60-minute four-lane continuation; 14 MSCH metadata checkpoints. Existing source-stage gates retained.",
@@ -26,24 +26,24 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 28.6407,
+    "sourceElapsedMinutes": 37.8682,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 251,
-  "mainCursor": 251,
-  "nextBatch": "B261",
-  "nextTarget": "datacasts-main",
-  "newRows": 20,
-  "newFolders": 4,
-  "newFiles": 16,
-  "newKnownBytes": 152265,
-  "sessionStartedAt": "2026-10-19T22:48:36.218Z",
-  "sessionElapsedMinutes": 32.45218333333333,
-  "knownBytes": 49183256800,
+  "localHighWater": 265,
+  "mainCursor": 265,
+  "nextBatch": "B275",
+  "nextTarget": "gis",
+  "newRows": 116,
+  "newFolders": 21,
+  "newFiles": 95,
+  "newKnownBytes": 1023118,
+  "sessionStartedAt": "2026-10-20T11:35:26.094Z",
+  "sessionElapsedMinutes": 41.620866666666664,
+  "knownBytes": 49184279918,
   "sessionReport": {
-    "startedAt": "2026-10-19T22:48:36.218Z",
-    "sourceStoppedAt": "2026-10-19T23:17:14.660Z",
+    "startedAt": "2026-10-20T11:35:26.094Z",
+    "sourceStoppedAt": "2026-10-20T12:13:18.186Z",
     "milestones": 14,
     "advancedLanes": 1,
     "MSCS": {
@@ -73,17 +73,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP260 /B260",
-      "beforeRows": 3682,
-      "afterRows": 3702,
-      "addedFolders": 4,
-      "addedFiles": 16,
-      "addedMetadataBytes": 152265,
-      "pending": 538,
-      "local": 251,
-      "mainCursor": 251,
-      "notice": "N205 ACKED",
-      "next": "B261"
+      "checkpoint": "CP274 /B274",
+      "beforeRows": 3702,
+      "afterRows": 3818,
+      "addedFolders": 21,
+      "addedFiles": 95,
+      "addedMetadataBytes": 1023118,
+      "pending": 545,
+      "local": 265,
+      "mainCursor": 265,
+      "notice": "N219 ACKED",
+      "next": "B275"
     },
     "AEC": {
       "status": "TERMINAL_RECONCILIATION_REQUIRED",
@@ -114,24 +114,24 @@ export const livePhase = {
       "LSA historical 2 files /9,304 bytes unresolved.",
       "AEC G075 checkpoint readable; G076 terminal not recovered.",
       "MSCS oversized/native hashing-policy gate.",
-      "MSCH 538 FIFO folders; source-content extraction remains."
+      "MSCH 545 FIFO folders; source-content extraction remains."
     ]
   },
   "scannedFolders": [
-    "Basin_1",
-    "info",
+    "datacasts-main",
+    "drive-download-20240528T071132Z-001_R Programming Tutorial - Learn the Basics of Statistical Computing",
+    "R_Tutorial_01",
+    "Thesis_01",
+    "library",
+    "B20E559C",
+    "shared",
+    "Data",
     "basinStates",
     "data",
     "datavar",
     "ensemble",
     "forecast",
-    "frequency",
-    "gis",
-    "maps",
-    "montecarlo",
-    "optimizer",
-    "results",
-    "terrain"
+    "frequency"
   ],
   "phases": [
     {
@@ -2099,6 +2099,104 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B260 terrain: 1 metadata records",
       "stop": "MSCH-CORPUS-CP260 +Local/Main251/251 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "278",
+      "lane": "MSCH /Local /Main",
+      "work": "B261 datacasts-main: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP261 +Local/Main252/252 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "279",
+      "lane": "MSCH /Local /Main",
+      "work": "B262 drive-download-20240528T071132Z-001_R Programming Tutorial - Learn the Basics of Statistical Computing: 25 metadata records",
+      "stop": "MSCH-CORPUS-CP262 +Local/Main253/253 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "280",
+      "lane": "MSCH /Local /Main",
+      "work": "B263 R_Tutorial_01: 6 metadata records",
+      "stop": "MSCH-CORPUS-CP263 +Local/Main254/254 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "281",
+      "lane": "MSCH /Local /Main",
+      "work": "B264 Thesis_01: 12 metadata records",
+      "stop": "MSCH-CORPUS-CP264 +Local/Main255/255 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "282",
+      "lane": "MSCH /Local /Main",
+      "work": "B265 library: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP265 +Local/Main256/256 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "283",
+      "lane": "MSCH /Local /Main",
+      "work": "B266 B20E559C: 11 metadata records",
+      "stop": "MSCH-CORPUS-CP266 +Local/Main257/257 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "284",
+      "lane": "MSCH /Local /Main",
+      "work": "B267 shared: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP267 +Local/Main258/258 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "285",
+      "lane": "MSCH /Local /Main",
+      "work": "B268 Data: 59 metadata records",
+      "stop": "MSCH-CORPUS-CP268 +Local/Main259/259 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "286",
+      "lane": "MSCH /Local /Main",
+      "work": "B269 basinStates: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP269 +Local/Main260/260 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "287",
+      "lane": "MSCH /Local /Main",
+      "work": "B270 data: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP270 +Local/Main261/261 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "288",
+      "lane": "MSCH /Local /Main",
+      "work": "B271 datavar: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP271 +Local/Main262/262 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "289",
+      "lane": "MSCH /Local /Main",
+      "work": "B272 ensemble: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP272 +Local/Main263/263 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "290",
+      "lane": "MSCH /Local /Main",
+      "work": "B273 forecast: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP273 +Local/Main264/264 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "291",
+      "lane": "MSCH /Local /Main",
+      "work": "B274 frequency: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP274 +Local/Main265/265 acknowledged by final reconciliation",
       "status": "Complete - stopped"
     }
   ]
