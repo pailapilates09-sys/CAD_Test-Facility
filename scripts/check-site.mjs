@@ -42,6 +42,13 @@ export async function checkSite(directory){
  }
  if(revisions.size!==1)throw Error('Current views use different source revisions');
  const revision=[...revisions][0];
+ const memory=await readFile(resolve(root,'memory-posters/index.html'),'utf8');
+ if(!memory.includes('name="memory-source-revision" content="'+revision+'"')||/MEMORY_REVISION|<details|<dialog|\{\{/.test(memory))throw Error('Memory Posters has a stale source, hidden content or an unresolved placeholder');
+ const posterIds=[...memory.matchAll(/\sid="([^"]+)"/g)].map(match=>match[1]);if(posterIds.length!==new Set(posterIds).size)throw Error('Duplicate Memory Poster id');
+ for(const target of memory.matchAll(/data-copy-prompt="([^"]+)"/g))if(!posterIds.includes(target[1]))throw Error('Missing copyable prompt: '+target[1]);
+ const posterCollection=JSON.parse(await readFile(resolve(root,'memory-posters/posters.json'),'utf8'));
+ if((memory.match(/data-poster data-category=/g)??[]).length!==posterCollection.posters.length)throw Error('Memory Poster coverage differs');
+
  const contractorRoot=resolve(root,'construction/estimates/pilates-astra-2026-10-15/v10');
  const contractor=await readFile(resolve(contractorRoot,'v10.js'),'utf8'),contractorModel=await readFile(resolve(contractorRoot,'contractor-model.js'),'utf8');
  if(!contractor.includes('contractor-data.json?source='+revision)||!contractor.includes('contractor-model.js?source='+revision)||!contractorModel.includes('calculations.js?source='+revision))throw Error('Contractor data/model cache keys differ from the view source');

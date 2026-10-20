@@ -9,6 +9,7 @@ import {deriveViews} from '../public/construction/estimates/pilates-astra-2026-1
 import {renderComparisons,renderGraphs,renderImages,renderComponents,renderSource} from './linked-estimate-views.mjs';
 import {contractorData,renderContractorIndex,contractorPage} from './contractor-v10.mjs';
 import {renderInlineMaterials} from './material-inline-v11.mjs';
+import {renderMemoryPosters} from './memory-posters.mjs';
 import {renderVersionRegister} from './linked-estimate-views.mjs';
 import {checkSite} from './check-site.mjs';
 import {fileURLToPath} from 'node:url';
@@ -39,6 +40,11 @@ const [versions,model,debt]=await Promise.all([
  readJSON('public/'+estimatePath+'versions.json'),readJSON('public/construction/models/pilates-sketchup/source-register.json'),
  readJSON('public/'+estimatePath+'v7/debt-review.json')
 ]);
+const posterCollection=await readJSON('public/memory-posters/posters.json');
+const memoryHash=createHash('sha256').update(sourceRevision).update(JSON.stringify(posterCollection));
+for(const path of ['wall.css','wall.js'])memoryHash.update(await readFile(new URL('public/memory-posters/'+path,root)));
+const memoryRevision=memoryHash.digest('hex').slice(0,16),memoryPage=new URL('memory-posters/index.html',dist);
+await writeFile(memoryPage,(await readFile(memoryPage,'utf8')).replace('<!-- MEMORY_POSTERS -->',renderMemoryPosters(posterCollection,contractorData(views))).replace('<head>','<head><meta name="memory-source-revision" content="'+sourceRevision+'">').replaceAll('MEMORY_REVISION',memoryRevision));
 const milestonePage=new URL(estimatePath+'milestone.html',dist);
 await writeFile(milestonePage,(await readFile(milestonePage,'utf8')).replace('<!-- VERSION_REGISTER -->',renderVersionRegister(versions)));
 const home=new URL('index.html',dist);

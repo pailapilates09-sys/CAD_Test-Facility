@@ -187,7 +187,8 @@
       "Pilates SketchUp workspace"
     ],
     "history_location": "milestone.html",
-    "existing_urls_retained": true
+    "existing_urls_retained": true,
+    "memory_posters_path": "../../../memory-posters/"
   },
   "latest_full_estimate_version": "v11",
   "workspace_milestone_tag": "workspace-m3-2026-10-19",
