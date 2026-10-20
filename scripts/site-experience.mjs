@@ -4,6 +4,23 @@ import {mobileQuery} from '../public/theme/mobile-config.js';
 
 export const experienceVersion='studio-2-mobile-1';
 
+export const workspaceSections=[
+ {label:'Construction',path:'construction/'},
+ {label:'Versions + milestone',path:'construction/estimates/pilates-astra-2026-10-15/milestone.html'},
+ {label:'Progress',path:'progress/'},
+ {label:'Memory Posters',path:'memory-posters/'}
+];
+
+// One navigation register covers both source templates and generated work pages.
+export function workspaceNavigation(pagePath,distPath){
+ const page=relative(distPath,pagePath).split('\\').join('/');
+ const active=page===workspaceSections[1].path?1:page.startsWith('progress/')?2:page.startsWith('memory-posters/')?3:/^(construction|cad)\//.test(page)?0:-1;
+ return workspaceSections.map((section,index)=>{
+  const path=relative(dirname(pagePath),resolve(distPath,section.path)).split('\\').join('/')||'.';
+  return `<a href="${path}${section.path.endsWith('/')?'/':''}"${index===active?' aria-current="page"':''}>${section.label}</a>`;
+ }).join('');
+}
+
 // Apply presentation after generating the pages, without rewriting historical templates.
 export function decoratePage(html,pagePath,distPath){
  if(html.includes('data-site-experience'))throw new Error('Site experience already applied: '+pagePath);
@@ -15,7 +32,7 @@ export function decoratePage(html,pagePath,distPath){
  <aside class="site-rail" aria-label="Appearance and companion"><div class="companion-label" aria-hidden="true"><strong>Pip</strong><span>your fluffy companion</span></div>
  <div class="experience-controls" hidden><div class="theme-switch" role="group" aria-label="Colour theme"><button type="button" data-theme-choice="light" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>Light</button><button type="button" data-theme-choice="dark" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></svg>Dark</button></div><button type="button" class="flight-control" id="flight-control" aria-pressed="false" aria-label="Pause mascot flight"><span aria-hidden="true" data-flight-icon>Ⅱ</span><span data-flight-label>Pause flight</span></button></div>
  </aside><script type="module" src="${asset('experience.js')}"></script><script type="module" src="${asset('mobile.js')}"></script>`;
- return html.replace(/<head([^>]*)>/i,`<head$1>${boot}`).replace(/<\/head>/i,styles+'</head>').replace(/<\/body>/i,controls+'</body>');
+ return html.replace(/(<nav\b[^>]*aria-label="Workspace"[^>]*>)[\s\S]*?<\/nav>/gi,(_,open)=>open+workspaceNavigation(pagePath,distPath)+'</nav>').replace(/<head([^>]*)>/i,`<head$1>${boot}`).replace(/<\/head>/i,styles+'</head>').replace(/<\/body>/i,controls+'</body>');
 }
 
 export async function applySiteExperience(distPath){

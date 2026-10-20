@@ -1,5 +1,6 @@
 import {readdir,readFile,stat} from 'node:fs/promises';
 import {resolve,relative,dirname} from 'node:path';
+import {workspaceSections,workspaceNavigation} from './site-experience.mjs';
 
 export async function checkSite(directory){
  const root=resolve(directory),files=[],revisions=new Set();
@@ -7,6 +8,8 @@ export async function checkSite(directory){
  await walk(root);const pages=files.filter(x=>x.endsWith('.html'));let links=0,imports=0;
  for(const file of pages){
   const text=await readFile(file,'utf8');
+  const navigation=[...text.matchAll(/<nav\b[^>]*aria-label="Workspace"[^>]*>([\s\S]*?)<\/nav>/g)];
+  if(navigation.length!==1||navigation[0][1]!==workspaceNavigation(file,root))throw Error('Workspace navigation differs in '+relative(root,file));
   if(/\/v(?:5|5\.1|6|7|8|9|10|11)\/[^/]+\.html$/.test(file)){
    const revision=text.match(/name="estimate-source-revision" content="([a-f0-9]{16})"/);
    if(!revision)throw Error('Missing shared source revision in '+file);revisions.add(revision[1]);
@@ -42,6 +45,8 @@ export async function checkSite(directory){
  }
  if(revisions.size!==1)throw Error('Current views use different source revisions');
  const revision=[...revisions][0];
+ const versions=JSON.parse(await readFile(resolve(root,'construction/estimates/pilates-astra-2026-10-15/versions.json'),'utf8'));
+ if(JSON.stringify(versions.workspace_navigation.primary_sections)!==JSON.stringify(workspaceSections.map(section=>section.label)))throw Error('Workspace section register differs from navigation');
  const memory=await readFile(resolve(root,'memory-posters/index.html'),'utf8');
  if(!memory.includes('name="memory-source-revision" content="'+revision+'"')||/MEMORY_REVISION|<details|<dialog|\{\{/.test(memory))throw Error('Memory Posters has a stale source, hidden content or an unresolved placeholder');
  const posterIds=[...memory.matchAll(/\sid="([^"]+)"/g)].map(match=>match[1]);if(posterIds.length!==new Set(posterIds).size)throw Error('Duplicate Memory Poster id');

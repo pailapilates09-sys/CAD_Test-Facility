@@ -4,13 +4,15 @@ import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {validateMilestone} from '../scripts/release-estimate-milestone.mjs';
 import {renderVersionRegister} from '../scripts/linked-estimate-views.mjs';
+import {decoratePage} from '../scripts/site-experience.mjs';
+import {fileURLToPath} from 'node:url';
 const base=new URL('../public/construction/estimates/pilates-astra-2026-10-15/',import.meta.url),json=async p=>JSON.parse(await readFile(new URL(p,base)));
 const versions=await json('versions.json'),manifest=await json('milestone.json');
 test('milestone register covers every maintained version and preserves the exact source registers',async()=>{
  assert.deepEqual(versions.versions.map(x=>x.id),['original','v2','v3','v4','v5','v5.1','v6','v7','v8','v9','v10','v11']);assert.deepEqual(manifest.versions,['original','v2','v3','v4','v5','v5.1','v6','v7']);assert.equal(manifest.latest_version,'v7');assert.equal(versions.latest_version,'v11');assert.equal(versions.latest_full_estimate_version,'v11');assert.equal(manifest.coverage.accepted_original_component_splits,0);
  const original=JSON.parse(await readFile(new URL('../construction/estimates/pilates-astra-2026-10-15/data/estimate.json',import.meta.url)));assert.deepEqual(manifest.original_summary,original.summary);assert.equal(manifest.source_pdf_sha256,original.source.sha256);
  for(const [p,hash] of Object.entries(manifest.preservation_sha256))assert.equal(createHash('sha256').update(await readFile(new URL(p,base))).digest('hex'),hash);
- for(const v of versions.versions){const html=await readFile(new URL(v.path+'index.html',base),'utf8');const nav=html.match(/<nav aria-label="Workspace">(.*?)<\/nav>/s)[1];assert.deepEqual([...nav.matchAll(/<a [^>]*>(.*?)<\/a>/g)].map(x=>x[1]),['Construction','Versions + milestone','Progress']);assert.match(html,/Versions \+ milestone/);assert.match(html,/data-version-register/);const register=renderVersionRegister(versions);assert.ok(register.includes('>'+v.label+'</a>'));assert.equal(v.reference_images,v.id==='v6');assert.equal(v.component_evidence,v.id==='v7')}
+ for(const v of versions.versions){const file=new URL(v.path+'index.html',base),html=decoratePage(await readFile(file,'utf8'),fileURLToPath(file),fileURLToPath(new URL('../public/',import.meta.url)));const nav=html.match(/<nav aria-label="Workspace">(.*?)<\/nav>/s)[1];assert.deepEqual([...nav.matchAll(/<a [^>]*>(.*?)<\/a>/g)].map(x=>x[1]),['Construction','Versions + milestone','Progress','Memory Posters']);assert.match(html,/Versions \+ milestone/);assert.match(html,/data-version-register/);const register=renderVersionRegister(versions);assert.ok(register.includes('>'+v.label+'</a>'));assert.equal(v.reference_images,v.id==='v6');assert.equal(v.component_evidence,v.id==='v7')}
 });
 test('current comparison views use linked templates and restrict graph presentation to the graph view',async()=>{
  for(const v of manifest.synchronized_comparison_versions){const html=await readFile(new URL(v+'/index.html',base),'utf8');assert.match(html,/<!-- LINKED_VIEW -->/);assert.match(html,/Shared source:/);assert.equal(html.includes('shared/graphs.js'),v==='v5.1');assert.doesNotMatch(html,/id="assume-npr"|id="board-assume-npr"|data-range-toggle/);}

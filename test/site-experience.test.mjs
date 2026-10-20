@@ -19,7 +19,7 @@ function env({saved=new Map(),sessionSaved=new Map(),systemDark=false,reducedMot
  const label={},icon={},flight={...button(),querySelector:s=>s==='[data-flight-label]'?label:icon};
  const position={style:{},dataset:{}},facing={style:{}},controls={hidden:true};
  const rail={querySelector:()=>controls,querySelectorAll:()=>[light,dark]};
- const meta={setAttribute(k,v){this[k]=v}},nav=Array.from({length:3},button);
+ const meta={setAttribute(k,v){this[k]=v}},nav=Array.from({length:4},button);
  const doc={...target(),documentElement:root,hidden:false,getElementById:id=>id==='flight-control'?flight:id==='pip-facing'?facing:position,querySelector:s=>s==='.site-rail'?rail:meta,querySelectorAll:()=>nav};
  const reduce={...target(),matches:reducedMotion},system={...target(),matches:systemDark};
  const frames=new Map();let seq=0;
@@ -99,16 +99,21 @@ test('the fluffy mascot occupies a separate click-through viewport layer and mov
  e.step(16);assert.notEqual(e.position.style.transform,before);assert.equal(e.position.dataset.ready,'true');
 });
 
-test('page decoration reaches generated detail pages and retains all existing data, scripts and navigation',async()=>{
+test('page decoration gives all four sibling sections accessible links from every depth and retains existing data and scripts',async()=>{
  const base=await mkdtemp(resolve(tmpdir(),'cad-theme-'));
  const template='<!doctype html><html><head><link rel="stylesheet" href="./old.css"></head><body><nav aria-label="Workspace"><a href="../">Construction</a><a href="milestone.html">Versions + milestone</a><a href="progress/">Progress</a></nav><table><tr><td>66,45,762.90</td></tr></table><script src="./original.js"></script></body></html>';
- const pages=['index.html','progress/index.html','cad/index.html','construction/estimates/project/v8/item-01.html'];
+ const pages=['index.html','construction/index.html','progress/index.html','cad/index.html','memory-posters/index.html','construction/estimates/pilates-astra-2026-10-15/milestone.html','construction/estimates/pilates-astra-2026-10-15/v8/item-01.html'];
  try{
   for(const p of pages){await mkdir(dirname(resolve(base,p)),{recursive:true});await writeFile(resolve(base,p),template)}
   assert.equal(await applySiteExperience(base),pages.length);
   for(const p of pages){
    const html=await readFile(resolve(base,p),'utf8');assert.ok(html.indexOf('boot.js')<html.indexOf('old.css'));assert.ok(html.indexOf('studio.css')>html.indexOf('old.css'));assert.match(html,/<td>66,45,762.90<\/td>/);assert.match(html,/src="\.\/original.js"/);
    assert.equal((html.match(/data-site-experience=/g)||[]).length,1);
+   const nav=html.match(/<nav aria-label="Workspace">([\s\S]*?)<\/nav>/)[1],links=[...nav.matchAll(/<a href="([^"]+)"([^>]*)>([^<]+)<\/a>/g)];
+   assert.deepEqual(links.map(link=>link[3]),['Construction','Versions + milestone','Progress','Memory Posters']);
+   assert.deepEqual(links.map(link=>resolve(dirname(resolve(base,p)),link[1])),['construction','construction/estimates/pilates-astra-2026-10-15/milestone.html','progress','memory-posters'].map(path=>resolve(base,path)));
+   const active=p==='index.html'?null:p.endsWith('milestone.html')?'Versions + milestone':p.startsWith('progress/')?'Progress':p.startsWith('memory-posters/')?'Memory Posters':'Construction';
+   assert.deepEqual(links.filter(link=>link[2].includes('aria-current="page"')).map(link=>link[3]),active?[active]:[]);
    for(const match of html.matchAll(/(?:src|href)="([^"]*theme\/[^"?]+)(?:\?[^"]*)?"/g))assert.ok(resolve(dirname(resolve(base,p)),match[1]).startsWith(resolve(base,'theme')+'/'));
   }
   assert.throws(()=>decoratePage('data-site-experience',resolve(base,'index.html'),base),/already applied/);
