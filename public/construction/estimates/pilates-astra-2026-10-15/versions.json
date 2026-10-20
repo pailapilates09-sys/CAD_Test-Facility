@@ -191,8 +191,8 @@
     "memory_posters_path": "../../../memory-posters/"
   },
   "latest_full_estimate_version": "v11",
-  "workspace_milestone_tag": "workspace-m3-2026-10-19",
-  "workspace_milestone_manifest": "../../../milestones/workspace-m3-2026-10-19.json",
+  "workspace_milestone_tag": "workspace-m4-2026-10-20",
+  "workspace_milestone_manifest": "../../../milestones/workspace-m4-2026-10-20.json",
   "latest_material_version": "v11",
   "data_architecture": {
     "canonical_current_register": "v9/register.json",

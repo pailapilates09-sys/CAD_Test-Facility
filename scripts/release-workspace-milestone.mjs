@@ -6,18 +6,24 @@ import {pathToFileURL} from 'node:url';
 
 const milestones={
  M2:{tag:'workspace-m2-2026-10-18',manifestPath:'public/milestones/workspace-m2-2026-10-18.json',notesPath:'public/milestones/WORKSPACE-M2-2026-10-18.md'},
- M3:{tag:'workspace-m3-2026-10-19',manifestPath:'public/milestones/workspace-m3-2026-10-19.json',notesPath:'public/milestones/WORKSPACE-M3-2026-10-19.md'}
+ M3:{tag:'workspace-m3-2026-10-19',manifestPath:'public/milestones/workspace-m3-2026-10-19.json',notesPath:'public/milestones/WORKSPACE-M3-2026-10-19.md'},
+ M4:{tag:'workspace-m4-2026-10-20',manifestPath:'public/milestones/workspace-m4-2026-10-20.json',notesPath:'public/milestones/WORKSPACE-M4-2026-10-20.md'}
 };
 export function validateWorkspaceMilestone(m){
  const spec=milestones[m.id];
  if(m.schema_version!=='workspace-milestone-1.0.0'||!spec||m.tag!==spec.tag)throw new Error('Unexpected workspace milestone');
  if(typeof m.title!=='string'||!m.title.trim()||/[\r\n]/.test(m.title)||m.title.length>160)throw new Error('Invalid workspace milestone title');
  if(m.release_notes_path!==spec.notesPath||!/^[a-f0-9]{40}$/.test(m.base_commit))throw new Error('Unexpected workspace source or notes path');
- const previous=m.id==='M2'?'pilates-estimates-m1-2026-10-17':milestones.M2.tag;
- if(m.previous_milestone_tag!==previous||m.coverage.generated_pages!==66||m.coverage.latest_estimate_version!=='v8')throw new Error('Incomplete milestone preservation');
+ const previous={M2:'pilates-estimates-m1-2026-10-17',M3:milestones.M2.tag,M4:milestones.M3.tag}[m.id];
+ if(m.previous_milestone_tag!==previous||(m.id!=='M4'&&(m.coverage.generated_pages!==66||m.coverage.latest_estimate_version!=='v8')))throw new Error('Incomplete milestone preservation');
  if(m.verification.browser_animation_qa!=='unverified')throw new Error('Unexpected browser verification claim');
  if(m.id==='M2'&&(m.verification.automated_tests!==69||m.verification.live_files_verified!==79))throw new Error('Unexpected verification claims');
  if(m.id==='M3'&&(m.verification.automated_tests!==78||m.verification.milestone_record_automated_tests!==81||m.verification.live_files_verified<85||m.verification.mobile_device_visual_qa!=='unverified'||m.coverage.work_detail_pages!==51||m.coverage.held_works!==6||m.coverage.summary_allowances!==2))throw new Error('Unexpected mobile milestone verification or preservation');
+ if(m.id==='M4'){
+  const c=m.coverage,v=m.verification;
+  if(c.generated_pages!==121||c.primary_sections!==3||c.estimate_views!==12||c.latest_estimate_version!=='v11'||c.work_detail_pages!==102||c.inline_work_panels!==51||c.material_rows!==261||c.held_works!==6||c.summary_allowances!==2||c.memory_posters!==11||c.reusable_prompts!==5||c.source_content_extraction_claimed!==false||c.accepted_original_component_splits!==0)throw Error('Incomplete v11 / Memory Posters preservation');
+  if(!Number.isInteger(v.automated_tests)||v.automated_tests<104||!Number.isInteger(v.milestone_record_automated_tests)||v.milestone_record_automated_tests<107||!Number.isInteger(v.live_files_verified)||v.live_files_verified<25||v.mobile_device_visual_qa!=='unverified'||v.drive_source_bodies_reverified_for_this_release!==false||v.publication_policy!=='Tag the milestone-record commit after its checks and Pages deployment succeed')throw Error('Unexpected v11 / Memory Posters verification');
+ }
  if(!Array.isArray(m.remaining_debt)||m.remaining_debt.length<6||Object.keys(m.preservation_sha256??{}).length<10||Object.values(m.preservation_sha256).some(v=>!/^[a-f0-9]{64}$/.test(v)))throw new Error('Missing preservation hashes or remaining debt');
  return {tag:m.tag,title:m.title,notesPath:spec.notesPath,manifestPath:spec.manifestPath};
 }
