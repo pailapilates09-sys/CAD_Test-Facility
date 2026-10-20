@@ -1,5 +1,5 @@
 import {mobileQuery} from './mobile-config.js';
-export const storageKeys={theme:'cad-theme',flight:'cad-flight',position:'cad-pip-position'};
+export const storageKeys={theme:'cad-theme',flight:'cad-flight',mascot:'cad-mascot',position:'cad-pip-position'};
 export const clamp=(value,low,high)=>Math.min(high,Math.max(low,value));
 export function readPreference(storage,key){try{return storage.getItem(key)}catch{return null}}
 export function writePreference(storage,key,value){try{storage.setItem(key,value)}catch{/* Private modes can block storage; controls still work. */}}
@@ -26,13 +26,13 @@ export function initExperience(win=window,doc=document){
  const root=doc.documentElement,rail=doc.querySelector('.site-rail');
  if(!rail)return;
  const controls=rail.querySelector('.experience-controls'),themes=[...rail.querySelectorAll('[data-theme-choice]')];
- const flightButton=doc.getElementById('flight-control'),position=doc.getElementById('pip-position'),facing=doc.getElementById('pip-facing');
+ const flightButton=doc.getElementById('flight-control'),mascotButton=doc.getElementById('mascot-control'),position=doc.getElementById('pip-position'),facing=doc.getElementById('pip-facing');
  const reduced=win.matchMedia('(prefers-reduced-motion: reduce)'),systemTheme=win.matchMedia('(prefers-color-scheme: dark)');
  const compact=win.matchMedia(mobileQuery);
  // Accessing storage itself can throw (not just getItem).
  const storage=name=>{try{return win[name]}catch{return null}};
  const local=storage('localStorage'),session=storage('sessionStorage');
- let themeOverride=readPreference(local,storageKeys.theme),flightPaused=readPreference(local,storageKeys.flight)==='paused';
+ let themeOverride=readPreference(local,storageKeys.theme),flightPaused=readPreference(local,storageKeys.flight)==='paused',mascotHidden=readPreference(local,storageKeys.mascot)==='hidden';
  const applyTheme=theme=>{
   root.dataset.theme=theme;
   themes.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.themeChoice===theme)));
@@ -49,7 +49,7 @@ export function initExperience(win=window,doc=document){
   position.dataset.ready='true';
  }
  function tick(time){
-  if(root.dataset.flight==='paused'||doc.hidden){frame=0;last=0;return}
+  if(mascotHidden||root.dataset.flight==='paused'||doc.hidden){frame=0;last=0;return}
   const delta=last?Math.min(time-last,64):16;last=time;elapsed+=delta;
   // A broad, smooth flight crosses the viewport; scrolling bends the route.
   const destination=navTarget&&elapsed<navTarget.until?navTarget:flightPoint(elapsed,scroll);
@@ -67,7 +67,7 @@ export function initExperience(win=window,doc=document){
   current={x:clamp(current.x+dx,0,1),y:clamp(current.y+(goal.y-current.y)*alpha,0,1)};place();
   frame=win.requestAnimationFrame(tick);
  }
- function start(){if(!frame&&root.dataset.flight==='active'&&!doc.hidden)frame=win.requestAnimationFrame(tick)}
+ function start(){if(!frame&&!mascotHidden&&root.dataset.flight==='active'&&!doc.hidden)frame=win.requestAnimationFrame(tick)}
  function applyFlight(){
   const paused=flightPaused||reduced.matches;
   root.dataset.flight=paused?'paused':'active';
@@ -76,10 +76,21 @@ export function initExperience(win=window,doc=document){
   flightButton.setAttribute('aria-label',reduced.matches?'Flight off: reduced motion enabled':paused?'Resume mascot flight':'Pause mascot flight');
   flightButton.querySelector('[data-flight-label]').textContent=reduced.matches?'Motion off':paused?'Resume flight':'Pause flight';
   flightButton.querySelector('[data-flight-icon]').textContent=paused?'▷':'Ⅱ';
-  if(paused){win.cancelAnimationFrame(frame);frame=0;last=0;current={x:1,y:1};place()}else start();
+  if(paused){current={x:1,y:1};place()}
+  if(paused||mascotHidden){win.cancelAnimationFrame(frame);frame=0;last=0}else start();
+ }
+ function applyMascot(){
+  root.dataset.mascot=mascotHidden?'hidden':'visible';
+  const label=mascotHidden?'Show mascot':'Hide mascot';
+  mascotButton?.setAttribute('aria-pressed',String(mascotHidden));
+  mascotButton?.setAttribute('aria-label',label);
+  mascotButton?.setAttribute('title',label);
+  const text=mascotButton?.querySelector('[data-mascot-label]');if(text)text.textContent=label;
+  applyFlight();
  }
  function scrollTarget(){const range=root.scrollHeight-win.innerHeight;scroll=range>0?clamp(win.scrollY/range,0,1):0;navTarget=null}
  flightButton.addEventListener('click',()=>{flightPaused=!flightPaused;writePreference(local,storageKeys.flight,flightPaused?'paused':'active');applyFlight()});
+ mascotButton?.addEventListener('click',()=>{mascotHidden=!mascotHidden;writePreference(local,storageKeys.mascot,mascotHidden?'hidden':'visible');applyMascot()});
  reduced.addEventListener('change',applyFlight);
  compact.addEventListener('change',place);
  win.addEventListener('scroll',scrollTarget,{passive:true});
@@ -97,10 +108,11 @@ export function initExperience(win=window,doc=document){
   link.addEventListener('blur',scrollTarget);
  });
  applyTheme(themeOverride==='light'||themeOverride==='dark'?themeOverride:systemTheme.matches?'dark':'light');
- controls.hidden=false;scrollTarget();place();applyFlight();
+ controls.hidden=false;scrollTarget();place();applyMascot();
  win.addEventListener('storage',event=>{
   if(event.key===storageKeys.theme){themeOverride=event.newValue;applyTheme(themeOverride==='light'||themeOverride==='dark'?themeOverride:systemTheme.matches?'dark':'light')}
   if(event.key===storageKeys.flight){flightPaused=event.newValue==='paused';applyFlight()}
+  if(event.key===storageKeys.mascot){mascotHidden=event.newValue==='hidden';applyMascot()}
  });
 }
 if(typeof window!=='undefined'&&typeof document!=='undefined')initExperience();

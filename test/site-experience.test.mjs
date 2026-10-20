@@ -17,26 +17,28 @@ function env({saved=new Map(),sessionSaved=new Map(),systemDark=false,reducedMot
  const button=()=>({...target(),attributes:{},setAttribute(k,v){this.attributes[k]=v}});
  const light={...button(),dataset:{themeChoice:'light'}},dark={...button(),dataset:{themeChoice:'dark'}};
  const label={},icon={},flight={...button(),querySelector:s=>s==='[data-flight-label]'?label:icon};
+ const mascotLabel={},mascot={...button(),querySelector:()=>mascotLabel};
  const position={style:{},dataset:{}},facing={style:{}},controls={hidden:true};
  const rail={querySelector:()=>controls,querySelectorAll:()=>[light,dark]};
  const meta={setAttribute(k,v){this[k]=v}},nav=Array.from({length:4},button);
- const doc={...target(),documentElement:root,hidden:false,getElementById:id=>id==='flight-control'?flight:id==='pip-facing'?facing:position,querySelector:s=>s==='.site-rail'?rail:meta,querySelectorAll:()=>nav};
+ const doc={...target(),documentElement:root,hidden:false,getElementById:id=>id==='flight-control'?flight:id==='mascot-control'?mascot:id==='pip-facing'?facing:position,querySelector:s=>s==='.site-rail'?rail:meta,querySelectorAll:()=>nav};
  const reduce={...target(),matches:reducedMotion},system={...target(),matches:systemDark};
  const frames=new Map();let seq=0;
  const win={...target(),scrollY:0,innerWidth:1280,innerHeight:800,localStorage:store(saved),sessionStorage:store(sessionSaved),matchMedia:q=>q.includes('reduced-motion')?reduce:system,requestAnimationFrame:fn=>{frames.set(++seq,fn);return seq},cancelAnimationFrame:id=>frames.delete(id)};
  if(blocked)Object.defineProperty(win,'localStorage',{get(){throw new Error('Storage blocked')}});
  const step=t=>{const pending=[...frames.values()];frames.clear();pending.forEach(fn=>fn(t))};
- return {win,doc,root,light,dark,flight,label,position,nav,controls,reduce,system,frames,step,meta};
+ return {win,doc,root,light,dark,flight,label,mascot,mascotLabel,position,nav,controls,reduce,system,frames,step,meta};
 }
 
 test('theme boot restores valid preferences before styles, falls back to system, and honours reduced motion even when storage fails',async()=>{
  const script=await readFile(new URL('boot.js',asset),'utf8');
- for(const scenario of [{saved:'dark',system:false,want:'dark'},{saved:'light',system:true,want:'light'},{saved:'invalid',system:true,want:'dark'},{saved:null,system:false,want:'light'},{blocked:true,system:true,reduced:true,want:'dark'}]){
+ for(const scenario of [{saved:'dark',system:false,want:'dark',mascot:'hidden'},{saved:'light',system:true,want:'light',flight:'paused'},{saved:'invalid',system:true,want:'dark',mascot:'invalid'},{saved:null,system:false,want:'light'},{blocked:true,system:true,reduced:true,want:'dark',mascot:'hidden'}]){
   const document={documentElement:{dataset:{}}},window={matchMedia:q=>({matches:q.includes('reduced-motion')?!!scenario.reduced:scenario.system})};
-  const localStorage={getItem:key=>{if(scenario.blocked)throw new Error('Blocked');return key==='cad-theme'?scenario.saved:null}};
+  const localStorage={getItem:key=>{if(scenario.blocked)throw new Error('Blocked');return {'cad-theme':scenario.saved,'cad-flight':scenario.flight,'cad-mascot':scenario.mascot}[key]??null}};
   runInNewContext(script,{document,window,localStorage});
   assert.equal(document.documentElement.dataset.theme,scenario.want);
-  assert.equal(document.documentElement.dataset.flight,scenario.reduced?'paused':'active');
+  assert.equal(document.documentElement.dataset.flight,scenario.reduced||scenario.flight==='paused'?'paused':'active');
+  assert.equal(document.documentElement.dataset.mascot,!scenario.blocked&&scenario.mascot==='hidden'?'hidden':'visible');
  }
 });
 
@@ -63,7 +65,22 @@ test('companion pauses immediately, saves its preference, respects reduced motio
 
 test('blocked storage cannot disable theme controls or animation; native links remain untouched',()=>{
  const e=env({blocked:true});initExperience(e.win,e.doc);e.dark.emit('click');assert.equal(e.root.dataset.theme,'dark');e.flight.emit('click');assert.equal(e.root.dataset.flight,'paused');
+ e.mascot.emit('click');assert.equal(e.root.dataset.mascot,'hidden');assert.equal(e.frames.size,0);e.mascot.emit('click');assert.equal(e.root.dataset.mascot,'visible');assert.equal(e.root.dataset.flight,'paused');
  assert.ok(e.nav.every(link=>!link.listeners.has('click')));
+});
+
+test('hiding Pip persists across pages and tabs, stops animation and restores the saved motion choice when shown',()=>{
+ const saved=new Map(),e=env({saved});initExperience(e.win,e.doc);
+ assert.equal(e.root.dataset.mascot,'visible');assert.equal(e.frames.size,1);
+ e.mascot.emit('click');assert.equal(e.root.dataset.mascot,'hidden');assert.equal(saved.get('cad-mascot'),'hidden');assert.equal(e.mascot.attributes['aria-pressed'],'true');assert.equal(e.mascotLabel.textContent,'Show mascot');assert.equal(e.frames.size,0);
+ const next=env({saved});initExperience(next.win,next.doc);assert.equal(next.root.dataset.mascot,'hidden');assert.equal(next.frames.size,0);
+ next.doc.emit('visibilitychange');next.win.emit('storage',{key:'cad-flight',newValue:'active'});next.win.emit('scroll');assert.equal(next.frames.size,0);
+ e.mascot.emit('click');assert.equal(saved.get('cad-mascot'),'visible');assert.equal(e.frames.size,1);assert.equal(e.mascotLabel.textContent,'Hide mascot');assert.equal(e.mascot.attributes['aria-pressed'],'false');
+ next.win.emit('storage',{key:'cad-mascot',newValue:'visible'});assert.equal(next.root.dataset.mascot,'visible');assert.equal(next.frames.size,1);
+ next.flight.emit('click');next.mascot.emit('click');next.mascot.emit('click');assert.equal(next.root.dataset.flight,'paused');assert.equal(next.frames.size,0);
+ next.flight.emit('click');assert.equal(next.frames.size,1);
+ const reduced=env({saved:new Map([['cad-mascot','hidden']]),reducedMotion:true});initExperience(reduced.win,reduced.doc);reduced.mascot.emit('click');assert.equal(reduced.root.dataset.mascot,'visible');assert.equal(reduced.frames.size,0);
+ reduced.reduce.matches=false;reduced.reduce.emit('change');assert.equal(reduced.frames.size,1);
 });
 
 test('free flight crosses both axes of the page and remains inside desktop, mobile and short viewports',()=>{
@@ -109,6 +126,7 @@ test('page decoration gives all four sibling sections accessible links from ever
   for(const p of pages){
    const html=await readFile(resolve(base,p),'utf8');assert.ok(html.indexOf('boot.js')<html.indexOf('old.css'));assert.ok(html.indexOf('studio.css')>html.indexOf('old.css'));assert.match(html,/<td>66,45,762.90<\/td>/);assert.match(html,/src="\.\/original.js"/);
    assert.equal((html.match(/data-site-experience=/g)||[]).length,1);
+   assert.equal((html.match(/id="mascot-control"/g)||[]).length,1);assert.match(html,/aria-label="Hide mascot" title="Hide mascot"/);
    const nav=html.match(/<nav aria-label="Workspace">([\s\S]*?)<\/nav>/)[1],links=[...nav.matchAll(/<a href="([^"]+)"([^>]*)>([^<]+)<\/a>/g)];
    assert.deepEqual(links.map(link=>link[3]),['Construction','Versions + milestone','Progress','Memory Posters']);
    assert.deepEqual(links.map(link=>resolve(dirname(resolve(base,p)),link[1])),['construction','construction/estimates/pilates-astra-2026-10-15/milestone.html','progress','memory-posters'].map(path=>resolve(base,path)));

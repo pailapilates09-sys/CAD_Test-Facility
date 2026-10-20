@@ -1,5 +1,6 @@
 /* This entire layer is limited to phones and smaller touch screens. Desktop and print use the existing styles. */
 @media screen and (max-width:700px), screen and (max-width:1000px) and (hover:none) and (pointer:coarse){
+ .mascot-control [data-mascot-label]{display:none}
  html{scroll-padding-top:144px;scroll-padding-bottom:calc(94px + env(safe-area-inset-bottom,0px))}
  body{padding-bottom:calc(94px + env(safe-area-inset-bottom,0px));-webkit-text-size-adjust:100%;text-size-adjust:100%}
  .container,.estimate-wrap{width:100%;max-width:100%;padding:24px 14px 40px;min-width:0}
