@@ -22,5 +22,5 @@ test('M4 preserves the earlier release records and the saved CP260 boundary',asy
 test('M4 is linked alongside its learning wall and records a deployment-gated release',async()=>{
  const prefix='public/construction/estimates/pilates-astra-2026-10-15/',page=await readFile(new URL(prefix+'milestone.html',root),'utf8'),notes=await readFile(new URL(manifest.release_notes_path,root),'utf8');
  assert.match(page,/id="workspace-m4"/);assert.ok(page.includes('releases/tag/'+manifest.tag));assert.match(page,/memory-posters/);assert.match(notes,/11 posters/);assert.match(notes,/104 automated tests/);assert.match(notes,/107 automated tests/);assert.ok(notes.includes(manifest.base_commit));assert.match(notes,/visual QA remain unverified/);
- const versions=JSON.parse(await readFile(new URL(prefix+'versions.json',root),'utf8'));assert.equal(versions.latest_version,'v12');assert.equal(versions.versions.length,13);assert.deepEqual(versions.workspace_navigation.primary_sections,['Construction','Versions + milestone','Progress','Memory Posters']);
+ const versions=JSON.parse(await readFile(new URL(prefix+'versions.json',root),'utf8'));assert.equal(versions.latest_version,'v13');assert.equal(versions.versions.length,14);assert.deepEqual(versions.workspace_navigation.primary_sections,['Construction','Versions + milestone','Progress','Memory Posters']);
 });

@@ -6,9 +6,10 @@ import {buildConstructionStatus,renderConstructionStatus} from './render-constru
 import {buildV8,renderIndex,renderWork,pageFromTemplate} from './material-v8.mjs';
 import {applySiteExperience} from './site-experience.mjs';
 import {deriveViews} from '../public/construction/estimates/pilates-astra-2026-10-15/shared/source-model.js';
-import {renderComparisons,renderGraphs,renderImages,renderComponents,renderSource,viewPage,versionLinks} from './linked-estimate-views.mjs';
+import {renderComparisons,renderGraphs,renderImages,renderComponents,renderSource,viewPage,versionLinks,esc} from './linked-estimate-views.mjs';
 import {renderOriginal,renderScope,renderSI,renderMarket,deriveHierarchy} from './source-views.mjs';
 import {renderProcurement} from './procurement-v12.mjs';
+import {deriveSavings,renderSavings} from './savings-v13.mjs';
 import {contractorData,renderContractorIndex,contractorPage} from './contractor-v10.mjs';
 import {renderInlineMaterials} from './material-inline-v11.mjs';
 import {renderMemoryPosters} from './memory-posters.mjs';
@@ -46,6 +47,14 @@ const procurement=await readJSON('public/'+estimatePath+'v12/procurement.json');
 const decisionHash=createHash('sha256').update(sourceRevision).update(JSON.stringify(procurement));
 for(const path of ['v12.js','v12.css'])decisionHash.update(await readFile(new URL('public/'+estimatePath+'v12/'+path,root)));
 const decisionRevision=decisionHash.digest('hex').slice(0,16);
+const savings=deriveSavings(registry,procurement,views);
+const savingsHash=createHash('sha256').update(sourceRevision).update(decisionRevision);
+for(const path of ['savings-model.js','v13.js','v13.css'])savingsHash.update(await readFile(new URL('public/'+estimatePath+'v13/'+path,root)));
+const savingsRevision=savingsHash.digest('hex').slice(0,16);
+savings.derivation={source:'../v9/register.json',responsibilities:'../v12/procurement.json',source_revision:sourceRevision,responsibility_revision:decisionRevision,view_revision:savingsRevision,generated:true};
+await writeFile(new URL(estimatePath+'v13/budget-view.json',dist),JSON.stringify(savings,null,2)+'\n');
+const savingsScript=new URL(estimatePath+'v13/v13.js',dist);
+await writeFile(savingsScript,(await readFile(savingsScript,'utf8')).replaceAll('V13_REVISION',savingsRevision));
 const posterCollection=await readJSON('public/memory-posters/posters.json');
 const memoryHash=createHash('sha256').update(sourceRevision).update(JSON.stringify(posterCollection));
 for(const path of ['wall.css','wall.js'])memoryHash.update(await readFile(new URL('public/memory-posters/'+path,root)));
@@ -54,7 +63,7 @@ await writeFile(memoryPage,(await readFile(memoryPage,'utf8')).replace('<!-- MEM
 const milestonePage=new URL(estimatePath+'milestone.html',dist);
 await writeFile(milestonePage,(await readFile(milestonePage,'utf8')).replace('<!-- VERSION_REGISTER -->',renderVersionRegister(versions)));
 const home=new URL('index.html',dist);
-await writeFile(home,(await readFile(home,'utf8')).replace(/(<span data-estimate-count>)\d+(<\/span>)/g,'$1'+versions.versions.length+'$2'));
+await writeFile(home,(await readFile(home,'utf8')).replace(/(<span data-estimate-count>)\d+(<\/span>)/g,'$1'+versions.versions.length+'$2').replace(/<div class="version-tokens">[\s\S]*?<\/div>/,'<div class="version-tokens">'+versions.versions.map(view=>'<span'+(view.id===versions.latest_version?' class="latest-token"':'')+'>'+esc(view.id==='original'?'Original':view.id)+'</span>').join('')+'</div>'));
 const constructionStatus=buildConstructionStatus({original,comparison,components,images,versions,model,debt,drawingCount:drawingInfo.length});
 await writeFile(progressPage,progressTemplate.replace('<!-- CURRENT_PROGRESS -->',renderRecovery(JSON.parse(recoveryStatus))).replace('<!-- CONSTRUCTION_PROGRESS -->',renderConstructionStatus(constructionStatus)));
 await writeFile(new URL('progress/construction-status.json',dist),JSON.stringify(constructionStatus,null,2)+'\n');
@@ -70,7 +79,7 @@ const scopeScript=new URL(estimatePath+'v2/v2.js',dist);
 await writeFile(scopeScript,(await readFile(scopeScript,'utf8')).replaceAll('SOURCE_REVISION',sourceRevision));
 await writeFile(new URL(estimatePath+'v3/estimate-si.json',dist),JSON.stringify({...views.si,source_pdf_sha256:original.source.sha256,derivation:{source:'../v9/register.json',revision:sourceRevision,generated:true}},null,2)+'\n');
 await writeFile(new URL(estimatePath+'v3/line-items-si.jsonl',dist),views.si.line_items.map(work=>JSON.stringify(work)).join('\n')+'\n');
-for(const [version,render] of [['v5',()=>renderComparisons(views)],['v5.1',()=>renderGraphs(views)],['v6',()=>renderImages(views)],['v7',()=>renderComponents(views)],['v9',()=>renderSource(registry,views)],['v10',()=>renderContractorIndex(contractorData(views))],['v11',()=>renderInlineMaterials(contractorData(views))],['v12',()=>renderProcurement(procurement,registry,views)]]){
+for(const [version,render] of [['v5',()=>renderComparisons(views)],['v5.1',()=>renderGraphs(views)],['v6',()=>renderImages(views)],['v7',()=>renderComponents(views)],['v9',()=>renderSource(registry,views)],['v10',()=>renderContractorIndex(contractorData(views))],['v11',()=>renderInlineMaterials(contractorData(views))],['v12',()=>renderProcurement(procurement,registry,views)],['v13',()=>renderSavings(savings,procurement)]]){
  const file=new URL(estimatePath+version+'/index.html',dist),template=await readFile(file,'utf8');
  if(!template.includes('<!-- LINKED_VIEW -->'))throw Error('Missing linked view template '+version);
  await writeFile(file,viewPage(version,render()));
@@ -100,13 +109,13 @@ for(const name of ['v10.js','contractor-model.js']){
 }
 const inlineScript=new URL(estimatePath+'v11/v11.js',dist);
 await writeFile(inlineScript,(await readFile(inlineScript,'utf8')).replaceAll('SOURCE_REVISION',sourceRevision));
-for(const version of ['original','v2','v3','v4','v5','v5.1','v6','v7','v8','v9','v10','v11','v12']){
+for(const version of ['original','v2','v3','v4','v5','v5.1','v6','v7','v8','v9','v10','v11','v12','v13']){
  const folder=new URL(estimatePath+(version==='original'?'':version+'/'),dist);
  for(const entry of await readdir(folder))if(entry.endsWith('.html')){
   if(version==='original'&&entry!=='index.html')continue;
   const file=new URL(entry,folder),html=await readFile(file,'utf8');
   const navigation=html.replace(/<nav class="view-links"[^>]*>[\s\S]*?<\/nav>/g,versionLinks(version));
-  await writeFile(file,navigation.replace('<head>','<head><meta name="estimate-source-revision" content="'+sourceRevision+'">').replace('v8.js?revision=quantity-2','v8.js?source='+sourceRevision).replaceAll('SOURCE_REVISION',sourceRevision).replaceAll('V11_REVISION',inlineRevision).replaceAll('V12_REVISION',decisionRevision));
+  await writeFile(file,navigation.replace('<head>','<head><meta name="estimate-source-revision" content="'+sourceRevision+'">').replace('v8.js?revision=quantity-2','v8.js?source='+sourceRevision).replaceAll('SOURCE_REVISION',sourceRevision).replaceAll('V11_REVISION',inlineRevision).replaceAll('V12_REVISION',decisionRevision).replaceAll('V13_REVISION',savingsRevision));
  }
 }
 await mkdir(new URL('progress/recovery/',dist),{recursive:true});

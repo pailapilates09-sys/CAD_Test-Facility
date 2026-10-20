@@ -10,7 +10,7 @@ export async function checkSite(directory){
   const text=await readFile(file,'utf8');
   const navigation=[...text.matchAll(/<nav\b[^>]*aria-label="Workspace"[^>]*>([\s\S]*?)<\/nav>/g)];
   if(navigation.length!==1||navigation[0][1]!==workspaceNavigation(file,root))throw Error('Workspace navigation differs in '+relative(root,file));
-  if(/\/v(?:2|3|4|5|5\.1|6|7|8|9|10|11|12)\/[^/]+\.html$/.test(file)||file.endsWith('/pilates-astra-2026-10-15/index.html')){
+  if(/\/v(?:2|3|4|5|5\.1|6|7|8|9|10|11|12|13)\/[^/]+\.html$/.test(file)||file.endsWith('/pilates-astra-2026-10-15/index.html')){
    const revision=text.match(/name="estimate-source-revision" content="([a-f0-9]{16})"/);
    if(!revision)throw Error('Missing shared source revision in '+file);revisions.add(revision[1]);
    if(file.includes('/v10/')&&!text.includes('v10.js?source='+revision[1]))throw Error('Contractor page script cache key differs from its source in '+file);
@@ -39,6 +39,14 @@ export async function checkSite(directory){
    if(/V12_REVISION|SOURCE_REVISION/.test(text))throw Error('Unresolved V12 cache revision');
    const css=text.match(/v12\.css\?v=([a-f0-9]{16})/),script=text.match(/v12\.js\?v=([a-f0-9]{16})/);if(!css||!script||css[1]!==script[1])throw Error('V12 assets use different cache revisions');
   }
+  if(file.endsWith('/v13/index.html')){
+   if((text.match(/<table\b/g)??[]).length!==3||(text.match(/data-savings-work=/g)??[]).length!==51)throw Error('V13 must have two complete work tables and one comparison');
+   if((text.match(/ON HOLD · original budget retained/g)??[]).length!==6)throw Error('V13 lost a held original budget');
+   for(const head of text.matchAll(/<thead>(.*?)<\/thead>/gs))if((head[1].match(/<th /g)??[]).length!==4)throw Error('V13 budget tables must have four columns');
+   const ids=[...text.matchAll(/\sid="([^"]+)"/g)].map(match=>match[1]);if(ids.length!==new Set(ids).size)throw Error('V13 has duplicate anchors');
+   if(/V13_REVISION|SOURCE_REVISION/.test(text)||!text.includes('Savings are not established yet.'))throw Error('V13 has unresolved assets or an unsupported initial saving');
+   const css=text.match(/v13\.css\?v=([a-f0-9]{16})/),script=text.match(/v13\.js\?v=([a-f0-9]{16})/);if(!css||!script||css[1]!==script[1])throw Error('V13 assets use different cache revisions');
+  }
   for(const match of text.matchAll(/\s(?:href|src)="([^"]+)"/g)){
    const url=match[1].replaceAll('&amp;','&');if(/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(url))continue;
    const pathname=decodeURIComponent(url.split(/[?#]/)[0]);if(!pathname)continue;
@@ -61,6 +69,11 @@ export async function checkSite(directory){
  for(const version of ['v3','v4']){const html=await readFile(resolve(projectRoot,version+'/index.html'),'utf8');if(/id="chart"|id="chart-root"|id="total"|src="\.\/v[34]\.js"/.test(html))throw Error('SI/research view repeated the full estimate hierarchy')}
  const versions=JSON.parse(await readFile(resolve(root,'construction/estimates/pilates-astra-2026-10-15/versions.json'),'utf8'));
  if(JSON.stringify(versions.workspace_navigation.primary_sections)!==JSON.stringify(workspaceSections.map(section=>section.label)))throw Error('Workspace section register differs from navigation');
+ const savings=JSON.parse(await readFile(resolve(projectRoot,'v13/budget-view.json'),'utf8')),savingsScript=await readFile(resolve(projectRoot,'v13/v13.js'),'utf8'),savingsHTML=await readFile(resolve(projectRoot,'v13/index.html'),'utf8');
+ if(savings.derivation.source_revision!==revision||savings.derivation.responsibility_revision!== (await readFile(resolve(projectRoot,'v12/index.html'),'utf8')).match(/v12\.js\?v=([a-f0-9]{16})/)[1])throw Error('V13 financial/responsibility sources differ from current views');
+ if(!savingsScript.includes('budget-view.json?v='+savings.derivation.view_revision)||!savingsScript.includes('savings-model.js?v='+savings.derivation.view_revision)||!savingsHTML.includes('v13.js?v='+savings.derivation.view_revision))throw Error('V13 data and scripts use different cache revisions');
+ const savingsIds=savings.groups.flatMap(group=>group.rows.map(work=>work.id));if(savingsIds.length!==51||new Set(savingsIds).size!==51)throw Error('V13 duplicates or omits a quoted work');
+ if(savings.groups.reduce((sum,group)=>sum+BigInt(group.original_minor),0n)+BigInt(savings.allowances_minor)!==BigInt(savings.pre_vat_minor))throw Error('V13 original budget does not reconcile');
  const memory=await readFile(resolve(root,'memory-posters/index.html'),'utf8');
  if(!memory.includes('name="memory-source-revision" content="'+revision+'"')||/MEMORY_REVISION|<details|<dialog|\{\{/.test(memory))throw Error('Memory Posters has a stale source, hidden content or an unresolved placeholder');
  const posterIds=[...memory.matchAll(/\sid="([^"]+)"/g)].map(match=>match[1]);if(posterIds.length!==new Set(posterIds).size)throw Error('Duplicate Memory Poster id');
