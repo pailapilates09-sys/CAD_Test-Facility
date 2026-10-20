@@ -4,6 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {deriveViews,validateRegister} from '../public/construction/estimates/pilates-astra-2026-10-15/shared/source-model.js';
 import {renderComparisons,renderGraphs,renderImages,renderComponents,renderSource,recordTables} from '../scripts/linked-estimate-views.mjs';
 import {contractorData,renderContractorIndex,renderContractorWork,fmt} from '../scripts/contractor-v10.mjs';
+import {renderInlineMaterials} from '../scripts/material-inline-v11.mjs';
 import {calculateRow} from '../public/construction/estimates/pilates-astra-2026-10-15/v8/calculations.js';
 const base=new URL('../public/construction/estimates/pilates-astra-2026-10-15/',import.meta.url);
 const r=JSON.parse(await readFile(new URL('v9/register.json',base),'utf8')),d=deriveViews(r);
@@ -16,12 +17,12 @@ test('one normalized v9 register retains every work, six holds, allowances and m
  assert.equal(JSON.stringify(r),before);
 });
 
-test('changing a source work updates SI, comparisons, graph labels, images, material quantities and v10 together',()=>{
+test('changing a source work updates SI, comparisons, graph labels, images, material quantities, v10 and v11 together',()=>{
  const changed=structuredClone(r),w=changed.works[0];w.title='Updated shared cupboard';w.quantity='44.86';w.rate='2500.00';
  const next=deriveViews(changed),id=w.id,work=next.materials.items.find(x=>x.id===id);
  assert.equal(next.comparison.items.find(x=>x.id===id).title,w.title);assert.equal(next.images.items.find(x=>x.item_id===id).title,w.title);
  assert.equal(next.si.line_items.find(x=>x.id===id).quantity,'4.1676303744');assert.ok(work.rows.find(x=>x.material_id==='ply18').quantity>d.materials.items[0].rows.find(x=>x.material_id==='ply18').quantity);
- for(const html of [renderComparisons(next),renderGraphs(next),renderImages(next),renderComponents(next),renderContractorIndex(contractorData(next))])assert.ok(html.includes(w.title));
+ for(const html of [renderComparisons(next),renderGraphs(next),renderImages(next),renderComponents(next),renderContractorIndex(contractorData(next)),renderInlineMaterials(contractorData(next))])assert.ok(html.includes(w.title));
  assert.equal(work.original.amount,r.works[0].amount,'printed source amount stays explicit rather than silently recomputed');
 });
 

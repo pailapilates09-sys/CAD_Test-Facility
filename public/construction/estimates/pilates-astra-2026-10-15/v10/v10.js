@@ -36,7 +36,7 @@ async function init(){
    }
    text(document.querySelector('#contractor-draft-note'),changed?changed+' works show contractor inputs saved on this browser. Published source values remain separate.':'Published planning values shown. Open a work to enter contractor quantities and prices.');
   };
-  updateIndex();window.addEventListener('pageshow',updateIndex);return;
+  updateIndex();window.addEventListener('pageshow',updateIndex);window.addEventListener('storage',event=>{if(event.key===null||event.key.startsWith('paila-contractor:'+revision+':'))updateIndex();});return;
  }
  const item=data.items.find(w=>w.id===detail.dataset.workId);if(!item)throw Error('Work unavailable');
  let draft=item.held?{}:readDraft(storage,revision,item.id),saved=Object.keys(draft).length>0,saveFailed=false;
@@ -84,6 +84,15 @@ async function init(){
  document.querySelector('#export-contractor').addEventListener('click',()=>{
   const url=URL.createObjectURL(new Blob(['\uFEFF'+materialCSV(item,draft)],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=item.id+'-contractor-materials.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
  });
+ const refreshSharedDraft=()=>{
+  if(!storage||saveFailed)return;
+  draft=item.held?{}:readDraft(storage,revision,item.id);saved=Object.keys(draft).length>0;
+  for(const row of item.rows){const values=draft.rows?.[row.id]??{};for(const control of rows.get(row.id).querySelectorAll('[data-material-field]')){const field=control.dataset.materialField;control.value=Object.hasOwn(values,field)?values[field]:field==='quantity'?row.quantity??'':'';}}
+  for(const control of detail.querySelectorAll('[data-cost-field]'))control.value=draft[control.dataset.costField]??'';
+  update();
+ };
+ window.addEventListener('pageshow',refreshSharedDraft);
+ window.addEventListener('storage',event=>{if(event.key===null||event.key===draftKey(revision,item.id))refreshSharedDraft();});
  update();
 }
 init().catch(()=>{
