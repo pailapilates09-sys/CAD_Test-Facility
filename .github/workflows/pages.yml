@@ -22,6 +22,8 @@ jobs:
           node-version: '22'
       - name: Check geometry and build website
         run: npm run check
+      - name: Verify extraction dashboard against the saved checkpoint
+        run: node scripts/verify-extraction-view.mjs
       - name: Configure Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
@@ -41,6 +43,14 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify published extraction data and controls
+        run: node scripts/verify-extraction-view.mjs --live "${{ steps.deployment.outputs.page_url }}"
   release-estimate-milestone:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: deploy

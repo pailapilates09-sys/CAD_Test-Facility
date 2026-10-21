@@ -1,5 +1,11 @@
 # CAD Test Facility
 
+## Visual extraction dashboard
+
+[Progress](https://pailapilates09-sys.github.io/CAD_Test-Facility/progress/) presents four project tabs, stage diagrams, available evidence, conditional future outputs and a stored-format explorer. It derives its counts from `progress/recovery/current.json` and the selected saved status; AEC rates and unknown totals remain separate from file-inventory counts.
+
+The existing Pages workflow tests/builds the site, verifies the generated extraction view before upload, and reads back the public view after deployment. Actions summaries show the saved checkpoints and verification result. `progress/extraction-view.json` and `progress/extraction-proof.json` are generated public projections. This interface update does not advance a source checkpoint or run the Drive extraction.
+
 ## Current extraction checkpoint — Run 15, 21 October 2026
 
 CP288 / Local/Main279/279 is verified and acknowledged. Fourteen metadata checkpoints added 22 identities; the MSCH catalogue has 3,840 records (859 folders, 2,981 files), with 533 folders queued. Next: B289 — sources. Most source text/OCR and model execution remain pending; AEC has existing partial structured rate observations and its G076 terminal gate remains open.
