@@ -13,10 +13,10 @@ test('construction status derives evidence counts without inventing approvals, m
  assert.equal(d.model.geometry_status,'blocked_download_limit');assert.equal(d.model.model_count,null);assert.equal(d.model.geometry_count,null);assert.equal(d.model.duplicate_status,'not_inspected');assert.equal(d.validation.browser_layout_review,'unavailable_in_current_runtime');assert.equal(JSON.stringify(inputs),before);
  const updated=structuredClone(inputs);updated.comparison.items[0].references=[];updated.components.items[0].accepted_split=true;assert.equal(buildConstructionStatus(updated).components.accepted_original_splits,1);assert.equal(buildConstructionStatus(updated).estimate.same_unit_reference_items,35);
 });
-test('construction summary is inserted separately from the retained four-lane projection and links resolve to actual evidence',async()=>{
+test('legacy construction evidence remains inspectable while Progress contains only the four-lane projection',async()=>{
  const d=buildConstructionStatus(inputs),html=renderConstructionStatus(d),template=await readFile(new URL('public/progress/index.html',root),'utf8');
  assert.equal((html.match(/<th scope="row">/g)||[]).length,8);assert.match(html,/id="construction-status"/);assert.match(html,/0 accepted original-quote splits/);assert.match(html,/0 project photographs/);assert.match(html,/geometry.*blocked download limit/i);assert.doesNotMatch(html,/\d+(?:\.\d+)?%|model count: 0|geometry count: 0/);
- assert.ok(template.includes('<!-- CURRENT_PROGRESS -->'));assert.ok(template.includes('<!-- CONSTRUCTION_PROGRESS -->'));assert.ok(template.indexOf('<!-- CURRENT_PROGRESS -->')<template.indexOf('<!-- CONSTRUCTION_PROGRESS -->'));assert.ok(template.indexOf('<!-- CONSTRUCTION_PROGRESS -->')<template.indexOf('15 October source session'));
+ assert.ok(template.includes('<!-- CURRENT_PROGRESS -->'));assert.doesNotMatch(template,/CONSTRUCTION_PROGRESS|#construction-status|Construction &amp; extraction|Construction & extraction/);assert.ok(template.indexOf('<!-- CURRENT_PROGRESS -->')<template.indexOf('15 October source session'));
  for(const href of [...html.matchAll(/href="([^"]+)"/g)].map(x=>x[1])){const path=href.split('#')[0];if(path==='./construction-status.json')continue;const target=new URL(path.endsWith('/')?path+'index.html':path,new URL('public/progress/',root));assert.ok((await readFile(target)).length)}
  const malicious=structuredClone(d);malicious.model.next_input='<script>alert(1)</script>';assert.doesNotMatch(renderConstructionStatus(malicious),/<script>/);
 });

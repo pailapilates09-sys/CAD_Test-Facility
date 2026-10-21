@@ -5,8 +5,9 @@ import {mobileQuery} from '../public/theme/mobile-config.js';
 export const experienceVersion='studio-2-mobile-1-mascot-1';
 
 export const workspaceSections=[
- {label:'Construction',path:'construction/'},
- {label:'Versions + milestone',path:'construction/estimates/pilates-astra-2026-10-15/milestone.html'},
+ {label:'Construction',path:'construction/',prefixes:['construction/','cad/']},
+ {label:'Pilates SketchUp',path:'construction/models/pilates-sketchup/',prefixes:['construction/models/pilates-sketchup/']},
+ {label:'Versions + milestone',path:'construction/estimates/pilates-astra-2026-10-15/milestone.html',prefixes:['construction/estimates/pilates-astra-2026-10-15/']},
  {label:'Progress',path:'progress/'},
  {label:'Memory Posters',path:'memory-posters/'}
 ];
@@ -14,7 +15,9 @@ export const workspaceSections=[
 // One navigation register covers both source templates and generated work pages.
 export function workspaceNavigation(pagePath,distPath){
  const page=relative(distPath,pagePath).split('\\').join('/');
- const active=page===workspaceSections[1].path?1:page.startsWith('progress/')?2:page.startsWith('memory-posters/')?3:/^(construction|cad)\//.test(page)?0:-1;
+ // The most specific section wins over the broader Construction URL prefix.
+ const matches=workspaceSections.map((section,index)=>({index,length:Math.max(0,...(section.prefixes??[section.path]).filter(prefix=>page.startsWith(prefix)).map(prefix=>prefix.length))}));
+ const active=matches.filter(match=>match.length).sort((a,b)=>b.length-a.length)[0]?.index??-1;
  return workspaceSections.map((section,index)=>{
   const path=relative(dirname(pagePath),resolve(distPath,section.path)).split('\\').join('/')||'.';
   return `<a href="${path}${section.path.endsWith('/')?'/':''}"${index===active?' aria-current="page"':''}>${section.label}</a>`;

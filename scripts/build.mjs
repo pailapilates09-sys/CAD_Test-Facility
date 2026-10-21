@@ -2,7 +2,7 @@ import {cp,mkdir,rm,writeFile,readFile,readdir} from 'node:fs/promises';
 import {spec,materials,sources,braceLength} from '../src/spec.mjs';
 import {renderDrawings,drawingInfo} from '../src/drawings.mjs';
 import {renderRecovery} from './render-progress-recovery.mjs';
-import {buildConstructionStatus,renderConstructionStatus} from './render-construction-progress.mjs';
+import {buildConstructionStatus} from './render-construction-progress.mjs';
 import {buildV8,renderIndex,renderWork,pageFromTemplate} from './material-v8.mjs';
 import {applySiteExperience} from './site-experience.mjs';
 import {deriveViews} from '../public/construction/estimates/pilates-astra-2026-10-15/shared/source-model.js';
@@ -28,7 +28,6 @@ const recoveryReport=await readFile(new URL(currentRecovery.report,recoveryRoot)
 const progressPage=new URL('progress/index.html',dist);
 const progressTemplate=await readFile(progressPage,'utf8');
 if(!progressTemplate.includes('<!-- CURRENT_PROGRESS -->'))throw new Error('Missing current progress template marker');
-if(!progressTemplate.includes('<!-- CONSTRUCTION_PROGRESS -->'))throw new Error('Missing construction progress template marker');
 const estimatePath='construction/estimates/pilates-astra-2026-10-15/';
 const readJSON=async path=>JSON.parse(await readFile(new URL(path,root),'utf8'));
 const registry=await readJSON('public/'+estimatePath+'v9/register.json');
@@ -65,7 +64,8 @@ await writeFile(milestonePage,(await readFile(milestonePage,'utf8')).replace('<!
 const home=new URL('index.html',dist);
 await writeFile(home,(await readFile(home,'utf8')).replace(/(<span data-estimate-count>)\d+(<\/span>)/g,'$1'+versions.versions.length+'$2').replace(/<div class="version-tokens">[\s\S]*?<\/div>/,'<div class="version-tokens">'+versions.versions.map(view=>'<span'+(view.id===versions.latest_version?' class="latest-token"':'')+'>'+esc(view.id==='original'?'Original':view.id)+'</span>').join('')+'</div>'));
 const constructionStatus=buildConstructionStatus({original,comparison,components,images,versions,model,debt,drawingCount:drawingInfo.length});
-await writeFile(progressPage,progressTemplate.replace('<!-- CURRENT_PROGRESS -->',renderRecovery(JSON.parse(recoveryStatus))).replace('<!-- CONSTRUCTION_PROGRESS -->',renderConstructionStatus(constructionStatus)));
+await writeFile(progressPage,progressTemplate.replace('<!-- CURRENT_PROGRESS -->',renderRecovery(JSON.parse(recoveryStatus))));
+// Preserve the existing evidence endpoint without repeating its summary in Progress.
 await writeFile(new URL('progress/construction-status.json',dist),JSON.stringify(constructionStatus,null,2)+'\n');
 // Current views and compatibility exports are derived from the one v9 source register.
 for(const [version,render] of [['original',()=>renderOriginal(registry,views)],['v2',()=>renderScope(registry)],['v3',()=>renderSI(registry,views)],['v4',()=>renderMarket(registry,views)]]){

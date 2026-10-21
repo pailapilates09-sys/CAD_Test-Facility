@@ -214,21 +214,22 @@
   "workspace_navigation": {
     "primary_sections": [
       "Construction",
+      "Pilates SketchUp",
       "Versions + milestone",
       "Progress",
       "Memory Posters"
     ],
     "construction_contents": [
-      "Buy or delegate v12",
-      "All materials inline v11",
-      "Contractor worksheets v10",
-      "Editable material details v8",
       "Column formwork CAD drawings",
-      "Pilates SketchUp workspace"
+      "3D assembly, material quantities and drawing downloads"
     ],
     "history_location": "milestone.html",
     "existing_urls_retained": true,
-    "memory_posters_path": "../../../memory-posters/"
+    "memory_posters_path": "../../../memory-posters/",
+    "pilates_sketchup_path": "../../models/pilates-sketchup/",
+    "estimate_views_location": "Versions + milestone",
+    "progress_scope": "Four-project extraction checkpoints, roadmaps, source hierarchy and historical records. Website deliverable status is not presented as physical construction progress.",
+    "updated_date": "2026-10-21"
   },
   "latest_full_estimate_version": "v11",
   "workspace_milestone_tag": "workspace-m4-2026-10-20",
