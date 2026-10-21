@@ -1,16 +1,24 @@
 # CAD Test Facility
 
+## Workspace milestone M5 — 21 October 2026
+
+[Release](https://github.com/pailapilates09-sys/CAD_Test-Facility/releases/tag/workspace-m5-2026-10-21) · [Manifest](public/milestones/workspace-m5-2026-10-21.json) · [Release notes](public/milestones/WORKSPACE-M5-2026-10-21.md).
+
+The native Pilates extraction and the current website are frozen by `workspace-m5-2026-10-21`. Continue future changes on `work/after-workspace-m5`, created from that tag. The Pages workflow deploys `main`; edits on the work branch require a merge and successful checks/deployment before publication. A recovery can restore the tag's files in a new commit/PR and redeploy without moving existing tags or rewriting history.
+
+The unchanged SKP and full supported JSONL/SQL/SQLite archives live in [Drive](https://drive.google.com/drive/folders/1Asat9JD6oCrr2KQI-npg1AmGc4Wml1HF) (the native original is in its preserved parent folder). GitHub versions copied inspection JSON/CSV, thumbnails, a selected Group#2 scene, and the frontend/extraction scripts. Actions copies `public/` into `dist/`, generates the linked views and deploys the static artifact. The viewer fetches `./architectural-base.scene.json` from Pages, not Drive. Drive links provide archive downloads; there is no live Drive API connection or automatic sync. Future extraction changes require an explicit update, commit and deployment. The Git tag preserves the frontend and archive register/hashes; full recovery also requires retaining the separate Drive archives.
+
 ## Visual extraction dashboard
 
 [Progress](https://pailapilates09-sys.github.io/CAD_Test-Facility/progress/) presents four project tabs, stage diagrams, available evidence, conditional future outputs and a stored-format explorer. It derives its counts from `progress/recovery/current.json` and the selected saved status; AEC rates and unknown totals remain separate from file-inventory counts.
 
 The existing Pages workflow tests/builds the site, verifies the generated extraction view before upload, and reads back the public view after deployment. Actions summaries show the saved checkpoints and verification result. `progress/extraction-view.json` and `progress/extraction-proof.json` are generated public projections. This interface update does not advance a source checkpoint or run the Drive extraction.
 
-## Current extraction checkpoint — Run 15, 21 October 2026
+## Current extraction checkpoint — Run 16, 21 October 2026
 
-CP288 / Local/Main279/279 is verified and acknowledged. Fourteen metadata checkpoints added 22 identities; the MSCH catalogue has 3,840 records (859 folders, 2,981 files), with 533 folders queued. Next: B289 — sources. Most source text/OCR and model execution remain pending; AEC has existing partial structured rate observations and its G076 terminal gate remains open.
+CP302 / Local/Main293/293 is verified and acknowledged. Fourteen metadata checkpoints added eight identities; the MSCH catalogue has 3,848 records (863 folders, 2,985 files), with 523 folders queued. Next: B303 — Scripts. Most source text/OCR and model execution remain pending; AEC has existing partial structured rate observations and its G076 terminal gate remains open.
 
-[Current Progress](https://pailapilates09-sys.github.io/CAD_Test-Facility/progress/) · [Run15 report, derivations and formats](progress/recovery/2026-10-21-run15/cp288/report.md).
+[Current Progress](https://pailapilates09-sys.github.io/CAD_Test-Facility/progress/) · [Run16 report, derivations and formats](progress/recovery/2026-10-21-run16/cp302/report.md).
 
 ## Workspace pages
 
@@ -25,7 +33,7 @@ Preservation/rollback baseline: commit `bbf90547c6e11b2754415e234fc310ea42bf62c8
 
 The SketchUp section sits beside Construction, Versions + milestone, Progress and Memory Posters. Each estimate view selects Versions + milestone in the global navigation. Legacy root links such as `/#model` still redirect to the equivalent CAD section.
 
-The current recovery pointer is `progress/recovery/current.json`; it selects a dated status JSON and report. The build renders the current summary directly into HTML and publishes JSON/report downloads. This section is available without JavaScript. See [the current run report](progress/recovery/2026-10-21-run15/cp288/report.md).
+The current recovery pointer is `progress/recovery/current.json`; it selects a dated status JSON and report. The build renders the current summary directly into HTML and publishes JSON/report downloads. This section is available without JavaScript. See [the current run report](progress/recovery/2026-10-21-run16/cp302/report.md).
 
 The historical onboarding snapshot is `src/progress-data.mjs`. It contains bounded reviewed status facts, not the full handover or private source bodies. `src/progress.mjs` renders it with native SVG and an expandable tree. It is a one-time snapshot; it has no connected-account credentials, live Drive API access or automatic refresh.
 
