@@ -1,3 +1,28 @@
+# Pilates room workspace
+
+The page presents the main studio room as a linked 2D footprint projection, 3D model and four-column item schedule. Selecting a model item in any view highlights the same definition and all its room placements in the other views. Search filters all three; focus, isolation, plan pan/zoom and an open-wall view are available. The shared website theme, appearance settings and mascot controls are preserved.
+
+`studio-room.scene.json` derives from the checksum-verified native JSONL archive. It includes 242 native root placements and one item for loose room geometry, grouped into 106 source item types. Repeated geometry uses instanced Three.js meshes. The display mesh is reduced from 2,488,618 source triangles to 238,779 definition triangles (946,789 after visible placement expansion). These are optimized display meshes; use the original source for engineering measurements. Five invalid/non-planar source faces were omitted from display, with counts recorded in the scene metadata.
+
+The source DWG reference, distant alternate placement and extreme-scale tea-table object are deliberately excluded from this room projection. Their source IDs/reasons remain in the scene metadata; nothing was removed from the preserved SKP or full archives. The previous `architectural-base.scene.json` and its M5 inspection report remain available. The inspection tables, audit panels, thumbnail gallery and export instructions have been removed from the working page, while their files remain preserved here.
+
+Item counts refer to placed model components, rather than a contractor's bill of materials. Size columns show axis-aligned model extents (with ranges for differently scaled/rotated placements), and finish labels come from the model's appearance records. Unnamed groups keep their source identity. Items without decoded visible faces use labelled placement markers, rather than an invented physical shape. No construction rates or estimate quantities have changed.
+
+## Rebuild the display projection
+
+Install `numpy`, `mapbox-earcut==2.0.0` and `fast-simplification==0.1.13`, restore the verified `geometry.jsonl.gz` archive, then run:
+
+```sh
+python tools/sketchup/build-room-preview.py geometry.jsonl.gz public/construction/models/pilates-sketchup public/construction/models/pilates-sketchup/studio-room.scene.json
+npm run check
+```
+
+The rebuild reads original archives without modifying them. The generated scene keeps source definition IDs, instance transforms and archive hashes. `room-model.js` is the shared projection for the server-rendered table and browser views; `three-model.js` keeps instance selection/filtering testable without a WebGL renderer.
+
+3D requires WebGL. A browser without WebGL retains the 2D view and full table with a clear 3D message. The managed QA browser has WebGL disabled; source geometry, Three.js ray picking, highlight/filter state and item consistency are tested separately.
+
+---
+
 # Pilates native SketchUp extraction — 21 October 2026
 
 The actual uploaded `PILATES.skp` has been read. Its 295,205,462 bytes match the previously recorded Drive size. SHA-256 of the uploaded source: `ad5c8a00a563d4336a5ea4bdd72907aba7e427f0c842e21196386d944af4b0ec`. This does not establish a byte comparison with the older Drive copy; the unchanged uploaded source is preserved with this extraction.
