@@ -28,8 +28,12 @@
   "remaining": [
     {
       "id": "skp-download",
-      "state": "blocked_external_limit",
-      "detail": "Streamed raw-file fetch with include_base64=false retried 2026-10-17; HTTP 413 persists: 295205462 bytes exceeds 268435456. No geometry/duplicate claim."
+      "state": "resolved_by_uploaded_source",
+      "detail": "User-uploaded PILATES.zip recovered and CRC-checked. All 8,172,940 indexed supported entity records decoded; SQLite integrity and references verified. Geometry archives and selected source preview are available from the Pilates model workspace. Duplicate/layout and Desktop SDK review remain pending.",
+      "previous_state": "blocked_external_limit",
+      "previous_detail": "Streamed raw-file fetch with include_base64=false retried 2026-10-17; HTTP 413 persists: 295205462 bytes exceeds 268435456. No geometry/duplicate claim.",
+      "follow_up_date": "2026-10-21",
+      "current_evidence": "../../../models/pilates-sketchup/source-register.json"
     },
     {
       "id": "source-currency",

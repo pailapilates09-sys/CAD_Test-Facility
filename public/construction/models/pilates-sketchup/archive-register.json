@@ -1,0 +1,140 @@
+{
+  "schema_version": "paila-skp-downloads-1.0",
+  "date": "2026-10-21",
+  "source_sha256": "ad5c8a00a563d4336a5ea4bdd72907aba7e427f0c842e21196386d944af4b0ec",
+  "folder_id": "1Asat9JD6oCrr2KQI-npg1AmGc4Wml1HF",
+  "folder_url": "https://drive.google.com/drive/folders/1Asat9JD6oCrr2KQI-npg1AmGc4Wml1HF",
+  "inspection_bundle": {
+    "id": "1KxQG5yNVaRl-00WubeZMDYfohmpqvJI3",
+    "name": "PILATES__inspection_and_assets.zip",
+    "url": "https://drive.google.com/file/d/1KxQG5yNVaRl-00WubeZMDYfohmpqvJI3/view?usp=drivesdk",
+    "bytes": 41481688
+  },
+  "formats": [
+    {
+      "path": "geometry.jsonl.gz",
+      "bytes": 302381657,
+      "sha256": "585f111dc44e522adc7ad874c4533d601cec132bb47e8fd38428984ea1a856db",
+      "role": "supported_geometry_derivative",
+      "parts": [
+        {
+          "name": "geometry.jsonl.gz.part001",
+          "bytes": 100663296,
+          "sha256": "b72a8db4d1b103213c3da550443a60d5cb33ba828032485baf7fefe563eb0422",
+          "id": "1iUN_LRgqbZm4vLB33rDQyFhaQjGkbDE4",
+          "url": "https://drive.google.com/file/d/1iUN_LRgqbZm4vLB33rDQyFhaQjGkbDE4/view?usp=drivesdk",
+          "provider_size_bytes": 100663296,
+          "provider_size_verified": true
+        },
+        {
+          "name": "geometry.jsonl.gz.part002",
+          "bytes": 100663296,
+          "sha256": "53a53a1552f18df7f223d674ef2b95f7238cad8705003f1f1f6d5af74a72b828",
+          "id": "1F1LGrFHc8SLK-zMDJhHHpmnCV_Xsv17s",
+          "url": "https://drive.google.com/file/d/1F1LGrFHc8SLK-zMDJhHHpmnCV_Xsv17s/view?usp=drivesdk",
+          "provider_size_bytes": 100663296,
+          "provider_size_verified": true
+        },
+        {
+          "name": "geometry.jsonl.gz.part003",
+          "bytes": 100663296,
+          "sha256": "ee0235c2fdcc50c5e22b1533fa55e174b05715598e1ec70175be657d81574a11",
+          "id": "17jvSkQ5plHEJt0QEXBo97v4R8aciWGkA",
+          "url": "https://drive.google.com/file/d/17jvSkQ5plHEJt0QEXBo97v4R8aciWGkA/view?usp=drivesdk",
+          "provider_size_bytes": 100663296,
+          "provider_size_verified": true
+        },
+        {
+          "name": "geometry.jsonl.gz.part004",
+          "bytes": 391769,
+          "sha256": "8c14fee3499e12c12fa61ef720d2f61db3b93cec4a9fd5629f479ec7fec61f60",
+          "id": "12SRyG1YECndjD22CvftJ6bYW5FAf3MDQ",
+          "url": "https://drive.google.com/file/d/12SRyG1YECndjD22CvftJ6bYW5FAf3MDQ/view?usp=drivesdk",
+          "provider_size_bytes": 391769,
+          "provider_size_verified": true
+        }
+      ]
+    },
+    {
+      "path": "geometry.sqlite.gz",
+      "bytes": 385493193,
+      "sha256": "15c097b9fab320febd8bd1c9f184281b906b74c8366467be522f65f7f475d179",
+      "role": "supported_geometry_derivative",
+      "parts": [
+        {
+          "name": "geometry.sqlite.gz.part001",
+          "bytes": 100663296,
+          "sha256": "774d013c4c78f93434f6cc4f34540ad7a8e286fe4888865e1f9b326a093aae11",
+          "id": "1RR78Yvh2ElrBb4SXiFfl973cSxFeg8aZ",
+          "url": "https://drive.google.com/file/d/1RR78Yvh2ElrBb4SXiFfl973cSxFeg8aZ/view?usp=drivesdk",
+          "provider_size_bytes": 100663296,
+          "provider_size_verified": true
+        },
+        {
+          "name": "geometry.sqlite.gz.part002",
+          "bytes": 100663296,
+          "sha256": "cf4cf2d2304807a2f75d9eb668081586e249ad397e948f1fe39d84fe13d06d34",
+          "id": "1BgywvFe-naIfgNtF7b05Vh7oxfNGwFyD",
+          "url": "https://drive.google.com/file/d/1BgywvFe-naIfgNtF7b05Vh7oxfNGwFyD/view?usp=drivesdk",
+          "provider_size_bytes": 100663296,
+          "provider_size_verified": true
+        },
+        {
+          "name": "geometry.sqlite.gz.part003",
+          "bytes": 100663296,
+          "sha256": "e20a4338ddfcf1765001f2b5eb7f72305cd2d9a1bcba1a5f288fbce958629b0c",
+          "id": "1B3bpqz591An14fQAFMl78nbXtHeKq-DS",
+          "url": "https://drive.google.com/file/d/1B3bpqz591An14fQAFMl78nbXtHeKq-DS/view?usp=drivesdk",
+          "provider_size_bytes": 100663296,
+          "provider_size_verified": true
+        },
+        {
+          "name": "geometry.sqlite.gz.part004",
+          "bytes": 83503305,
+          "sha256": "17b7386cf25856faed0988894aaa23ed115376317c15ca3f9075ac47d39ed96c",
+          "id": "1It6MKngj0fcEWs1NvRZwk_OIMR6EvbmH",
+          "url": "https://drive.google.com/file/d/1It6MKngj0fcEWs1NvRZwk_OIMR6EvbmH/view?usp=drivesdk",
+          "provider_size_bytes": 83503305,
+          "provider_size_verified": true
+        }
+      ]
+    },
+    {
+      "path": "geometry.sql.gz",
+      "bytes": 299258753,
+      "sha256": "c6d1c843406968286e3b229d6efa8d2812bf8106c924c41bdca72e20b49513bb",
+      "role": "supported_geometry_derivative",
+      "parts": [
+        {
+          "name": "geometry.sql.gz.part001",
+          "bytes": 100663296,
+          "sha256": "181ded99f29675a76f64518731943a52b6b760d6ead0e9bc6fcc4fbbac62442b",
+          "id": "1mn8MZEkZdu8tms5S-cybCfLxQCCNCfqw",
+          "url": "https://drive.google.com/file/d/1mn8MZEkZdu8tms5S-cybCfLxQCCNCfqw/view?usp=drivesdk",
+          "provider_size_bytes": 100663296,
+          "provider_size_verified": true
+        },
+        {
+          "name": "geometry.sql.gz.part002",
+          "bytes": 100663296,
+          "sha256": "f5fa76ef8caed85fde1a7b8914bd181f83d3575b379c0f438216155210d2d71b",
+          "id": "1ptpQktsQOMT3vuhreicN7ob_WS-_PR2E",
+          "url": "https://drive.google.com/file/d/1ptpQktsQOMT3vuhreicN7ob_WS-_PR2E/view?usp=drivesdk",
+          "provider_size_bytes": 100663296,
+          "provider_size_verified": true
+        },
+        {
+          "name": "geometry.sql.gz.part003",
+          "bytes": 97932161,
+          "sha256": "8cba9549aac4cbd78bd67292a34d2284ead42ef8722df4c8e14ce485061f09f7",
+          "id": "14MsWOUXqdG8VFIrNylWZodTt_eRRasqw",
+          "url": "https://drive.google.com/file/d/14MsWOUXqdG8VFIrNylWZodTt_eRRasqw/view?usp=drivesdk",
+          "provider_size_bytes": 97932161,
+          "provider_size_verified": true
+        }
+      ]
+    }
+  ],
+  "verification": "Local full-file and part SHA-256 values verified; Drive IDs, parent folder and byte sizes read back. Provider bytes have not all been downloaded again.",
+  "restore": "Unzip the inspection bundle beside every part and run python restore-archives.py; no input files are deleted."
+}

@@ -1,0 +1,119 @@
+{
+  "source": "PILATES.skp",
+  "kind": "embedded_camera_thumbnails",
+  "note": "Original saved view thumbnails, not newly rendered or measured plans.",
+  "views": [
+    {
+      "source_path": "scene_thumbnails/Scene 1.png",
+      "path": "native-assets/scene_thumbnails/Scene 1.png",
+      "bytes": 18478,
+      "sha256": "458259f3de741af21e8a59639b5f44eb771645b6ace0b3598efe47e264e8f99b",
+      "title": "Scene 1",
+      "preview_path": "preview/scene-01.png"
+    },
+    {
+      "source_path": "scene_thumbnails/RECEPTION 1.png",
+      "path": "native-assets/scene_thumbnails/RECEPTION 1.png",
+      "bytes": 55387,
+      "sha256": "2865078068f843739e9d968d6d2b1eb04c3fc46952d01158eaafe7bba07b43a5",
+      "title": "RECEPTION 1",
+      "preview_path": "preview/scene-02.png"
+    },
+    {
+      "source_path": "scene_thumbnails/RECEPTION 2.png",
+      "path": "native-assets/scene_thumbnails/RECEPTION 2.png",
+      "bytes": 32910,
+      "sha256": "fe12cce9bdb008ee8c7aa7a75c6a31b03cf9561da60244d3a8546e37a9b19afa",
+      "title": "RECEPTION 2",
+      "preview_path": "preview/scene-03.png"
+    },
+    {
+      "source_path": "scene_thumbnails/RECEPTION 3.png",
+      "path": "native-assets/scene_thumbnails/RECEPTION 3.png",
+      "bytes": 36923,
+      "sha256": "b25c1fed712a1ea4f3a9a49ea7d1d9bac108f42a8e669f3b50106c146eb42335",
+      "title": "RECEPTION 3",
+      "preview_path": "preview/scene-04.png"
+    },
+    {
+      "source_path": "scene_thumbnails/RECEPTION 4.png",
+      "path": "native-assets/scene_thumbnails/RECEPTION 4.png",
+      "bytes": 29726,
+      "sha256": "7e2c9cadcd10a7f0914fa6a4183ad6580c98ea3a5022d6ac3d82fb66f3a7c72a",
+      "title": "RECEPTION 4",
+      "preview_path": "preview/scene-05.png"
+    },
+    {
+      "source_path": "scene_thumbnails/RECEPTION SHOW RACK.png",
+      "path": "native-assets/scene_thumbnails/RECEPTION SHOW RACK.png",
+      "bytes": 42803,
+      "sha256": "9968e8ca4cc0fa48730d48d25f747119565bb4be014b69b5f6abd4a14b6d9891",
+      "title": "RECEPTION SHOW RACK",
+      "preview_path": "preview/scene-06.png"
+    },
+    {
+      "source_path": "scene_thumbnails/ELOUNGE AREA.png",
+      "path": "native-assets/scene_thumbnails/ELOUNGE AREA.png",
+      "bytes": 37847,
+      "sha256": "723c494f345664c2693b401bfd594d1b9d687da3d3405f643bfabcb3adb49c68",
+      "title": "ELOUNGE AREA",
+      "preview_path": "preview/scene-07.png"
+    },
+    {
+      "source_path": "scene_thumbnails/COFFEE LOUNGE.png",
+      "path": "native-assets/scene_thumbnails/COFFEE LOUNGE.png",
+      "bytes": 41515,
+      "sha256": "580ac0ceca95085b3ec06a15508de53a9a52e42e2b92cf47a91c4598343b2d50",
+      "title": "COFFEE LOUNGE",
+      "preview_path": "preview/scene-08.png"
+    },
+    {
+      "source_path": "scene_thumbnails/OVERALL RECEPTIONA ANF LOUNGE.png",
+      "path": "native-assets/scene_thumbnails/OVERALL RECEPTIONA ANF LOUNGE.png",
+      "bytes": 40559,
+      "sha256": "3bf69aabd1de033753e3e5e52811a0043439a84abaef9d253f773c9ebf3bd36b",
+      "title": "OVERALL RECEPTIONA ANF LOUNGE",
+      "preview_path": "preview/scene-09.png"
+    },
+    {
+      "source_path": "scene_thumbnails/STUDIO.png",
+      "path": "native-assets/scene_thumbnails/STUDIO.png",
+      "bytes": 31994,
+      "sha256": "ec8e2fb96f27884036def9cdcf012f06dd7f7d9ee2b09e2de17cad34e856b0a6",
+      "title": "STUDIO",
+      "preview_path": "preview/scene-10.png"
+    },
+    {
+      "source_path": "scene_thumbnails/PROPS WALL.png",
+      "path": "native-assets/scene_thumbnails/PROPS WALL.png",
+      "bytes": 35471,
+      "sha256": "cb7561c96b7b767857eabaa340d3296e20a33c6378951f8fb461c44bf660f9fc",
+      "title": "PROPS WALL",
+      "preview_path": "preview/scene-11.png"
+    },
+    {
+      "source_path": "scene_thumbnails/STUDIO 3.png",
+      "path": "native-assets/scene_thumbnails/STUDIO 3.png",
+      "bytes": 37287,
+      "sha256": "1c0fda16a841d58b04ebac8f945402a137d1eb49b70e7129b813870c623ae6e7",
+      "title": "STUDIO 3",
+      "preview_path": "preview/scene-12.png"
+    },
+    {
+      "source_path": "scene_thumbnails/MISC SPACE.png",
+      "path": "native-assets/scene_thumbnails/MISC SPACE.png",
+      "bytes": 37485,
+      "sha256": "44bdc23a124224e4791648180468e4e7ecf46a2c72ec57b5a8ead69935ecd55f",
+      "title": "MISC SPACE",
+      "preview_path": "preview/scene-13.png"
+    },
+    {
+      "source_path": "scene_thumbnails/LOCKER.png",
+      "path": "native-assets/scene_thumbnails/LOCKER.png",
+      "bytes": 41623,
+      "sha256": "d17453db795ca96e8a1ab12ecbb155318196afb508eb644d6d6b37ab86c4bfcc",
+      "title": "LOCKER",
+      "preview_path": "preview/scene-14.png"
+    }
+  ]
+}

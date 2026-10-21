@@ -18,6 +18,7 @@ import {renderVersionRegister} from './linked-estimate-views.mjs';
 import {checkSite} from './check-site.mjs';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
+import {renderModelInspection,renderModelSavedViews} from './render-model-workspace.mjs';
 const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
 await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
 await cp(new URL('public/',root),dist,{recursive:true});
@@ -46,6 +47,11 @@ const [versions,model,debt]=await Promise.all([
  readJSON('public/'+estimatePath+'versions.json'),readJSON('public/construction/models/pilates-sketchup/source-register.json'),
  readJSON('public/'+estimatePath+'v7/debt-review.json')
 ]);
+const modelPath='construction/models/pilates-sketchup/';
+const [modelInspection,modelSavedViews,modelHierarchy]=await Promise.all([readJSON('public/'+modelPath+'inspection.json'),readJSON('public/'+modelPath+'saved-views.json'),readJSON('public/'+modelPath+'hierarchy.json')]);
+const modelPage=new URL(modelPath+'index.html',dist);
+await writeFile(modelPage,(await readFile(modelPage,'utf8')).replace('<!-- MODEL_INSPECTION -->',renderModelInspection(model,modelInspection,modelHierarchy)).replace('<!-- MODEL_SAVED_VIEWS -->',renderModelSavedViews(modelSavedViews)));
+await cp(new URL('tools/sketchup/extract-vff-stream.py',root),new URL(modelPath+'extract-vff-stream.py',dist));
 const procurement=await readJSON('public/'+estimatePath+'v12/procurement.json');
 const decisionHash=createHash('sha256').update(sourceRevision).update(JSON.stringify(procurement));
 for(const path of ['v12.js','v12.css'])decisionHash.update(await readFile(new URL('public/'+estimatePath+'v12/'+path,root)));

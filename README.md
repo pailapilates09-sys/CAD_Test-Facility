@@ -18,7 +18,7 @@ Preservation/rollback baseline: commit `bbf90547c6e11b2754415e234fc310ea42bf62c8
 
 - `/`: workspace home with five sibling sections and one shared navigation register.
 - `/construction/`: column formwork CAD, with its 3D assembly, five drawing sheets, quantities and downloads at `/cad/`. Geometry, vendor assets and the inch-only PDF are preserved.
-- `/construction/models/pilates-sketchup/`: Pilates SketchUp is a primary navigation section. Its existing URL, source preservation record, export tools and model viewer remain available; extraction and duplicate-analysis limits remain explicit.
+- `/construction/models/pilates-sketchup/`: Pilates SketchUp is a primary navigation section. Its existing URL now shows the verified native extraction, 14 original saved-view thumbnails, and an explicitly selected Group#2 2D/3D partition. Full geometry archives remain linked from Drive; duplicate candidates and Desktop review limits remain explicit.
 - `/construction/estimates/pilates-astra-2026-10-15/milestone.html`: Versions + milestone owns the estimate view index, including v8–v13. Duplicate shortcut cards have been removed from Construction; the estimate pages and their original URLs remain intact.
 - `/progress/`: four-project extraction checkpoints, roadmap, hierarchy, gaps and historical records. The former Construction status table described website deliverables, not physical work on site, and has been removed from this page. Its generated JSON endpoint remains available for existing data links.
 - `/memory-posters/`: the learning wall and reusable prompts.

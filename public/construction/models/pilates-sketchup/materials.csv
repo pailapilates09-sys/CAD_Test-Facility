@@ -1,0 +1,444 @@
+name,source_xml,color_red,color_green,color_blue,has_texture,type
+'Glass',native-assets/materials/'Glass'/material.xml,185,200,214,0,0
+01 - Default1,native-assets/materials/01 - Default1/material.xml,132,77,106,0,0
+05 - Default,native-assets/materials/05 - Default/material.xml,255,255,255,0,0
+06 - Default,native-assets/materials/06 - Default/material.xml,192,208,219,0,0
+06 - Default1,native-assets/materials/06 - Default1/material.xml,228,231,239,0,0
+08 - Default,native-assets/materials/08 - Default/material.xml,18,18,18,0,0
+10008,native-assets/materials/10008/material.xml,133,92,76,0,0
+10009,native-assets/materials/10009/material.xml,181,174,158,1,1
+10010,native-assets/materials/10010/material.xml,199,199,199,1,1
+10013,native-assets/materials/10013/material.xml,133,91,75,1,1
+10014,native-assets/materials/10014/material.xml,18,4,1,1,1
+10015,native-assets/materials/10015/material.xml,17,17,17,1,1
+10016,native-assets/materials/10016/material.xml,25,25,25,1,1
+10017,native-assets/materials/10017/material.xml,176,176,176,1,1
+10018,native-assets/materials/10018/material.xml,127,127,127,1,1
+10019,native-assets/materials/10019/material.xml,103,93,84,1,1
+10020,native-assets/materials/10020/material.xml,82,67,56,1,1
+10034,native-assets/materials/10034/material.xml,106,89,71,1,1
+10035,native-assets/materials/10035/material.xml,255,255,255,1,1
+10036,native-assets/materials/10036/material.xml,132,120,108,1,1
+10037,native-assets/materials/10037/material.xml,108,75,48,0,0
+10038,native-assets/materials/10038/material.xml,192,185,170,1,1
+10039,native-assets/materials/10039/material.xml,100,90,81,1,1
+10041,native-assets/materials/10041/material.xml,41,41,41,1,1
+10042,native-assets/materials/10042/material.xml,144,113,81,1,1
+10043,native-assets/materials/10043/material.xml,3,3,3,0,0
+10046,native-assets/materials/10046/material.xml,8,8,8,0,0
+10047,native-assets/materials/10047/material.xml,255,255,255,0,0
+10048,native-assets/materials/10048/material.xml,179,179,179,1,1
+10049,native-assets/materials/10049/material.xml,230,230,230,0,0
+10050,native-assets/materials/10050/material.xml,86,81,77,1,1
+10051,native-assets/materials/10051/material.xml,230,229,255,0,0
+10052,native-assets/materials/10052/material.xml,3,3,3,1,1
+10053,native-assets/materials/10053/material.xml,255,185,142,0,0
+10054,native-assets/materials/10054/material.xml,158,151,143,1,1
+11238,native-assets/materials/11238/material.xml,247,229,192,1,1
+1306576471823,native-assets/materials/1306576471823/material.xml,225,225,223,1,1
+165旺旺制作米洛提茶几组合020,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê020/material.xml,21,17,14,1,1
+165旺旺制作米洛提茶几组合021,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê021/material.xml,72,56,44,1,2
+165旺旺制作米洛提茶几组合022_5,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê022_5/material.xml,18,18,18,1,1
+165旺旺制作米洛提茶几组合022_6,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê022_6/material.xml,205,203,202,1,1
+165旺旺制作米洛提茶几组合022_7,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê022_7/material.xml,244,244,244,1,1
+165旺旺制作米洛提茶几组合023,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê023/material.xml,123,108,85,0,0
+165旺旺制作米洛提茶几组合024_1,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê024_1/material.xml,175,175,175,0,0
+165旺旺制作米洛提茶几组合025_1,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê025_1/material.xml,57,27,0,1,1
+165旺旺制作米洛提茶几组合025_2,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê025_2/material.xml,51,32,15,1,1
+165旺旺制作米洛提茶几组合026,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê026/material.xml,255,255,255,1,1
+165旺旺制作米洛提茶几组合027,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê027/material.xml,89,66,53,1,2
+165旺旺制作米洛提茶几组合028,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê028/material.xml,170,157,141,0,0
+165旺旺制作米洛提茶几组合029,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê029/material.xml,72,36,19,1,1
+165旺旺制作米洛提茶几组合030,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê030/material.xml,255,255,255,0,0
+165旺旺制作米洛提茶几组合031,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê031/material.xml,255,255,255,0,0
+165旺旺制作米洛提茶几组合032_1,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê032_1/material.xml,255,255,255,0,0
+165旺旺制作米洛提茶几组合033_1,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê033_1/material.xml,22,22,16,1,1
+165旺旺制作米洛提茶几组合033_2,native-assets/materials/165µù║µù║σê╢Σ╜£τ▒│µ┤¢µÅÉΦî╢σçáτ╗äσÉê033_2/material.xml,105,136,49,1,1
+23 - Default,native-assets/materials/23 - Default/material.xml,133,110,110,0,0
+24 - Defaultff,native-assets/materials/24 - Defaultff/material.xml,240,254,196,0,0
+AntiqueGold,native-assets/materials/AntiqueGold/material.xml,0,0,0,0,0
+Ash Flemish 1203 x 1206 mm (T8ZPBN),native-assets/materials/Ash Flemish 1203 x 1206 mm (T8ZPBN)/material.xml,216,189,142,1,1
+Ash Stack 1260 x 1505 mm (W7BWEQ),native-assets/materials/Ash Stack 1260 x 1505 mm (W7BWEQ)/material.xml,205,190,187,1,2
+Black,native-assets/materials/Black/material.xml,0,0,0,0,0
+Coffee,native-assets/materials/Coffee/material.xml,87,87,87,1,1
+Coffee Maker_Material,native-assets/materials/Coffee Maker_Material/material.xml,19,19,19,0,0
+Coffee Maker_Material1,native-assets/materials/Coffee Maker_Material1/material.xml,255,255,255,0,0
+Coffee Maker_Material2,native-assets/materials/Coffee Maker_Material2/material.xml,54,54,54,0,0
+Coffee Maker_Material3,native-assets/materials/Coffee Maker_Material3/material.xml,19,19,19,0,0
+Coffee Maker_Material4,native-assets/materials/Coffee Maker_Material4/material.xml,251,251,251,0,0
+Coffee Maker_Material5,native-assets/materials/Coffee Maker_Material5/material.xml,33,32,31,1,1
+"Color_A04, fabric","native-assets/materials/Color_A04, fabric/material.xml",188,173,143,0,0
+DefaultMaterial4,native-assets/materials/DefaultMaterial4/material.xml,255,255,255,0,0
+Douglas Fir Staggered (A92IND),native-assets/materials/Douglas Fir Staggered (A92IND)/material.xml,217,199,169,1,1
+Flour,native-assets/materials/Flour/material.xml,84,84,84,1,1
+Image,native-assets/materials/Image/material.xml,120,120,120,1,1
+Image1,native-assets/materials/Image1/material.xml,153,136,121,1,1
+JianE_Mtl_2021325185131417_1,native-assets/materials/JianE_Mtl_2021325185131417_1/material.xml,53,47,46,1,1
+JianE_Mtl_2021325185131417_3,native-assets/materials/JianE_Mtl_2021325185131417_3/material.xml,88,115,45,1,1
+JianE_Mtl_2021325185131417_4,native-assets/materials/JianE_Mtl_2021325185131417_4/material.xml,82,109,49,1,1
+JianE_Mtl_2021325185131417_5,native-assets/materials/JianE_Mtl_2021325185131417_5/material.xml,52,74,43,1,1
+JianE_Mtl_2021325185131417_6,native-assets/materials/JianE_Mtl_2021325185131417_6/material.xml,52,74,43,1,1
+JianE_Mtl_2021325185131417_7,native-assets/materials/JianE_Mtl_2021325185131417_7/material.xml,53,47,46,1,1
+JianE_Mtl_2021325185131418,native-assets/materials/JianE_Mtl_2021325185131418/material.xml,144,142,139,0,0
+Layer_2nd Extra,native-assets/materials/Layer_2nd Extra/material.xml,255,135,170,0,0
+Layer_A-COL,native-assets/materials/Layer_A-COL/material.xml,255,0,0,0,0
+Layer_A-WALL,native-assets/materials/Layer_A-WALL/material.xml,0,114,153,0,0
+Layer_BORDER,native-assets/materials/Layer_BORDER/material.xml,153,0,204,0,0
+Layer_CENTERLINE,native-assets/materials/Layer_CENTERLINE/material.xml,153,95,76,0,0
+Layer_DOOR - ELE- KHA,native-assets/materials/Layer_DOOR - ELE- KHA/material.xml,0,153,204,0,0
+Layer_DW,native-assets/materials/Layer_DW/material.xml,0,153,153,0,0
+Layer_Default,native-assets/materials/Layer_Default/material.xml,64,64,64,0,0
+Layer_Defpoints,native-assets/materials/Layer_Defpoints/material.xml,255,255,255,0,0
+Layer_ELEV 1,native-assets/materials/Layer_ELEV 1/material.xml,127,127,255,0,0
+Layer_ELEV 2,native-assets/materials/Layer_ELEV 2/material.xml,127,0,255,0,0
+Layer_ELEV PROJ,native-assets/materials/Layer_ELEV PROJ/material.xml,223,127,255,0,0
+Layer_Edges,native-assets/materials/Layer_Edges/material.xml,255,191,127,0,0
+Layer_F-FURNITURE,native-assets/materials/Layer_F-FURNITURE/material.xml,255,127,0,0,0
+Layer_FRAME005,native-assets/materials/Layer_FRAME005/material.xml,255,63,0,0,0
+Layer_Junction chandelier,native-assets/materials/Layer_Junction chandelier/material.xml,0,153,135,0,0
+Layer_LINE,native-assets/materials/Layer_LINE/material.xml,51,51,51,0,0
+Layer_Layer0,native-assets/materials/Layer_Layer0/material.xml,255,255,255,0,0
+Layer_Men/Handicap Restroom Sign,native-assets/materials/Layer_Men_Handicap Restroom Sign/material.xml,119,119,153,0,0
+Layer_Men/Women Restroom Sign,native-assets/materials/Layer_Men_Women Restroom Sign/material.xml,153,153,204,0,0
+Layer_Men/Women Restroom Sign (Circular),native-assets/materials/Layer_Men_Women Restroom Sign (Circular)/material.xml,255,135,170,0,0
+Layer_PLant,native-assets/materials/Layer_PLant/material.xml,95,127,63,0,0
+Layer_SANITARY,native-assets/materials/Layer_SANITARY/material.xml,127,191,255,0,0
+Layer_Sectional cut wall,native-assets/materials/Layer_Sectional cut wall/material.xml,255,0,0,0,0
+Layer_Walls,native-assets/materials/Layer_Walls/material.xml,255,127,0,0,0
+Layer_Women/Handicap Restroom Sign,native-assets/materials/Layer_Women_Handicap Restroom Sign/material.xml,153,0,255,0,0
+Layer_dimentions,native-assets/materials/Layer_dimentions/material.xml,0,0,255,0,0
+Layer_door,native-assets/materials/Layer_door/material.xml,204,178,102,0,0
+Layer_furniture,native-assets/materials/Layer_furniture/material.xml,204,178,102,0,0
+Layer_par01,native-assets/materials/Layer_par01/material.xml,255,102,0,0,0
+Layer_stair,native-assets/materials/Layer_stair/material.xml,153,133,76,0,0
+Layer_text,native-assets/materials/Layer_text/material.xml,76,76,38,0,0
+Layer_wall,native-assets/materials/Layer_wall/material.xml,255,0,0,0,0
+Layer_wall 2,native-assets/materials/Layer_wall 2/material.xml,255,127,0,0,0
+Layer_window,native-assets/materials/Layer_window/material.xml,0,127,255,0,0
+Lime._10021,native-assets/materials/Lime._10021/material.xml,63,63,63,0,0
+Lime._10024,native-assets/materials/Lime._10024/material.xml,236,231,228,1,1
+Lime._10025,native-assets/materials/Lime._10025/material.xml,134,114,89,1,1
+Lime._10027,native-assets/materials/Lime._10027/material.xml,80,66,45,0,0
+Lime._10028,native-assets/materials/Lime._10028/material.xml,133,108,76,0,0
+Lime._10030,native-assets/materials/Lime._10030/material.xml,187,159,130,0,0
+Lime._10031,native-assets/materials/Lime._10031/material.xml,115,100,81,0,0
+Lisanne_Caulk,native-assets/materials/Lisanne_Caulk/material.xml,255,255,255,0,0
+Marble 02,native-assets/materials/Marble 02/material.xml,53,54,56,1,1
+Marble 06,native-assets/materials/Marble 06/material.xml,58,58,58,1,1
+Marble 06_1,native-assets/materials/Marble 06_1/material.xml,58,58,58,1,1
+Marble 06_2,native-assets/materials/Marble 06_2/material.xml,58,58,58,1,1
+Marble 06_3,native-assets/materials/Marble 06_3/material.xml,58,58,58,1,1
+Marc_Hair,native-assets/materials/Marc_Hair/material.xml,120,111,111,0,0
+Marc_Pants,native-assets/materials/Marc_Pants/material.xml,105,98,102,0,0
+Marc_Shirt,native-assets/materials/Marc_Shirt/material.xml,97,111,174,0,0
+Marc_Shirt2,native-assets/materials/Marc_Shirt2/material.xml,163,172,211,0,0
+Marc_Shoes,native-assets/materials/Marc_Shoes/material.xml,100,102,120,0,0
+Marc_Shoes2,native-assets/materials/Marc_Shoes2/material.xml,68,80,105,0,0
+Marc_Shoes3,native-assets/materials/Marc_Shoes3/material.xml,158,214,145,0,0
+Marc_Shoes4,native-assets/materials/Marc_Shoes4/material.xml,204,199,201,0,0
+Marc_Skin,native-assets/materials/Marc_Skin/material.xml,210,184,168,0,0
+Marc_Wrist,native-assets/materials/Marc_Wrist/material.xml,188,79,61,0,0
+Mat3d66-1059413-5-7506,native-assets/materials/Mat3d66-1059413-5-7506/material.xml,255,255,255,0,0
+Mat3d66-1318295-2-3851ww,native-assets/materials/Mat3d66-1318295-2-3851ww/material.xml,160,157,149,1,1
+Mat3d66-659678-29-5649,native-assets/materials/Mat3d66-659678-29-5649/material.xml,111,111,111,0,0
+Mat3d66-659678-30-5769,native-assets/materials/Mat3d66-659678-30-5769/material.xml,0,0,0,0,0
+Material metal,native-assets/materials/Material metal/material.xml,166,166,166,1,1
+Steve_Book,native-assets/materials/Steve_Book/material.xml,199,199,199,0,0
+Steve_Edges,native-assets/materials/Steve_Edges/material.xml,0,0,0,0,0
+Steve_Glasses_Amber,native-assets/materials/Steve_Glasses_Amber/material.xml,145,31,21,0,0
+Steve_Glasses_Black,native-assets/materials/Steve_Glasses_Black/material.xml,43,43,43,0,0
+Steve_Hair,native-assets/materials/Steve_Hair/material.xml,229,229,225,0,0
+Steve_Jacket,native-assets/materials/Steve_Jacket/material.xml,69,104,102,0,0
+Steve_Jacket2,native-assets/materials/Steve_Jacket2/material.xml,58,80,104,0,0
+Steve_Pants,native-assets/materials/Steve_Pants/material.xml,52,62,63,0,0
+Steve_Shirt,native-assets/materials/Steve_Shirt/material.xml,197,226,222,0,0
+Steve_Shirt1,native-assets/materials/Steve_Shirt1/material.xml,128,128,128,0,0
+Steve_Shoes,native-assets/materials/Steve_Shoes/material.xml,51,45,40,0,0
+Steve_Shoes2,native-assets/materials/Steve_Shoes2/material.xml,93,93,93,0,0
+Steve_Skin,native-assets/materials/Steve_Skin/material.xml,202,167,133,0,0
+Sugar,native-assets/materials/Sugar/material.xml,87,87,87,1,1
+Sugartext,native-assets/materials/Sugartext/material.xml,227,227,227,1,1
+Sumele_Dress,native-assets/materials/Sumele_Dress/material.xml,252,181,9,0,0
+Sumele_Dress2,native-assets/materials/Sumele_Dress2/material.xml,225,159,8,0,0
+Sumele_Dress3,native-assets/materials/Sumele_Dress3/material.xml,0,30,102,0,0
+Sumele_Hair,native-assets/materials/Sumele_Hair/material.xml,19,13,7,0,0
+Sumele_Jewelry,native-assets/materials/Sumele_Jewelry/material.xml,169,169,169,0,0
+Sumele_Shoe,native-assets/materials/Sumele_Shoe/material.xml,210,184,168,0,0
+Sumele_Skin,native-assets/materials/Sumele_Skin/material.xml,140,79,58,0,0
+TECIDO_02,native-assets/materials/TECIDO_02/material.xml,232,231,235,1,1
+Teddy_BookCover,native-assets/materials/Teddy_BookCover/material.xml,50,131,50,0,0
+Teddy_BookJacket,native-assets/materials/Teddy_BookJacket/material.xml,67,109,71,0,0
+Teddy_Bracelet,native-assets/materials/Teddy_Bracelet/material.xml,145,141,147,0,0
+Teddy_BraceletShadow ,native-assets/materials/Teddy_BraceletShadow /material.xml,165,134,109,0,0
+Teddy_Brim,native-assets/materials/Teddy_Brim/material.xml,101,50,61,0,0
+Teddy_Brim2,native-assets/materials/Teddy_Brim2/material.xml,91,45,55,0,0
+Teddy_Dress,native-assets/materials/Teddy_Dress/material.xml,88,169,221,0,0
+Teddy_DressDepth,native-assets/materials/Teddy_DressDepth/material.xml,87,167,219,0,0
+Teddy_DressShadow,native-assets/materials/Teddy_DressShadow/material.xml,72,144,214,0,0
+Teddy_Glasses,native-assets/materials/Teddy_Glasses/material.xml,103,77,64,0,0
+Teddy_Hair,native-assets/materials/Teddy_Hair/material.xml,48,28,16,0,0
+Teddy_HairLight,native-assets/materials/Teddy_HairLight/material.xml,51,36,26,0,0
+Teddy_Hat,native-assets/materials/Teddy_Hat/material.xml,122,53,68,0,0
+Teddy_Paper,native-assets/materials/Teddy_Paper/material.xml,237,237,189,0,0
+Teddy_Shoes,native-assets/materials/Teddy_Shoes/material.xml,189,191,193,0,0
+Teddy_Skin ,native-assets/materials/Teddy_Skin /material.xml,196,161,133,0,0
+Teddy_SkinShadow ,native-assets/materials/Teddy_SkinShadow /material.xml,134,77,23,0,0
+V-Ray proxy - MASERATI,native-assets/materials/V-Ray proxy - MASERATI/material.xml,56,56,56,0,0
+WOOD,native-assets/materials/WOOD/material.xml,184,163,135,1,1
+White,native-assets/materials/White/material.xml,255,255,255,0,0
+"Wood 07, Brick Bond","native-assets/materials/Wood 07, Brick Bond/material.xml",198,162,123,1,1
+"Wood 18, Planks","native-assets/materials/Wood 18, Planks/material.xml",178,149,116,1,2
+Wood 42,native-assets/materials/Wood 42/material.xml,164,136,107,1,1
+Wood 43,native-assets/materials/Wood 43/material.xml,142,121,99,1,1
+Wood 43_1,native-assets/materials/Wood 43_1/material.xml,183,168,152,1,2
+[0003_DeepPink],native-assets/materials/[0003_DeepPink]/material.xml,0,0,0,0,0
+[0012_Bisque],native-assets/materials/[0012_Bisque]/material.xml,255,228,196,0,0
+[0029_BlanchedAlmond],native-assets/materials/[0029_BlanchedAlmond]/material.xml,237,231,223,0,0
+[0035_Tan],native-assets/materials/[0035_Tan]/material.xml,210,180,140,0,0
+[0036_BurlyWood],native-assets/materials/[0036_BurlyWood]/material.xml,222,184,135,0,0
+[0038_Orange],native-assets/materials/[0038_Orange]/material.xml,255,210,127,0,0
+[0039_DarkOrange],native-assets/materials/[0039_DarkOrange]/material.xml,255,140,0,0,0
+[0042_Sienna],native-assets/materials/[0042_Sienna]/material.xml,128,93,76,0,0
+[0060_GrassGreen],native-assets/materials/[0060_GrassGreen]/material.xml,62,91,5,0,0
+[0062_YellowGreen],native-assets/materials/[0062_YellowGreen]/material.xml,154,205,50,0,0
+[0101_CornflowerBlue],native-assets/materials/[0101_CornflowerBlue]/material.xml,100,149,237,0,0
+[0103_Blue],native-assets/materials/[0103_Blue]/material.xml,21,0,255,0,0
+[0105_Navy],native-assets/materials/[0105_Navy]/material.xml,0,0,128,0,0
+[0107_MidnightBlue],native-assets/materials/[0107_MidnightBlue]/material.xml,25,25,112,0,0
+[0124_Purple],native-assets/materials/[0124_Purple]/material.xml,128,0,128,0,0
+[0128_White],native-assets/materials/[0128_White]/material.xml,219,219,219,0,0
+[0128_White]1,native-assets/materials/[0128_White]1/material.xml,255,255,255,0,0
+[0129_WhiteSmoke],native-assets/materials/[0129_WhiteSmoke]/material.xml,245,245,245,0,0
+[0131_Silver],native-assets/materials/[0131_Silver]/material.xml,192,192,192,0,0
+[0132_LightGray],native-assets/materials/[0132_LightGray]/material.xml,169,169,169,0,0
+[0133_Gray],native-assets/materials/[0133_Gray]/material.xml,128,128,128,0,0
+[0134_DimGray],native-assets/materials/[0134_DimGray]/material.xml,105,105,105,0,0
+[0135_DarkGray],native-assets/materials/[0135_DarkGray]/material.xml,81,81,81,0,0
+[0136_Charcoal],native-assets/materials/[0136_Charcoal]/material.xml,35,35,35,0,0
+[0137_Black],native-assets/materials/[0137_Black]/material.xml,0,0,0,0,0
+[Carpet_Berber_Pattern_Gray]1,native-assets/materials/[Carpet_Berber_Pattern_Gray]1/material.xml,252,252,252,1,2
+[Carpet_Loop_Pattern]1,native-assets/materials/[Carpet_Loop_Pattern]1/material.xml,255,255,255,1,2
+[Carpet_Plush_Forest]2,native-assets/materials/[Carpet_Plush_Forest]2/material.xml,255,255,255,1,2
+[Chris_Hair],native-assets/materials/[Chris_Hair]/material.xml,71,76,74,0,0
+[Chris_Pants],native-assets/materials/[Chris_Pants]/material.xml,112,100,74,0,0
+[Chris_Shirt],native-assets/materials/[Chris_Shirt]/material.xml,40,38,52,0,0
+[Chris_Shoe],native-assets/materials/[Chris_Shoe]/material.xml,23,22,22,0,0
+[Chris_Shoe_Sole],native-assets/materials/[Chris_Shoe_Sole]/material.xml,123,118,118,0,0
+[Chris_Skin],native-assets/materials/[Chris_Skin]/material.xml,192,164,115,0,0
+[Cladding Stucco White],native-assets/materials/[Cladding Stucco White]/material.xml,159,160,160,1,1
+[Color A02],native-assets/materials/[Color A02]/material.xml,179,139,107,1,1
+[Color A05],native-assets/materials/[Color A05]/material.xml,251,207,154,0,0
+[Color E06],native-assets/materials/[Color E06]/material.xml,204,204,0,0,0
+[Color M00]2,native-assets/materials/[Color M00]2/material.xml,252,252,252,0,0
+[Color M07],native-assets/materials/[Color M07]/material.xml,38,38,38,0,0
+[Color M08],native-assets/materials/[Color M08]/material.xml,30,30,30,0,0
+[Color_000],native-assets/materials/[Color_000]/material.xml,255,255,255,0,0
+[Color_001],native-assets/materials/[Color_001]/material.xml,226,226,226,0,0
+[Color_002],native-assets/materials/[Color_002]/material.xml,198,198,198,0,0
+[Granite Dark Gray],native-assets/materials/[Granite Dark Gray]/material.xml,69,68,68,1,1
+[Metal Silver],native-assets/materials/[Metal Silver]/material.xml,234,233,238,1,1
+[Metal_Aluminum_Anodized],native-assets/materials/[Metal_Aluminum_Anodized]/material.xml,202,209,219,1,1
+[Metal_Aluminum_Anodized]1,native-assets/materials/[Metal_Aluminum_Anodized]1/material.xml,22,25,28,1,2
+[Metal_Corrogated_Shiny]2,native-assets/materials/[Metal_Corrogated_Shiny]2/material.xml,193,193,193,1,1
+[Metal_Corrogated_Shiny]5,native-assets/materials/[Metal_Corrogated_Shiny]5/material.xml,163,163,163,1,2
+[Metal_Corrogated_Shiny]6,native-assets/materials/[Metal_Corrogated_Shiny]6/material.xml,192,192,192,1,1
+[Mirror 01],native-assets/materials/[Mirror 01]/material.xml,185,185,185,1,1
+[Mirror 02],native-assets/materials/[Mirror 02]/material.xml,229,229,229,1,1
+[Polished Concrete Old],native-assets/materials/[Polished Concrete Old]/material.xml,229,229,229,1,1
+[Sketchy_Siding_Straight],native-assets/materials/[Sketchy_Siding_Straight]/material.xml,235,219,175,1,1
+[Steel Brushed Stainless],native-assets/materials/[Steel Brushed Stainless]/material.xml,183,187,190,1,1
+[Stone Sandstone Ashlar Light],native-assets/materials/[Stone Sandstone Ashlar Light]/material.xml,255,202,88,0,0
+[Tile Limestone Multi],native-assets/materials/[Tile Limestone Multi]/material.xml,199,173,118,1,1
+[Translucent Glass Blue],native-assets/materials/[Translucent Glass Blue]/material.xml,162,172,189,0,0
+[Translucent Glass Gray],native-assets/materials/[Translucent Glass Gray]/material.xml,0,0,0,0,0
+[Translucent_Glass_Blue],native-assets/materials/[Translucent_Glass_Blue]/material.xml,9,56,53,0,0
+[Translucent_Glass_Gray],native-assets/materials/[Translucent_Glass_Gray]/material.xml,128,128,128,0,0
+[Translucent_Glass_Gray]1,native-assets/materials/[Translucent_Glass_Gray]1/material.xml,114,114,114,0,0
+[Wallpaper Dog Bone],native-assets/materials/[Wallpaper Dog Bone]/material.xml,255,255,255,1,2
+[Wood OSB],native-assets/materials/[Wood OSB]/material.xml,220,190,141,1,2
+[Wood Veneer 01],native-assets/materials/[Wood Veneer 01]/material.xml,120,70,37,1,1
+[Wood Veneer 01]1,native-assets/materials/[Wood Veneer 01]1/material.xml,127,95,71,1,1
+[<0131_Silver>],native-assets/materials/[_0131_Silver_]/material.xml,153,153,153,0,0
+*,native-assets/materials/_/material.xml,76,76,76,0,0
+*17,native-assets/materials/_17/material.xml,68,68,68,0,0
+*31,native-assets/materials/_31/material.xml,210,197,174,1,2
+*4,native-assets/materials/_4/material.xml,128,128,128,0,0
+*9,native-assets/materials/_9/material.xml,120,55,15,1,1
+_Light EMIT-Sq Bulb,native-assets/materials/_Light EMIT-Sq Bulb/material.xml,242,242,242,1,2
+_Light Metal,native-assets/materials/_Light Metal/material.xml,198,198,198,1,2
+<auto>,native-assets/materials/_auto_/material.xml,127,127,255,0,0
+<auto>1,native-assets/materials/_auto_1/material.xml,255,191,127,0,0
+<auto>10,native-assets/materials/_auto_10/material.xml,57,76,0,0,0
+<auto>11,native-assets/materials/_auto_11/material.xml,251,251,251,0,0
+<auto>12,native-assets/materials/_auto_12/material.xml,19,19,19,0,0
+<auto>13,native-assets/materials/_auto_13/material.xml,175,175,175,0,0
+<auto>14,native-assets/materials/_auto_14/material.xml,255,255,255,0,0
+<auto>15,native-assets/materials/_auto_15/material.xml,33,32,31,1,1
+<auto>16,native-assets/materials/_auto_16/material.xml,19,19,19,0,0
+<auto>17,native-assets/materials/_auto_17/material.xml,132,134,136,0,0
+<auto>18,native-assets/materials/_auto_18/material.xml,227,221,207,1,1
+<auto>19,native-assets/materials/_auto_19/material.xml,128,134,138,0,0
+<auto>2,native-assets/materials/_auto_2/material.xml,255,255,255,0,0
+<auto>20,native-assets/materials/_auto_20/material.xml,132,134,136,0,0
+<auto>21,native-assets/materials/_auto_21/material.xml,228,221,209,1,1
+<auto>22,native-assets/materials/_auto_22/material.xml,128,134,138,0,0
+<auto>23,native-assets/materials/_auto_23/material.xml,132,134,136,0,0
+<auto>24,native-assets/materials/_auto_24/material.xml,228,221,209,1,1
+<auto>25,native-assets/materials/_auto_25/material.xml,128,134,138,0,0
+<auto>26,native-assets/materials/_auto_26/material.xml,100,93,83,1,1
+<auto>27,native-assets/materials/_auto_27/material.xml,214,214,214,0,0
+<auto>28,native-assets/materials/_auto_28/material.xml,145,126,116,0,0
+<auto>29,native-assets/materials/_auto_29/material.xml,226,204,193,0,0
+<auto>3,native-assets/materials/_auto_3/material.xml,255,127,0,0,0
+<auto>30,native-assets/materials/_auto_30/material.xml,238,216,205,0,0
+<auto>31,native-assets/materials/_auto_31/material.xml,244,222,210,0,0
+<auto>32,native-assets/materials/_auto_32/material.xml,244,227,210,0,0
+<auto>33,native-assets/materials/_auto_33/material.xml,244,228,210,0,0
+<auto>34,native-assets/materials/_auto_34/material.xml,244,237,210,0,0
+<auto>35,native-assets/materials/_auto_35/material.xml,204,102,102,0,0
+<auto>36,native-assets/materials/_auto_36/material.xml,153,133,76,0,0
+<auto>37,native-assets/materials/_auto_37/material.xml,205,32,39,0,0
+<auto>38,native-assets/materials/_auto_38/material.xml,204,178,102,0,0
+<auto>39,native-assets/materials/_auto_39/material.xml,51,51,51,0,0
+<auto>4,native-assets/materials/_auto_4/material.xml,0,127,255,0,0
+<auto>40,native-assets/materials/_auto_40/material.xml,0,153,204,0,0
+<auto>41,native-assets/materials/_auto_41/material.xml,0,255,0,0,0
+<auto>42,native-assets/materials/_auto_42/material.xml,0,114,153,0,0
+<auto>43,native-assets/materials/_auto_43/material.xml,153,95,76,0,0
+<auto>44,native-assets/materials/_auto_44/material.xml,255,0,0,0,0
+<auto>45,native-assets/materials/_auto_45/material.xml,127,0,255,0,0
+<auto>46,native-assets/materials/_auto_46/material.xml,223,127,255,0,0
+<auto>47,native-assets/materials/_auto_47/material.xml,95,127,63,0,0
+<auto>48,native-assets/materials/_auto_48/material.xml,255,0,255,0,0
+<auto>49,native-assets/materials/_auto_49/material.xml,76,76,38,0,0
+<auto>5,native-assets/materials/_auto_5/material.xml,153,114,0,0,0
+<auto>50,native-assets/materials/_auto_50/material.xml,127,191,255,0,0
+<auto>51,native-assets/materials/_auto_51/material.xml,0,0,255,0,0
+<auto>52,native-assets/materials/_auto_52/material.xml,0,153,153,0,0
+<auto>53,native-assets/materials/_auto_53/material.xml,255,63,0,0,0
+<auto>54,native-assets/materials/_auto_54/material.xml,153,0,204,0,0
+<auto>55,native-assets/materials/_auto_55/material.xml,15,15,15,0,0
+<auto>56,native-assets/materials/_auto_56/material.xml,171,171,171,0,0
+<auto>57,native-assets/materials/_auto_57/material.xml,196,196,195,1,1
+<auto>58,native-assets/materials/_auto_58/material.xml,139,136,137,1,1
+<auto>6,native-assets/materials/_auto_6/material.xml,114,153,0,0,0
+<auto>7,native-assets/materials/_auto_7/material.xml,153,204,0,0,0
+<auto>8,native-assets/materials/_auto_8/material.xml,191,255,0,0,0
+<auto>9,native-assets/materials/_auto_9/material.xml,95,127,0,0,0
+antislip material,native-assets/materials/antislip material/material.xml,135,135,135,0,0
+"bakır desen, metal","native-assets/materials/bak─▒r desen, metal/material.xml",156,125,113,1,2
+ban 2,native-assets/materials/ban 2/material.xml,52,56,58,0,0
+brushed-gold-texture,native-assets/materials/brushed-gold-texture/material.xml,201,168,108,1,1
+coffee_beans,native-assets/materials/coffee_beans/material.xml,93,58,38,1,1
+curtain,native-assets/materials/curtain/material.xml,232,232,232,0,0
+deri siyah,native-assets/materials/deri siyah/material.xml,12,12,12,1,2
+dhr-688,native-assets/materials/dhr-688/material.xml,157,95,95,0,0
+f01-93-930b,native-assets/materials/f01-93-930b/material.xml,118,141,157,0,0
+f5441,native-assets/materials/f5441/material.xml,15,15,15,0,0
+gh-654,native-assets/materials/gh-654/material.xml,127,127,127,1,1
+gh1145,native-assets/materials/gh1145/material.xml,22,22,22,0,0
+gj-9537,native-assets/materials/gj-9537/material.xml,152,179,172,0,0
+j5-1573,native-assets/materials/j5-1573/material.xml,51,51,51,0,0
+"lake beyaz1, polished","native-assets/materials/lake beyaz1, polished/material.xml",153,153,153,0,0
+mn0-629,native-assets/materials/mn0-629/material.xml,181,126,133,0,0
+ooMaterial chrome,native-assets/materials/ooMaterial chrome/material.xml,150,152,153,1,1
+polished 515768e36c77c9c9b,native-assets/materials/polished 515768e36c77c9c9b/material.xml,56,46,41,1,1
+qingmo_10383P,native-assets/materials/qingmo_10383P/material.xml,179,129,83,1,1
+qingmo_10501P,native-assets/materials/qingmo_10501P/material.xml,220,220,220,1,1
+qingmo_10649P,native-assets/materials/qingmo_10649P/material.xml,72,58,52,0,0
+qingmo_10663P,native-assets/materials/qingmo_10663P/material.xml,200,196,120,0,0
+qingmo_10705P,native-assets/materials/qingmo_10705P/material.xml,141,136,94,1,1
+qingmo_10802P,native-assets/materials/qingmo_10802P/material.xml,122,129,100,1,1
+qingmo_11091P,native-assets/materials/qingmo_11091P/material.xml,147,155,90,1,1
+qingmo_11168P,native-assets/materials/qingmo_11168P/material.xml,244,238,193,1,1
+qingmo_11182P,native-assets/materials/qingmo_11182P/material.xml,199,176,103,0,0
+qingmo_11196P,native-assets/materials/qingmo_11196P/material.xml,229,176,103,0,0
+qingmo_11232P,native-assets/materials/qingmo_11232P/material.xml,74,74,74,0,0
+qingmo_11246P,native-assets/materials/qingmo_11246P/material.xml,0,0,0,0,0
+qingmo_11507P,native-assets/materials/qingmo_11507P/material.xml,157,157,157,1,1
+qingmo_11596P,native-assets/materials/qingmo_11596P/material.xml,55,42,33,0,0
+qingmo_7876P,native-assets/materials/qingmo_7876P/material.xml,141,99,48,0,0
+qingmo_7981P,native-assets/materials/qingmo_7981P/material.xml,207,207,207,1,1
+qingmo_8013P,native-assets/materials/qingmo_8013P/material.xml,0,0,0,0,0
+qingmo_8075P,native-assets/materials/qingmo_8075P/material.xml,238,201,131,1,1
+qingmo_8133P,native-assets/materials/qingmo_8133P/material.xml,185,177,160,1,1
+qingmo_8191P,native-assets/materials/qingmo_8191P/material.xml,119,111,99,1,1
+qingmo_8511P,native-assets/materials/qingmo_8511P/material.xml,76,70,34,1,1
+qingmo_8565P,native-assets/materials/qingmo_8565P/material.xml,250,230,200,1,1
+qingmo_8623P,native-assets/materials/qingmo_8623P/material.xml,119,110,99,1,1
+qingmo_8689P,native-assets/materials/qingmo_8689P/material.xml,103,92,77,1,1
+qingmo_8751P,native-assets/materials/qingmo_8751P/material.xml,87,67,55,1,1
+qingmo_8813P,native-assets/materials/qingmo_8813P/material.xml,119,118,92,1,1
+qingmo_8845P,native-assets/materials/qingmo_8845P/material.xml,134,119,94,1,1
+qingmo_9609P,native-assets/materials/qingmo_9609P/material.xml,190,158,121,1,1
+qingmo_9623P,native-assets/materials/qingmo_9623P/material.xml,80,72,65,0,0
+vray L017_1,native-assets/materials/vray L017_1/material.xml,255,255,255,0,0
+vray_L006_3,native-assets/materials/vray_L006_3/material.xml,255,255,255,0,0
+vray_L006_7,native-assets/materials/vray_L006_7/material.xml,7,7,7,1,1
+vray_L006_8,native-assets/materials/vray_L006_8/material.xml,173,135,112,0,0
+vray_L013,native-assets/materials/vray_L013/material.xml,130,99,72,0,0
+vray_L014,native-assets/materials/vray_L014/material.xml,122,95,74,1,1
+vray_L015,native-assets/materials/vray_L015/material.xml,191,171,144,1,1
+vray_L016_1,native-assets/materials/vray_L016_1/material.xml,242,242,242,1,2
+vray_L016_2,native-assets/materials/vray_L016_2/material.xml,255,255,255,0,0
+vray_L017_2,native-assets/materials/vray_L017_2/material.xml,74,75,21,0,0
+vray_L017_3,native-assets/materials/vray_L017_3/material.xml,132,101,18,0,0
+vray_L018_3,native-assets/materials/vray_L018_3/material.xml,31,25,12,0,0
+vray_L018_5,native-assets/materials/vray_L018_5/material.xml,117,129,93,1,1
+vray_L019_1,native-assets/materials/vray_L019_1/material.xml,108,108,108,1,1
+vray_L019_10,native-assets/materials/vray_L019_10/material.xml,107,107,107,1,1
+vray_L019_11,native-assets/materials/vray_L019_11/material.xml,166,166,166,1,1
+vray_L019_12,native-assets/materials/vray_L019_12/material.xml,87,87,87,1,1
+vray_L019_13,native-assets/materials/vray_L019_13/material.xml,1,1,1,0,0
+vray_L019_14,native-assets/materials/vray_L019_14/material.xml,16,16,16,1,1
+vray_L019_15,native-assets/materials/vray_L019_15/material.xml,14,14,14,1,1
+vray_L019_16,native-assets/materials/vray_L019_16/material.xml,21,21,21,1,1
+vray_L019_17,native-assets/materials/vray_L019_17/material.xml,13,13,13,1,1
+vray_L019_18,native-assets/materials/vray_L019_18/material.xml,22,22,22,1,1
+vray_L019_19,native-assets/materials/vray_L019_19/material.xml,13,13,13,1,1
+vray_L019_2,native-assets/materials/vray_L019_2/material.xml,1,1,1,1,1
+vray_L019_20,native-assets/materials/vray_L019_20/material.xml,146,146,146,1,1
+vray_L019_21,native-assets/materials/vray_L019_21/material.xml,101,101,101,1,1
+vray_L019_22,native-assets/materials/vray_L019_22/material.xml,78,78,78,1,1
+vray_L019_4,native-assets/materials/vray_L019_4/material.xml,0,0,0,0,0
+vray_L019_5,native-assets/materials/vray_L019_5/material.xml,0,0,0,1,1
+vray_L019_8,native-assets/materials/vray_L019_8/material.xml,255,255,255,1,1
+vray_L019_9,native-assets/materials/vray_L019_9/material.xml,99,99,99,1,1
+vray_L020,native-assets/materials/vray_L020/material.xml,255,255,255,0,0
+vray_L021,native-assets/materials/vray_L021/material.xml,0,0,0,1,1
+vray_L022_1,native-assets/materials/vray_L022_1/material.xml,162,162,162,1,1
+vray_L022_10,native-assets/materials/vray_L022_10/material.xml,23,11,3,1,1
+vray_L022_11,native-assets/materials/vray_L022_11/material.xml,0,0,0,1,1
+vray_L022_12,native-assets/materials/vray_L022_12/material.xml,255,255,255,0,0
+vray_L022_2,native-assets/materials/vray_L022_2/material.xml,129,133,142,1,1
+vray_L022_3,native-assets/materials/vray_L022_3/material.xml,2,2,2,1,1
+vray_L022_4,native-assets/materials/vray_L022_4/material.xml,180,180,180,1,1
+vray_L022_5,native-assets/materials/vray_L022_5/material.xml,1,1,1,1,1
+vray_L022_6,native-assets/materials/vray_L022_6/material.xml,255,255,255,1,1
+vray_L022_7,native-assets/materials/vray_L022_7/material.xml,255,255,255,0,0
+vray_L022_9,native-assets/materials/vray_L022_9/material.xml,60,27,10,1,1
+vray_L023_1,native-assets/materials/vray_L023_1/material.xml,0,0,0,1,1
+vray_L023_2,native-assets/materials/vray_L023_2/material.xml,19,19,19,1,1
+vray_L024_1,native-assets/materials/vray_L024_1/material.xml,103,103,103,1,1
+vray_L025_1,native-assets/materials/vray_L025_1/material.xml,153,143,130,1,1
+vray_L025_2,native-assets/materials/vray_L025_2/material.xml,220,222,223,1,1
+vray_L026,native-assets/materials/vray_L026/material.xml,87,87,87,1,1
+vray_L027,native-assets/materials/vray_L027/material.xml,128,128,128,0,0
+vray_L028,native-assets/materials/vray_L028/material.xml,255,255,255,0,0
+vray_L029,native-assets/materials/vray_L029/material.xml,131,47,21,1,1
+vray_L030,native-assets/materials/vray_L030/material.xml,123,123,123,1,1
+vray_L031,native-assets/materials/vray_L031/material.xml,213,213,212,1,1
+vray_L032,native-assets/materials/vray_L032/material.xml,8,8,8,0,0
+vray_L033,native-assets/materials/vray_L033/material.xml,168,150,78,0,0
+vray_L034,native-assets/materials/vray_L034/material.xml,115,115,115,0,0
+vray_L036,native-assets/materials/vray_L036/material.xml,255,255,255,0,0
+vray_L037,native-assets/materials/vray_L037/material.xml,255,255,255,0,0
+vray_L038,native-assets/materials/vray_L038/material.xml,0,0,0,0,0
+vray_L039,native-assets/materials/vray_L039/material.xml,19,19,19,0,0
+vray_L040,native-assets/materials/vray_L040/material.xml,196,196,196,1,1
+vray_L042,native-assets/materials/vray_L042/material.xml,4,4,4,0,0
+white_wall,native-assets/materials/white_wall/material.xml,233,233,233,1,1
+亚麻布,native-assets/materials/Σ║ÜΘ║╗σ╕â/material.xml,58,58,60,1,1
+不锈钢,native-assets/materials/Σ╕ìΘöêΘÆó/material.xml,119,119,119,0,0
+皮革sad,native-assets/materials/τÜ«Θ¥⌐sad/material.xml,143,110,110,0,0
+싱크대,native-assets/materials/∞ï▒φü¼δîÇ/material.xml,178,178,178,1,2
