@@ -21,7 +21,7 @@
   "geometry_count": 2458434,
   "blocker": null,
   "reviewed_at": "2026-10-21",
-  "next_input": "Review coincident candidates, separated placements and extreme source transforms in SketchUp before cleanup or construction take-offs. Full supported geometry is archived; browser preview explicitly selects Group#2.",
+  "next_input": "Review the preserved native transform outliers and any layout alternatives in SketchUp before construction take-offs. The current browser view selects the main room and uses optimized display geometry.",
   "reference_site": "https://fabingurung.github.io/JP_Computer-Aided-Drawings/",
   "reference_use": "Read-only design reference: one canonical geometry model with linked 2D and 3D views. No writes to the reference repository.",
   "source_hash_scope": "PILATES.skp unpacked from user-uploaded PILATES.zip; Drive original and legacy copy matched by filename and size only.",
@@ -39,5 +39,15 @@
   "full_geometry_in_browser": false,
   "archive_transfer_status": "complete_provider_sizes_verified",
   "archive_parts": 11,
-  "archive_register_path": "archive-register.json"
+  "archive_register_path": "archive-register.json",
+  "room_preview_path": "studio-room.scene.json",
+  "room_preview": {
+    "root_placements": 242,
+    "item_types": 106,
+    "loose_geometry_items": 1,
+    "definition_triangles": 238779,
+    "full_model": false,
+    "display_optimized": true,
+    "scene_sha256": "260b2cc595cfe687e83c1a71fd662a2c97e46938af053353aa11e466134c0264"
+  }
 }
