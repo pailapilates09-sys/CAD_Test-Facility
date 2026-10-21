@@ -8,14 +8,15 @@ const milestones={
  M2:{tag:'workspace-m2-2026-10-18',manifestPath:'public/milestones/workspace-m2-2026-10-18.json',notesPath:'public/milestones/WORKSPACE-M2-2026-10-18.md'},
  M3:{tag:'workspace-m3-2026-10-19',manifestPath:'public/milestones/workspace-m3-2026-10-19.json',notesPath:'public/milestones/WORKSPACE-M3-2026-10-19.md'},
  M4:{tag:'workspace-m4-2026-10-20',manifestPath:'public/milestones/workspace-m4-2026-10-20.json',notesPath:'public/milestones/WORKSPACE-M4-2026-10-20.md'},
- M5:{tag:'workspace-m5-2026-10-21',manifestPath:'public/milestones/workspace-m5-2026-10-21.json',notesPath:'public/milestones/WORKSPACE-M5-2026-10-21.md'}
+ M5:{tag:'workspace-m5-2026-10-21',manifestPath:'public/milestones/workspace-m5-2026-10-21.json',notesPath:'public/milestones/WORKSPACE-M5-2026-10-21.md'},
+ M6:{tag:'workspace-m6-2026-10-22',manifestPath:'public/milestones/workspace-m6-2026-10-22.json',notesPath:'public/milestones/WORKSPACE-M6-2026-10-22.md'}
 };
 export function validateWorkspaceMilestone(m){
  const spec=milestones[m.id];
  if(m.schema_version!=='workspace-milestone-1.0.0'||!spec||m.tag!==spec.tag)throw new Error('Unexpected workspace milestone');
  if(typeof m.title!=='string'||!m.title.trim()||/[\r\n]/.test(m.title)||m.title.length>160)throw new Error('Invalid workspace milestone title');
  if(m.release_notes_path!==spec.notesPath||!/^[a-f0-9]{40}$/.test(m.base_commit))throw new Error('Unexpected workspace source or notes path');
- const previous={M2:'pilates-estimates-m1-2026-10-17',M3:milestones.M2.tag,M4:milestones.M3.tag,M5:milestones.M4.tag}[m.id];
+ const previous={M2:'pilates-estimates-m1-2026-10-17',M3:milestones.M2.tag,M4:milestones.M3.tag,M5:milestones.M4.tag,M6:milestones.M5.tag}[m.id];
  if(m.previous_milestone_tag!==previous||(['M2','M3'].includes(m.id)&&(m.coverage.generated_pages!==66||m.coverage.latest_estimate_version!=='v8')))throw new Error('Incomplete milestone preservation');
  if(m.verification.browser_animation_qa!=='unverified')throw new Error('Unexpected browser verification claim');
  if(m.id==='M2'&&(m.verification.automated_tests!==69||m.verification.live_files_verified!==79))throw new Error('Unexpected verification claims');
@@ -30,6 +31,12 @@ export function validateWorkspaceMilestone(m){
   if(c.generated_pages!==123||c.primary_sections!==5||c.estimate_views!==14||c.latest_estimate_version!=='v13'||c.quoted_works!==51||c.held_works!==6||c.summary_allowances!==2||c.indexed_geometry_records!==8172940||c.coincident_candidate_groups!==44||c.full_geometry_in_browser!==false)throw Error('Incomplete native extraction preservation');
   if(v.source_commit!==m.base_commit||v.automated_tests!==127||(!Number.isInteger(v.milestone_record_automated_tests)||v.milestone_record_automated_tests<130)||v.live_files_verified!==36||v.mobile_device_visual_qa!=='unverified'||v.desktop_model_comparison!=='pending'||v.publication_policy!=='Tag the milestone-record commit after its checks and Pages deployment succeed')throw Error('Unexpected native extraction verification');
   if(s?.frontend_mode!=='github_static_copies'||s.live_drive_fetch!==false||s.automatic_drive_sync!==false||s.geometry_archive_parts!==11||s.geometry_formats?.join(',')!=='JSONL,SQL,SQLite'||m.version_control?.working_branch!=='work/after-workspace-m5')throw Error('Unexpected storage or branch plan');
+ }
+ if(m.id==='M6'){
+  const c=m.coverage,v=m.verification;
+  if(c.generated_pages!==123||c.latest_estimate_version!=='v13'||c.quoted_works!==51||c.held_works!==6||c.summary_allowances!==2||c.linked_views!==3||c.room_placements!==242||c.item_types!==106||c.preview_triangles!==946789)throw Error('Incomplete linked room preservation');
+  if(v.source_commit!==m.base_commit||v.automated_tests!==135||v.milestone_record_automated_tests!==138||v.desktop_model_comparison!=='pending'||v.rendered_3d_visual_qa!=='unverified'||v.publication_policy!=='Tag the milestone-record commit after its checks and Pages deployment succeed')throw Error('Unexpected linked room verification');
+  if(m.storage?.live_drive_fetch!==false||m.storage?.automatic_drive_sync!==false||m.version_control?.existing_tags_moved!==false)throw Error('Unexpected linked room storage or rollback claim');
  }
  if(!Array.isArray(m.remaining_debt)||m.remaining_debt.length<6||Object.keys(m.preservation_sha256??{}).length<10||Object.values(m.preservation_sha256).some(v=>!/^[a-f0-9]{64}$/.test(v)))throw new Error('Missing preservation hashes or remaining debt');
  return {tag:m.tag,title:m.title,notesPath:spec.notesPath,manifestPath:spec.manifestPath};
