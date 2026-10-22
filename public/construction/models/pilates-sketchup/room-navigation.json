@@ -1,0 +1,977 @@
+{
+  "schema_version": "paila-room-navigation-1.0",
+  "source_sha256": "ad5c8a00a563d4336a5ea4bdd72907aba7e427f0c842e21196386d944af4b0ec",
+  "source_hierarchy": "hierarchy.json",
+  "note": "Approximate navigation zones inferred from native saved cameras and model locations. Shared assemblies may appear in several zones. Suggested names require owner confirmation. Saved cameras use original eye/target/FOV converted from inches to metres; interaction keeps the world Z axis upright.",
+  "labels": {
+    "1104854": {
+      "name": "Yoga mat",
+      "category": "Equipment",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10898136": {
+      "name": "Towels",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "910142": {
+      "name": "Coffee maker",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "3144842": {
+      "name": "Folding sliding door",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10721573": {
+      "name": "Framed Picture 003",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name."
+    },
+    "9315832": {
+      "name": "Glass door assembly",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "11022815": {
+      "name": "Painting 001",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name."
+    },
+    "11002144": {
+      "name": "Coffee, sugar and flour jars",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10959990": {
+      "name": "sink",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name."
+    },
+    "10862987": {
+      "name": "Towel placement",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10964334": {
+      "name": "Vigor - Black",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name."
+    },
+    "10729951": {
+      "name": "Accessible restroom sign",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10699289": {
+      "name": "Books 002",
+      "category": "Furniture",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name."
+    },
+    "10780984": {
+      "name": "Woven storage basket",
+      "category": "Furniture",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "1136639": {
+      "name": "Curtain",
+      "category": "Furniture",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name."
+    },
+    "3184495": {
+      "name": "Sabrina Chair",
+      "category": "Furniture",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name."
+    },
+    "161587": {
+      "name": "Lounge sofa",
+      "category": "Furniture",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "1878458": {
+      "name": "Wood lockers",
+      "category": "Furniture",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "9088728": {
+      "name": "Square downlight",
+      "category": "Lighting",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "9310810": {
+      "name": "Linear light",
+      "category": "Lighting",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10719818": {
+      "name": "Ceiling light 01",
+      "category": "Lighting",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10704300": {
+      "name": "Pendant lamp 014",
+      "category": "Lighting",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10720851": {
+      "name": "Pendant lamp 023",
+      "category": "Lighting",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10943316": {
+      "name": "Potted cactus 003",
+      "category": "Plants",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10947396": {
+      "name": "Potted cactus 004",
+      "category": "Plants",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10946251": {
+      "name": "Potted zebra plant",
+      "category": "Plants",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "3985060": {
+      "name": "Potted Kentia palm",
+      "category": "Plants",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "3194722": {
+      "name": "Potted dumb cane",
+      "category": "Plants",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "3986432": {
+      "name": "Potted palm",
+      "category": "Plants",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "4623165": {
+      "name": "Potted ficus",
+      "category": "Plants",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "4666970": {
+      "name": "Potted strelitzia",
+      "category": "Plants",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "9361845": {
+      "name": "A Little Movement sign",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10743860": {
+      "name": "Change & Slay sign",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "9324788": {
+      "name": "Keep Calm sign",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "9310749": {
+      "name": "Studio model assembly 21",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "3192310": {
+      "name": "Studio model assembly 54",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "3381803": {
+      "name": "Lounge model assembly 69",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9310761": {
+      "name": "Studio model assembly 83",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9119794": {
+      "name": "Studio model element 84",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9091911": {
+      "name": "Studio model element 122",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9089028": {
+      "name": "Studio model element 123",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9113665": {
+      "name": "Studio model element 124",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9110650": {
+      "name": "Studio model element 125",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9116680": {
+      "name": "Studio model element 126",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9107635": {
+      "name": "Studio model element 127-1",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9107581": {
+      "name": "Studio model assembly 134",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9107569": {
+      "name": "Studio model assembly 136",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9107572": {
+      "name": "Studio model assembly 137",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9107578": {
+      "name": "Studio model assembly 138",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9107575": {
+      "name": "Studio model assembly 139",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "136690": {
+      "name": "Room shell",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3190325": {
+      "name": "Studio partition panel",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "138136": {
+      "name": "Studio wall assembly",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "161693": {
+      "name": "Lounge fitted base",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "162002": {
+      "name": "Coffee station wall",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "162177": {
+      "name": "Coffee shelf — lower",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "163814": {
+      "name": "Coffee shelf — upper",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "1104923": {
+      "name": "Changing enclosure — inner",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "1104955": {
+      "name": "Changing enclosure — outer",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "1104987": {
+      "name": "Locker soffit",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "1879541": {
+      "name": "Lounge glazed assembly",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "2039197": {
+      "name": "Studio equipment assembly",
+      "category": "Equipment",
+      "status": "nested-label",
+      "evidence": "Contains named Clinical Reformer definitions; one root assembly does not equal one reformer or a purchase count."
+    },
+    "3119779": {
+      "name": "Changing corridor soffit",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "10754697": {
+      "name": "Studio storage surround",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3120236": {
+      "name": "Reception desk assembly",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3137716": {
+      "name": "Lounge ceiling panel",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3144994": {
+      "name": "Reception display base",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3148222": {
+      "name": "Reception sign and surround",
+      "category": "Fittings",
+      "status": "nested-label",
+      "evidence": "Contains the original YOUR STUDIO NAM sign definition."
+    },
+    "3150131": {
+      "name": "Reception display shelf — upper",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3150992": {
+      "name": "Reception display shelf — middle",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3151031": {
+      "name": "Reception display shelf — lower",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3151071": {
+      "name": "Reception furniture assembly",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3156278": {
+      "name": "Coffee station return",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3194173": {
+      "name": "Studio mirror panel A",
+      "category": "Fittings",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3194721": {
+      "name": "Studio partition wall",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3985030": {
+      "name": "Lounge model assembly 111",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "3190357": {
+      "name": "Studio wall trim",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3190476": {
+      "name": "Studio mirror panel B",
+      "category": "Fittings",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3190548": {
+      "name": "Studio props wall",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3194040": {
+      "name": "Changing corridor assembly",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3194159": {
+      "name": "Studio mirror panel C",
+      "category": "Fittings",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "3985057": {
+      "name": "Lounge model assembly 127",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "3986841": {
+      "name": "Studio glazed panel A",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "4623163": {
+      "name": "Main ceiling slab",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "4622911": {
+      "name": "Studio window assembly",
+      "category": "Room geometry",
+      "status": "nested-label",
+      "evidence": "Contains the original Janela (window) definition."
+    },
+    "4622912": {
+      "name": "Studio glazed panel B",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "4666937": {
+      "name": "Reception model assembly 133",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "9088293": {
+      "name": "Lounge display rack",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "9343377": {
+      "name": "Reception and lounge ceiling",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "9345092": {
+      "name": "Reception display backing",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "10699093": {
+      "name": "Mirror and decor assembly",
+      "category": "Fittings",
+      "status": "nested-label",
+      "evidence": "Contains the original Mirror 018 definition and additional fittings."
+    },
+    "10720091": {
+      "name": "Entrance floor finish",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "10720759": {
+      "name": "Changing ceiling edge A",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "10721440": {
+      "name": "Changing ceiling edge B",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "10722480": {
+      "name": "Decorative light assembly",
+      "category": "Lighting",
+      "status": "nested-label",
+      "evidence": "Contains original Enscape.PointLight definitions."
+    },
+    "10754763": {
+      "name": "Studio storage shelves",
+      "category": "Furniture",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "10964741": {
+      "name": "Cups assembly A",
+      "category": "Fittings",
+      "status": "nested-label",
+      "evidence": "Contains six named Cup 015 definitions."
+    },
+    "11002145": {
+      "name": "Cups assembly B",
+      "category": "Fittings",
+      "status": "nested-label",
+      "evidence": "Contains six named Cup 015 definitions."
+    },
+    "11022805": {
+      "name": "Changing room wall panel",
+      "category": "Room geometry",
+      "status": "suggested",
+      "evidence": "Provisional label inferred from component location, display geometry and material labels; requires owner confirmation."
+    },
+    "10898162": {
+      "name": "Studio model element 190",
+      "category": "Room geometry",
+      "status": "unresolved",
+      "evidence": "Location-based navigation label only. Object purpose is not established by its anonymous SketchUp name."
+    },
+    "10722483": {
+      "name": "Keep It Easy sign",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "loose-room": {
+      "name": "Loose room geometry",
+      "category": "Room geometry",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name."
+    },
+    "11022592": {
+      "name": "PINTU 6 YA",
+      "category": "Room geometry",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name."
+    },
+    "3144650": {
+      "name": "Railing assembly",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10749420": {
+      "name": "The Vault sign",
+      "category": "Fittings",
+      "status": "source-label",
+      "evidence": "Readable form of the original SketchUp definition name; model identity is retained."
+    },
+    "10704034": {
+      "name": "Ceiling spotlight assembly",
+      "category": "Lighting",
+      "status": "nested-label",
+      "evidence": "Contains original Enscape.SpotLight definitions."
+    }
+  },
+  "zones": [
+    {
+      "id": "studio",
+      "name": "Training studio",
+      "rectangles": [
+        [
+          40.8,
+          -1.3,
+          46.82,
+          17.5
+        ]
+      ],
+      "evidence": "Original STUDIO, STUDIO 3 and PROPS WALL cameras; equipment placements and partition positions."
+    },
+    {
+      "id": "changing",
+      "name": "Lockers & changing",
+      "rectangles": [
+        [
+          46.82,
+          2.8,
+          51.92,
+          12.35
+        ]
+      ],
+      "evidence": "Original LOCKER and MISC SPACE cameras; wood lockers and central partition positions."
+    },
+    {
+      "id": "lounge",
+      "name": "Coffee & lounge",
+      "rectangles": [
+        [
+          46.82,
+          12.35,
+          51.92,
+          17.5
+        ]
+      ],
+      "evidence": "Original COFFEE LOUNGE and ELOUNGE AREA cameras; coffee maker and lounge sofa positions."
+    },
+    {
+      "id": "reception",
+      "name": "Reception",
+      "rectangles": [
+        [
+          51.92,
+          11.25,
+          55.83,
+          17.5
+        ]
+      ],
+      "evidence": "Original RECEPTION 1–4 cameras; reception furniture and sign positions."
+    },
+    {
+      "id": "circulation",
+      "name": "Entrance & circulation",
+      "rectangles": [
+        [
+          51.92,
+          -1.3,
+          57.96,
+          11.25
+        ],
+        [
+          55.83,
+          11.25,
+          57.96,
+          17.5
+        ],
+        [
+          46.82,
+          -1.3,
+          51.92,
+          2.8
+        ]
+      ],
+      "evidence": "Remaining entrance, stair/railing and circulation locations in the displayed room."
+    }
+  ],
+  "views": [
+    {
+      "id": "reception-1",
+      "name": "Reception 1",
+      "zone_id": "reception",
+      "source_camera_name": "RECEPTION 1",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        54.15165328979492,
+        11.889535903930664,
+        1.3524678945541382
+      ],
+      "target_m": [
+        52.17122520664406,
+        17.0692812951746,
+        1.2887484806939014
+      ],
+      "fov": 65.87843090955892
+    },
+    {
+      "id": "reception-2",
+      "name": "Reception 2",
+      "zone_id": "reception",
+      "source_camera_name": "RECEPTION 2",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        52.87236404418946,
+        11.839387893676758,
+        1.2638747692108154
+      ],
+      "target_m": [
+        55.448963636799526,
+        16.608102415950636,
+        1.1585191556117471
+      ],
+      "fov": 65.87843090955892
+    },
+    {
+      "id": "reception-3",
+      "name": "Reception 3",
+      "zone_id": "reception",
+      "source_camera_name": "RECEPTION 3",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        50.95315170288086,
+        12.73775577545166,
+        1.2963217496871948
+      ],
+      "target_m": [
+        55.73061689950466,
+        14.928907082525217,
+        1.3459644312218346
+      ],
+      "fov": 65.87843090955892
+    },
+    {
+      "id": "reception-4",
+      "name": "Reception 4",
+      "zone_id": "reception",
+      "source_camera_name": "RECEPTION 4",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        54.65940475463867,
+        16.068052291870117,
+        0.927230954170227
+      ],
+      "target_m": [
+        54.43688552388661,
+        10.374583944060584,
+        0.9700008351275995
+      ],
+      "fov": 49.63237843038757
+    },
+    {
+      "id": "reception-rack",
+      "name": "Reception rack",
+      "zone_id": "reception",
+      "source_camera_name": "RECEPTION SHOW RACK",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        54.99990081787109,
+        15.005306243896484,
+        0.7360094785690308
+      ],
+      "target_m": [
+        50.83119113674642,
+        11.119072036560379,
+        0.8970791350576347
+      ],
+      "fov": 49.63237843038757
+    },
+    {
+      "id": "lounge-seating",
+      "name": "Lounge seating",
+      "zone_id": "lounge",
+      "source_camera_name": "ELOUNGE AREA",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        54.330387115478516,
+        12.793346405029297,
+        1.1982183456420898
+      ],
+      "target_m": [
+        48.76285968727916,
+        12.418100221375981,
+        1.0227399324167123
+      ],
+      "fov": 49.63237843038757
+    },
+    {
+      "id": "coffee-lounge",
+      "name": "Coffee lounge",
+      "zone_id": "lounge",
+      "source_camera_name": "COFFEE LOUNGE",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        47.55455780029297,
+        10.291463851928711,
+        1.2562583684921265
+      ],
+      "target_m": [
+        49.93168859177402,
+        14.537138006280163,
+        1.427039882487633
+      ],
+      "fov": 49.63237843038757
+    },
+    {
+      "id": "reception-lounge",
+      "name": "Reception and lounge",
+      "zone_id": "all",
+      "source_camera_name": "OVERALL RECEPTIONA ANF LOUNGE",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        47.25060272216797,
+        11.99594783782959,
+        0.9759581089019775
+      ],
+      "target_m": [
+        50.804283812470096,
+        15.337647685053069,
+        0.9475986583417082
+      ],
+      "fov": 49.63237843038757
+    },
+    {
+      "id": "studio",
+      "name": "Studio",
+      "zone_id": "studio",
+      "source_camera_name": "STUDIO",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        42.787574768066406,
+        4.617025375366211,
+        1.3305997848510742
+      ],
+      "target_m": [
+        44.98047835277994,
+        8.323989655065388,
+        1.294333218391791
+      ],
+      "fov": 49.63237843038757
+    },
+    {
+      "id": "props-wall",
+      "name": "Studio props wall",
+      "zone_id": "studio",
+      "source_camera_name": "PROPS WALL",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        42.22663116455078,
+        6.511536121368408,
+        1.3823268413543701
+      ],
+      "target_m": [
+        43.659966432656695,
+        2.4839358915208525,
+        1.4278121563985608
+      ],
+      "fov": 49.63237843038757
+    },
+    {
+      "id": "studio-reverse",
+      "name": "Studio reverse",
+      "zone_id": "studio",
+      "source_camera_name": "STUDIO 3",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        42.399444580078125,
+        11.882061958312988,
+        1.9801076650619505
+      ],
+      "target_m": [
+        43.4918258950728,
+        7.631909834339964,
+        1.566488008621996
+      ],
+      "fov": 49.63237843038757
+    },
+    {
+      "id": "shared-space",
+      "name": "Shared space",
+      "zone_id": "changing",
+      "source_camera_name": "MISC SPACE",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        48.1486701965332,
+        15.52827262878418,
+        1.2883278131484985
+      ],
+      "target_m": [
+        48.20466141128531,
+        10.46845115261254,
+        1.365050847290066
+      ],
+      "fov": 49.63237843038757
+    },
+    {
+      "id": "lockers",
+      "name": "Lockers",
+      "zone_id": "changing",
+      "source_camera_name": "LOCKER",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        47.08673858642578,
+        11.815677642822266,
+        1.484674334526062
+      ],
+      "target_m": [
+        48.67871942089989,
+        7.226835036020669,
+        1.491874286914304
+      ],
+      "fov": 49.63237843038757
+    },
+    {
+      "id": "from-lounge",
+      "name": "View from lounge",
+      "zone_id": "lounge",
+      "source_camera_name": "VIEW FROM LOUNGE",
+      "source_coordinate_unit": "inch",
+      "eye_m": [
+        48.73297882080078,
+        16.995315551757812,
+        1.336500644683838
+      ],
+      "target_m": [
+        48.11442393307148,
+        11.869746699186669,
+        1.3716557677176058
+      ],
+      "fov": 49.63237843038757
+    }
+  ]
+}

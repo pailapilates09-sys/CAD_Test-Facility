@@ -1,3 +1,4 @@
+import {annotateRoomModel} from './room-navigation.js';
 // One source model and stable item IDs for the plan, 3D view and item schedule.
 export const IDENTITY=[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
 export function multiply(a,b){return Array.from({length:16},(_,i)=>{const r=i%4,c=Math.floor(i/4);return [0,1,2,3].reduce((s,k)=>s+a[k*4+r]*b[c*4+k],0)})}
@@ -14,7 +15,7 @@ export function categoryFor(name){
  return 'Room geometry';
 }
 const validMatrix=m=>Array.isArray(m)&&m.length===16&&m.every(Number.isFinite);
-export function buildRoomModel(scene){
+export function buildRoomModel(scene,navigation){
  if(scene.schema_version!=='paila-room-1.0'||scene.units!=='m'||!Array.isArray(scene.definitions)||!Array.isArray(scene.root?.children))throw Error('Expected a room scene in metres');
  const definitions=new Map(),items=new Map(),objects=[],markers=[],bounds=emptyBounds();let triangles=0;
  for(const d of scene.definitions){if(definitions.has(d.id))throw Error('Duplicate definition '+d.id);definitions.set(d.id,d);
@@ -55,10 +56,11 @@ export function buildRoomModel(scene){
   for(const o of item.occurrences)if(!o.bounds.min.every(Number.isFinite)){markers.push({itemId:item.id,point:o.origin,occurrenceId:o.id});extend(item.bounds,o.origin);extend(bounds,o.origin)}
   return item;
  }).sort((a,b)=>a.category.localeCompare(b.category)||a.name.localeCompare(b.name,undefined,{numeric:true}));
- return {items:rows,objects,markers,bounds,triangles,source:scene.source};
+ const model={items:rows,objects,markers,bounds,triangles,source:scene.source};
+ return navigation?annotateRoomModel(model,navigation,definitions):model;
 }
 export function formatDimensions(item){return item.sizeRanges.every(Boolean)?item.sizeRanges.map(([a,b])=>{const v=n=>n.toFixed(2);return Math.abs(b-a)<.015?v(b):v(a)+'–'+v(b)}).join(' × '):'—'}
-export function matchingItems(items,query){const q=query.trim().toLocaleLowerCase();return items.filter(i=>!q||[i.name,i.category,...i.finishes].join(' ').toLocaleLowerCase().includes(q)).map(i=>i.id)}
+export function matchingItems(items,query){const q=query.trim().toLocaleLowerCase();return items.filter(i=>!q||[i.name,i.sourceName,i.category,...(i.searchNames??[]),...i.finishes].join(' ').toLocaleLowerCase().includes(q)).map(i=>i.id)}
 export function createSelection(itemIds){const valid=new Set(itemIds);let selectedId=null,isolated=false;return {
  get selectedId(){return selectedId},get isolated(){return isolated},
  select(id){if(id!==null&&!valid.has(id))return false;selectedId=id;if(id===null)isolated=false;return true},
