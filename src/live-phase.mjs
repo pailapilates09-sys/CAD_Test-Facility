@@ -1,20 +1,20 @@
 export const livePhase = {
-  "phase": "333",
-  "title": "Run17 complete — 14 checkpoints through CP316",
+  "phase": "347",
+  "title": "Run18 complete — 14 checkpoints through CP330",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-22T00:18:51.073Z",
-  "checkpoint": "MSCH-CORPUS-CP316",
+  "completedAt": "2026-10-22T02:49:24.002Z",
+  "checkpoint": "MSCH-CORPUS-CP330",
   "before": {
-    "rows": 3848,
-    "folders": 863,
-    "files": 2985,
-    "pending": 523
-  },
-  "after": {
     "rows": 3930,
     "folders": 869,
     "files": 3061,
     "pending": 515
+  },
+  "after": {
+    "rows": 4136,
+    "folders": 989,
+    "files": 3147,
+    "pending": 621
   },
   "completedBatches": 14,
   "scope": "User-authorized maximum 60-minute four-lane continuation; 14 MSCH metadata checkpoints. Existing source-stage gates retained.",
@@ -26,24 +26,24 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 30.3275,
+    "sourceElapsedMinutes": 33.464283333333334,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 307,
-  "mainCursor": 307,
-  "nextBatch": "B317",
-  "nextTarget": "Index",
-  "newRows": 82,
-  "newFolders": 6,
-  "newFiles": 76,
-  "newKnownBytes": 3388891,
-  "sessionStartedAt": "2026-10-21T23:44:09.783Z",
-  "sessionElapsedMinutes": 34.68816666666667,
-  "knownBytes": 49187678621,
+  "localHighWater": 321,
+  "mainCursor": 321,
+  "nextBatch": "B331",
+  "nextTarget": "Lib",
+  "newRows": 206,
+  "newFolders": 120,
+  "newFiles": 86,
+  "newKnownBytes": 103997799,
+  "sessionStartedAt": "2026-10-22T02:11:42.790Z",
+  "sessionElapsedMinutes": 37.68686666666667,
+  "knownBytes": 49291676420,
   "sessionReport": {
-    "startedAt": "2026-10-21T23:44:09.783Z",
-    "sourceStoppedAt": "2026-10-22T00:14:29.433Z",
+    "startedAt": "2026-10-22T02:11:42.790Z",
+    "sourceStoppedAt": "2026-10-22T02:45:10.647Z",
     "milestones": 14,
     "advancedLanes": 1,
     "MSCS": {
@@ -73,17 +73,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP316 /B316",
-      "beforeRows": 3848,
-      "afterRows": 3930,
-      "addedFolders": 6,
-      "addedFiles": 76,
-      "addedMetadataBytes": 3388891,
-      "pending": 515,
-      "local": 307,
-      "mainCursor": 307,
-      "notice": "N261 ACKED",
-      "next": "B317"
+      "checkpoint": "CP330 /B330",
+      "beforeRows": 3930,
+      "afterRows": 4136,
+      "addedFolders": 120,
+      "addedFiles": 86,
+      "addedMetadataBytes": 103997799,
+      "pending": 621,
+      "local": 321,
+      "mainCursor": 321,
+      "notice": "N275 ACKED",
+      "next": "B331"
     },
     "AEC": {
       "status": "TERMINAL_RECONCILIATION_REQUIRED",
@@ -114,10 +114,10 @@ export const livePhase = {
       "LSA historical 2 files /9,304 bytes unresolved.",
       "AEC G075 checkpoint readable; G076 terminal not recovered.",
       "MSCS oversized/native hashing-policy gate.",
-      "MSCH 515 FIFO folders; source-content extraction remains."
+      "MSCH 621 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 308,
+  "scannedFolders": 322,
   "phases": [
     {
       "phase": "01",
@@ -2476,6 +2476,104 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B316 ImportLog: 1 metadata records",
       "stop": "MSCH-CORPUS-CP316 +Local/Main307/307 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "334",
+      "lane": "MSCH /Local /Main",
+      "work": "B317 Index: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP317 +Local/Main308/308 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "335",
+      "lane": "MSCH /Local /Main",
+      "work": "B318 Include: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP318 +Local/Main309/309 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "336",
+      "lane": "MSCH /Local /Main",
+      "work": "B319 Lib: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP319 +Local/Main310/310 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "337",
+      "lane": "MSCH /Local /Main",
+      "work": "B320 Scripts: 31 metadata records",
+      "stop": "MSCH-CORPUS-CP320 +Local/Main311/311 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "338",
+      "lane": "MSCH /Local /Main",
+      "work": "B321 share: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP321 +Local/Main312/312 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "339",
+      "lane": "MSCH /Local /Main",
+      "work": "B322 hooks: 14 metadata records",
+      "stop": "MSCH-CORPUS-CP322 +Local/Main313/313 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "340",
+      "lane": "MSCH /Local /Main",
+      "work": "B323 info: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP323 +Local/Main314/314 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "341",
+      "lane": "MSCH /Local /Main",
+      "work": "B324 logs: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP324 +Local/Main315/315 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "342",
+      "lane": "MSCH /Local /Main",
+      "work": "B325 objects: 109 metadata records",
+      "stop": "MSCH-CORPUS-CP325 +Local/Main316/316 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "343",
+      "lane": "MSCH /Local /Main",
+      "work": "B326 refs: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP326 +Local/Main317/317 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "344",
+      "lane": "MSCH /Local /Main",
+      "work": "B327 Images for hydropower: 37 metadata records",
+      "stop": "MSCH-CORPUS-CP327 +Local/Main318/318 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "345",
+      "lane": "MSCH /Local /Main",
+      "work": "B328 Images from library: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP328 +Local/Main319/319 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "346",
+      "lane": "MSCH /Local /Main",
+      "work": "B329 Images from papers: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP329 +Local/Main320/320 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "347",
+      "lane": "MSCH /Local /Main",
+      "work": "B330 Include: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP330 +Local/Main321/321 acknowledged by final reconciliation",
       "status": "Complete - stopped"
     }
   ]
