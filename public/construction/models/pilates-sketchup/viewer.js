@@ -2,6 +2,7 @@ import * as THREE from '../../../vendor/three.module.min.js';
 import {OrbitControls} from '../../../vendor/OrbitControls.js';
 import {buildRoomModel,matchingItems,createSelection,formatDimensions} from './room-model.js';
 import {roomSlice,boundsForZone,cameraForView,navigationFromSearch} from './room-navigation.js';
+import {connectBoq} from './boq-controller.js?source=BOQ_SOURCE_REVISION';
 import {createThreeAdapter} from './three-model.js';
 const {createModelBatches,updateModelBatches,pickedItem}=createThreeAdapter(THREE);
 const $=id=>document.getElementById(id),canvas=$('plan'),ctx=canvas.getContext('2d'),host=$('three-view');
@@ -9,6 +10,8 @@ const cache=document.createElement('canvas'),cacheCtx=cache.getContext('2d');
 let model,state,matching=new Set(),renderer,scene,camera,controls,group,instanceGroups=[],dirty=true,visibleObjects=[];
 let cacheMap,plan={zoom:1,x:0,y:0},viewMap,framePending=false,planTriangles=[],lightingMarkers=[];
 let navigation,activeSlice,zoneId='all',viewId='overview';
+let boqController;
+const boqContext=()=>({zoneId,selectedId:state.selectedId,visibleItemIds:new Set(activeSlice.items.filter(i=>visible(i.id)).map(i=>i.id)),visibleOccurrenceIds:new Set(activeSlice.items.filter(i=>visible(i.id)).flatMap(i=>i.occurrences.map(o=>o.id))),sliceItems:activeSlice.items,modelSearch:$('item-search').value,isolated:state.isolated});
 const PLAN_HEIGHT=1.5;
 const css=name=>getComputedStyle(document.querySelector('.room-workspace')).getPropertyValue(name).trim();
 function itemColor(item){return css('--room-'+({'Room geometry':'architecture','Plants':'plants','Lighting':'lighting','Furniture':'furniture','Equipment':'equipment','Fittings':'fittings'}[item.category]))}
@@ -30,6 +33,7 @@ function updateUI(rebuildPlan=false){
  const count=activeSlice.items.filter(i=>visible(i.id)).length,placements=activeSlice.items.filter(i=>visible(i.id)).reduce((n,i)=>n+i.quantity,0);$('visible-count').textContent=`${count} / ${model.items.length} types · ${placements} placements`;
  $('plan-area').textContent=area+' · m';$('no-items').hidden=count!==0;visibleObjects=model.objects.filter(o=>visible(o.itemId,o.occurrenceId));
  update3D();if(rebuildPlan)buildPlanCache();else drawPlan();dirty=true;
+ boqController?.update(boqContext());
 }
 function update3D(){
  if(!renderer||!camera||!controls)return;
@@ -178,6 +182,7 @@ async function start(){
   init3D();preparePlan();buildPlanCache();$('plan-empty').hidden=true;$('room-zone').disabled=$('saved-view').disabled=false;
   const initial=navigationFromSearch(location.search,navigation);navigate(initial.viewId,initial.zoneId);
   document.documentElement.dataset.roomReady='true';
+  connectBoq({model,onSelect:(id,targetZone)=>{if(targetZone){if(targetZone!==zoneId)navigate('zone-overview',targetZone);if(!visible(id)){$('item-search').value='';state.isolate(false);refreshMatching();updateUI(true)}}else if(!visible(id))navigate('overview','all');updateSelection(id,'boq')}}).then(controller=>{boqController=controller;controller.update(boqContext())}).catch(error=>{$('boq-data-status').textContent='Published BOQ rows remain visible. Linked filtering could not load; reload to try again.';console.warn('BOQ link controls unavailable',error)});
  }catch(error){$('plan-empty').textContent='The room could not load. Reload the page to try again.';$('model-status').textContent='Model loading failed: '+error.message;console.error(error)}
 }
 start();

@@ -1,12 +1,16 @@
 # CAD Test Facility
 
+## Current workspace milestone M7 — 22 October 2026
+
+[M7 release](https://github.com/pailapilates09-sys/CAD_Test-Facility/releases/tag/workspace-m7-2026-10-22) preserves the studio navigation before model/BOQ linking. The linked materials table continues on `work/model-boq-after-m7`; merge and successful Pages deployment publish the changes. Rollback can restore the tagged files in a new commit without rewriting history.
+
 ## Workspace milestone M5 — 21 October 2026
 
 [Release](https://github.com/pailapilates09-sys/CAD_Test-Facility/releases/tag/workspace-m5-2026-10-21) · [Manifest](public/milestones/workspace-m5-2026-10-21.json) · [Release notes](public/milestones/WORKSPACE-M5-2026-10-21.md).
 
 The native Pilates extraction and the current website are frozen by `workspace-m5-2026-10-21`. Continue future changes on `work/after-workspace-m5`, created from that tag. The Pages workflow deploys `main`; edits on the work branch require a merge and successful checks/deployment before publication. A recovery can restore the tag's files in a new commit/PR and redeploy without moving existing tags or rewriting history.
 
-The unchanged SKP and full supported JSONL/SQL/SQLite archives live in [Drive](https://drive.google.com/drive/folders/1Asat9JD6oCrr2KQI-npg1AmGc4Wml1HF) (the native original is in its preserved parent folder). GitHub versions the copied optimized studio scene, source-linked navigation overlay, inspection JSON/CSV, thumbnails, legacy Group#2 scene and frontend/extraction scripts. Actions copies `public/` into `dist/`, generates the linked views and deploys the static artifact. The viewer fetches `./studio-room.scene.json` and `./room-navigation.json` from Pages. Drive links provide archive downloads; there is no live Drive API connection or automatic sync. Future extraction changes require an explicit update, commit and deployment. Milestone M7 preserves the studio navigation baseline before model-to-BOQ linking; full recovery also requires retaining the separate Drive archives.
+The unchanged SKP and full supported JSONL/SQL/SQLite archives live in [Drive](https://drive.google.com/drive/folders/1Asat9JD6oCrr2KQI-npg1AmGc4Wml1HF) (the native original is in its preserved parent folder). GitHub versions the copied optimized studio scene, source-linked navigation overlay, inspection JSON/CSV, thumbnails, legacy Group#2 scene and frontend/extraction scripts. Actions copies `public/` into `dist/`, generates the linked views and deploys the static artifact. The viewer fetches `./studio-room.scene.json` and `./room-navigation.json` from Pages. Its second table also reads `./model-boq-links.json` and the same generated v10 material projection used by v11. Only ID relationships and notes are stored in the mapping; shared quantities, rates and calculations stay linked to the estimate source. Drive links provide archive downloads; there is no live Drive API connection or automatic sync. Future extraction changes require an explicit update, commit and deployment. Milestone M7 preserves the studio navigation baseline before model-to-BOQ linking; full recovery also requires retaining the separate Drive archives.
 
 ## Visual extraction dashboard
 
@@ -26,7 +30,7 @@ Preservation/rollback baseline: commit `bbf90547c6e11b2754415e234fc310ea42bf62c8
 
 - `/`: workspace home with five sibling sections and one shared navigation register.
 - `/construction/`: column formwork CAD, with its 3D assembly, five drawing sheets, quantities and downloads at `/cad/`. Geometry, vendor assets and the inch-only PDF are preserved.
-- `/construction/models/pilates-sketchup/`: Pilates SketchUp is a primary navigation section. Its existing URL shows the main room in linked 2D/3D views and a four-column item schedule, derived from one optimized source scene. Five approximate area filters, 14 native camera presets and readable source-linked labels reuse the same item identities. Inspection reports, saved thumbnails, the earlier Group#2 partition and complete Drive archives remain preserved separately.
+- `/construction/models/pilates-sketchup/`: Pilates SketchUp is a primary navigation section. Its existing URL shows the main room in linked 2D/3D views and a four-column item schedule, derived from one optimized source scene. A second five-column table joins proposed model associations to all 51 v11 works and 261 material lines, using the shared quantities and rates. Five approximate area filters, 14 native camera presets and readable source-linked labels reuse the same item identities. Inspection reports, saved thumbnails, the earlier Group#2 partition and complete Drive archives remain preserved separately.
 - `/construction/estimates/pilates-astra-2026-10-15/milestone.html`: Versions + milestone owns the estimate view index, including v8–v13. Duplicate shortcut cards have been removed from Construction; the estimate pages and their original URLs remain intact.
 - `/progress/`: four-project extraction checkpoints, roadmap, hierarchy, gaps and historical records. The former Construction status table described website deliverables, not physical work on site, and has been removed from this page. Its generated JSON endpoint remains available for existing data links.
 - `/memory-posters/`: the learning wall and reusable prompts.

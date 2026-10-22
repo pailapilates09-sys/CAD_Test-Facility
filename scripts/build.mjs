@@ -19,6 +19,8 @@ import {checkSite} from './check-site.mjs';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {renderModelItems,renderRoomScope,renderRoomNavigation} from './render-model-workspace.mjs';
+import {buildRoomModel} from '../public/construction/models/pilates-sketchup/room-model.js';
+import {renderModelBoq} from './render-model-boq.mjs';
 const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
 await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
 await cp(new URL('public/',root),dist,{recursive:true});
@@ -50,8 +52,10 @@ const [versions,model,debt]=await Promise.all([
 const modelPath='construction/models/pilates-sketchup/';
 const roomScene=await readJSON('public/'+modelPath+'studio-room.scene.json');
 const roomNavigation=await readJSON('public/'+modelPath+'room-navigation.json');
+const modelBoqLinks=await readJSON('public/'+modelPath+'model-boq-links.json'),sharedContractorData=contractorData(views);
 const modelPage=new URL(modelPath+'index.html',dist);
-await writeFile(modelPage,(await readFile(modelPage,'utf8')).replace('<!-- ROOM_ITEMS -->',renderModelItems(roomScene,roomNavigation)).replace('<!-- ROOM_NAVIGATION -->',renderRoomNavigation(roomNavigation)).replace('<!-- ROOM_SCOPE -->',renderRoomScope(roomScene)));
+await writeFile(modelPage,(await readFile(modelPage,'utf8')).replace('<head>','<head><meta name="estimate-source-revision" content="'+sourceRevision+'">').replace('<!-- ROOM_ITEMS -->',renderModelItems(roomScene,roomNavigation)).replace('<!-- ROOM_NAVIGATION -->',renderRoomNavigation(roomNavigation)).replace('<!-- ROOM_BOQ -->',renderModelBoq(buildRoomModel(roomScene,roomNavigation),sharedContractorData,modelBoqLinks)).replace('<!-- ROOM_SCOPE -->',renderRoomScope(roomScene)));
+for(const name of ['viewer.js','boq-model.js','boq-controller.js']){const file=new URL(modelPath+name,dist);await writeFile(file,(await readFile(file,'utf8')).replaceAll('BOQ_SOURCE_REVISION',sourceRevision));}
 await cp(new URL('tools/sketchup/extract-vff-stream.py',root),new URL(modelPath+'extract-vff-stream.py',dist));
 const procurement=await readJSON('public/'+estimatePath+'v12/procurement.json');
 const decisionHash=createHash('sha256').update(sourceRevision).update(JSON.stringify(procurement));
@@ -112,7 +116,7 @@ const v8Script=new URL('v8.js',v8Dir);
 await writeFile(v8Script,(await readFile(v8Script,'utf8')).replaceAll('revision=quantity-2','source='+sourceRevision).replace("'./quantity-models.js'","'./quantity-models.js?source="+sourceRevision+"'"));
 const quantityScript=new URL('quantity-models.js',v8Dir);
 await writeFile(quantityScript,(await readFile(quantityScript,'utf8')).replace("'./calculations.js'","'./calculations.js?source="+sourceRevision+"'"));
-const v10Data=contractorData(views),v10Dir=new URL(estimatePath+'v10/',dist);
+const v10Data=sharedContractorData,v10Dir=new URL(estimatePath+'v10/',dist);
 await writeFile(new URL('contractor-data.json',v10Dir),JSON.stringify({...v10Data,derivation:{source:'../v9/register.json',revision:sourceRevision,generated:true}},null,2)+'\n');
 for(const work of v10Data.items)await writeFile(new URL(work.id+'.html',v10Dir),contractorPage(work,v10Data));
 for(const name of ['v10.js','contractor-model.js']){
