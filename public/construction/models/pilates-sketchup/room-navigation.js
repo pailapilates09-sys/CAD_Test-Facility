@@ -20,9 +20,11 @@ export function validateNavigation(n,model){
  }
  return n;
 }
-export function annotateRoomModel(model,n){
+export function annotateRoomModel(model,n,definitions){
  validateNavigation(n,model);
- for(const item of model.items){const label=n.labels[item.id];if(label){item.name=label.name;item.category=label.category;item.labelStatus=label.status;item.labelEvidence=label.evidence}item.searchNames=[item.sourceName,...(label?.aliases??[])];}
+ const nestedNames=new Map(model.items.map(i=>[i.id,new Set()]));
+ for(const object of model.objects){const name=definitions?.get(object.definitionId)?.name;if(name)nestedNames.get(object.itemId).add(name)}
+ for(const item of model.items){const label=n.labels[item.id];if(label){item.name=label.name;item.category=label.category;item.labelStatus=label.status;item.labelEvidence=label.evidence}item.searchNames=[...new Set([...nestedNames.get(item.id),...(label?.aliases??[])])].filter(name=>name!==item.sourceName);}
  model.items.sort((a,b)=>a.category.localeCompare(b.category)||a.name.localeCompare(b.name,undefined,{numeric:true}));
  model.navigation=n;return model;
 }

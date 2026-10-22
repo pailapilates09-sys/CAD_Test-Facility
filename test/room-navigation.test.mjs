@@ -16,6 +16,7 @@ test('navigation labels preserve native identity, source-name search and model q
  assert.equal(model.items.length,106);assert.equal(Object.keys(nav.labels).length,106);
  for(const item of model.items){const source=byId.get(item.id);assert.equal(item.sourceName,source.sourceName);assert.equal(item.quantity,source.quantity);assert.deepEqual(item.bounds,source.bounds);assert.deepEqual(item.occurrences,source.occurrences);assert.ok(nav.labels[item.id].evidence)}
  assert.deepEqual(matchingItems(model.items,'Group#67'),['2039197']);assert.deepEqual(matchingItems(model.items,'equipment assembly'),['2039197']);
+ assert.deepEqual(matchingItems(model.items,'Clinical Reformer'),['2039197']);
  assert.deepEqual(matchingItems(model.items,'sofa+003'),['161587']);assert.deepEqual(matchingItems(model.items,'lounge sofa'),['161587']);
  assert.ok(model.items.some(i=>i.labelStatus==='unresolved'));assert.ok(model.items.some(i=>i.labelStatus==='suggested'));
  const html=renderModelItems(scene,nav);assert.ok(html.includes('SketchUp: Group#67'));assert.ok(html.includes('suggested name'));assert.ok(html.includes('name to confirm'));assert.equal((html.match(/<tr /g)||[]).length,106);

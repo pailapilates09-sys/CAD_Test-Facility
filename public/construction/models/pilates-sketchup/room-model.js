@@ -57,7 +57,7 @@ export function buildRoomModel(scene,navigation){
   return item;
  }).sort((a,b)=>a.category.localeCompare(b.category)||a.name.localeCompare(b.name,undefined,{numeric:true}));
  const model={items:rows,objects,markers,bounds,triangles,source:scene.source};
- return navigation?annotateRoomModel(model,navigation):model;
+ return navigation?annotateRoomModel(model,navigation,definitions):model;
 }
 export function formatDimensions(item){return item.sizeRanges.every(Boolean)?item.sizeRanges.map(([a,b])=>{const v=n=>n.toFixed(2);return Math.abs(b-a)<.015?v(b):v(a)+'–'+v(b)}).join(' × '):'—'}
 export function matchingItems(items,query){const q=query.trim().toLocaleLowerCase();return items.filter(i=>!q||[i.name,i.sourceName,i.category,...(i.searchNames??[]),...i.finishes].join(' ').toLocaleLowerCase().includes(q)).map(i=>i.id)}
