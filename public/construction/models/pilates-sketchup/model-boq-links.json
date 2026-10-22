@@ -1,0 +1,374 @@
+{
+  "schema_version": "paila-model-boq-links-1.0",
+  "source_sha256": "ad5c8a00a563d4336a5ea4bdd72907aba7e427f0c842e21196386d944af4b0ec",
+  "boq_register": "../../estimates/pilates-astra-2026-10-15/v9/register.json",
+  "boq_view": "../../estimates/pilates-astra-2026-10-15/v11/",
+  "policy": "Proposed work-level associations only. IDs and relationship notes are stored here; work descriptions, material specifications, quantities, rates and amounts are derived from the same shared data used by v11. No model count or display extent replaces a BOQ/material quantity.",
+  "boq_areas_by_zone": {
+    "studio": [
+      "studio"
+    ],
+    "changing": [
+      "locker-space",
+      "changing-room"
+    ],
+    "lounge": [
+      "coffee-lounge"
+    ],
+    "reception": [
+      "reception"
+    ],
+    "circulation": [
+      "washroom"
+    ]
+  },
+  "work_links": {
+    "reception-001": {
+      "model_ids": [
+        "3120236",
+        "3144994"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Possible fitted-storage parts of the reception furniture assemblies; curved cupboard identity and specification need confirmation."
+    },
+    "reception-002": {
+      "model_ids": [
+        "3120236",
+        "3144994"
+      ],
+      "kind": "surface_context",
+      "note": "Marble appearance occurs in these reception assemblies. The BOQ slab surface and area have not been isolated."
+    },
+    "reception-003": {
+      "model_ids": [
+        "3120236"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Possible reception-desk assembly. Its WPC specification is not established by the model appearance labels."
+    },
+    "reception-004": {
+      "model_ids": [
+        "9088293"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Rack-like assembly near the lobby. Shoe-rack identity and BOQ area assignment are unconfirmed."
+    },
+    "reception-005": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No identifiable rattan-board counterpart is established in the displayed model. This work remains held."
+    },
+    "reception-006": {
+      "model_ids": [
+        "9315832"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Explicit Glass_door definition. The BOQ work quantity remains zero; the displayed model does not authorize a replacement quantity."
+    },
+    "reception-007": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No explicit air-conditioning unit has been identified among the displayed model item types. Keep the BOQ installation and material checklist without inferring a model counterpart."
+    },
+    "reception-008": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No explicit strip-light placement for this BOQ area has been established. The named linear-light component is in the studio and is not assigned across areas automatically."
+    },
+    "reception-009": {
+      "model_ids": [
+        "10719818"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Named ceiling-light placements in the approximate reception area. Model fixture equivalence and the BOQ count need checking."
+    },
+    "reception-010": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No identifiable counterpart has been established in the displayed model. Retain the v11 scope and material records."
+    },
+    "reception-011": {
+      "model_ids": [
+        "136690"
+      ],
+      "kind": "surface_context",
+      "note": "Room-shell context only. Paint layers, substrate and measured finish area are not identified."
+    },
+    "reception-012": {
+      "model_ids": [
+        "9343377",
+        "4623163"
+      ],
+      "kind": "surface_context",
+      "note": "Ceiling context only. Gypsum boards, framing and lighting points are not separately quantified in the model."
+    },
+    "reception-013": {
+      "model_ids": [
+        "3148222"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Contains a named studio-brand sign definition. Board count, wording and electrical specification require confirmation."
+    },
+    "reception-014": {
+      "model_ids": [
+        "9343377"
+      ],
+      "kind": "surface_context",
+      "note": "Ceiling context only; the five quoted points are not inferred from an assembly count."
+    },
+    "reception-015": {
+      "model_ids": [
+        "3151071"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Possible reception furniture/couch assembly. The BOQ source unit is unspecified; unit equivalence is unconfirmed."
+    },
+    "reception-016": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "The tea-table placement is retained in the source archive but excluded from the displayed model because its extracted transform needs review. This work remains held."
+    },
+    "coffee-lounge-001": {
+      "model_ids": [
+        "161587"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Named sofa in the lounge. Construction, upholstery and supplier specification require confirmation."
+    },
+    "coffee-lounge-002": {
+      "model_ids": [
+        "161693",
+        "162177",
+        "163814",
+        "3156278"
+      ],
+      "kind": "surface_context",
+      "note": "Marble appearance occurs on lounge fitted surfaces. BOQ surface allocation and measured areas are unconfirmed."
+    },
+    "coffee-lounge-003": {
+      "model_ids": [
+        "161693",
+        "3156278"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Possible coffee counter/base assemblies. The exact BOQ counter identity and construction remain unconfirmed."
+    },
+    "coffee-lounge-004": {
+      "model_ids": [
+        "161693"
+      ],
+      "kind": "surface_context",
+      "note": "Counter context only. No separate skirting run or finish takeoff has been established."
+    },
+    "coffee-lounge-005": {
+      "model_ids": [
+        "162002"
+      ],
+      "kind": "surface_context",
+      "note": "Wall-assembly context only; a PVC layer, framing specification and measured panel area are not identified."
+    },
+    "coffee-lounge-006": {
+      "model_ids": [
+        "10719818"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Named ceiling-light placements in the approximate lounge area. Model fixture equivalence and the quoted count need checking."
+    },
+    "coffee-lounge-007": {
+      "model_ids": [
+        "136690"
+      ],
+      "kind": "surface_context",
+      "note": "Room-shell context only. Finish quantities remain the existing v11 planning quantities."
+    },
+    "coffee-lounge-008": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No explicit air-conditioning unit has been identified among the displayed model item types. Keep the BOQ installation and material checklist without inferring a model counterpart."
+    },
+    "coffee-lounge-009": {
+      "model_ids": [
+        "3137716",
+        "9343377"
+      ],
+      "kind": "surface_context",
+      "note": "Lounge/ceiling context only. Board construction and material takeoff are not established by these display meshes."
+    },
+    "coffee-lounge-010": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No reliable displayed glass-table/stool counterpart has been established. The tea-table source placement remains excluded from the preview; this work remains held."
+    },
+    "coffee-lounge-011": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No explicit strip-light placement for this BOQ area has been established. The named linear-light component is in the studio and is not assigned across areas automatically."
+    },
+    "coffee-lounge-012": {
+      "model_ids": [
+        "10704300"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Named pendant in the lounge. Product type, fittings and electrical route require confirmation."
+    },
+    "coffee-lounge-013": {
+      "model_ids": [
+        "10959990"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Explicit sink definition in the coffee area. Tap, waste and plumbing materials are not separately identified in the displayed model."
+    },
+    "locker-space-001": {
+      "model_ids": [
+        "1878458"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Explicit wood-lockers assembly. Its model count is an assembly count; plywood/Formica quantities continue to use the BOQ planning model."
+    },
+    "locker-space-002": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No identifiable counterpart has been established in the displayed model. Retain the v11 scope and material records."
+    },
+    "locker-space-003": {
+      "model_ids": [
+        "1104987",
+        "1104955"
+      ],
+      "kind": "surface_context",
+      "note": "Locker/changing-area assembly context only. A PVC layer and measured panel surface are not established."
+    },
+    "locker-space-004": {
+      "model_ids": [
+        "10720851"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Named pendant placements in the lockers/changing area. Fixture specification and wiring remain unconfirmed."
+    },
+    "locker-space-005": {
+      "model_ids": [
+        "1104955"
+      ],
+      "kind": "surface_context",
+      "note": "Changing/locker enclosure context only. Putty area and substrate require confirmation."
+    },
+    "locker-space-006": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No explicit air-conditioning unit has been identified among the displayed model item types. Keep the BOQ installation and material checklist without inferring a model counterpart."
+    },
+    "locker-space-007": {
+      "model_ids": [
+        "3119779",
+        "1104987"
+      ],
+      "kind": "surface_context",
+      "note": "Soffit/ceiling context only. Curved-board geometry, framing and cutting quantities require confirmation."
+    },
+    "locker-space-008": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No explicit strip-light placement for this BOQ area has been established. The named linear-light component is in the studio and is not assigned across areas automatically."
+    },
+    "locker-space-009": {
+      "model_ids": [
+        "10749420",
+        "10743860"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Named THE VAULT and Change & Slay sign placements. Their equivalence to the quoted brand-name boards is unconfirmed."
+    },
+    "locker-space-010": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No identifiable locker-area sliding-door counterpart is established. Other named doors are not assigned here automatically; this work remains held."
+    },
+    "studio-001": {
+      "model_ids": [
+        "10754763",
+        "10754697"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Possible studio storage/surround assemblies. Cabinet-door identity, layout and specification need confirmation."
+    },
+    "studio-002": {
+      "model_ids": [
+        "3194173",
+        "3190476",
+        "3194159",
+        "3192310"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Mirror appearance is present in these studio assemblies. Wooden frame specification, BOQ surface allocation and measured mirror area are unconfirmed."
+    },
+    "studio-003": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No named sheer-curtain placement has been identified in the training-studio area. The named Curtain component is in the changing area and is not assigned here automatically."
+    },
+    "studio-004": {
+      "model_ids": [
+        "3190548",
+        "3194721"
+      ],
+      "kind": "surface_context",
+      "note": "Studio wall/partition context only. A PVC layer and framing specification are not identified."
+    },
+    "studio-005": {
+      "model_ids": [
+        "136690",
+        "3194721"
+      ],
+      "kind": "surface_context",
+      "note": "Studio wall context only. Finish area, paint system and consumption remain unverified."
+    },
+    "studio-006": {
+      "model_ids": [
+        "9310810"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Explicit linear-light placements in the studio. Model segment count is not a measured strip length or purchased reel count."
+    },
+    "studio-007": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No explicit air-conditioning unit has been identified among the displayed model item types. Keep the BOQ installation and material checklist without inferring a model counterpart."
+    },
+    "studio-008": {
+      "model_ids": [
+        "138136",
+        "3194721",
+        "3190325"
+      ],
+      "kind": "surface_context",
+      "note": "Studio partition context only. Cement-board layers, framing and an approved takeoff are not identified."
+    },
+    "changing-room-001": {
+      "model_ids": [
+        "1104923",
+        "1104955"
+      ],
+      "kind": "surface_context",
+      "note": "Changing-enclosure context only. Cement-board construction and net material quantities require confirmation."
+    },
+    "changing-room-002": {
+      "model_ids": [
+        "1136639"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Explicit Curtain placement in the approximate changing area. Fabric type, full drop, fullness and purchased length require confirmation."
+    },
+    "washroom-001": {
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "No explicit washroom decorative-mirror counterpart is established. Studio/reception mirrors are not assigned to this room automatically."
+    },
+    "washroom-002": {
+      "model_ids": [
+        "11022815"
+      ],
+      "kind": "assembly_candidate",
+      "note": "Named Painting 001 placements near the restroom-sign location. Room assignment and artwork equivalence need confirmation; the work remains held."
+    }
+  }
+}
