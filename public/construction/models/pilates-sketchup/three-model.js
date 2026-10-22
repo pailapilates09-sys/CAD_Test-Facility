@@ -8,7 +8,7 @@ function createModelBatches(model){
  for(const marker of model.markers??[]){
   const key='placement-marker';if(!groups.has(key))groups.set(key,{objects:[],architectural:false,guide:true});
   const matrix=[1,0,0,0,0,1,0,0,0,0,1,0,...marker.point,1];
-  groups.get(key).objects.push({id:marker.occurrenceId,itemId:marker.itemId,matrix,rgb:[90,125,145],mesh:{positions:[0,0,.06,.06,0,0,0,.06,0,-.06,0,0,0,-.06,0,0,0,-.06],indices:[0,1,2,0,2,3,0,3,4,0,4,1,5,2,1,5,3,2,5,4,3,5,1,4]}});
+  groups.get(key).objects.push({id:marker.occurrenceId,occurrenceId:marker.occurrenceId,itemId:marker.itemId,matrix,rgb:[90,125,145],mesh:{positions:[0,0,.06,.06,0,0,0,.06,0,-.06,0,0,0,-.06,0,0,0,-.06],indices:[0,1,2,0,2,3,0,3,4,0,4,1,5,2,1,5,3,2,5,4,3,5,1,4]}});
  }
  const batches=[];
  for(const batch of groups.values()){
@@ -22,7 +22,7 @@ function createModelBatches(model){
 function updateModelBatches(batches,{visible,selectedId,highlight,cutaway,height=1.5}){
  const matrix=new THREE.Matrix4(),color=new THREE.Color();
  for(const batch of batches){
-  batch.objects.forEach((o,i)=>{matrix.fromArray(o.matrix);if(!visible(o.itemId))matrix.scale(new THREE.Vector3(0,0,0));batch.mesh.setMatrixAt(i,matrix);
+  batch.objects.forEach((o,i)=>{matrix.fromArray(o.matrix);if(!visible(o.itemId,o.occurrenceId))matrix.scale(new THREE.Vector3(0,0,0));batch.mesh.setMatrixAt(i,matrix);
    color.setRGB(...o.rgb.map(c=>c/255),THREE.SRGBColorSpace);if(o.itemId===selectedId)color.set(highlight);batch.mesh.setColorAt(i,color);
   });batch.mesh.instanceMatrix.needsUpdate=true;batch.mesh.instanceColor.needsUpdate=true;
   batch.mesh.material.clippingPlanes=cutaway&&batch.architectural?[new THREE.Plane(new THREE.Vector3(0,0,-1),height)]:[];
@@ -30,7 +30,7 @@ function updateModelBatches(batches,{visible,selectedId,highlight,cutaway,height
  }
 }
 function pickedItem(ray,batches,{visible,cutaway,height=1.5}){
- const hit=ray.intersectObjects(batches.map(b=>b.mesh)).find(h=>{const b=h.object.userData.batch,o=b.objects[h.instanceId];return visible(o.itemId)&&(!b.architectural||!cutaway||h.point.z<=height+1e-5)});
+ const hit=ray.intersectObjects(batches.map(b=>b.mesh)).find(h=>{const b=h.object.userData.batch,o=b.objects[h.instanceId];return visible(o.itemId,o.occurrenceId)&&(!b.architectural||!cutaway||h.point.z<=height+1e-5)});
  return hit?hit.object.userData.batch.objects[hit.instanceId].itemId:null;
 }
 
