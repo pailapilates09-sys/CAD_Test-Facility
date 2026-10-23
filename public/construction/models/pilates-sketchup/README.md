@@ -1,5 +1,7 @@
 # Pilates room workspace
 
+[Layout Designer](../layout-designer/) is the sibling page for authoring independent room concepts and reusing copies of selected source components. This Pilates page continues to display the extracted original project. Further BOQ-to-model interpretation is paused at the 23 October review; existing relationships and quoted values remain unchanged.
+
 The page presents the main studio room as a linked 2D footprint projection, 3D model and four-column item schedule, followed by a five-column BOQ-work/model comparison. Each work opens an embedded original-scope, match-evidence and material panel on the same page. Selecting a model item highlights the same definition and its room placements across the views and associated BOQ works. Search, focus, isolation, plan pan/zoom and an open-wall view are available. The shared website theme, appearance settings and mascot controls are preserved.
 
 `studio-room.scene.json` derives from the checksum-verified native JSONL archive. It includes 242 native root placements and one item for loose room geometry, grouped into 106 source item types. Repeated geometry uses instanced Three.js meshes. The display mesh is reduced from 2,488,618 source triangles to 238,779 definition triangles (946,789 after visible placement expansion). These are optimized display meshes; use the original source for engineering measurements. Five invalid/non-planar source faces were omitted from display, with counts recorded in the scene metadata.

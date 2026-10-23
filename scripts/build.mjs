@@ -21,6 +21,8 @@ import {createHash} from 'node:crypto';
 import {renderModelItems,renderRoomScope,renderRoomNavigation} from './render-model-workspace.mjs';
 import {buildRoomModel} from '../public/construction/models/pilates-sketchup/room-model.js';
 import {renderModelBoq} from './render-model-boq.mjs';
+import {reusableComponents} from './layout-designer-assets.mjs';
+import {CATALOG} from '../public/construction/models/layout-designer/design-model.js';
 const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
 await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
 await cp(new URL('public/',root),dist,{recursive:true});
@@ -52,6 +54,9 @@ const [versions,model,debt]=await Promise.all([
 const modelPath='construction/models/pilates-sketchup/';
 const roomScene=await readJSON('public/'+modelPath+'studio-room.scene.json');
 const roomNavigation=await readJSON('public/'+modelPath+'room-navigation.json');
+const designerPath='construction/models/layout-designer/',designerPage=new URL(designerPath+'index.html',dist);
+await writeFile(new URL(designerPath+'reusable-components.json',dist),JSON.stringify(reusableComponents(roomScene,roomNavigation))+'\n');
+await writeFile(designerPage,(await readFile(designerPage,'utf8')).replace('<!-- DESIGN_CATALOG -->',CATALOG.map(item=>'<option value="'+item.kind+'"'+(item.asset_id?' data-source disabled':'')+'>'+esc(item.name)+'</option>').join('')));
 const modelBoqLinks=await readJSON('public/'+modelPath+'model-boq-links.json'),sharedContractorData=contractorData(views);
 const modelPage=new URL(modelPath+'index.html',dist);
 await writeFile(modelPage,(await readFile(modelPage,'utf8')).replace('<head>','<head><meta name="estimate-source-revision" content="'+sourceRevision+'">').replace('<!-- ROOM_ITEMS -->',renderModelItems(roomScene,roomNavigation)).replace('<!-- ROOM_NAVIGATION -->',renderRoomNavigation(roomNavigation)).replace('<!-- ROOM_BOQ -->',renderModelBoq(buildRoomModel(roomScene,roomNavigation),sharedContractorData,modelBoqLinks)).replace('<!-- ROOM_SCOPE -->',renderRoomScope(roomScene)));

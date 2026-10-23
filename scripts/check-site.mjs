@@ -71,7 +71,7 @@ export async function checkSite(directory){
  if(JSON.stringify(versions.workspace_navigation.primary_sections)!==JSON.stringify(workspaceSections.map(section=>section.label)))throw Error('Workspace section register differs from navigation');
  const homeHTML=await readFile(resolve(root,'index.html'),'utf8'),constructionHTML=await readFile(resolve(root,'construction/index.html'),'utf8'),progressHTML=await readFile(resolve(root,'progress/index.html'),'utf8');
  const hubLinks=html=>[...html.matchAll(/<a class="hub-card" href="([^"]+)"/g)].map(match=>match[1]);
- if(JSON.stringify(hubLinks(homeHTML).map(path=>resolve(root,path)))!==JSON.stringify(workspaceSections.map(section=>resolve(root,section.path))))throw Error('Home cards must match the five sibling sections');
+ if(JSON.stringify(hubLinks(homeHTML).map(path=>resolve(root,path)))!==JSON.stringify(workspaceSections.map(section=>resolve(root,section.path))))throw Error('Home cards must match the sibling section register');
  if(JSON.stringify(hubLinks(constructionHTML))!==JSON.stringify(['../cad/']))throw Error('Construction repeats estimate/model shortcuts');
  if(/id="construction-status"|href="[^"]*#construction-status"|CONSTRUCTION_PROGRESS/.test(progressHTML)||!progressHTML.includes('id="extraction-roadmap"'))throw Error('Progress must retain extraction progress without the duplicate website-status summary');
  const savings=JSON.parse(await readFile(resolve(projectRoot,'v13/budget-view.json'),'utf8')),savingsScript=await readFile(resolve(projectRoot,'v13/v13.js'),'utf8'),savingsHTML=await readFile(resolve(projectRoot,'v13/index.html'),'utf8');
