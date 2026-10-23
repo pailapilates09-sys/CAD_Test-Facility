@@ -1,5 +1,17 @@
-import {buildBoqBridge,filterBoqBridge,materialDisplay,BOQ_BASE} from './boq-model.js?source=BOQ_SOURCE_REVISION';
+import {buildBoqBridge,filterBoqBridge,materialDisplay,materialSubtotal,range,BOQ_BASE} from './boq-model.js?source=BOQ_SOURCE_REVISION';
 import {readDraft,draftKey} from '../../estimates/pilates-astra-2026-10-15/v10/contractor-model.js?source=BOQ_SOURCE_REVISION';
+
+export function initBoqDisclosures(panel=document.getElementById('model-boq')){
+ if(!panel||panel.dataset.disclosuresReady)return;
+ const doc=panel.ownerDocument;
+ function setOpen(id,open,restoreFocus=false){
+  const button=panel.querySelector(`[data-boq-toggle="${id}"]`),row=doc.getElementById('boq-detail-row-'+id);if(!button||!row)return;
+  row.hidden=!open;button.setAttribute('aria-expanded',String(open));button.querySelector('[aria-hidden]').textContent=open?' −':' +';if(restoreFocus)button.focus();
+ }
+ panel.addEventListener('click',event=>{const opener=event.target.closest('[data-boq-toggle]'),closer=event.target.closest('[data-boq-close]');if(opener)setOpen(opener.dataset.boqToggle,opener.getAttribute('aria-expanded')!=='true');else if(closer)setOpen(closer.dataset.boqClose,false,true)});
+ panel.addEventListener('keydown',event=>{if(event.key==='Escape'){const group=event.target.closest('[data-boq-work-id]');if(group&&group.querySelector('[aria-expanded="true"]')){event.preventDefault();setOpen(group.dataset.boqWorkId,false,true)}}});
+ panel.dataset.disclosuresReady='true';
+}
 
 export async function connectBoq({model,onSelect}){
  const panel=document.getElementById('model-boq'),$=id=>document.getElementById(id),revision=document.querySelector('meta[name="estimate-source-revision"]')?.content;
@@ -17,8 +29,11 @@ export async function connectBoq({model,onSelect}){
     for(const [selector,text]of [['[data-boq-quantity]',display.quantity],['[data-boq-quantity-note]',display.quantityNote],['[data-boq-rate]',display.rate],['[data-boq-price-note]',display.rateNote],['[data-boq-amount]',display.amount],['[data-boq-selection]',display.selection?'Selected: '+display.selection:'']])el.querySelector(selector).textContent=text;
     el.classList.toggle('boq-held',row.held);el.classList.toggle('boq-incomplete',display.cost.amount_low===null);if(display.cost.amount_low!==null)priced++;
    }
+   const subtotal=materialSubtotal(work,draft),group=workGroups.get(work.id);
+   group.querySelector('[data-boq-material-total]').textContent=work.held?'On hold':range(subtotal.low,subtotal.high)??'Incomplete';
+   group.querySelector('[data-boq-work-coverage]').textContent=`${subtotal.priced_rows} / ${work.rows.length} lines priced. Planning quantities require a confirmed takeoff.`;
   }
-  $('boq-data-status').textContent=`${draftWorks?'V11 contractor drafts from this browser':'Published v11 planning values'} · ${priced} of ${bridge.materialIds.size} material lines have both quantity and price. ${data.allowances.length} summary allowances remain unsplit. Price references date from 16–18 October 2026; confirm specifications, taxes and delivery.`;
+  $('boq-data-status').textContent=`Original quoted values retain their unstated currency. ${draftWorks?'V11 contractor drafts from this browser':'Published v11 planning values'} appear inside each work’s panel. ${priced} / ${bridge.materialIds.size} material lines have quantity and price; references date from 16–18 October 2026. ${data.allowances.length} summary allowances remain unsplit. ${bridge.unlinkedModelItems.length} model types have no recorded BOQ work association.`;
  }
  function update(next=context){
   context=next;
@@ -28,7 +43,7 @@ export async function connectBoq({model,onSelect}){
   for(const [id,group]of modelGroups)group.hidden=!shownModels.has(id);
   for(const button of panel.querySelectorAll('[data-boq-model-id]'))button.setAttribute('aria-pressed',String(button.dataset.boqModelId===context.selectedId));
   for(const el of panel.querySelectorAll('[data-boq-model-only-id] [data-boq-model-count]')){const item=slice.get(el.dataset.boqModelCount);el.textContent=item?`${item.quantity} model ${item.quantity===1?'placement':'placements'}${item.totalQuantity&&item.totalQuantity!==item.quantity?' of '+item.totalQuantity:''}`:'Outside selected area · click to view'}
-  $('boq-count').textContent=`${result.records.length} / ${data.items.length} BOQ works · ${result.materialCount} material lines · ${result.unlinkedModelItems.length} model types without a recorded BOQ link`;
+  $('boq-count').textContent=`${result.records.length} / ${data.items.length} BOQ works${result.unlinkedModelItems.length?' · '+result.unlinkedModelItems.length+' model types without a BOQ work link':''} · open a work for scope and materials`;
   $('boq-no-results').hidden=result.records.length+result.unlinkedModelItems.length>0;
   document.documentElement.dataset.boqVisibleWorks=String(result.records.length);
  }

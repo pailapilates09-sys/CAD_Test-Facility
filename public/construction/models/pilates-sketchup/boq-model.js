@@ -1,9 +1,22 @@
-import {materialLine} from '../../estimates/pilates-astra-2026-10-15/v10/contractor-model.js?source=BOQ_SOURCE_REVISION';
+import {materialLine,worksheet} from '../../estimates/pilates-astra-2026-10-15/v10/contractor-model.js?source=BOQ_SOURCE_REVISION';
 import {roomSlice} from './room-navigation.js';
 
 export const BOQ_BASE='../../estimates/pilates-astra-2026-10-15/';
 export const fmt=(value,digits=2)=>Number(value).toLocaleString('en-IN',{minimumFractionDigits:digits===2?2:0,maximumFractionDigits:digits});
 export const range=(a,b)=>a===null?null:a===b?fmt(a):fmt(a)+' – '+fmt(b);
+export const materialSubtotal=(work,draft={})=>worksheet(work,draft).material;
+const readableName=name=>name&&!/^(?:Group\s*#?\d+|Component\s*#?\d+(?:#\d+)?|Untitled|mesh[- ]?\d+|[0-9]+$|[a-f0-9]{8}-|Enscape\.)/i.test(name);
+export function reviewBoqWork({work,link,modelItems}){
+ const named=modelItems.some(i=>!i.locationUnconfirmed&&['source-label','nested-label'].includes(i.labelStatus)&&[i.sourceName,...i.searchNames].some(readableName));
+ const renderingOnly=modelItems.length>0&&modelItems.every(i=>/^Enscape\./i.test(i.sourceName));
+ const status=!modelItems.length?'unidentified':link.kind==='surface_context'||renderingOnly?'context':named?'named':'possible';
+ const label={unidentified:'Not identified',context:'Finish / context only',named:'Named candidate',possible:'Possible assembly'}[status];
+ const countComparable=['each'].includes(work.original.unit_code)&&status==='named'&&modelItems.every(i=>!i.locationUnconfirmed);
+ const modelCount=modelItems.reduce((n,i)=>n+i.quantity,0),quotedCount=Number(work.original.quantity);
+ const count=countComparable&&Number.isFinite(quotedCount)?{model:modelCount,quoted:quotedCount,difference:modelCount-quotedCount}:null;
+ const evidence=modelItems.map(i=>({id:i.id,sourceName:i.sourceName,nestedNames:i.searchNames.filter(readableName).slice(0,4),finishes:i.finishes.filter(f=>/marble|mirror/i.test(f)),locationUnconfirmed:i.locationUnconfirmed}));
+ return {status,label,count,evidence};
+}
 export function materialDisplay(row,input={}){
  const cost=materialLine(row,input),quantityDraft=Object.hasOwn(input,'quantity'),priceDraft=cost.contractor_price;
  return {cost,quantity:row.held?'On hold':cost.invalid?'Check input':cost.quantity===null?'Measure first':fmt(cost.quantity,3),
@@ -28,23 +41,23 @@ export function buildBoqBridge(model,data,links){
   const scopeZoneId=Object.keys(links.boq_areas_by_zone).find(id=>links.boq_areas_by_zone[id].includes(work.section_id));
   const scope=scopeZoneId?roomSlice(model,scopeZoneId):null;
   const modelItems=link.model_ids.map(id=>{const original=model.items.find(i=>i.id===id),local=scope?.items.find(i=>i.id===id);return {...(local??original),globalQuantity:original.quantity,scopeZoneId:local?scopeZoneId:null,scopeName:local?scope.zone.name:null,locationUnconfirmed:!local}});
-  records.push({work,link,modelItems,occurrenceIds:new Set(modelItems.flatMap(i=>i.occurrences.map(o=>o.id)))});
+  const record={work,link,modelItems,occurrenceIds:new Set(modelItems.flatMap(i=>i.occurrences.map(o=>o.id)))};record.review=reviewBoqWork(record);records.push(record);
  }
  for(const [zone,ids]of Object.entries(links.boq_areas_by_zone))if(!model.navigation?.zones.some(z=>z.id===zone)||!Array.isArray(ids)||ids.some(id=>!areas.has(id)))throw Error('Unknown model/BOQ area link');
  return {records,unlinkedModelItems:model.items.filter(i=>!linkedModelIds.has(i.id)),linkedModelIds,materialIds,data,links,model};
 }
-export function filterBoqBridge(bridge,{zoneId='all',selectedId=null,followSelection=true,visibleItemIds,visibleOccurrenceIds,modelSearch='',isolated=false,query='',mode='all'}={}){
+export function filterBoqBridge(bridge,{zoneId='all',selectedId=null,followSelection=true,visibleItemIds,visibleOccurrenceIds,modelSearch='',isolated=false,query='',mode='works'}={}){
  const slice=roomSlice(bridge.model,zoneId);visibleItemIds??=new Set(slice.items.map(i=>i.id));visibleOccurrenceIds??=slice.occurrenceIds;
  const q=query.trim().toLocaleLowerCase(),areas=bridge.links.boq_areas_by_zone[zoneId]??[],following=followSelection&&selectedId;
- const records=bridge.records.filter(({work,link,modelItems,occurrenceIds})=>{
-  if(mode==='model-only'||mode==='linked'&&!link.model_ids.length||mode==='boq-only'&&link.model_ids.length)return false;
+ const records=bridge.records.filter(({work,link,modelItems,occurrenceIds,review})=>{
+  if(mode==='model-only'||mode==='linked'&&!['named','possible'].includes(review.status)||mode==='context'&&review.status!=='context'||mode==='boq-only'&&link.model_ids.length)return false;
   const inArea=zoneId==='all'||areas.includes(work.section_id)||link.kind==='assembly_candidate'&&[...occurrenceIds].some(id=>visibleOccurrenceIds.has(id));
   if(!inArea)return false;
   if(following&&!link.model_ids.includes(selectedId))return false;
   if(!following&&(modelSearch.trim()||isolated)&&!link.model_ids.some(id=>visibleItemIds.has(id)))return false;
-  return !q||[work.id,work.title,work.section_name,...work.rows.flatMap(r=>[r.name,r.note]),...modelItems.flatMap(i=>[i.name,i.sourceName,...i.searchNames])].join(' ').toLocaleLowerCase().includes(q);
+  return !q||[work.id,work.title,work.section_name,work.description,...modelItems.flatMap(i=>[i.name,i.sourceName,...i.searchNames])].join(' ').toLocaleLowerCase().includes(q);
  });
- const unlinkedModelItems=mode==='linked'||mode==='boq-only'?[]:bridge.unlinkedModelItems.filter(i=>visibleItemIds.has(i.id)&&(!following||i.id===selectedId)&&(!q||[i.name,i.sourceName,...i.searchNames].join(' ').toLocaleLowerCase().includes(q)));
+ const unlinkedModelItems=!['all','model-only'].includes(mode)&&!(mode==='works'&&following)?[]:bridge.unlinkedModelItems.filter(i=>visibleItemIds.has(i.id)&&(!following||i.id===selectedId)&&(!q||[i.name,i.sourceName,...i.searchNames].join(' ').toLocaleLowerCase().includes(q)));
  return {records,unlinkedModelItems,materialCount:records.reduce((n,r)=>n+r.work.rows.length,0)};
 }
 export function referenceHref(source){

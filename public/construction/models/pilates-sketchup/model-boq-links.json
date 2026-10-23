@@ -3,7 +3,7 @@
   "source_sha256": "ad5c8a00a563d4336a5ea4bdd72907aba7e427f0c842e21196386d944af4b0ec",
   "boq_register": "../../estimates/pilates-astra-2026-10-15/v9/register.json",
   "boq_view": "../../estimates/pilates-astra-2026-10-15/v11/",
-  "policy": "Proposed work-level associations only. IDs and relationship notes are stored here; work descriptions, material specifications, quantities, rates and amounts are derived from the same shared data used by v11. No model count or display extent replaces a BOQ/material quantity.",
+  "policy": "Work-level candidates and context associations only. IDs and review notes are stored here; original BOQ work descriptions, quoted values and embedded material details derive from the shared estimate source. No inferred name, appearance, model count or display extent certifies a BOQ match or replaces a work/material quantity.",
   "boq_areas_by_zone": {
     "studio": [
       "studio"
@@ -29,15 +29,18 @@
         "3144994"
       ],
       "kind": "assembly_candidate",
-      "note": "Possible fitted-storage parts of the reception furniture assemblies; curved cupboard identity and specification need confirmation."
+      "note": "The two reception joinery groups are possible locations for this work. The source does not separate the curved cupboard from the WPC reception-desk package, so a distinct cupboard match is not confirmed."
     },
     "reception-002": {
       "model_ids": [
         "3120236",
-        "3144994"
+        "3144994",
+        "3151031",
+        "3150992",
+        "3150131"
       ],
       "kind": "surface_context",
-      "note": "Marble appearance occurs in these reception assemblies. The BOQ slab surface and area have not been isolated."
+      "note": "Marble 02 appearance is present on the reception desk/base and three display shelves. This supports visible finish context only; the quoted slab surfaces, material and measured area are not isolated."
     },
     "reception-003": {
       "model_ids": [
@@ -47,16 +50,14 @@
       "note": "Possible reception-desk assembly. Its WPC specification is not established by the model appearance labels."
     },
     "reception-004": {
-      "model_ids": [
-        "9088293"
-      ],
-      "kind": "assembly_candidate",
-      "note": "Rack-like assembly near the lobby. Shoe-rack identity and BOQ area assignment are unconfirmed."
+      "model_ids": [],
+      "kind": "unidentified",
+      "note": "The previously suggested Group#135 rack falls in the lounge/changing area, outside the reception navigation area. Neither its native name nor the extracted hierarchy establishes a shoe rack. No reception shoe-rack match is recorded."
     },
     "reception-005": {
       "model_ids": [],
       "kind": "unidentified",
-      "note": "No identifiable rattan-board counterpart is established in the displayed model. This work remains held."
+      "note": "No ratten/rattan-board counterpart is identified in the extracted definition names or displayed item list. Timber/wood appearance does not prove rattan construction. This work remains held."
     },
     "reception-006": {
       "model_ids": [
@@ -83,9 +84,11 @@
       "note": "Named ceiling-light placements in the approximate reception area. Model fixture equivalence and the BOQ count need checking."
     },
     "reception-010": {
-      "model_ids": [],
-      "kind": "unidentified",
-      "note": "No identifiable counterpart has been established in the displayed model. Retain the v11 scope and material records."
+      "model_ids": [
+        "10704034"
+      ],
+      "kind": "assembly_candidate",
+      "note": "A reception ceiling-light assembly (Untitled+3 (1), with nested spotlight helpers) is a possible suspended-fixture location visible in the original reception views. It is not explicitly named Chandelier; fixture identity and exact scope remain unconfirmed."
     },
     "reception-011": {
       "model_ids": [
@@ -107,7 +110,7 @@
         "3148222"
       ],
       "kind": "assembly_candidate",
-      "note": "Contains a named studio-brand sign definition. Board count, wording and electrical specification require confirmation."
+      "note": "The assembly contains the native YOUR STUDIO  NAM sign. The placeholder wording and one model assembly do not confirm the two quoted brand-name boards."
     },
     "reception-014": {
       "model_ids": [
@@ -276,7 +279,7 @@
         "10743860"
       ],
       "kind": "assembly_candidate",
-      "note": "Named THE VAULT and Change & Slay sign placements. Their equivalence to the quoted brand-name boards is unconfirmed."
+      "note": "Native THE VAULT and Change & Slay signs are present. Their wording indicates related signage, but does not establish the quoted brand-name boards or their electrical specification."
     },
     "locker-space-010": {
       "model_ids": [],
@@ -289,7 +292,7 @@
         "10754697"
       ],
       "kind": "assembly_candidate",
-      "note": "Possible studio storage/surround assemblies. Cabinet-door identity, layout and specification need confirmation."
+      "note": "The studio has a storage-shelf group and surround, but no native cabinet-with-doors name. These are possible locations only; door layout and the Formica cabinet work are not confirmed."
     },
     "studio-002": {
       "model_ids": [
@@ -298,13 +301,13 @@
         "3194159",
         "3192310"
       ],
-      "kind": "assembly_candidate",
-      "note": "Mirror appearance is present in these studio assemblies. Wooden frame specification, BOQ surface allocation and measured mirror area are unconfirmed."
+      "kind": "surface_context",
+      "note": "Mirror 01/02 appearance occurs on the studio panels and Component54 placements. This identifies visible mirror context; the wooden frame, Formica construction and BOQ measured area remain unconfirmed."
     },
     "studio-003": {
       "model_ids": [],
       "kind": "unidentified",
-      "note": "No named sheer-curtain placement has been identified in the training-studio area. The named Curtain component is in the changing area and is not assigned here automatically."
+      "note": "The room shell includes a curtain appearance label, but there is no separately identified training-studio sheer-curtain item. The explicit Curtain component is in the changing area and cannot establish this studio work."
     },
     "studio-004": {
       "model_ids": [
@@ -326,8 +329,8 @@
       "model_ids": [
         "9310810"
       ],
-      "kind": "assembly_candidate",
-      "note": "Explicit linear-light placements in the studio. Model segment count is not a measured strip length or purchased reel count."
+      "kind": "surface_context",
+      "note": "Enscape.LinearLight denotes rendering-light geometry. Its seven placements are lighting context, not seven purchased strip fixtures, a measured strip length or a confirmed match to the physical installation."
     },
     "studio-007": {
       "model_ids": [],
@@ -367,8 +370,10 @@
       "model_ids": [
         "11022815"
       ],
-      "kind": "assembly_candidate",
-      "note": "Named Painting 001 placements near the restroom-sign location. Room assignment and artwork equivalence need confirmation; the work remains held."
+      "kind": "surface_context",
+      "note": "Native Painting 001 artwork placements provide possible decoration context near the restroom-sign location. The quoted work is measured in square feet; an artwork count does not confirm that finish scope or washroom assignment. This work remains held."
     }
-  }
+  },
+  "reviewed_date": "2026-10-23",
+  "review_scope": "Original BOQ descriptions and measurements; all 106 displayed item types; extracted hierarchy definition names; original reception, rack, lounge, props-wall and locker saved-view thumbnails. Appearance and generic group geometry do not establish concealed construction or approved quantities."
 }
