@@ -1,20 +1,20 @@
 export const livePhase = {
-  "phase": "375",
-  "title": "Run20 complete — 14 checkpoints through CP358",
+  "phase": "389",
+  "title": "Run21 complete — 14 checkpoints through CP372",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-23T01:00:08.226Z",
-  "checkpoint": "MSCH-CORPUS-CP358",
+  "completedAt": "2026-10-23T02:06:21.091Z",
+  "checkpoint": "MSCH-CORPUS-CP372",
   "before": {
-    "rows": 4223,
-    "folders": 996,
-    "files": 3227,
-    "pending": 614
-  },
-  "after": {
     "rows": 4958,
     "folders": 1036,
     "files": 3922,
     "pending": 640
+  },
+  "after": {
+    "rows": 5062,
+    "folders": 1055,
+    "files": 4007,
+    "pending": 645
   },
   "completedBatches": 14,
   "scope": "User-authorized maximum 60-minute four-lane continuation; 14 MSCH metadata checkpoints. Existing source-stage gates retained.",
@@ -26,24 +26,24 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 42.64703333333333,
+    "sourceElapsedMinutes": 41.9787,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 349,
-  "mainCursor": 349,
-  "nextBatch": "B359",
-  "nextTarget": "Birendra Sir",
-  "newRows": 735,
-  "newFolders": 40,
-  "newFiles": 695,
-  "newKnownBytes": 3843744481,
-  "sessionStartedAt": "2026-10-23T00:12:56.084Z",
-  "sessionElapsedMinutes": 47.20236666666667,
-  "knownBytes": 53138293437,
+  "localHighWater": 363,
+  "mainCursor": 363,
+  "nextBatch": "B373",
+  "nextTarget": "Nepal_Nagarkot_3D",
+  "newRows": 104,
+  "newFolders": 19,
+  "newFiles": 85,
+  "newKnownBytes": 582227347,
+  "sessionStartedAt": "2026-10-23T01:19:00.058Z",
+  "sessionElapsedMinutes": 47.35055,
+  "knownBytes": 53720520784,
   "sessionReport": {
-    "startedAt": "2026-10-23T00:12:56.084Z",
-    "sourceStoppedAt": "2026-10-23T00:55:34.906Z",
+    "startedAt": "2026-10-23T01:19:00.058Z",
+    "sourceStoppedAt": "2026-10-23T02:00:58.780Z",
     "milestones": 14,
     "advancedLanes": 1,
     "MSCS": {
@@ -73,17 +73,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP358 /B358",
-      "beforeRows": 4223,
-      "afterRows": 4958,
-      "addedFolders": 40,
-      "addedFiles": 695,
-      "addedMetadataBytes": 3843744481,
-      "pending": 640,
-      "local": 349,
-      "mainCursor": 349,
-      "notice": "N303 ACKED",
-      "next": "B359"
+      "checkpoint": "CP372 /B372",
+      "beforeRows": 4958,
+      "afterRows": 5062,
+      "addedFolders": 19,
+      "addedFiles": 85,
+      "addedMetadataBytes": 582227347,
+      "pending": 645,
+      "local": 363,
+      "mainCursor": 363,
+      "notice": "N317 ACKED",
+      "next": "B373"
     },
     "AEC": {
       "status": "TERMINAL_RECONCILIATION_REQUIRED",
@@ -114,10 +114,10 @@ export const livePhase = {
       "LSA historical 2 files /9,304 bytes unresolved.",
       "AEC G075 checkpoint readable; G076 terminal not recovered.",
       "MSCS oversized/native hashing-policy gate.",
-      "MSCH 640 FIFO folders; source-content extraction remains."
+      "MSCH 645 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 350,
+  "scannedFolders": 364,
   "phases": [
     {
       "phase": "01",
@@ -2770,6 +2770,104 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B358 Bijay parajuli: 87 metadata records",
       "stop": "MSCH-CORPUS-CP358 +Local/Main349/349 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "376",
+      "lane": "MSCH /Local /Main",
+      "work": "B359 Birendra Sir: 16 metadata records",
+      "stop": "MSCH-CORPUS-CP359 +Local/Main350/350 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "377",
+      "lane": "MSCH /Local /Main",
+      "work": "B360 CP Sir: 4 metadata records",
+      "stop": "MSCH-CORPUS-CP360 +Local/Main351/351 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "378",
+      "lane": "MSCH /Local /Main",
+      "work": "B361 info: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP361 +Local/Main352/352 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "379",
+      "lane": "MSCH /Local /Main",
+      "work": "B362 Ishwor Sir: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP362 +Local/Main353/353 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "380",
+      "lane": "MSCH /Local /Main",
+      "work": "B363 Pankaj Sir: 40 metadata records",
+      "stop": "MSCH-CORPUS-CP363 +Local/Main354/354 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "381",
+      "lane": "MSCH /Local /Main",
+      "work": "B364 Trash: 24 metadata records",
+      "stop": "MSCH-CORPUS-CP364 +Local/Main355/355 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "382",
+      "lane": "MSCH /Local /Main",
+      "work": "B365 Watershed: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP365 +Local/Main356/356 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "383",
+      "lane": "MSCH /Local /Main",
+      "work": "B366 Geology of Asia pacific: 7 metadata records",
+      "stop": "MSCH-CORPUS-CP366 +Local/Main357/357 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "384",
+      "lane": "MSCH /Local /Main",
+      "work": "B367 Geology of South Asia: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP367 +Local/Main358/358 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "385",
+      "lane": "MSCH /Local /Main",
+      "work": "B368 41597_2018_BFsdata2017191_MOESM32_ESM: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP368 +Local/Main359/359 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "386",
+      "lane": "MSCH /Local /Main",
+      "work": "B369 local_unit: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP369 +Local/Main360/360 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "387",
+      "lane": "MSCH /Local /Main",
+      "work": "B370 GCS_Everest_India_Nepal: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP370 +Local/Main361/361 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "388",
+      "lane": "MSCH /Local /Main",
+      "work": "B371 Nepal 1981: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP371 +Local/Main362/362 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "389",
+      "lane": "MSCH /Local /Main",
+      "work": "B372 Nepal_Nagarkot: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP372 +Local/Main363/363 acknowledged by final reconciliation",
       "status": "Complete - stopped"
     }
   ]
