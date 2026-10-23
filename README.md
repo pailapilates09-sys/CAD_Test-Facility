@@ -2,7 +2,7 @@
 
 ## Current workspace milestone M7 — 22 October 2026
 
-[M7 release](https://github.com/pailapilates09-sys/CAD_Test-Facility/releases/tag/workspace-m7-2026-10-22) preserves the studio navigation before model/BOQ linking. The linked materials table continues on `work/model-boq-after-m7`; merge and successful Pages deployment publish the changes. Rollback can restore the tagged files in a new commit without rewriting history.
+[M7 release](https://github.com/pailapilates09-sys/CAD_Test-Facility/releases/tag/workspace-m7-2026-10-22) preserves the studio navigation before model/BOQ linking. The work-level comparison revision continues on `work/boq-work-comparison`; merge and successful Pages deployment publish the changes. Rollback can restore the tagged files in a new commit without rewriting history.
 
 ## Workspace milestone M5 — 21 October 2026
 
@@ -30,7 +30,7 @@ Preservation/rollback baseline: commit `bbf90547c6e11b2754415e234fc310ea42bf62c8
 
 - `/`: workspace home with five sibling sections and one shared navigation register.
 - `/construction/`: column formwork CAD, with its 3D assembly, five drawing sheets, quantities and downloads at `/cad/`. Geometry, vendor assets and the inch-only PDF are preserved.
-- `/construction/models/pilates-sketchup/`: Pilates SketchUp is a primary navigation section. Its existing URL shows the main room in linked 2D/3D views and a four-column item schedule, derived from one optimized source scene. A second five-column table joins proposed model associations to all 51 v11 works and 261 material lines, using the shared quantities and rates. Five approximate area filters, 14 native camera presets and readable source-linked labels reuse the same item identities. Inspection reports, saved thumbnails, the earlier Group#2 partition and complete Drive archives remain preserved separately.
+- `/construction/models/pilates-sketchup/`: Pilates SketchUp is a primary navigation section. Its existing URL shows the main room in linked 2D/3D views and a four-column item schedule, derived from one optimized source scene. A second five-column table compares all 51 original BOQ works with model candidates, match evidence and quoted values. Detailed scope and all 261 material lines open inside embedded panels, using the same source and contractor drafts as v11. Five approximate area filters, 14 native camera presets and readable source-linked labels reuse the same item identities. Inspection reports, saved thumbnails, the earlier Group#2 partition and complete Drive archives remain preserved separately.
 - `/construction/estimates/pilates-astra-2026-10-15/milestone.html`: Versions + milestone owns the estimate view index, including v8–v13. Duplicate shortcut cards have been removed from Construction; the estimate pages and their original URLs remain intact.
 - `/progress/`: four-project extraction checkpoints, roadmap, hierarchy, gaps and historical records. The former Construction status table described website deliverables, not physical work on site, and has been removed from this page. Its generated JSON endpoint remains available for existing data links.
 - `/memory-posters/`: the learning wall and reusable prompts.

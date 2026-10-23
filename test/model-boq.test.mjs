@@ -13,13 +13,36 @@ const json=async url=>JSON.parse(await readFile(url,'utf8'));
 const [scene,nav,links,registry]=await Promise.all(['studio-room.scene.json','room-navigation.json','model-boq-links.json'].map(path=>json(new URL(path,base))).concat(json(new URL('public/construction/estimates/pilates-astra-2026-10-15/v9/register.json',root))));
 const model=buildRoomModel(scene,nav),data=contractorData(deriveViews(registry)),bridge=buildBoqBridge(model,data,links);
 
-test('the second table joins model identities to each v11 material row exactly once',async()=>{
+test('the comparison lists BOQ works once and keeps every material line in a collapsed embedded panel',async()=>{
  assert.equal(bridge.records.length,51);assert.equal(bridge.materialIds.size,261);assert.equal(bridge.records.filter(r=>r.link.model_ids.length).length,36);assert.equal(bridge.records.filter(r=>!r.link.model_ids.length).length,15);
  for(const record of bridge.records){assert.equal(record.work,data.items.find(w=>w.id===record.work.id));for(const row of record.work.rows)assert.deepEqual(materialDisplay(row).cost,materialLine(row));}
  assert.equal(bridge.records.reduce((n,r)=>n+r.work.rows.filter(row=>materialLine(row).amount_low!==null).length,0),63);
- const html=renderModelBoq(model,data,links);assert.equal((html.match(/data-boq-material-id=/g)||[]).length,261);assert.equal((html.match(/data-boq-work-id=/g)||[]).length,51);assert.equal((html.match(/<th scope="col">/g)||[]).length,5);
+ const html=renderModelBoq(model,data,links);assert.equal((html.match(/data-boq-material-id=/g)||[]).length,261);assert.equal((html.match(/data-boq-work-id=/g)||[]).length,51);
+ const header=html.match(/<table class="model-boq-table"[\s\S]*?<\/thead>/)[0];assert.equal((header.match(/<th scope="col"/g)||[]).length,5);assert.match(header,/Original BOQ work/);assert.doesNotMatch(header,/material \/ specification/i);
+ const summaries=[...html.matchAll(/<tr class="boq-work-row"[^>]*>([\s\S]*?)<\/tr>/g)];assert.equal(summaries.length,51);for(const [,row]of summaries)assert.doesNotMatch(row,/data-boq-material-id|18 mm C\/G plywood|12 mm plywood backing|Decorative laminate/);
+ assert.equal((html.match(/<tr class="boq-detail-row" hidden/g)||[]).length,51);assert.equal((html.match(/aria-expanded="false"/g)||[]).length,51);
  const page=await readFile(new URL('index.html',base),'utf8');assert.ok(page.indexOf('id="model-boq"')>page.indexOf('id="item-rows"'));assert.match(page,/Source: extracted SketchUp model/);
- assert.ok(html.includes('v11/#work-locker-space-001'));assert.ok(html.includes('Proposed link'));assert.ok(html.includes('No BOQ link recorded'));
+ assert.ok(html.includes('v11/#work-locker-space-001'));assert.ok(html.includes('Possible assembly'));assert.ok(html.includes('No BOQ work identified'));assert.match(html,/Currency unspecified/);
+});
+
+test('match review separates native-name candidates, finish context and unresolved works',()=>{
+ const get=id=>bridge.records.find(r=>r.work.id===id);
+ assert.equal(get('locker-space-001').review.status,'named');assert.equal(get('reception-001').review.status,'possible');
+ assert.equal(get('reception-002').review.status,'context');assert.equal(get('studio-002').review.status,'context');assert.equal(get('studio-006').review.status,'context');assert.equal(get('studio-006').review.count,null);
+ assert.equal(get('reception-004').review.status,'unidentified');assert.equal(get('reception-005').review.status,'unidentified');assert.ok(bridge.unlinkedModelItems.some(i=>i.id==='9088293'));
+ assert.equal(get('reception-010').review.status,'possible');assert.match(get('reception-010').link.note,/not explicitly named Chandelier/);
+ assert.ok(get('reception-002').modelItems.some(i=>i.id==='3151031'));assert.ok(get('reception-002').review.evidence.some(e=>e.finishes.includes('Marble 02')));
+});
+
+test('only compatible named unit counts are compared and quoted values stay unchanged',()=>{
+ const get=id=>bridge.records.find(r=>r.work.id===id);
+ assert.deepEqual(get('reception-009').review.count,{model:8,quoted:7,difference:1});assert.deepEqual(get('coffee-lounge-006').review.count,{model:19,quoted:15,difference:4});
+ assert.deepEqual(get('locker-space-004').review.count,{model:2,quoted:2,difference:0});assert.equal(get('locker-space-001').review.count,null);assert.equal(get('reception-006').review.count,null);
+ assert.equal(get('reception-006').work.original.quantity,'0.00');assert.equal(get('reception-009').work.original.amount,'10500.00');
+ const all=filterBoqBridge(bridge);assert.equal(all.records.length,51);assert.equal(all.unlinkedModelItems.length,0);
+ const candidates=filterBoqBridge(bridge,{mode:'linked'});assert.ok(candidates.records.every(r=>['named','possible'].includes(r.review.status)));
+ const contexts=filterBoqBridge(bridge,{mode:'context'});assert.ok(contexts.records.length>0);assert.ok(contexts.records.every(r=>r.review.status==='context'));
+ assert.equal(filterBoqBridge(bridge,{mode:'model-only'}).unlinkedModelItems.length,bridge.unlinkedModelItems.length);
 });
 
 test('v11 source changes propagate while model counts do not replace material quantities',()=>{
