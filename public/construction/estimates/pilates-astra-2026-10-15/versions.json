@@ -1,6 +1,6 @@
 {
   "schema_version": "estimate-versions-1.0.0",
-  "updated_date": "2026-10-20",
+  "updated_date": "2026-10-24",
   "latest_version": "v13",
   "milestone_tag": "pilates-estimates-m1-2026-10-17",
   "versions": [
@@ -215,6 +215,7 @@
     "primary_sections": [
       "Construction",
       "Pilates SketchUp",
+      "Layout Designer",
       "Versions + milestone",
       "Progress",
       "Memory Posters"
@@ -229,7 +230,8 @@
     "pilates_sketchup_path": "../../models/pilates-sketchup/",
     "estimate_views_location": "Versions + milestone",
     "progress_scope": "Four-project extraction checkpoints, roadmaps, source hierarchy and historical records. Website deliverable status is not presented as physical construction progress.",
-    "updated_date": "2026-10-21"
+    "updated_date": "2026-10-24",
+    "layout_designer_path": "../../models/layout-designer/"
   },
   "latest_full_estimate_version": "v11",
   "workspace_milestone_tag": "workspace-m4-2026-10-20",

@@ -1,0 +1,13 @@
+# Layout Designer
+
+This sibling of the Pilates SketchUp viewer authors independent room concepts. Studio, office, café and empty-room starting layouts use the same editable `paila-layout-1.0` JSON contract, in metres. Room dimensions, wall openings, element positions and dimensions drive the SVG plan, software-rendered 3D view and four-column schedule together. The existing model, BOQ relationships and financial sources are unchanged; further BOQ interpretation is paused.
+
+`design-model.js` is the shared geometry, validation, history and export layer. A cabinet regenerates its panels and shelves from dimensions, shelf count and panel thickness. Other authored furniture is concept geometry. Perimeter wall meshes contain the door/window openings. Plan-footprint overlaps and envelope checks are concept feedback, not engineering or code approval. This first editor supports one rectangular room, up to 80 elements, rather than a full building/BIM model.
+
+`scripts/layout-designer-assets.mjs` derives three reusable assets at build time from the existing optimized Pilates scene: sofa definition 161587, lockers 1878458 and sink 10959990. The generated `reusable-components.json` keeps their source hash, definition and occurrence references. It is written only to `dist/`; there is no second editable source geometry. New placements reference these definitions. Resizing a source copy scales its display mesh and does not reconstruct concealed materials, SketchUp tools or modelling history.
+
+The browser saves one draft under `paila-layout-designer-draft-v1`. JSON export/import preserves editable parameters and source references. SVG exports the dimensioned vector plan, OBJ exports self-contained mesh geometry (metres, Z up), and CSV exports the element schedule. Exported JSON needs this published component library to display its source-reference copies; OBJ contains the copied geometry. None of these exports writes a native SKP or automatically changes Drive, GitHub or another visitor's layout.
+
+`design-plan.js` and `design-view3d.js` derive views from the same state. The orthographic Canvas 2D renderer works without WebGL, supports selection/orbit/cutaway and uses approximate triangle depth ordering. It is a concept inspection view, not a photoreal renderer. The existing theme, mascot visibility preference and mobile table system are reused.
+
+Run `npm run check` to validate geometry, source provenance, exports, undo/redo and site integration, and to build the static Pages artifact. Publish through the existing GitHub Pages workflow. Original SKP/full extraction archives remain in their existing Drive locations; the website uses static generated copies, with no live Drive synchronization.

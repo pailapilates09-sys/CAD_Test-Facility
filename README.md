@@ -1,5 +1,11 @@
 # CAD Test Facility
 
+## Layout authoring — 24 October 2026
+
+[Layout Designer](https://pailapilates09-sys.github.io/CAD_Test-Facility/construction/models/layout-designer/) is a sibling of the original Pilates viewer. It provides editable studio, office, café and empty-room concepts, linked 2D/3D/schedule views, metre-based room and element parameters, three source-linked reusable components, browser drafts and JSON/SVG/OBJ/CSV exports. The cabinet regenerates panels and shelves; source component copies scale existing display meshes. See its [data and editing contract](public/construction/models/layout-designer/README.md).
+
+The six sibling sections are Construction, Pilates SketchUp, Layout Designer, Versions + milestone, Progress and Memory Posters. The designer authors independent concepts; it does not modify the original SKP, current BOQ interpretation, financial register or frozen milestones. Further BOQ-to-model interpretation is paused at the 23 October review. Pages continues serving committed/generated static copies, without a live Drive connection.
+
 ## Current workspace milestone M7 — 22 October 2026
 
 [M7 release](https://github.com/pailapilates09-sys/CAD_Test-Facility/releases/tag/workspace-m7-2026-10-22) preserves the studio navigation before model/BOQ linking. The work-level comparison revision continues on `work/boq-work-comparison`; merge and successful Pages deployment publish the changes. Rollback can restore the tagged files in a new commit without rewriting history.
