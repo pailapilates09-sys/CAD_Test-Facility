@@ -1,20 +1,20 @@
 export const livePhase = {
-  "phase": "403",
-  "title": "Run22 complete — 14 checkpoints through CP386",
+  "phase": "417",
+  "title": "Run23 complete — 14 checkpoints through CP400",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-23T12:28:45.771Z",
-  "checkpoint": "MSCH-CORPUS-CP386",
+  "completedAt": "2026-10-23T23:29:28.905Z",
+  "checkpoint": "MSCH-CORPUS-CP400",
   "before": {
-    "rows": 5062,
-    "folders": 1055,
-    "files": 4007,
-    "pending": 645
-  },
-  "after": {
     "rows": 5617,
     "folders": 1055,
     "files": 4562,
     "pending": 631
+  },
+  "after": {
+    "rows": 5797,
+    "folders": 1065,
+    "files": 4732,
+    "pending": 627
   },
   "completedBatches": 14,
   "scope": "User-authorized maximum 60-minute four-lane continuation; 14 MSCH metadata checkpoints. Existing source-stage gates retained.",
@@ -26,24 +26,24 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 35.6122,
+    "sourceElapsedMinutes": 36.19441666666667,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 377,
-  "mainCursor": 377,
-  "nextBatch": "B387",
-  "nextTarget": "Syarpu Lake_Syarpu PHES.gdb",
-  "newRows": 555,
-  "newFolders": 0,
-  "newFiles": 555,
-  "newKnownBytes": 2113694,
-  "sessionStartedAt": "2026-10-23T11:48:12.904Z",
-  "sessionElapsedMinutes": 40.547783333333335,
-  "knownBytes": 53722634478,
+  "localHighWater": 391,
+  "mainCursor": 391,
+  "nextBatch": "B401",
+  "nextTarget": "npl-dem-central-area-only-srtm30",
+  "newRows": 180,
+  "newFolders": 10,
+  "newFiles": 170,
+  "newKnownBytes": 2671290358,
+  "sessionStartedAt": "2026-10-23T22:48:27.676Z",
+  "sessionElapsedMinutes": 41.02048333333333,
+  "knownBytes": 56393924836,
   "sessionReport": {
-    "startedAt": "2026-10-23T11:48:12.904Z",
-    "sourceStoppedAt": "2026-10-23T12:23:49.636Z",
+    "startedAt": "2026-10-23T22:48:27.676Z",
+    "sourceStoppedAt": "2026-10-23T23:24:39.341Z",
     "milestones": 14,
     "advancedLanes": 1,
     "MSCS": {
@@ -73,17 +73,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP386 /B386",
-      "beforeRows": 5062,
-      "afterRows": 5617,
-      "addedFolders": 0,
-      "addedFiles": 555,
-      "addedMetadataBytes": 2113694,
-      "pending": 631,
-      "local": 377,
-      "mainCursor": 377,
-      "notice": "N331 ACKED",
-      "next": "B387"
+      "checkpoint": "CP400 /B400",
+      "beforeRows": 5617,
+      "afterRows": 5797,
+      "addedFolders": 10,
+      "addedFiles": 170,
+      "addedMetadataBytes": 2671290358,
+      "pending": 627,
+      "local": 391,
+      "mainCursor": 391,
+      "notice": "N345 ACKED",
+      "next": "B401"
     },
     "AEC": {
       "status": "TERMINAL_RECONCILIATION_REQUIRED",
@@ -114,10 +114,10 @@ export const livePhase = {
       "LSA historical 2 files /9,304 bytes unresolved.",
       "AEC G075 checkpoint readable; G076 terminal not recovered.",
       "MSCS oversized/native hashing-policy gate.",
-      "MSCH 631 FIFO folders; source-content extraction remains."
+      "MSCH 627 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 378,
+  "scannedFolders": 392,
   "phases": [
     {
       "phase": "01",
@@ -2966,6 +2966,104 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B386 Syangja district_Sukla Gandaki PHES site.gdb: 46 metadata records",
       "stop": "MSCH-CORPUS-CP386 +Local/Main377/377 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "404",
+      "lane": "MSCH /Local /Main",
+      "work": "B387 Syarpu Lake_Syarpu PHES.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP387 +Local/Main378/378 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "405",
+      "lane": "MSCH /Local /Main",
+      "work": "B388 Tanahu Storage Dam.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP388 +Local/Main379/379 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "406",
+      "lane": "MSCH /Local /Main",
+      "work": "B389 LC08_L2SP_142040_20231121_20231128_02_T1: 22 metadata records",
+      "stop": "MSCH-CORPUS-CP389 +Local/Main380/380 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "407",
+      "lane": "MSCH /Local /Main",
+      "work": "B390 PHES Location_01: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP390 +Local/Main381/381 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "408",
+      "lane": "MSCH /Local /Main",
+      "work": "B391 PHES Location_02: 10 metadata records",
+      "stop": "MSCH-CORPUS-CP391 +Local/Main382/382 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "409",
+      "lane": "MSCH /Local /Main",
+      "work": "B392 DSMW: 16 metadata records",
+      "stop": "MSCH-CORPUS-CP392 +Local/Main383/383 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "410",
+      "lane": "MSCH /Local /Main",
+      "work": "B393 SoilMap_hires: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP393 +Local/Main384/384 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "411",
+      "lane": "MSCH /Local /Main",
+      "work": "B394 Potentially dangerous glacial lakes in the Koshi, Gandaki, and Karnali river basins of Nepal, the Tibet Autonomous Region of China, and India: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP394 +Local/Main385/385 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "412",
+      "lane": "MSCH /Local /Main",
+      "work": "B395 Road Network of Nepal: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP395 +Local/Main386/386 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "413",
+      "lane": "MSCH /Local /Main",
+      "work": "B396 swat2012: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP396 +Local/Main387/387 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "414",
+      "lane": "MSCH /Local /Main",
+      "work": "B397 Trash: 8 metadata records",
+      "stop": "MSCH-CORPUS-CP397 +Local/Main388/388 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "415",
+      "lane": "MSCH /Local /Main",
+      "work": "B398 lulc2023: 16 metadata records",
+      "stop": "MSCH-CORPUS-CP398 +Local/Main389/389 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "416",
+      "lane": "MSCH /Local /Main",
+      "work": "B399 ASF Data Search_ALOS PALSAR: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP399 +Local/Main390/390 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "417",
+      "lane": "MSCH /Local /Main",
+      "work": "B400 daac_ornl_gov: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP400 +Local/Main391/391 acknowledged by final reconciliation",
       "status": "Complete - stopped"
     }
   ]
