@@ -1,20 +1,20 @@
 export const livePhase = {
-  "phase": "389",
-  "title": "Run21 complete — 14 checkpoints through CP372",
+  "phase": "403",
+  "title": "Run22 complete — 14 checkpoints through CP386",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-23T02:06:21.091Z",
-  "checkpoint": "MSCH-CORPUS-CP372",
+  "completedAt": "2026-10-23T12:28:45.771Z",
+  "checkpoint": "MSCH-CORPUS-CP386",
   "before": {
-    "rows": 4958,
-    "folders": 1036,
-    "files": 3922,
-    "pending": 640
-  },
-  "after": {
     "rows": 5062,
     "folders": 1055,
     "files": 4007,
     "pending": 645
+  },
+  "after": {
+    "rows": 5617,
+    "folders": 1055,
+    "files": 4562,
+    "pending": 631
   },
   "completedBatches": 14,
   "scope": "User-authorized maximum 60-minute four-lane continuation; 14 MSCH metadata checkpoints. Existing source-stage gates retained.",
@@ -26,24 +26,24 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 41.9787,
+    "sourceElapsedMinutes": 35.6122,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 363,
-  "mainCursor": 363,
-  "nextBatch": "B373",
-  "nextTarget": "Nepal_Nagarkot_3D",
-  "newRows": 104,
-  "newFolders": 19,
-  "newFiles": 85,
-  "newKnownBytes": 582227347,
-  "sessionStartedAt": "2026-10-23T01:19:00.058Z",
-  "sessionElapsedMinutes": 47.35055,
-  "knownBytes": 53720520784,
+  "localHighWater": 377,
+  "mainCursor": 377,
+  "nextBatch": "B387",
+  "nextTarget": "Syarpu Lake_Syarpu PHES.gdb",
+  "newRows": 555,
+  "newFolders": 0,
+  "newFiles": 555,
+  "newKnownBytes": 2113694,
+  "sessionStartedAt": "2026-10-23T11:48:12.904Z",
+  "sessionElapsedMinutes": 40.547783333333335,
+  "knownBytes": 53722634478,
   "sessionReport": {
-    "startedAt": "2026-10-23T01:19:00.058Z",
-    "sourceStoppedAt": "2026-10-23T02:00:58.780Z",
+    "startedAt": "2026-10-23T11:48:12.904Z",
+    "sourceStoppedAt": "2026-10-23T12:23:49.636Z",
     "milestones": 14,
     "advancedLanes": 1,
     "MSCS": {
@@ -73,17 +73,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP372 /B372",
-      "beforeRows": 4958,
-      "afterRows": 5062,
-      "addedFolders": 19,
-      "addedFiles": 85,
-      "addedMetadataBytes": 582227347,
-      "pending": 645,
-      "local": 363,
-      "mainCursor": 363,
-      "notice": "N317 ACKED",
-      "next": "B373"
+      "checkpoint": "CP386 /B386",
+      "beforeRows": 5062,
+      "afterRows": 5617,
+      "addedFolders": 0,
+      "addedFiles": 555,
+      "addedMetadataBytes": 2113694,
+      "pending": 631,
+      "local": 377,
+      "mainCursor": 377,
+      "notice": "N331 ACKED",
+      "next": "B387"
     },
     "AEC": {
       "status": "TERMINAL_RECONCILIATION_REQUIRED",
@@ -114,10 +114,10 @@ export const livePhase = {
       "LSA historical 2 files /9,304 bytes unresolved.",
       "AEC G075 checkpoint readable; G076 terminal not recovered.",
       "MSCS oversized/native hashing-policy gate.",
-      "MSCH 645 FIFO folders; source-content extraction remains."
+      "MSCH 631 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 364,
+  "scannedFolders": 378,
   "phases": [
     {
       "phase": "01",
@@ -2868,6 +2868,104 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B372 Nepal_Nagarkot: 1 metadata records",
       "stop": "MSCH-CORPUS-CP372 +Local/Main363/363 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "390",
+      "lane": "MSCH /Local /Main",
+      "work": "B373 Nepal_Nagarkot_3D: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP373 +Local/Main364/364 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "391",
+      "lane": "MSCH /Local /Main",
+      "work": "B374 Nepal_Nagarkot_TM: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP374 +Local/Main365/365 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "392",
+      "lane": "MSCH /Local /Main",
+      "work": "B375 Amargadhi_PHES site.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP375 +Local/Main366/366 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "393",
+      "lane": "MSCH /Local /Main",
+      "work": "B376 Baglung district_Madi Khola PHES site.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP376 +Local/Main367/367 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "394",
+      "lane": "MSCH /Local /Main",
+      "work": "B377 Bijayapur I Small HPP_Power house.gdb: 47 metadata records",
+      "stop": "MSCH-CORPUS-CP377 +Local/Main368/368 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "395",
+      "lane": "MSCH /Local /Main",
+      "work": "B378 Chatara Hydropower Station.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP378 +Local/Main369/369 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "396",
+      "lane": "MSCH /Local /Main",
+      "work": "B379 Dailekh district_Gauri Khola PHES site.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP379 +Local/Main370/370 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "397",
+      "lane": "MSCH /Local /Main",
+      "work": "B380 Dalome_Upper Mustang Storage HPP.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP380 +Local/Main371/371 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "398",
+      "lane": "MSCH /Local /Main",
+      "work": "B381 Hudi Khola PHES site.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP381 +Local/Main372/372 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "399",
+      "lane": "MSCH /Local /Main",
+      "work": "B382 Jajarkot district_Bheri PHSE site.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP382 +Local/Main373/373 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "400",
+      "lane": "MSCH /Local /Main",
+      "work": "B383 Kakkotgaon_Bharbhung Storage HPP.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP383 +Local/Main374/374 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "401",
+      "lane": "MSCH /Local /Main",
+      "work": "B384 Khotang district_Barahi Pokhari PHSE site.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP384 +Local/Main375/375 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "402",
+      "lane": "MSCH /Local /Main",
+      "work": "B385 Sundarijal Hydropower Station.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP385 +Local/Main376/376 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "403",
+      "lane": "MSCH /Local /Main",
+      "work": "B386 Syangja district_Sukla Gandaki PHES site.gdb: 46 metadata records",
+      "stop": "MSCH-CORPUS-CP386 +Local/Main377/377 acknowledged by final reconciliation",
       "status": "Complete - stopped"
     }
   ]
