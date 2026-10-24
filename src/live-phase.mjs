@@ -1,20 +1,20 @@
 export const livePhase = {
-  "phase": "417",
-  "title": "Run23 complete — 14 checkpoints through CP400",
+  "phase": "431",
+  "title": "Run24 complete — 14 checkpoints through CP414",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-23T23:29:28.905Z",
-  "checkpoint": "MSCH-CORPUS-CP400",
+  "completedAt": "2026-10-24T01:30:29.438Z",
+  "checkpoint": "MSCH-CORPUS-CP414",
   "before": {
-    "rows": 5617,
-    "folders": 1055,
-    "files": 4562,
-    "pending": 631
-  },
-  "after": {
     "rows": 5797,
     "folders": 1065,
     "files": 4732,
     "pending": 627
+  },
+  "after": {
+    "rows": 5883,
+    "folders": 1066,
+    "files": 4817,
+    "pending": 614
   },
   "completedBatches": 14,
   "scope": "User-authorized maximum 60-minute four-lane continuation; 14 MSCH metadata checkpoints. Existing source-stage gates retained.",
@@ -26,24 +26,24 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 36.19441666666667,
+    "sourceElapsedMinutes": 33.73533333333334,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 391,
-  "mainCursor": 391,
-  "nextBatch": "B401",
-  "nextTarget": "npl-dem-central-area-only-srtm30",
-  "newRows": 180,
-  "newFolders": 10,
-  "newFiles": 170,
-  "newKnownBytes": 2671290358,
-  "sessionStartedAt": "2026-10-23T22:48:27.676Z",
-  "sessionElapsedMinutes": 41.02048333333333,
-  "knownBytes": 56393924836,
+  "localHighWater": 405,
+  "mainCursor": 405,
+  "nextBatch": "B415",
+  "nextTarget": "Nepal Health",
+  "newRows": 86,
+  "newFolders": 1,
+  "newFiles": 85,
+  "newKnownBytes": 2163064337,
+  "sessionStartedAt": "2026-10-24T00:52:01.007Z",
+  "sessionElapsedMinutes": 38.47385,
+  "knownBytes": 58556989173,
   "sessionReport": {
-    "startedAt": "2026-10-23T22:48:27.676Z",
-    "sourceStoppedAt": "2026-10-23T23:24:39.341Z",
+    "startedAt": "2026-10-24T00:52:01.007Z",
+    "sourceStoppedAt": "2026-10-24T01:25:45.127Z",
     "milestones": 14,
     "advancedLanes": 1,
     "MSCS": {
@@ -73,17 +73,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP400 /B400",
-      "beforeRows": 5617,
-      "afterRows": 5797,
-      "addedFolders": 10,
-      "addedFiles": 170,
-      "addedMetadataBytes": 2671290358,
-      "pending": 627,
-      "local": 391,
-      "mainCursor": 391,
-      "notice": "N345 ACKED",
-      "next": "B401"
+      "checkpoint": "CP414 /B414",
+      "beforeRows": 5797,
+      "afterRows": 5883,
+      "addedFolders": 1,
+      "addedFiles": 85,
+      "addedMetadataBytes": 2163064337,
+      "pending": 614,
+      "local": 405,
+      "mainCursor": 405,
+      "notice": "N359 ACKED",
+      "next": "B415"
     },
     "AEC": {
       "status": "TERMINAL_RECONCILIATION_REQUIRED",
@@ -114,10 +114,10 @@ export const livePhase = {
       "LSA historical 2 files /9,304 bytes unresolved.",
       "AEC G075 checkpoint readable; G076 terminal not recovered.",
       "MSCS oversized/native hashing-policy gate.",
-      "MSCH 627 FIFO folders; source-content extraction remains."
+      "MSCH 614 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 392,
+  "scannedFolders": 406,
   "phases": [
     {
       "phase": "01",
@@ -3064,6 +3064,104 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B400 daac_ornl_gov: 2 metadata records",
       "stop": "MSCH-CORPUS-CP400 +Local/Main391/391 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "418",
+      "lane": "MSCH /Local /Main",
+      "work": "B401 npl-dem-central-area-only-srtm30: 4 metadata records",
+      "stop": "MSCH-CORPUS-CP401 +Local/Main392/392 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "419",
+      "lane": "MSCH /Local /Main",
+      "work": "B402 NPL_adm: 48 metadata records",
+      "stop": "MSCH-CORPUS-CP402 +Local/Main393/393 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "420",
+      "lane": "MSCH /Local /Main",
+      "work": "B403 NPL_wat: 8 metadata records",
+      "stop": "MSCH-CORPUS-CP403 +Local/Main394/394 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "421",
+      "lane": "MSCH /Local /Main",
+      "work": "B404 GCN250m Global Hydrologic Curve Number Explorer: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP404 +Local/Main395/395 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "422",
+      "lane": "MSCH /Local /Main",
+      "work": "B405 Nepal Administrative Boundaries: 4 metadata records",
+      "stop": "MSCH-CORPUS-CP405 +Local/Main396/396 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "423",
+      "lane": "MSCH /Local /Main",
+      "work": "B406 Nepal Agriculture and Rural Development: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP406 +Local/Main397/397 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "424",
+      "lane": "MSCH /Local /Main",
+      "work": "B407 Nepal Airports: 4 metadata records",
+      "stop": "MSCH-CORPUS-CP407 +Local/Main398/398 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "425",
+      "lane": "MSCH /Local /Main",
+      "work": "B408 Nepal Climate Change: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP408 +Local/Main399/399 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "426",
+      "lane": "MSCH /Local /Main",
+      "work": "B409 Nepal Digital Model Elevation (DEM): 1 metadata records",
+      "stop": "MSCH-CORPUS-CP409 +Local/Main400/400 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "427",
+      "lane": "MSCH /Local /Main",
+      "work": "B410 Nepal Economic Growth: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP410 +Local/Main401/401 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "428",
+      "lane": "MSCH /Local /Main",
+      "work": "B411 Nepal Education: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP411 +Local/Main402/402 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "429",
+      "lane": "MSCH /Local /Main",
+      "work": "B412 Nepal Energy and Mining: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP412 +Local/Main403/403 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "430",
+      "lane": "MSCH /Local /Main",
+      "work": "B413 Nepal Environment: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP413 +Local/Main404/404 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "431",
+      "lane": "MSCH /Local /Main",
+      "work": "B414 Nepal Financial Sector: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP414 +Local/Main405/405 acknowledged by final reconciliation",
       "status": "Complete - stopped"
     }
   ]
