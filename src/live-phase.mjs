@@ -1,20 +1,20 @@
 export const livePhase = {
-  "phase": "487",
-  "title": "Run28 complete — 14 checkpoints through CP470",
+  "phase": "501",
+  "title": "Run29 complete — 14 checkpoints through CP484",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-24T11:23:53.556Z",
-  "checkpoint": "MSCH-CORPUS-CP470",
+  "completedAt": "2026-10-24T18:10:17.630Z",
+  "checkpoint": "MSCH-CORPUS-CP484",
   "before": {
-    "rows": 6119,
-    "folders": 1108,
-    "files": 5011,
-    "pending": 614
-  },
-  "after": {
     "rows": 6573,
     "folders": 1150,
     "files": 5423,
     "pending": 642
+  },
+  "after": {
+    "rows": 6652,
+    "folders": 1159,
+    "files": 5493,
+    "pending": 637
   },
   "completedBatches": 14,
   "scope": "User-authorized maximum 60-minute four-lane continuation; 14 MSCH metadata checkpoints. Existing source-stage gates retained.",
@@ -26,24 +26,24 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 37.09075,
+    "sourceElapsedMinutes": 37.45623333333333,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 461,
-  "mainCursor": 461,
-  "nextBatch": "B471",
-  "nextTarget": "Lib",
-  "newRows": 454,
-  "newFolders": 42,
-  "newFiles": 412,
-  "newKnownBytes": 1786393250,
-  "sessionStartedAt": "2026-10-24T10:41:29.248Z",
-  "sessionElapsedMinutes": 42.40513333333333,
-  "knownBytes": 66626125516,
+  "localHighWater": 475,
+  "mainCursor": 475,
+  "nextBatch": "B485",
+  "nextTarget": "07",
+  "newRows": 79,
+  "newFolders": 9,
+  "newFiles": 70,
+  "newKnownBytes": 2743782,
+  "sessionStartedAt": "2026-10-24T17:27:17.730Z",
+  "sessionElapsedMinutes": 42.998333333333335,
+  "knownBytes": 66628869298,
   "sessionReport": {
-    "startedAt": "2026-10-24T10:41:29.248Z",
-    "sourceStoppedAt": "2026-10-24T11:18:34.693Z",
+    "startedAt": "2026-10-24T17:27:17.730Z",
+    "sourceStoppedAt": "2026-10-24T18:04:45.104Z",
     "milestones": 14,
     "advancedLanes": 1,
     "MSCS": {
@@ -73,17 +73,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP470 /B470",
-      "beforeRows": 6119,
-      "afterRows": 6573,
-      "addedFolders": 42,
-      "addedFiles": 412,
-      "addedMetadataBytes": 1786393250,
-      "pending": 642,
-      "local": 461,
-      "mainCursor": 461,
-      "notice": "N415 ACKED",
-      "next": "B471"
+      "checkpoint": "CP484 /B484",
+      "beforeRows": 6573,
+      "afterRows": 6652,
+      "addedFolders": 9,
+      "addedFiles": 70,
+      "addedMetadataBytes": 2743782,
+      "pending": 637,
+      "local": 475,
+      "mainCursor": 475,
+      "notice": "N429 ACKED",
+      "next": "B485"
     },
     "AEC": {
       "status": "TERMINAL_RECONCILIATION_REQUIRED",
@@ -114,10 +114,10 @@ export const livePhase = {
       "LSA historical 2 files /9,304 bytes unresolved.",
       "AEC G075 checkpoint readable; G076 terminal not recovered.",
       "MSCS oversized/native hashing-policy gate.",
-      "MSCH 642 FIFO folders; source-content extraction remains."
+      "MSCH 637 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 462,
+  "scannedFolders": 476,
   "phases": [
     {
       "phase": "01",
@@ -3554,6 +3554,104 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B470 Include: 0 metadata records",
       "stop": "MSCH-CORPUS-CP470 +Local/Main461/461 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "488",
+      "lane": "MSCH /Local /Main",
+      "work": "B471 Lib: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP471 +Local/Main462/462 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "489",
+      "lane": "MSCH /Local /Main",
+      "work": "B472 Scripts: 22 metadata records",
+      "stop": "MSCH-CORPUS-CP472 +Local/Main463/463 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "490",
+      "lane": "MSCH /Local /Main",
+      "work": "B473 share: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP473 +Local/Main464/464 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "491",
+      "lane": "MSCH /Local /Main",
+      "work": "B474 cache: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP474 +Local/Main465/465 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "492",
+      "lane": "MSCH /Local /Main",
+      "work": "B475 objects: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP475 +Local/Main466/466 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "493",
+      "lane": "MSCH /Local /Main",
+      "work": "B476 tmp: 0 metadata records",
+      "stop": "MSCH-CORPUS-CP476 +Local/Main467/467 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "494",
+      "lane": "MSCH /Local /Main",
+      "work": "B477 refs: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP477 +Local/Main468/468 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "495",
+      "lane": "MSCH /Local /Main",
+      "work": "B478 00: 14 metadata records",
+      "stop": "MSCH-CORPUS-CP478 +Local/Main469/469 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "496",
+      "lane": "MSCH /Local /Main",
+      "work": "B479 01: 7 metadata records",
+      "stop": "MSCH-CORPUS-CP479 +Local/Main470/470 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "497",
+      "lane": "MSCH /Local /Main",
+      "work": "B480 02: 7 metadata records",
+      "stop": "MSCH-CORPUS-CP480 +Local/Main471/471 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "498",
+      "lane": "MSCH /Local /Main",
+      "work": "B481 03: 5 metadata records",
+      "stop": "MSCH-CORPUS-CP481 +Local/Main472/472 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "499",
+      "lane": "MSCH /Local /Main",
+      "work": "B482 04: 8 metadata records",
+      "stop": "MSCH-CORPUS-CP482 +Local/Main473/473 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "500",
+      "lane": "MSCH /Local /Main",
+      "work": "B483 05: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP483 +Local/Main474/474 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "501",
+      "lane": "MSCH /Local /Main",
+      "work": "B484 06: 5 metadata records",
+      "stop": "MSCH-CORPUS-CP484 +Local/Main475/475 acknowledged by final reconciliation",
       "status": "Complete - stopped"
     }
   ]
