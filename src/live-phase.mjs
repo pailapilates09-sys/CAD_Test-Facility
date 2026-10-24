@@ -1,20 +1,20 @@
 export const livePhase = {
-  "phase": "445",
-  "title": "Run25 complete — 14 checkpoints through CP428",
+  "phase": "459",
+  "title": "Run26 complete — 14 checkpoints through CP442",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-24T03:37:27.158Z",
-  "checkpoint": "MSCH-CORPUS-CP428",
+  "completedAt": "2026-10-24T04:29:14.738Z",
+  "checkpoint": "MSCH-CORPUS-CP442",
   "before": {
-    "rows": 5883,
-    "folders": 1066,
-    "files": 4817,
-    "pending": 614
-  },
-  "after": {
     "rows": 5978,
     "folders": 1073,
     "files": 4905,
     "pending": 607
+  },
+  "after": {
+    "rows": 6065,
+    "folders": 1084,
+    "files": 4981,
+    "pending": 604
   },
   "completedBatches": 14,
   "scope": "User-authorized maximum 60-minute four-lane continuation; 14 MSCH metadata checkpoints. Existing source-stage gates retained.",
@@ -26,24 +26,24 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 37.17986666666667,
+    "sourceElapsedMinutes": 37.24655,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 419,
-  "mainCursor": 419,
-  "nextBatch": "B429",
-  "nextTarget": "Nepal_Census_2011_District_Profiles_Demography",
-  "newRows": 95,
-  "newFolders": 7,
-  "newFiles": 88,
-  "newKnownBytes": 2066363225,
-  "sessionStartedAt": "2026-10-24T02:55:07.164Z",
-  "sessionElapsedMinutes": 42.33323333333333,
-  "knownBytes": 60623352398,
+  "localHighWater": 433,
+  "mainCursor": 433,
+  "nextBatch": "B443",
+  "nextTarget": "N28E083.SRTMGL1.hgt",
+  "newRows": 87,
+  "newFolders": 11,
+  "newFiles": 76,
+  "newKnownBytes": 3987774662,
+  "sessionStartedAt": "2026-10-24T03:46:24.403Z",
+  "sessionElapsedMinutes": 42.83891666666667,
+  "knownBytes": 64611127060,
   "sessionReport": {
-    "startedAt": "2026-10-24T02:55:07.164Z",
-    "sourceStoppedAt": "2026-10-24T03:32:17.956Z",
+    "startedAt": "2026-10-24T03:46:24.403Z",
+    "sourceStoppedAt": "2026-10-24T04:23:39.196Z",
     "milestones": 14,
     "advancedLanes": 1,
     "MSCS": {
@@ -73,17 +73,17 @@ export const livePhase = {
       "next": "B081 baseline reconciliation"
     },
     "MSCH": {
-      "checkpoint": "CP428 /B428",
-      "beforeRows": 5883,
-      "afterRows": 5978,
-      "addedFolders": 7,
-      "addedFiles": 88,
-      "addedMetadataBytes": 2066363225,
-      "pending": 607,
-      "local": 419,
-      "mainCursor": 419,
-      "notice": "N373 ACKED",
-      "next": "B429"
+      "checkpoint": "CP442 /B442",
+      "beforeRows": 5978,
+      "afterRows": 6065,
+      "addedFolders": 11,
+      "addedFiles": 76,
+      "addedMetadataBytes": 3987774662,
+      "pending": 604,
+      "local": 433,
+      "mainCursor": 433,
+      "notice": "N387 ACKED",
+      "next": "B443"
     },
     "AEC": {
       "status": "TERMINAL_RECONCILIATION_REQUIRED",
@@ -114,10 +114,10 @@ export const livePhase = {
       "LSA historical 2 files /9,304 bytes unresolved.",
       "AEC G075 checkpoint readable; G076 terminal not recovered.",
       "MSCS oversized/native hashing-policy gate.",
-      "MSCH 607 FIFO folders; source-content extraction remains."
+      "MSCH 604 FIFO folders; source-content extraction remains."
     ]
   },
-  "scannedFolders": 420,
+  "scannedFolders": 434,
   "phases": [
     {
       "phase": "01",
@@ -3260,6 +3260,104 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B428 Nepal Watercourses Rivers: 4 metadata records",
       "stop": "MSCH-CORPUS-CP428 +Local/Main419/419 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "446",
+      "lane": "MSCH /Local /Main",
+      "work": "B429 Nepal_Census_2011_District_Profiles_Demography: 2 metadata records",
+      "stop": "MSCH-CORPUS-CP429 +Local/Main420/420 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "447",
+      "lane": "MSCH /Local /Main",
+      "work": "B430 DEM of Gandaki: 29 metadata records",
+      "stop": "MSCH-CORPUS-CP430 +Local/Main421/421 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "448",
+      "lane": "MSCH /Local /Main",
+      "work": "B431 DEM of N28083_84_85 and N29083_084_085: 6 metadata records",
+      "stop": "MSCH-CORPUS-CP431 +Local/Main422/422 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "449",
+      "lane": "MSCH /Local /Main",
+      "work": "B432 DEM of Nepal_30m: 16 metadata records",
+      "stop": "MSCH-CORPUS-CP432 +Local/Main423/423 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "450",
+      "lane": "MSCH /Local /Main",
+      "work": "B433 info: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP433 +Local/Main424/424 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "451",
+      "lane": "MSCH /Local /Main",
+      "work": "B434 Merge_N27_28_83_84: 1 metadata records",
+      "stop": "MSCH-CORPUS-CP434 +Local/Main425/425 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "452",
+      "lane": "MSCH /Local /Main",
+      "work": "B435 Merge_N28_084_083: 7 metadata records",
+      "stop": "MSCH-CORPUS-CP435 +Local/Main426/426 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "453",
+      "lane": "MSCH /Local /Main",
+      "work": "B436 Mosaic to new Raster_272829_82838485: 5 metadata records",
+      "stop": "MSCH-CORPUS-CP436 +Local/Main427/427 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "454",
+      "lane": "MSCH /Local /Main",
+      "work": "B437 Mosaic to new Raster_272829_838485: 5 metadata records",
+      "stop": "MSCH-CORPUS-CP437 +Local/Main428/428 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "455",
+      "lane": "MSCH /Local /Main",
+      "work": "B438 N27E082.SRTMGL1.hgt: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP438 +Local/Main429/429 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "456",
+      "lane": "MSCH /Local /Main",
+      "work": "B439 N27E083.SRTMGL1.hgt: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP439 +Local/Main430/430 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "457",
+      "lane": "MSCH /Local /Main",
+      "work": "B440 N27E084.SRTMGL1.hgt: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP440 +Local/Main431/431 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "458",
+      "lane": "MSCH /Local /Main",
+      "work": "B441 N27E085.SRTMGL1.hgt: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP441 +Local/Main432/432 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "459",
+      "lane": "MSCH /Local /Main",
+      "work": "B442 N28E082.SRTMGL1.hgt: 3 metadata records",
+      "stop": "MSCH-CORPUS-CP442 +Local/Main433/433 acknowledged by final reconciliation",
       "status": "Complete - stopped"
     }
   ]
