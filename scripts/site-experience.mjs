@@ -8,7 +8,7 @@ export const workspaceSections=[
  {label:'Construction',path:'construction/',prefixes:['construction/','cad/']},
  {label:'Pilates SketchUp',path:'construction/models/pilates-sketchup/',prefixes:['construction/models/pilates-sketchup/']},
  {label:'Layout Designer',path:'construction/models/layout-designer/',prefixes:['construction/models/layout-designer/']},
- {label:'Building Plans',path:'construction/models/basanti-residence/',prefixes:['construction/models/basanti-residence/']},
+ {label:'Building Plans',path:'construction/models/basanti-residence/',prefixes:['construction/models/basanti-residence/','construction/models/basanti-workbench/']},
  {label:'Versions + milestone',path:'construction/estimates/pilates-astra-2026-10-15/milestone.html',prefixes:['construction/estimates/pilates-astra-2026-10-15/']},
  {label:'Progress',path:'progress/'},
  {label:'Memory Posters',path:'memory-posters/'}

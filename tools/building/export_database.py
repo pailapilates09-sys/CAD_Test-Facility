@@ -15,7 +15,7 @@ c.executescript('''
  CREATE TABLE model_issues(id TEXT PRIMARY KEY,title TEXT,status TEXT,record_json TEXT);
  ''')
 dump=lambda r:json.dumps(r,ensure_ascii=False,separators=(',',':'))
-for key in ['schema','id','title','source_sha256','units','axes','calibration','editing','detailing']:
+for key in ['schema','id','title','source_sha256','units','axes','calibration','editing','detailing','workbench']:
  if key in project:c.execute('INSERT INTO model_metadata VALUES(?,?)',(key,dump(project[key])))
 for r in project['levels']:c.execute('INSERT INTO model_levels VALUES(?,?,?,?,?,?)',(r['id'],r['label'],r['elevation_m'],r['stated_area_m2'],r['plan_page'],dump(r)))
 for r in project['components']:c.execute('INSERT INTO model_components VALUES(?,?,?,?,?,?,?)',(r['id'],r['label'],r['kind'],r['level'],r['status'],r['source']['page'],dump(r)))

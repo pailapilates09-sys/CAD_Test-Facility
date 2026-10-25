@@ -7,6 +7,7 @@ import {validateProject,componentDimensions,escapeHTML} from '../public/construc
 import {buildConstructionModel,barSchedule,constructionSteps} from '../public/construction/models/basanti-residence/construction-model.js';
 import {detailSVG,drawingDocument,dimensionedPlanMarkup} from '../public/construction/models/basanti-residence/shop-drawings.js';
 import {renderRegister} from '../public/construction/models/basanti-residence/register-view.js';
+import {buildWorkbench} from './building-workbench.mjs';
 import {buildBuildingIFC} from './building-ifc.mjs';
 // PDF zero-width strokes are device hairlines; SVG zero-width strokes disappear.
 // Keep the archived exporter output unchanged and adapt only browser presentation.
@@ -38,12 +39,13 @@ export async function buildBuildingProject(root,dist){
  const band=construction.band_studies[0];await writeFile(new URL('drawings/band-section.svg',base),detailSVG(construction,band));drawings.push({file:'band-section.svg',type:'band section study',source_pages:[19],units:'mm',release:'not for fabrication'});await writeFile(new URL('drawings/index.json',base),JSON.stringify(drawings,null,2)+'\n');
  execFileSync('python3',[fileURLToPath(new URL('tools/building/export_database.py',root)),fileURLToPath(new URL('project.json',data)),fileURLToPath(new URL('extraction.sqlite.gz',source)),fileURLToPath(data),'--construction',fileURLToPath(new URL('construction-model.json',data))],{stdio:'pipe',encoding:'utf8'});
  await buildBuildingIFC(root,data,construction);
- const assetNames=['building.js','building-model.js','three-adapter.js','construction-model.js','view-math.js','shop-drawings.js','register-view.js','building.css','data/project.json'],inputs=Object.fromEntries(await Promise.all(assetNames.map(async name=>[name,await readFile(new URL(name,base),'utf8')])));
- for(const path of ['scripts/building-project.mjs','scripts/building-ifc.mjs','tools/building/export_ifc.py','tools/building/export_database.py','tools/building/requirements-ifc.txt'])inputs['$build/'+path]=await readFile(new URL(path,root),'utf8');
+ const assetNames=['building.js','building-model.js','three-adapter.js','construction-model.js','view-math.js','shop-drawings.js','register-view.js','stair-model.js','building.css','data/project.json'],inputs=Object.fromEntries(await Promise.all(assetNames.map(async name=>[name,await readFile(new URL(name,base),'utf8')])));
+ for(const path of ['scripts/building-project.mjs','scripts/building-ifc.mjs','tools/building/export_ifc.py','tools/building/export_database.py','tools/building/requirements-ifc.txt','scripts/building-workbench.mjs'])inputs['$build/'+path]=await readFile(new URL(path,root),'utf8');
+ for(const name of await readdir(new URL('construction/models/basanti-workbench/',dist)))if(/\.(js|css|html)$/.test(name))inputs['$workbench/'+name]=await readFile(new URL('construction/models/basanti-workbench/'+name,dist),'utf8');
  const assets=versionBuildingAssets(inputs);
- for(const [name,text]of Object.entries(assets.scripts))await writeFile(new URL(name,base),text);
+ for(const [name,text]of Object.entries(assets.scripts).filter(([name])=>assetNames.includes(name)))await writeFile(new URL(name,base),text);
  const page=new URL('index.html',base);let html=(await readFile(page,'utf8')).replace('src="./building.js"',`src="./building.js?v=${assets.revision}"`).replace('href="./building.css"',`href="./building.css?v=${assets.revision}"`).replace(/href="(\.\/data\/[^"?#]+)"/g,`href="$1?v=${assets.revision}"`);
  const rows=renderRegister(construction,project.components).html;
  html=html.replace('<!-- BUILDING_ROWS -->',rows).replace('<!-- FLOOR_OPTIONS -->',project.levels.map(l=>`<option value="${l.id}">${escapeHTML(l.label)} · +${l.elevation_m} m</option>`).join('')).replace('<!-- BUILDING_DATA -->',JSON.stringify(project).replaceAll('<','\\u003c'));
- await writeFile(page,html);return {components:project.components.length,pages:21,source:manifest.sha256};
+ await writeFile(page,html);await buildWorkbench(dist,project,assets.revision);return {components:project.components.length,pages:21,source:manifest.sha256};
 }
