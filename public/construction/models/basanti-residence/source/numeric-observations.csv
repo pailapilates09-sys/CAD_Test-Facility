@@ -1,0 +1,1317 @@
+id,page,span_id,value_text,context,semantic_status
+n00001,1,p01-t0001,6,Street no 6,unassigned source token; not an accepted dimension
+n00002,1,p01-t0016,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00003,1,p01-t0020,9,Height of Bldg. 9 m,unassigned source token; not an accepted dimension
+n00004,1,p01-t0024,82,82,unassigned source token; not an accepted dimension
+n00005,1,p01-t0034,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00006,1,p01-t0035,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00007,1,p01-t0037,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00008,1,p01-t0038,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00009,1,p01-t0042,108.45,108.45  sqm,unassigned source token; not an accepted dimension
+n00010,1,p01-t0043,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00011,1,p01-t0044,1.065,1.065,unassigned source token; not an accepted dimension
+n00012,1,p01-t0045,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00013,1,p01-t0047,17,"Pokhara-17, Kaski",unassigned source token; not an accepted dimension
+n00014,1,p01-t0053,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00015,1,p01-t0054,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00016,1,p01-t0055,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00017,1,p01-t0059,28.200149,28.200149N,unassigned source token; not an accepted dimension
+n00018,1,p01-t0060,84.017289,84.017289E,unassigned source token; not an accepted dimension
+n00019,2,p02-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n00020,2,p02-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n00021,2,p02-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00022,2,p02-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00023,2,p02-t0029,9,9 m,unassigned source token; not an accepted dimension
+n00024,2,p02-t0031,82,82,unassigned source token; not an accepted dimension
+n00025,2,p02-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00026,2,p02-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00027,2,p02-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n00028,2,p02-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00029,2,p02-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n00030,2,p02-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00031,2,p02-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00032,2,p02-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00033,2,p02-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00034,2,p02-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00035,2,p02-t0050,50.82,Area: 50.82 sqm,unassigned source token; not an accepted dimension
+n00036,2,p02-t0052,1,1,unassigned source token; not an accepted dimension
+n00037,2,p02-t0056,2,2,unassigned source token; not an accepted dimension
+n00038,2,p02-t0057,3,3,unassigned source token; not an accepted dimension
+n00039,2,p02-t0058,4,4,unassigned source token; not an accepted dimension
+n00040,2,p02-t0059,1,1,unassigned source token; not an accepted dimension
+n00041,2,p02-t0060,2,2,unassigned source token; not an accepted dimension
+n00042,2,p02-t0061,3,3,unassigned source token; not an accepted dimension
+n00043,2,p02-t0062,4,4,unassigned source token; not an accepted dimension
+n00044,2,p02-t0063,355,355,unassigned source token; not an accepted dimension
+n00045,2,p02-t0064,3785,3785,unassigned source token; not an accepted dimension
+n00046,2,p02-t0065,355,355,unassigned source token; not an accepted dimension
+n00047,2,p02-t0066,3220,3220,unassigned source token; not an accepted dimension
+n00048,2,p02-t0067,355,355,unassigned source token; not an accepted dimension
+n00049,2,p02-t0068,3245,3245,unassigned source token; not an accepted dimension
+n00050,2,p02-t0069,355,355,unassigned source token; not an accepted dimension
+n00051,2,p02-t0070,4140,4140,unassigned source token; not an accepted dimension
+n00052,2,p02-t0071,3575,3575,unassigned source token; not an accepted dimension
+n00053,2,p02-t0072,3600,3600,unassigned source token; not an accepted dimension
+n00054,2,p02-t0073,11675,11675,unassigned source token; not an accepted dimension
+n00055,2,p02-t0074,355,355,unassigned source token; not an accepted dimension
+n00056,2,p02-t0075,3090,3090,unassigned source token; not an accepted dimension
+n00057,2,p02-t0076,355,355,unassigned source token; not an accepted dimension
+n00058,2,p02-t0077,3445,3445,unassigned source token; not an accepted dimension
+n00059,2,p02-t0078,3800,3800,unassigned source token; not an accepted dimension
+n00060,2,p02-t0079,355,355,unassigned source token; not an accepted dimension
+n00061,2,p02-t0080,3245,3245,unassigned source token; not an accepted dimension
+n00062,2,p02-t0081,3220,3220,unassigned source token; not an accepted dimension
+n00063,2,p02-t0082,355,355,unassigned source token; not an accepted dimension
+n00064,2,p02-t0083,355,355,unassigned source token; not an accepted dimension
+n00065,2,p02-t0084,3785,3785,unassigned source token; not an accepted dimension
+n00066,2,p02-t0085,355,355,unassigned source token; not an accepted dimension
+n00067,2,p02-t0086,4140,4140,unassigned source token; not an accepted dimension
+n00068,2,p02-t0087,3575,3575,unassigned source token; not an accepted dimension
+n00069,2,p02-t0088,3600,3600,unassigned source token; not an accepted dimension
+n00070,2,p02-t0089,11675,11675,unassigned source token; not an accepted dimension
+n00071,2,p02-t0090,355,355,unassigned source token; not an accepted dimension
+n00072,2,p02-t0091,3090,3090,unassigned source token; not an accepted dimension
+n00073,2,p02-t0092,355,355,unassigned source token; not an accepted dimension
+n00074,2,p02-t0093,1105,1105,unassigned source token; not an accepted dimension
+n00075,2,p02-t0094,3445,3445,unassigned source token; not an accepted dimension
+n00076,2,p02-t0095,4905,4905,unassigned source token; not an accepted dimension
+n00077,2,p02-t0097,3220,3220 X 3940,unassigned source token; not an accepted dimension
+n00078,2,p02-t0097,3940,3220 X 3940,unassigned source token; not an accepted dimension
+n00079,2,p02-t0099,3575,3575 X 3075,unassigned source token; not an accepted dimension
+n00080,2,p02-t0099,3075,3575 X 3075,unassigned source token; not an accepted dimension
+n00081,2,p02-t0101,2685,2685 X 1065,unassigned source token; not an accepted dimension
+n00082,2,p02-t0101,1065,2685 X 1065,unassigned source token; not an accepted dimension
+n00083,2,p02-t0115,720,720,unassigned source token; not an accepted dimension
+n00084,3,p03-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n00085,3,p03-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n00086,3,p03-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00087,3,p03-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00088,3,p03-t0029,9,9 m,unassigned source token; not an accepted dimension
+n00089,3,p03-t0031,82,82,unassigned source token; not an accepted dimension
+n00090,3,p03-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00091,3,p03-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00092,3,p03-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n00093,3,p03-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00094,3,p03-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n00095,3,p03-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00096,3,p03-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00097,3,p03-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00098,3,p03-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00099,3,p03-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00100,3,p03-t0057,47.67,Area: 47.67 sqm,unassigned source token; not an accepted dimension
+n00101,3,p03-t0059,1,1,unassigned source token; not an accepted dimension
+n00102,3,p03-t0063,2,2,unassigned source token; not an accepted dimension
+n00103,3,p03-t0064,3,3,unassigned source token; not an accepted dimension
+n00104,3,p03-t0065,4,4,unassigned source token; not an accepted dimension
+n00105,3,p03-t0066,1,1,unassigned source token; not an accepted dimension
+n00106,3,p03-t0067,2,2,unassigned source token; not an accepted dimension
+n00107,3,p03-t0068,3,3,unassigned source token; not an accepted dimension
+n00108,3,p03-t0069,4,4,unassigned source token; not an accepted dimension
+n00109,3,p03-t0071,355,355,unassigned source token; not an accepted dimension
+n00110,3,p03-t0072,3785,3785,unassigned source token; not an accepted dimension
+n00111,3,p03-t0073,355,355,unassigned source token; not an accepted dimension
+n00112,3,p03-t0074,3220,3220,unassigned source token; not an accepted dimension
+n00113,3,p03-t0075,355,355,unassigned source token; not an accepted dimension
+n00114,3,p03-t0076,3245,3245,unassigned source token; not an accepted dimension
+n00115,3,p03-t0077,4140,4140,unassigned source token; not an accepted dimension
+n00116,3,p03-t0078,3575,3575,unassigned source token; not an accepted dimension
+n00117,3,p03-t0079,3600,3600,unassigned source token; not an accepted dimension
+n00118,3,p03-t0080,11675,11675,unassigned source token; not an accepted dimension
+n00119,3,p03-t0081,355,355,unassigned source token; not an accepted dimension
+n00120,3,p03-t0082,3090,3090,unassigned source token; not an accepted dimension
+n00121,3,p03-t0083,355,355,unassigned source token; not an accepted dimension
+n00122,3,p03-t0084,3445,3445,unassigned source token; not an accepted dimension
+n00123,3,p03-t0085,3800,3800,unassigned source token; not an accepted dimension
+n00124,3,p03-t0086,355,355,unassigned source token; not an accepted dimension
+n00125,3,p03-t0087,3245,3245,unassigned source token; not an accepted dimension
+n00126,3,p03-t0088,3220,3220,unassigned source token; not an accepted dimension
+n00127,3,p03-t0089,355,355,unassigned source token; not an accepted dimension
+n00128,3,p03-t0090,355,355,unassigned source token; not an accepted dimension
+n00129,3,p03-t0091,3785,3785,unassigned source token; not an accepted dimension
+n00130,3,p03-t0092,355,355,unassigned source token; not an accepted dimension
+n00131,3,p03-t0093,4140,4140,unassigned source token; not an accepted dimension
+n00132,3,p03-t0094,3575,3575,unassigned source token; not an accepted dimension
+n00133,3,p03-t0095,3600,3600,unassigned source token; not an accepted dimension
+n00134,3,p03-t0096,11675,11675,unassigned source token; not an accepted dimension
+n00135,3,p03-t0097,355,355,unassigned source token; not an accepted dimension
+n00136,3,p03-t0098,3090,3090,unassigned source token; not an accepted dimension
+n00137,3,p03-t0099,355,355,unassigned source token; not an accepted dimension
+n00138,3,p03-t0100,3445,3445,unassigned source token; not an accepted dimension
+n00139,3,p03-t0101,4905,4905,unassigned source token; not an accepted dimension
+n00140,3,p03-t0103,2690,2690 X 1060,unassigned source token; not an accepted dimension
+n00141,3,p03-t0103,1060,2690 X 1060,unassigned source token; not an accepted dimension
+n00142,3,p03-t0105,3220,3220 X 3345,unassigned source token; not an accepted dimension
+n00143,3,p03-t0105,3345,3220 X 3345,unassigned source token; not an accepted dimension
+n00144,3,p03-t0107,3575,3575 X 3420,unassigned source token; not an accepted dimension
+n00145,3,p03-t0107,3420,3575 X 3420,unassigned source token; not an accepted dimension
+n00146,3,p03-t0108,355,355,unassigned source token; not an accepted dimension
+n00147,3,p03-t0109,815,815,unassigned source token; not an accepted dimension
+n00148,3,p03-t0112,1105,1105,unassigned source token; not an accepted dimension
+n00149,4,p04-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n00150,4,p04-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n00151,4,p04-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00152,4,p04-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00153,4,p04-t0029,9,9 m,unassigned source token; not an accepted dimension
+n00154,4,p04-t0031,82,82,unassigned source token; not an accepted dimension
+n00155,4,p04-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00156,4,p04-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00157,4,p04-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n00158,4,p04-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00159,4,p04-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n00160,4,p04-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00161,4,p04-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00162,4,p04-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00163,4,p04-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00164,4,p04-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00165,4,p04-t0051,17.09,Area: 17.09 sqm,unassigned source token; not an accepted dimension
+n00166,4,p04-t0053,1,1,unassigned source token; not an accepted dimension
+n00167,4,p04-t0057,2,2,unassigned source token; not an accepted dimension
+n00168,4,p04-t0058,3,3,unassigned source token; not an accepted dimension
+n00169,4,p04-t0059,4,4,unassigned source token; not an accepted dimension
+n00170,4,p04-t0060,1,1,unassigned source token; not an accepted dimension
+n00171,4,p04-t0061,2,2,unassigned source token; not an accepted dimension
+n00172,4,p04-t0062,3,3,unassigned source token; not an accepted dimension
+n00173,4,p04-t0063,4,4,unassigned source token; not an accepted dimension
+n00174,4,p04-t0064,355,355,unassigned source token; not an accepted dimension
+n00175,4,p04-t0065,3785,3785,unassigned source token; not an accepted dimension
+n00176,4,p04-t0066,355,355,unassigned source token; not an accepted dimension
+n00177,4,p04-t0067,4140,4140,unassigned source token; not an accepted dimension
+n00178,4,p04-t0068,3575,3575,unassigned source token; not an accepted dimension
+n00179,4,p04-t0069,3600,3600,unassigned source token; not an accepted dimension
+n00180,4,p04-t0070,11675,11675,unassigned source token; not an accepted dimension
+n00181,4,p04-t0071,355,355,unassigned source token; not an accepted dimension
+n00182,4,p04-t0072,3090,3090,unassigned source token; not an accepted dimension
+n00183,4,p04-t0073,355,355,unassigned source token; not an accepted dimension
+n00184,4,p04-t0074,3445,3445,unassigned source token; not an accepted dimension
+n00185,4,p04-t0075,3800,3800,unassigned source token; not an accepted dimension
+n00186,4,p04-t0076,355,355,unassigned source token; not an accepted dimension
+n00187,4,p04-t0077,3785,3785,unassigned source token; not an accepted dimension
+n00188,4,p04-t0078,355,355,unassigned source token; not an accepted dimension
+n00189,4,p04-t0079,4140,4140,unassigned source token; not an accepted dimension
+n00190,4,p04-t0080,3575,3575,unassigned source token; not an accepted dimension
+n00191,4,p04-t0081,3600,3600,unassigned source token; not an accepted dimension
+n00192,4,p04-t0082,11675,11675,unassigned source token; not an accepted dimension
+n00193,4,p04-t0084,2690,2690 X 1060,unassigned source token; not an accepted dimension
+n00194,4,p04-t0084,1060,2690 X 1060,unassigned source token; not an accepted dimension
+n00195,4,p04-t0085,5635,5635,unassigned source token; not an accepted dimension
+n00196,4,p04-t0087,815,815,unassigned source token; not an accepted dimension
+n00197,4,p04-t0088,405,405,unassigned source token; not an accepted dimension
+n00198,5,p05-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n00199,5,p05-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n00200,5,p05-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00201,5,p05-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00202,5,p05-t0029,9,9 m,unassigned source token; not an accepted dimension
+n00203,5,p05-t0031,82,82,unassigned source token; not an accepted dimension
+n00204,5,p05-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00205,5,p05-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00206,5,p05-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n00207,5,p05-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00208,5,p05-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n00209,5,p05-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00210,5,p05-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00211,5,p05-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00212,5,p05-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00213,5,p05-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00214,5,p05-t0049,1,1,unassigned source token; not an accepted dimension
+n00215,5,p05-t0053,2,2,unassigned source token; not an accepted dimension
+n00216,5,p05-t0054,3,3,unassigned source token; not an accepted dimension
+n00217,5,p05-t0055,4,4,unassigned source token; not an accepted dimension
+n00218,5,p05-t0056,1,1,unassigned source token; not an accepted dimension
+n00219,5,p05-t0057,2,2,unassigned source token; not an accepted dimension
+n00220,5,p05-t0058,3,3,unassigned source token; not an accepted dimension
+n00221,5,p05-t0059,4,4,unassigned source token; not an accepted dimension
+n00222,5,p05-t0060,11675,11675,unassigned source token; not an accepted dimension
+n00223,5,p05-t0061,11675,11675,unassigned source token; not an accepted dimension
+n00224,5,p05-t0062,5755,5755,unassigned source token; not an accepted dimension
+n00225,5,p05-t0064,405,405,unassigned source token; not an accepted dimension
+n00226,5,p05-t0068,5255,5255,unassigned source token; not an accepted dimension
+n00227,5,p05-t0069,6415,6415,unassigned source token; not an accepted dimension
+n00228,5,p05-t0070,4615,4615,unassigned source token; not an accepted dimension
+n00229,5,p05-t0071,8900,8900,unassigned source token; not an accepted dimension
+n00230,5,p05-t0072,2770,2770,unassigned source token; not an accepted dimension
+n00231,6,p06-t0011,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00232,6,p06-t0015,9,Height of Bldg. 9 m,unassigned source token; not an accepted dimension
+n00233,6,p06-t0019,82,82,unassigned source token; not an accepted dimension
+n00234,6,p06-t0029,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00235,6,p06-t0030,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00236,6,p06-t0032,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00237,6,p06-t0033,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00238,6,p06-t0037,108.45,108.45  sqm,unassigned source token; not an accepted dimension
+n00239,6,p06-t0038,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00240,6,p06-t0039,1.065,1.065,unassigned source token; not an accepted dimension
+n00241,6,p06-t0040,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00242,6,p06-t0042,17,"Pokhara-17, Kaski",unassigned source token; not an accepted dimension
+n00243,6,p06-t0048,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00244,6,p06-t0049,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00245,6,p06-t0050,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00246,7,p07-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n00247,7,p07-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n00248,7,p07-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00249,7,p07-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00250,7,p07-t0029,9,9 m,unassigned source token; not an accepted dimension
+n00251,7,p07-t0031,82,82,unassigned source token; not an accepted dimension
+n00252,7,p07-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00253,7,p07-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00254,7,p07-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n00255,7,p07-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00256,7,p07-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n00257,7,p07-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00258,7,p07-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00259,7,p07-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00260,7,p07-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00261,7,p07-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00262,7,p07-t0047,25,25mm thick floor finishnig,unassigned source token; not an accepted dimension
+n00263,7,p07-t0048,75,75mm thick PCC(1:3:6),unassigned source token; not an accepted dimension
+n00264,7,p07-t0048,1,75mm thick PCC(1:3:6),unassigned source token; not an accepted dimension
+n00265,7,p07-t0048,3,75mm thick PCC(1:3:6),unassigned source token; not an accepted dimension
+n00266,7,p07-t0048,6,75mm thick PCC(1:3:6),unassigned source token; not an accepted dimension
+n00267,7,p07-t0049,200,200mm Boulder Soling,unassigned source token; not an accepted dimension
+n00268,7,p07-t0052,+0,LVL +0MM PLINTH,unassigned source token; not an accepted dimension
+n00269,7,p07-t0054,-600,LVL -600,unassigned source token; not an accepted dimension
+n00270,7,p07-t0056,+625,LVL +625,unassigned source token; not an accepted dimension
+n00271,7,p07-t0059,+3000,LVL +3000,unassigned source token; not an accepted dimension
+n00272,7,p07-t0061,+3625,LVL +3625,unassigned source token; not an accepted dimension
+n00273,7,p07-t0063,+5100,LVL +5100,unassigned source token; not an accepted dimension
+n00274,7,p07-t0065,+6000,LVL +6000,unassigned source token; not an accepted dimension
+n00275,7,p07-t0066,+2100,LVL +2100,unassigned source token; not an accepted dimension
+n00276,7,p07-t0068,+6625,LVL +6625,unassigned source token; not an accepted dimension
+n00277,7,p07-t0070,+8100,LVL +8100,unassigned source token; not an accepted dimension
+n00278,7,p07-t0072,+9000,LVL +9000,unassigned source token; not an accepted dimension
+n00279,7,p07-t0075,1,1,unassigned source token; not an accepted dimension
+n00280,7,p07-t0076,2,2,unassigned source token; not an accepted dimension
+n00281,7,p07-t0077,3,3,unassigned source token; not an accepted dimension
+n00282,7,p07-t0078,4,4,unassigned source token; not an accepted dimension
+n00283,7,p07-t0094,1210,1210 X 2134,unassigned source token; not an accepted dimension
+n00284,7,p07-t0094,2134,1210 X 2134,unassigned source token; not an accepted dimension
+n00285,7,p07-t0095,914,914 X 1981,unassigned source token; not an accepted dimension
+n00286,7,p07-t0095,1981,914 X 1981,unassigned source token; not an accepted dimension
+n00287,7,p07-t0096,762,762 X 1829,unassigned source token; not an accepted dimension
+n00288,7,p07-t0096,1829,762 X 1829,unassigned source token; not an accepted dimension
+n00289,7,p07-t0097,1829,1829 X 1829,unassigned source token; not an accepted dimension
+n00290,7,p07-t0097,1829,1829 X 1829,unassigned source token; not an accepted dimension
+n00291,7,p07-t0098,1829,1829 X 1524,unassigned source token; not an accepted dimension
+n00292,7,p07-t0098,1524,1829 X 1524,unassigned source token; not an accepted dimension
+n00293,7,p07-t0099,1524,1524 X 1524,unassigned source token; not an accepted dimension
+n00294,7,p07-t0099,1524,1524 X 1524,unassigned source token; not an accepted dimension
+n00295,7,p07-t0100,1524,1524 X 2130,unassigned source token; not an accepted dimension
+n00296,7,p07-t0100,2130,1524 X 2130,unassigned source token; not an accepted dimension
+n00297,7,p07-t0101,609,609 X 1000,unassigned source token; not an accepted dimension
+n00298,7,p07-t0101,1000,609 X 1000,unassigned source token; not an accepted dimension
+n00299,7,p07-t0102,1285,1285 X 2743,unassigned source token; not an accepted dimension
+n00300,7,p07-t0102,2743,1285 X 2743,unassigned source token; not an accepted dimension
+n00301,7,p07-t0103,1372,1372 X 2743,unassigned source token; not an accepted dimension
+n00302,7,p07-t0103,2743,1372 X 2743,unassigned source token; not an accepted dimension
+n00303,7,p07-t0104,1,1,unassigned source token; not an accepted dimension
+n00304,7,p07-t0105,3,3,unassigned source token; not an accepted dimension
+n00305,7,p07-t0106,6,6,unassigned source token; not an accepted dimension
+n00306,7,p07-t0107,5,5,unassigned source token; not an accepted dimension
+n00307,7,p07-t0108,1,1,unassigned source token; not an accepted dimension
+n00308,7,p07-t0109,4,4,unassigned source token; not an accepted dimension
+n00309,7,p07-t0115,1067,1067 X 2743,unassigned source token; not an accepted dimension
+n00310,7,p07-t0115,2743,1067 X 2743,unassigned source token; not an accepted dimension
+n00311,7,p07-t0116,5,5,unassigned source token; not an accepted dimension
+n00312,7,p07-t0120,3200,3200 X 2743,unassigned source token; not an accepted dimension
+n00313,7,p07-t0120,2743,3200 X 2743,unassigned source token; not an accepted dimension
+n00314,7,p07-t0121,1981,1981 X 2743,unassigned source token; not an accepted dimension
+n00315,7,p07-t0121,2743,1981 X 2743,unassigned source token; not an accepted dimension
+n00316,7,p07-t0123,1219,1219 X 2743,unassigned source token; not an accepted dimension
+n00317,7,p07-t0123,2743,1219 X 2743,unassigned source token; not an accepted dimension
+n00318,8,p08-t0001,1,1,unassigned source token; not an accepted dimension
+n00319,8,p08-t0005,2,2,unassigned source token; not an accepted dimension
+n00320,8,p08-t0006,3,3,unassigned source token; not an accepted dimension
+n00321,8,p08-t0007,4,4,unassigned source token; not an accepted dimension
+n00322,8,p08-t0008,1,1,unassigned source token; not an accepted dimension
+n00323,8,p08-t0009,2,2,unassigned source token; not an accepted dimension
+n00324,8,p08-t0010,3,3,unassigned source token; not an accepted dimension
+n00325,8,p08-t0011,4,4,unassigned source token; not an accepted dimension
+n00326,8,p08-t0012,4140,4140,unassigned source token; not an accepted dimension
+n00327,8,p08-t0013,3575,3575,unassigned source token; not an accepted dimension
+n00328,8,p08-t0014,3600,3600,unassigned source token; not an accepted dimension
+n00329,8,p08-t0015,3445,3445,unassigned source token; not an accepted dimension
+n00330,8,p08-t0016,4140,4140,unassigned source token; not an accepted dimension
+n00331,8,p08-t0017,3575,3575,unassigned source token; not an accepted dimension
+n00332,8,p08-t0018,3600,3600,unassigned source token; not an accepted dimension
+n00333,8,p08-t0019,3445,3445,unassigned source token; not an accepted dimension
+n00334,8,p08-t0020,8,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00335,8,p08-t0020,4,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00336,8,p08-t0021,100,100mm c/c @ the support,unassigned source token; not an accepted dimension
+n00337,8,p08-t0022,150,150mm c/c @ the Mid span,unassigned source token; not an accepted dimension
+n00338,8,p08-t0029,4,4 NOS.-20 mm Ø,unassigned source token; not an accepted dimension
+n00339,8,p08-t0029,-20,4 NOS.-20 mm Ø,unassigned source token; not an accepted dimension
+n00340,8,p08-t0030,4,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00341,8,p08-t0030,-16,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00342,8,p08-t0031,4,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00343,8,p08-t0031,-16,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00344,8,p08-t0032,4,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00345,8,p08-t0032,-16,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00346,8,p08-t0033,4,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00347,8,p08-t0033,-16,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00348,8,p08-t0034,4,4 NOS.-12 mm Ø,unassigned source token; not an accepted dimension
+n00349,8,p08-t0034,-12,4 NOS.-12 mm Ø,unassigned source token; not an accepted dimension
+n00350,8,p08-t0035,4,4 NOS.-20 mm Ø,unassigned source token; not an accepted dimension
+n00351,8,p08-t0035,-20,4 NOS.-20 mm Ø,unassigned source token; not an accepted dimension
+n00352,8,p08-t0036,4,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00353,8,p08-t0036,-16,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00354,8,p08-t0037,4,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00355,8,p08-t0037,-16,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00356,8,p08-t0038,4,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00357,8,p08-t0038,-16,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00358,8,p08-t0039,4,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00359,8,p08-t0039,-16,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00360,8,p08-t0040,4,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00361,8,p08-t0040,-16,4 NOS.-16 mm Ø,unassigned source token; not an accepted dimension
+n00362,8,p08-t0041,355,355,unassigned source token; not an accepted dimension
+n00363,8,p08-t0042,8,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00364,8,p08-t0042,4,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00365,8,p08-t0043,100,100mm c/c @ the support,unassigned source token; not an accepted dimension
+n00366,8,p08-t0044,150,150mm c/c @ the Mid span,unassigned source token; not an accepted dimension
+n00367,8,p08-t0045,8,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00368,8,p08-t0045,4,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00369,8,p08-t0046,100,100mm c/c @ the support,unassigned source token; not an accepted dimension
+n00370,8,p08-t0047,150,150mm c/c @ the Mid span,unassigned source token; not an accepted dimension
+n00371,8,p08-t0048,8,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00372,8,p08-t0048,4,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00373,8,p08-t0049,100,100mm c/c @ the support,unassigned source token; not an accepted dimension
+n00374,8,p08-t0050,150,150mm c/c @ the Mid span,unassigned source token; not an accepted dimension
+n00375,8,p08-t0051,8,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00376,8,p08-t0051,4,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00377,8,p08-t0052,100,100mm c/c @ the support,unassigned source token; not an accepted dimension
+n00378,8,p08-t0053,150,150mm c/c @ the Mid span,unassigned source token; not an accepted dimension
+n00379,8,p08-t0054,8,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00380,8,p08-t0054,4,8 mmØ 4 Legged Stirrups,unassigned source token; not an accepted dimension
+n00381,8,p08-t0055,100,100mm c/c @ the support,unassigned source token; not an accepted dimension
+n00382,8,p08-t0056,150,150mm c/c @ the Mid span,unassigned source token; not an accepted dimension
+n00383,8,p08-t0058,355,355,unassigned source token; not an accepted dimension
+n00384,8,p08-t0059,355,355,unassigned source token; not an accepted dimension
+n00385,8,p08-t0060,355,355,unassigned source token; not an accepted dimension
+n00386,8,p08-t0061,355,355,unassigned source token; not an accepted dimension
+n00387,8,p08-t0062,355,355,unassigned source token; not an accepted dimension
+n00388,8,p08-t0063,355,355,unassigned source token; not an accepted dimension
+n00389,8,p08-t0064,355,355,unassigned source token; not an accepted dimension
+n00390,8,p08-t0065,355,355,unassigned source token; not an accepted dimension
+n00391,8,p08-t0066,355,355,unassigned source token; not an accepted dimension
+n00392,8,p08-t0067,355,355,unassigned source token; not an accepted dimension
+n00393,8,p08-t0088,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00394,8,p08-t0092,9,Height of Bldg. 9 m,unassigned source token; not an accepted dimension
+n00395,8,p08-t0096,82,82,unassigned source token; not an accepted dimension
+n00396,8,p08-t0106,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00397,8,p08-t0107,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00398,8,p08-t0109,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00399,8,p08-t0110,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00400,8,p08-t0114,108.45,108.45  sqm,unassigned source token; not an accepted dimension
+n00401,8,p08-t0115,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00402,8,p08-t0116,1.065,1.065,unassigned source token; not an accepted dimension
+n00403,8,p08-t0117,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00404,8,p08-t0119,17,"Pokhara-17, Kaski",unassigned source token; not an accepted dimension
+n00405,8,p08-t0125,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00406,8,p08-t0126,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00407,8,p08-t0127,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00408,9,p09-t0007,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00409,9,p09-t0011,9,Height of Bldg. 9 m,unassigned source token; not an accepted dimension
+n00410,9,p09-t0015,82,82,unassigned source token; not an accepted dimension
+n00411,9,p09-t0025,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00412,9,p09-t0026,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00413,9,p09-t0028,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00414,9,p09-t0029,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00415,9,p09-t0033,108.45,108.45  sqm,unassigned source token; not an accepted dimension
+n00416,9,p09-t0034,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00417,9,p09-t0035,1.065,1.065,unassigned source token; not an accepted dimension
+n00418,9,p09-t0036,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00419,9,p09-t0038,17,"Pokhara-17, Kaski",unassigned source token; not an accepted dimension
+n00420,9,p09-t0044,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00421,9,p09-t0045,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00422,9,p09-t0046,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00423,9,p09-t0048,1,1,unassigned source token; not an accepted dimension
+n00424,9,p09-t0052,2,2,unassigned source token; not an accepted dimension
+n00425,9,p09-t0053,3,3,unassigned source token; not an accepted dimension
+n00426,9,p09-t0054,4,4,unassigned source token; not an accepted dimension
+n00427,9,p09-t0055,1,1,unassigned source token; not an accepted dimension
+n00428,9,p09-t0056,2,2,unassigned source token; not an accepted dimension
+n00429,9,p09-t0057,3,3,unassigned source token; not an accepted dimension
+n00430,9,p09-t0058,4,4,unassigned source token; not an accepted dimension
+n00431,9,p09-t0059,4140,4140,unassigned source token; not an accepted dimension
+n00432,9,p09-t0060,3575,3575,unassigned source token; not an accepted dimension
+n00433,9,p09-t0061,3600,3600,unassigned source token; not an accepted dimension
+n00434,9,p09-t0062,3445,3445,unassigned source token; not an accepted dimension
+n00435,9,p09-t0063,4140,4140,unassigned source token; not an accepted dimension
+n00436,9,p09-t0064,3575,3575,unassigned source token; not an accepted dimension
+n00437,9,p09-t0065,3600,3600,unassigned source token; not an accepted dimension
+n00438,9,p09-t0066,3445,3445,unassigned source token; not an accepted dimension
+n00439,9,p09-t0067,2100,2100,unassigned source token; not an accepted dimension
+n00440,9,p09-t0068,2100,2100,unassigned source token; not an accepted dimension
+n00441,9,p09-t0073,1650,1650,unassigned source token; not an accepted dimension
+n00442,9,p09-t0074,1650,1650,unassigned source token; not an accepted dimension
+n00443,9,p09-t0075,1650,1650,unassigned source token; not an accepted dimension
+n00444,9,p09-t0076,1650,1650,unassigned source token; not an accepted dimension
+n00445,9,p09-t0077,1650,1650,unassigned source token; not an accepted dimension
+n00446,9,p09-t0078,1650,1650,unassigned source token; not an accepted dimension
+n00447,9,p09-t0079,1650,1650,unassigned source token; not an accepted dimension
+n00448,9,p09-t0080,1650,1650,unassigned source token; not an accepted dimension
+n00449,9,p09-t0081,1650,1650,unassigned source token; not an accepted dimension
+n00450,9,p09-t0082,1650,1650,unassigned source token; not an accepted dimension
+n00451,9,p09-t0083,1650,1650,unassigned source token; not an accepted dimension
+n00452,9,p09-t0084,1650,1650,unassigned source token; not an accepted dimension
+n00453,9,p09-t0088,1800,1800,unassigned source token; not an accepted dimension
+n00454,9,p09-t0089,2100,2100,unassigned source token; not an accepted dimension
+n00455,9,p09-t0091,1,P.C.C. in 1:3:6,unassigned source token; not an accepted dimension
+n00456,9,p09-t0091,3,P.C.C. in 1:3:6,unassigned source token; not an accepted dimension
+n00457,9,p09-t0091,6,P.C.C. in 1:3:6,unassigned source token; not an accepted dimension
+n00458,9,p09-t0092,12,12mm Ø @125 c/c,unassigned source token; not an accepted dimension
+n00459,9,p09-t0092,125,12mm Ø @125 c/c,unassigned source token; not an accepted dimension
+n00460,9,p09-t0093,12,12mm Ø @125 c/c,unassigned source token; not an accepted dimension
+n00461,9,p09-t0093,125,12mm Ø @125 c/c,unassigned source token; not an accepted dimension
+n00462,9,p09-t0096,8,8Ø  Lateral ties,unassigned source token; not an accepted dimension
+n00463,9,p09-t0097,125,@ 125 c/c,unassigned source token; not an accepted dimension
+n00464,9,p09-t0099,355,355*600,unassigned source token; not an accepted dimension
+n00465,9,p09-t0099,600,355*600,unassigned source token; not an accepted dimension
+n00466,9,p09-t0100,600,600,unassigned source token; not an accepted dimension
+n00467,9,p09-t0101,100,100,unassigned source token; not an accepted dimension
+n00468,9,p09-t0102,75,75,unassigned source token; not an accepted dimension
+n00469,9,p09-t0103,500,500,unassigned source token; not an accepted dimension
+n00470,9,p09-t0104,2100,2100*1800,unassigned source token; not an accepted dimension
+n00471,9,p09-t0104,1800,2100*1800,unassigned source token; not an accepted dimension
+n00472,9,p09-t0105,1800,DEPTH OF FOUNDATION =1800,unassigned source token; not an accepted dimension
+n00473,9,p09-t0110,6, 6-16mm,unassigned source token; not an accepted dimension
+n00474,9,p09-t0110,16, 6-16mm,unassigned source token; not an accepted dimension
+n00475,9,p09-t0111,3, 3-16mm,unassigned source token; not an accepted dimension
+n00476,9,p09-t0111,16, 3-16mm,unassigned source token; not an accepted dimension
+n00477,9,p09-t0115,1800,min. 1800mm,unassigned source token; not an accepted dimension
+n00478,9,p09-t0119,12,12mmØ @,unassigned source token; not an accepted dimension
+n00479,9,p09-t0120,125,125mm c/c Bars,unassigned source token; not an accepted dimension
+n00480,9,p09-t0123,8,8mmØ stirrups,unassigned source token; not an accepted dimension
+n00481,9,p09-t0124,125, @125mm c/c,unassigned source token; not an accepted dimension
+n00482,9,p09-t0125,300,300mm x 350mm Tie Beam,unassigned source token; not an accepted dimension
+n00483,9,p09-t0125,350,300mm x 350mm Tie Beam,unassigned source token; not an accepted dimension
+n00484,9,p09-t0127,75,75mm P.C.C,unassigned source token; not an accepted dimension
+n00485,9,p09-t0128,50,50mm Floor Finishing,unassigned source token; not an accepted dimension
+n00486,9,p09-t0129,100,100mm Sand Filling,unassigned source token; not an accepted dimension
+n00487,9,p09-t0132,60,(ld)=60Ø,unassigned source token; not an accepted dimension
+n00488,9,p09-t0133,60,(ld)=60Ø,unassigned source token; not an accepted dimension
+n00489,9,p09-t0134,190,190,unassigned source token; not an accepted dimension
+n00490,9,p09-t0135,3,  3-12  mm  on top & bottom ,unassigned source token; not an accepted dimension
+n00491,9,p09-t0135,12,  3-12  mm  on top & bottom ,unassigned source token; not an accepted dimension
+n00492,9,p09-t0138,355,355*600,unassigned source token; not an accepted dimension
+n00493,9,p09-t0138,600,355*600,unassigned source token; not an accepted dimension
+n00494,9,p09-t0139,6,6-16mm,unassigned source token; not an accepted dimension
+n00495,9,p09-t0139,16,6-16mm,unassigned source token; not an accepted dimension
+n00496,9,p09-t0140,3, 3-16mm,unassigned source token; not an accepted dimension
+n00497,9,p09-t0140,16, 3-16mm,unassigned source token; not an accepted dimension
+n00498,9,p09-t0141,1900,1900 X 1900,unassigned source token; not an accepted dimension
+n00499,9,p09-t0141,1900,1900 X 1900,unassigned source token; not an accepted dimension
+n00500,9,p09-t0142,2100,2100 * 2100,unassigned source token; not an accepted dimension
+n00501,9,p09-t0142,2100,2100 * 2100,unassigned source token; not an accepted dimension
+n00502,10,p10-t0007,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00503,10,p10-t0011,9,Height of Bldg. 9 m,unassigned source token; not an accepted dimension
+n00504,10,p10-t0015,82,82,unassigned source token; not an accepted dimension
+n00505,10,p10-t0025,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00506,10,p10-t0026,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00507,10,p10-t0028,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00508,10,p10-t0029,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00509,10,p10-t0033,108.45,108.45  sqm,unassigned source token; not an accepted dimension
+n00510,10,p10-t0034,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00511,10,p10-t0035,1.065,1.065,unassigned source token; not an accepted dimension
+n00512,10,p10-t0036,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00513,10,p10-t0038,17,"Pokhara-17, Kaski",unassigned source token; not an accepted dimension
+n00514,10,p10-t0044,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00515,10,p10-t0045,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00516,10,p10-t0046,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00517,10,p10-t0048,1,1,unassigned source token; not an accepted dimension
+n00518,10,p10-t0052,2,2,unassigned source token; not an accepted dimension
+n00519,10,p10-t0053,3,3,unassigned source token; not an accepted dimension
+n00520,10,p10-t0054,4,4,unassigned source token; not an accepted dimension
+n00521,10,p10-t0055,1,1,unassigned source token; not an accepted dimension
+n00522,10,p10-t0056,2,2,unassigned source token; not an accepted dimension
+n00523,10,p10-t0057,3,3,unassigned source token; not an accepted dimension
+n00524,10,p10-t0058,4,4,unassigned source token; not an accepted dimension
+n00525,10,p10-t0059,4140,4140,unassigned source token; not an accepted dimension
+n00526,10,p10-t0060,3575,3575,unassigned source token; not an accepted dimension
+n00527,10,p10-t0061,3600,3600,unassigned source token; not an accepted dimension
+n00528,10,p10-t0062,3445,3445,unassigned source token; not an accepted dimension
+n00529,10,p10-t0063,4140,4140,unassigned source token; not an accepted dimension
+n00530,10,p10-t0064,3575,3575,unassigned source token; not an accepted dimension
+n00531,10,p10-t0065,3600,3600,unassigned source token; not an accepted dimension
+n00532,10,p10-t0066,3445,3445,unassigned source token; not an accepted dimension
+n00533,10,p10-t0075,300,TB 300 * 350,unassigned source token; not an accepted dimension
+n00534,10,p10-t0075,350,TB 300 * 350,unassigned source token; not an accepted dimension
+n00535,10,p10-t0076,225,TB 225 * 300,unassigned source token; not an accepted dimension
+n00536,10,p10-t0076,300,TB 225 * 300,unassigned source token; not an accepted dimension
+n00537,10,p10-t0077,300,TB 300 * 350,unassigned source token; not an accepted dimension
+n00538,10,p10-t0077,350,TB 300 * 350,unassigned source token; not an accepted dimension
+n00539,10,p10-t0078,300,TB 300 * 350,unassigned source token; not an accepted dimension
+n00540,10,p10-t0078,350,TB 300 * 350,unassigned source token; not an accepted dimension
+n00541,10,p10-t0079,300,TB 300 * 350,unassigned source token; not an accepted dimension
+n00542,10,p10-t0079,350,TB 300 * 350,unassigned source token; not an accepted dimension
+n00543,10,p10-t0080,300,TB 300 * 350,unassigned source token; not an accepted dimension
+n00544,10,p10-t0080,350,TB 300 * 350,unassigned source token; not an accepted dimension
+n00545,10,p10-t0081,300,TB 300 * 350,unassigned source token; not an accepted dimension
+n00546,10,p10-t0081,350,TB 300 * 350,unassigned source token; not an accepted dimension
+n00547,10,p10-t0082,225,TB 225 * 300,unassigned source token; not an accepted dimension
+n00548,10,p10-t0082,300,TB 225 * 300,unassigned source token; not an accepted dimension
+n00549,10,p10-t0083,225,TB 225 * 300,unassigned source token; not an accepted dimension
+n00550,10,p10-t0083,300,TB 225 * 300,unassigned source token; not an accepted dimension
+n00551,10,p10-t0084,225,TB 225 * 300,unassigned source token; not an accepted dimension
+n00552,10,p10-t0084,300,TB 225 * 300,unassigned source token; not an accepted dimension
+n00553,10,p10-t0087,1,1,unassigned source token; not an accepted dimension
+n00554,10,p10-t0091,2,2,unassigned source token; not an accepted dimension
+n00555,10,p10-t0092,3,3,unassigned source token; not an accepted dimension
+n00556,10,p10-t0093,4,4,unassigned source token; not an accepted dimension
+n00557,10,p10-t0094,1,1,unassigned source token; not an accepted dimension
+n00558,10,p10-t0095,2,2,unassigned source token; not an accepted dimension
+n00559,10,p10-t0096,3,3,unassigned source token; not an accepted dimension
+n00560,10,p10-t0097,4,4,unassigned source token; not an accepted dimension
+n00561,10,p10-t0098,4140,4140,unassigned source token; not an accepted dimension
+n00562,10,p10-t0099,3575,3575,unassigned source token; not an accepted dimension
+n00563,10,p10-t0100,3600,3600,unassigned source token; not an accepted dimension
+n00564,10,p10-t0101,3445,3445,unassigned source token; not an accepted dimension
+n00565,10,p10-t0102,4140,4140,unassigned source token; not an accepted dimension
+n00566,10,p10-t0103,3575,3575,unassigned source token; not an accepted dimension
+n00567,10,p10-t0104,3600,3600,unassigned source token; not an accepted dimension
+n00568,10,p10-t0105,3445,3445,unassigned source token; not an accepted dimension
+n00569,10,p10-t0115,250,MB 250 * 425,unassigned source token; not an accepted dimension
+n00570,10,p10-t0115,425,MB 250 * 425,unassigned source token; not an accepted dimension
+n00571,10,p10-t0116,250,MB1 250 * 475,unassigned source token; not an accepted dimension
+n00572,10,p10-t0116,475,MB1 250 * 475,unassigned source token; not an accepted dimension
+n00573,10,p10-t0117,250,MB 250 * 425,unassigned source token; not an accepted dimension
+n00574,10,p10-t0117,425,MB 250 * 425,unassigned source token; not an accepted dimension
+n00575,10,p10-t0118,250,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00576,10,p10-t0118,475,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00577,10,p10-t0119,250,MB 250 * 425,unassigned source token; not an accepted dimension
+n00578,10,p10-t0119,425,MB 250 * 425,unassigned source token; not an accepted dimension
+n00579,10,p10-t0120,250,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00580,10,p10-t0120,475,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00581,10,p10-t0121,250,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00582,10,p10-t0121,475,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00583,10,p10-t0122,230,SB 230 * 300,unassigned source token; not an accepted dimension
+n00584,10,p10-t0122,300,SB 230 * 300,unassigned source token; not an accepted dimension
+n00585,10,p10-t0123,250,MB 250 * 425,unassigned source token; not an accepted dimension
+n00586,10,p10-t0123,425,MB 250 * 425,unassigned source token; not an accepted dimension
+n00587,10,p10-t0124,250,MB 250 * 425,unassigned source token; not an accepted dimension
+n00588,10,p10-t0124,425,MB 250 * 425,unassigned source token; not an accepted dimension
+n00589,10,p10-t0125,250,MB 250 * 425,unassigned source token; not an accepted dimension
+n00590,10,p10-t0125,425,MB 250 * 425,unassigned source token; not an accepted dimension
+n00591,10,p10-t0126,250,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00592,10,p10-t0126,475,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00593,10,p10-t0127,250,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00594,10,p10-t0127,475,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00595,10,p10-t0128,250,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00596,10,p10-t0128,475,MB2 250 * 475,unassigned source token; not an accepted dimension
+n00597,11,p11-t0007,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00598,11,p11-t0011,9,Height of Bldg. 9 m,unassigned source token; not an accepted dimension
+n00599,11,p11-t0015,82,82,unassigned source token; not an accepted dimension
+n00600,11,p11-t0025,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00601,11,p11-t0026,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00602,11,p11-t0028,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00603,11,p11-t0029,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00604,11,p11-t0033,108.45,108.45  sqm,unassigned source token; not an accepted dimension
+n00605,11,p11-t0034,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00606,11,p11-t0035,1.065,1.065,unassigned source token; not an accepted dimension
+n00607,11,p11-t0036,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00608,11,p11-t0038,17,"Pokhara-17, Kaski",unassigned source token; not an accepted dimension
+n00609,11,p11-t0044,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00610,11,p11-t0045,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00611,11,p11-t0046,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00612,11,p11-t0048,1,1,unassigned source token; not an accepted dimension
+n00613,11,p11-t0052,2,2,unassigned source token; not an accepted dimension
+n00614,11,p11-t0053,3,3,unassigned source token; not an accepted dimension
+n00615,11,p11-t0054,4,4,unassigned source token; not an accepted dimension
+n00616,11,p11-t0055,1,1,unassigned source token; not an accepted dimension
+n00617,11,p11-t0056,2,2,unassigned source token; not an accepted dimension
+n00618,11,p11-t0057,3,3,unassigned source token; not an accepted dimension
+n00619,11,p11-t0058,4,4,unassigned source token; not an accepted dimension
+n00620,11,p11-t0059,4140,4140,unassigned source token; not an accepted dimension
+n00621,11,p11-t0060,3575,3575,unassigned source token; not an accepted dimension
+n00622,11,p11-t0061,3600,3600,unassigned source token; not an accepted dimension
+n00623,11,p11-t0062,3445,3445,unassigned source token; not an accepted dimension
+n00624,11,p11-t0063,4140,4140,unassigned source token; not an accepted dimension
+n00625,11,p11-t0064,3575,3575,unassigned source token; not an accepted dimension
+n00626,11,p11-t0065,3600,3600,unassigned source token; not an accepted dimension
+n00627,11,p11-t0066,3445,3445,unassigned source token; not an accepted dimension
+n00628,11,p11-t0076,8,8 mm dia bar @ 125 mm c/c,unassigned source token; not an accepted dimension
+n00629,11,p11-t0076,125,8 mm dia bar @ 125 mm c/c,unassigned source token; not an accepted dimension
+n00630,11,p11-t0078,8,8 mm dia bar @ 125 mm c/c,unassigned source token; not an accepted dimension
+n00631,11,p11-t0078,125,8 mm dia bar @ 125 mm c/c,unassigned source token; not an accepted dimension
+n00632,11,p11-t0083,1,1,unassigned source token; not an accepted dimension
+n00633,11,p11-t0087,2,2,unassigned source token; not an accepted dimension
+n00634,11,p11-t0088,3,3,unassigned source token; not an accepted dimension
+n00635,11,p11-t0089,4,4,unassigned source token; not an accepted dimension
+n00636,11,p11-t0090,1,1,unassigned source token; not an accepted dimension
+n00637,11,p11-t0091,2,2,unassigned source token; not an accepted dimension
+n00638,11,p11-t0092,3,3,unassigned source token; not an accepted dimension
+n00639,11,p11-t0093,4,4,unassigned source token; not an accepted dimension
+n00640,11,p11-t0094,4140,4140,unassigned source token; not an accepted dimension
+n00641,11,p11-t0095,3575,3575,unassigned source token; not an accepted dimension
+n00642,11,p11-t0096,3600,3600,unassigned source token; not an accepted dimension
+n00643,11,p11-t0097,3445,3445,unassigned source token; not an accepted dimension
+n00644,11,p11-t0098,4140,4140,unassigned source token; not an accepted dimension
+n00645,11,p11-t0099,3575,3575,unassigned source token; not an accepted dimension
+n00646,11,p11-t0100,3600,3600,unassigned source token; not an accepted dimension
+n00647,11,p11-t0101,3445,3445,unassigned source token; not an accepted dimension
+n00648,11,p11-t0113,895,895,unassigned source token; not an accepted dimension
+n00649,11,p11-t0114,895,895,unassigned source token; not an accepted dimension
+n00650,11,p11-t0115,900,900,unassigned source token; not an accepted dimension
+n00651,11,p11-t0116,900,900,unassigned source token; not an accepted dimension
+n00652,11,p11-t0117,860,860,unassigned source token; not an accepted dimension
+n00653,11,p11-t0118,705,705,unassigned source token; not an accepted dimension
+n00654,11,p11-t0119,860,860,unassigned source token; not an accepted dimension
+n00655,11,p11-t0120,1105,1105,unassigned source token; not an accepted dimension
+n00656,11,p11-t0121,8,8 mm dia bar @ 125 mm c/c,unassigned source token; not an accepted dimension
+n00657,11,p11-t0121,125,8 mm dia bar @ 125 mm c/c,unassigned source token; not an accepted dimension
+n00658,11,p11-t0123,8,8 mm dia bar @ 125 mm c/c,unassigned source token; not an accepted dimension
+n00659,11,p11-t0123,125,8 mm dia bar @ 125 mm c/c,unassigned source token; not an accepted dimension
+n00660,12,p12-t0002,4,4-NOS. - Ø8 CHAIR BAR,unassigned source token; not an accepted dimension
+n00661,12,p12-t0004,150,150mm,unassigned source token; not an accepted dimension
+n00662,12,p12-t0006,176,176mm,unassigned source token; not an accepted dimension
+n00663,12,p12-t0008,255,255mm,unassigned source token; not an accepted dimension
+n00664,12,p12-t0009,12,12Ø-125mmc/c main bar,unassigned source token; not an accepted dimension
+n00665,12,p12-t0009,125,12Ø-125mmc/c main bar,unassigned source token; not an accepted dimension
+n00666,12,p12-t0010,8,8Ø-150mmc/c distribution bar,unassigned source token; not an accepted dimension
+n00667,12,p12-t0010,150,8Ø-150mmc/c distribution bar,unassigned source token; not an accepted dimension
+n00668,12,p12-t0011,8,8Ø-150mmc/c,unassigned source token; not an accepted dimension
+n00669,12,p12-t0011,150,8Ø-150mmc/c,unassigned source token; not an accepted dimension
+n00670,12,p12-t0012,150,SLAB THICKNESS 150mm,unassigned source token; not an accepted dimension
+n00671,12,p12-t0013,12,12Ø-125mmc/c,unassigned source token; not an accepted dimension
+n00672,12,p12-t0013,125,12Ø-125mmc/c,unassigned source token; not an accepted dimension
+n00673,12,p12-t0014,8,8Ø-150mmc/c,unassigned source token; not an accepted dimension
+n00674,12,p12-t0014,150,8Ø-150mmc/c,unassigned source token; not an accepted dimension
+n00675,12,p12-t0015,8,8 Ø-150mmc/c,unassigned source token; not an accepted dimension
+n00676,12,p12-t0015,150,8 Ø-150mmc/c,unassigned source token; not an accepted dimension
+n00677,12,p12-t0016,150,SLAB THICKNESS 150 mm,unassigned source token; not an accepted dimension
+n00678,12,p12-t0017,12,12Ø-125mmc/c,unassigned source token; not an accepted dimension
+n00679,12,p12-t0017,125,12Ø-125mmc/c,unassigned source token; not an accepted dimension
+n00680,12,p12-t0019,12,12Ø-125mmc/c,unassigned source token; not an accepted dimension
+n00681,12,p12-t0019,125,12Ø-125mmc/c,unassigned source token; not an accepted dimension
+n00682,12,p12-t0021,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n00683,12,p12-t0023,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n00684,12,p12-t0047,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00685,12,p12-t0048,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00686,12,p12-t0049,9,9 m,unassigned source token; not an accepted dimension
+n00687,12,p12-t0051,82,82,unassigned source token; not an accepted dimension
+n00688,12,p12-t0052,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00689,12,p12-t0053,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00690,12,p12-t0054,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n00691,12,p12-t0055,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00692,12,p12-t0056,1.065,1.065,unassigned source token; not an accepted dimension
+n00693,12,p12-t0057,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00694,12,p12-t0060,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00695,12,p12-t0061,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00696,12,p12-t0062,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00697,12,p12-t0064,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00698,12,p12-t0068,1,1,unassigned source token; not an accepted dimension
+n00699,12,p12-t0070,2,2,unassigned source token; not an accepted dimension
+n00700,12,p12-t0071,355,355,unassigned source token; not an accepted dimension
+n00701,12,p12-t0072,3785,3785,unassigned source token; not an accepted dimension
+n00702,12,p12-t0073,355,355,unassigned source token; not an accepted dimension
+n00703,12,p12-t0074,4140,4140,unassigned source token; not an accepted dimension
+n00704,12,p12-t0075,355,355,unassigned source token; not an accepted dimension
+n00705,12,p12-t0076,3090,3090,unassigned source token; not an accepted dimension
+n00706,12,p12-t0077,355,355,unassigned source token; not an accepted dimension
+n00707,12,p12-t0078,3445,3445,unassigned source token; not an accepted dimension
+n00708,12,p12-t0079,3800,3800,unassigned source token; not an accepted dimension
+n00709,12,p12-t0084,1065,1065,unassigned source token; not an accepted dimension
+n00710,12,p12-t0085,255,255,unassigned source token; not an accepted dimension
+n00711,12,p12-t0086,2135,2135,unassigned source token; not an accepted dimension
+n00712,12,p12-t0087,1570,Ld=1570,unassigned source token; not an accepted dimension
+n00713,12,p12-t0088,1570,Ld=1570,unassigned source token; not an accepted dimension
+n00714,13,p13-t0007,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00715,13,p13-t0011,9,Height of Bldg. 9 m,unassigned source token; not an accepted dimension
+n00716,13,p13-t0015,82,82,unassigned source token; not an accepted dimension
+n00717,13,p13-t0025,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00718,13,p13-t0026,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00719,13,p13-t0028,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00720,13,p13-t0029,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00721,13,p13-t0033,108.45,108.45  sqm,unassigned source token; not an accepted dimension
+n00722,13,p13-t0034,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00723,13,p13-t0035,1.065,1.065,unassigned source token; not an accepted dimension
+n00724,13,p13-t0036,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00725,13,p13-t0038,17,"Pokhara-17, Kaski",unassigned source token; not an accepted dimension
+n00726,13,p13-t0044,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00727,13,p13-t0045,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00728,13,p13-t0046,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00729,13,p13-t0048,1,1,unassigned source token; not an accepted dimension
+n00730,13,p13-t0052,2,2,unassigned source token; not an accepted dimension
+n00731,13,p13-t0053,3,3,unassigned source token; not an accepted dimension
+n00732,13,p13-t0054,4,4,unassigned source token; not an accepted dimension
+n00733,13,p13-t0055,1,1,unassigned source token; not an accepted dimension
+n00734,13,p13-t0056,2,2,unassigned source token; not an accepted dimension
+n00735,13,p13-t0057,3,3,unassigned source token; not an accepted dimension
+n00736,13,p13-t0058,4,4,unassigned source token; not an accepted dimension
+n00737,13,p13-t0059,4140,4140,unassigned source token; not an accepted dimension
+n00738,13,p13-t0060,3575,3575,unassigned source token; not an accepted dimension
+n00739,13,p13-t0061,3600,3600,unassigned source token; not an accepted dimension
+n00740,13,p13-t0062,3445,3445,unassigned source token; not an accepted dimension
+n00741,13,p13-t0063,4140,4140,unassigned source token; not an accepted dimension
+n00742,13,p13-t0064,3575,3575,unassigned source token; not an accepted dimension
+n00743,13,p13-t0065,3600,3600,unassigned source token; not an accepted dimension
+n00744,13,p13-t0066,3445,3445,unassigned source token; not an accepted dimension
+n00745,13,p13-t0075,355,SB 355 * 600,unassigned source token; not an accepted dimension
+n00746,13,p13-t0075,600,SB 355 * 600,unassigned source token; not an accepted dimension
+n00747,13,p13-t0077,355,SB 355 * 600,unassigned source token; not an accepted dimension
+n00748,13,p13-t0077,600,SB 355 * 600,unassigned source token; not an accepted dimension
+n00749,13,p13-t0078,355,SB 355 * 600,unassigned source token; not an accepted dimension
+n00750,13,p13-t0078,600,SB 355 * 600,unassigned source token; not an accepted dimension
+n00751,13,p13-t0079,355,SB 355 * 600,unassigned source token; not an accepted dimension
+n00752,13,p13-t0079,600,SB 355 * 600,unassigned source token; not an accepted dimension
+n00753,13,p13-t0082,500,500,unassigned source token; not an accepted dimension
+n00754,13,p13-t0084,300,300,unassigned source token; not an accepted dimension
+n00755,13,p13-t0085,4,4-16Ø,unassigned source token; not an accepted dimension
+n00756,13,p13-t0085,16,4-16Ø,unassigned source token; not an accepted dimension
+n00757,13,p13-t0086,2,2-16Ø,unassigned source token; not an accepted dimension
+n00758,13,p13-t0086,16,2-16Ø,unassigned source token; not an accepted dimension
+n00759,13,p13-t0087,3,3-16Ø,unassigned source token; not an accepted dimension
+n00760,13,p13-t0087,16,3-16Ø,unassigned source token; not an accepted dimension
+n00761,13,p13-t0090,2,2,unassigned source token; not an accepted dimension
+n00762,13,p13-t0091,1,1,unassigned source token; not an accepted dimension
+n00763,13,p13-t0092,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00764,13,p13-t0092,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00765,13,p13-t0093,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00766,13,p13-t0093,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00767,13,p13-t0094,4140,4140,unassigned source token; not an accepted dimension
+n00768,13,p13-t0095,4,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00769,13,p13-t0095,16,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00770,13,p13-t0095,2,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00771,13,p13-t0095,16,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00772,13,p13-t0096,3,3-16Ø,unassigned source token; not an accepted dimension
+n00773,13,p13-t0096,16,3-16Ø,unassigned source token; not an accepted dimension
+n00774,13,p13-t0097,4,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00775,13,p13-t0097,16,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00776,13,p13-t0097,2,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00777,13,p13-t0097,16,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00778,13,p13-t0098,3,3,unassigned source token; not an accepted dimension
+n00779,13,p13-t0099,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00780,13,p13-t0099,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00781,13,p13-t0100,3575,3575,unassigned source token; not an accepted dimension
+n00782,13,p13-t0101,3,3-16Ø,unassigned source token; not an accepted dimension
+n00783,13,p13-t0101,16,3-16Ø,unassigned source token; not an accepted dimension
+n00784,13,p13-t0102,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00785,13,p13-t0102,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00786,13,p13-t0103,4,4,unassigned source token; not an accepted dimension
+n00787,13,p13-t0104,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00788,13,p13-t0104,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00789,13,p13-t0105,3600,3600,unassigned source token; not an accepted dimension
+n00790,13,p13-t0106,4,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00791,13,p13-t0106,16,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00792,13,p13-t0106,2,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00793,13,p13-t0106,16,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00794,13,p13-t0107,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00795,13,p13-t0107,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00796,13,p13-t0108,4,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00797,13,p13-t0108,16,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00798,13,p13-t0108,2,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00799,13,p13-t0108,16,4-16Ø+2-16Ø,unassigned source token; not an accepted dimension
+n00800,14,p14-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n00801,14,p14-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n00802,14,p14-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00803,14,p14-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00804,14,p14-t0029,9,9 m,unassigned source token; not an accepted dimension
+n00805,14,p14-t0031,82,82,unassigned source token; not an accepted dimension
+n00806,14,p14-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00807,14,p14-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00808,14,p14-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n00809,14,p14-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00810,14,p14-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n00811,14,p14-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00812,14,p14-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00813,14,p14-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00814,14,p14-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00815,14,p14-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00816,14,p14-t0048,350,350,unassigned source token; not an accepted dimension
+n00817,14,p14-t0050,300,300,unassigned source token; not an accepted dimension
+n00818,14,p14-t0051,3,3-12Ø,unassigned source token; not an accepted dimension
+n00819,14,p14-t0051,12,3-12Ø,unassigned source token; not an accepted dimension
+n00820,14,p14-t0052,3,3-12Ø,unassigned source token; not an accepted dimension
+n00821,14,p14-t0052,12,3-12Ø,unassigned source token; not an accepted dimension
+n00822,14,p14-t0053,4,4,unassigned source token; not an accepted dimension
+n00823,14,p14-t0054,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00824,14,p14-t0054,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00825,14,p14-t0055,8, STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00826,14,p14-t0055,150, STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00827,14,p14-t0056,3600,3600,unassigned source token; not an accepted dimension
+n00828,14,p14-t0057,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00829,14,p14-t0057,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00830,14,p14-t0058,2,2,unassigned source token; not an accepted dimension
+n00831,14,p14-t0059,3,3,unassigned source token; not an accepted dimension
+n00832,14,p14-t0060,8,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00833,14,p14-t0060,150,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00834,14,p14-t0061,3575,3575,unassigned source token; not an accepted dimension
+n00835,14,p14-t0062,1,1,unassigned source token; not an accepted dimension
+n00836,14,p14-t0063,3,3-12Ø,unassigned source token; not an accepted dimension
+n00837,14,p14-t0063,12,3-12Ø,unassigned source token; not an accepted dimension
+n00838,14,p14-t0064,8,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00839,14,p14-t0064,150,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00840,14,p14-t0065,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00841,14,p14-t0065,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00842,14,p14-t0066,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00843,14,p14-t0066,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00844,14,p14-t0067,4140,4140,unassigned source token; not an accepted dimension
+n00845,14,p14-t0070,3,3-12Ø,unassigned source token; not an accepted dimension
+n00846,14,p14-t0070,12,3-12Ø,unassigned source token; not an accepted dimension
+n00847,14,p14-t0071,3,3-12Ø,unassigned source token; not an accepted dimension
+n00848,14,p14-t0071,12,3-12Ø,unassigned source token; not an accepted dimension
+n00849,14,p14-t0072,3,3-12Ø,unassigned source token; not an accepted dimension
+n00850,14,p14-t0072,12,3-12Ø,unassigned source token; not an accepted dimension
+n00851,14,p14-t0073,3,3-12Ø,unassigned source token; not an accepted dimension
+n00852,14,p14-t0073,12,3-12Ø,unassigned source token; not an accepted dimension
+n00853,14,p14-t0074,3,3-12Ø,unassigned source token; not an accepted dimension
+n00854,14,p14-t0074,12,3-12Ø,unassigned source token; not an accepted dimension
+n00855,14,p14-t0075,3,3-12Ø,unassigned source token; not an accepted dimension
+n00856,14,p14-t0075,12,3-12Ø,unassigned source token; not an accepted dimension
+n00857,14,p14-t0076,3,3-12Ø,unassigned source token; not an accepted dimension
+n00858,14,p14-t0076,12,3-12Ø,unassigned source token; not an accepted dimension
+n00859,14,p14-t0077,3,3-12Ø,unassigned source token; not an accepted dimension
+n00860,14,p14-t0077,12,3-12Ø,unassigned source token; not an accepted dimension
+n00861,15,p15-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n00862,15,p15-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n00863,15,p15-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00864,15,p15-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00865,15,p15-t0029,9,9 m,unassigned source token; not an accepted dimension
+n00866,15,p15-t0031,82,82,unassigned source token; not an accepted dimension
+n00867,15,p15-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00868,15,p15-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00869,15,p15-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n00870,15,p15-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00871,15,p15-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n00872,15,p15-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00873,15,p15-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00874,15,p15-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00875,15,p15-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00876,15,p15-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00877,15,p15-t0048,4,4,unassigned source token; not an accepted dimension
+n00878,15,p15-t0049,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00879,15,p15-t0049,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00880,15,p15-t0050,8, STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00881,15,p15-t0050,150, STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00882,15,p15-t0051,3600,3600,unassigned source token; not an accepted dimension
+n00883,15,p15-t0052,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00884,15,p15-t0052,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00885,15,p15-t0053,2,2,unassigned source token; not an accepted dimension
+n00886,15,p15-t0054,3,3,unassigned source token; not an accepted dimension
+n00887,15,p15-t0055,8,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00888,15,p15-t0055,150,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00889,15,p15-t0056,3575,3575,unassigned source token; not an accepted dimension
+n00890,15,p15-t0057,1,1,unassigned source token; not an accepted dimension
+n00891,15,p15-t0058,8,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00892,15,p15-t0058,150,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00893,15,p15-t0059,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00894,15,p15-t0059,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00895,15,p15-t0060,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00896,15,p15-t0060,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00897,15,p15-t0061,4140,4140,unassigned source token; not an accepted dimension
+n00898,15,p15-t0064,1035,1035,unassigned source token; not an accepted dimension
+n00899,15,p15-t0065,895,895,unassigned source token; not an accepted dimension
+n00900,15,p15-t0066,1035,1035,unassigned source token; not an accepted dimension
+n00901,15,p15-t0067,900,900,unassigned source token; not an accepted dimension
+n00902,15,p15-t0068,895,895,unassigned source token; not an accepted dimension
+n00903,15,p15-t0069,900,900,unassigned source token; not an accepted dimension
+n00904,15,p15-t0070,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00905,15,p15-t0070,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00906,15,p15-t0071,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00907,15,p15-t0071,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00908,15,p15-t0072,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00909,15,p15-t0072,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00910,15,p15-t0075,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00911,15,p15-t0075,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00912,15,p15-t0076,1, 1-12Ø (EX),unassigned source token; not an accepted dimension
+n00913,15,p15-t0076,12, 1-12Ø (EX),unassigned source token; not an accepted dimension
+n00914,15,p15-t0077,125,125,unassigned source token; not an accepted dimension
+n00915,15,p15-t0078,425,425,unassigned source token; not an accepted dimension
+n00916,15,p15-t0079,250,250,unassigned source token; not an accepted dimension
+n00917,15,p15-t0080,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00918,15,p15-t0080,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00919,15,p15-t0081,8,STRIPUS 8Ø @ 100 c/c,unassigned source token; not an accepted dimension
+n00920,15,p15-t0081,100,STRIPUS 8Ø @ 100 c/c,unassigned source token; not an accepted dimension
+n00921,15,p15-t0082,8,STRIPUS 8Ø @ 150 c/c,unassigned source token; not an accepted dimension
+n00922,15,p15-t0082,150,STRIPUS 8Ø @ 150 c/c,unassigned source token; not an accepted dimension
+n00923,15,p15-t0083,125,125,unassigned source token; not an accepted dimension
+n00924,15,p15-t0084,425,425,unassigned source token; not an accepted dimension
+n00925,15,p15-t0085,250,250,unassigned source token; not an accepted dimension
+n00926,15,p15-t0086,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00927,15,p15-t0086,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00928,15,p15-t0087,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00929,15,p15-t0087,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00930,15,p15-t0088,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00931,15,p15-t0088,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00932,15,p15-t0089,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00933,15,p15-t0089,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00934,15,p15-t0090,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00935,15,p15-t0090,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00936,15,p15-t0091,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00937,15,p15-t0091,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n00938,15,p15-t0092,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00939,15,p15-t0092,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00940,15,p15-t0093,1, 1-12Ø (EX),unassigned source token; not an accepted dimension
+n00941,15,p15-t0093,12, 1-12Ø (EX),unassigned source token; not an accepted dimension
+n00942,15,p15-t0094,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00943,15,p15-t0094,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00944,15,p15-t0095,1, 1-12Ø (EX),unassigned source token; not an accepted dimension
+n00945,15,p15-t0095,12, 1-12Ø (EX),unassigned source token; not an accepted dimension
+n00946,15,p15-t0096,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00947,15,p15-t0096,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00948,15,p15-t0097,1, 1-12Ø (EX),unassigned source token; not an accepted dimension
+n00949,15,p15-t0097,12, 1-12Ø (EX),unassigned source token; not an accepted dimension
+n00950,15,p15-t0098,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00951,15,p15-t0098,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00952,15,p15-t0099,1, 1-12Ø (EX),unassigned source token; not an accepted dimension
+n00953,15,p15-t0099,12, 1-12Ø (EX),unassigned source token; not an accepted dimension
+n00954,16,p16-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n00955,16,p16-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n00956,16,p16-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n00957,16,p16-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n00958,16,p16-t0029,9,9 m,unassigned source token; not an accepted dimension
+n00959,16,p16-t0031,82,82,unassigned source token; not an accepted dimension
+n00960,16,p16-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00961,16,p16-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n00962,16,p16-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n00963,16,p16-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n00964,16,p16-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n00965,16,p16-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n00966,16,p16-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n00967,16,p16-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n00968,16,p16-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n00969,16,p16-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n00970,16,p16-t0047,1, X- SECTION OF BEAM MB1 ALONG GRID 1-1 (FIRST FLOOR LEVEL AND ABOVE),unassigned source token; not an accepted dimension
+n00971,16,p16-t0047,1, X- SECTION OF BEAM MB1 ALONG GRID 1-1 (FIRST FLOOR LEVEL AND ABOVE),unassigned source token; not an accepted dimension
+n00972,16,p16-t0050,8,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00973,16,p16-t0050,150,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n00974,16,p16-t0051,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00975,16,p16-t0051,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n00976,16,p16-t0052,3445,3445,unassigned source token; not an accepted dimension
+n00977,16,p16-t0053,1, LONGITUDINAL SECTION OF BEAM MB1 ALONG GRID 1-1,unassigned source token; not an accepted dimension
+n00978,16,p16-t0053,1, LONGITUDINAL SECTION OF BEAM MB1 ALONG GRID 1-1,unassigned source token; not an accepted dimension
+n00979,16,p16-t0055,860,860,unassigned source token; not an accepted dimension
+n00980,16,p16-t0056,860,860,unassigned source token; not an accepted dimension
+n00981,16,p16-t0057,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00982,16,p16-t0057,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n00983,16,p16-t0060,2,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n00984,16,p16-t0060,16,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n00985,16,p16-t0060,1,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n00986,16,p16-t0060,12,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n00987,16,p16-t0061,2,2-16Ø (EXT),unassigned source token; not an accepted dimension
+n00988,16,p16-t0061,16,2-16Ø (EXT),unassigned source token; not an accepted dimension
+n00989,16,p16-t0062,125,125,unassigned source token; not an accepted dimension
+n00990,16,p16-t0063,475,475,unassigned source token; not an accepted dimension
+n00991,16,p16-t0064,250,250,unassigned source token; not an accepted dimension
+n00992,16,p16-t0065,3,3-16Ø (TH),unassigned source token; not an accepted dimension
+n00993,16,p16-t0065,16,3-16Ø (TH),unassigned source token; not an accepted dimension
+n00994,16,p16-t0066,8,STRIPUS 8Ø @ 100 c/c,unassigned source token; not an accepted dimension
+n00995,16,p16-t0066,100,STRIPUS 8Ø @ 100 c/c,unassigned source token; not an accepted dimension
+n00996,16,p16-t0067,8,STRIPUS 8Ø @ 150 c/c,unassigned source token; not an accepted dimension
+n00997,16,p16-t0067,150,STRIPUS 8Ø @ 150 c/c,unassigned source token; not an accepted dimension
+n00998,16,p16-t0068,3,3-16Ø(TH),unassigned source token; not an accepted dimension
+n00999,16,p16-t0068,16,3-16Ø(TH),unassigned source token; not an accepted dimension
+n01000,16,p16-t0069,125,125,unassigned source token; not an accepted dimension
+n01001,16,p16-t0070,475,475,unassigned source token; not an accepted dimension
+n01002,16,p16-t0071,250,250,unassigned source token; not an accepted dimension
+n01003,16,p16-t0072,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01004,16,p16-t0072,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01005,16,p16-t0073,2,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n01006,16,p16-t0073,16,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n01007,16,p16-t0073,1,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n01008,16,p16-t0073,12,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n01009,16,p16-t0074,2,2-16Ø (EXT),unassigned source token; not an accepted dimension
+n01010,16,p16-t0074,16,2-16Ø (EXT),unassigned source token; not an accepted dimension
+n01011,16,p16-t0075,2,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n01012,16,p16-t0075,16,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n01013,16,p16-t0075,1,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n01014,16,p16-t0075,12,"2-16Ø (TH), 1-12Ø (EX)",unassigned source token; not an accepted dimension
+n01015,16,p16-t0076,2,2-16Ø (EXT),unassigned source token; not an accepted dimension
+n01016,16,p16-t0076,16,2-16Ø (EXT),unassigned source token; not an accepted dimension
+n01017,16,p16-t0077,3,3-16Ø (TH),unassigned source token; not an accepted dimension
+n01018,16,p16-t0077,16,3-16Ø (TH),unassigned source token; not an accepted dimension
+n01019,17,p17-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n01020,17,p17-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n01021,17,p17-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n01022,17,p17-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n01023,17,p17-t0029,9,9 m,unassigned source token; not an accepted dimension
+n01024,17,p17-t0031,82,82,unassigned source token; not an accepted dimension
+n01025,17,p17-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n01026,17,p17-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n01027,17,p17-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n01028,17,p17-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n01029,17,p17-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n01030,17,p17-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n01031,17,p17-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n01032,17,p17-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n01033,17,p17-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n01034,17,p17-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n01035,17,p17-t0049,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01036,17,p17-t0049,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01037,17,p17-t0050,1,1-16Ø (EXT),unassigned source token; not an accepted dimension
+n01038,17,p17-t0050,16,1-16Ø (EXT),unassigned source token; not an accepted dimension
+n01039,17,p17-t0051,125,125,unassigned source token; not an accepted dimension
+n01040,17,p17-t0052,475,475,unassigned source token; not an accepted dimension
+n01041,17,p17-t0053,250,250,unassigned source token; not an accepted dimension
+n01042,17,p17-t0054,1,1-16Ø (TH),unassigned source token; not an accepted dimension
+n01043,17,p17-t0054,16,1-16Ø (TH),unassigned source token; not an accepted dimension
+n01044,17,p17-t0055,8,STRIPUS 8Ø @ 100 c/c,unassigned source token; not an accepted dimension
+n01045,17,p17-t0055,100,STRIPUS 8Ø @ 100 c/c,unassigned source token; not an accepted dimension
+n01046,17,p17-t0056,8,STRIPUS 8Ø @ 150 c/c,unassigned source token; not an accepted dimension
+n01047,17,p17-t0056,150,STRIPUS 8Ø @ 150 c/c,unassigned source token; not an accepted dimension
+n01048,17,p17-t0057,2, X- SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4 (FIRST FLOOR LEVEL AND ABOVE),unassigned source token; not an accepted dimension
+n01049,17,p17-t0057,2, X- SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4 (FIRST FLOOR LEVEL AND ABOVE),unassigned source token; not an accepted dimension
+n01050,17,p17-t0057,3, X- SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4 (FIRST FLOOR LEVEL AND ABOVE),unassigned source token; not an accepted dimension
+n01051,17,p17-t0057,3, X- SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4 (FIRST FLOOR LEVEL AND ABOVE),unassigned source token; not an accepted dimension
+n01052,17,p17-t0057,4, X- SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4 (FIRST FLOOR LEVEL AND ABOVE),unassigned source token; not an accepted dimension
+n01053,17,p17-t0057,4, X- SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4 (FIRST FLOOR LEVEL AND ABOVE),unassigned source token; not an accepted dimension
+n01054,17,p17-t0058,125,125,unassigned source token; not an accepted dimension
+n01055,17,p17-t0059,475,475,unassigned source token; not an accepted dimension
+n01056,17,p17-t0060,250,250,unassigned source token; not an accepted dimension
+n01057,17,p17-t0061,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01058,17,p17-t0061,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01059,17,p17-t0062,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n01060,17,p17-t0062,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n01061,17,p17-t0065,8,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n01062,17,p17-t0065,150,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n01063,17,p17-t0066,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n01064,17,p17-t0066,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n01065,17,p17-t0067,3445,3445,unassigned source token; not an accepted dimension
+n01066,17,p17-t0068,2, LONGITUDINAL SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4,unassigned source token; not an accepted dimension
+n01067,17,p17-t0068,2, LONGITUDINAL SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4,unassigned source token; not an accepted dimension
+n01068,17,p17-t0068,3, LONGITUDINAL SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4,unassigned source token; not an accepted dimension
+n01069,17,p17-t0068,3, LONGITUDINAL SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4,unassigned source token; not an accepted dimension
+n01070,17,p17-t0068,4, LONGITUDINAL SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4,unassigned source token; not an accepted dimension
+n01071,17,p17-t0068,4, LONGITUDINAL SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4,unassigned source token; not an accepted dimension
+n01072,17,p17-t0070,860,860,unassigned source token; not an accepted dimension
+n01073,17,p17-t0071,1220,1220,unassigned source token; not an accepted dimension
+n01074,17,p17-t0072,860,860,unassigned source token; not an accepted dimension
+n01075,17,p17-t0073,3,3-16Ø (TH),unassigned source token; not an accepted dimension
+n01076,17,p17-t0073,16,3-16Ø (TH),unassigned source token; not an accepted dimension
+n01077,17,p17-t0074,3,3-16Ø (TH),unassigned source token; not an accepted dimension
+n01078,17,p17-t0074,16,3-16Ø (TH),unassigned source token; not an accepted dimension
+n01079,17,p17-t0075,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01080,17,p17-t0075,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01081,17,p17-t0076,2,2-12Ø (TH),unassigned source token; not an accepted dimension
+n01082,17,p17-t0076,12,2-12Ø (TH),unassigned source token; not an accepted dimension
+n01083,17,p17-t0077,1,1-16Ø (TH),unassigned source token; not an accepted dimension
+n01084,17,p17-t0077,16,1-16Ø (TH),unassigned source token; not an accepted dimension
+n01085,17,p17-t0078,2,2-12Ø (TH),unassigned source token; not an accepted dimension
+n01086,17,p17-t0078,12,2-12Ø (TH),unassigned source token; not an accepted dimension
+n01087,17,p17-t0079,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01088,17,p17-t0079,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01089,17,p17-t0080,1,1-16Ø (EXT),unassigned source token; not an accepted dimension
+n01090,17,p17-t0080,16,1-16Ø (EXT),unassigned source token; not an accepted dimension
+n01091,17,p17-t0081,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01092,17,p17-t0081,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01093,17,p17-t0082,1,1-16Ø (EXT),unassigned source token; not an accepted dimension
+n01094,17,p17-t0082,16,1-16Ø (EXT),unassigned source token; not an accepted dimension
+n01095,18,p18-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n01096,18,p18-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n01097,18,p18-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n01098,18,p18-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n01099,18,p18-t0029,9,9 m,unassigned source token; not an accepted dimension
+n01100,18,p18-t0031,82,82,unassigned source token; not an accepted dimension
+n01101,18,p18-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n01102,18,p18-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n01103,18,p18-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n01104,18,p18-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n01105,18,p18-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n01106,18,p18-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n01107,18,p18-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n01108,18,p18-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n01109,18,p18-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n01110,18,p18-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n01111,18,p18-t0048,2,2,unassigned source token; not an accepted dimension
+n01112,18,p18-t0049,1,1,unassigned source token; not an accepted dimension
+n01113,18,p18-t0050,8,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n01114,18,p18-t0050,150,STRIPUS 8Ø @ 150mm c/c,unassigned source token; not an accepted dimension
+n01115,18,p18-t0051,8,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n01116,18,p18-t0051,100,STRIPUS 8Ø @ 100mm c/c,unassigned source token; not an accepted dimension
+n01117,18,p18-t0052,4140,4140,unassigned source token; not an accepted dimension
+n01118,18,p18-t0055,1035,1035,unassigned source token; not an accepted dimension
+n01119,18,p18-t0056,1035,1035,unassigned source token; not an accepted dimension
+n01120,18,p18-t0057,2,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01121,18,p18-t0057,16,2-16Ø (TH),unassigned source token; not an accepted dimension
+n01122,18,p18-t0060,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01123,18,p18-t0060,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01124,18,p18-t0061,125,125,unassigned source token; not an accepted dimension
+n01125,18,p18-t0062,300,300,unassigned source token; not an accepted dimension
+n01126,18,p18-t0063,230,230,unassigned source token; not an accepted dimension
+n01127,18,p18-t0064,8,STRIPUS 8Ø @ 100 c/c,unassigned source token; not an accepted dimension
+n01128,18,p18-t0064,100,STRIPUS 8Ø @ 100 c/c,unassigned source token; not an accepted dimension
+n01129,18,p18-t0065,8,STRIPUS 8Ø @ 150 c/c,unassigned source token; not an accepted dimension
+n01130,18,p18-t0065,150,STRIPUS 8Ø @ 150 c/c,unassigned source token; not an accepted dimension
+n01131,18,p18-t0066,125,125,unassigned source token; not an accepted dimension
+n01132,18,p18-t0067,300,300,unassigned source token; not an accepted dimension
+n01133,18,p18-t0068,230,230,unassigned source token; not an accepted dimension
+n01134,18,p18-t0069,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01135,18,p18-t0069,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01136,18,p18-t0070,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01137,18,p18-t0070,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01138,18,p18-t0071,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01139,18,p18-t0071,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01140,18,p18-t0072,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01141,18,p18-t0072,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01142,18,p18-t0073,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01143,18,p18-t0073,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01144,18,p18-t0074,3,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01145,18,p18-t0074,12,3-12Ø (TH),unassigned source token; not an accepted dimension
+n01146,19,p19-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n01147,19,p19-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n01148,19,p19-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n01149,19,p19-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n01150,19,p19-t0029,9,9 m,unassigned source token; not an accepted dimension
+n01151,19,p19-t0031,82,82,unassigned source token; not an accepted dimension
+n01152,19,p19-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n01153,19,p19-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n01154,19,p19-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n01155,19,p19-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n01156,19,p19-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n01157,19,p19-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n01158,19,p19-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n01159,19,p19-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n01160,19,p19-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n01161,19,p19-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n01162,19,p19-t0048,75,75X225 Lintel Band,unassigned source token; not an accepted dimension
+n01163,19,p19-t0049,75,75X225 Sill Band,unassigned source token; not an accepted dimension
+n01164,19,p19-t0060,3,3 mtr < b < 4.5 mtr,unassigned source token; not an accepted dimension
+n01165,19,p19-t0060,4.5,3 mtr < b < 4.5 mtr,unassigned source token; not an accepted dimension
+n01166,19,p19-t0061,2.8,2.8 mtr < b < 3.2 mtr,unassigned source token; not an accepted dimension
+n01167,19,p19-t0061,3.2,2.8 mtr < b < 3.2 mtr,unassigned source token; not an accepted dimension
+n01168,19,p19-t0063,230,230,unassigned source token; not an accepted dimension
+n01169,19,p19-t0065,2,2 Nos. 10 mm dia bars,unassigned source token; not an accepted dimension
+n01170,19,p19-t0065,10,2 Nos. 10 mm dia bars,unassigned source token; not an accepted dimension
+n01171,19,p19-t0066,8,8 mm dia torkari bar 150 c/c,unassigned source token; not an accepted dimension
+n01172,19,p19-t0066,150,8 mm dia torkari bar 150 c/c,unassigned source token; not an accepted dimension
+n01173,19,p19-t0067,225,225,unassigned source token; not an accepted dimension
+n01174,19,p19-t0069,225,(225 X 75),unassigned source token; not an accepted dimension
+n01175,19,p19-t0069,75,(225 X 75),unassigned source token; not an accepted dimension
+n01176,19,p19-t0070,355,(355 X 355),unassigned source token; not an accepted dimension
+n01177,19,p19-t0070,355,(355 X 355),unassigned source token; not an accepted dimension
+n01178,19,p19-t0071,100,100,unassigned source token; not an accepted dimension
+n01179,19,p19-t0072,500,500,unassigned source token; not an accepted dimension
+n01180,19,p19-t0073,100,100,unassigned source token; not an accepted dimension
+n01181,19,p19-t0074,500,500,unassigned source token; not an accepted dimension
+n01182,19,p19-t0075,355,355 X 355),unassigned source token; not an accepted dimension
+n01183,19,p19-t0075,355,355 X 355),unassigned source token; not an accepted dimension
+n01184,19,p19-t0078,2,2 Nos. 10 mm dia bars,unassigned source token; not an accepted dimension
+n01185,19,p19-t0078,10,2 Nos. 10 mm dia bars,unassigned source token; not an accepted dimension
+n01186,19,p19-t0079,8,8 mm dia torkari bar 150 c/c,unassigned source token; not an accepted dimension
+n01187,19,p19-t0079,150,8 mm dia torkari bar 150 c/c,unassigned source token; not an accepted dimension
+n01188,19,p19-t0080,225,225,unassigned source token; not an accepted dimension
+n01189,19,p19-t0081,75,75,unassigned source token; not an accepted dimension
+n01190,19,p19-t0089,75,75,unassigned source token; not an accepted dimension
+n01191,20,p20-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n01192,20,p20-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n01193,20,p20-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n01194,20,p20-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n01195,20,p20-t0029,9,9 m,unassigned source token; not an accepted dimension
+n01196,20,p20-t0031,82,82,unassigned source token; not an accepted dimension
+n01197,20,p20-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n01198,20,p20-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n01199,20,p20-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n01200,20,p20-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n01201,20,p20-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n01202,20,p20-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n01203,20,p20-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n01204,20,p20-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n01205,20,p20-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n01206,20,p20-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n01207,20,p20-t0051,2,2 NOS. DIA.8,unassigned source token; not an accepted dimension
+n01208,20,p20-t0051,8,2 NOS. DIA.8,unassigned source token; not an accepted dimension
+n01209,20,p20-t0054,6,H/6,unassigned source token; not an accepted dimension
+n01210,20,p20-t0055,2,2 NOS. DIA.8,unassigned source token; not an accepted dimension
+n01211,20,p20-t0055,8,2 NOS. DIA.8,unassigned source token; not an accepted dimension
+n01212,20,p20-t0058,6,H/6,unassigned source token; not an accepted dimension
+n01213,20,p20-t0063,50,NOT MORE THAN 50% BAR SHOULD BE,unassigned source token; not an accepted dimension
+n01214,20,p20-t0067,6,H/6,unassigned source token; not an accepted dimension
+n01215,20,p20-t0071,2,2 NOS. DIA.8,unassigned source token; not an accepted dimension
+n01216,20,p20-t0071,8,2 NOS. DIA.8,unassigned source token; not an accepted dimension
+n01217,20,p20-t0073,6,H/6,unassigned source token; not an accepted dimension
+n01218,20,p20-t0077,50,NOT MORE THAN 50% BAR SHOULD BE,unassigned source token; not an accepted dimension
+n01219,20,p20-t0081,4,H/4,unassigned source token; not an accepted dimension
+n01220,20,p20-t0082,4,H/4,unassigned source token; not an accepted dimension
+n01221,20,p20-t0083,4,H/4,unassigned source token; not an accepted dimension
+n01222,20,p20-t0095,0.15,0.15*L1,unassigned source token; not an accepted dimension
+n01223,20,p20-t0097,0.25,0.25*L2,unassigned source token; not an accepted dimension
+n01224,20,p20-t0099,0.3,0.3*L2,unassigned source token; not an accepted dimension
+n01225,20,p20-t0100,0.3,0.3*L1,unassigned source token; not an accepted dimension
+n01226,20,p20-t0101,0.25,0.25*L1,unassigned source token; not an accepted dimension
+n01227,20,p20-t0105,0.25,>0.25L or Ld,unassigned source token; not an accepted dimension
+n01228,20,p20-t0108,0.3,>0.3L or Ld,unassigned source token; not an accepted dimension
+n01229,20,p20-t0113,10,Ld+10Ø,unassigned source token; not an accepted dimension
+n01230,20,p20-t0114,10,Ld+10Ø,unassigned source token; not an accepted dimension
+n01231,20,p20-t0121,60,60°,unassigned source token; not an accepted dimension
+n01232,20,p20-t0122,2,2 nos. - Ø 16,unassigned source token; not an accepted dimension
+n01233,20,p20-t0122,16,2 nos. - Ø 16,unassigned source token; not an accepted dimension
+n01234,20,p20-t0125,50,50mm max,unassigned source token; not an accepted dimension
+n01235,20,p20-t0126,2,2d,unassigned source token; not an accepted dimension
+n01236,20,p20-t0127,50,50mm max,unassigned source token; not an accepted dimension
+n01237,20,p20-t0128,2,2d,unassigned source token; not an accepted dimension
+n01238,20,p20-t0129,2,hoop spacing <d/2,unassigned source token; not an accepted dimension
+n01239,20,p20-t0130,2,MIN 2 BARS FOR FULL LENGTH,unassigned source token; not an accepted dimension
+n01240,20,p20-t0136,2,2d,unassigned source token; not an accepted dimension
+n01241,20,p20-t0138,10,Ld+10Ø,unassigned source token; not an accepted dimension
+n01242,20,p20-t0140,2,"2L+8Ø-4""c/c",unassigned source token; not an accepted dimension
+n01243,20,p20-t0140,8,"2L+8Ø-4""c/c",unassigned source token; not an accepted dimension
+n01244,20,p20-t0140,4,"2L+8Ø-4""c/c",unassigned source token; not an accepted dimension
+n01245,20,p20-t0141,2,"2L+8Ø-6""c/c",unassigned source token; not an accepted dimension
+n01246,20,p20-t0141,8,"2L+8Ø-6""c/c",unassigned source token; not an accepted dimension
+n01247,20,p20-t0141,6,"2L+8Ø-6""c/c",unassigned source token; not an accepted dimension
+n01248,20,p20-t0142,2,"2L+8Ø-6""c/c",unassigned source token; not an accepted dimension
+n01249,20,p20-t0142,8,"2L+8Ø-6""c/c",unassigned source token; not an accepted dimension
+n01250,20,p20-t0142,6,"2L+8Ø-6""c/c",unassigned source token; not an accepted dimension
+n01251,20,p20-t0143,2,"2L+8Ø-4""c/c",unassigned source token; not an accepted dimension
+n01252,20,p20-t0143,8,"2L+8Ø-4""c/c",unassigned source token; not an accepted dimension
+n01253,20,p20-t0143,4,"2L+8Ø-4""c/c",unassigned source token; not an accepted dimension
+n01254,20,p20-t0144,10,10*Øb,unassigned source token; not an accepted dimension
+n01255,21,p21-t0001,-17,"Pokhara -17, Kaski",unassigned source token; not an accepted dimension
+n01256,21,p21-t0003,9856002229,                              Email. vristiengg2077@gmail.com (9856002229),unassigned source token; not an accepted dimension
+n01257,21,p21-t0027,27031,"27031 Civil ""A""",unassigned source token; not an accepted dimension
+n01258,21,p21-t0028,14,"Pokhara-14, Kaski",unassigned source token; not an accepted dimension
+n01259,21,p21-t0029,9,9 m,unassigned source token; not an accepted dimension
+n01260,21,p21-t0031,82,82,unassigned source token; not an accepted dimension
+n01261,21,p21-t0032,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n01262,21,p21-t0033,115.58,115.58 sqm,unassigned source token; not an accepted dimension
+n01263,21,p21-t0034,108.45,108.45 sqm,unassigned source token; not an accepted dimension
+n01264,21,p21-t0035,47.90,47.90 %,unassigned source token; not an accepted dimension
+n01265,21,p21-t0036,1.065,1.065,unassigned source token; not an accepted dimension
+n01266,21,p21-t0037,2083,"Kartik, 2083",unassigned source token; not an accepted dimension
+n01267,21,p21-t0040,13,"Pokhara-13, Kaski",unassigned source token; not an accepted dimension
+n01268,21,p21-t0041,47.67,47.67 sqm,unassigned source token; not an accepted dimension
+n01269,21,p21-t0042,17.09,17.09 sqm,unassigned source token; not an accepted dimension
+n01270,21,p21-t0044,50.82,50.82 sqm,unassigned source token; not an accepted dimension
+n01271,21,p21-t0049,12,12mm Thick Plaster,unassigned source token; not an accepted dimension
+n01272,21,p21-t0052,75,75mm Thk. PCC (1:3:6),unassigned source token; not an accepted dimension
+n01273,21,p21-t0052,1,75mm Thk. PCC (1:3:6),unassigned source token; not an accepted dimension
+n01274,21,p21-t0052,3,75mm Thk. PCC (1:3:6),unassigned source token; not an accepted dimension
+n01275,21,p21-t0052,6,75mm Thk. PCC (1:3:6),unassigned source token; not an accepted dimension
+n01276,21,p21-t0058,100,100mmØ Outlet Pipe,unassigned source token; not an accepted dimension
+n01277,21,p21-t0059,50,Brick Ballast 50mm Guage,unassigned source token; not an accepted dimension
+n01278,21,p21-t0066,25,25mm Thick Manhole Cover,unassigned source token; not an accepted dimension
+n01279,21,p21-t0067,18,18''Ø Manhole,unassigned source token; not an accepted dimension
+n01280,21,p21-t0069,100,100mmØ HDP Pipe,unassigned source token; not an accepted dimension
+n01281,21,p21-t0070,10,10-SN,unassigned source token; not an accepted dimension
+n01282,21,p21-t0073,100,100mmØ HDP Pipe,unassigned source token; not an accepted dimension
+n01283,21,p21-t0074,100,100mm Ø HDP Pipe,unassigned source token; not an accepted dimension
+n01284,21,p21-t0076,100,100mm Thk. RCC Slab,unassigned source token; not an accepted dimension
+n01285,21,p21-t0078,100,100mmØ Outlet Pipe,unassigned source token; not an accepted dimension
+n01286,21,p21-t0079,10,10-SN,unassigned source token; not an accepted dimension
+n01287,21,p21-t0081,50,50mmØ Vent Pipe,unassigned source token; not an accepted dimension
+n01288,21,p21-t0084,100,100mmØ Soil Pipe ,unassigned source token; not an accepted dimension
+n01289,21,p21-t0086,100,100mmØ Soil Pipe ,unassigned source token; not an accepted dimension
+n01290,21,p21-t0088,11,11-SN,unassigned source token; not an accepted dimension
+n01291,21,p21-t0090,150,150*75mm RCC for,unassigned source token; not an accepted dimension
+n01292,21,p21-t0090,75,150*75mm RCC for,unassigned source token; not an accepted dimension
+n01293,21,p21-t0091,100,100mm Thick RCC Slab,unassigned source token; not an accepted dimension
+n01294,21,p21-t0092,11,11-SN,unassigned source token; not an accepted dimension
+n01295,21,p21-t0094,150,150mmx125mm RCC for,unassigned source token; not an accepted dimension
+n01296,21,p21-t0095,375,375 200,unassigned source token; not an accepted dimension
+n01297,21,p21-t0095,200,375 200,unassigned source token; not an accepted dimension
+n01298,21,p21-t0096,375,375,unassigned source token; not an accepted dimension
+n01299,21,p21-t0097,200,200,unassigned source token; not an accepted dimension
+n01300,21,p21-t0098,200,200,unassigned source token; not an accepted dimension
+n01301,21,p21-t0099,375,375,unassigned source token; not an accepted dimension
+n01302,21,p21-t0100,200,200,unassigned source token; not an accepted dimension
+n01303,21,p21-t0101,150,150,unassigned source token; not an accepted dimension
+n01304,21,p21-t0102,375,375,unassigned source token; not an accepted dimension
+n01305,21,p21-t0103,950,950,unassigned source token; not an accepted dimension
+n01306,21,p21-t0104,1800,1800,unassigned source token; not an accepted dimension
+n01307,21,p21-t0105,1775,1775,unassigned source token; not an accepted dimension
+n01308,21,p21-t0106,4000,4000,unassigned source token; not an accepted dimension
+n01309,21,p21-t0107,900,900,unassigned source token; not an accepted dimension
+n01310,21,p21-t0108,2575,2575,unassigned source token; not an accepted dimension
+n01311,21,p21-t0109,350,350,unassigned source token; not an accepted dimension
+n01312,21,p21-t0110,350,350,unassigned source token; not an accepted dimension
+n01313,21,p21-t0111,125,125,unassigned source token; not an accepted dimension
+n01314,21,p21-t0112,900,Ø=900,unassigned source token; not an accepted dimension
+n01315,21,p21-t0113,2050,2050,unassigned source token; not an accepted dimension
+n01316,21,p21-t0114,2050,2050,unassigned source token; not an accepted dimension
