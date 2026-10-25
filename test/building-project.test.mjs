@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import * as THREE from '../vendor/three.module.min.js';
 import {validateProject,filterComponents,wallPanels,footprint,planMarkup,clipPolygonAtZ,isOverviewFaceVisible} from '../public/construction/models/basanti-residence/building-model.js';
 import {createBuildingAdapter} from '../public/construction/models/basanti-residence/three-adapter.js';
-import {pdfSVGForBrowser} from '../scripts/building-project.mjs';
+import {pdfSVGForBrowser,versionBuildingAssets} from '../scripts/building-project.mjs';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 const base=new URL('../public/construction/models/basanti-residence/',import.meta.url),json=async p=>JSON.parse(await readFile(new URL(p,base),'utf8')),project=await json('data/project.json'),register=await json('source/extraction-register.json');
@@ -24,3 +24,5 @@ test('source SQLite and SQL exports pass integrity checks, retain every vector a
 
 test("open balcony and terrace railings remain unfilled lines rather than masking the floor plan",()=>{for(const c of project.components.filter(c=>c.kind==='railing')){const markup=planMarkup(project,[c]);assert.match(markup,/<polyline[^>]+fill="none"/);assert.doesNotMatch(markup,/<polygon/);assert.ok(markup.includes('data-pick="'+c.id+'"'));}});
 test("the vector overview shows outward faces toward the viewer and hides back-facing and degenerate triangles",()=>{const top=[[0,0,1],[1,0,1],[0,1,1]];assert.equal(isOverviewFaceVisible(top),true);assert.equal(isOverviewFaceVisible([...top].reverse()),false);assert.equal(isOverviewFaceVisible([[0,0,0],[0,1,0],[0,0,1]]),true);assert.equal(isOverviewFaceVisible([[0,0,0],[0,0,0],[0,0,0]]),false);});
+
+test("building edits invalidate the entry script, local module graph and data/style revision together",()=>{const sources={'building.js':"import x from './building-model.js';import y from './three-adapter.js';import z from '../../../vendor/three.module.min.js';",'building-model.js':'export const x=1;','three-adapter.js':'export const y=1;','building.css':'body{}','data/project.json':'{"id":"A"}'};const a=versionBuildingAssets(sources);assert.match(a.revision,/^[a-f0-9]{16}$/);for(const name of ['building-model','three-adapter'])assert.ok(a.scripts['building.js'].includes(name+'.js?v='+a.revision));assert.ok(a.scripts['building.js'].includes("from '../../../vendor/three.module.min.js'"));assert.notEqual(versionBuildingAssets({...sources,'building-model.js':'export const x=2;'}).revision,a.revision);assert.notEqual(versionBuildingAssets({...sources,'data/project.json':'{"id":"B"}'}).revision,a.revision);assert.equal(versionBuildingAssets(Object.fromEntries(Object.entries(sources).reverse())).revision,a.revision);assert.ok(!sources['building.js'].includes('?v='));});
