@@ -20,6 +20,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: tools/building/requirements-ifc.txt
+      - name: Install the IFC exchange toolkit
+        run: python3 -m pip install -r tools/building/requirements-ifc.txt
       - name: Check geometry and build website
         run: npm run check
       - name: Verify extraction dashboard against the saved checkpoint
