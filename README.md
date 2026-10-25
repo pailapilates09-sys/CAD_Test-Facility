@@ -4,6 +4,8 @@
 
 [Basanti Residence](https://pailapilates09-sys.github.io/CAD_Test-Facility/construction/models/basanti-residence/) is a new sibling project derived from 21 architectural/structural PDF sheets. The original PDF, complete supported text/vector/layer/image extraction and source SQL/SQLite records are preserved in GitHub. Linked plans, Three.js geometry, schedules and query exports derive from one reviewed model. Written values, calibrated traces, source conflicts and display assumptions remain separate. See the [project contract](public/construction/models/basanti-residence/README.md). No Drive files or existing project sources are changed.
 
+The construction review adds fitted 3D views, source-linked reinforcement studies, labelled details, grouped tables, 12 construction stages and an IFC4 export. Cutting lengths and procurement quantities remain unset until missing structural detailing and conflicting labels are resolved. Install `tools/building/requirements-ifc.txt` before running the full build locally; Actions installs the pinned IFC toolkit automatically.
+
 ## Layout authoring — 24 October 2026
 
 [Layout Designer](https://pailapilates09-sys.github.io/CAD_Test-Facility/construction/models/layout-designer/) is a sibling of the original Pilates viewer. It provides editable studio, office, café and empty-room concepts, linked 2D/3D/schedule views, metre-based room and element parameters, three source-linked reusable components, browser drafts and JSON/SVG/OBJ/CSV exports. The cabinet regenerates panels and shelves; source component copies scale existing display meshes. See its [data and editing contract](public/construction/models/layout-designer/README.md).

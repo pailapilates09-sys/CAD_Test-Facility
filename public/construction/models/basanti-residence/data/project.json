@@ -1162,7 +1162,12 @@
       "bottom": "3-12 TH",
       "mid_top": "2-16 TH",
       "stirrups": "8 mm @ 100 support / 150 mid",
-      "page": 15
+      "page": 15,
+      "support_extra_extent_mm_by_span": {
+        "4140": 1035,
+        "3575": 895,
+        "3600": 900
+      }
     },
     {
       "id": "MB1",
@@ -1174,7 +1179,10 @@
       "bottom": "3-16 TH",
       "mid_top": "2-16 TH",
       "stirrups": "8 mm @ 100 support / 150 mid",
-      "page": 16
+      "page": 16,
+      "support_extra_extent_mm_by_span": {
+        "3445": 860
+      }
     },
     {
       "id": "MB2",
@@ -1187,7 +1195,13 @@
       "mid_top": "2-16 TH",
       "stirrups": "8 mm @ 100 support / 150 mid",
       "page": 17,
-      "issue": "Support/mid and longitudinal bottom labels differ; retain sheet, do not resolve by assumption."
+      "issue": "Support/mid and longitudinal bottom labels differ; retain sheet, do not resolve by assumption.",
+      "unresolved_roles": [
+        "bottom"
+      ],
+      "support_extra_extent_mm_by_span": {
+        "3445": 860
+      }
     },
     {
       "id": "SB",
@@ -1195,11 +1209,15 @@
         230,
         300
       ],
-      "support_top": "2-16 TH",
+      "support_top": "3-12 TH in section; 2-16 TH in longitudinal detail",
       "bottom": "3-12 TH",
-      "mid_top": "3-12 TH",
+      "mid_top": "3-12 TH in section; 2-16 TH in longitudinal detail",
       "stirrups": "8 mm @ 100 support / 150 mid",
-      "page": 18
+      "page": 18,
+      "issue": "Sheet 18 cross-sections show 3 × Ø12 top, while the longitudinal view also labels 2 × Ø16. Top arrangement needs clarification; no fabrication choice is made.",
+      "unresolved_roles": [
+        "top"
+      ]
     },
     {
       "id": "TB",
@@ -5464,6 +5482,46 @@
       ],
       "status": "unresolved",
       "detail": "The PDF retains CAD layer labels but no original DWG solids, BIM object identities, authoring constraints or model history. A WALL layer also contains sheet borders and symbols; semantic classification is a reviewed overlay."
+    },
+    {
+      "id": "U10",
+      "title": "Stair beam top reinforcement conflict",
+      "status": "unresolved",
+      "detail": "Sheet 18 cross-sections show 3 × Ø12 top, while the longitudinal view also labels 2 × Ø16. Top arrangement needs clarification; no fabrication choice is made.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": "U11",
+      "title": "Rebar fabrication inputs",
+      "status": "unresolved",
+      "detail": "Concrete covers, steel/concrete grades, bend diameters, member-specific laps/anchorage and a released bar bending schedule are not fully stated. Rebar placement is schematic and all final cut lengths remain unknown. Source hook and development rules retain their drawing context.",
+      "pages": [
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20
+      ]
+    },
+    {
+      "id": "U12",
+      "title": "Continuous band coordination",
+      "status": "unresolved",
+      "detail": "Sheet 19 gives band sections/reinforcement but not a coordinated band route and level for every wall/opening. Displayed sill/lintel runs are study zones derived from traced wall/opening positions; their continuity, bearings, anchorage and counts are not approved.",
+      "pages": [
+        2,
+        3,
+        4,
+        7,
+        19
+      ]
     }
   ],
   "editing": {
@@ -5471,5 +5529,79 @@
     "canonical_file": "data/project.json",
     "source_archive": "source/",
     "rule": "Preserve observed source records. Record design changes and assumptions separately with provenance. Rebuild the 2D/3D/table projections from this one model."
+  },
+  "detailing": {
+    "schema": "paila-construction-review-1.0",
+    "release_status": "SOURCE_REVIEW_NOT_FOR_FABRICATION",
+    "confirmed_cover_mm": null,
+    "steel_grade": null,
+    "concrete_grade": null,
+    "confirmed_bend_radius_mm": null,
+    "confirmed_lap_schedule": null,
+    "display_inset_mm": {
+      "column": 35,
+      "beam": 30,
+      "slab": 20,
+      "footing": 50,
+      "band": 12
+    },
+    "display_inset_basis": "Schematic offsets only, to make bars readable inside the concrete; these are not specified concrete covers. They must not be used for cutting or site setting out.",
+    "source_rules": [
+      {
+        "id": "column-confinement",
+        "pages": [
+          8,
+          20
+        ],
+        "text": "Ø8 four-legged ties; 100 mm support / 150 mm mid. Sheet 20 shows H/6 end zones. Outer square plus inner diamond follows sheet 8."
+      },
+      {
+        "id": "hook-tail",
+        "pages": [
+          20
+        ],
+        "text": "Hook detail labels 10 × bar diameter. Shape, bend diameter and application still need confirmation.",
+        "tail_diameter_multiplier": 10
+      },
+      {
+        "id": "foundation-development",
+        "pages": [
+          9
+        ],
+        "text": "Typical footing detail labels Ld = 60 × bar diameter; this is not applied as a global lap rule.",
+        "development_diameter_multiplier": 60
+      },
+      {
+        "id": "stair-development",
+        "pages": [
+          12
+        ],
+        "text": "Stair detail explicitly labels Ld = 1570 mm.",
+        "development_mm": 1570
+      },
+      {
+        "id": "band-section",
+        "pages": [
+          19
+        ],
+        "text": "Sill/lintel band labels 225 × 75 mm, two Ø10 longitudinal bars and Ø8 torkari links at 150 mm. Section A-A also labels wall width 230 mm. Band plan includes 500 mm annotations; continuous routes and levels require coordination."
+      },
+      {
+        "id": "slab-top-zones",
+        "pages": [
+          11,
+          20
+        ],
+        "text": "Ø8 at 125 mm top and bottom in both directions. Top drawing uses support zones with 895/900/860/705/1105 mm annotations. A full-area top mat is not inferred from these labels."
+      },
+      {
+        "id": "splice-stagger",
+        "pages": [
+          20
+        ],
+        "text": "Not more than 50% of bars should be lapped at one position. X, Y and member-specific lap lengths are not resolved by that rule."
+      }
+    ],
+    "cut_length_rule": "Final cut length requires the approved centreline path, cover, bends/hooks, anchorage, lap locations and lengths. Displayed runs and displayed bar counts are not a released bar bending schedule."
   }
 }
