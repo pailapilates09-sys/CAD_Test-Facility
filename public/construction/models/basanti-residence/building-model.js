@@ -1,3 +1,4 @@
+import {stairSettingOut} from './stair-model.js';
 export const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function validateProject(p){
  if(p?.schema!=='paila-building-1.0'||p.units!=='m'||!p.components?.length||!p.levels?.length)throw Error('Unexpected building model');
@@ -18,15 +19,15 @@ export function isOverviewFaceVisible(points){if(points.length<3)return false;co
 export function footprint(c){const g=c.geometry;if(g.points)return g.points;let x=g.x,y=g.y,w=g.width,d=g.depth,rotation=g.rotation??0;
  if(g.type==='wall'){w=g.length;d=g.thickness;}if(g.type==='opening'){w=g.width;d=g.thickness;}
  if(g.type==='segment'){x=(g.a[0]+g.b[0])/2;y=(g.a[1]+g.b[1])/2;w=Math.hypot(g.b[0]-g.a[0],g.b[1]-g.a[1]);d=g.width;rotation=Math.atan2(g.b[1]-g.a[1],g.b[0]-g.a[0])*180/Math.PI;}
- if(g.type==='stair'){w=3.36;d=g.flight_width*2;x+=w/2;y+=d/2;}
+ if(g.type==='stair'){w=stairSettingOut(g).runWithLanding;d=g.flight_width*2;x+=w/2;y+=d/2;}
  if(![x,y,w,d].every(Number.isFinite))return [];const a=rotation*Math.PI/180;return [[-w/2,-d/2],[w/2,-d/2],[w/2,d/2],[-w/2,d/2]].map(([u,v])=>[x+u*Math.cos(a)-v*Math.sin(a),y+u*Math.sin(a)+v*Math.cos(a)]);
 }
 export function planMarkup(project,components,selectedId=null){const f=escapeHTML,polys=components.slice().sort((a,b)=>(a.kind==='slab'?-1:0)-(b.kind==='slab'?-1:0));let content='';
- for(const c of polys){const pts=footprint(c);if(!pts.length)continue;const g=c.geometry,selected=c.id===selectedId,color=selected?'#d09129':c.status==='assumed'?'#b58235':c.kind==='column'?'#637995':c.kind==='slab'?'#e1e8ea':['door','window','vent','sliding door'].includes(c.kind)?'#318da0':'#2b5662';
+ for(const c of polys){const pts=footprint(c);if(!pts.length)continue;const g=c.geometry,selected=c.id===selectedId,color=selected?'#d09129':c.display_color??(c.status==='assumed'?'#b58235':c.kind==='column'?'#637995':c.kind==='slab'?'#e1e8ea':['door','window','vent','sliding door'].includes(c.kind)?'#318da0':'#2b5662');
   const footprints=g.type==='wall'?wallPanels(c).filter(p=>p.z<=g.z+1.2&&p.z+p.height>g.z+1.2).map(p=>footprint({geometry:{...p,type:'box'}})):[pts];
-  const outline=g.type==='railing';
+  const outline=['railing','route'].includes(g.type);
   content+=`<g data-pick="${c.id}" role="button" tabindex="0" aria-label="${f(c.label)}"><title>${f(c.label)} · ${f(componentDimensions(c))} m · ${c.status}</title>${footprints.map(points=>`<${outline?'polyline':'polygon'} points="${points.map(p=>`${p[0]},${-p[1]}`).join(' ')}" fill="${outline?'none':color}" fill-opacity="${c.kind==='slab'?.25:.78}" stroke="${selected?'#b0750c':color}" stroke-width="${selected?.065:.025}"${c.status==='assumed'?' stroke-dasharray=".08 .05"':''}/>`).join('')}</g>`;
-  if(g.type==='stair')for(let k=0;k<9;k++)content+=`<path d="M${g.x+k*g.tread} ${-g.y}v${-g.flight_width*2}" stroke="#546979" stroke-width=".018" fill="none"/>`;
+  if(g.type==='stair'){const ss=stairSettingOut(g);for(const [i,f]of ss.flights.entries())for(let k=0;k<=f.goings;k++){const x=i?g.x+ss.flights[0].run-k*g.tread:g.x+k*g.tread;content+=`<path d="M${x} ${-(g.y+i*g.flight_width)}v${-g.flight_width}" stroke="#546979" stroke-width=".018" fill="none"/>`;}}
  }
  const levels=new Set(components.map(c=>c.level));for(const r of project.rooms.filter(r=>levels.has(r.level)))content+=`<text x="${r.label_position_m[0]}" y="${-r.label_position_m[1]}" text-anchor="middle" font-size=".28" fill="var(--ink,#233e49)" pointer-events="none">${f(r.label)}<tspan x="${r.label_position_m[0]}" dy=".27" font-size=".22">${r.written_width_m} × ${r.written_depth_m} m</tspan></text>`;
  for(let i=0;i<project.grids.x.length;i++){const x=project.grids.x[i];content+=`<path d="M${x} 1.8V-4.7" stroke="#96adb7" stroke-width=".012" stroke-dasharray=".12 .08"/><text x="${x}" y="1.95" text-anchor="middle" font-size=".2" fill="var(--muted,#50626e)">${i+1}</text>`;}for(let i=0;i<project.grids.y.length;i++){const y=project.grids.y[i];content+=`<path d="M-.8 ${-y}H12.2" stroke="#96adb7" stroke-width=".012" stroke-dasharray=".12 .08"/><text x="-.9" y="${-y}" font-size=".2" fill="var(--muted,#50626e)">${'AB'[i]}</text>`;}
