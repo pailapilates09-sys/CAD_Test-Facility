@@ -13,6 +13,8 @@ export function wallPanels(c){const g=c.geometry,holes=g.openings??[],xs=[-g.len
  return parts;
 }
 export function clipPolygonAtZ(points,z){const out=[];for(let i=0;i<points.length;i++){const a=points[i],b=points[(i+1)%points.length],insideA=a[2]<=z,insideB=b[2]<=z;if(insideA)out.push(a);if(insideA!==insideB){const t=(z-a[2])/(b[2]-a[2]);out.push(a.map((n,j)=>n+t*(b[j]-n)));}}return out;}
+// The SVG overview looks toward the origin along (1, 1, .78).
+export function isOverviewFaceVisible(points){if(points.length<3)return false;const a=points[0],u=points[1].map((n,i)=>n-a[i]),v=points[2].map((n,i)=>n-a[i]);return u[1]*v[2]-u[2]*v[1]+u[2]*v[0]-u[0]*v[2]+.78*(u[0]*v[1]-u[1]*v[0])>1e-10;}
 export function footprint(c){const g=c.geometry;if(g.points)return g.points;let x=g.x,y=g.y,w=g.width,d=g.depth,rotation=g.rotation??0;
  if(g.type==='wall'){w=g.length;d=g.thickness;}if(g.type==='opening'){w=g.width;d=g.thickness;}
  if(g.type==='segment'){x=(g.a[0]+g.b[0])/2;y=(g.a[1]+g.b[1])/2;w=Math.hypot(g.b[0]-g.a[0],g.b[1]-g.a[1]);d=g.width;rotation=Math.atan2(g.b[1]-g.a[1],g.b[0]-g.a[0])*180/Math.PI;}
@@ -22,10 +24,11 @@ export function footprint(c){const g=c.geometry;if(g.points)return g.points;let 
 export function planMarkup(project,components,selectedId=null){const f=escapeHTML,polys=components.slice().sort((a,b)=>(a.kind==='slab'?-1:0)-(b.kind==='slab'?-1:0));let content='';
  for(const c of polys){const pts=footprint(c);if(!pts.length)continue;const g=c.geometry,selected=c.id===selectedId,color=selected?'#d09129':c.status==='assumed'?'#b58235':c.kind==='column'?'#637995':c.kind==='slab'?'#e1e8ea':['door','window','vent','sliding door'].includes(c.kind)?'#318da0':'#2b5662';
   const footprints=g.type==='wall'?wallPanels(c).filter(p=>p.z<=g.z+1.2&&p.z+p.height>g.z+1.2).map(p=>footprint({geometry:{...p,type:'box'}})):[pts];
-  content+=`<g data-pick="${c.id}" role="button" tabindex="0" aria-label="${f(c.label)}"><title>${f(c.label)} · ${f(componentDimensions(c))} m · ${c.status}</title>${footprints.map(points=>`<polygon points="${points.map(p=>`${p[0]},${-p[1]}`).join(' ')}" fill="${color}" fill-opacity="${c.kind==='slab'?.25:.78}" stroke="${selected?'#b0750c':color}" stroke-width="${selected?.065:.025}"${c.status==='assumed'?' stroke-dasharray=".08 .05"':''}/>`).join('')}</g>`;
+  const outline=g.type==='railing';
+  content+=`<g data-pick="${c.id}" role="button" tabindex="0" aria-label="${f(c.label)}"><title>${f(c.label)} · ${f(componentDimensions(c))} m · ${c.status}</title>${footprints.map(points=>`<${outline?'polyline':'polygon'} points="${points.map(p=>`${p[0]},${-p[1]}`).join(' ')}" fill="${outline?'none':color}" fill-opacity="${c.kind==='slab'?.25:.78}" stroke="${selected?'#b0750c':color}" stroke-width="${selected?.065:.025}"${c.status==='assumed'?' stroke-dasharray=".08 .05"':''}/>`).join('')}</g>`;
   if(g.type==='stair')for(let k=0;k<9;k++)content+=`<path d="M${g.x+k*g.tread} ${-g.y}v${-g.flight_width*2}" stroke="#546979" stroke-width=".018" fill="none"/>`;
  }
- const levels=new Set(components.map(c=>c.level));for(const r of project.rooms.filter(r=>levels.has(r.level)))content+=`<text x="${r.label_position_m[0]}" y="${-r.label_position_m[1]}" text-anchor="middle" font-size=".15" fill="var(--ink,#233e49)" pointer-events="none">${f(r.label)}<tspan x="${r.label_position_m[0]}" dy=".2" font-size=".12">${r.written_width_m} × ${r.written_depth_m} m</tspan></text>`;
+ const levels=new Set(components.map(c=>c.level));for(const r of project.rooms.filter(r=>levels.has(r.level)))content+=`<text x="${r.label_position_m[0]}" y="${-r.label_position_m[1]}" text-anchor="middle" font-size=".28" fill="var(--ink,#233e49)" pointer-events="none">${f(r.label)}<tspan x="${r.label_position_m[0]}" dy=".27" font-size=".22">${r.written_width_m} × ${r.written_depth_m} m</tspan></text>`;
  for(let i=0;i<project.grids.x.length;i++){const x=project.grids.x[i];content+=`<path d="M${x} 1.8V-4.7" stroke="#96adb7" stroke-width=".012" stroke-dasharray=".12 .08"/><text x="${x}" y="1.95" text-anchor="middle" font-size=".2" fill="var(--muted,#50626e)">${i+1}</text>`;}for(let i=0;i<project.grids.y.length;i++){const y=project.grids.y[i];content+=`<path d="M-.8 ${-y}H12.2" stroke="#96adb7" stroke-width=".012" stroke-dasharray=".12 .08"/><text x="-.9" y="${-y}" font-size=".2" fill="var(--muted,#50626e)">${'AB'[i]}</text>`;}
  return content;
 }
