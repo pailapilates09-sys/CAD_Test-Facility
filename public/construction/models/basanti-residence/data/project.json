@@ -1,0 +1,5475 @@
+{
+  "schema": "paila-building-1.0",
+  "id": "basanti-residence",
+  "title": "Basanti Residence",
+  "subtitle": "21-sheet architectural + structural reconstruction",
+  "location": "Pokhara-14, Kaski",
+  "source_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
+  "units": "m",
+  "axes": {
+    "x": "grid 1 toward grid 4",
+    "y": "grid A toward grid B",
+    "z": "up; plinth = 0 m"
+  },
+  "status": "Source extraction complete for supported text/vector/image records; semantic building reconstruction requires the listed confirmations. No structural redesign or approval.",
+  "facts": [
+    {
+      "id": "storeys",
+      "label": "Stated storeys",
+      "value": 3,
+      "unit": "storeys",
+      "status": "observed",
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0030"
+        ],
+        "quote": "Three  "
+      },
+      "note": ""
+    },
+    {
+      "id": "height",
+      "label": "Stated building height",
+      "value": 9,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0029"
+        ],
+        "quote": "9 m"
+      },
+      "note": ""
+    },
+    {
+      "id": "plot",
+      "label": "Plot number",
+      "value": "82",
+      "unit": "",
+      "status": "observed",
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0031",
+          "p02-t0032",
+          "p02-t0044",
+          "p02-t0050"
+        ],
+        "quote": "82 | 50.82 sqm | 50.82 sqm | Area: 50.82 sqm"
+      },
+      "note": ""
+    },
+    {
+      "id": "land",
+      "label": "Land area",
+      "value": 108.45,
+      "unit": "m²",
+      "status": "observed",
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0034"
+        ],
+        "quote": "108.45 sqm"
+      },
+      "note": ""
+    },
+    {
+      "id": "plinth",
+      "label": "Stated plinth area",
+      "value": 50.82,
+      "unit": "m²",
+      "status": "observed",
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0032",
+          "p02-t0044",
+          "p02-t0050"
+        ],
+        "quote": "50.82 sqm | 50.82 sqm | Area: 50.82 sqm"
+      },
+      "note": ""
+    },
+    {
+      "id": "total-area",
+      "label": "Stated total floor area",
+      "value": 115.58,
+      "unit": "m²",
+      "status": "observed",
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0033"
+        ],
+        "quote": "115.58 sqm"
+      },
+      "note": ""
+    },
+    {
+      "id": "gcr",
+      "label": "Stated ground coverage",
+      "value": 47.9,
+      "unit": "%",
+      "status": "observed",
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0035"
+        ],
+        "quote": "47.90 %"
+      },
+      "note": ""
+    },
+    {
+      "id": "far",
+      "label": "Stated FAR",
+      "value": 1.065,
+      "unit": "ratio",
+      "status": "observed",
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0036"
+        ],
+        "quote": "1.065"
+      },
+      "note": ""
+    },
+    {
+      "id": "grid12",
+      "label": "Grid 1–2",
+      "value": 4.14,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0012",
+          "p08-t0016"
+        ],
+        "quote": "4140 | 4140"
+      },
+      "note": ""
+    },
+    {
+      "id": "grid23",
+      "label": "Grid 2–3",
+      "value": 3.575,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0013",
+          "p08-t0017"
+        ],
+        "quote": "3575 | 3575"
+      },
+      "note": ""
+    },
+    {
+      "id": "grid34",
+      "label": "Grid 3–4",
+      "value": 3.6,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0014",
+          "p08-t0018"
+        ],
+        "quote": "3600 | 3600"
+      },
+      "note": ""
+    },
+    {
+      "id": "gridAB",
+      "label": "Grid A–B",
+      "value": 3.445,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0015",
+          "p08-t0019"
+        ],
+        "quote": "3445 | 3445"
+      },
+      "note": ""
+    },
+    {
+      "id": "overall",
+      "label": "Written overall plan length",
+      "value": 11.675,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0073",
+          "p02-t0089"
+        ],
+        "quote": "11675 | 11675"
+      },
+      "note": ""
+    },
+    {
+      "id": "column-size",
+      "label": "Column C1/C2 section",
+      "value": 0.355,
+      "unit": "m × m",
+      "status": "observed",
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0041",
+          "p08-t0058",
+          "p08-t0059",
+          "p08-t0060",
+          "p08-t0061",
+          "p08-t0062",
+          "p08-t0063",
+          "p08-t0064",
+          "p08-t0065",
+          "p08-t0066",
+          "p08-t0067"
+        ],
+        "quote": "355 | 355 | 355 | 355 | 355 | 355"
+      },
+      "note": ""
+    },
+    {
+      "id": "grade",
+      "label": "Ground relative to plinth",
+      "value": -0.6,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0054"
+        ],
+        "quote": "LVL -600"
+      },
+      "note": ""
+    },
+    {
+      "id": "foundation-depth",
+      "label": "Minimum / written foundation depth",
+      "value": 1.8,
+      "unit": "m below ground",
+      "status": "observed",
+      "evidence": {
+        "page": 9,
+        "span_ids": [
+          "p09-t0088",
+          "p09-t0104",
+          "p09-t0105",
+          "p09-t0115"
+        ],
+        "quote": "1800 | 2100*1800 | DEPTH OF FOUNDATION =1800 | min. 1800mm"
+      },
+      "note": ""
+    },
+    {
+      "id": "riser",
+      "label": "Written stair riser",
+      "value": 0.176,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 12,
+        "span_ids": [
+          "p12-t0006"
+        ],
+        "quote": "176mm"
+      },
+      "note": ""
+    },
+    {
+      "id": "tread",
+      "label": "Written stair tread",
+      "value": 0.255,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 12,
+        "span_ids": [
+          "p12-t0008",
+          "p12-t0085"
+        ],
+        "quote": "255mm | 255"
+      },
+      "note": ""
+    },
+    {
+      "id": "waist",
+      "label": "Stair waist slab",
+      "value": 0.15,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 12,
+        "span_ids": [
+          "p12-t0004",
+          "p12-t0010",
+          "p12-t0011",
+          "p12-t0012",
+          "p12-t0014",
+          "p12-t0015"
+        ],
+        "quote": "150mm | 8Ø-150mmc/c distribution bar | 8Ø-150mmc/c | SLAB THICKNESS 150mm | 8Ø-150mmc/c | 8 Ø-150mmc/c"
+      },
+      "note": ""
+    },
+    {
+      "id": "flight-width",
+      "label": "Stair plan flight width",
+      "value": 1.065,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 12,
+        "span_ids": [
+          "p12-t0084"
+        ],
+        "quote": "1065"
+      },
+      "note": ""
+    },
+    {
+      "id": "floor-finish",
+      "label": "Section floor finish",
+      "value": 0.025,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0047"
+        ],
+        "quote": "25mm thick floor finishnig"
+      },
+      "note": ""
+    },
+    {
+      "id": "floor-pcc",
+      "label": "Section PCC 1:3:6",
+      "value": 0.075,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0048"
+        ],
+        "quote": "75mm thick PCC(1:3:6)"
+      },
+      "note": ""
+    },
+    {
+      "id": "boulder",
+      "label": "Section boulder soling",
+      "value": 0.2,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0049"
+        ],
+        "quote": "200mm Boulder Soling"
+      },
+      "note": ""
+    },
+    {
+      "id": "footing-floor-finish",
+      "label": "Footing detail floor finish",
+      "value": 0.05,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 9,
+        "span_ids": [
+          "p09-t0125",
+          "p09-t0128"
+        ],
+        "quote": "300mm x 350mm Tie Beam | 50mm Floor Finishing"
+      },
+      "note": ""
+    },
+    {
+      "id": "floor-sand",
+      "label": "Footing detail sand fill",
+      "value": 0.1,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 9,
+        "span_ids": [
+          "p09-t0129"
+        ],
+        "quote": "100mm Sand Filling"
+      },
+      "note": ""
+    },
+    {
+      "id": "suspended-slab",
+      "label": "Slab thickness interpreted from beam sections",
+      "value": 0.125,
+      "unit": "m",
+      "status": "derived",
+      "evidence": {
+        "page": 15,
+        "span_ids": [
+          "p15-t0077",
+          "p15-t0083"
+        ],
+        "quote": "125 | 125"
+      },
+      "note": "125 mm is dimensioned beside the beam/slab sections; confirm applicability to each slab."
+    },
+    {
+      "id": "band-depth",
+      "label": "Sill/lintel band depth",
+      "value": 0.075,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 19,
+        "span_ids": [
+          "p19-t0048",
+          "p19-t0049"
+        ],
+        "quote": "75X225 Lintel Band | 75X225 Sill Band"
+      },
+      "note": ""
+    },
+    {
+      "id": "band-width",
+      "label": "Sill/lintel band width",
+      "value": 0.225,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 19,
+        "span_ids": [
+          "p19-t0048",
+          "p19-t0049"
+        ],
+        "quote": "75X225 Lintel Band | 75X225 Sill Band"
+      },
+      "note": ""
+    },
+    {
+      "id": "septic-length",
+      "label": "Septic plan overall length",
+      "value": 4.0,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 21,
+        "span_ids": [
+          "p21-t0106"
+        ],
+        "quote": "4000"
+      },
+      "note": ""
+    },
+    {
+      "id": "septic-width",
+      "label": "Septic plan overall width",
+      "value": 1.8,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 21,
+        "span_ids": [
+          "p21-t0104"
+        ],
+        "quote": "1800"
+      },
+      "note": ""
+    },
+    {
+      "id": "soak-diameter",
+      "label": "Soak pit written internal diameter",
+      "value": 0.9,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 21,
+        "span_ids": [
+          "p21-t0107",
+          "p21-t0112"
+        ],
+        "quote": "900 | Ø=900"
+      },
+      "note": ""
+    },
+    {
+      "id": "soak-depth",
+      "label": "Soak pit section depth",
+      "value": 2.05,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 21,
+        "span_ids": [
+          "p21-t0113",
+          "p21-t0114"
+        ],
+        "quote": "2050 | 2050"
+      },
+      "note": ""
+    },
+    {
+      "id": "soil-pipe",
+      "label": "Soil / outlet pipe diameter",
+      "value": 0.1,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 21,
+        "span_ids": [
+          "p21-t0058",
+          "p21-t0069",
+          "p21-t0073",
+          "p21-t0074",
+          "p21-t0076",
+          "p21-t0078",
+          "p21-t0084",
+          "p21-t0086",
+          "p21-t0091"
+        ],
+        "quote": "100mmØ Outlet Pipe | 100mmØ HDP Pipe | 100mmØ HDP Pipe | 100mm Ø HDP Pipe | 100mm Thk. RCC Slab | 100mmØ Outlet Pipe"
+      },
+      "note": ""
+    },
+    {
+      "id": "vent-pipe",
+      "label": "Vent pipe diameter",
+      "value": 0.05,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 21,
+        "span_ids": [
+          "p21-t0059",
+          "p21-t0081",
+          "p21-t0094"
+        ],
+        "quote": "Brick Ballast 50mm Guage | 50mmØ Vent Pipe | 150mmx125mm RCC for"
+      },
+      "note": ""
+    },
+    {
+      "id": "septic-cover",
+      "label": "Septic cover slab",
+      "value": 0.1,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 21,
+        "span_ids": [
+          "p21-t0076"
+        ],
+        "quote": "100mm Thk. RCC Slab"
+      },
+      "note": ""
+    },
+    {
+      "id": "septic-plaster",
+      "label": "Septic plaster",
+      "value": 0.012,
+      "unit": "m",
+      "status": "observed",
+      "evidence": {
+        "page": 21,
+        "span_ids": [
+          "p21-t0049"
+        ],
+        "quote": "12mm Thick Plaster"
+      },
+      "note": ""
+    }
+  ],
+  "levels": [
+    {
+      "id": "ground",
+      "label": "Ground floor",
+      "elevation_m": 0,
+      "stated_area_m2": 50.82,
+      "plan_page": 2,
+      "source_status": "observed",
+      "use": "Living/guest, kitchen/dining, toilet/bath and staircase"
+    },
+    {
+      "id": "first",
+      "label": "First floor",
+      "elevation_m": 3,
+      "stated_area_m2": 47.67,
+      "plan_page": 3,
+      "source_status": "observed",
+      "use": "Two bedrooms, toilet/bath, staircase and balcony/circulation"
+    },
+    {
+      "id": "second",
+      "label": "Second floor · partial",
+      "elevation_m": 6,
+      "stated_area_m2": 17.09,
+      "plan_page": 4,
+      "source_status": "observed",
+      "use": "Stair enclosure, store and open terrace"
+    },
+    {
+      "id": "roof",
+      "label": "Roof / +9 m datum",
+      "elevation_m": 9,
+      "stated_area_m2": null,
+      "plan_page": 5,
+      "source_status": "observed",
+      "use": "Upper roof and lower terrace; section calls +9,000 THIRD FLOOR, not evidence of another occupied floor"
+    }
+  ],
+  "grids": {
+    "x": [
+      0,
+      4.14,
+      7.715,
+      11.315
+    ],
+    "y": [
+      0,
+      3.445
+    ],
+    "column_section_m": [
+      0.355,
+      0.355
+    ]
+  },
+  "calibration": {
+    "2": {
+      "origin_pt": [
+        298.74,
+        358.62
+      ],
+      "scale_pt_per_m": [
+        42.492753623188406,
+        42.49637155297533
+      ]
+    },
+    "3": {
+      "origin_pt": [
+        338.88,
+        377.22
+      ],
+      "scale_pt_per_m": [
+        42.492753623188406,
+        42.49637155297533
+      ]
+    },
+    "4": {
+      "origin_pt": [
+        317.1,
+        379.02
+      ],
+      "scale_pt_per_m": [
+        42.492753623188406,
+        42.49637155297533
+      ]
+    }
+  },
+  "opening_types": [
+    {
+      "id": "D",
+      "kind": "door",
+      "width_m": 1.21,
+      "height_m": 2.134,
+      "scheduled_count": 1,
+      "source_count_text": "1",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0094"
+        ],
+        "quote": "1210 X 2134"
+      }
+    },
+    {
+      "id": "D1",
+      "kind": "door",
+      "width_m": 0.914,
+      "height_m": 1.981,
+      "scheduled_count": 3,
+      "source_count_text": "3",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0095"
+        ],
+        "quote": "914 X 1981"
+      }
+    },
+    {
+      "id": "D2",
+      "kind": "door",
+      "width_m": 0.762,
+      "height_m": 1.829,
+      "scheduled_count": 6,
+      "source_count_text": "6",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0096"
+        ],
+        "quote": "762 X 1829"
+      }
+    },
+    {
+      "id": "W",
+      "kind": "window",
+      "width_m": 1.829,
+      "height_m": 1.829,
+      "scheduled_count": null,
+      "source_count_text": "-",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0096",
+          "p07-t0097",
+          "p07-t0098"
+        ],
+        "quote": "762 X 1829 | 1829 X 1829 | 1829 X 1524"
+      }
+    },
+    {
+      "id": "W1",
+      "kind": "window",
+      "width_m": 1.829,
+      "height_m": 1.524,
+      "scheduled_count": null,
+      "source_count_text": "-",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0096",
+          "p07-t0097",
+          "p07-t0098"
+        ],
+        "quote": "762 X 1829 | 1829 X 1829 | 1829 X 1524"
+      }
+    },
+    {
+      "id": "W2",
+      "kind": "window",
+      "width_m": 1.524,
+      "height_m": 1.524,
+      "scheduled_count": 5,
+      "source_count_text": "5",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0098",
+          "p07-t0099",
+          "p07-t0100"
+        ],
+        "quote": "1829 X 1524 | 1524 X 1524 | 1524 X 2130"
+      }
+    },
+    {
+      "id": "W3",
+      "kind": "window",
+      "width_m": 1.524,
+      "height_m": 2.13,
+      "scheduled_count": 1,
+      "source_count_text": "1",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0098",
+          "p07-t0099",
+          "p07-t0100"
+        ],
+        "quote": "1829 X 1524 | 1524 X 1524 | 1524 X 2130"
+      }
+    },
+    {
+      "id": "V",
+      "kind": "vent",
+      "width_m": 0.609,
+      "height_m": 1.0,
+      "scheduled_count": 4,
+      "source_count_text": "4",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0101"
+        ],
+        "quote": "609 X 1000"
+      }
+    },
+    {
+      "id": "CG",
+      "kind": "gate",
+      "width_m": 1.285,
+      "height_m": 2.743,
+      "scheduled_count": null,
+      "source_count_text": "-",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0102"
+        ],
+        "quote": "1285 X 2743"
+      }
+    },
+    {
+      "id": "CG1",
+      "kind": "gate",
+      "width_m": 1.372,
+      "height_m": 2.743,
+      "scheduled_count": null,
+      "source_count_text": "-",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0103"
+        ],
+        "quote": "1372 X 2743"
+      }
+    },
+    {
+      "id": "CG2",
+      "kind": "gate",
+      "width_m": 1.067,
+      "height_m": 2.743,
+      "scheduled_count": null,
+      "source_count_text": "-",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0115"
+        ],
+        "quote": "1067 X 2743"
+      }
+    },
+    {
+      "id": "RS1",
+      "kind": "shutter",
+      "width_m": 3.2,
+      "height_m": 2.743,
+      "scheduled_count": null,
+      "source_count_text": "-",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0120"
+        ],
+        "quote": "3200 X 2743"
+      }
+    },
+    {
+      "id": "RS2",
+      "kind": "shutter",
+      "width_m": 1.981,
+      "height_m": 2.743,
+      "scheduled_count": null,
+      "source_count_text": "-",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0095",
+          "p07-t0121"
+        ],
+        "quote": "914 X 1981 | 1981 X 2743"
+      }
+    },
+    {
+      "id": "RS3",
+      "kind": "shutter",
+      "width_m": 1.219,
+      "height_m": 2.743,
+      "scheduled_count": null,
+      "source_count_text": "-",
+      "evidence": {
+        "page": 7,
+        "span_ids": [
+          "p07-t0123"
+        ],
+        "quote": "1219 X 2743"
+      }
+    },
+    {
+      "id": "SD",
+      "kind": "sliding door",
+      "width_m": null,
+      "height_m": null,
+      "scheduled_count": null,
+      "source_count_text": "not scheduled",
+      "evidence": {
+        "page": 3,
+        "span_ids": [
+          "p03-t0053"
+        ],
+        "quote": "SD"
+      }
+    }
+  ],
+  "column_schedule": [
+    {
+      "id": "C1-first",
+      "column_type": "C1",
+      "source_storey": "first",
+      "model_level": "ground",
+      "section_mm": [
+        355,
+        355
+      ],
+      "longitudinal_bars": [
+        {
+          "count": 4,
+          "diameter_mm": 20
+        },
+        {
+          "count": 4,
+          "diameter_mm": 16
+        }
+      ],
+      "stirrups": {
+        "diameter_mm": 8,
+        "legs": 4,
+        "support_spacing_mm": 100,
+        "mid_spacing_mm": 150
+      },
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0023",
+          "p08-t0068",
+          "p08-t0069"
+        ],
+        "quote": "COLUMN - C1 | C1 | C1"
+      },
+      "note": "Storey numbering in the structural schedule starts at FIRST for the ground-to-first interval; it is not an extra architectural floor."
+    },
+    {
+      "id": "C1-second",
+      "column_type": "C1",
+      "source_storey": "second",
+      "model_level": "first",
+      "section_mm": [
+        355,
+        355
+      ],
+      "longitudinal_bars": [
+        {
+          "count": 4,
+          "diameter_mm": 20
+        },
+        {
+          "count": 4,
+          "diameter_mm": 16
+        }
+      ],
+      "stirrups": {
+        "diameter_mm": 8,
+        "legs": 4,
+        "support_spacing_mm": 100,
+        "mid_spacing_mm": 150
+      },
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0023",
+          "p08-t0068",
+          "p08-t0069"
+        ],
+        "quote": "COLUMN - C1 | C1 | C1"
+      },
+      "note": "Storey numbering in the structural schedule starts at FIRST for the ground-to-first interval; it is not an extra architectural floor."
+    },
+    {
+      "id": "C1-third",
+      "column_type": "C1",
+      "source_storey": "third",
+      "model_level": "second",
+      "section_mm": [
+        355,
+        355
+      ],
+      "longitudinal_bars": [
+        {
+          "count": 4,
+          "diameter_mm": 16
+        },
+        {
+          "count": 4,
+          "diameter_mm": 16
+        }
+      ],
+      "stirrups": {
+        "diameter_mm": 8,
+        "legs": 4,
+        "support_spacing_mm": 100,
+        "mid_spacing_mm": 150
+      },
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0023",
+          "p08-t0068",
+          "p08-t0069"
+        ],
+        "quote": "COLUMN - C1 | C1 | C1"
+      },
+      "note": "Storey numbering in the structural schedule starts at FIRST for the ground-to-first interval; it is not an extra architectural floor."
+    },
+    {
+      "id": "C2-first",
+      "column_type": "C2",
+      "source_storey": "first",
+      "model_level": "ground",
+      "section_mm": [
+        355,
+        355
+      ],
+      "longitudinal_bars": [
+        {
+          "count": 4,
+          "diameter_mm": 16
+        },
+        {
+          "count": 4,
+          "diameter_mm": 16
+        }
+      ],
+      "stirrups": {
+        "diameter_mm": 8,
+        "legs": 4,
+        "support_spacing_mm": 100,
+        "mid_spacing_mm": 150
+      },
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0027",
+          "p08-t0070",
+          "p08-t0071",
+          "p08-t0072",
+          "p08-t0073",
+          "p08-t0074",
+          "p08-t0075"
+        ],
+        "quote": "COLUMN - C2 | C2 | C2 | C2 | C2 | C2"
+      },
+      "note": "Storey numbering in the structural schedule starts at FIRST for the ground-to-first interval; it is not an extra architectural floor."
+    },
+    {
+      "id": "C2-second",
+      "column_type": "C2",
+      "source_storey": "second",
+      "model_level": "first",
+      "section_mm": [
+        355,
+        355
+      ],
+      "longitudinal_bars": [
+        {
+          "count": 4,
+          "diameter_mm": 16
+        },
+        {
+          "count": 4,
+          "diameter_mm": 16
+        }
+      ],
+      "stirrups": {
+        "diameter_mm": 8,
+        "legs": 4,
+        "support_spacing_mm": 100,
+        "mid_spacing_mm": 150
+      },
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0027",
+          "p08-t0070",
+          "p08-t0071",
+          "p08-t0072",
+          "p08-t0073",
+          "p08-t0074",
+          "p08-t0075"
+        ],
+        "quote": "COLUMN - C2 | C2 | C2 | C2 | C2 | C2"
+      },
+      "note": "Storey numbering in the structural schedule starts at FIRST for the ground-to-first interval; it is not an extra architectural floor."
+    },
+    {
+      "id": "C2-third",
+      "column_type": "C2",
+      "source_storey": "third",
+      "model_level": "second",
+      "section_mm": [
+        355,
+        355
+      ],
+      "longitudinal_bars": [
+        {
+          "count": 4,
+          "diameter_mm": 16
+        },
+        {
+          "count": 4,
+          "diameter_mm": 12
+        }
+      ],
+      "stirrups": {
+        "diameter_mm": 8,
+        "legs": 4,
+        "support_spacing_mm": 100,
+        "mid_spacing_mm": 150
+      },
+      "evidence": {
+        "page": 8,
+        "span_ids": [
+          "p08-t0027",
+          "p08-t0070",
+          "p08-t0071",
+          "p08-t0072",
+          "p08-t0073",
+          "p08-t0074",
+          "p08-t0075"
+        ],
+        "quote": "COLUMN - C2 | C2 | C2 | C2 | C2 | C2"
+      },
+      "note": "Storey numbering in the structural schedule starts at FIRST for the ground-to-first interval; it is not an extra architectural floor."
+    }
+  ],
+  "structural_schedules": [
+    {
+      "id": "MB",
+      "section_mm": [
+        250,
+        425
+      ],
+      "support_top": "2-16 TH + 1-12 EX",
+      "bottom": "3-12 TH",
+      "mid_top": "2-16 TH",
+      "stirrups": "8 mm @ 100 support / 150 mid",
+      "page": 15
+    },
+    {
+      "id": "MB1",
+      "section_mm": [
+        250,
+        475
+      ],
+      "support_top": "2-16 TH + 1-12 EX + 2-16 EXT",
+      "bottom": "3-16 TH",
+      "mid_top": "2-16 TH",
+      "stirrups": "8 mm @ 100 support / 150 mid",
+      "page": 16
+    },
+    {
+      "id": "MB2",
+      "section_mm": [
+        250,
+        475
+      ],
+      "support_top": "2-16 TH + 1-16 EXT",
+      "bottom": "3-16 TH; longitudinal also labels 2-12 TH",
+      "mid_top": "2-16 TH",
+      "stirrups": "8 mm @ 100 support / 150 mid",
+      "page": 17,
+      "issue": "Support/mid and longitudinal bottom labels differ; retain sheet, do not resolve by assumption."
+    },
+    {
+      "id": "SB",
+      "section_mm": [
+        230,
+        300
+      ],
+      "support_top": "2-16 TH",
+      "bottom": "3-12 TH",
+      "mid_top": "3-12 TH",
+      "stirrups": "8 mm @ 100 support / 150 mid",
+      "page": 18
+    },
+    {
+      "id": "TB",
+      "section_mm": [
+        300,
+        350
+      ],
+      "support_top": "3-12",
+      "bottom": "3-12",
+      "mid_top": "3-12",
+      "stirrups": "8 mm @ 100 support / 150 mid",
+      "page": 14
+    },
+    {
+      "id": "STRAP",
+      "section_mm": [
+        355,
+        600
+      ],
+      "support_top": "4-16 + 2-16",
+      "bottom": "3-16",
+      "mid_top": "4-16 + 2-16",
+      "stirrups": "8 mm @ 100",
+      "page": 13,
+      "issue": "Layout 355 × 600 conflicts with detail dimension 300 × 500; no fabrication choice is made."
+    },
+    {
+      "id": "SLAB",
+      "section_mm": [
+        null,
+        125
+      ],
+      "bottom": "8 mm @ 125 both directions",
+      "support_top": "8 mm @ 125 both directions",
+      "mid_top": null,
+      "stirrups": null,
+      "page": 11,
+      "issue": "125 mm thickness is interpreted from beam sections; sheet 11 gives reinforcement."
+    },
+    {
+      "id": "STAIR",
+      "section_mm": [
+        null,
+        150
+      ],
+      "bottom": "12 mm @ 125 main; 8 mm @ 150 distribution",
+      "support_top": "8 mm nosing; 4 × 8 mm chair bars",
+      "mid_top": null,
+      "stirrups": null,
+      "page": 12
+    },
+    {
+      "id": "BANDS",
+      "section_mm": [
+        225,
+        75
+      ],
+      "bottom": "2 × 10 mm longitudinal",
+      "support_top": null,
+      "mid_top": null,
+      "stirrups": "8 mm torkari @ 150",
+      "page": 19
+    },
+    {
+      "id": "FOOTINGS",
+      "section_mm": [
+        null,
+        null
+      ],
+      "bottom": "12 mm @ 125 both ways",
+      "support_top": null,
+      "mid_top": null,
+      "stirrups": null,
+      "page": 9,
+      "issue": "F1 thickness D is unspecified; EF1 section and EF2 layout require reconciliation."
+    }
+  ],
+  "rooms": [
+    {
+      "id": "g-living",
+      "label": "Living / guest",
+      "level": "ground",
+      "written_width_m": 3.22,
+      "written_depth_m": 3.94,
+      "rectangle_area_m2": 12.6868,
+      "label_position_m": [
+        5.75,
+        1.4
+      ],
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0096"
+        ],
+        "quote": "LIVING/GUEST ROOM"
+      },
+      "note": "Written room dimensions; rectangle area is calculated and is not the title-block floor area."
+    },
+    {
+      "id": "g-kitchen",
+      "label": "Kitchen / dining",
+      "level": "ground",
+      "written_width_m": 3.575,
+      "written_depth_m": 3.075,
+      "rectangle_area_m2": 10.99313,
+      "label_position_m": [
+        9.65,
+        0.5
+      ],
+      "evidence": {
+        "page": 2,
+        "span_ids": [
+          "p02-t0098"
+        ],
+        "quote": "KITCHEN/DINING"
+      },
+      "note": "Written room dimensions; rectangle area is calculated and is not the title-block floor area."
+    },
+    {
+      "id": "g-bath",
+      "label": "Toilet / bath",
+      "level": "ground",
+      "written_width_m": 2.685,
+      "written_depth_m": 1.065,
+      "rectangle_area_m2": 2.85953,
+      "label_position_m": [
+        1.75,
+        0.55
+      ],
+      "evidence": {
+        "page": 2,
+        "span_ids": [],
+        "quote": ""
+      },
+      "note": "Written room dimensions; rectangle area is calculated and is not the title-block floor area."
+    },
+    {
+      "id": "f-bed1",
+      "label": "Bedroom 1",
+      "level": "first",
+      "written_width_m": 3.22,
+      "written_depth_m": 3.345,
+      "rectangle_area_m2": 10.7709,
+      "label_position_m": [
+        5.75,
+        1.8
+      ],
+      "evidence": {
+        "page": 3,
+        "span_ids": [
+          "p03-t0104",
+          "p03-t0106"
+        ],
+        "quote": "BEDROOM | BEDROOM"
+      },
+      "note": "Written room dimensions; rectangle area is calculated and is not the title-block floor area."
+    },
+    {
+      "id": "f-bed2",
+      "label": "Bedroom 2",
+      "level": "first",
+      "written_width_m": 3.575,
+      "written_depth_m": 3.42,
+      "rectangle_area_m2": 12.2265,
+      "label_position_m": [
+        9.6,
+        1.1
+      ],
+      "evidence": {
+        "page": 3,
+        "span_ids": [
+          "p03-t0104",
+          "p03-t0106"
+        ],
+        "quote": "BEDROOM | BEDROOM"
+      },
+      "note": "Written room dimensions; rectangle area is calculated and is not the title-block floor area."
+    },
+    {
+      "id": "f-bath",
+      "label": "Toilet / bath",
+      "level": "first",
+      "written_width_m": 2.69,
+      "written_depth_m": 1.06,
+      "rectangle_area_m2": 2.8514,
+      "label_position_m": [
+        1.75,
+        0.55
+      ],
+      "evidence": {
+        "page": 3,
+        "span_ids": [],
+        "quote": ""
+      },
+      "note": "Written room dimensions; rectangle area is calculated and is not the title-block floor area."
+    },
+    {
+      "id": "s-store",
+      "label": "Store",
+      "level": "second",
+      "written_width_m": 2.69,
+      "written_depth_m": 1.06,
+      "rectangle_area_m2": 2.8514,
+      "label_position_m": [
+        1.75,
+        0.55
+      ],
+      "evidence": {
+        "page": 4,
+        "span_ids": [
+          "p04-t0007",
+          "p04-t0083"
+        ],
+        "quote": "No. of Storey: | STORE"
+      },
+      "note": "Written room dimensions; rectangle area is calculated and is not the title-block floor area."
+    }
+  ],
+  "components": [
+    {
+      "id": "ground-wall-west",
+      "label": "West wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": -0.06354000000000001,
+        "y": 1.7225000000000001,
+        "length": 3.0892,
+        "thickness": 0.22874,
+        "rotation": 90,
+        "height": 3,
+        "z": 0,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00056",
+          "p02-v00057",
+          "p02-v00066"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-north",
+      "label": "North wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 3.8575999999999997,
+        "y": 3.508535,
+        "length": 7.35938,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "height": 3,
+        "z": 0,
+        "openings": [
+          {
+            "id": "g-w3",
+            "offset": -2.36793,
+            "width": 1.21997,
+            "height": 2.13,
+            "sill": 0.625,
+            "code": "W3"
+          },
+          {
+            "id": "g-w2",
+            "offset": 2.04388,
+            "width": 1.52355,
+            "height": 1.524,
+            "sill": 0.625,
+            "code": "W2"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00056",
+          "p02-v00063",
+          "p02-v00421"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-south-left",
+      "label": "South Left wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 2.07,
+        "y": -0.06353500000000001,
+        "length": 3.78418,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "height": 3,
+        "z": 0,
+        "openings": [
+          {
+            "id": "g-v1",
+            "offset": -0.43702,
+            "width": 0.45608,
+            "height": 1.0,
+            "sill": 1.1,
+            "code": "V"
+          },
+          {
+            "id": "g-v2",
+            "offset": 1.35835,
+            "width": 0.45749,
+            "height": 1.0,
+            "sill": 1.1,
+            "code": "V"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00056",
+          "p02-v00058"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-wc-top",
+      "label": "Wc Top wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 1.47272,
+        "y": 1.1852749999999999,
+        "length": 2.84378,
+        "thickness": 0.15107,
+        "rotation": 0,
+        "height": 3,
+        "z": 0,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00095",
+          "p02-v00096"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-wc-side",
+      "label": "Wc Side wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 2.81836,
+        "y": 0.5802849999999999,
+        "length": 1.05891,
+        "thickness": 0.1525,
+        "rotation": 90,
+        "height": 3,
+        "z": 0,
+        "openings": [
+          {
+            "id": "g-wc-door",
+            "offset": 0.14825,
+            "width": 0.762,
+            "height": 1.829,
+            "sill": 0,
+            "code": "D2"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00098",
+          "p02-v00168"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-living-side",
+      "label": "Living Side wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 4.240959999999999,
+        "y": 0.719355,
+        "length": 1.08291,
+        "thickness": 0.15108,
+        "rotation": 90,
+        "height": 3,
+        "z": 0,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00112",
+          "p02-v00113"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-living-front",
+      "label": "Living Front wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 5.926895,
+        "y": -0.656525,
+        "length": 3.22079,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "height": 3,
+        "z": 0,
+        "openings": [
+          {
+            "id": "g-w1b",
+            "offset": 0.1299,
+            "width": 1.82855,
+            "height": 1.524,
+            "sill": 0.625,
+            "code": "W1"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00391",
+          "p02-v00820"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-front-step",
+      "label": "Front Step wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 4.202835,
+        "y": -0.474395,
+        "length": 0.59299,
+        "thickness": 0.22733,
+        "rotation": 90,
+        "height": 3,
+        "z": 0,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00390",
+          "p02-v00820"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-divider",
+      "label": "Divider wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 7.613535,
+        "y": 0.48568999999999996,
+        "length": 3.07508,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "height": 3,
+        "z": 0,
+        "openings": [
+          {
+            "id": "g-d1",
+            "offset": 1.05609,
+            "width": 0.914,
+            "height": 1.981,
+            "sill": 0,
+            "code": "D1"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00109",
+          "p02-v00110"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-entrance-kitchen",
+      "label": "Entrance Kitchen wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 9.47738,
+        "y": 2.137595,
+        "length": 3.5752,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "height": 3,
+        "z": 0,
+        "openings": [
+          {
+            "id": "g-w1a",
+            "offset": 0.03742,
+            "width": 1.82855,
+            "height": 1.524,
+            "sill": 0.625,
+            "code": "W1"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00424",
+          "p02-v00425"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-east",
+      "label": "East wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 11.379349999999999,
+        "y": 0.99326,
+        "length": 4.54768,
+        "thickness": 0.22874,
+        "rotation": 90,
+        "height": 3,
+        "z": 0,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00061",
+          "p02-v00385",
+          "p02-v00386",
+          "p02-v00387"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-kitchen-front",
+      "label": "Kitchen Front wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 9.629875,
+        "y": -1.166215,
+        "length": 3.72769,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "height": 3,
+        "z": 0,
+        "openings": [
+          {
+            "id": "g-w1c",
+            "offset": 0.389,
+            "width": 1.82855,
+            "height": 1.524,
+            "sill": 0.625,
+            "code": "W1"
+          },
+          {
+            "id": "g-d2",
+            "offset": -1.45766,
+            "width": 0.762,
+            "height": 1.829,
+            "sill": 0,
+            "code": "D2"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00392",
+          "p02-v00393",
+          "p02-v00395"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-wall-kitchen-step",
+      "label": "Kitchen Step wall",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 7.65166,
+        "y": -1.025735,
+        "length": 0.50969,
+        "thickness": 0.22874,
+        "rotation": 90,
+        "height": 3,
+        "z": 0,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": [
+          "p02-v00394",
+          "p02-v00397"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-west",
+      "label": "West wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": -0.06354000000000001,
+        "y": 1.723205,
+        "length": 3.09061,
+        "thickness": 0.22874,
+        "rotation": 90,
+        "height": 3,
+        "z": 3,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00055",
+          "p03-v00066"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-north",
+      "label": "North wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 5.721445,
+        "y": 3.50924,
+        "length": 11.08707,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "height": 3,
+        "z": 3,
+        "openings": [
+          {
+            "id": "f-w3",
+            "offset": -3.93879,
+            "width": 1.21856,
+            "height": 2.13,
+            "sill": 0.625,
+            "code": "W3"
+          },
+          {
+            "id": "f-w1",
+            "offset": 0.20121,
+            "width": 1.82855,
+            "height": 1.524,
+            "sill": 0.625,
+            "code": "W1"
+          },
+          {
+            "id": "f-sd",
+            "offset": 4.04892,
+            "width": 1.82855,
+            "height": 2.134,
+            "sill": 0,
+            "code": "SD"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00055",
+          "p03-v00062",
+          "p03-v00063",
+          "p03-v00224"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-wc-front",
+      "label": "Wc Front wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 2.07,
+        "y": -0.06283,
+        "length": 3.78418,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "height": 3,
+        "z": 3,
+        "openings": [
+          {
+            "id": "f-v",
+            "offset": -0.46055,
+            "width": 0.45749,
+            "height": 1.0,
+            "sill": 1.1,
+            "code": "V"
+          },
+          {
+            "id": "f-d1a",
+            "offset": 1.38377,
+            "width": 0.914,
+            "height": 1.981,
+            "sill": 0,
+            "code": "D1"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00055",
+          "p03-v00058"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-wc-top",
+      "label": "Wc Top wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 1.473425,
+        "y": 1.185985,
+        "length": 2.84519,
+        "thickness": 0.15249,
+        "rotation": 0,
+        "height": 3,
+        "z": 3,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00083",
+          "p03-v00084"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-wc-side",
+      "label": "Wc Side wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 2.819775,
+        "y": 0.5802849999999999,
+        "length": 1.05891,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "height": 3,
+        "z": 3,
+        "openings": [
+          {
+            "id": "f-wc-door",
+            "offset": 0.14966,
+            "width": 0.762,
+            "height": 1.829,
+            "sill": 0,
+            "code": "D2"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00074",
+          "p03-v00084"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-bedroom-west",
+      "label": "Bedroom West wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 4.241665,
+        "y": 1.723205,
+        "length": 3.09061,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "height": 3,
+        "z": 3,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00099",
+          "p03-v00100"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-bedroom-divider",
+      "label": "Bedroom Divider wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 7.613535,
+        "y": 1.723205,
+        "length": 3.09061,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "height": 3,
+        "z": 3,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00096",
+          "p03-v00097"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-bedroom-front",
+      "label": "Bedroom Front wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 5.9276,
+        "y": -0.06283,
+        "length": 3.21938,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "height": 3,
+        "z": 3,
+        "openings": [
+          {
+            "id": "f-d1b",
+            "offset": -1.1522,
+            "width": 0.914,
+            "height": 1.981,
+            "sill": 0,
+            "code": "D1"
+          },
+          {
+            "id": "f-w2",
+            "offset": 0.38618,
+            "width": 1.52355,
+            "height": 1.524,
+            "sill": 0.625,
+            "code": "W2"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00056",
+          "p03-v00060"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-east",
+      "label": "East wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 11.379349999999999,
+        "y": 0.993965,
+        "length": 4.54909,
+        "thickness": 0.22874,
+        "rotation": 90,
+        "height": 3,
+        "z": 3,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00061",
+          "p03-v00223"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-bedroom-return",
+      "label": "Bedroom Return wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 8.88434,
+        "y": -0.61417,
+        "length": 0.87536,
+        "thickness": 0.1525,
+        "rotation": 90,
+        "height": 3,
+        "z": 3,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00248",
+          "p03-v00249"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-bedroom-front-east",
+      "label": "Bedroom Front East wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 10.227155,
+        "y": -1.166215,
+        "length": 2.53313,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "height": 3,
+        "z": 3,
+        "openings": [
+          {
+            "id": "f-w1b",
+            "offset": -0.11507,
+            "width": 1.82855,
+            "height": 1.524,
+            "sill": 0.625,
+            "code": "W1"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00711",
+          "p03-v00712",
+          "p03-v00713"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "first-wall-bedroom-entry-east",
+      "label": "Bedroom Entry East wall",
+      "kind": "wall",
+      "level": "first",
+      "geometry": {
+        "type": "wall",
+        "x": 8.248935,
+        "y": -0.06283,
+        "length": 1.11831,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "height": 3,
+        "z": 3,
+        "openings": [
+          {
+            "id": "f-d2",
+            "offset": 0.10167,
+            "width": 0.762,
+            "height": 1.829,
+            "sill": 0,
+            "code": "D2"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": [
+          "p03-v00714"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "second-wall-west",
+      "label": "West wall",
+      "kind": "wall",
+      "level": "second",
+      "geometry": {
+        "type": "wall",
+        "x": -0.06354000000000001,
+        "y": 1.723205,
+        "length": 3.09061,
+        "thickness": 0.22874,
+        "rotation": 90,
+        "height": 3,
+        "z": 6,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 4,
+        "path_ids": [
+          "p04-v00055",
+          "p04-v00061"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "second-wall-north",
+      "label": "North wall",
+      "kind": "wall",
+      "level": "second",
+      "geometry": {
+        "type": "wall",
+        "x": 2.07,
+        "y": 3.50924,
+        "length": 3.78418,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "height": 3,
+        "z": 6,
+        "openings": [
+          {
+            "id": "s-w3",
+            "offset": -0.28734,
+            "width": 1.21856,
+            "height": 2.13,
+            "sill": 0.625,
+            "code": "W3"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 4,
+        "path_ids": [
+          "p04-v00055",
+          "p04-v00060",
+          "p04-v00348"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "second-wall-south",
+      "label": "South wall",
+      "kind": "wall",
+      "level": "second",
+      "geometry": {
+        "type": "wall",
+        "x": 2.07,
+        "y": -0.06283,
+        "length": 3.78418,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "height": 3,
+        "z": 6,
+        "openings": [
+          {
+            "id": "s-v",
+            "offset": -0.43631,
+            "width": 0.45749,
+            "height": 1.0,
+            "sill": 1.1,
+            "code": "V"
+          },
+          {
+            "id": "s-entry-door",
+            "offset": 1.43413,
+            "width": 0.762,
+            "height": 1.829,
+            "sill": 0,
+            "code": "D2"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 4,
+        "path_ids": [
+          "p04-v00055",
+          "p04-v00057"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "second-wall-east",
+      "label": "East wall",
+      "kind": "wall",
+      "level": "second",
+      "geometry": {
+        "type": "wall",
+        "x": 4.241665,
+        "y": 1.723205,
+        "length": 3.09061,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "height": 3,
+        "z": 6,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 4,
+        "path_ids": [
+          "p04-v00081",
+          "p04-v00346",
+          "p04-v00347"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "second-wall-store-top",
+      "label": "Store Top wall",
+      "kind": "wall",
+      "level": "second",
+      "geometry": {
+        "type": "wall",
+        "x": 1.473425,
+        "y": 1.185985,
+        "length": 2.84519,
+        "thickness": 0.15249,
+        "rotation": 0,
+        "height": 3,
+        "z": 6,
+        "openings": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 4,
+        "path_ids": [
+          "p04-v00076",
+          "p04-v00077"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "second-wall-store-side",
+      "label": "Store Side wall",
+      "kind": "wall",
+      "level": "second",
+      "geometry": {
+        "type": "wall",
+        "x": 2.819775,
+        "y": 0.5802849999999999,
+        "length": 1.05891,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "height": 3,
+        "z": 6,
+        "openings": [
+          {
+            "id": "s-store-door",
+            "offset": 0.14825,
+            "width": 0.762,
+            "height": 1.829,
+            "sill": 0,
+            "code": "D2"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 4,
+        "path_ids": [
+          "p04-v00069",
+          "p04-v00077"
+        ]
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "g-w3",
+      "label": "W3 · ground north",
+      "kind": "window",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 1.4896700000000003,
+        "y": 3.508535,
+        "z": 0.625,
+        "width": 1.21997,
+        "height": 2.13,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "host": "ground-wall-north"
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "W3",
+      "scheduled_width_m": 1.524,
+      "scheduled_height_m": 2.13
+    },
+    {
+      "id": "g-w2",
+      "label": "W2 · ground north",
+      "kind": "window",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 5.90148,
+        "y": 3.508535,
+        "z": 0.625,
+        "width": 1.52355,
+        "height": 1.524,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "host": "ground-wall-north"
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "W2",
+      "scheduled_width_m": 1.524,
+      "scheduled_height_m": 1.524
+    },
+    {
+      "id": "g-v1",
+      "label": "V · ground south left",
+      "kind": "vent",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 1.63298,
+        "y": -0.06353500000000001,
+        "z": 1.1,
+        "width": 0.45608,
+        "height": 1.0,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "host": "ground-wall-south-left"
+      },
+      "status": "assumed",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "V",
+      "scheduled_width_m": 0.609,
+      "scheduled_height_m": 1.0
+    },
+    {
+      "id": "g-v2",
+      "label": "V · ground south left",
+      "kind": "vent",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 3.42835,
+        "y": -0.06353500000000001,
+        "z": 1.1,
+        "width": 0.45749,
+        "height": 1.0,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "host": "ground-wall-south-left"
+      },
+      "status": "assumed",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "V",
+      "scheduled_width_m": 0.609,
+      "scheduled_height_m": 1.0
+    },
+    {
+      "id": "g-wc-door",
+      "label": "D2 · ground wc side",
+      "kind": "door",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 2.81836,
+        "y": 0.72853,
+        "z": 0,
+        "width": 0.762,
+        "height": 1.829,
+        "thickness": 0.1525,
+        "rotation": 90,
+        "host": "ground-wall-wc-side"
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "D2",
+      "scheduled_width_m": 0.762,
+      "scheduled_height_m": 1.829
+    },
+    {
+      "id": "g-d",
+      "label": "D · ground divider",
+      "kind": "door",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 7.613535,
+        "y": 2.75953,
+        "z": 0,
+        "width": 1.01514,
+        "height": 2.134,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "host": "ground-wall-entry"
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule. Entry width follows the shorter traced host opening; the schedule states 1.210 m. This discrepancy remains unresolved.",
+      "opening_type": "D",
+      "scheduled_width_m": 1.21,
+      "scheduled_height_m": 2.134
+    },
+    {
+      "id": "g-d1",
+      "label": "D1 · ground divider",
+      "kind": "door",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 7.613535,
+        "y": 1.54178,
+        "z": 0,
+        "width": 0.914,
+        "height": 1.981,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "host": "ground-wall-divider"
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "D1",
+      "scheduled_width_m": 0.914,
+      "scheduled_height_m": 1.981
+    },
+    {
+      "id": "g-w1a",
+      "label": "W1 · ground entrance kitchen",
+      "kind": "window",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 9.5148,
+        "y": 2.137595,
+        "z": 0.625,
+        "width": 1.82855,
+        "height": 1.524,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "host": "ground-wall-entrance-kitchen"
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "W1",
+      "scheduled_width_m": 1.829,
+      "scheduled_height_m": 1.524
+    },
+    {
+      "id": "g-w1b",
+      "label": "W1 · ground living front",
+      "kind": "window",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 6.0568,
+        "y": -0.656525,
+        "z": 0.625,
+        "width": 1.82855,
+        "height": 1.524,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "host": "ground-wall-living-front"
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "W1",
+      "scheduled_width_m": 1.829,
+      "scheduled_height_m": 1.524
+    },
+    {
+      "id": "g-w1c",
+      "label": "W1 · ground kitchen front",
+      "kind": "window",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 10.01888,
+        "y": -1.166215,
+        "z": 0.625,
+        "width": 1.82855,
+        "height": 1.524,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "host": "ground-wall-kitchen-front"
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "W1",
+      "scheduled_width_m": 1.829,
+      "scheduled_height_m": 1.524
+    },
+    {
+      "id": "g-d2",
+      "label": "D2 · ground kitchen front",
+      "kind": "door",
+      "level": "ground",
+      "geometry": {
+        "type": "opening",
+        "x": 8.17222,
+        "y": -1.166215,
+        "z": 0,
+        "width": 0.762,
+        "height": 1.829,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "host": "ground-wall-kitchen-front"
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "D2",
+      "scheduled_width_m": 0.762,
+      "scheduled_height_m": 1.829
+    },
+    {
+      "id": "f-w3",
+      "label": "W3 · first north",
+      "kind": "window",
+      "level": "first",
+      "geometry": {
+        "type": "opening",
+        "x": 1.78266,
+        "y": 3.50924,
+        "z": 3.625,
+        "width": 1.21856,
+        "height": 2.13,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "first-wall-north"
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "W3",
+      "scheduled_width_m": 1.524,
+      "scheduled_height_m": 2.13
+    },
+    {
+      "id": "f-w1",
+      "label": "W1 · first north",
+      "kind": "window",
+      "level": "first",
+      "geometry": {
+        "type": "opening",
+        "x": 5.92266,
+        "y": 3.50924,
+        "z": 3.625,
+        "width": 1.82855,
+        "height": 1.524,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "first-wall-north"
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "W1",
+      "scheduled_width_m": 1.829,
+      "scheduled_height_m": 1.524
+    },
+    {
+      "id": "f-sd",
+      "label": "SD · first north",
+      "kind": "sliding door",
+      "level": "first",
+      "geometry": {
+        "type": "opening",
+        "x": 9.77037,
+        "y": 3.50924,
+        "z": 3,
+        "width": 1.82855,
+        "height": 2.134,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "first-wall-north"
+      },
+      "status": "assumed",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "SD",
+      "scheduled_width_m": null,
+      "scheduled_height_m": null
+    },
+    {
+      "id": "f-v",
+      "label": "V · first wc front",
+      "kind": "vent",
+      "level": "first",
+      "geometry": {
+        "type": "opening",
+        "x": 1.60945,
+        "y": -0.06283,
+        "z": 4.1,
+        "width": 0.45749,
+        "height": 1.0,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "first-wall-wc-front"
+      },
+      "status": "assumed",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "V",
+      "scheduled_width_m": 0.609,
+      "scheduled_height_m": 1.0
+    },
+    {
+      "id": "f-wc-door",
+      "label": "D2 · first wc side",
+      "kind": "door",
+      "level": "first",
+      "geometry": {
+        "type": "opening",
+        "x": 2.819775,
+        "y": 0.72994,
+        "z": 3,
+        "width": 0.762,
+        "height": 1.829,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "host": "first-wall-wc-side"
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "D2",
+      "scheduled_width_m": 0.762,
+      "scheduled_height_m": 1.829
+    },
+    {
+      "id": "f-d1a",
+      "label": "D1 · first wc front",
+      "kind": "door",
+      "level": "first",
+      "geometry": {
+        "type": "opening",
+        "x": 3.45377,
+        "y": -0.06283,
+        "z": 3,
+        "width": 0.914,
+        "height": 1.981,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "first-wall-wc-front"
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "D1",
+      "scheduled_width_m": 0.914,
+      "scheduled_height_m": 1.981
+    },
+    {
+      "id": "f-d1b",
+      "label": "D1 · first bedroom front",
+      "kind": "door",
+      "level": "first",
+      "geometry": {
+        "type": "opening",
+        "x": 4.7754,
+        "y": -0.06283,
+        "z": 3,
+        "width": 0.914,
+        "height": 1.981,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "first-wall-bedroom-front"
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "D1",
+      "scheduled_width_m": 0.914,
+      "scheduled_height_m": 1.981
+    },
+    {
+      "id": "f-w2",
+      "label": "W2 · first bedroom front",
+      "kind": "window",
+      "level": "first",
+      "geometry": {
+        "type": "opening",
+        "x": 6.31378,
+        "y": -0.06283,
+        "z": 3.625,
+        "width": 1.52355,
+        "height": 1.524,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "first-wall-bedroom-front"
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "W2",
+      "scheduled_width_m": 1.524,
+      "scheduled_height_m": 1.524
+    },
+    {
+      "id": "f-w1b",
+      "label": "W1 · first bedroom front east",
+      "kind": "window",
+      "level": "first",
+      "geometry": {
+        "type": "opening",
+        "x": 10.11208,
+        "y": -1.166215,
+        "z": 3.625,
+        "width": 1.82855,
+        "height": 1.524,
+        "thickness": 0.22873,
+        "rotation": 0,
+        "host": "first-wall-bedroom-front-east"
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "W1",
+      "scheduled_width_m": 1.829,
+      "scheduled_height_m": 1.524
+    },
+    {
+      "id": "f-d2",
+      "label": "D2 · first bedroom entry east",
+      "kind": "door",
+      "level": "first",
+      "geometry": {
+        "type": "opening",
+        "x": 8.3506,
+        "y": -0.06283,
+        "z": 3,
+        "width": 0.762,
+        "height": 1.829,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "first-wall-bedroom-entry-east"
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "D2",
+      "scheduled_width_m": 0.762,
+      "scheduled_height_m": 1.829
+    },
+    {
+      "id": "s-w3",
+      "label": "W3 · second north",
+      "kind": "window",
+      "level": "second",
+      "geometry": {
+        "type": "opening",
+        "x": 1.78266,
+        "y": 3.50924,
+        "z": 6.625,
+        "width": 1.21856,
+        "height": 2.13,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "second-wall-north"
+      },
+      "status": "derived",
+      "source": {
+        "page": 4,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "W3",
+      "scheduled_width_m": 1.524,
+      "scheduled_height_m": 2.13
+    },
+    {
+      "id": "s-v",
+      "label": "V · second south",
+      "kind": "vent",
+      "level": "second",
+      "geometry": {
+        "type": "opening",
+        "x": 1.63369,
+        "y": -0.06283,
+        "z": 7.1,
+        "width": 0.45749,
+        "height": 1.0,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "second-wall-south"
+      },
+      "status": "assumed",
+      "source": {
+        "page": 4,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "V",
+      "scheduled_width_m": 0.609,
+      "scheduled_height_m": 1.0
+    },
+    {
+      "id": "s-store-door",
+      "label": "D2 · second store side",
+      "kind": "door",
+      "level": "second",
+      "geometry": {
+        "type": "opening",
+        "x": 2.819775,
+        "y": 0.72853,
+        "z": 6,
+        "width": 0.762,
+        "height": 1.829,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "host": "second-wall-store-side"
+      },
+      "status": "derived",
+      "source": {
+        "page": 4,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "D2",
+      "scheduled_width_m": 0.762,
+      "scheduled_height_m": 1.829
+    },
+    {
+      "id": "s-entry-door",
+      "label": "D2 · second south",
+      "kind": "door",
+      "level": "second",
+      "geometry": {
+        "type": "opening",
+        "x": 3.50413,
+        "y": -0.06283,
+        "z": 6,
+        "width": 0.762,
+        "height": 1.829,
+        "thickness": 0.22732,
+        "rotation": 0,
+        "host": "second-wall-south"
+      },
+      "status": "derived",
+      "source": {
+        "page": 4,
+        "path_ids": []
+      },
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "opening_type": "D2",
+      "scheduled_width_m": 0.762,
+      "scheduled_height_m": 1.829
+    },
+    {
+      "id": "ground-wall-entry",
+      "label": "Entrance door host",
+      "kind": "wall",
+      "level": "ground",
+      "geometry": {
+        "type": "wall",
+        "x": 7.613535,
+        "y": 2.75953,
+        "length": 1.01514,
+        "thickness": 0.15249,
+        "rotation": 90,
+        "height": 3,
+        "z": 0,
+        "openings": [
+          {
+            "id": "g-d",
+            "offset": 0,
+            "width": 1.01514,
+            "height": 2.134,
+            "sill": 0,
+            "code": "D"
+          }
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Footprint traced from PDF wall faces; height follows the 3 m section levels. Dimensions are a reconstruction, not a survey."
+    },
+    {
+      "id": "ground-slab",
+      "label": "Ground slab / roof envelope",
+      "kind": "slab",
+      "level": "ground",
+      "geometry": {
+        "type": "polygon",
+        "points": [
+          [
+            -0.1775,
+            -0.1775
+          ],
+          [
+            4.02,
+            -0.1775
+          ],
+          [
+            4.02,
+            -0.771
+          ],
+          [
+            7.54,
+            -0.771
+          ],
+          [
+            7.54,
+            -1.28
+          ],
+          [
+            11.4925,
+            -1.28
+          ],
+          [
+            11.4925,
+            3.6225
+          ],
+          [
+            -0.1775,
+            3.6225
+          ]
+        ],
+        "z": -0.125,
+        "height": 0.125,
+        "holes": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 2,
+        "path_ids": []
+      },
+      "note": "Calibrated envelope reconstruction; quoted floor areas remain separate from this gross display footprint. Slab thickness 125 mm interpreted from beam sections. Roof cantilever outline is a traced approximation."
+    },
+    {
+      "id": "first-slab",
+      "label": "First slab / roof envelope",
+      "kind": "slab",
+      "level": "first",
+      "geometry": {
+        "type": "polygon",
+        "points": [
+          [
+            -0.1775,
+            -0.1775
+          ],
+          [
+            2.65,
+            -0.1775
+          ],
+          [
+            2.65,
+            -0.995
+          ],
+          [
+            4.0,
+            -0.995
+          ],
+          [
+            4.0,
+            -1.4
+          ],
+          [
+            11.4925,
+            -1.4
+          ],
+          [
+            11.4925,
+            4.34
+          ],
+          [
+            10.0,
+            4.28
+          ],
+          [
+            9.0,
+            4.18
+          ],
+          [
+            8.3,
+            3.95
+          ],
+          [
+            7.72,
+            3.6225
+          ],
+          [
+            -0.1775,
+            3.6225
+          ]
+        ],
+        "z": 2.875,
+        "height": 0.125,
+        "holes": [
+          [
+            [
+              0.2,
+              1.12
+            ],
+            [
+              3.72,
+              1.12
+            ],
+            [
+              3.72,
+              3.3
+            ],
+            [
+              0.2,
+              3.3
+            ]
+          ]
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 3,
+        "path_ids": []
+      },
+      "note": "Calibrated envelope reconstruction; quoted floor areas remain separate from this gross display footprint. Slab thickness 125 mm interpreted from beam sections. Roof cantilever outline is a traced approximation."
+    },
+    {
+      "id": "second-slab",
+      "label": "Second slab / roof envelope",
+      "kind": "slab",
+      "level": "second",
+      "geometry": {
+        "type": "polygon",
+        "points": [
+          [
+            -0.1775,
+            -0.1775
+          ],
+          [
+            2.65,
+            -0.1775
+          ],
+          [
+            2.65,
+            -0.995
+          ],
+          [
+            4.0,
+            -0.995
+          ],
+          [
+            4.0,
+            -1.4
+          ],
+          [
+            11.4925,
+            -1.4
+          ],
+          [
+            11.4925,
+            4.34
+          ],
+          [
+            10.0,
+            4.28
+          ],
+          [
+            9.0,
+            4.18
+          ],
+          [
+            8.3,
+            3.95
+          ],
+          [
+            7.72,
+            3.6225
+          ],
+          [
+            -0.1775,
+            3.6225
+          ]
+        ],
+        "z": 5.875,
+        "height": 0.125,
+        "holes": [
+          [
+            [
+              0.2,
+              1.12
+            ],
+            [
+              3.72,
+              1.12
+            ],
+            [
+              3.72,
+              3.3
+            ],
+            [
+              0.2,
+              3.3
+            ]
+          ]
+        ]
+      },
+      "status": "derived",
+      "source": {
+        "page": 4,
+        "path_ids": []
+      },
+      "note": "Calibrated envelope reconstruction; quoted floor areas remain separate from this gross display footprint. Slab thickness 125 mm interpreted from beam sections. Roof cantilever outline is a traced approximation."
+    },
+    {
+      "id": "roof-slab",
+      "label": "Roof slab / roof envelope",
+      "kind": "slab",
+      "level": "roof",
+      "geometry": {
+        "type": "polygon",
+        "points": [
+          [
+            -0.1775,
+            -0.995
+          ],
+          [
+            2.5925,
+            -0.995
+          ],
+          [
+            2.5925,
+            -1.4
+          ],
+          [
+            5.0775,
+            -1.4
+          ],
+          [
+            5.0775,
+            3.6225
+          ],
+          [
+            -0.1775,
+            3.6225
+          ]
+        ],
+        "z": 8.875,
+        "height": 0.125,
+        "holes": []
+      },
+      "status": "derived",
+      "source": {
+        "page": 5,
+        "path_ids": []
+      },
+      "note": "Calibrated envelope reconstruction; quoted floor areas remain separate from this gross display footprint. Slab thickness 125 mm interpreted from beam sections. Roof cantilever outline is a traced approximation."
+    },
+    {
+      "id": "ground-column-1A",
+      "label": "C1 · grid 1A",
+      "kind": "column",
+      "level": "ground",
+      "geometry": {
+        "type": "box",
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C1",
+      "grid": "1A"
+    },
+    {
+      "id": "ground-column-1B",
+      "label": "C1 · grid 1B",
+      "kind": "column",
+      "level": "ground",
+      "geometry": {
+        "type": "box",
+        "x": 0,
+        "y": 3.445,
+        "z": 0,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C1",
+      "grid": "1B"
+    },
+    {
+      "id": "ground-column-2A",
+      "label": "C2 · grid 2A",
+      "kind": "column",
+      "level": "ground",
+      "geometry": {
+        "type": "box",
+        "x": 4.14,
+        "y": 0,
+        "z": 0,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "2A"
+    },
+    {
+      "id": "ground-column-2B",
+      "label": "C2 · grid 2B",
+      "kind": "column",
+      "level": "ground",
+      "geometry": {
+        "type": "box",
+        "x": 4.14,
+        "y": 3.445,
+        "z": 0,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "2B"
+    },
+    {
+      "id": "ground-column-3A",
+      "label": "C2 · grid 3A",
+      "kind": "column",
+      "level": "ground",
+      "geometry": {
+        "type": "box",
+        "x": 7.715,
+        "y": 0,
+        "z": 0,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "3A"
+    },
+    {
+      "id": "ground-column-3B",
+      "label": "C2 · grid 3B",
+      "kind": "column",
+      "level": "ground",
+      "geometry": {
+        "type": "box",
+        "x": 7.715,
+        "y": 3.445,
+        "z": 0,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "3B"
+    },
+    {
+      "id": "ground-column-4A",
+      "label": "C2 · grid 4A",
+      "kind": "column",
+      "level": "ground",
+      "geometry": {
+        "type": "box",
+        "x": 11.315,
+        "y": 0,
+        "z": 0,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "4A"
+    },
+    {
+      "id": "ground-column-4B",
+      "label": "C2 · grid 4B",
+      "kind": "column",
+      "level": "ground",
+      "geometry": {
+        "type": "box",
+        "x": 11.315,
+        "y": 3.445,
+        "z": 0,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "4B"
+    },
+    {
+      "id": "first-column-1A",
+      "label": "C1 · grid 1A",
+      "kind": "column",
+      "level": "first",
+      "geometry": {
+        "type": "box",
+        "x": 0,
+        "y": 0,
+        "z": 3,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C1",
+      "grid": "1A"
+    },
+    {
+      "id": "first-column-1B",
+      "label": "C1 · grid 1B",
+      "kind": "column",
+      "level": "first",
+      "geometry": {
+        "type": "box",
+        "x": 0,
+        "y": 3.445,
+        "z": 3,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C1",
+      "grid": "1B"
+    },
+    {
+      "id": "first-column-2A",
+      "label": "C2 · grid 2A",
+      "kind": "column",
+      "level": "first",
+      "geometry": {
+        "type": "box",
+        "x": 4.14,
+        "y": 0,
+        "z": 3,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "2A"
+    },
+    {
+      "id": "first-column-2B",
+      "label": "C2 · grid 2B",
+      "kind": "column",
+      "level": "first",
+      "geometry": {
+        "type": "box",
+        "x": 4.14,
+        "y": 3.445,
+        "z": 3,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "2B"
+    },
+    {
+      "id": "first-column-3A",
+      "label": "C2 · grid 3A",
+      "kind": "column",
+      "level": "first",
+      "geometry": {
+        "type": "box",
+        "x": 7.715,
+        "y": 0,
+        "z": 3,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "3A"
+    },
+    {
+      "id": "first-column-3B",
+      "label": "C2 · grid 3B",
+      "kind": "column",
+      "level": "first",
+      "geometry": {
+        "type": "box",
+        "x": 7.715,
+        "y": 3.445,
+        "z": 3,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "3B"
+    },
+    {
+      "id": "first-column-4A",
+      "label": "C2 · grid 4A",
+      "kind": "column",
+      "level": "first",
+      "geometry": {
+        "type": "box",
+        "x": 11.315,
+        "y": 0,
+        "z": 3,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "4A"
+    },
+    {
+      "id": "first-column-4B",
+      "label": "C2 · grid 4B",
+      "kind": "column",
+      "level": "first",
+      "geometry": {
+        "type": "box",
+        "x": 11.315,
+        "y": 3.445,
+        "z": 3,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "4B"
+    },
+    {
+      "id": "second-column-1A",
+      "label": "C1 · grid 1A",
+      "kind": "column",
+      "level": "second",
+      "geometry": {
+        "type": "box",
+        "x": 0,
+        "y": 0,
+        "z": 6,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C1",
+      "grid": "1A"
+    },
+    {
+      "id": "second-column-1B",
+      "label": "C1 · grid 1B",
+      "kind": "column",
+      "level": "second",
+      "geometry": {
+        "type": "box",
+        "x": 0,
+        "y": 3.445,
+        "z": 6,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C1",
+      "grid": "1B"
+    },
+    {
+      "id": "second-column-2A",
+      "label": "C2 · grid 2A",
+      "kind": "column",
+      "level": "second",
+      "geometry": {
+        "type": "box",
+        "x": 4.14,
+        "y": 0,
+        "z": 6,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "2A"
+    },
+    {
+      "id": "second-column-2B",
+      "label": "C2 · grid 2B",
+      "kind": "column",
+      "level": "second",
+      "geometry": {
+        "type": "box",
+        "x": 4.14,
+        "y": 3.445,
+        "z": 6,
+        "width": 0.355,
+        "depth": 0.355,
+        "height": 3
+      },
+      "status": "derived",
+      "source": {
+        "page": 8,
+        "path_ids": []
+      },
+      "note": "Written structural grid and 355 × 355 column schedule. At the partial upper storey, only the four columns shown on sheet 4 are displayed.",
+      "column_type": "C2",
+      "grid": "2B"
+    },
+    {
+      "id": "first-beam-x-0-0",
+      "label": "SB · 1–2 A",
+      "kind": "beam",
+      "level": "first",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          0,
+          3
+        ],
+        "b": [
+          4.14,
+          0,
+          3
+        ],
+        "width": 0.23,
+        "height": 0.3
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "SB"
+    },
+    {
+      "id": "first-beam-x-0-1",
+      "label": "MB · 2–3 A",
+      "kind": "beam",
+      "level": "first",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          0,
+          3
+        ],
+        "b": [
+          7.715,
+          0,
+          3
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "first-beam-x-0-2",
+      "label": "MB · 3–4 A",
+      "kind": "beam",
+      "level": "first",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          0,
+          3
+        ],
+        "b": [
+          11.315,
+          0,
+          3
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "first-beam-x-1-0",
+      "label": "MB · 1–2 B",
+      "kind": "beam",
+      "level": "first",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          3.445,
+          3
+        ],
+        "b": [
+          4.14,
+          3.445,
+          3
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "first-beam-x-1-1",
+      "label": "MB · 2–3 B",
+      "kind": "beam",
+      "level": "first",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          3.445,
+          3
+        ],
+        "b": [
+          7.715,
+          3.445,
+          3
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "first-beam-x-1-2",
+      "label": "MB · 3–4 B",
+      "kind": "beam",
+      "level": "first",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          3.445,
+          3
+        ],
+        "b": [
+          11.315,
+          3.445,
+          3
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "first-beam-y-0",
+      "label": "MB1 · grid 1 A–B",
+      "kind": "beam",
+      "level": "first",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          0,
+          3
+        ],
+        "b": [
+          0,
+          3.445,
+          3
+        ],
+        "width": 0.25,
+        "height": 0.475
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "",
+      "beam_type": "MB1"
+    },
+    {
+      "id": "first-beam-y-1",
+      "label": "MB2 · grid 2 A–B",
+      "kind": "beam",
+      "level": "first",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          0,
+          3
+        ],
+        "b": [
+          4.14,
+          3.445,
+          3
+        ],
+        "width": 0.25,
+        "height": 0.475
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "",
+      "beam_type": "MB2"
+    },
+    {
+      "id": "first-beam-y-2",
+      "label": "MB2 · grid 3 A–B",
+      "kind": "beam",
+      "level": "first",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          0,
+          3
+        ],
+        "b": [
+          7.715,
+          3.445,
+          3
+        ],
+        "width": 0.25,
+        "height": 0.475
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "",
+      "beam_type": "MB2"
+    },
+    {
+      "id": "first-beam-y-3",
+      "label": "MB2 · grid 4 A–B",
+      "kind": "beam",
+      "level": "first",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          11.315,
+          0,
+          3
+        ],
+        "b": [
+          11.315,
+          3.445,
+          3
+        ],
+        "width": 0.25,
+        "height": 0.475
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "",
+      "beam_type": "MB2"
+    },
+    {
+      "id": "second-beam-x-0-0",
+      "label": "SB · 1–2 A",
+      "kind": "beam",
+      "level": "second",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          0,
+          6
+        ],
+        "b": [
+          4.14,
+          0,
+          6
+        ],
+        "width": 0.23,
+        "height": 0.3
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "SB"
+    },
+    {
+      "id": "second-beam-x-0-1",
+      "label": "MB · 2–3 A",
+      "kind": "beam",
+      "level": "second",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          0,
+          6
+        ],
+        "b": [
+          7.715,
+          0,
+          6
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "second-beam-x-0-2",
+      "label": "MB · 3–4 A",
+      "kind": "beam",
+      "level": "second",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          0,
+          6
+        ],
+        "b": [
+          11.315,
+          0,
+          6
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "second-beam-x-1-0",
+      "label": "MB · 1–2 B",
+      "kind": "beam",
+      "level": "second",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          3.445,
+          6
+        ],
+        "b": [
+          4.14,
+          3.445,
+          6
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "second-beam-x-1-1",
+      "label": "MB · 2–3 B",
+      "kind": "beam",
+      "level": "second",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          3.445,
+          6
+        ],
+        "b": [
+          7.715,
+          3.445,
+          6
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "second-beam-x-1-2",
+      "label": "MB · 3–4 B",
+      "kind": "beam",
+      "level": "second",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          3.445,
+          6
+        ],
+        "b": [
+          11.315,
+          3.445,
+          6
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "second-beam-y-0",
+      "label": "MB1 · grid 1 A–B",
+      "kind": "beam",
+      "level": "second",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          0,
+          6
+        ],
+        "b": [
+          0,
+          3.445,
+          6
+        ],
+        "width": 0.25,
+        "height": 0.475
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "",
+      "beam_type": "MB1"
+    },
+    {
+      "id": "second-beam-y-1",
+      "label": "MB2 · grid 2 A–B",
+      "kind": "beam",
+      "level": "second",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          0,
+          6
+        ],
+        "b": [
+          4.14,
+          3.445,
+          6
+        ],
+        "width": 0.25,
+        "height": 0.475
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "",
+      "beam_type": "MB2"
+    },
+    {
+      "id": "second-beam-y-2",
+      "label": "MB2 · grid 3 A–B",
+      "kind": "beam",
+      "level": "second",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          0,
+          6
+        ],
+        "b": [
+          7.715,
+          3.445,
+          6
+        ],
+        "width": 0.25,
+        "height": 0.475
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "",
+      "beam_type": "MB2"
+    },
+    {
+      "id": "second-beam-y-3",
+      "label": "MB2 · grid 4 A–B",
+      "kind": "beam",
+      "level": "second",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          11.315,
+          0,
+          6
+        ],
+        "b": [
+          11.315,
+          3.445,
+          6
+        ],
+        "width": 0.25,
+        "height": 0.475
+      },
+      "status": "derived",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "",
+      "beam_type": "MB2"
+    },
+    {
+      "id": "roof-beam-x-0-0",
+      "label": "SB · 1–2 A",
+      "kind": "beam",
+      "level": "roof",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          0,
+          9
+        ],
+        "b": [
+          4.14,
+          0,
+          9
+        ],
+        "width": 0.23,
+        "height": 0.3
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "SB"
+    },
+    {
+      "id": "roof-beam-x-1-0",
+      "label": "MB · 1–2 B",
+      "kind": "beam",
+      "level": "roof",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          3.445,
+          9
+        ],
+        "b": [
+          4.14,
+          3.445,
+          9
+        ],
+        "width": 0.25,
+        "height": 0.425
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Grid placement from beam layout. Roof selection is limited to the partial enclosure; confirm actual roof beam arrangement.",
+      "beam_type": "MB"
+    },
+    {
+      "id": "roof-beam-y-0",
+      "label": "MB1 · grid 1 A–B",
+      "kind": "beam",
+      "level": "roof",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          0,
+          9
+        ],
+        "b": [
+          0,
+          3.445,
+          9
+        ],
+        "width": 0.25,
+        "height": 0.475
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "",
+      "beam_type": "MB1"
+    },
+    {
+      "id": "roof-beam-y-1",
+      "label": "MB2 · grid 2 A–B",
+      "kind": "beam",
+      "level": "roof",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          0,
+          9
+        ],
+        "b": [
+          4.14,
+          3.445,
+          9
+        ],
+        "width": 0.25,
+        "height": 0.475
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "",
+      "beam_type": "MB2"
+    },
+    {
+      "id": "tb-0-0",
+      "label": "TB · 1–2 A",
+      "kind": "tie beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          0,
+          -0.1
+        ],
+        "b": [
+          4.14,
+          0,
+          -0.1
+        ],
+        "width": 0.3,
+        "height": 0.35
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "TB"
+    },
+    {
+      "id": "strap-0-0",
+      "label": "STRAP · 1–2 A",
+      "kind": "strap beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          0,
+          -1.65
+        ],
+        "b": [
+          4.14,
+          0,
+          -1.65
+        ],
+        "width": 0.355,
+        "height": 0.6
+      },
+      "status": "assumed",
+      "source": {
+        "page": 13,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "STRAP"
+    },
+    {
+      "id": "tb-0-1",
+      "label": "TB · 2–3 A",
+      "kind": "tie beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          0,
+          -0.1
+        ],
+        "b": [
+          7.715,
+          0,
+          -0.1
+        ],
+        "width": 0.3,
+        "height": 0.35
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "TB"
+    },
+    {
+      "id": "strap-0-1",
+      "label": "STRAP · 2–3 A",
+      "kind": "strap beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          0,
+          -1.65
+        ],
+        "b": [
+          7.715,
+          0,
+          -1.65
+        ],
+        "width": 0.355,
+        "height": 0.6
+      },
+      "status": "assumed",
+      "source": {
+        "page": 13,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "STRAP"
+    },
+    {
+      "id": "tb-0-2",
+      "label": "TB · 3–4 A",
+      "kind": "tie beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          0,
+          -0.1
+        ],
+        "b": [
+          11.315,
+          0,
+          -0.1
+        ],
+        "width": 0.3,
+        "height": 0.35
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "TB"
+    },
+    {
+      "id": "strap-0-2",
+      "label": "STRAP · 3–4 A",
+      "kind": "strap beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          0,
+          -1.65
+        ],
+        "b": [
+          11.315,
+          0,
+          -1.65
+        ],
+        "width": 0.355,
+        "height": 0.6
+      },
+      "status": "assumed",
+      "source": {
+        "page": 13,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "STRAP"
+    },
+    {
+      "id": "tb-1-0",
+      "label": "TB · 1–2 B",
+      "kind": "tie beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          3.445,
+          -0.1
+        ],
+        "b": [
+          4.14,
+          3.445,
+          -0.1
+        ],
+        "width": 0.3,
+        "height": 0.35
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "TB"
+    },
+    {
+      "id": "strap-1-0",
+      "label": "STRAP · 1–2 B",
+      "kind": "strap beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          3.445,
+          -1.65
+        ],
+        "b": [
+          4.14,
+          3.445,
+          -1.65
+        ],
+        "width": 0.355,
+        "height": 0.6
+      },
+      "status": "assumed",
+      "source": {
+        "page": 13,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "STRAP"
+    },
+    {
+      "id": "tb-1-1",
+      "label": "TB · 2–3 B",
+      "kind": "tie beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          3.445,
+          -0.1
+        ],
+        "b": [
+          7.715,
+          3.445,
+          -0.1
+        ],
+        "width": 0.3,
+        "height": 0.35
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "TB"
+    },
+    {
+      "id": "strap-1-1",
+      "label": "STRAP · 2–3 B",
+      "kind": "strap beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          3.445,
+          -1.65
+        ],
+        "b": [
+          7.715,
+          3.445,
+          -1.65
+        ],
+        "width": 0.355,
+        "height": 0.6
+      },
+      "status": "assumed",
+      "source": {
+        "page": 13,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "STRAP"
+    },
+    {
+      "id": "tb-1-2",
+      "label": "TB · 3–4 B",
+      "kind": "tie beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          3.445,
+          -0.1
+        ],
+        "b": [
+          11.315,
+          3.445,
+          -0.1
+        ],
+        "width": 0.3,
+        "height": 0.35
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "TB"
+    },
+    {
+      "id": "strap-1-2",
+      "label": "STRAP · 3–4 B",
+      "kind": "strap beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          3.445,
+          -1.65
+        ],
+        "b": [
+          11.315,
+          3.445,
+          -1.65
+        ],
+        "width": 0.355,
+        "height": 0.6
+      },
+      "status": "assumed",
+      "source": {
+        "page": 13,
+        "path_ids": []
+      },
+      "note": "Section size follows the layout. Vertical placement below plinth is a display assumption; strap section conflicts are retained in the issue register.",
+      "beam_type": "STRAP"
+    },
+    {
+      "id": "tb-y-0",
+      "label": "TB transverse · grid 1",
+      "kind": "tie beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          0,
+          0,
+          -0.1
+        ],
+        "b": [
+          0,
+          3.445,
+          -0.1
+        ],
+        "width": 0.225,
+        "height": 0.3
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "225 × 300 transverse size follows layout; elevation is provisional.",
+      "beam_type": "TB-transverse"
+    },
+    {
+      "id": "tb-y-1",
+      "label": "TB transverse · grid 2",
+      "kind": "tie beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          4.14,
+          0,
+          -0.1
+        ],
+        "b": [
+          4.14,
+          3.445,
+          -0.1
+        ],
+        "width": 0.225,
+        "height": 0.3
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "225 × 300 transverse size follows layout; elevation is provisional.",
+      "beam_type": "TB-transverse"
+    },
+    {
+      "id": "tb-y-2",
+      "label": "TB transverse · grid 3",
+      "kind": "tie beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          7.715,
+          0,
+          -0.1
+        ],
+        "b": [
+          7.715,
+          3.445,
+          -0.1
+        ],
+        "width": 0.225,
+        "height": 0.3
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "225 × 300 transverse size follows layout; elevation is provisional.",
+      "beam_type": "TB-transverse"
+    },
+    {
+      "id": "tb-y-3",
+      "label": "TB transverse · grid 4",
+      "kind": "tie beam",
+      "level": "foundation",
+      "geometry": {
+        "type": "segment",
+        "a": [
+          11.315,
+          0,
+          -0.1
+        ],
+        "b": [
+          11.315,
+          3.445,
+          -0.1
+        ],
+        "width": 0.225,
+        "height": 0.3
+      },
+      "status": "assumed",
+      "source": {
+        "page": 10,
+        "path_ids": []
+      },
+      "note": "225 × 300 transverse size follows layout; elevation is provisional.",
+      "beam_type": "TB-transverse"
+    },
+    {
+      "id": "footing-1A",
+      "label": "EF1 · grid 1A",
+      "kind": "footing",
+      "level": "foundation",
+      "geometry": {
+        "type": "box",
+        "x": 0,
+        "y": 0,
+        "z": -2.4,
+        "width": 2.1,
+        "depth": 1.8,
+        "height": null,
+        "wireframe": true
+      },
+      "status": "assumed",
+      "source": {
+        "page": 9,
+        "path_ids": []
+      },
+      "note": "Footprint size follows layout. Thickness and eccentric offsets are unresolved, so a footprint is shown without a fabricated solid volume. The -2.4 m plane combines -0.6 m grade and 1.8 m nominal depth provisionally.",
+      "footing_type": "EF1"
+    },
+    {
+      "id": "footing-1B",
+      "label": "EF2 · grid 1B",
+      "kind": "footing",
+      "level": "foundation",
+      "geometry": {
+        "type": "box",
+        "x": 0,
+        "y": 3.445,
+        "z": -2.4,
+        "width": 1.65,
+        "depth": 1.65,
+        "height": null,
+        "wireframe": true
+      },
+      "status": "assumed",
+      "source": {
+        "page": 9,
+        "path_ids": []
+      },
+      "note": "Footprint size follows layout. Thickness and eccentric offsets are unresolved, so a footprint is shown without a fabricated solid volume. The -2.4 m plane combines -0.6 m grade and 1.8 m nominal depth provisionally.",
+      "footing_type": "EF2"
+    },
+    {
+      "id": "footing-2A",
+      "label": "F1 · grid 2A",
+      "kind": "footing",
+      "level": "foundation",
+      "geometry": {
+        "type": "box",
+        "x": 4.14,
+        "y": 0,
+        "z": -2.4,
+        "width": 2.1,
+        "depth": 2.1,
+        "height": null,
+        "wireframe": true
+      },
+      "status": "assumed",
+      "source": {
+        "page": 9,
+        "path_ids": []
+      },
+      "note": "Footprint size follows layout. Thickness and eccentric offsets are unresolved, so a footprint is shown without a fabricated solid volume. The -2.4 m plane combines -0.6 m grade and 1.8 m nominal depth provisionally.",
+      "footing_type": "F1"
+    },
+    {
+      "id": "footing-2B",
+      "label": "EF2 · grid 2B",
+      "kind": "footing",
+      "level": "foundation",
+      "geometry": {
+        "type": "box",
+        "x": 4.14,
+        "y": 3.445,
+        "z": -2.4,
+        "width": 1.65,
+        "depth": 1.65,
+        "height": null,
+        "wireframe": true
+      },
+      "status": "assumed",
+      "source": {
+        "page": 9,
+        "path_ids": []
+      },
+      "note": "Footprint size follows layout. Thickness and eccentric offsets are unresolved, so a footprint is shown without a fabricated solid volume. The -2.4 m plane combines -0.6 m grade and 1.8 m nominal depth provisionally.",
+      "footing_type": "EF2"
+    },
+    {
+      "id": "footing-3A",
+      "label": "F2 · grid 3A",
+      "kind": "footing",
+      "level": "foundation",
+      "geometry": {
+        "type": "box",
+        "x": 7.715,
+        "y": 0,
+        "z": -2.4,
+        "width": 1.65,
+        "depth": 1.65,
+        "height": null,
+        "wireframe": true
+      },
+      "status": "assumed",
+      "source": {
+        "page": 9,
+        "path_ids": []
+      },
+      "note": "Footprint size follows layout. Thickness and eccentric offsets are unresolved, so a footprint is shown without a fabricated solid volume. The -2.4 m plane combines -0.6 m grade and 1.8 m nominal depth provisionally.",
+      "footing_type": "F2"
+    },
+    {
+      "id": "footing-3B",
+      "label": "EF2 · grid 3B",
+      "kind": "footing",
+      "level": "foundation",
+      "geometry": {
+        "type": "box",
+        "x": 7.715,
+        "y": 3.445,
+        "z": -2.4,
+        "width": 1.65,
+        "depth": 1.65,
+        "height": null,
+        "wireframe": true
+      },
+      "status": "assumed",
+      "source": {
+        "page": 9,
+        "path_ids": []
+      },
+      "note": "Footprint size follows layout. Thickness and eccentric offsets are unresolved, so a footprint is shown without a fabricated solid volume. The -2.4 m plane combines -0.6 m grade and 1.8 m nominal depth provisionally.",
+      "footing_type": "EF2"
+    },
+    {
+      "id": "footing-4A",
+      "label": "F2 · grid 4A",
+      "kind": "footing",
+      "level": "foundation",
+      "geometry": {
+        "type": "box",
+        "x": 11.315,
+        "y": 0,
+        "z": -2.4,
+        "width": 1.65,
+        "depth": 1.65,
+        "height": null,
+        "wireframe": true
+      },
+      "status": "assumed",
+      "source": {
+        "page": 9,
+        "path_ids": []
+      },
+      "note": "Footprint size follows layout. Thickness and eccentric offsets are unresolved, so a footprint is shown without a fabricated solid volume. The -2.4 m plane combines -0.6 m grade and 1.8 m nominal depth provisionally.",
+      "footing_type": "F2"
+    },
+    {
+      "id": "footing-4B",
+      "label": "EF2 · grid 4B",
+      "kind": "footing",
+      "level": "foundation",
+      "geometry": {
+        "type": "box",
+        "x": 11.315,
+        "y": 3.445,
+        "z": -2.4,
+        "width": 1.65,
+        "depth": 1.65,
+        "height": null,
+        "wireframe": true
+      },
+      "status": "assumed",
+      "source": {
+        "page": 9,
+        "path_ids": []
+      },
+      "note": "Footprint size follows layout. Thickness and eccentric offsets are unresolved, so a footprint is shown without a fabricated solid volume. The -2.4 m plane combines -0.6 m grade and 1.8 m nominal depth provisionally.",
+      "footing_type": "EF2"
+    },
+    {
+      "id": "ground-stair",
+      "label": "Stair flight and landing",
+      "kind": "stair",
+      "level": "ground",
+      "geometry": {
+        "type": "stair",
+        "x": 0.23,
+        "y": 1.14,
+        "z": 0,
+        "height": 3,
+        "flight_width": 1.065,
+        "tread": 0.255,
+        "riser_count": 17,
+        "waist": 0.15
+      },
+      "status": "assumed",
+      "source": {
+        "page": 12,
+        "path_ids": []
+      },
+      "note": "Two flights fit the source stair zone. 17 equal risers close the 3 m level rise (176.47 mm); source nominal riser is 176 mm. Exact landing/run geometry requires confirmation."
+    },
+    {
+      "id": "first-stair",
+      "label": "Stair flight and landing",
+      "kind": "stair",
+      "level": "first",
+      "geometry": {
+        "type": "stair",
+        "x": 0.23,
+        "y": 1.14,
+        "z": 3,
+        "height": 3,
+        "flight_width": 1.065,
+        "tread": 0.255,
+        "riser_count": 17,
+        "waist": 0.15
+      },
+      "status": "assumed",
+      "source": {
+        "page": 12,
+        "path_ids": []
+      },
+      "note": "Two flights fit the source stair zone. 17 equal risers close the 3 m level rise (176.47 mm); source nominal riser is 176 mm. Exact landing/run geometry requires confirmation."
+    },
+    {
+      "id": "first-railing",
+      "label": "Terrace / balcony railing",
+      "kind": "railing",
+      "level": "first",
+      "geometry": {
+        "type": "railing",
+        "points": [
+          [
+            -0.1775,
+            -0.1775
+          ],
+          [
+            2.65,
+            -0.1775
+          ],
+          [
+            2.65,
+            -0.995
+          ],
+          [
+            4.0,
+            -0.995
+          ],
+          [
+            4.0,
+            -1.4
+          ],
+          [
+            11.4925,
+            -1.4
+          ],
+          [
+            11.4925,
+            4.34
+          ],
+          [
+            10.0,
+            4.28
+          ],
+          [
+            9.0,
+            4.18
+          ],
+          [
+            8.3,
+            3.95
+          ]
+        ],
+        "z": 3,
+        "height": 1.0
+      },
+      "status": "assumed",
+      "source": {
+        "page": 6,
+        "path_ids": []
+      },
+      "note": "Boundary follows the traced balcony/terrace. 1 m display height and rail sections are provisional; source elevations show horizontal rails without a written height."
+    },
+    {
+      "id": "second-railing",
+      "label": "Terrace / balcony railing",
+      "kind": "railing",
+      "level": "second",
+      "geometry": {
+        "type": "railing",
+        "points": [
+          [
+            -0.1775,
+            -0.1775
+          ],
+          [
+            2.65,
+            -0.1775
+          ],
+          [
+            2.65,
+            -0.995
+          ],
+          [
+            4.0,
+            -0.995
+          ],
+          [
+            4.0,
+            -1.4
+          ],
+          [
+            11.4925,
+            -1.4
+          ],
+          [
+            11.4925,
+            4.34
+          ],
+          [
+            10.0,
+            4.28
+          ],
+          [
+            9.0,
+            4.18
+          ],
+          [
+            8.3,
+            3.95
+          ]
+        ],
+        "z": 6,
+        "height": 1.0
+      },
+      "status": "assumed",
+      "source": {
+        "page": 6,
+        "path_ids": []
+      },
+      "note": "Boundary follows the traced balcony/terrace. 1 m display height and rail sections are provisional; source elevations show horizontal rails without a written height."
+    }
+  ],
+  "detail_notes": [
+    {
+      "id": "detail-20",
+      "title": "Lapping and connection details",
+      "page": 20,
+      "notes": [
+        "Not more than 50% of bars lapped at one position",
+        "Development and lap lengths use Ld, Ld+10Ø and span fractions as drawn",
+        "Hook drawing marks 10 × bar diameter; several details are Not to Scale",
+        "Beam hoop spacing and anchorage diagrams are preserved as source linework; no bar bending schedule is invented"
+      ]
+    },
+    {
+      "id": "detail-21",
+      "title": "Septic tank and soak pit",
+      "page": 21,
+      "notes": [
+        "Septic tank plan: 4,000 × 1,800 mm overall; compartment dimensions 950, 500 and 1,775 mm are retained in raw observations",
+        "Soak pit: Ø900 internal, 2,050 section depth; wall/outer dimensions and layers remain on the sheet",
+        "100 mm soil/outlet pipes; 50 mm vent; 100 mm RCC cover; 12 mm plaster; 25 mm manhole cover and 18 inch manhole",
+        "Locations, routing and tank section liquid depth are not established in the building/site plan; details are kept separate from positioned building elements"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "U01",
+      "title": "Floor / roof naming",
+      "pages": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "status": "resolved interpretation",
+      "detail": "Three occupied/storey levels: ground 0, first +3 m, partial second +6 m. +9 m is labelled THIRD FLOOR in section but acts as the upper roof datum; title-block third-floor area is a dash."
+    },
+    {
+      "id": "U02",
+      "title": "Overall length chain",
+      "pages": [
+        2,
+        8
+      ],
+      "status": "unresolved",
+      "detail": "Written overall 11,675 mm; 4,140 + 3,575 + 3,600 + 355 = 11,670 mm. Grid dimensions are retained without silently adding 5 mm."
+    },
+    {
+      "id": "U03",
+      "title": "Coverage ratio",
+      "pages": [
+        2
+      ],
+      "status": "unresolved",
+      "detail": "Stated GCR 47.90%; stated plinth / land computes 46.860%. FAR computes 1.065745 versus stated 1.065."
+    },
+    {
+      "id": "U04",
+      "title": "Opening schedule versus plans",
+      "pages": [
+        2,
+        3,
+        4,
+        7
+      ],
+      "status": "unresolved",
+      "detail": "W1 quantity is a dash; W2 schedule says 5 and W3 says 1, while plan tags differ. SD appears on first-floor plan but has no schedule row. Window widths traced in the plan can differ from the schedule (notably W3). Keep scheduled and traced values separately."
+    },
+    {
+      "id": "U05",
+      "title": "Beam and footing detail conflicts",
+      "pages": [
+        9,
+        10,
+        13,
+        17
+      ],
+      "status": "unresolved",
+      "detail": "STRAP layout 355 × 600 differs from 300 × 500 detail; EF2 plan has an EF1 typical section; F1 thickness D is not numeric; MB2 longitudinal bar labels differ from section. Layout sizes drive only the display envelope."
+    },
+    {
+      "id": "U06",
+      "title": "Floor build-up disagreement",
+      "pages": [
+        7,
+        9
+      ],
+      "status": "unresolved",
+      "detail": "Section specifies 25 mm finish + 75 mm PCC + 200 mm boulder. Footing detail specifies 50 mm finish, 100 mm sand and stone soling. Neither is overwritten."
+    },
+    {
+      "id": "U07",
+      "title": "Display assumptions",
+      "pages": [
+        6,
+        7,
+        12,
+        15
+      ],
+      "status": "assumed for display",
+      "detail": "17 equal stair risers close 3 m rather than exact 176 mm; railing height 1 m, vent sill 1.10 m, SD height 2.134 m and subsurface beam elevations are provisional. Roof beam applicability and traced slab contours require confirmation."
+    },
+    {
+      "id": "U08",
+      "title": "Unpositioned services and drawing-only details",
+      "pages": [
+        1,
+        20,
+        21
+      ],
+      "status": "unresolved",
+      "detail": "No surveyed site boundaries, tank position, service routing, MEP layouts, reinforcement cut lengths or complete construction specifications are inferred. All source diagrams remain in the sheet viewer and raw extraction."
+    },
+    {
+      "id": "U09",
+      "title": "Raw layer names are not object identities",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "status": "unresolved",
+      "detail": "The PDF retains CAD layer labels but no original DWG solids, BIM object identities, authoring constraints or model history. A WALL layer also contains sheet borders and symbols; semantic classification is a reviewed overlay."
+    }
+  ],
+  "editing": {
+    "mode": "Conversational changes through the AI assistant, then GitHub commit/build; no live AI endpoint or automated interpretation is claimed.",
+    "canonical_file": "data/project.json",
+    "source_archive": "source/",
+    "rule": "Preserve observed source records. Record design changes and assumptions separately with provenance. Rebuild the 2D/3D/table projections from this one model."
+  }
+}

@@ -1,0 +1,2189 @@
+=== SHEET 01: Location plan ===
+SHIV temple
+Street no 6
+Prithivi highway
+Kaski Modernized School
+Khasi bazar chowk
+Kundhara Road
+Kundhara Road
+Kundhara Road
+Location Plan
+SHEET NO.
+N
+Stamp
+Mrs. Basanti Poudel Baral
+House Owner's Name:
+Signature:
+Location
+Pokhara-14, Kaski
+Residential Building
+Type of Bldg.
+Class "B"
+Height of Bldg. 9 m
+No. of storey
+Three
+Plot No.
+82
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Third Floor
+Total Floor Area
+Plinth Area
+GCR
+FAR
+50.82 sqm
+47.67 sqm
+-
+115.58 sqm
+50.82 sqm
+Land Area
+Issue Date
+Scale
+108.45  sqm
+47.90 %
+1.065
+Kartik, 2083
+Vristi Engineering & Construction
+Pokhara-17, Kaski
+Name
+Designation
+NEC No.
+Bishnu Poudel
+Engineer
+27031 Civil "A"
+Pokhara-13, Kaski
+17.09 sqm
+Proposed
+ Site
+Google coordinates
+28.200149N
+84.017289E
+
+
+=== SHEET 02: Ground floor plan ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+DINING
+Entrance
+GROUND FLOOR PLAN
+Area: 50.82 sqm
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+355
+3785
+355
+3220
+355
+3245
+355
+4140
+3575
+3600
+11675
+355
+3090
+355
+3445
+3800
+355
+3245
+3220
+355
+355
+3785
+355
+4140
+3575
+3600
+11675
+355
+3090
+355
+1105
+3445
+4905
+LIVING/GUEST ROOM
+3220 X 3940
+KITCHEN/DINING
+3575 X 3075
+T/B
+2685 X 1065
+W3
+W2
+W1
+W1
+W1
+V
+V
+D
+D2
+D2
+D1
+X
+X
+720
+
+
+=== SHEET 03: First floor plan ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+D2
+D1
+D1
+W3
+W2
+W1
+SD
+V
+W1
+FIRST FLOOR PLAN
+Area: 47.67 sqm
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+D2
+355
+3785
+355
+3220
+355
+3245
+4140
+3575
+3600
+11675
+355
+3090
+355
+3445
+3800
+355
+3245
+3220
+355
+355
+3785
+355
+4140
+3575
+3600
+11675
+355
+3090
+355
+3445
+4905
+T/B
+2690 X 1060
+BEDROOM
+3220 X 3345
+BEDROOM
+3575 X 3420
+355
+815
+X
+X
+1105
+
+
+=== SHEET 04: Second floor plan ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+D2
+W3
+V
+SECOND FLOOR PLAN
+Area: 17.09 sqm
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+355
+3785
+355
+4140
+3575
+3600
+11675
+355
+3090
+355
+3445
+3800
+355
+3785
+355
+4140
+3575
+3600
+11675
+STORE
+2690 X 1060
+5635
+TERRACE
+815
+405
+X
+X
+D2
+
+
+=== SHEET 05: Roof plan ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+ROOF PLAN
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+11675
+11675
+5755
+LOWER TERRACE
+405
+TERRACE
+X
+X
+5255
+6415
+4615
+8900
+2770
+
+
+=== SHEET 06: East, north, west and south elevations ===
+EAST ELEVATION
+NORTH ELEVATION
+WEST ELEVATION
+SOUTH ELEVATION
+SHEET NO.
+N
+Stamp
+Mrs. Basanti Poudel Baral
+House Owner's Name:
+Signature:
+Location
+Pokhara-14, Kaski
+Residential Building
+Type of Bldg.
+Class "B"
+Height of Bldg. 9 m
+No. of storey
+Three
+Plot No.
+82
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Third Floor
+Total Floor Area
+Plinth Area
+GCR
+FAR
+50.82 sqm
+47.67 sqm
+-
+115.58 sqm
+50.82 sqm
+Land Area
+Issue Date
+Scale
+108.45  sqm
+47.90 %
+1.065
+Kartik, 2083
+Vristi Engineering & Construction
+Pokhara-17, Kaski
+Name
+Designation
+NEC No.
+Bishnu Poudel
+Engineer
+27031 Civil "A"
+Pokhara-13, Kaski
+17.09 sqm
+
+
+=== SHEET 07: Section X-X and opening schedule ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+25mm thick floor finishnig
+75mm thick PCC(1:3:6)
+200mm Boulder Soling
+Earth Compaction
+SECTION AT X-X
+LVL +0MM PLINTH
+GROUND LEVEL
+LVL -600
+SILL BAND
+LVL +625
+LINTEL BAND
+FIRST FLOOR
+LVL +3000
+SILL BAND
+LVL +3625
+LINTEL BAND
+LVL +5100
+SECOND FLOOR
+LVL +6000
+LVL +2100
+SILL BAND
+LVL +6625
+LINTEL BAND
+LVL +8100
+THIRD FLOOR
+LVL +9000
+Schedule of Opening
+S.N.
+1
+2
+3
+4
+Description
+Door
+Window
+Collapsible Gate
+D
+D1
+D2
+W
+W1
+W2
+W3
+Ventilation
+V
+CG
+CG1
+1210 X 2134
+914 X 1981
+762 X 1829
+1829 X 1829
+1829 X 1524
+1524 X 1524
+1524 X 2130
+609 X 1000
+1285 X 2743
+1372 X 2743
+1
+3
+6
+5
+1
+4
+-
+Symbol
+Size
+No.
+CG2
+1067 X 2743
+5
+Rolling Shutter
+RS1
+RS2
+3200 X 2743
+1981 X 2743
+RS3
+1219 X 2743
+-
+-
+-
+-
+-
+-
+-
+
+
+=== SHEET 08: Column layout and reinforcement ===
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+4140
+3575
+3600
+3445
+4140
+3575
+3600
+3445
+8 mmØ 4 Legged Stirrups
+100mm c/c @ the support
+150mm c/c @ the Mid span
+COLUMN - C1
+FLOOR
+THIRD
+STOREY
+COLUMN - C2
+COLUMN
+4 NOS.-20 mm Ø
+4 NOS.-16 mm Ø
+4 NOS.-16 mm Ø
+4 NOS.-16 mm Ø
+4 NOS.-16 mm Ø
+4 NOS.-12 mm Ø
+4 NOS.-20 mm Ø
+4 NOS.-16 mm Ø
+4 NOS.-16 mm Ø
+4 NOS.-16 mm Ø
+4 NOS.-16 mm Ø
+4 NOS.-16 mm Ø
+355
+8 mmØ 4 Legged Stirrups
+100mm c/c @ the support
+150mm c/c @ the Mid span
+8 mmØ 4 Legged Stirrups
+100mm c/c @ the support
+150mm c/c @ the Mid span
+8 mmØ 4 Legged Stirrups
+100mm c/c @ the support
+150mm c/c @ the Mid span
+8 mmØ 4 Legged Stirrups
+100mm c/c @ the support
+150mm c/c @ the Mid span
+8 mmØ 4 Legged Stirrups
+100mm c/c @ the support
+150mm c/c @ the Mid span
+COLUMN REINFORCEMENT DETAILS
+355
+355
+355
+355
+355
+355
+355
+355
+355
+355
+C1
+C1
+C2
+C2
+C2
+C2
+C2
+C2
+COLUMN LAYOUT PLAN
+SECOND
+STOREY
+FIRST
+STOREY
+SHEET NO.
+N
+Stamp
+Mrs. Basanti Poudel Baral
+House Owner's Name:
+Signature:
+Location
+Pokhara-14, Kaski
+Residential Building
+Type of Bldg.
+Class "B"
+Height of Bldg. 9 m
+No. of storey
+Three
+Plot No.
+82
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Third Floor
+Total Floor Area
+Plinth Area
+GCR
+FAR
+50.82 sqm
+47.67 sqm
+-
+115.58 sqm
+50.82 sqm
+Land Area
+Issue Date
+Scale
+108.45  sqm
+47.90 %
+1.065
+Kartik, 2083
+Vristi Engineering & Construction
+Pokhara-17, Kaski
+Name
+Designation
+NEC No.
+Bishnu Poudel
+Engineer
+27031 Civil "A"
+Pokhara-13, Kaski
+17.09 sqm
+
+
+=== SHEET 09: Footing layout and foundation sections ===
+SHEET NO.
+N
+Stamp
+Mrs. Basanti Poudel Baral
+House Owner's Name:
+Signature:
+Location
+Pokhara-14, Kaski
+Residential Building
+Type of Bldg.
+Class "B"
+Height of Bldg. 9 m
+No. of storey
+Three
+Plot No.
+82
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Third Floor
+Total Floor Area
+Plinth Area
+GCR
+FAR
+50.82 sqm
+47.67 sqm
+-
+115.58 sqm
+50.82 sqm
+Land Area
+Issue Date
+Scale
+108.45  sqm
+47.90 %
+1.065
+Kartik, 2083
+Vristi Engineering & Construction
+Pokhara-17, Kaski
+Name
+Designation
+NEC No.
+Bishnu Poudel
+Engineer
+27031 Civil "A"
+Pokhara-13, Kaski
+17.09 sqm
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+4140
+3575
+3600
+3445
+4140
+3575
+3600
+3445
+2100
+2100
+F1
+F2
+F2
+F2
+1650
+1650
+1650
+1650
+1650
+1650
+1650
+1650
+1650
+1650
+1650
+1650
+EF2
+EF2
+EF2
+1800
+2100
+FOOTING LAYOUT PLAN
+P.C.C. in 1:3:6
+12mm Ø @125 c/c
+12mm Ø @125 c/c
+ALL FOOTINGS  ON
+THE PROPERTY LINE
+8Ø  Lateral ties
+@ 125 c/c
+STRAP BEAM
+355*600
+600
+100
+75
+500
+2100*1800
+DEPTH OF FOUNDATION =1800
+Stone Soling with
+Sand compaction
+G.L.
+G.L.
+ 6-16mm
+ 3-16mm
+Typical Eccentric Footing Section(EF1)
+D
+do
+min. 1800mm
+Existing
+Ground Level
+(Both Ways)
+12mmØ @
+125mm c/c Bars
+as per site
+ condition
+8mmØ stirrups
+ @125mm c/c
+300mm x 350mm Tie Beam
+Compact Earth
+75mm P.C.C
+50mm Floor Finishing
+100mm Sand Filling
+Stone Soling
+a
+(ld)=60Ø
+(ld)=60Ø
+190
+  3-12  mm  on top & bottom 
+Typical Footing Section(F1)
+STRAP BEAM
+355*600
+6-16mm
+ 3-16mm
+1900 X 1900
+2100 * 2100
+EF1
+
+
+=== SHEET 10: Tie beam and floor beam layouts ===
+SHEET NO.
+N
+Stamp
+Mrs. Basanti Poudel Baral
+House Owner's Name:
+Signature:
+Location
+Pokhara-14, Kaski
+Residential Building
+Type of Bldg.
+Class "B"
+Height of Bldg. 9 m
+No. of storey
+Three
+Plot No.
+82
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Third Floor
+Total Floor Area
+Plinth Area
+GCR
+FAR
+50.82 sqm
+47.67 sqm
+-
+115.58 sqm
+50.82 sqm
+Land Area
+Issue Date
+Scale
+108.45  sqm
+47.90 %
+1.065
+Kartik, 2083
+Vristi Engineering & Construction
+Pokhara-17, Kaski
+Name
+Designation
+NEC No.
+Bishnu Poudel
+Engineer
+27031 Civil "A"
+Pokhara-13, Kaski
+17.09 sqm
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+4140
+3575
+3600
+3445
+4140
+3575
+3600
+3445
+C1
+C1
+C2
+C2
+C2
+C2
+C2
+C2
+TB 300 * 350
+TB 225 * 300
+TB 300 * 350
+TB 300 * 350
+TB 300 * 350
+TB 300 * 350
+TB 300 * 350
+TB 225 * 300
+TB 225 * 300
+TB 225 * 300
+TIE BEAM LAYOUT PLAN
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+4140
+3575
+3600
+3445
+4140
+3575
+3600
+3445
+C1
+C1
+C2
+C2
+C2
+C2
+C2
+C2
+FLOOR BEAM LAYOUT PLAN
+MB 250 * 425
+MB1 250 * 475
+MB 250 * 425
+MB2 250 * 475
+MB 250 * 425
+MB2 250 * 475
+MB2 250 * 475
+SB 230 * 300
+MB 250 * 425
+MB 250 * 425
+MB 250 * 425
+MB2 250 * 475
+MB2 250 * 475
+MB2 250 * 475
+
+
+=== SHEET 11: Slab top and bottom reinforcement ===
+SHEET NO.
+N
+Stamp
+Mrs. Basanti Poudel Baral
+House Owner's Name:
+Signature:
+Location
+Pokhara-14, Kaski
+Residential Building
+Type of Bldg.
+Class "B"
+Height of Bldg. 9 m
+No. of storey
+Three
+Plot No.
+82
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Third Floor
+Total Floor Area
+Plinth Area
+GCR
+FAR
+50.82 sqm
+47.67 sqm
+-
+115.58 sqm
+50.82 sqm
+Land Area
+Issue Date
+Scale
+108.45  sqm
+47.90 %
+1.065
+Kartik, 2083
+Vristi Engineering & Construction
+Pokhara-17, Kaski
+Name
+Designation
+NEC No.
+Bishnu Poudel
+Engineer
+27031 Civil "A"
+Pokhara-13, Kaski
+17.09 sqm
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+4140
+3575
+3600
+3445
+4140
+3575
+3600
+3445
+C1
+C1
+C2
+C2
+C2
+C2
+C2
+C2
+Stair case 
+8 mm dia bar @ 125 mm c/c
+(Bottom Distribution bar)
+8 mm dia bar @ 125 mm c/c
+(Bottom Main bar)
+BOTTOM REINFORCEMENT BARS
+(ALL FLOORS)
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+4140
+3575
+3600
+3445
+4140
+3575
+3600
+3445
+C1
+C1
+C2
+C2
+C2
+C2
+C2
+C2
+Stair case 
+TOP REINFORCEMENT BARS
+(ALL FLOORS)
+895
+895
+900
+900
+860
+705
+860
+1105
+8 mm dia bar @ 125 mm c/c
+(Top Main bar)
+8 mm dia bar @ 125 mm c/c
+(Top Distribution bar)
+
+
+=== SHEET 12: Staircase plan and reinforcement ===
+TYP. CHAIR DETAIL FOR NOSING
+Ø8 NOSING BAR
+4-NOS. - Ø8 CHAIR BAR
+WAIST SLAB THICKNESS
+150mm
+RISER
+176mm
+TREAD
+255mm
+12Ø-125mmc/c main bar
+8Ø-150mmc/c distribution bar
+8Ø-150mmc/c
+SLAB THICKNESS 150mm
+12Ø-125mmc/c
+8Ø-150mmc/c
+8 Ø-150mmc/c
+SLAB THICKNESS 150 mm
+12Ø-125mmc/c
+Stair case Details
+12Ø-125mmc/c
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+B
+1
+A
+2
+355
+3785
+355
+4140
+355
+3090
+355
+3445
+3800
+W3
+V
+V
+D2
+1065
+255
+2135
+Ld=1570
+Ld=1570
+
+
+=== SHEET 13: Strap beam layout and reinforcement ===
+SHEET NO.
+N
+Stamp
+Mrs. Basanti Poudel Baral
+House Owner's Name:
+Signature:
+Location
+Pokhara-14, Kaski
+Residential Building
+Type of Bldg.
+Class "B"
+Height of Bldg. 9 m
+No. of storey
+Three
+Plot No.
+82
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Third Floor
+Total Floor Area
+Plinth Area
+GCR
+FAR
+50.82 sqm
+47.67 sqm
+-
+115.58 sqm
+50.82 sqm
+Land Area
+Issue Date
+Scale
+108.45  sqm
+47.90 %
+1.065
+Kartik, 2083
+Vristi Engineering & Construction
+Pokhara-17, Kaski
+Name
+Designation
+NEC No.
+Bishnu Poudel
+Engineer
+27031 Civil "A"
+Pokhara-13, Kaski
+17.09 sqm
+B
+1
+A
+B
+A
+2
+3
+4
+1
+2
+3
+4
+4140
+3575
+3600
+3445
+4140
+3575
+3600
+3445
+C1
+C1
+C2
+C2
+C2
+C2
+C2
+C2
+SB 355 * 600
+STRAP BEAM LAYOUT PLAN
+SB 355 * 600
+SB 355 * 600
+SB 355 * 600
+ X- SECTION OF STRAP BEAM
+ SB  ALONG GRID A-A/B-B
+500
+STRAP BEAM: SB1
+300
+4-16Ø
+2-16Ø
+3-16Ø
+ LONGITUDINAL SECTION OF STRAP BEAM SB ALONG GRID
+A-A/B-B THROUGH SUPPORTS
+2
+1
+STRIPUS 8Ø @ 100mm c/c
+STRIPUS 8Ø @ 100mm c/c
+4140
+4-16Ø+2-16Ø
+3-16Ø
+4-16Ø+2-16Ø
+3
+STRIPUS 8Ø @ 100mm c/c
+3575
+3-16Ø
+STRIPUS 8Ø @ 100mm c/c
+4
+STRIPUS 8Ø @ 100mm c/c
+3600
+4-16Ø+2-16Ø
+STRIPUS 8Ø @ 100mm c/c
+4-16Ø+2-16Ø
+
+
+=== SHEET 14: Tie beam reinforcement ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+ X- SECTION OF TIE BEAM TB  ALONG GRID A-A/B-B
+350
+ALL PLINTH  TIE BEAM: TB1
+300
+3-12Ø
+3-12Ø
+4
+STRIPUS 8Ø @ 100mm c/c
+ STRIPUS 8Ø @ 150mm c/c
+3600
+STRIPUS 8Ø @ 100mm c/c
+2
+3
+STRIPUS 8Ø @ 150mm c/c
+3575
+1
+3-12Ø
+STRIPUS 8Ø @ 150mm c/c
+STRIPUS 8Ø @ 100mm c/c
+STRIPUS 8Ø @ 100mm c/c
+4140
+ LONGITUDINAL SECTION OF TIE BEAM TB ALONG GRID A-A/B-B
+THROUGH SUPPORTS
+3-12Ø
+3-12Ø
+3-12Ø
+3-12Ø
+3-12Ø
+3-12Ø
+3-12Ø
+3-12Ø
+
+
+=== SHEET 15: Main beam MB reinforcement ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+ X- SECTION OF BEAM MB ALONG GRID A-A/B-B (FIRST FLOOR LEVEL AND ABOVE)
+4
+STRIPUS 8Ø @ 100mm c/c
+ STRIPUS 8Ø @ 150mm c/c
+3600
+STRIPUS 8Ø @ 100mm c/c
+2
+3
+STRIPUS 8Ø @ 150mm c/c
+3575
+1
+STRIPUS 8Ø @ 150mm c/c
+STRIPUS 8Ø @ 100mm c/c
+STRIPUS 8Ø @ 100mm c/c
+4140
+ LONGITUDINAL SECTION OF BEAM MB ALONG GRID A-A/B-B
+(FIRST FLOOR LEVEL AND ABOVE)
+1035
+895
+1035
+900
+895
+900
+3-12Ø (TH)
+2-16Ø (TH)
+2-16Ø (TH)
+BEAM AT SUPPORT
+BEAM AT MID SPAN
+2-16Ø (TH)
+ 1-12Ø (EX)
+125
+425
+250
+3-12Ø (TH)
+STRIPUS 8Ø @ 100 c/c
+STRIPUS 8Ø @ 150 c/c
+125
+425
+250
+2-16Ø (TH)
+3-12Ø (TH)
+3-12Ø (TH)
+3-12Ø (TH)
+3-12Ø (TH)
+3-12Ø (TH)
+2-16Ø (TH)
+ 1-12Ø (EX)
+2-16Ø (TH)
+ 1-12Ø (EX)
+2-16Ø (TH)
+ 1-12Ø (EX)
+2-16Ø (TH)
+ 1-12Ø (EX)
+
+
+=== SHEET 16: Beam MB1 reinforcement ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+ X- SECTION OF BEAM MB1 ALONG GRID 1-1 (FIRST FLOOR LEVEL AND ABOVE)
+B
+A
+STRIPUS 8Ø @ 150mm c/c
+STRIPUS 8Ø @ 100mm c/c
+3445
+ LONGITUDINAL SECTION OF BEAM MB1 ALONG GRID 1-1
+(FIRST FLOOR LEVEL AND ABOVE)
+860
+860
+2-16Ø (TH)
+BEAM AT SUPPORT
+BEAM AT MID SPAN
+2-16Ø (TH), 1-12Ø (EX)
+2-16Ø (EXT)
+125
+475
+250
+3-16Ø (TH)
+STRIPUS 8Ø @ 100 c/c
+STRIPUS 8Ø @ 150 c/c
+3-16Ø(TH)
+125
+475
+250
+2-16Ø (TH)
+2-16Ø (TH), 1-12Ø (EX)
+2-16Ø (EXT)
+2-16Ø (TH), 1-12Ø (EX)
+2-16Ø (EXT)
+3-16Ø (TH)
+
+
+=== SHEET 17: Beam MB2 reinforcement ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+BEAM AT SUPPORT
+BEAM AT MID SPAN
+2-16Ø (TH)
+1-16Ø (EXT)
+125
+475
+250
+1-16Ø (TH)
+STRIPUS 8Ø @ 100 c/c
+STRIPUS 8Ø @ 150 c/c
+ X- SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4 (FIRST FLOOR LEVEL AND ABOVE)
+125
+475
+250
+2-16Ø (TH)
+STRIPUS 8Ø @ 100mm c/c
+A
+B
+STRIPUS 8Ø @ 150mm c/c
+STRIPUS 8Ø @ 100mm c/c
+3445
+ LONGITUDINAL SECTION OF BEAM MB2 ALONG GRID 2-2/3-3/4-4
+(FIRST FLOOR LEVEL AND ABOVE)
+860
+1220
+860
+3-16Ø (TH)
+3-16Ø (TH)
+2-16Ø (TH)
+2-12Ø (TH)
+1-16Ø (TH)
+2-12Ø (TH)
+2-16Ø (TH)
+1-16Ø (EXT)
+2-16Ø (TH)
+1-16Ø (EXT)
+
+
+=== SHEET 18: Stair beam SB reinforcement ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+ X- SECTION OF BEAM SB FOR STAIRCASE (FIRST FLOOR LEVEL AND ABOVE)
+2
+1
+STRIPUS 8Ø @ 150mm c/c
+STRIPUS 8Ø @ 100mm c/c
+4140
+ LONGITUDINAL SECTION OF BEAM SB FOR STAIRCASE
+(FIRST FLOOR LEVEL AND ABOVE)
+1035
+1035
+2-16Ø (TH)
+BEAM AT SUPPORT
+BEAM AT MID SPAN
+3-12Ø (TH)
+125
+300
+230
+STRIPUS 8Ø @ 100 c/c
+STRIPUS 8Ø @ 150 c/c
+125
+300
+230
+3-12Ø (TH)
+3-12Ø (TH)
+3-12Ø (TH)
+3-12Ø (TH)
+3-12Ø (TH)
+3-12Ø (TH)
+
+
+=== SHEET 19: Sill and lintel bands ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+LINTEL & SILL BAND ELEVATION
+75X225 Lintel Band
+75X225 Sill Band
+R
+R
+S
+S
+Lintel band
+Sill band
+A
+A
+B
+B
+3 mtr < b < 4.5 mtr
+2.8 mtr < b < 3.2 mtr
+SILL & LINTEL ELEVATION
+230
+SECTION AT A-A
+2 Nos. 10 mm dia bars
+8 mm dia torkari bar 150 c/c
+225
+DETAIL AT - A
+(225 X 75)
+(355 X 355)
+100
+500
+100
+500
+355 X 355)
+LINTEL & SILL BAND PLAN
+D
+2 Nos. 10 mm dia bars
+8 mm dia torkari bar 150 c/c
+225
+75
+DETAIL AT - B
+SECTION AT R - R
+SECTION AT S - S
+D
+COLUMN
+COLUMN
+LINTEL & SILL BAND
+75
+
+
+=== SHEET 20: Lapping, hooks, stirrups and connection details ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+Ld
+CLOSE STIRRUPS
+D
+IN CASE OF DIFFICULTY IN PROVIDING
+2 NOS. DIA.8
+CLOSE STIRRUPS
+Y
+H/6
+2 NOS. DIA.8
+X
+D
+H/6
+U-SHAPED STIRRUPS
+IN CASE OF DIFFICULTY IN PROVIDING
+U-SHAPED TIES MAY BE PROVIDED
+U-SHAPED STIRRUPS
+NOT MORE THAN 50% BAR SHOULD BE
+LAP AT ONE POSITION
+X
+H
+H/6
+U-SHAPED TIES MAY BE PROVIDED
+CLOSE STIRRUPS
+U-SHAPED STIRRUPS
+2 NOS. DIA.8
+X
+H/6
+IN CASE OF DIFFICULTY IN PROVIDING
+U-SHAPED TIES MAY BE PROVIDED
+LAP AT ONE POSITION
+NOT MORE THAN 50% BAR SHOULD BE
+TYPICAL LAPPING & LATERAL
+TIE SPACING DETAIL
+Y
+H/4
+H/4
+H/4
+FLOOR
+LINTEL BAND
+WALL
+FLOOR
+WALL
+DETAIL OF NON STRUCTURAL WALL
+BEAM
+SILL BAND
+BEAM
+Typical Bent-up Detail For Slab Bars
+L1
+0.15*L1
+ALT. BARS
+0.25*L2
+NEGATIVE BAR (N)
+0.3*L2
+0.3*L1
+0.25*L1
+BUL
+BLL
+L2
+>0.25L or Ld
+whichever is greater
+Ld
+>0.3L or Ld
+whichever is greater
+Typical Lap Location for Beam Bars
+Ld
+Ld
+Ld+10Ø
+Ld+10Ø
+(Plan)
+Connection Detail Between
+Main & Secondary Beam
+MAIN BEAM
+SECONDARY BEAM
+Ld.
+60°
+2 nos. - Ø 16
+Connection Detail Between Main & Secondary Beam
+Beam Reinforcement
+50mm max
+2d
+50mm max
+2d
+hoop spacing <d/2
+MIN 2 BARS FOR FULL LENGTH
+ALONG TOP AND BOTTOM FACE
+AS>MIN Bd
+AS<MAX Bd
+d
+B=Breadth of beam
+2d
+Typical Splice Detail
+Ld+10Ø
+Ld
+2L+8Ø-4"c/c
+2L+8Ø-6"c/c
+2L+8Ø-6"c/c
+2L+8Ø-4"c/c
+10*Øb
+Detail of Hook
+Øb
+(Not to Scale)
+
+
+=== SHEET 21: Septic tank and soak pit ===
+Vristi Engineering & Construction Pvt. Ltd.
+Pokhara -17, Kaski
+Stamp
+                              Email. vristiengg2077@gmail.com (9856002229)
+Signature :
+Type of Bldg.
+Height of Bldg.
+No. of Storey:
+Plot No.
+Residential  Building
+Class "B"
+Propose Floor Area
+Ground Floor
+First Floor
+Second Floor
+Total Floor Area
+GCR
+Location
+Land  Area
+FAR
+Scale
+Issue Date
+Name
+Designation
+NEC No.
+Bishnu Poudel
+ Engineer
+27031 Civil "A"
+Pokhara-14, Kaski
+9 m
+Three  
+82
+50.82 sqm
+115.58 sqm
+108.45 sqm
+47.90 %
+1.065
+Kartik, 2083
+House Owner's Name :
+Mrs. Basanti Poudel Baral
+Pokhara-13, Kaski
+47.67 sqm
+17.09 sqm
+Plinth Area
+50.82 sqm
+Sheet No.
+N
+Liquid Level
+SECTION AT Y-Y
+12mm Thick Plaster
+Brick Soling
+One Layer Flat
+75mm Thk. PCC (1:3:6)
+Slope
+SECTION AT X-X
+Buffle Wall
+PCC 
+to Soak Pit
+100mmØ Outlet Pipe
+Brick Ballast 50mm Guage
+Filling Honey Combed Wall
+Filling Honey Combed Wall
+Brick Bat Filling
+SOAK PIT PLAN (S1)
+Support of Pipe
+SEPTIC TANK PLAN
+25mm Thick Manhole Cover
+18''Ø Manhole
+From Manhole
+100mmØ HDP Pipe
+10-SN
+X
+From Manhole
+100mmØ HDP Pipe
+100mm Ø HDP Pipe
+From Manhole
+100mm Thk. RCC Slab
+to Soak Pit
+100mmØ Outlet Pipe
+10-SN
+X
+50mmØ Vent Pipe
+Cover
+from Septic Tank
+100mmØ Soil Pipe 
+from Septic Tank
+100mmØ Soil Pipe 
+Y
+11-SN
+Support of Pipe
+150*75mm RCC for
+100mm Thick RCC Slab
+11-SN
+Y
+150mmx125mm RCC for
+375 200
+375
+200
+200
+375
+200
+150
+375
+950
+1800
+1775
+4000
+900
+2575
+350
+350
+125
+Ø=900
+2050
+2050
