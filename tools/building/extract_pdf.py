@@ -89,6 +89,8 @@ def main():
  for name,records in [('text-spans',spans),('words',words),('vector-paths',paths),('numeric-observations',numbers),('embedded-images',images),('annotations',annotations)]:write_jsonl(src/(name+'.jsonl.gz'),records)
  (src/'sheets.json').write_text(json.dumps(pages,ensure_ascii=False,indent=2)+'\n')
  (src/'all-text.txt').write_text('\n\n'.join(texts))
+ con.commit()
+ assert con.execute('PRAGMA quick_check').fetchone()[0]=='ok'
  packed(src/'extraction.sqlite.gz',con.serialize())
  # FTS shadow tables are implementation details; SQL export contains relational source tables.
  sql='\n'.join(s for s in con.iterdump() if 'text_search' not in s)

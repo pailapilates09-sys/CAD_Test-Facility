@@ -23,6 +23,7 @@ import {buildRoomModel} from '../public/construction/models/pilates-sketchup/roo
 import {renderModelBoq} from './render-model-boq.mjs';
 import {reusableComponents} from './layout-designer-assets.mjs';
 import {CATALOG} from '../public/construction/models/layout-designer/design-model.js';
+import {buildBuildingProject} from './building-project.mjs';
 const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
 await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
 await cp(new URL('public/',root),dist,{recursive:true});
@@ -155,6 +156,7 @@ await writeFile(new URL('downloads/Column_Formwork_Specification.json',dist),JSO
 await writeFile(new URL('downloads/Open_Source_Review.json',dist),JSON.stringify(sources,null,2));
 await writeFile(new URL('.nojekyll',dist),'');
 await readFile(new URL('downloads/Column_Formwork_Inches_Only.pdf',dist));
+await buildBuildingProject(root,dist);
 const themedPages=await applySiteExperience(fileURLToPath(dist));
 await checkSite(fileURLToPath(dist));
 console.log(`Built ${themedPages} pages with shared light/dark themes and companion. CAD includes 5 SVG sheets, PDF and CSV.`);

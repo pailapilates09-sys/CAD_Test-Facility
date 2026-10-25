@@ -119,7 +119,7 @@ test('the fluffy mascot occupies a separate click-through viewport layer and mov
 test('page decoration gives all sibling sections accessible links from every depth and retains existing data and scripts',async()=>{
  const base=await mkdtemp(resolve(tmpdir(),'cad-theme-'));
  const template='<!doctype html><html><head><link rel="stylesheet" href="./old.css"></head><body><nav aria-label="Workspace"><a href="../">Construction</a><a href="milestone.html">Versions + milestone</a><a href="progress/">Progress</a></nav><table><tr><td>66,45,762.90</td></tr></table><script src="./original.js"></script></body></html>';
- const pages=['index.html','construction/index.html','progress/index.html','cad/index.html','construction/models/pilates-sketchup/index.html','construction/models/layout-designer/index.html','memory-posters/index.html','construction/estimates/pilates-astra-2026-10-15/milestone.html','construction/estimates/pilates-astra-2026-10-15/v8/item-01.html'];
+ const pages=['index.html','construction/index.html','progress/index.html','cad/index.html','construction/models/pilates-sketchup/index.html','construction/models/layout-designer/index.html','construction/models/basanti-residence/index.html','memory-posters/index.html','construction/estimates/pilates-astra-2026-10-15/milestone.html','construction/estimates/pilates-astra-2026-10-15/v8/item-01.html'];
  try{
   for(const p of pages){await mkdir(dirname(resolve(base,p)),{recursive:true});await writeFile(resolve(base,p),template)}
   assert.equal(await applySiteExperience(base),pages.length);
@@ -128,9 +128,9 @@ test('page decoration gives all sibling sections accessible links from every dep
    assert.equal((html.match(/data-site-experience=/g)||[]).length,1);
    assert.equal((html.match(/id="mascot-control"/g)||[]).length,1);assert.match(html,/aria-label="Hide mascot" title="Hide mascot"/);
    const nav=html.match(/<nav aria-label="Workspace">([\s\S]*?)<\/nav>/)[1],links=[...nav.matchAll(/<a href="([^"]+)"([^>]*)>([^<]+)<\/a>/g)];
-   assert.deepEqual(links.map(link=>link[3]),['Construction','Pilates SketchUp','Layout Designer','Versions + milestone','Progress','Memory Posters']);
-   assert.deepEqual(links.map(link=>resolve(dirname(resolve(base,p)),link[1])),['construction','construction/models/pilates-sketchup','construction/models/layout-designer','construction/estimates/pilates-astra-2026-10-15/milestone.html','progress','memory-posters'].map(path=>resolve(base,path)));
-   const active=p==='index.html'?null:p.startsWith('construction/models/pilates-sketchup/')?'Pilates SketchUp':p.startsWith('construction/models/layout-designer/')?'Layout Designer':p.startsWith('construction/estimates/')?'Versions + milestone':p.startsWith('progress/')?'Progress':p.startsWith('memory-posters/')?'Memory Posters':'Construction';
+   assert.deepEqual(links.map(link=>link[3]),['Construction','Pilates SketchUp','Layout Designer','Building Plans','Versions + milestone','Progress','Memory Posters']);
+   assert.deepEqual(links.map(link=>resolve(dirname(resolve(base,p)),link[1])),['construction','construction/models/pilates-sketchup','construction/models/layout-designer','construction/models/basanti-residence','construction/estimates/pilates-astra-2026-10-15/milestone.html','progress','memory-posters'].map(path=>resolve(base,path)));
+   const active=p==='index.html'?null:p.startsWith('construction/models/pilates-sketchup/')?'Pilates SketchUp':p.startsWith('construction/models/layout-designer/')?'Layout Designer':p.startsWith('construction/models/basanti-residence/')?'Building Plans':p.startsWith('construction/estimates/')?'Versions + milestone':p.startsWith('progress/')?'Progress':p.startsWith('memory-posters/')?'Memory Posters':'Construction';
    assert.deepEqual(links.filter(link=>link[2].includes('aria-current="page"')).map(link=>link[3]),active?[active]:[]);
    for(const match of html.matchAll(/(?:src|href)="([^"]*theme\/[^"?]+)(?:\?[^"]*)?"/g))assert.ok(resolve(dirname(resolve(base,p)),match[1]).startsWith(resolve(base,'theme')+'/'));
   }

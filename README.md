@@ -1,10 +1,14 @@
 # CAD Test Facility
 
+## Building Plans — 25 October 2026
+
+[Basanti Residence](https://pailapilates09-sys.github.io/CAD_Test-Facility/construction/models/basanti-residence/) is a new sibling project derived from 21 architectural/structural PDF sheets. The original PDF, complete supported text/vector/layer/image extraction and source SQL/SQLite records are preserved in GitHub. Linked plans, Three.js geometry, schedules and query exports derive from one reviewed model. Written values, calibrated traces, source conflicts and display assumptions remain separate. See the [project contract](public/construction/models/basanti-residence/README.md). No Drive files or existing project sources are changed.
+
 ## Layout authoring — 24 October 2026
 
 [Layout Designer](https://pailapilates09-sys.github.io/CAD_Test-Facility/construction/models/layout-designer/) is a sibling of the original Pilates viewer. It provides editable studio, office, café and empty-room concepts, linked 2D/3D/schedule views, metre-based room and element parameters, three source-linked reusable components, browser drafts and JSON/SVG/OBJ/CSV exports. The cabinet regenerates panels and shelves; source component copies scale existing display meshes. See its [data and editing contract](public/construction/models/layout-designer/README.md).
 
-The six sibling sections are Construction, Pilates SketchUp, Layout Designer, Versions + milestone, Progress and Memory Posters. The designer authors independent concepts; it does not modify the original SKP, current BOQ interpretation, financial register or frozen milestones. Further BOQ-to-model interpretation is paused at the 23 October review. Pages continues serving committed/generated static copies, without a live Drive connection.
+The seven sibling sections are Construction, Pilates SketchUp, Layout Designer, Building Plans, Versions + milestone, Progress and Memory Posters. The designer authors independent concepts; it does not modify the original SKP, current BOQ interpretation, financial register or frozen milestones. Further BOQ-to-model interpretation is paused at the 23 October review. Pages continues serving committed/generated static copies, without a live Drive connection.
 
 ## Current workspace milestone M7 — 22 October 2026
 
@@ -34,7 +38,7 @@ CP302 / Local/Main293/293 is verified and acknowledged. Fourteen metadata checkp
 
 Preservation/rollback baseline: commit `bbf90547c6e11b2754415e234fc310ea42bf62c8`. This release keeps the original CAD geometry and drawing/PDF assets and changes only navigation, resource resolution and the new status projection. Reverting the workspace release restores the prior single-page site.
 
-- `/`: workspace home with five sibling sections and one shared navigation register.
+- `/`: workspace home with seven sibling sections and one shared navigation register.
 - `/construction/`: column formwork CAD, with its 3D assembly, five drawing sheets, quantities and downloads at `/cad/`. Geometry, vendor assets and the inch-only PDF are preserved.
 - `/construction/models/pilates-sketchup/`: Pilates SketchUp is a primary navigation section. Its existing URL shows the main room in linked 2D/3D views and a four-column item schedule, derived from one optimized source scene. A second five-column table compares all 51 original BOQ works with model candidates, match evidence and quoted values. Detailed scope and all 261 material lines open inside embedded panels, using the same source and contractor drafts as v11. Five approximate area filters, 14 native camera presets and readable source-linked labels reuse the same item identities. Inspection reports, saved thumbnails, the earlier Group#2 partition and complete Drive archives remain preserved separately.
 - `/construction/estimates/pilates-astra-2026-10-15/milestone.html`: Versions + milestone owns the estimate view index, including v8–v13. Duplicate shortcut cards have been removed from Construction; the estimate pages and their original URLs remain intact.

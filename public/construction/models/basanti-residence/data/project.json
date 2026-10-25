@@ -2510,7 +2510,7 @@
         "rotation": 0,
         "host": "ground-wall-south-left"
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 2,
         "path_ids": []
@@ -2536,7 +2536,7 @@
         "rotation": 0,
         "host": "ground-wall-south-left"
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 2,
         "path_ids": []
@@ -2582,7 +2582,7 @@
         "x": 7.613535,
         "y": 2.75953,
         "z": 0,
-        "width": 1.21,
+        "width": 1.01514,
         "height": 2.134,
         "thickness": 0.15249,
         "rotation": 90,
@@ -2593,7 +2593,7 @@
         "page": 2,
         "path_ids": []
       },
-      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule.",
+      "note": "Position and opening width follow the drawing trace; height follows the schedule. Generic 625 mm sill follows section; vents use a provisional 1.10 m sill. SD height is provisional because it is absent from the schedule. Entry width follows the shorter traced host opening; the schedule states 1.210 m. This discrepancy remains unresolved.",
       "opening_type": "D",
       "scheduled_width_m": 1.21,
       "scheduled_height_m": 2.134
@@ -2796,7 +2796,7 @@
         "rotation": 0,
         "host": "first-wall-north"
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 3,
         "path_ids": []
@@ -2822,7 +2822,7 @@
         "rotation": 0,
         "host": "first-wall-wc-front"
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 3,
         "path_ids": []
@@ -3030,7 +3030,7 @@
         "rotation": 0,
         "host": "second-wall-south"
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 4,
         "path_ids": []
@@ -3110,7 +3110,7 @@
           {
             "id": "g-d",
             "offset": 0,
-            "width": 1.21,
+            "width": 1.01514,
             "height": 2.134,
             "sill": 0,
             "code": "D"
@@ -4434,7 +4434,7 @@
         "width": 0.23,
         "height": 0.3
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 10,
         "path_ids": []
@@ -4462,7 +4462,7 @@
         "width": 0.25,
         "height": 0.425
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 10,
         "path_ids": []
@@ -4490,7 +4490,7 @@
         "width": 0.25,
         "height": 0.475
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 10,
         "path_ids": []
@@ -4518,7 +4518,7 @@
         "width": 0.25,
         "height": 0.475
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 10,
         "path_ids": []
@@ -4989,7 +4989,7 @@
         "height": null,
         "wireframe": true
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 9,
         "path_ids": []
@@ -5012,7 +5012,7 @@
         "height": null,
         "wireframe": true
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 9,
         "path_ids": []
@@ -5035,7 +5035,7 @@
         "height": null,
         "wireframe": true
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 9,
         "path_ids": []
@@ -5058,7 +5058,7 @@
         "height": null,
         "wireframe": true
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 9,
         "path_ids": []
@@ -5081,7 +5081,7 @@
         "height": null,
         "wireframe": true
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 9,
         "path_ids": []
@@ -5104,7 +5104,7 @@
         "height": null,
         "wireframe": true
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 9,
         "path_ids": []
@@ -5127,7 +5127,7 @@
         "height": null,
         "wireframe": true
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 9,
         "path_ids": []
@@ -5150,7 +5150,7 @@
         "height": null,
         "wireframe": true
       },
-      "status": "derived",
+      "status": "assumed",
       "source": {
         "page": 9,
         "path_ids": []
