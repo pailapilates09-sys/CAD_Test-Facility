@@ -1,7 +1,7 @@
 import {escapeHTML as e} from '../basanti-residence/building-model.js';
 import {phaseNames} from './work-packages.js';
 export const num=n=>n==null?'Not measured':Number(n.toFixed(3)).toLocaleString('en-IN',{maximumFractionDigits:3});
-export const sourceLink=p=>`../basanti-residence/source/original.pdf#page=${p}`;
+export const sourceLink=p=>new URL('../basanti-residence/source/original.pdf#page='+p,import.meta.url).href;
 export function renderRows(rows,selected){return rows.map(r=>`<tr data-row="${r.id}"${r.component_ids.includes(selected)?' class="selected-row"':''}><th scope="row"><button data-part="${e(r.component_ids[0]??'')}" ${r.component_ids.length?'':'disabled'}>${e(r.label)}</button><small>${e(r.id)}</small></th><td data-label="Quantity / unit"><strong>${num(r.value)}</strong> ${e(r.unit)}<br><span class="status ${r.status.toLowerCase()}">${e(r.status)}</span></td><td data-label="Calculation / measurement basis">${e(r.formula)}<small>${e(r.note)}</small></td><td data-label="Drawing / source">${r.pages.length?r.pages.map(p=>`<a target="_blank" rel="noopener" href="${sourceLink(p)}">Sheet ${p} ↗</a>`).join(' '):'Specification pending'}</td></tr>`).join('');}
 export function ganttMarkup(schedule,filter,selected,startDate='',{zoom=1,compact=false}={}){
  if(!Number.isFinite(zoom)||zoom<.5||zoom>3)throw Error('Invalid programme zoom');

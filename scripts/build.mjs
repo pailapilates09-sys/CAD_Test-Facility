@@ -24,6 +24,8 @@ import {renderModelBoq} from './render-model-boq.mjs';
 import {reusableComponents} from './layout-designer-assets.mjs';
 import {CATALOG} from '../public/construction/models/layout-designer/design-model.js';
 import {buildBuildingProject} from './building-project.mjs';
+import {buildBuildingHistory} from './building-history.mjs';
+import {programmeInputs,buildProgrammeData,renderProgramme} from './construction-v14.mjs';
 const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
 await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
 await cp(new URL('public/',root),dist,{recursive:true});
@@ -75,6 +77,12 @@ savings.derivation={source:'../v9/register.json',responsibilities:'../v12/procur
 await writeFile(new URL(estimatePath+'v13/budget-view.json',dist),JSON.stringify(savings,null,2)+'\n');
 const savingsScript=new URL(estimatePath+'v13/v13.js',dist);
 await writeFile(savingsScript,(await readFile(savingsScript,'utf8')).replaceAll('V13_REVISION',savingsRevision));
+const planningRules=await readJSON('public/'+estimatePath+'v14/planning-rules.json');
+const planHash=createHash('sha256').update(sourceRevision).update(decisionRevision).update(JSON.stringify(planningRules));
+for(const path of ['schedule-model.js','plan-view.js','v14.js','v14.css','research/productivity-evidence.json','research/scheduling-projects.json'])planHash.update(await readFile(new URL('public/'+estimatePath+'v14/'+path,root)));
+planHash.update(await readFile(new URL('scripts/construction-v14.mjs',root)));const planningRevision=planHash.digest('hex').slice(0,16);
+const programme=await buildProgrammeData(dist,programmeInputs(registry,procurement,views,planningRules,sourceRevision),planningRules,planningRevision);
+for(const name of ['schedule-model.js','plan-view.js','v14.js']){const file=new URL(estimatePath+'v14/'+name,dist);await writeFile(file,(await readFile(file,'utf8')).replaceAll('V14_REVISION',planningRevision).replaceAll('SOURCE_REVISION',sourceRevision).replace(/(from\s*['"])(\.\/[a-z0-9-]+\.js)(['"])/g,`$1$2?v=${planningRevision}$3`));}
 const posterCollection=await readJSON('public/memory-posters/posters.json');
 const memoryHash=createHash('sha256').update(sourceRevision).update(JSON.stringify(posterCollection));
 for(const path of ['wall.css','wall.js'])memoryHash.update(await readFile(new URL('public/memory-posters/'+path,root)));
@@ -100,7 +108,7 @@ const scopeScript=new URL(estimatePath+'v2/v2.js',dist);
 await writeFile(scopeScript,(await readFile(scopeScript,'utf8')).replaceAll('SOURCE_REVISION',sourceRevision));
 await writeFile(new URL(estimatePath+'v3/estimate-si.json',dist),JSON.stringify({...views.si,source_pdf_sha256:original.source.sha256,derivation:{source:'../v9/register.json',revision:sourceRevision,generated:true}},null,2)+'\n');
 await writeFile(new URL(estimatePath+'v3/line-items-si.jsonl',dist),views.si.line_items.map(work=>JSON.stringify(work)).join('\n')+'\n');
-for(const [version,render] of [['v5',()=>renderComparisons(views)],['v5.1',()=>renderGraphs(views)],['v6',()=>renderImages(views)],['v7',()=>renderComponents(views)],['v9',()=>renderSource(registry,views)],['v10',()=>renderContractorIndex(contractorData(views))],['v11',()=>renderInlineMaterials(contractorData(views))],['v12',()=>renderProcurement(procurement,registry,views)],['v13',()=>renderSavings(savings,procurement)]]){
+for(const [version,render] of [['v5',()=>renderComparisons(views)],['v5.1',()=>renderGraphs(views)],['v6',()=>renderImages(views)],['v7',()=>renderComponents(views)],['v9',()=>renderSource(registry,views)],['v10',()=>renderContractorIndex(contractorData(views))],['v11',()=>renderInlineMaterials(contractorData(views))],['v12',()=>renderProcurement(procurement,registry,views)],['v13',()=>renderSavings(savings,procurement)],['v14',()=>renderProgramme(programme)]]){
  const file=new URL(estimatePath+version+'/index.html',dist),template=await readFile(file,'utf8');
  if(!template.includes('<!-- LINKED_VIEW -->'))throw Error('Missing linked view template '+version);
  await writeFile(file,viewPage(version,render()));
@@ -130,13 +138,13 @@ for(const name of ['v10.js','contractor-model.js']){
 }
 const inlineScript=new URL(estimatePath+'v11/v11.js',dist);
 await writeFile(inlineScript,(await readFile(inlineScript,'utf8')).replaceAll('SOURCE_REVISION',sourceRevision));
-for(const version of ['original','v2','v3','v4','v5','v5.1','v6','v7','v8','v9','v10','v11','v12','v13']){
+for(const version of ['original','v2','v3','v4','v5','v5.1','v6','v7','v8','v9','v10','v11','v12','v13','v14']){
  const folder=new URL(estimatePath+(version==='original'?'':version+'/'),dist);
  for(const entry of await readdir(folder))if(entry.endsWith('.html')){
   if(version==='original'&&entry!=='index.html')continue;
   const file=new URL(entry,folder),html=await readFile(file,'utf8');
   const navigation=html.replace(/<nav class="view-links"[^>]*>[\s\S]*?<\/nav>/g,versionLinks(version));
-  await writeFile(file,navigation.replace('<head>','<head><meta name="estimate-source-revision" content="'+sourceRevision+'">').replace('v8.js?revision=quantity-2','v8.js?source='+sourceRevision).replaceAll('SOURCE_REVISION',sourceRevision).replaceAll('V11_REVISION',inlineRevision).replaceAll('V12_REVISION',decisionRevision).replaceAll('V13_REVISION',savingsRevision));
+  await writeFile(file,navigation.replace('<head>','<head><meta name="estimate-source-revision" content="'+sourceRevision+'">').replace('v8.js?revision=quantity-2','v8.js?source='+sourceRevision).replaceAll('SOURCE_REVISION',sourceRevision).replaceAll('V11_REVISION',inlineRevision).replaceAll('V12_REVISION',decisionRevision).replaceAll('V13_REVISION',savingsRevision).replaceAll('V14_REVISION',planningRevision));
  }
 }
 await mkdir(new URL('progress/recovery/',dist),{recursive:true});
@@ -157,6 +165,7 @@ await writeFile(new URL('downloads/Open_Source_Review.json',dist),JSON.stringify
 await writeFile(new URL('.nojekyll',dist),'');
 await readFile(new URL('downloads/Column_Formwork_Inches_Only.pdf',dist));
 await buildBuildingProject(root,dist);
+await buildBuildingHistory(root,dist);
 const themedPages=await applySiteExperience(fileURLToPath(dist));
 await checkSite(fileURLToPath(dist));
 console.log(`Built ${themedPages} pages with shared light/dark themes and companion. CAD includes 5 SVG sheets, PDF and CSV.`);

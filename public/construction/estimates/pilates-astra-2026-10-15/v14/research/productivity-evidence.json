@@ -1,0 +1,457 @@
+{
+  "purpose": "Paila Pilates Kathmandu v14 quantity-based fit-out schedule research; no task durations are claimed by these norms",
+  "retrieved_date": "2026-10-26",
+  "interpretation": [
+    "DWRI explicitly states m-day (person-day). DUDBC civil tables use head/count (sankhya) as rate-analysis labour inputs; these become wage-days when multiplied by the applicable daily labour wage. Neither source establishes an 8-hour site shift or a guaranteed elapsed duration.",
+    "For each role, workload = measured quantity / source basis quantity * role input. With a constant crew, active duration is at least the maximum workload/available-workers across required roles. Round to site workdays, observe trade dependencies, and do not allocate one worker to concurrent rows.",
+    "Rates describe the stated assembly. Applying a nearby norm to different materials, joinery complexity, prefabrication method, BOQ measurement basis, access, or modern tools is an explicit planning assumption.",
+    "Procurement, approvals, shop fabrication, delivery, drying, curing, inspections, leak tests, and commissioning require separate activities or readiness gates; labour inputs alone do not capture them.",
+    "Where source scopes already include making good/painting, do not count that work twice under another allowance. Electrical fixture mounting, socket mounting, and full point wiring are different tasks."
+  ],
+  "sources": {
+    "DUDBC_CIVIL": {
+      "title": "Bhawan Nirman (Civil) Karyaharu ko Darrate Bishleshan Sambandhi Norms / Norms of Building Construction (Civil) Works",
+      "author": "Government of Nepal, Department of Urban Development and Building Construction",
+      "version_caveat": "Legacy 60-page civil norms currently linked by provincial government offices; no publication edition/date established from the PDF. Do not label these 2082/83 productivity norms merely because a download listing does so.",
+      "official_landing_url": "https://udbokaski.gandaki.gov.np/en/post/norms-of-building-construction-civil-works",
+      "official_pdf_url": "https://idd.gandaki.gov.np/upload/2bf0f6630398f805a9c9fdbdd7cb676c/files/Building_norms.pdf",
+      "alternate_official_pdf_url": "https://udbokaski.gandaki.gov.np/assets/201/Rate_Analysis.pdf/file",
+      "primary_agency_landing_url": "https://dudbc.gov.np/content/2365/2365-bhawan-nirmancivilkaryaharu/",
+      "inspection_copy_url": "https://download.hermes.com.np/wp-content/uploads/sites/12/2023/07/FOR-BUILDING-RATE-ANALYSIS.pdf",
+      "inspection": "Government-hosted web text and the same 60-page mirrored PDF were read; tables were rendered locally and visually checked. Government downloads repeatedly timed out, so the readable local copy came from the mirror.",
+      "inspected_pdf_sha256": "85938dd3fac7e825d46da3d05669828b4b4ffcda2dcab31ab7ce9d69ed4788e4"
+    },
+    "DWRI_2081": {
+      "title": "Rate Analysis Norms for Works 2081",
+      "author": "Government of Nepal, Ministry of Energy, Water Resources and Irrigation, Department of Water Resources and Irrigation",
+      "official_pdf_url": "https://wriddogulmi.lumbini.gov.np/media/downloads/Norms_for_Rate_Analysis_2081_DWRI_azgj9bo.pdf",
+      "official_category_url": "https://moewri.gov.np/category/nerms--criteria/",
+      "inspection": "52.7MB, 410-page official PDF downloaded successfully and relevant electric tables rendered and visually checked. Web open refuses this file because it exceeds its content-length limit. Page references below use 1-based PDF pages and printed chapter page numbers.",
+      "inspected_pdf_sha256": "e54a45b0ede5c59c19c0b534f91e5fb2a9dd3ab3c09391a9e9fc8c1cc05d641e"
+    },
+    "ASIAN_PAINTS_NEPAL": {
+      "title": "Royale Luxury Emulsion Nepal product information sheet",
+      "author": "Asian Paints Nepal",
+      "url": "https://static.asianpaints.com/content/dam/ap-np-revamp/products/interior/product-information-sheets/Royale_Luxury_Emulsion_PIS_R.pdf",
+      "parent_url": "https://www.asianpaintsnepal.com/products/paints-and-textures/interior-walls/plain-finishes/interior-royale-luxury-emulsion.html"
+    },
+    "USG_JOINTING": {
+      "title": "Sheetrock All Purpose Joint Compound application instructions",
+      "author": "USG Middle East",
+      "url": "https://www.usgme.com/default/sheetrock-all-purpose-joint-compound.html"
+    },
+    "FORBO_CLICK": {
+      "title": "Installing Click Luxury Vinyl Tiles",
+      "author": "Forbo Flooring Systems",
+      "url": "https://residential-flooring.forbo.co.uk/pages/installation-guide"
+    },
+    "MAPEI_TILE": {
+      "title": "Mapei Super Tile Adhesive low dust technical data",
+      "author": "Mapei",
+      "url": "https://cdnmedia.mapei.com/docs/librariesprovider31/products-documents/1_12938_mapei-super-tile-adhesive-low-dust_en_4dac1db52c284eeb8769692f13e6644d.pdf?sfvrsn=f2e7fd6_0",
+      "verification_caveat": "Manufacturer search index states exact lags; full PDF open was blocked by 403. Optional contextual reference only; selected adhesive instructions control."
+    }
+  },
+  "verified_norm_templates": [
+    {
+      "id": "NP-PLASTER-12_5",
+      "source": "DUDBC_CIVIL",
+      "table": "I1",
+      "pdf_page": 35,
+      "printed_page": "35",
+      "scope": "12.5mm cement-sand plaster, mixes 1:2/1:3/1:4/1:6",
+      "basis": {
+        "quantity": 100,
+        "unit": "m2"
+      },
+      "source_labour_inputs": {
+        "skilled": 12,
+        "unskilled_helper": 16
+      },
+      "normalized_wage_days_per_unit": {
+        "skilled": 0.12,
+        "unskilled_helper": 0.16
+      },
+      "caveat": "Ceiling note adds 25% helper labour; plaster curing/dryness is a separate readiness condition. For isolated repairs allow setup and access losses."
+    },
+    {
+      "id": "NP-PUTTY-2MM",
+      "source": "DUDBC_CIVIL",
+      "table": "I17",
+      "pdf_page": 38,
+      "printed_page": "38",
+      "scope": "2mm plain white putty plaster to wall and ceiling",
+      "basis": {
+        "quantity": 10,
+        "unit": "m2"
+      },
+      "source_labour_inputs": {
+        "skilled": 1,
+        "unskilled_helper": 1
+      },
+      "normalized_wage_days_per_unit": {
+        "skilled": 0.1,
+        "unskilled_helper": 0.1
+      },
+      "caveat": "Does not establish the number of coats in the selected commercial paint system or elapsed drying time."
+    },
+    {
+      "id": "NP-EMULSION-2COAT",
+      "source": "DUDBC_CIVIL",
+      "table": "J19",
+      "pdf_page": 41,
+      "printed_page": "41",
+      "scope": "Two coats plastic emulsion paint excluding primer",
+      "basis": {
+        "quantity": 100,
+        "unit": "m2"
+      },
+      "source_labour_inputs": {
+        "skilled": 9,
+        "unskilled_helper": 5
+      },
+      "normalized_wage_days_per_unit": {
+        "skilled": 0.09,
+        "unskilled_helper": 0.05
+      },
+      "primer_addition": {
+        "table": "J5(a)",
+        "pdf_page": 39,
+        "basis_m2": 100,
+        "skilled": 3,
+        "unskilled_helper": 3
+      },
+      "combined_putty_primer_2coat_per_m2": {
+        "skilled": 0.22,
+        "unskilled_helper": 0.18
+      },
+      "caveat": "Combined value uses I17 putty once plus J5 primer once plus J19 two coats. Product requirements can include additional basecoats, putty passes, sanding or a third dark-colour coat. Legacy rate-analysis inputs may be conservative relative to current roller work."
+    },
+    {
+      "id": "NP-PLY-PARTITION",
+      "source": "DUDBC_CIVIL",
+      "table": "N3",
+      "pdf_page": 51,
+      "printed_page": "51",
+      "scope": "38x75mm timber framing at 0.61x0.915m modules, 3mm commercial plywood both sides, timber battens at joints",
+      "basis": {
+        "quantity": 35.58,
+        "unit": "m2 partition elevation (both faces included)"
+      },
+      "source_labour_inputs": {
+        "skilled": 23,
+        "unskilled_helper": 2.3
+      },
+      "normalized_wage_days_per_unit": {
+        "skilled": 0.646430579,
+        "unskilled_helper": 0.064643058
+      },
+      "caveat": "Only an analogue for a different frame/board partition. Not a cabinet-frontage or cement-board norm. Do not multiply the elevation area by two again."
+    },
+    {
+      "id": "NP-PLY-CEILING",
+      "source": "DUDBC_CIVIL",
+      "table": "N7(a)",
+      "pdf_page": 52,
+      "printed_page": "52",
+      "scope": "50x75mm timber framing at 0.60x0.90m modules with 3mm commercial plywood false ceiling",
+      "basis": {
+        "quantity": 35.58,
+        "unit": "m2"
+      },
+      "source_labour_inputs": {
+        "skilled": 23,
+        "unskilled_helper": 2.3
+      },
+      "normalized_wage_days_per_unit": {
+        "skilled": 0.646430579,
+        "unskilled_helper": 0.064643058
+      },
+      "caveat": "Gypsum ceiling cannot inherit this coefficient without an explicit adapted-method assumption. DUDBC N10/N11 gypsum ceilings have no separate labour coefficient."
+    },
+    {
+      "id": "NP-PRELAM-FRAMED-PANEL",
+      "source": "DUDBC_CIVIL",
+      "table": "N27",
+      "pdf_page": 56,
+      "printed_page": "56",
+      "scope": "12mm decorative prelaminated particleboard fitted on aluminium frame",
+      "basis": {
+        "quantity": 6,
+        "unit": "m2"
+      },
+      "source_labour_inputs": {
+        "skilled": 0.8,
+        "unskilled_helper": 0.8
+      },
+      "normalized_wage_days_per_unit": {
+        "skilled": 0.133333333,
+        "unskilled_helper": 0.133333333
+      },
+      "caveat": "Useful assembly-level analogue for simple framed decorative panels. PVC slats, WPC, battens, curved work, profiles, glue and complex cutouts need their own declared adjustment."
+    },
+    {
+      "id": "NP-ADHERED-PVC-TILE",
+      "source": "DUDBC_CIVIL",
+      "table": "H32 (continues next page)",
+      "pdf_page": [
+        33,
+        34
+      ],
+      "printed_page": "33-34",
+      "scope": "PVC tiles with rubber-based adhesive including rolling",
+      "basis": {
+        "quantity": 10,
+        "unit": "m2"
+      },
+      "source_labour_inputs": {
+        "skilled": 1.5,
+        "unskilled_helper": 1.5
+      },
+      "normalized_wage_days_per_unit": {
+        "skilled": 0.15,
+        "unskilled_helper": 0.15
+      },
+      "caveat": "Not a direct SPC click-floor or carpet norm. Only an overt proxy if flooring quantity is measured. Substrate repairs, levelling and moisture tests are separate."
+    },
+    {
+      "id": "NP-MARBLE-VERTICAL",
+      "source": "DUDBC_CIVIL",
+      "table": "H35",
+      "pdf_page": 34,
+      "printed_page": "34",
+      "scope": "15mm marble tiles on 12.5mm 1:3 mortar to stair treads, skirting, walls and columns including rubbing and polishing",
+      "basis": {
+        "quantity": 10,
+        "unit": "m2"
+      },
+      "source_labour_inputs": {
+        "skilled": 14,
+        "unskilled_helper": 12
+      },
+      "normalized_wage_days_per_unit": {
+        "skilled": 1.4,
+        "unskilled_helper": 1.2
+      },
+      "caveat": "Conservative traditional mortar-and-polish scope. Not an exact coefficient for prepolished large slabs, adhesive cladding or mechanically anchored stone. Use declared adaptation, not silent substitution."
+    },
+    {
+      "id": "NP-ROLLING-SHUTTER",
+      "source": "DUDBC_CIVIL",
+      "table": "M6",
+      "pdf_page": 48,
+      "printed_page": "48",
+      "scope": "Make and install iron rolling shutter including painting and labour",
+      "basis": {
+        "quantity": 9.3,
+        "unit": "m2"
+      },
+      "source_labour_inputs": {
+        "skilled": 16,
+        "unskilled_helper": 16
+      },
+      "normalized_wage_days_per_unit": {
+        "skilled": 1.720430108,
+        "unskilled_helper": 1.720430108
+      },
+      "caveat": "Fabrication-plus-installation total, not site fixing alone. No shop/site split given. Modern factory-supplied shutter needs an explicit vendor-based schedule."
+    },
+    {
+      "id": "NP-LIGHT-FIXTURE",
+      "source": "DWRI_2081",
+      "table": "23.14 A/B",
+      "pdf_page": [
+        379,
+        380
+      ],
+      "printed_page": "23-14 to 23-15",
+      "scope": "Mount and connect lighting fixture per drawing",
+      "basis": {
+        "quantity": 10,
+        "unit": "fixtures"
+      },
+      "source_labour_inputs": {
+        "simple_fixture_skilled": 0.5,
+        "simple_fixture_semi_skilled": 0.5,
+        "complex_fixture_skilled": 1,
+        "complex_fixture_semi_skilled": 1
+      },
+      "normalized_person_days_per_fixture": {
+        "simple_skilled": 0.05,
+        "simple_semi_skilled": 0.05,
+        "complex_skilled": 0.1,
+        "complex_semi_skilled": 0.1
+      },
+      "caveat": "Simple scope includes dome/wall/hanging/spot/ceiling/bulkhead lights, wall fan and small chandelier. Complex includes chained tubes and larger chandelier. Does not replace full route/point-wiring work. For a few scattered fixtures use minimum mobilisation/setup rather than sub-hour task duration."
+    },
+    {
+      "id": "NP-CONCEALED-SOCKET",
+      "source": "DWRI_2081",
+      "table": "23.15 A",
+      "pdf_page": 380,
+      "printed_page": "23-15",
+      "scope": "Provide/fix concealed electrical sockets and connect to electricity",
+      "basis": {
+        "quantity": 10,
+        "unit": "sockets"
+      },
+      "source_labour_inputs": {
+        "skilled": 1,
+        "semi_skilled": 2
+      },
+      "normalized_person_days_per_socket": {
+        "skilled": 0.1,
+        "semi_skilled": 0.2
+      },
+      "caveat": "Socket mounting/connection only, distinguish from a complete power-circuit route."
+    },
+    {
+      "id": "NP-OLD-BUILDING-POINT-WIRING",
+      "source": "DWRI_2081",
+      "table": "23.21 A",
+      "pdf_page": [
+        389,
+        390
+      ],
+      "printed_page": "23-24 to 23-25",
+      "scope": "Concealed light-circuit point wiring in an existing building, grooves, HD polythene pipe, hooks/nails, making good with cement-sand mortar and paint, switch and ceiling rose",
+      "basis": {
+        "quantity": 10,
+        "unit": "light points"
+      },
+      "source_labour_inputs_by_route_length": {
+        "5m": {
+          "skilled": 1.5,
+          "semi_skilled": 3,
+          "unskilled": 3
+        },
+        "6_to_10m": {
+          "skilled": 2,
+          "semi_skilled": 3,
+          "unskilled": 4
+        },
+        "11_to_15m": {
+          "skilled": 2,
+          "semi_skilled": 4,
+          "unskilled": 4
+        },
+        "above_15m": {
+          "skilled": 3,
+          "semi_skilled": 4,
+          "unskilled": 4
+        }
+      },
+      "caveat": "Route length, point count, circuit sizing and actual concealed-vs-surface method are required before applying. Do not infer point quantity from lump-sum electrical cost or from floor area. New-construction wiring is a different 23.20 norm."
+    },
+    {
+      "id": "DUDBC-J5-PRIMER",
+      "source": "DUDBC_CIVIL",
+      "table": "J5(a)",
+      "pdf_page": 39,
+      "scope": "One coat primer before paint",
+      "basis": {
+        "quantity": 100,
+        "unit": "m2"
+      },
+      "source_labour_inputs": {
+        "skilled": 3,
+        "unskilled_helper": 3
+      },
+      "normalized_wage_days_per_unit": {
+        "skilled": 0.03,
+        "unskilled_helper": 0.03
+      },
+      "caveat": "Legacy rate-analysis input; substrate and selected coating system must match. Separate from J19 two-coat emulsion norm."
+    }
+  ],
+  "source_backed_readiness_lags": [
+    {
+      "source": "ASIAN_PAINTS_NEPAL",
+      "pdf_page": 1,
+      "condition": "New masonry before Royale paint system",
+      "value": "3 months recommended curing",
+      "caveat": "Use only for new masonry. Existing dry walls do not automatically inherit this wait. Generic India Royale PIS states 28 days, so Nepal selected-product/substrate advice controls; do not silently use the shorter generic value."
+    },
+    {
+      "source": "ASIAN_PAINTS_NEPAL",
+      "pdf_page": 2,
+      "condition": "Primer/basecoat/topcoat recoat intervals",
+      "value": "4-6 hours; putty entries 6-8 hours",
+      "caveat": "Quoted at 25C and 50% RH; longer for adverse site conditions. Two light-colour coats, three for dark shades recommended. Full system can require undercoat before and after putty."
+    },
+    {
+      "source": "USG_JOINTING",
+      "location": "Application bullets / web lines222-229",
+      "condition": "Air-drying drywall compound before recoat or sanding",
+      "value": "Dry thoroughly, up to24 hours depending on temperature/humidity",
+      "caveat": "Use as coat-to-coat readiness gate, not labour time. Setting compounds and selected local product may have different waits."
+    },
+    {
+      "source": "FORBO_CLICK",
+      "location": "General advice / web line26",
+      "condition": "Forbo Allura Click LVT acclimatisation",
+      "value": "48 hours in closed boxes at18-28C",
+      "caveat": "Manufacturer example, not universal SPC instruction. Floors must be dry, smooth, clean, enclosed, and free of other trades; selected floor instructions control."
+    },
+    {
+      "source": "MAPEI_TILE",
+      "condition": "Selected standard tile adhesive example",
+      "value": "Wall grouting12h, floor grouting24h, approximate ready-for-use14days",
+      "caveat": "Optional indexed-primary-source example; exact adhesive, substrate, load and weather determine actual wait. Do not turn14days into generic tile productivity."
+    }
+  ],
+  "unsupported_fitout_work": {
+    "gypsum_and_cement_board": "DUDBC N10/N11 gypsum ceilings and N15/N16 gypsum partitions/wall panels (p54) are supplied-and-installed composite items with blank labour columns. No direct labour coefficient for the actual gypsum/cement-board fit-out was established. Keep editable planning assumptions for framing/boarding and separate drying gates for joint finishing.",
+    "aluminium_glazing_mirrors": "DUDBC N17/N18 aluminium partitions(p55) and several prefabricated doors/windows are composite supply-and-install items. A 6mm mirror mention in G3(p21) belongs to a timber-framed shutter assembly and is NOT a freestanding studio wall-mirror installation norm. Do not reuse it for14m2 mirrors.",
+    "custom_joinery": "No exact primary norm established for BOQ-frontage-area plywood/laminate cabinets, open shelves, shoe racks or curved reception desk. DUDBC timber+ply panel norms provide observed assembly context only; frontage area omits cabinet depth, shelves, drawers, hardware, edge finishing and cutting complexity. Split shop fabrication/lamination, delivery and site setting; retain frontage measurement plus an editable complexity input, not invented board area.",
+    "curtains_blinds": "No primary labour productivity norm established; fabric area is different from track length and from sewing effort. Separate measured track fixing, off-site stitching/procurement, hanging and adjustment.",
+    "sink_and_plumbing_fixtures": "No verified primary Nepal fixture-labour table established within this bounded review. One sink requires a small-installation allowance plus connected pipework scope and leak test, with the allowance clearly labelled.",
+    "split_AC": "No verified labour productivity norm established here for six split-AC installations. Use vendor plan for mounting, line lengths, condensate routing, vacuum/leak test, electrical readiness and commissioning, with line-length assumptions visible.",
+    "flooring_and_general_electrical_allowances": "Unmeasured allowances remain unmeasured; do not fabricate m2, route lengths or point counts from the allowance amount. Show provisional schedule bars pending measure and method confirmation."
+  },
+  "suggested_editable_planning_assumptions_NOT_norms": [
+    {
+      "trade": "custom plywood/laminate cabinets measured by frontage area",
+      "candidate_range": "0.6-1.4 carpenter-days/m2 frontage for shop fabrication/lamination, plus0.15-0.35 carpenter-days/m2 for site setting; helper input explicitly separate",
+      "status": "Judgment range only; no published primary productivity established. Replace with supplier shop drawing takeoff and crew quote. Complex drawers, curved work and hardware can exceed range."
+    },
+    {
+      "trade": "gypsum flat ceiling",
+      "candidate_range": "10-20m2 per active day for2 installers+1 helper for framing/boarding; joint finishing and drying separate",
+      "status": "Judgment range only; not DUDBC norm; height, perimeter detail and service cutouts matter."
+    },
+    {
+      "trade": "two-sided cement-board partition",
+      "candidate_range": "5-10m2 elevation per active day for2 installers+1 helper, before finishing",
+      "status": "Judgment range only; frames, number of board layers, waterproofing and openings must be stated."
+    },
+    {
+      "trade": "mirror installation after off-site cutting/polishing",
+      "candidate_range": "One2-person glazing crew for roughly10-20m2 per site day, with minimum1 mobilisation day",
+      "status": "Judgment allowance only; size, handling, backing and anchorage control. Adhesive cure gate follows the actual selected product."
+    },
+    {
+      "trade": "curtain hanging and adjustment after fabrication",
+      "candidate_range": "12-20m2 fabric area per active day for2 fitters, track work measured separately",
+      "status": "Judgment allowance only; fabric area is a weak productivity driver. Confirm actual number/width/height of openings."
+    },
+    {
+      "trade": "single sink second-fix",
+      "candidate_range": "0.5-1 site day for1 plumber+1 helper after counter cutout, supply and drain readiness",
+      "status": "Judgment small-job allowance only, including local connection and leak check, not all building plumbing."
+    },
+    {
+      "trade": "split AC install",
+      "candidate_range": "0.5-1 active crew-day/unit for1 technician+1 assistant after brackets, line route and electrical readiness are known",
+      "status": "Judgment allowance only; confirm vendor scope and line lengths. Additional concealed routes and commissioning may add time."
+    }
+  ],
+  "schedule_logic_notes": [
+    "Survey and freeze dimensions/details before custom fabrication; mirror and glazing dimensions after supporting finishes are established.",
+    "Order long-lead boards, hardware, mirrors, AC equipment and curtain fabric early; shop fabrication may overlap rough-in if dimensions are fixed.",
+    "Rough electrical, AC drain/refrigerant routes, plumbing, and supports precede board closure; inspect/test concealed work before closing.",
+    "Ceiling/partition boards, joint finishing, putty/sanding and paint undercoats precede sensitive floor finishes and exposed soft furnishings.",
+    "Sequence specialist installation by zone and crew, then final coat/touchups, fixture fit-off, leak/electrical/AC tests, snagging and cleaning. Protect finished areas.",
+    "For adjacent wet/dry trade handoffs, test readiness instead of assuming all waits are fulfilled because crew work ended."
+  ]
+}
