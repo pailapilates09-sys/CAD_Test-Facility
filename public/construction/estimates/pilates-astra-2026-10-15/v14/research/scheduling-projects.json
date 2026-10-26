@@ -1,0 +1,208 @@
+{
+  "researchedAt": "2026-10-26",
+  "scope": "Five established open-source scheduling/resource projects; primary official documentation and pinned upstream source. No external source code copied and no runtime libraries proposed.",
+  "provenance": "Commit SHAs, commit dates, repository trees and pinned file contents verified through the GitHub connector. Documentation verified through web search/open.",
+  "projects": [
+    {
+      "project": "OpenProject",
+      "repo": "opf/openproject",
+      "license": "GPL-3.0 (the inspected source specifies version 3)",
+      "licensePath": "LICENSE",
+      "docs": [
+        {
+          "url": "https://www.openproject.org/docs/user-guide/work-packages/set-change-dates/"
+        },
+        {
+          "url": "https://www.openproject.org/docs/user-guide/resource-management/"
+        }
+      ],
+      "observed": [
+        "Automatic scheduling derives the earliest permitted successor date from predecessor relations and the working-day calendar; the inspected dependency implementation takes the maximum predecessor bound, then advances to an eligible working day.",
+        "Allocation planning is separate from work-package dates; official resource views show allocated hours, available capacity and overallocated users."
+      ],
+      "apply": [
+        "Retain separate requested dates, calculated dates and allocation records; calculate a successor from the strictest predecessor bound.",
+        "Show crew demand and capacity by trade/day, and a clear conflict reason alongside any moved task."
+      ],
+      "sha": "71a8a3f0c35a04e1bcac5d9167b2c6ffd561af1b",
+      "date": "2026-10-25T21:39:20Z",
+      "url": "https://github.com/opf/openproject/commit/71a8a3f0c35a04e1bcac5d9167b2c6ffd561af1b",
+      "tree": "8c961b6130e9bfeb9f492a9ec08f2ff75369ff3a",
+      "sources": [
+        {
+          "path": "app/services/work_packages/schedule_dependency/dependency.rb",
+          "url": "https://github.com/opf/openproject/blob/71a8a3f0c35a04e1bcac5d9167b2c6ffd561af1b/app/services/work_packages/schedule_dependency/dependency.rb",
+          "blobSha": "af9fdbd3a6e960064cff5c90f5064be34b2da300"
+        }
+      ],
+      "licenseUrl": "https://github.com/opf/openproject/blob/71a8a3f0c35a04e1bcac5d9167b2c6ffd561af1b/LICENSE"
+    },
+    {
+      "project": "TaskJuggler",
+      "repo": "taskjuggler/TaskJuggler",
+      "license": "GPL-2.0 (the inspected TaskScenario.rb source specifies version 2)",
+      "licensePath": "COPYING",
+      "docs": [
+        {
+          "url": "https://taskjuggler.org/manual/TaskJuggler_Internals.html"
+        },
+        {
+          "url": "https://taskjuggler.org/manual/effort.html"
+        },
+        {
+          "url": "https://taskjuggler.org/manual/allocate.html"
+        }
+      ],
+      "observed": [
+        "Uses a heuristic, not an exhaustive global optimizer: ready leaf tasks are ordered by user priority, path criticalness, then stable index.",
+        "Resources have a time-slot scoreboard; occupied/leave slots and allocation limits determine availability.",
+        "Effort is distinct from elapsed duration; an effort task finishes only after sufficient resource contribution. Documentation cautions that adding people only reduces duration when work can be partitioned without overhead."
+      ],
+      "apply": [
+        "Implement an original deterministic serial schedule generation heuristic: choose a dependency-ready leaf task using priority, remaining downstream duration and stable id, then find its first calendar/capacity-feasible span.",
+        "Keep a per-day or half-day trade capacity ledger; return an explicit unschedulable error if no task is ready or the search horizon is exceeded.",
+        "Let quantity/productivity create crew effort, while a separate maximum parallel crew count controls whether extra crews can compress a task."
+      ],
+      "sha": "3b36c799605621103d7d065c69e3f958a3dd6698",
+      "date": "2025-07-28T18:40:24Z",
+      "url": "https://github.com/taskjuggler/TaskJuggler/commit/3b36c799605621103d7d065c69e3f958a3dd6698",
+      "tree": "2b5d22bf72d483b500b069cfc1e1bd906fa0253d",
+      "sources": [
+        {
+          "path": "lib/taskjuggler/TaskScenario.rb",
+          "url": "https://github.com/taskjuggler/TaskJuggler/blob/3b36c799605621103d7d065c69e3f958a3dd6698/lib/taskjuggler/TaskScenario.rb",
+          "blobSha": "80788731dab949e53f6b4d3ea2cbd81f975a136a"
+        },
+        {
+          "path": "lib/taskjuggler/ResourceScenario.rb",
+          "url": "https://github.com/taskjuggler/TaskJuggler/blob/3b36c799605621103d7d065c69e3f958a3dd6698/lib/taskjuggler/ResourceScenario.rb",
+          "blobSha": "bfc0fc9906c03da20b108d5d56894ee9b5cb926e"
+        }
+      ],
+      "licenseUrl": "https://github.com/taskjuggler/TaskJuggler/blob/3b36c799605621103d7d065c69e3f958a3dd6698/COPYING"
+    },
+    {
+      "project": "GanttProject",
+      "repo": "bardsoftware/ganttproject",
+      "license": "GPL-3.0-or-later (inspected SchedulerImpl.java header)",
+      "licensePath": "LICENSE",
+      "docs": [
+        {
+          "url": "https://docs.ganttproject.biz/user/scheduler/"
+        }
+      ],
+      "observed": [
+        "Scheduler walks dependency graph layers; task date bounds are intersections of incoming constraints.",
+        "Official docs support FS, SS, FF and SF dependencies, positive or negative lag and strong versus rubber relation semantics.",
+        "Summary dates are derived from the earliest child start and latest child finish, and simple tasks cannot begin on a weekend/holiday."
+      ],
+      "apply": [
+        "Validate an acyclic leaf-task dependency graph and process it topologically; derive WBS summary bars rather than independently consuming crew capacity for parent and child rows.",
+        "Support explicit relation type and lag unit; use minimum-bound semantics for production scheduling so resource delays can extend a gap.",
+        "For v14 prefer FS/SS/FF as the exposed construction controls; do not claim all relations are equalities."
+      ],
+      "sha": "522cbe9b1519c118ded5d5c18711c7b46cffbb67",
+      "date": "2026-10-15T21:52:50Z",
+      "url": "https://github.com/bardsoftware/ganttproject/commit/522cbe9b1519c118ded5d5c18711c7b46cffbb67",
+      "tree": "ae0e6dea55e728ea396de531d621b46f2e92c4de",
+      "sources": [
+        {
+          "path": "ganttproject/src/main/java/net/sourceforge/ganttproject/task/algorithm/SchedulerImpl.java",
+          "url": "https://github.com/bardsoftware/ganttproject/blob/522cbe9b1519c118ded5d5c18711c7b46cffbb67/ganttproject/src/main/java/net/sourceforge/ganttproject/task/algorithm/SchedulerImpl.java",
+          "blobSha": "6b832b472fc7d851d971f170f5317358c581e620"
+        }
+      ],
+      "licenseUrl": "https://github.com/bardsoftware/ganttproject/blob/522cbe9b1519c118ded5d5c18711c7b46cffbb67/LICENSE"
+    },
+    {
+      "project": "Google OR-Tools",
+      "repo": "google/or-tools",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE",
+      "docs": [
+        {
+          "url": "https://developers.google.com/optimization/scheduling/job_shop"
+        }
+      ],
+      "observed": [
+        "Job-shop guide separates precedence, no-overlap, and makespan objective.",
+        "Cumulative constraint requires that the sum of the demands of all simultaneously active intervals never exceed resource capacity; intervals use half-open [start,end) boundaries.",
+        "The RCPSP example uses cumulative constraints for renewable resources and different constraints for nonrenewable resources, with optional recipes representing task modes."
+      ],
+      "apply": [
+        "Enforce for every trade/day: sum(task crew demand) <= available trade crew capacity. Use no-overlap for an indivisible team or exclusive work zone.",
+        "Model labor/equipment as renewable daily capacity and materials/budget as quantity constraints, rather than subtracting material stock once per active day.",
+        "Implement and test the same invariants in small local TypeScript; do not install OR-Tools or claim that a greedy browser heuristic is globally optimal."
+      ],
+      "sha": "100f66e6242ab8bf8d32feb8f3bf086db66ae2b5",
+      "date": "2026-09-17T13:02:24Z",
+      "url": "https://github.com/google/or-tools/commit/100f66e6242ab8bf8d32feb8f3bf086db66ae2b5",
+      "tree": "583654cc607cb51624ec9f88d1e240f06318ec09",
+      "sources": [
+        {
+          "path": "ortools/sat/cumulative.h",
+          "url": "https://github.com/google/or-tools/blob/100f66e6242ab8bf8d32feb8f3bf086db66ae2b5/ortools/sat/cumulative.h",
+          "blobSha": "2d117f824eb85684c2e6c5bb5d0068005860a007"
+        },
+        {
+          "path": "examples/python/rcpsp_sat.py",
+          "url": "https://github.com/google/or-tools/blob/100f66e6242ab8bf8d32feb8f3bf086db66ae2b5/examples/python/rcpsp_sat.py",
+          "blobSha": "6d413d4057ec3bc5b2f76b00569ed5fe3e06c7b4"
+        }
+      ],
+      "licenseUrl": "https://github.com/google/or-tools/blob/100f66e6242ab8bf8d32feb8f3bf086db66ae2b5/LICENSE"
+    },
+    {
+      "project": "Frappe Gantt",
+      "repo": "frappe/gantt",
+      "license": "MIT",
+      "licensePath": "license.txt",
+      "docs": [
+        {
+          "url": "https://docs.frappe.io/gantt/config"
+        }
+      ],
+      "observed": [
+        "Configuration separates highlighted holidays from ignored dates; also exposes date/progress read-only modes, snapping, zoom modes and movement of dependency-linked bars.",
+        "Inspected source normalizes dependency ids into a map and separately parses weekend/date ignore rules; bar geometry and progress are handled as chart behavior."
+      ],
+      "apply": [
+        "Separate calendar highlighting, real nonworking capacity, and chart hiding; a shaded weekend must not accidentally count as labor capacity.",
+        "Keep the original app's Gantt renderer and add dependency arrows, daily/weekly zoom and a quantity/crew audit popup driven by the scheduler output.",
+        "Treat dragging as an input edit, then recompute/validate the schedule and show downstream changes before saving; do not infer valid capacity from bar positions."
+      ],
+      "sha": "5c83708d300a99d9142edea0d4d52f421e3a2e68",
+      "date": "2026-03-05T13:23:33Z",
+      "url": "https://github.com/frappe/gantt/commit/5c83708d300a99d9142edea0d4d52f421e3a2e68",
+      "tree": "ca925e3fae095c7235fc03da99a1b9dc99ec0e4e",
+      "sources": [
+        {
+          "path": "src/index.js",
+          "url": "https://github.com/frappe/gantt/blob/5c83708d300a99d9142edea0d4d52f421e3a2e68/src/index.js",
+          "blobSha": "53c463d8fb33d927401a03a57302ce13c7d6cbf6"
+        },
+        {
+          "path": "src/bar.js",
+          "url": "https://github.com/frappe/gantt/blob/5c83708d300a99d9142edea0d4d52f421e3a2e68/src/bar.js",
+          "blobSha": "0cfde186e786328294317191709ae551781a3f73"
+        }
+      ],
+      "licenseUrl": "https://github.com/frappe/gantt/blob/5c83708d300a99d9142edea0d4d52f421e3a2e68/license.txt"
+    }
+  ],
+  "originalImplementationRecommendations": [
+    "Store quantities with explicit units, productivity as units per crew-day, crew size in people, requested crew count and a maximum useful parallel crew count. Required crew-days = quantity/productivity. Do not infer productivity from cost.",
+    "When constant whole crews are feasible, productive work duration = ceil(quantity/(productivityPerCrewDay*assignedCrews)). Recompute using actual daily eligible capacity when availability varies. Preserve remaining quantity so the last day cannot create negative work.",
+    "Keep productive work, labor effort and elapsed waits distinct. A curing/drying elapsed wait advances calendar time with zero crew use; work waits obey the working calendar. Put this distinction in the task model and tooltip.",
+    "Use an original deterministic schedule-generation procedure: validate units, quantities, productivity, capacities and a DAG; compute earliest dependency bounds; choose ready tasks by priority and downstream duration; scan forward to the first feasible calendar/capacity allocation; reserve capacity; propagate dates; derive summary rows.",
+    "Use half-open internal intervals and a documented mapping to inclusive displayed finish dates. A finish-to-start successor begins at the next eligible work slot without accidental extra-day gaps.",
+    "Maintain per-trade and per-exclusive-team capacity ledgers. A crew can work one compatible location at a time. Add optional zone/exclusive workspace constraints if physically required; do not serialize independent trades solely because they share a project.",
+    "Report scheduled crew count, daily utilization, crew shortages, resource-caused delay and predecessor-caused delay. Clearly distinguish a dependency-only baseline from the resource-constrained plan.",
+    "Validate no cycles, no negative quantities, no zero productivity for productive tasks, no demand above configured maximum capacity, no work booked on closed days, no precedence violations and no daily over-allocation. Bound forward search and report infeasibility with the blocking task/resource."
+  ],
+  "limitations": [
+    "Documentation inspires behavior; the recommendations are original implementation choices, not claims that upstream projects use the same combined algorithm.",
+    "GanttProject and Frappe Gantt are used here for dependency/calendar/chart principles; no assertion is made that either provides automatic resource leveling.",
+    "OpenProject's current resource-management documentation can describe product-edition features; no reuse of its full product or enterprise code is proposed."
+  ]
+}

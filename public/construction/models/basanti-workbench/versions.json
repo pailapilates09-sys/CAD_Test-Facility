@@ -1,0 +1,25 @@
+{
+  "project_name": "14_Basanti Poudel Baral",
+  "source_pdf_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
+  "versions": [
+    {
+      "id": "v1",
+      "title": "Version 1 · before five-project QA",
+      "path": "./v1/",
+      "commit": "3ac12287867cd6449adea550b89ba8b8909b4261",
+      "archive": "./history/v1-source.json.gz",
+      "archive_sha256": "9454dad8eeafde51a59afc62284fcb21d28366b6b40d1be7dec47c5575391969",
+      "status": "Frozen historical workbench; use v2 for planning"
+    },
+    {
+      "id": "v2",
+      "title": "Version 2 · five-project QA improvements",
+      "path": "./v2/",
+      "baseline_commit": "f3feb52d6bc77f0a43b52eb7de4f3e7023123ead",
+      "source": "./index.html",
+      "status": "Current workbench, derived from one maintained source"
+    }
+  ],
+  "change_report": "./changes/",
+  "policy": "V1 is a checksum-verified frozen snapshot. V2 and the existing URL are generated from the same current workbench source. Historical snapshots are not duplicate editable masters."
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "estimate-versions-1.0.0",
-  "updated_date": "2026-10-25",
-  "latest_version": "v13",
+  "updated_date": "2026-10-26",
+  "latest_version": "v14",
   "milestone_tag": "pilates-estimates-m1-2026-10-17",
   "versions": [
     {
@@ -202,6 +202,19 @@
       "component_evidence": false,
       "savings_comparison": true,
       "single_page": true
+    },
+    {
+      "id": "v14",
+      "label": "Construction programme v14",
+      "path": "./v14/",
+      "purpose": "Quantity-based interior work sequence, crew capacities, procurement and drying waits, linked Gantt and resource loads",
+      "units": "SI / crew-days / working and calendar days",
+      "permanent_original_markers": false,
+      "position_overview": false,
+      "cost_treemap": false,
+      "reference_images": false,
+      "component_evidence": false,
+      "source_register": "v9/register.json"
     }
   ],
   "current_view_policy": {
@@ -216,8 +229,8 @@
       "Construction",
       "Pilates SketchUp",
       "Layout Designer",
-      "Building Plans",
-      "Versions + milestone",
+      "14 · Basanti Poudel Baral",
+      "Paila Pilates Interior",
       "Progress",
       "Memory Posters"
     ],
@@ -249,5 +262,6 @@
     "current_views": "Original/v0: quoted source; v2: concise scope/hierarchy; v3: SI conversion; v4: price observations; v5: comparisons; v5.1: graphs; v6: images; v7: components; v8: quantity models; v9: internal register; v10: worksheets; v11: inline materials; v12: responsibility decisions. V13: original group budgets and owner-managed savings comparison.",
     "procurement_view": "V12 stores no copied work titles, quantities or quoted rates. Work-ID and area-ID decisions join the shared register at build time. New carpet/vanity options are outside the quote and have unknown quantities.",
     "savings_view": "V13 generates its budgets from v9 quoted amounts and v12 work-ID responsibility links. No separate editable work-price register. Complete alternative owner costs are browser-only scenarios keyed to both source revisions; they do not change published rates or v10/v11 drafts."
-  }
+  },
+  "project_display_name": "Sumita Gurung · Paila Pilates Studio Interior"
 }

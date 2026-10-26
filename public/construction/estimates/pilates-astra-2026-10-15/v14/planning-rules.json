@@ -1,0 +1,694 @@
+{
+  "schema": "paila-construction-programme-1.0",
+  "reviewed_date": "2026-10-26",
+  "project": "Sumita Gurung · Paila Pilates Studio Interior",
+  "source_register": "../v9/register.json",
+  "responsibility_register": "../v12/procurement.json",
+  "calendar": {
+    "closed_weekdays": [
+      6
+    ],
+    "holidays": [],
+    "note": "Planning choice: Sunday–Friday work, Saturday closed. Daily crew booking assumes a normal full productive shift; shift length and working conditions need contractor agreement. No public holidays or contractor leave have been entered. Relative Day 1 assumes Sunday; set a date to use its actual weekday."
+  },
+  "resources": [
+    {
+      "id": "coordinator",
+      "label": "Owner / site coordination",
+      "capacity": 1,
+      "location": "management"
+    },
+    {
+      "id": "shop_carpenter",
+      "label": "Workshop cabinetmakers",
+      "capacity": 2,
+      "location": "offsite"
+    },
+    {
+      "id": "shop_helper",
+      "label": "Workshop assistant",
+      "capacity": 1,
+      "location": "offsite"
+    },
+    {
+      "id": "carpenter",
+      "label": "Site carpenters",
+      "capacity": 2,
+      "location": "site"
+    },
+    {
+      "id": "gypsum",
+      "label": "Board / ceiling fixers",
+      "capacity": 2,
+      "location": "site"
+    },
+    {
+      "id": "painter",
+      "label": "Painters / putty finishers",
+      "capacity": 2,
+      "location": "site"
+    },
+    {
+      "id": "stone",
+      "label": "Stone fixers",
+      "capacity": 2,
+      "location": "site"
+    },
+    {
+      "id": "electrician",
+      "label": "Electricians",
+      "capacity": 2,
+      "location": "site"
+    },
+    {
+      "id": "plumber",
+      "label": "Plumber",
+      "capacity": 1,
+      "location": "site"
+    },
+    {
+      "id": "hvac",
+      "label": "AC technicians",
+      "capacity": 2,
+      "location": "site"
+    },
+    {
+      "id": "glazier",
+      "label": "Glaziers / mirror installers",
+      "capacity": 2,
+      "location": "site"
+    },
+    {
+      "id": "installer",
+      "label": "Furniture / curtain / sign installers",
+      "capacity": 2,
+      "location": "site"
+    },
+    {
+      "id": "floor_layer",
+      "label": "Floor layers",
+      "capacity": 2,
+      "location": "site"
+    },
+    {
+      "id": "assistant",
+      "label": "Competent trade assistants",
+      "capacity": 2,
+      "location": "site"
+    },
+    {
+      "id": "helper",
+      "label": "Shared site helpers",
+      "capacity": 4,
+      "location": "site"
+    },
+    {
+      "id": "site_space",
+      "label": "Concurrent site trade-worker limit",
+      "capacity": 8,
+      "location": "capacity_limit"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "joinery-shop",
+      "label": "Custom joinery fabrication",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 1.2,
+        "base": 1.5,
+        "high": 1.875
+      },
+      "crew": {
+        "shop_carpenter": 2,
+        "shop_helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 10,
+      "qualification": "Quoted frontage area, not sheet area. Assumed 1.5 m² frontage per 2 carpenter +1-helper shop day. Curves, lamination, drawers, hardware and setup can change output. Not an official productivity norm."
+    },
+    {
+      "id": "joinery",
+      "label": "Custom joinery",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 3.2,
+        "base": 4,
+        "high": 5.0
+      },
+      "crew": {
+        "carpenter": 2,
+        "assistant": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 10,
+      "qualification": "Assumed site fitting output on quoted frontage area. Workshop fabrication is scheduled separately; custom dimensions/details must be approved first."
+    },
+    {
+      "id": "rack",
+      "label": "Shoe rack",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 3.2,
+        "base": 4,
+        "high": 5.0
+      },
+      "crew": {
+        "carpenter": 2,
+        "assistant": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 10,
+      "qualification": "Assumed site fitting output on quoted frontage area. Workshop fabrication is scheduled separately; custom dimensions/details must be approved first."
+    },
+    {
+      "id": "stone",
+      "label": "Marble finish",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 1.142857142857143,
+        "base": 1.4285714285714286,
+        "high": 1.7857142857142858
+      },
+      "crew": {
+        "stone": 2,
+        "helper": 2
+      },
+      "evidence": "proxy_norm",
+      "source_ids": [
+        "NP-MARBLE-VERTICAL"
+      ],
+      "lead_calendar_days": 7,
+      "qualification": "DUDBC H35 proxy:1.4 skilled+1.2 helper wage-days/m² for traditional 15 mm marble on mortar with rubbing/polishing. A 2 stone-worker + 2 helper crew is governed by2/1.4=1.4286 m²/day. Modern slab/adhesive method is unconfirmed; confirm this conservative proxy before commitment."
+    },
+    {
+      "id": "surface-panel",
+      "label": "PVC surface panels",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 6.0,
+        "base": 7.5,
+        "high": 9.375
+      },
+      "crew": {
+        "carpenter": 1,
+        "helper": 1
+      },
+      "evidence": "proxy_norm",
+      "source_ids": [
+        "NP-PRELAM-FRAMED-PANEL"
+      ],
+      "lead_calendar_days": 7,
+      "qualification": "DUDBC N27 has 0.8 skilled+0.8 helper per 6m² of prelaminated board on aluminium frame:7.5 m²/one skilled + one helper crew-day. Used only as a qualified framing proxy; PVC and WPC assemblies are not that exact specification."
+    },
+    {
+      "id": "framed-panels",
+      "label": "Framed decorative panels",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 6.0,
+        "base": 7.5,
+        "high": 9.375
+      },
+      "crew": {
+        "carpenter": 1,
+        "helper": 1
+      },
+      "evidence": "proxy_norm",
+      "source_ids": [
+        "NP-PRELAM-FRAMED-PANEL"
+      ],
+      "lead_calendar_days": 7,
+      "qualification": "DUDBC N27 has 0.8 skilled+0.8 helper per 6m² of prelaminated board on aluminium frame:7.5 m²/one skilled + one helper crew-day. Used only as a qualified framing proxy; PVC and WPC assemblies are not that exact specification."
+    },
+    {
+      "id": "partition",
+      "label": "Cement-board partition",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 8.0,
+        "base": 10,
+        "high": 12.5
+      },
+      "crew": {
+        "gypsum": 2,
+        "helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 7,
+      "qualification": "Assumed 10 m² per 2-board-fixer+1-helper crew-day, split35% framing /65% closing and jointing. The published modern board items do not establish an applicable labour coefficient. Curved details and access may reduce production; confirm assembly and quantity faces."
+    },
+    {
+      "id": "ceiling",
+      "label": "Gypsum / ceiling boards",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 8.0,
+        "base": 10,
+        "high": 12.5
+      },
+      "crew": {
+        "gypsum": 2,
+        "helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 7,
+      "qualification": "Assumed 10 m² per 2-board-fixer+1-helper crew-day, split35% framing /65% closing and jointing. The published modern board items do not establish an applicable labour coefficient. Curved details and access may reduce production; confirm assembly and quantity faces."
+    },
+    {
+      "id": "putty",
+      "label": "Putty preparation",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 8.0,
+        "base": 10,
+        "high": 12.5
+      },
+      "crew": {
+        "painter": 1,
+        "helper": 1
+      },
+      "evidence": "direct_norm",
+      "source_ids": [
+        "NP-PUTTY-2MM"
+      ],
+      "lead_calendar_days": 3,
+      "qualification": "DUDBC I17:1 skilled+1 helper per 10 m² of 2 mm putty. Base10 m² per one painter+one-helper crew-day. Substrate, thickness, preparation and exact quote scope require confirmation."
+    },
+    {
+      "id": "paint-base",
+      "label": "Primer & first emulsion coat",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 10.666666666666668,
+        "base": 13.333333333333334,
+        "high": 16.666666666666668
+      },
+      "crew": {
+        "painter": 1,
+        "helper": 1
+      },
+      "evidence": "direct_norm",
+      "source_ids": [
+        "NP-EMULSION-2COAT",
+        "DUDBC-J5-PRIMER"
+      ],
+      "lead_calendar_days": 3,
+      "qualification": "DUDBC J5a primer0.03 skilled+0.03 helper per m², plus half J19 two-coat coefficient0.045+0.025. Skilled input governs 13.333m²/crew-day. Splitting J19 equally between coats is an explicit planning allocation; separate rounding reserves whole workdays."
+    },
+    {
+      "id": "paint-final",
+      "label": "Final emulsion coat",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 17.77777777777778,
+        "base": 22.22222222222222,
+        "high": 27.77777777777778
+      },
+      "crew": {
+        "painter": 1,
+        "helper": 1
+      },
+      "evidence": "direct_norm",
+      "source_ids": [
+        "NP-EMULSION-2COAT"
+      ],
+      "lead_calendar_days": 3,
+      "qualification": "Half of DUDBC J19 two-coat0.09 skilled+0.05 helper/m²:0.045+0.025 per allocated coat. Skilled input governs 22.222m²/crew-day. This is a staged allocation, not a separately published single-coat norm."
+    },
+    {
+      "id": "paint",
+      "label": "Putty, primer & paint",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 8.0,
+        "base": 10,
+        "high": 12.5
+      },
+      "crew": {
+        "painter": 1,
+        "helper": 1
+      },
+      "evidence": "direct_norm",
+      "source_ids": [
+        "NP-PUTTY-2MM",
+        "NP-EMULSION-2COAT",
+        "DUDBC-J5-PRIMER"
+      ],
+      "lead_calendar_days": 3,
+      "qualification": "Full quoted area is used once for each required stage: putty, primer/first coat, then final coat. Putty-only locker work receives no invented painting stage."
+    },
+    {
+      "id": "wiring",
+      "label": "LED strip fittings",
+      "unit": "m",
+      "output_per_crew_day": {
+        "low": 16.0,
+        "base": 20,
+        "high": 25.0
+      },
+      "crew": {
+        "electrician": 1,
+        "assistant": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 7,
+      "qualification": "Assumed 20 running metres/crew-day for specified strip mounting, connections and checks. This is not the concealed point-wiring norm. Cable routes, driver loads and circuit lengths remain unmeasured."
+    },
+    {
+      "id": "lights",
+      "label": "Ceiling / wardrobe light fixtures",
+      "unit": "each",
+      "output_per_crew_day": {
+        "low": 16.0,
+        "base": 20,
+        "high": 25.0
+      },
+      "crew": {
+        "electrician": 1,
+        "assistant": 1
+      },
+      "evidence": "direct_norm",
+      "source_ids": [
+        "NP-LIGHT-FIXTURE"
+      ],
+      "lead_calendar_days": 7,
+      "qualification": "DWRI2081 item23.14A:0.5 skilled+0.5 semi-skilled person-days per 10 simple fixtures =20fixtures/one electrician + one competent assistant crew-day. Does not include a new wiring circuit or complex support design."
+    },
+    {
+      "id": "hanging-lights",
+      "label": "Hanging / chandelier fixtures",
+      "unit": "each",
+      "output_per_crew_day": {
+        "low": 8.0,
+        "base": 10,
+        "high": 12.5
+      },
+      "crew": {
+        "electrician": 1,
+        "assistant": 1,
+        "helper": 1
+      },
+      "evidence": "proxy_norm",
+      "source_ids": [
+        "NP-LIGHT-FIXTURE"
+      ],
+      "lead_calendar_days": 14,
+      "qualification": "DWRI23.14B complex-fixture proxy:1 skilled+1 semi-skilled per 10fixtures. One additional handling helper is an explicit assumption for hanging fittings; confirm weight, anchorage and work at height."
+    },
+    {
+      "id": "ceiling-points",
+      "label": "Quoted ceiling lighting points",
+      "unit": "point",
+      "output_per_crew_day": {
+        "low": 4.0,
+        "base": 5,
+        "high": 6.25
+      },
+      "crew": {
+        "electrician": 1,
+        "assistant": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 7,
+      "qualification": "The source quotes5 points, not a ceiling area. Reserve one crew-day for those 5 points; definition/overlap with the separately quoted gypsum ceiling must be confirmed. Not a full point-wiring takeoff."
+    },
+    {
+      "id": "ac",
+      "label": "Split AC equipment",
+      "unit": "each",
+      "output_per_crew_day": {
+        "low": 0.8,
+        "base": 1,
+        "high": 1.25
+      },
+      "crew": {
+        "hvac": 2,
+        "assistant": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Assumed one split unit per two technician + one assistant site day;6 quoted units retain source quantities. Concealed routes are a separate provisional first-fix slot. Pipe runs, refrigerant, electrical protection and commissioning method are not designed here."
+    },
+    {
+      "id": "plumbing",
+      "label": "Kitchen sink & tap",
+      "unit": "each",
+      "output_per_crew_day": {
+        "low": 0.8,
+        "base": 1,
+        "high": 1.25
+      },
+      "crew": {
+        "plumber": 1,
+        "assistant": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 7,
+      "qualification": "Assumed one measured sink/tap connection and leak check per crew-day after counter/support readiness. Existing pipe routes and quantities are not supplied; their first-fix slot is conditional."
+    },
+    {
+      "id": "sign",
+      "label": "Brand signage",
+      "unit": "each",
+      "output_per_crew_day": {
+        "low": 1.6,
+        "base": 2,
+        "high": 2.5
+      },
+      "crew": {
+        "installer": 2,
+        "assistant": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Planning assumption; obtain a measured supplier method, crew quote and delivery commitment. Low/high are sensitivity factors, not observed market percentiles."
+    },
+    {
+      "id": "sofa",
+      "label": "Sofa / couch delivery",
+      "unit": "each",
+      "output_per_crew_day": {
+        "low": 3.2,
+        "base": 4,
+        "high": 5.0
+      },
+      "crew": {
+        "installer": 2,
+        "helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 21,
+      "qualification": "Supplier fabrication / procurement lead is a 21-calendar-day assumption; quantity-based site activity covers delivery and placement only. Reception couch source unit is blank; quantity 2 is explicitly assumed to mean 2 pieces for this planning activity."
+    },
+    {
+      "id": "curtain",
+      "label": "Curtains",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 16.0,
+        "base": 20,
+        "high": 25.0
+      },
+      "crew": {
+        "installer": 2,
+        "assistant": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Assumed 20m² of quoted curtain area per two installer + one assistant day. Fabric area is a proxy for installation, not a measured rail length; supplier measures height, fullness, rails and anchorage before ordering."
+    },
+    {
+      "id": "mirror",
+      "label": "Mirrors",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 4.0,
+        "base": 5,
+        "high": 6.25
+      },
+      "crew": {
+        "glazier": 2,
+        "assistant": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Assumed 5 m² of framed mirror per 2glazier+1assistant day. The washroom each-item is separately assigned to the mirror-each profile; support, safety glazing, adhesive and cure instructions require approval."
+    },
+    {
+      "id": "mirror-each",
+      "label": "Single decorative mirror",
+      "unit": "each",
+      "output_per_crew_day": {
+        "low": 1.6,
+        "base": 2,
+        "high": 2.5
+      },
+      "crew": {
+        "glazier": 2,
+        "assistant": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Assumed two each-items per 2glazier+1assistant day, rounded to one occupied day for the quoted single mirror. No mirror area is inferred."
+    },
+    {
+      "id": "flooring",
+      "label": "Laminate flooring",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 16.0,
+        "base": 20,
+        "high": 25.0
+      },
+      "crew": {
+        "floor_layer": 2,
+        "helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Unmeasured allowance. If an owner-entered area is supplied, assume20m² per 2floor-layers+1helper day; otherwise use the explicit 3-day reserved slot. Product, subfloor, moisture, acclimation and furniture-loading readiness remain unconfirmed."
+    },
+    {
+      "id": "rattan",
+      "label": "Rattan finish",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 4.0,
+        "base": 5,
+        "high": 6.25
+      },
+      "crew": {
+        "installer": 2,
+        "helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Held or zero-quantity scope: retained for source coverage only, never scheduled or released by this version."
+    },
+    {
+      "id": "skirting",
+      "label": "Counter skirting",
+      "unit": "m",
+      "output_per_crew_day": {
+        "low": 4.0,
+        "base": 5,
+        "high": 6.25
+      },
+      "crew": {
+        "installer": 2,
+        "helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Held or zero-quantity scope: retained for source coverage only, never scheduled or released by this version."
+    },
+    {
+      "id": "glass-door",
+      "label": "Glazed / sliding doors",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 4.0,
+        "base": 5,
+        "high": 6.25
+      },
+      "crew": {
+        "installer": 2,
+        "helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Held or zero-quantity scope: retained for source coverage only, never scheduled or released by this version."
+    },
+    {
+      "id": "stone-table",
+      "label": "Granite table",
+      "unit": "each",
+      "output_per_crew_day": {
+        "low": 4.0,
+        "base": 5,
+        "high": 6.25
+      },
+      "crew": {
+        "installer": 2,
+        "helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Held or zero-quantity scope: retained for source coverage only, never scheduled or released by this version."
+    },
+    {
+      "id": "glass-furniture",
+      "label": "Glass table",
+      "unit": "each",
+      "output_per_crew_day": {
+        "low": 4.0,
+        "base": 5,
+        "high": 6.25
+      },
+      "crew": {
+        "installer": 2,
+        "helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Held or zero-quantity scope: retained for source coverage only, never scheduled or released by this version."
+    },
+    {
+      "id": "decor",
+      "label": "Decorative painting",
+      "unit": "m2",
+      "output_per_crew_day": {
+        "low": 4.0,
+        "base": 5,
+        "high": 6.25
+      },
+      "crew": {
+        "installer": 2,
+        "helper": 1
+      },
+      "evidence": "planning_assumption",
+      "source_ids": [],
+      "lead_calendar_days": 14,
+      "qualification": "Held or zero-quantity scope: retained for source coverage only, never scheduled or released by this version."
+    }
+  ],
+  "work_profile_overrides": {
+    "reception-014": "ceiling-points",
+    "washroom-001": "mirror-each"
+  },
+  "allowances": {
+    "electrical_first_fix_days": 2,
+    "flooring_reserve_workdays": 3
+  },
+  "policy": [
+    "Six held works stay unscheduled; original prices and quantities are unchanged.",
+    "Zero quoted quantity is not an instruction to install.",
+    "Low/high outputs are80% /125% sensitivity factors around the base; they are not empirical market ranges.",
+    "Whole workdays reserve a complete crew even for small jobs; calculated effort and reserved worker-days differ.",
+    "Capacity leveling is a deterministic feasible heuristic, not a proven optimal programme.",
+    "The flooring and electrical allowances remain unmeasured. Reserved slots keep a conditional sequence visible, not a complete quantity-derived opening commitment.",
+    "No demolition, excavation, RCC, waterproofing, new masonry or extra fixtures are invented from a renovation estimate that does not quantify them.",
+    "Daily professional supervision, landlord approvals and test acceptance remain required coordination outside task labour arithmetic."
+  ]
+}

@@ -6,7 +6,7 @@ import {createWorkContext,packageForTask,totalsFor} from './work-model.js';
 import {phaseNames,scheduleTasks,parseDuration} from './work-packages.js';
 import {renderRows,ganttMarkup,renderIndex,renderRelations,num,sourceLink,csv} from './work-view.js';
 import {createModelViewer} from './model-viewer.js';
-const $=id=>document.getElementById(id),modelURL='../basanti-residence/data/project.json?v=WORKBENCH_REVISION';
+const $=id=>document.getElementById(id),modelURL=new URL('../basanti-residence/data/project.json?v=WORKBENCH_REVISION',import.meta.url).href;
 let source,ctx,current,pack,selected=null,sceneItems=[],phase='foundation',scope='all',durationOverrides={},schedule,startDate='',isolated=false,viewBeforeIsolation=null;
 const viewer=createModelViewer({host:$('model-host'),svg:$('model-vector'),note:$('renderer-note'),empty:$('model-empty'),onPick:pick,onHover:hover});
 const save=(name,data,mime)=>{const u=URL.createObjectURL(new Blob([data],{type:mime})),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);};

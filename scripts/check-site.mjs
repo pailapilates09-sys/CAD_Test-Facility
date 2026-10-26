@@ -10,7 +10,7 @@ export async function checkSite(directory){
   const text=await readFile(file,'utf8');
   const navigation=[...text.matchAll(/<nav\b[^>]*aria-label="Workspace"[^>]*>([\s\S]*?)<\/nav>/g)];
   if(navigation.length!==1||navigation[0][1]!==workspaceNavigation(file,root))throw Error('Workspace navigation differs in '+relative(root,file));
-  if(/\/v(?:2|3|4|5|5\.1|6|7|8|9|10|11|12|13)\/[^/]+\.html$/.test(file)||file.endsWith('/pilates-astra-2026-10-15/index.html')){
+  if(file.includes('/pilates-astra-2026-10-15/')&&(/\/v(?:2|3|4|5|5\.1|6|7|8|9|10|11|12|13|14)\/[^/]+\.html$/.test(file)||file.endsWith('/pilates-astra-2026-10-15/index.html'))){
    const revision=text.match(/name="estimate-source-revision" content="([a-f0-9]{16})"/);
    if(!revision)throw Error('Missing shared source revision in '+file);revisions.add(revision[1]);
    if(file.includes('/v10/')&&!text.includes('v10.js?source='+revision[1]))throw Error('Contractor page script cache key differs from its source in '+file);

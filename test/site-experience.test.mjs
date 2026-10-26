@@ -128,9 +128,9 @@ test('page decoration gives all sibling sections accessible links from every dep
    assert.equal((html.match(/data-site-experience=/g)||[]).length,1);
    assert.equal((html.match(/id="mascot-control"/g)||[]).length,1);assert.match(html,/aria-label="Hide mascot" title="Hide mascot"/);
    const nav=html.match(/<nav aria-label="Workspace">([\s\S]*?)<\/nav>/)[1],links=[...nav.matchAll(/<a href="([^"]+)"([^>]*)>([^<]+)<\/a>/g)];
-   assert.deepEqual(links.map(link=>link[3]),['Construction','Pilates SketchUp','Layout Designer','Building Plans','Versions + milestone','Progress','Memory Posters']);
+   assert.deepEqual(links.map(link=>link[3]),['Construction','Pilates SketchUp','Layout Designer','14 · Basanti Poudel Baral','Paila Pilates Interior','Progress','Memory Posters']);
    assert.deepEqual(links.map(link=>resolve(dirname(resolve(base,p)),link[1])),['construction','construction/models/pilates-sketchup','construction/models/layout-designer','construction/models/basanti-residence','construction/estimates/pilates-astra-2026-10-15/milestone.html','progress','memory-posters'].map(path=>resolve(base,path)));
-   const active=p==='index.html'?null:p.startsWith('construction/models/pilates-sketchup/')?'Pilates SketchUp':p.startsWith('construction/models/layout-designer/')?'Layout Designer':p.startsWith('construction/models/basanti-residence/')?'Building Plans':p.startsWith('construction/estimates/')?'Versions + milestone':p.startsWith('progress/')?'Progress':p.startsWith('memory-posters/')?'Memory Posters':'Construction';
+   const active=p==='index.html'?null:p.startsWith('construction/models/pilates-sketchup/')?'Pilates SketchUp':p.startsWith('construction/models/layout-designer/')?'Layout Designer':p.startsWith('construction/models/basanti-residence/')?'14 · Basanti Poudel Baral':p.startsWith('construction/estimates/')?'Paila Pilates Interior':p.startsWith('progress/')?'Progress':p.startsWith('memory-posters/')?'Memory Posters':'Construction';
    assert.deepEqual(links.filter(link=>link[2].includes('aria-current="page"')).map(link=>link[3]),active?[active]:[]);
    for(const match of html.matchAll(/(?:src|href)="([^"]*theme\/[^"?]+)(?:\?[^"]*)?"/g))assert.ok(resolve(dirname(resolve(base,p)),match[1]).startsWith(resolve(base,'theme')+'/'));
   }
