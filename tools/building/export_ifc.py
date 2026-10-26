@@ -11,6 +11,7 @@ import ifcopenshell
 import ifcopenshell.geom
 import ifcopenshell.guid
 import ifcopenshell.validate
+import ifcopenshell.util.shape
 
 parser = argparse.ArgumentParser()
 parser.add_argument('payload')
@@ -154,7 +155,32 @@ for key, product in samples.items():
     vertices = tuple(shape.geometry.verts)
     assert vertices and all(math.isfinite(n) for n in vertices), str(key)
     checked.append({'class':product.is_a(), 'name':product.Name, 'guid':product.GlobalId, 'vertices':len(vertices)//3})
-report = {'schema':'IFC4','tool':'IfcOpenShell '+ifcopenshell.version,'source_sha256':payload['source_sha256'],'ifc_sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'schema_errors':0,'source_model_elements':payload['base_count'],'study_band_annotations':sum(c['kind'] in ['sill band','lintel band'] for c in payload['components']),'reinforcement_studies':len(payload['reinforcement_sets']),'rebar_paths':bar_count,'all_final_bar_lengths_unset':True,'representative_geometry_checks':checked,'fabrication_release':False,'note':'Source-linked review IFC. Geometry is schematic where the PDF is incomplete. Sampled shape checks do not constitute construction approval or a Revit import test.'}
+# Inspect all non-rebar source/study products, not only a class sample.
+# This is GROSS displayed geometry, never the net contractual takeoff.
+unit_names = {u.UnitType:u.Name for u in readback.by_type('IfcSIUnit')}
+assert unit_names.get('LENGTHUNIT') == 'METRE'
+assert unit_names.get('AREAUNIT') == 'SQUARE_METRE'
+assert unit_names.get('VOLUMEUNIT') == 'CUBIC_METRE'
+assert all(u.Prefix is None for u in readback.by_type('IfcSIUnit'))
+solid_checks = []
+for component in payload['components']:
+    if component['kind'] == 'rebar':
+        continue
+    expected = component.get('gross_geometry_check')
+    if not expected or expected['volume_m3'] is None:
+        solid_checks.append({'model_id':component['id'],'volume_m3':None,'reason':expected.get('reason') if expected else 'No gross geometry check'})
+        continue
+    product = readback.by_guid(entity_map[component['id']])
+    shape = ifcopenshell.geom.create_shape(settings, product)
+    measured = float(ifcopenshell.util.shape.get_volume(shape.geometry))
+    tolerance = max(1e-7, expected['volume_m3'] * 1e-5)
+    assert math.isfinite(measured) and abs(measured-expected['volume_m3']) <= tolerance, component['id']+' IFC volume differs'
+    verts = tuple(shape.geometry.verts)
+    actual_bounds = {'min':[min(verts[i::3]) for i in range(3)],'max':[max(verts[i::3]) for i in range(3)]}
+    assert all(abs(actual_bounds[face][i]-expected['bounds_m'][face][i]) < 1e-5 for face in ['min','max'] for i in range(3)), component['id']+' IFC bounds differ'
+    solid_checks.append({'model_id':component['id'],'gross_volume_m3':measured,'expected_mesh_volume_m3':expected['volume_m3'],'absolute_difference_m3':abs(measured-expected['volume_m3']),'bounds_match':True,'note':'Gross displayed geometry only; not net takeoff or procurement quantity.'})
+
+report = {'schema':'IFC4','tool':'IfcOpenShell '+ifcopenshell.version,'source_sha256':payload['source_sha256'],'ifc_sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'schema_errors':0,'source_model_elements':payload['base_count'],'study_band_annotations':sum(c['kind'] in ['sill band','lintel band'] for c in payload['components']),'reinforcement_studies':len(payload['reinforcement_sets']),'rebar_paths':bar_count,'all_final_bar_lengths_unset':True,'representative_geometry_checks':checked,'si_units_verified':True,'gross_geometry_checks':solid_checks,'gross_volume_checks_passed':sum('gross_volume_m3' in c for c in solid_checks),'gross_volume_checks_failed':0,'fabrication_release':False,'note':'Source-linked review IFC. Geometry is schematic where the PDF is incomplete. Sampled shape checks do not constitute construction approval or a Revit import test.'}
 (out/'ifc-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 (out/'ifc-element-map.json').write_text(json.dumps(entity_map,indent=2)+'\n')
 print(json.dumps({k:report[k] for k in ['schema','bytes','schema_errors','source_model_elements','study_band_annotations','rebar_paths','all_final_bar_lengths_unset']}))
