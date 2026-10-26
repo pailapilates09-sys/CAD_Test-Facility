@@ -4,3 +4,5 @@
 @media print{.plan-controls,.site-rail,.workspace-head{display:none!important}.plan-detail-grid{display:block}.programme-scroll{max-height:none}.construction-programme .block{break-inside:avoid}.construction-programme .linked-table{font-size:10px}}
 
 #selected-activity{scroll-margin-top:105px}@media(max-width:760px){#selected-activity{scroll-margin-top:220px}}
+
+.construction-programme .plan-actions button,.construction-programme .relations button{font:inherit;font-size:13px;font-weight:700;padding:10px 15px;min-height:44px;border:1px solid var(--line);border-radius:9px;background:var(--surface-2);color:var(--teal);line-height:1.5}.construction-programme .plan-actions button:hover,.construction-programme .relations button:hover{background:var(--surface);border-color:var(--teal)}.construction-programme button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
