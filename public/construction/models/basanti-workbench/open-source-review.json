@@ -1,0 +1,64 @@
+{
+  "title": "Basanti runtime QA and five-project open-source review",
+  "review_date": "2026-10-26",
+  "baseline_commit": "3ac12287867cd6449adea550b89ba8b8909b4261",
+  "source_pdf_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
+  "selection_basis": "Five established open-source projects relevant to BIM geometry, linked selection, camera state, SI quantities and construction scheduling. This is not a global ranking.",
+  "method": "Read pinned upstream source files and primary documentation, implement independent repairs, add regression tests, rebuild all pages, then verify preview and deployed interfaces.",
+  "projects": [
+    {
+      "repository": "IfcOpenShell/IfcOpenShell",
+      "commit": "fcf7294cbe9d9399678f12a5c922f5c7acab62cf",
+      "license_at_review": "LGPL-3.0",
+      "source_file": "src/ifcopenshell-python/ifcopenshell/util/shape.py",
+      "source_url": "https://github.com/IfcOpenShell/IfcOpenShell/blob/fcf7294cbe9d9399678f12a5c922f5c7acab62cf/src/ifcopenshell-python/ifcopenshell/util/shape.py",
+      "principle": "Check SI units and closed solid volumes after reopening IFC.",
+      "application": "Independent gross mesh volumes and bounds are compared against the reopened IFC for every closed non-rebar product. Curves and thickness-unassigned elements remain unmeasured."
+    },
+    {
+      "repository": "ThatOpen/engine_components",
+      "commit": "ad540db9c60362865362cbcdea2a1dfc623bc299",
+      "license_at_review": "MIT",
+      "source_file": "packages/front/src/fragments/Highlighter/index.ts",
+      "source_url": "https://github.com/ThatOpen/engine_components/blob/ad540db9c60362865362cbcdea2a1dfc623bc299/packages/front/src/fragments/Highlighter/index.ts",
+      "principle": "Keep element identity and highlighting consistent across views; selection should not require camera movement.",
+      "application": "Retained shared element IDs, prevented orbit drags from selecting, and added clear selection / Escape across the workbench plan, model and table."
+    },
+    {
+      "repository": "xeokit/xeokit-sdk",
+      "commit": "4e771bf20218f7cf794e046ff954e278aa1e2d2a",
+      "license_at_review": "AGPL-3.0",
+      "source_file": "src/viewer/scene/mementos/CameraMemento.js",
+      "source_url": "https://github.com/xeokit/xeokit-sdk/blob/4e771bf20218f7cf794e046ff954e278aa1e2d2a/src/viewer/scene/mementos/CameraMemento.js",
+      "principle": "Capture and restore camera state when temporarily changing the inspection context.",
+      "application": "Context visibility preserves the current camera; isolation saves and restores position, orientation, target, projection and zoom."
+    },
+    {
+      "repository": "FreeCAD/FreeCAD",
+      "commit": "19fe63614aaa5f3303349e70826256e3a610b8e6",
+      "license_at_review": "LGPL-2.1",
+      "source_file": "src/Base/Quantity.h",
+      "source_url": "https://github.com/FreeCAD/FreeCAD/blob/19fe63614aaa5f3303349e70826256e3a610b8e6/src/Base/Quantity.h",
+      "principle": "Treat a quantity as a numeric value with a dimension and a defined validity boundary.",
+      "application": "Reject nonfinite or incomplete scenarios, fractional coat counts, sloping beams and unmeasured solid heights. Do not treat unknowns as numeric zero. Conservatively withhold unsupported overlapping-slab unions."
+    },
+    {
+      "repository": "opf/openproject",
+      "commit": "71a8a3f0c35a04e1bcac5d9167b2c6ffd561af1b",
+      "license_at_review": "GPL-3.0",
+      "source_file": "app/models/relation.rb",
+      "source_url": "https://github.com/opf/openproject/blob/71a8a3f0c35a04e1bcac5d9167b2c6ffd561af1b/app/models/relation.rb",
+      "principle": "Validate dependency relations and distinguish planning logic from site approval.",
+      "application": "Reject duplicate IDs/relations and unknown overrides. Blank durations cannot become zero. Explicit zero-day milestones, full fixed work labels, zoom and predecessor/successor navigation improve the planning programme."
+    }
+  ],
+  "integration": "No upstream code was copied or newly vendored; no new runtime dependency was introduced. The existing pinned IfcOpenShell export dependency is retained. Upstream licenses are recorded for review, not relicensed by this report.",
+  "limitations": [
+    "Gross IFC geometry checks do not validate net contractual takeoff quantities or design adequacy.",
+    "The slab overlap guard conservatively checks overlapping bounding regions and withholds unsupported cases; it is not a polygon boolean solver.",
+    "Programme durations are whole calendar days with finish-to-start links; no resource levelling, holidays or actual progress is claimed.",
+    "Bar fabrication lengths, covers, laps, anchorage, unresolved source conflicts, structural and MEP approvals remain unconfirmed.",
+    "Cloud browser QA may use the shared-geometry SVG fallback where hardware WebGL is unavailable; native Revit import is not tested.",
+    "The full source export has 145 checked solids and 12 withheld gross volumes: eight unassigned-thickness footing outlines, two railing curves and two stair meshes failing strict closure. Provisional stair takeoff is not an independently verified closed IFC solid volume."
+  ]
+}
