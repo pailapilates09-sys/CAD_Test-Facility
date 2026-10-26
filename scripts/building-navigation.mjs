@@ -1,0 +1,78 @@
+import {escapeHTML as e} from '../public/construction/models/basanti-residence/building-model.js';
+
+export const workbenchSections=[
+ ['work-picker','Choose a work package'],['work-2d','01 · 2D work view'],
+ ['work-3d','02 · 3D work study'],['work-quantities','03 · Quantities'],
+ ['work-programme','04 · Gantt programme'],['work-inspection','Element inspection'],
+ ['work-assumptions','Quantity assumptions'],['work-breakdown','Full work breakdown'],
+ ['work-coverage','Scope still needed'],['work-downloads','Downloads']
+];
+export const buildingSections=[['building-explore','Choose floor and elements'],['building-2d','01 · 2D plans'],['building-3d','02 · 3D building'],['building-register','03 · Building register'],['building-confirmation','Source conflicts'],['building-downloads','Source and downloads']];
+export const hubSections=[['versions','Version directory'],['version-1','Version 1 · original'],['changes','What changed'],['version-2','Version 2 · current'],['building-plans','Building plans'],['source-and-downloads','Source and downloads'],['limits','Scope still needed'],['website-guide','Website terms and prompts']];
+
+export const contents=(items,title='On this page',id='page-contents')=>`<nav class="project-contents" id="${id}" aria-label="${e(title)}"><h2>${e(title)}</h2><ol>${items.map(([anchor,label])=>`<li><a href="#${anchor}">${e(label)}</a></li>`).join('')}</ol></nav>`;
+export const projectNavigation=(workbenchPrefix,hub)=>`<nav class="project-nav" aria-label="Basanti versions"><a href="${hub}">Project hub &amp; versions</a><a href="${workbenchPrefix}v1/">Version 1 · original workbench</a><a href="${workbenchPrefix}changes/">v1 → v2 · change report</a><a href="${workbenchPrefix}v2/">Version 2 · current workbench</a></nav>`;
+
+// Only the presentation shell changes for v1. Its archived model and algorithms stay frozen.
+export function workbenchNavigation(html,stylesheet){
+ const replacements=[
+  ['<section class="work-toolbar"','<section id="work-picker" class="work-toolbar"'],
+  ['<section class="work-panel" aria-labelledby="plan-heading"','<section id="work-2d" class="work-panel" aria-labelledby="plan-heading"'],
+  ['<section class="work-panel" aria-labelledby="model-heading"','<section id="work-3d" class="work-panel" aria-labelledby="model-heading"'],
+  ['<section class="work-panel" aria-labelledby="quantity-heading"','<section id="work-quantities" class="work-panel" aria-labelledby="quantity-heading"'],
+  ['<section class="work-panel" aria-labelledby="gantt-heading"','<section id="work-programme" class="work-panel" aria-labelledby="gantt-heading"'],
+  ['<section class="selected-part"','<section id="work-inspection" class="selected-part"'],
+  ['<details class="work-settings"','<details id="work-assumptions" class="work-settings" open'],
+  ['<details class="work-index"','<details id="work-breakdown" class="work-index" open'],
+  ['<section class="work-panel source-coverage"','<section id="work-coverage" class="work-panel source-coverage"'],
+  ['<section class="work-downloads"','<section id="work-downloads" aria-label="Downloads" class="work-downloads"']
+ ];
+ for(const [from,to]of replacements){if(!html.includes(from))throw Error('Missing workbench section '+from);html=html.replace(from,to);}
+ html=html.replace('<body>','<body class="basanti-page">').replace('</head>',`<link rel="stylesheet" href="${stylesheet}"></head>`);
+ const nav=html.match(/<nav class="project-tabs"[\s\S]*?<\/nav>/)?.[0];
+ if(!nav)throw Error('Missing Basanti workbench project navigation');
+ return html.replace(nav,nav+contents(workbenchSections)+'<p class="phone-reading-note">On a phone, controls and measurement rows stack. Scroll a drawing or Gantt inside its panel to inspect it; use the table for exact dimensions.</p>');
+}
+
+export const workbenchChanges=[
+ ['Input validation','Blank durations could become zero; incomplete or nonfinite inputs could reach calculations.','Whole-day durations, complete SI scenarios and valid dimensions are checked before recalculation.'],
+ ['Linked inspection','An orbit drag could also select; context and isolation lost the prior camera.','Dragging orbits without selecting; clear/Escape and camera restoration keep inspection predictable.'],
+ ['Programme','Shortened labels and scaled text made some work hard to read.','All 112 full work names, fixed labels, zoom, milestones and predecessor/successor navigation.'],
+ ['IFC exchange','Schema checks and representative shapes.','Independent SI-unit, metre-bounds and gross-volume checks; 145 solids pass, 12 volumes remain withheld.'],
+ ['Preserved evidence','133 base elements, 21 source sheets, 707 quantity rows and default 241-calendar-day planning scenario.','The same source facts and default quantities; no final fabrication or structural approval inferred.']
+];
+export const changeTable=()=>`<div class="table-scroll"><table class="project-table"><thead><tr><th scope="col">Area</th><th scope="col">Version 1</th><th scope="col">Version 2</th></tr></thead><tbody>${workbenchChanges.map(r=>`<tr><th scope="row">${e(r[0])}</th><td data-label="Version 1">${e(r[1])}</td><td data-label="Version 2">${e(r[2])}</td></tr>`).join('')}</tbody></table></div>`;
+
+const back=()=>'<a class="contents-return" href="#page-contents">Back to contents ↑</a>';
+const terms=[
+ ['Project hub / version directory','The landing page that explains each version and sends the reader to the right view.'],
+ ['Table of contents (TOC)','A list of sections. Each entry here is an ordinary link to a named section on this page.'],
+ ['Anchor link / fragment identifier','A link such as #version-2 jumps to the element with id="version-2". You can bookmark or share that section.'],
+ ['Panel / section','A visible part of the page, such as the 2D view or quantity table. Several panels can stay on one page.'],
+ ['Tabs / accordion','Tabs switch visible views; an accordion opens or closes extra information. They are different from TOC links that scroll.'],
+ ['Responsive design / breakpoint','One page adapts to its screen width. A breakpoint changes the layout, for example from two panels to one column.'],
+ ['Single source of truth / derived view','Edit one shared data source; generate its 2D, 3D, tables and downloads from it instead of maintaining separate copies.'],
+ ['Snapshot / maintained version','V1 freezes historical model and calculation code. V2 is maintained. Both can share navigation and phone styling.'],
+ ['Repository / branch','The repository stores source and history. A branch holds proposed edits separately before they are merged.'],
+ ['Commit / tag / release','A commit records an exact change. A tag names a specific commit; a release adds readable notes and downloadable assets.'],
+ ['GitHub Actions / workflow','The automated steps that run checks, build this website and deploy the resulting files.'],
+ ['GitHub Pages / deployment','Pages hosts the built website. Deployment publishes a tested build; a source edit becomes public after a successful deployment.'],
+ ['Build-time derivation / browser loading','Actions generates pages and exports from source data. Interactive views load the published JSON from this site; this is not live Drive synchronization.'],
+ ['QA / regression check','Verify links, calculations, keyboard use, layout and interactions, then check that existing behavior still works. Phone-width browser QA does not replace a real-device check.']
+];
+
+export function renderProjectHub(manifest,project,checks){
+ if(manifest.versions.length!==2||!manifest.versions.find(v=>v.id==='v1')||!manifest.versions.find(v=>v.id==='v2'))throw Error('Basanti hub expects the two recorded versions');
+ const prefix='../basanti-workbench/';
+ return `<div class="page-title"><div><p class="eyebrow">BUILDING PROJECT / VERSION DIRECTORY</p><h1>${e(manifest.project_name)}</h1><p>Choose a version, inspect what changed, or open the building drawings. This page is the project hub; the original model page and both workbenches remain available.</p></div><a class="project-action" href="${prefix}v2/">Open current workbench · v2 →</a></div>
+ ${contents(hubSections,'Project contents')}
+ <section class="project-overview" aria-label="Source and workbench coverage"><article><strong>${project.components.length}</strong><span>source model elements</span></article><article><strong>21</strong><span>original drawing sheets</span></article><article><strong>${checks.work_packages}</strong><span>construction work packages</span></article><article><strong>${checks.quantity_rows}</strong><span>quantity rows</span></article></section>
+ <section class="block notes" id="versions"><h2>Version directory</h2><p>Each version has one role. The report explains the transition; it is not another model version.</p><div class="table-scroll"><table class="project-table"><thead><tr><th scope="col">Open view</th><th scope="col">Use it for</th><th scope="col">Data behavior</th></tr></thead><tbody>${manifest.versions.map(v=>`<tr><th scope="row"><a href="#version-${v.id.slice(1)}">${e(v.title)}</a></th><td data-label="Use it for">${e(v.purpose)}</td><td data-label="Data behavior">${e(v.status)}</td></tr>`+(v.id==='v1'?`<tr><th scope="row"><a href="#changes">v1 → v2 · change report</a></th><td data-label="Use it for">Compare calculations, interaction, readability and IFC checks.</td><td data-label="Data behavior">One shared comparison record drives this summary and the full report.</td></tr>`:'')).join('')}</tbody></table></div>${back()}</section>
+ <section class="block notes version-panel" id="version-1"><p class="eyebrow">VERSION 1 / HISTORICAL</p><h2>Original construction workbench</h2><p>${e(manifest.versions.find(v=>v.id==='v1').purpose)}</p><p>The archived model and calculation code are frozen before the five-project QA. Navigation and mobile presentation use a shared reading layer; the archive itself is unchanged. Historical interaction and calculation limits remain visible.</p><div class="project-actions"><a class="project-action" href="${prefix}v1/">Open version 1 →</a><a href="${prefix}v1/#work-programme">Jump to its Gantt</a><a href="${prefix}v1/#work-quantities">Jump to its quantities</a></div>${back()}</section>
+ <section class="block notes" id="changes"><p class="eyebrow">BETWEEN THE VERSIONS</p><h2>What changed from v1 to v2</h2>${changeTable()}<p>The five-project review considered IfcOpenShell, That Open Engine, xeokit, FreeCAD and OpenProject. No upstream code was copied. The latest presentation pass adds this hub, in-page contents, readable phone controls and full-width measurement fields to the existing pages.</p><a class="project-action" href="${prefix}changes/">Read the full change report →</a>${back()}</section>
+ <section class="block notes version-panel" id="version-2"><p class="eyebrow">VERSION 2 / CURRENT</p><h2>Improved construction workbench</h2><p>${e(manifest.versions.find(v=>v.id==='v2').purpose)}</p><p>Choose one of ${checks.work_packages} work packages and inspect the linked plan, 3D study, calculation table and programme. Its default ${checks.programme_duration_calendar_days}-calendar-day programme uses planning allowances, without a crew calendar or resource-capacity model. It is not the Paila Pilates resource programme.</p><div class="project-actions"><a class="project-action" href="${prefix}v2/">Open version 2 →</a><a href="${prefix}v2/#work-2d">01 · 2D</a><a href="${prefix}v2/#work-3d">02 · 3D</a><a href="${prefix}v2/#work-quantities">03 · Quantities</a><a href="${prefix}v2/#work-programme">04 · Gantt</a></div><p>The existing <a href="${prefix}">workbench address</a> and v2 are generated from one maintained source.</p>${back()}</section>
+ <section class="block notes" id="building-plans"><h2>Building plans and element register</h2><p>Use the source-linked building workspace for floors, foundations, source dimensions, openings, reinforcement studies and grouped schedules.</p><div class="project-actions"><a class="project-action" href="./">Open building plans →</a><a href="./#building-register">Opening, structural and rebar tables</a><a href="./#building-3d">3D building</a></div>${back()}</section>
+ <section class="block notes" id="source-and-downloads"><h2>One shared model, preserved sources</h2><p>The current building model feeds the plans, Three.js view, registers, construction work packages and exports. V1 keeps its frozen historical model separately. Original PDF bytes, all 21 sheets and raw extraction records remain preserved.</p><div class="project-actions"><a href="./source/original.pdf">Original PDF · 21 sheets</a><a href="./data/project.json" download>Current shared model · JSON</a><a href="${prefix}data/work-packages.json" download>Current work packages · JSON</a><a href="${prefix}data/quantities.csv" download>Current quantities · CSV</a><a href="${prefix}data/programme.csv" download>Current programme · CSV</a><a href="./data/basanti-review.ifc" download>Review model · IFC4</a><a href="./#building-downloads">All source and export downloads →</a></div>${back()}</section>
+ <section class="block notes" id="limits"><h2>Scope still needed before site execution</h2><p>Final bar cuts, covers, laps, anchorage and coordinated services remain unresolved. Compound/gate and septic positions still need site measurements. Both stair meshes need closure coordination. Planning quantities and elapsed-day allowances are studies; the source drawings, coordinated design and site inspections control execution.</p><p><a href="${prefix}v2/#work-coverage">Open the current coordination notes →</a> · <a href="./#building-confirmation">Inspect source disagreements →</a></p>${back()}</section>
+ <section class="block notes" id="website-guide"><h2>What is this method called?</h2><p>This is a <strong>project hub with a version directory and an anchor-linked table of contents</strong>. The contents links scroll to named panels on the same page. Links such as “Open version 2” then open that version’s separate workspace.</p><div class="table-scroll"><table class="project-table"><thead><tr><th scope="col">Term to use</th><th scope="col">Plain meaning here</th></tr></thead><tbody>${terms.map(([term,meaning])=>`<tr><th scope="row">${e(term)}</th><td data-label="Plain meaning">${e(meaning)}</td></tr>`).join('')}</tbody></table></div><h3>A prompt you can reuse</h3><blockquote class="prompt-example">Create a project hub with a version directory and an anchor-linked table of contents. Give every panel a stable section ID and a back-to-contents link. Derive current views from one shared data source, preserve historical snapshots, and use responsive layouts with wrapped text, full-width phone controls and readable table rows. Preserve the desktop theme. Test links, calculations and desktop/phone interactions, deploy with GitHub Actions to GitHub Pages, and verify the live URL.</blockquote><p class="guide-sources">Read more: <a href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Fragment">MDN · anchor fragments</a> · <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design">MDN · responsive design</a> · <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages">GitHub · Actions and Pages</a></p>${back()}</section>`;
+}

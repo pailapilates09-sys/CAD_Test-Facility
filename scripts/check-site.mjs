@@ -1,6 +1,7 @@
 import {readdir,readFile,stat} from 'node:fs/promises';
 import {resolve,relative,dirname} from 'node:path';
 import {workspaceSections,workspaceNavigation} from './site-experience.mjs';
+import {fileURLToPath,pathToFileURL} from 'node:url';
 
 export async function checkSite(directory){
  const root=resolve(directory),files=[],revisions=new Set();
@@ -55,6 +56,11 @@ export async function checkSite(directory){
    links++;
   }
  }
+ // In-page and cross-page Basanti contents must land on a real, unique panel.
+ const basantiPages=pages.filter(file=>/\/construction\/models\/basanti-(?:residence|workbench)\//.test(file)),anchorCache=new Map();let sectionLinks=0;
+ const pageAnchors=async file=>{if(!anchorCache.has(file)){const html=await readFile(file,'utf8'),ids=[...html.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);if(new Set(ids).size!==ids.length)throw Error('Duplicate Basanti section ID in '+relative(root,file));anchorCache.set(file,new Set(ids));}return anchorCache.get(file);};
+ for(const file of basantiPages){await pageAnchors(file);const html=await readFile(file,'utf8');for(const [,value]of html.matchAll(/\shref="([^"]*#[^"]+)"/g)){if(/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(value))continue;const url=new URL(value.replaceAll('&amp;','&'),pathToFileURL(file));if(!url.hash||/^#page=/.test(url.hash))continue;url.search='';const fragment=decodeURIComponent(url.hash.slice(1));url.hash='';let target=fileURLToPath(url);if(!target.endsWith('.html'))target=resolve(target,'index.html');if(!(await pageAnchors(target)).has(fragment))throw Error('Missing Basanti section: '+relative(root,file)+' -> '+value);sectionLinks++;}}
+ console.log('Basanti navigation: '+sectionLinks+' section links resolve to unique panel IDs.');
  for(const file of files.filter(x=>x.endsWith('.js'))){
   const text=await readFile(file,'utf8');for(const m of text.matchAll(/(?:from\s*|import\s*\()(['"])(\.{1,2}\/[^'"]+)\1/g)){
    const path=resolve(dirname(file),m[2].split(/[?#]/)[0]);try{if(!(await stat(path)).isFile())throw Error('not a file');}catch{throw Error('Missing module import: '+relative(root,file)+' -> '+m[2]);}imports++;

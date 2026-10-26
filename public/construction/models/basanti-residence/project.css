@@ -1,0 +1,83 @@
+/* Basanti-only navigation and reading layer. The shared studio theme is retained. */
+html:has(body.basanti-page){scroll-padding-top:108px}
+.basanti-page main :is(section,details,nav,div[id]){scroll-margin-top:12px}
+.basanti-page main :is(h1,h2,h3,p,a,button,summary,code,dd,dt,small,strong,span){overflow-wrap:anywhere}
+.basanti-page main :is(section,article,nav,div,form,details){min-width:0}
+.basanti-page .project-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.basanti-page .project-nav a,.project-action,.project-actions>a,.contents-return{display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--teal);font-size:14px;font-weight:700;line-height:1.6;white-space:normal;text-decoration:none}
+.basanti-page .project-nav a:hover,.project-action:hover,.project-actions>a:hover,.contents-return:hover{border-color:var(--teal);background:var(--teal-soft)}
+.project-contents{padding:20px 24px;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:18px 0 24px}
+.project-contents h2{font-size:18px;line-height:1.6;margin:0 0 10px;color:var(--teal)}
+.project-contents ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px 30px;margin:0;padding-left:24px}
+.project-contents li{padding-left:2px;line-height:1.6;color:var(--muted)}
+.project-contents a{display:flex;align-items:center;min-height:44px;padding:8px 4px;font-size:14px;color:var(--teal);font-weight:650;text-decoration:none}
+.project-contents a:hover{text-decoration:underline}
+.project-hub .page-title{align-items:start;flex-wrap:wrap}
+.project-hub .page-title h1{font-size:clamp(30px,4vw,47px);line-height:1.2}
+.project-hub .page-title p{max-width:850px;font-size:15px;line-height:1.8}
+.project-hub .notes,.basanti-report .notes{padding:24px}
+.project-hub .notes h2,.basanti-report .notes h2{font-size:25px;line-height:1.4;margin:0 0 14px}
+.project-hub .notes h3{font-size:20px;margin:24px 0 12px}
+.project-hub .notes p,.basanti-report .notes p{font-size:15px;line-height:1.85;margin:12px 0}
+.project-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:24px 0}
+.project-overview article{display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.project-overview strong{font-size:27px;line-height:1.4;color:var(--teal)}
+.project-overview span{font-size:13px;color:var(--muted);line-height:1.7}
+.project-actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.project-action{background:var(--teal-soft);border-color:var(--teal)}
+.contents-return{margin-top:18px;font-size:12px;padding:8px 12px}
+.project-table{width:100%;border-collapse:collapse;font-size:14px}
+.project-table th,.project-table td{padding:15px 16px;line-height:1.8;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere;white-space:normal}
+.project-table thead{background:var(--surface-2)}
+.project-table th[scope=row]{width:27%;color:var(--teal);font-weight:750}
+.prompt-example{padding:18px 20px;margin:16px 0;border-left:4px solid var(--teal);border-radius:0 10px 10px 0;background:var(--teal-soft);font-size:15px;line-height:1.9}
+.phone-reading-note{font-size:13px;line-height:1.8;color:var(--muted);margin:0 0 20px}
+.basanti-page .panel-title>*{min-width:0}
+.basanti-page button{white-space:normal;line-height:1.6}
+.basanti-page .view-note{overflow-wrap:anywhere}
+@media(max-width:760px){
+ html:has(body.basanti-page){scroll-padding-top:242px}
+ .basanti-page .project-nav{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+ .basanti-page .project-nav a{font-size:14px}
+ .project-contents{padding:16px;margin:16px 0 22px}
+ .project-contents ol{grid-template-columns:minmax(0,1fr);gap:3px;padding-left:22px}
+ .project-contents a{font-size:15px;padding:9px 2px}
+ .project-hub .notes,.basanti-report .notes{padding:18px 16px}
+ .project-hub .notes h2,.basanti-report .notes h2{font-size:23px}
+ .project-overview{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .project-overview article{padding:14px}
+ .project-actions{display:grid;grid-template-columns:minmax(0,1fr)}
+ .basanti-page .work-toolbar,.basanti-page .programme-controls,.basanti-page .building-toolbar{grid-template-columns:minmax(0,1fr)}
+ .basanti-page .work-toolbar .task-choice,.basanti-page .building-toolbar .search-label,.basanti-page .building-toolbar p{grid-column:auto}
+ .basanti-page .work-toolbar label,.basanti-page .programme-controls label,.basanti-page .building-toolbar label{font-size:14px}
+ .basanti-page .panel-title{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:16px}
+ .basanti-page .panel-title select,.basanti-page .panel-title button{width:100%;max-width:none;min-height:44px;font-size:16px}
+ .basanti-page .panel-title h2{font-size:20px;line-height:1.5}
+ .basanti-page .work-summary strong{font-size:18px;line-height:1.65}
+ .basanti-page .work-summary small,.basanti-page .work-summary span{font-size:13px}
+ .basanti-page .view-controls label{flex-basis:100%;font-size:14px}
+ .basanti-page .view-controls button{flex:1 1 145px;font-size:14px}
+ .basanti-page .source-controls{display:grid;grid-template-columns:minmax(0,1fr)}
+ .basanti-page .step-buttons{flex-wrap:wrap}
+ .basanti-page .step-buttons button{flex:1 1 120px;font-size:14px}
+ .basanti-page .selected-record a,.basanti-page .source-link{white-space:normal}
+ .basanti-page .work-relations button{max-width:100%;text-align:left}
+ .basanti-page .work-settings form>button{width:100%;margin-right:0}
+ .basanti-page .project-table,.basanti-page .project-table tbody,.basanti-page .project-table tr,.basanti-page .project-table td,.basanti-page .project-table th{display:block;width:auto}
+ .basanti-page .project-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+ .basanti-page .project-table tr{padding:12px 0;border-bottom:2px solid var(--line)}
+ .basanti-page .project-table td,.basanti-page .project-table th{padding:9px 0;border:0}
+ .basanti-page .project-table td[data-label]::before{content:attr(data-label);display:block;font-size:12px;font-weight:750;color:var(--teal)}
+ .basanti-page table.mobile-card-table tbody tr,.basanti-page table.mobile-card-table tfoot tr{grid-template-columns:minmax(0,1fr);gap:14px;padding:16px 12px}
+ .basanti-page .mobile-card-table tr>td,.basanti-page .mobile-card-table tr>th{font-size:15px}
+ .basanti-page .mobile-card-table small{font-size:13px}
+ .basanti-page .check-table th,.basanti-page .check-table td{font-size:14px;padding:10px 8px;overflow-wrap:anywhere}
+ .basanti-page .building-downloads{grid-template-columns:minmax(0,1fr);padding:18px 16px;gap:18px}
+ .basanti-page .download-links{grid-template-columns:minmax(0,1fr)}
+ .basanti-page .work-focus p,.basanti-page .panel-note,.basanti-page .selected-part p,.basanti-page .detail-notes,.basanti-page .selected-record p{font-size:14px;line-height:1.85}
+ .basanti-page .register-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:14px}
+ .basanti-page .register-tabs button{font-size:13px;padding:9px 7px}
+ .basanti-report code{word-break:break-all}
+}
+@media(max-width:360px){.basanti-page .work-summary{grid-template-columns:minmax(0,1fr)}.basanti-page .register-tabs{grid-template-columns:minmax(0,1fr)}}
+@media print{.project-contents,.contents-return,.project-nav{display:none}.project-hub .notes{break-inside:avoid}.basanti-page .project-actions>a{border:0}}
