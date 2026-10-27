@@ -2,6 +2,7 @@ import {readFile,writeFile,appendFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {buildExtractionView} from './render-extraction-explorer.mjs';
+import {buildMonitoring} from './extraction-monitoring.mjs';
 
 const root=new URL('../',import.meta.url),recoveryRoot=new URL('progress/recovery/',root);
 const pointer=JSON.parse(await readFile(new URL('current.json',recoveryRoot),'utf8'));
@@ -9,7 +10,12 @@ const rawStatus=await readFile(new URL(pointer.path,recoveryRoot),'utf8');
 const status=JSON.parse(rawStatus),expected=buildExtractionView(status);
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const live=process.argv.indexOf('--live');
-const fileNames=['progress/extraction-view.json','progress/recovery/status.json','progress/extraction-explorer.css','progress/extraction-explorer.js'];
+const fileNames=['progress/extraction-view.json','progress/recovery/status.json','progress/extraction-explorer.css','progress/extraction-explorer.js','progress/monitoring.json','progress/monitoring.css','progress/monitoring.js','progress/monitoring-charts.js','progress/visualization-references.json'];
+const monitoring=buildMonitoring(status);
+const references=JSON.parse(await readFile(new URL('public/progress/visualization-references.json',root),'utf8'));
+assert.equal(references.projects.length,10,'Exactly ten reviewed projects required');
+assert.equal(new Set(references.projects.map(p=>p.repo)).size,10,'Duplicate reference project');
+assert.ok(references.projects.every(p=>['Apache-2.0','MIT'].includes(p.license)),'Reference license must be explicit');
 
 function checkHTML(html){
  assert.ok(html.includes('data-extraction-view="extraction-visual-view.v1"'),'Visual view marker missing');
@@ -22,6 +28,9 @@ function checkHTML(html){
  assert.ok(html.includes('proposed products, not completed findings.'),'Readiness boundary missing');
  assert.ok(html.includes('Stages show readiness, not equal percentages.'),'Stage denominator note missing');
  assert.ok(!html.includes('EXTRACTION_REVISION'),'Unresolved asset version');
+ for(const marker of ['evidence-dashboard','readiness-map','evidence-lineage','open-source-patterns','data-em-growth','data-em-metric'])assert.ok(html.includes(marker),'Monitoring marker missing: '+marker);
+ for(const p of references.projects)assert.ok(html.includes(p.repo),'Reference missing: '+p.name);
+ assert.ok(html.includes('CP'+monitoring.history.at(-1).cp),'Monitoring checkpoint missing');
  const section=html.split('data-extraction-view=')[1]?.split('</section></details>')[0]??'';
  assert.ok(!/download_url|[?&]sig=|@gmail\.com|drive\.google\.com\/file/.test(section),'Private source material exposed');
 }
@@ -32,6 +41,8 @@ const expectedFiles={
  'progress/extraction-explorer.css':await readFile(new URL('public/progress/extraction-explorer.css',root)),
  'progress/extraction-explorer.js':await readFile(new URL('public/progress/extraction-explorer.js',root))
 };
+expectedFiles['progress/monitoring.json']=Buffer.from(JSON.stringify(monitoring,null,2)+'\n');
+for(const name of ['monitoring.css','monitoring.js','monitoring-charts.js','visualization-references.json'])expectedFiles['progress/'+name]=await readFile(new URL('public/progress/'+name,root));
 let proof;
 if(live!==-1){
  const base=process.argv[live+1];if(!base)throw Error('--live requires the deployed Pages URL');
@@ -59,5 +70,5 @@ if(live!==-1){
 console.log(JSON.stringify({sourceCheckpoints:expected.sourceCheckpoints,...proof},null,2));
 if(process.env.GITHUB_STEP_SUMMARY){
  const rows=expected.lanes.map(lane=>`| ${lane.id} | ${lane.checkpoint} | ${lane.sync.local}/${lane.sync.main} | ${lane.short} |`).join('\n');
- await appendFile(process.env.GITHUB_STEP_SUMMARY,`## Extraction dashboard · ${proof.mode} verification passed\n\n| Lane | Saved checkpoint | Local/Main | Stage |\n| --- | --- | --- | --- |\n${rows}\n\n${expected.inventory.fileOccurrences.toLocaleString('en-IN')} catalogued file occurrences across ${expected.inventory.collections} collections; AEC is counted separately. This is not a content-completion percentage.\n\nAll four public data/style/script files matched; lane and format markers verified.\n`);
+ await appendFile(process.env.GITHUB_STEP_SUMMARY,`## Extraction dashboard · ${proof.mode} verification passed\n\n| Lane | Saved checkpoint | Local/Main | Stage |\n| --- | --- | --- | --- |\n${rows}\n\n${expected.inventory.fileOccurrences.toLocaleString('en-IN')} catalogued file occurrences across ${expected.inventory.collections} collections; AEC is counted separately. This is not a content-completion percentage.\n\n${monitoring.history.length} recorded MSCH checkpoints; queue ${monitoring.queue.scanned} scanned / ${monitoring.queue.pending} pending; ten open-source visualization references. All ${fileNames.length} public data/style/script files matched, including chart history and the reference register.\n\n[Open the visual dashboard](https://pailapilates09-sys.github.io/CAD_Test-Facility/progress/#evidence-dashboard)\n`);
 }

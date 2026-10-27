@@ -1,0 +1,107 @@
+{
+  "reviewedAt": "2026-10-27",
+  "scope": "Related open-source metadata, pipeline, visualization and extraction projects; interface patterns, not installed engines.",
+  "implementation": "Original code; no upstream source or artwork copied.",
+  "projects": [
+    {
+      "name": "DataHub",
+      "repo": "https://github.com/datahub-project/datahub",
+      "license": "Apache-2.0",
+      "pattern": "Searchable metadata catalogues and upstream/downstream lineage.",
+      "applied": "Artifact lineage with selectable evidence nodes.",
+      "anchor": "#evidence-lineage",
+      "limit": "This is artifact lineage, not document-semantic lineage.",
+      "evidence": "https://docs.datahub.com/docs/features/feature-guides/lineage"
+    },
+    {
+      "name": "OpenMetadata",
+      "repo": "https://github.com/open-metadata/OpenMetadata",
+      "license": "Apache-2.0",
+      "pattern": "Asset context brings ownership, lineage and quality signals together.",
+      "applied": "Readiness states and gate details beside each project.",
+      "anchor": "#readiness-map",
+      "limit": "Quality states are qualitative, not an invented quality score.",
+      "evidence": "https://github.com/open-metadata/OpenMetadata"
+    },
+    {
+      "name": "Marquez",
+      "repo": "https://github.com/MarquezProject/marquez",
+      "license": "Apache-2.0",
+      "pattern": "Dataset/job lineage graphs connect current and historical run metadata.",
+      "applied": "Clickable checkpoints with counts and acknowledgement states.",
+      "anchor": "#evidence-dashboard",
+      "limit": "A static checkpoint projection; no Marquez server is installed.",
+      "evidence": "https://github.com/MarquezProject/marquez#web-ui"
+    },
+    {
+      "name": "Apache NiFi",
+      "repo": "https://github.com/apache/nifi",
+      "license": "Apache-2.0",
+      "pattern": "A flow canvas displays processors, connections, queues and provenance.",
+      "applied": "Scanned-versus-pending queue bar and evidence flow.",
+      "anchor": "#evidence-lineage",
+      "limit": "The known queue can grow; it is not a full-corpus completion bar.",
+      "evidence": "https://nifi.apache.org/nifi-docs/user-guide.html"
+    },
+    {
+      "name": "Dagster",
+      "repo": "https://github.com/dagster-io/dagster",
+      "license": "Apache-2.0",
+      "pattern": "Asset dependency graphs and integrated materialization observability.",
+      "applied": "Distinct source, inventory, checkpoint and register nodes.",
+      "anchor": "#evidence-lineage",
+      "limit": "Nodes describe saved artifacts, not executed hydrology models.",
+      "evidence": "https://github.com/dagster-io/dagster"
+    },
+    {
+      "name": "Prefect",
+      "repo": "https://github.com/PrefectHQ/prefect",
+      "license": "Apache-2.0",
+      "pattern": "Workflow activity and run states appear in its server dashboard.",
+      "applied": "Explicit ACK states and checkpoint details.",
+      "anchor": "#evidence-dashboard",
+      "limit": "ACK describes register synchronization, not knowledge readiness.",
+      "evidence": "https://github.com/PrefectHQ/prefect"
+    },
+    {
+      "name": "Apache Airflow",
+      "repo": "https://github.com/apache/airflow",
+      "license": "Apache-2.0",
+      "pattern": "Grid status heatmaps, dependency graphs and a run-history view.",
+      "applied": "A compact recent-checkpoint grid with click-to-inspect detail.",
+      "anchor": "#evidence-dashboard",
+      "limit": "Only saved checkpoints are shown; these are not scheduled Airflow runs.",
+      "evidence": "https://airflow.apache.org/docs/apache-airflow/stable/ui.html"
+    },
+    {
+      "name": "Apache Superset",
+      "repo": "https://github.com/apache/superset",
+      "license": "Apache-2.0",
+      "pattern": "Interactive charts, dashboards, filters and drill-to-detail.",
+      "applied": "A measure selector updates the growth chart and its count table together.",
+      "anchor": "#evidence-dashboard",
+      "limit": "The selector is scoped to MSCH history; other measures keep their stated scopes.",
+      "evidence": "https://superset.apache.org/docs/using-superset/exploring-data/"
+    },
+    {
+      "name": "Docling",
+      "repo": "https://github.com/docling-project/docling",
+      "license": "MIT",
+      "pattern": "Structured document representations preserve text, tables, pictures and layout.",
+      "applied": "Format roles and an explicit distinction between inventory and parsed content.",
+      "anchor": "#xe-formats-title",
+      "limit": "Page overlays and extracted-content previews are a later step; no parsed-page claim here.",
+      "evidence": "https://github.com/docling-project/docling"
+    },
+    {
+      "name": "Docling Graph",
+      "repo": "https://github.com/docling-project/docling-graph",
+      "license": "MIT",
+      "pattern": "Interactive graphs use typed nodes, labelled relationships and provenance; exports include reports and statistics.",
+      "applied": "Selectable, explained artifact nodes plus downloadable chart data.",
+      "anchor": "#evidence-lineage",
+      "limit": "Semantic document graphs need validated content extraction first.",
+      "evidence": "https://docling-project.github.io/docling-graph/fundamentals/graph-management/visualization/"
+    }
+  ]
+}
