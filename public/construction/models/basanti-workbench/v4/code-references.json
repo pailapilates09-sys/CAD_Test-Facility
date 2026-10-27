@@ -1,0 +1,452 @@
+{
+  "checked_at": "2026-10-27",
+  "purpose": "Basanti v4: conditional detailing checks and geometry/quantity calculations; no structural design or approved BBS",
+  "page_convention": "1-based PDF file page; printed page separately",
+  "sources": [
+    {
+      "id": "DUDBC-index",
+      "url": "https://www.dudbc.gov.np/pages/24231978/",
+      "verified": "Current official index lists NBC105:2025, NBC205:2024, NBC110, NBC201",
+      "title": "DUDBC · national code index",
+      "scope": "Official code list used to verify the document editions."
+    },
+    {
+      "id": "NBC105-2025",
+      "title": "NBC 105:2025 · seismic design",
+      "url": "https://giwmscdnone.gov.np/media/files/NBC_105_2025_Seismic%20Design%20of%20Buildings%20in%20Nepal_lqqvx6a.pdf",
+      "pages": 138,
+      "scope": "Annex A covers reinforced-concrete lateral systems. Confirm the adopted edition, structural system and axial-stress classification; secondary beams are excluded from the primary-beam provisions.",
+      "sha256": "9136fd6ca119f3536a4843c02516e791b1098e0275fa4c853c495c684c21ea1e",
+      "retrieved_on": "2026-10-27"
+    },
+    {
+      "id": "NBC110-1994",
+      "url": "https://giwmscdnone.gov.np/media/pdf_upload/NBC%20110-1994%20Plain%20And%20Reinforced%20Concrete_mgxaa4o.PDF",
+      "index_link_url": "https://giwmscdnone.gov.np/media/app/public/54/posts/1679824202_6.pdf",
+      "pages": 10,
+      "scope": "Nepal amendments to IS 456:1978. Later editions are not automatically adopted.",
+      "scope_page": {
+        "pdf": 6,
+        "printed": "iv",
+        "clause": "Foreword"
+      },
+      "limitations": "Underlying general concrete code is not reproduced; universal cover and fabrication mandrel rules not verified from these10pages.",
+      "title": "NBC 110:1994 · plain and reinforced concrete",
+      "sha256": "6120600e72ae1339146f3b90a4418888015bd8fa69c32650c7b89f446da132fe",
+      "retrieved_on": "2026-10-27"
+    },
+    {
+      "id": "NBC205-2024",
+      "url": "https://giwmscdnone.gov.np/media/pdf_upload/NBC_205_READY-TO-USE_DETAILING_GUIDELINE_FOR-signed.pdf",
+      "pages": 127,
+      "scope": "Category C residential frame template with specific plan, bay, height, soil and material bounds. It is not automatically applicable to this Class B drawing set.",
+      "scope_pages": [
+        7,
+        8,
+        15,
+        16,
+        17
+      ],
+      "additional_bounds": {
+        "plan_sqft_max": 1000,
+        "bays_each_direction": [
+          2,
+          6
+        ],
+        "bay_length_m": [
+          2.1,
+          4.5
+        ],
+        "panel_m2_max": 13.5,
+        "direction_m_max": 25,
+        "plan_aspect": [
+          0.3333333333,
+          3
+        ],
+        "storey_m_max": 3.2
+      },
+      "limitations": "Built using NBC105:2020; related standards explicitly include IS456:2000 andSP34:1987. Not a universal commercial/multistorey template. Confirm authority/project transition to2025.",
+      "title": "NBC 205:2024 · limited residential template",
+      "sha256": "5285079da891a8b1082540978ef115776ac1f300d1cf26a450e94158280ff8c0",
+      "retrieved_on": "2026-10-27"
+    },
+    {
+      "id": "NBC201-1994",
+      "url": "https://giwmscdnone.gov.np/media/app/public/54/posts/1679824311_10.pdf",
+      "pages": 48,
+      "scope": "Historical residential infilled-frame template; its geometric and masonry conditions have not been demonstrated for this project.",
+      "scope_pages": [
+        {
+          "pdf": 9,
+          "printed": "1",
+          "clause": "1.1"
+        },
+        {
+          "pdf": 17,
+          "printed": "9",
+          "clause": "4.2"
+        }
+      ],
+      "limitations": "Historical infilled-frame template. Does not establish scope for Basanti; do not transplant material/member schedules.",
+      "title": "NBC 201:1994 · infilled-frame template",
+      "sha256": "25a110201134e8c8c8b6c2c26cf1064a8e9c89e18542896f26866eeb9fd7e824",
+      "retrieved_on": "2026-10-27"
+    },
+    {
+      "id": "SAIL-TMT-2022",
+      "url": "https://sail.co.in/sites/default/files/product-brochure/2022-04/TMT-Bars-Brochure-2022.pdf",
+      "locator": "Rationalised sizes table",
+      "verification": "Table retrieved from search-indexed officialPDF; direct fetch503; exact PDF page not confirmed",
+      "nominal_kg_per_m": {
+        "6": 0.222,
+        "8": 0.395,
+        "10": 0.617,
+        "12": 0.888,
+        "16": 1.58,
+        "20": 2.47,
+        "22": 2.98,
+        "25": 3.85,
+        "28": 4.83,
+        "32": 6.31,
+        "36": 7.99,
+        "40": 9.85
+      },
+      "limitations": "Manufacturer nominal table, not Nepal design rule or delivered-weight guarantee. Confirm supplier/MTC/tolerances.",
+      "title": "SAIL · nominal bar mass table",
+      "scope": "Manufacturer nominal quantities; delivered weights, material certificates and tolerances need supplier confirmation."
+    },
+    {
+      "id": "BIS-steel-density-context",
+      "url": "https://www.services.bis.gov.in/php/BIS_2.0/trainings/assets/uploads/90522_13092021130110_1.pdf",
+      "pdf_page": 13,
+      "verified": "Technical training example uses steel density7850kg/m3",
+      "limitations": "Supporting arithmetic context in precast-pipe research, not Nepal detailing standard or structural validation.",
+      "title": "BIS · steel-density arithmetic context",
+      "scope": "Supporting density arithmetic, separate from Nepal detailing requirements and structural validation."
+    }
+  ],
+  "notation": {
+    "units": "mm, N, MPa unless stated",
+    "d": "effective depth, not overall beam depth",
+    "D": "overall beam depth",
+    "db": "longitudinal bar diameter",
+    "phi_link": "transverse link/hoop diameter",
+    "Dc": "largest column cross-section dimension",
+    "Bc": "smallest column cross-section dimension"
+  },
+  "rules": [
+    {
+      "id": "beam-end-zone",
+      "source": "NBC105-2025",
+      "annex": "A",
+      "clauses": [
+        "4.1.3f",
+        "4.1.3g"
+      ],
+      "pdf_pages": [
+        86
+      ],
+      "printed_pages": [
+        63
+      ],
+      "expression": "L_end=2*d; raw_pitch_cap=min(d/4,8*db,100mm)",
+      "qualification": "Text permits cap need not be less than75mm; expose this allowance separately. Also2d either side of other potential flexural-yield sections.",
+      "requires": [
+        "confirmed effective depth",
+        "longitudinal diameter",
+        "support/joint face locations",
+        "potential yielding regions"
+      ],
+      "display_expression": "Close links extend 2d. End pitch limit: max(75, min(d/4, 8 db, 100)) mm."
+    },
+    {
+      "id": "beam-first-and-middle",
+      "source": "NBC105-2025",
+      "annex": "A",
+      "clauses": [
+        "4.1.3f",
+        "4.1.3h"
+      ],
+      "pdf_pages": [
+        86,
+        87
+      ],
+      "printed_pages": [
+        63,
+        64
+      ],
+      "expression": "first_link_offset <= 50 mm; remaining_length_pitch <= d/2",
+      "qualification": "Figure 4-4 middle-region sign appears inconsistent; written paragraph f says not exceeding d/2.",
+      "display_expression": "First beam link within50 mm of joint face; remaining-region pitch no more than d/2."
+    },
+    {
+      "id": "beam-link-shape",
+      "source": "NBC105-2025",
+      "annex": "A",
+      "clauses": [
+        "4.1.3b",
+        "4.1.3c",
+        "4.1.3d"
+      ],
+      "pdf_pages": [
+        84,
+        85
+      ],
+      "printed_pages": [
+        61,
+        62
+      ],
+      "expression": "two-piece Ulink135deg endhooks pluscrosstie; tail_each=max(6*phi_link,65mm); phi_link>=8mm",
+      "qualification": "Engage peripheral bars; respect alternate90deg crosstie-end rules. Closedhoop andcrosstie shapes differ."
+    },
+    {
+      "id": "column-hoop-shape",
+      "source": "NBC105-2025",
+      "annex": "A",
+      "clauses": [
+        "4.2.3b",
+        "4.2.3c",
+        "4.2.3d",
+        "4.2.3e"
+      ],
+      "pdf_pages": [
+        88,
+        89
+      ],
+      "printed_pages": [
+        65,
+        66
+      ],
+      "expression": "closedhoop135deg bothends; tail_each=max(6*phi_link,65mm); phi_link>=8mm; parallel_leg_pitch<=300mm; ordinary_vertical_pitch<=Bc/2",
+      "qualification": "Long sides need crossties / overlapping hoops and correct longitudinal bar engagement.",
+      "display_expression": "135° closed-hoop ends; straight tails at least max(6φlink, 65 mm). Longitudinal-bar engagement and leg limits also apply."
+    },
+    {
+      "id": "column-confinement-zone",
+      "source": "NBC105-2025",
+      "annex": "A",
+      "clauses": [
+        "4.3a",
+        "4.3b"
+      ],
+      "equation": "4.3.1",
+      "pdf_pages": [
+        90,
+        91
+      ],
+      "printed_pages": [
+        67,
+        68
+      ],
+      "expression": "lo=max(Dc,lclear/6,450mm); confined_pitch<=min(Bc/4,8*db_min,100mm)",
+      "qualification": "db_min is smallest column longitudinal bar. No 75 mm allowance printed for this rule.",
+      "display_expression": "lo = max(Dc, clear H/6, 450 mm). Confined pitch limit = min(Bc/4, 8 db,min, 100 mm)."
+    },
+    {
+      "id": "confinement-area",
+      "source": "NBC105-2025",
+      "annex": "A",
+      "clause": "4.3c",
+      "pdf_pages": [
+        91,
+        92
+      ],
+      "printed_pages": [
+        68,
+        69
+      ],
+      "circular": "Ash>=max(0.09*s*Dk*(fck/fy)*(Ag/Acc-1),0.024*s*Dk*(fck/fy))",
+      "rectangular": "Ash>=max(0.18*s*h*(fck/fy)*(Ag/Acc-1),0.05*s*h*(fck/fy))",
+      "qualification": "Core dimensions measured outside transverse steel; h <= 300 mm. Needs strengths, core geometry and arrangement; pitch alone does not establish adequate hoop area."
+    },
+    {
+      "id": "extra-confinement-zones",
+      "source": "NBC105-2025",
+      "annex": "A",
+      "clauses": [
+        "4.3d",
+        "4.3e",
+        "4.3f",
+        "4.4.1.3"
+      ],
+      "pdf_pages": [
+        92,
+        93,
+        95
+      ],
+      "printed_pages": [
+        69,
+        70,
+        72
+      ],
+      "expression": "specialconfinement>=300mm intofooting/mat; jointconfined withinshallowerframingbeamdepth",
+      "qualification": "Certain stiffness / discontinued-member conditions require full height; joint shear may require more."
+    },
+    {
+      "id": "development-straight-tension",
+      "source": "NBC105-2025",
+      "annex": "A",
+      "clause": "4.4.3",
+      "table": "4.3",
+      "pdf_pages": [
+        97
+      ],
+      "printed_pages": [
+        74
+      ],
+      "concrete_columns": [
+        "M20",
+        "M25",
+        "M30",
+        "M35",
+        "M40+"
+      ],
+      "Ld_over_phi": {
+        "Fe250": [
+          45,
+          39,
+          36,
+          32,
+          29
+        ],
+        "Fe415": [
+          47,
+          40,
+          38,
+          33,
+          30
+        ],
+        "Fe500": [
+          57,
+          49,
+          45,
+          40,
+          36
+        ]
+      },
+      "qualification": "Fully stressed straight deformed bars in tension. No Fe550 row; no invented interpolation or automatic bar grade selection.",
+      "display_expression": "Ld = the verified Table4.3 coefficient × bar diameter; steel and concrete grades must be known."
+    },
+    {
+      "id": "exterior-beam-hook",
+      "source": "NBC105-2025",
+      "annex": "A",
+      "clause": "4.4.2",
+      "pdf_pages": [
+        95,
+        96
+      ],
+      "printed_pages": [
+        72,
+        73
+      ],
+      "expression": "ldh=fy*db/(4.85*sqrt(fck)); standardlongitudinalhook=12*db",
+      "qualification": "Hook inside confined core. Eq 4.4.2(b) inequality glyph looks struck in rendered PDF and extracts incorrectly; do not encode OCR direction; engineer review needed. Distinct from hoop 6phi/65 tail."
+    },
+    {
+      "id": "lap-detailing",
+      "source": "NBC105-2025",
+      "annex": "A",
+      "clause": "4.5.1",
+      "pdf_pages": [
+        97,
+        98
+      ],
+      "printed_pages": [
+        74,
+        75
+      ],
+      "expressions": [
+        "columnlapzone=centralhalfclearheight",
+        "splicedsteelarea<=50percentatsection",
+        "lap>=tensionLdoflargestlongitudinalbar",
+        "closedhoopsentirelap; lapzonepitch<=150mm",
+        "Atr_per_leg=s*(dbl/50)*(fyl/fyw)"
+      ],
+      "prohibited_zones": [
+        "insidejoint",
+        "within2dfromcolumn/beamface",
+        "withinquarterbeamlengthnexttopotentialyieldregion"
+      ],
+      "qualification": "Requires grades, force condition, support faces and approved lap locations.",
+      "display_expression": "Check spliced steel area at a section against50%, together with permitted locations, development length and confinement."
+    },
+    {
+      "id": "cover-template-only",
+      "source": "NBC205-2024",
+      "pdf_pages": [
+        43,
+        57,
+        76,
+        92
+      ],
+      "printed_pages": [
+        37,
+        51,
+        70,
+        86
+      ],
+      "expression": "templatecolumnclearcovertostirrups=40mm; templatebeamclearcovertostirrups=25mm",
+      "qualification": "Only the bounded NBC205 residential template. Does not establish Basanti covers; do not apply by default.",
+      "display_expression": "The restricted NBC205 template uses40 mm column /25 mm beam cover; these are not automatically Basanti project values."
+    },
+    {
+      "id": "mandrel-unconfirmed",
+      "source": "boundedreview",
+      "verified": false,
+      "qualification": "No universal fabrication bend diameter verified from official Nepal PDFs. BIS IS2502:1963 preview fetch failed. SAIL bend/rebend test mandrels are material tests, not automatic fabrication radii.",
+      "display_expression": "No universal fabrication bend radius has been verified. A material bend-test mandrel is not a fabrication detail."
+    }
+  ],
+  "arithmetic": {
+    "hoop_geometry_if_cover_is_to_outside_hoop": [
+      "outer_width=b-2*c",
+      "centerline_width=b-2*c-phi_link",
+      "inside_width=b-2*c-2*phi_link"
+    ],
+    "single_layer_longitudinal_center_cover": "c+phi_link+phi_long/2",
+    "effective_depth": "overall_depth-tension_steel_centroid_distance_from_tension_face; multilayer centroid needs actuallayout",
+    "bend_geometry_given_inside_diameter": "Rcenter=(Di+phi)/2; arc=theta_degrees*pi/180*Rcenter",
+    "cut_length": "sumtangentstraights+sumcenterlinearcs+specifiedstraighttails+lapsnotalreadyincluded; nodoublebendallowance",
+    "mass": "sum(length_m*nominal_kg_per_m)",
+    "mass_from_stated_density": "rho*pi/4*(phi_mm/1000)^2*length_m; rho7850 givesphi_mm^2/162.1961203484 kg/m",
+    "link_count": "Generate and merge distinct coordinates from confirmed offsets / zone boundaries; ceil(L/s)+1 requires both endpoints and specific interval placement."
+  },
+  "basanti_conditional_examples": [
+    {
+      "member": "source column 355 mm, smallest longitudinal bar 16 mm",
+      "arithmetic": "min(355/4,8*16,100)=88.75mm",
+      "conditional_result": "Source 100 mm pitch exceeds confinement cap if NBC105 Annex A column scope applies."
+    },
+    {
+      "member": "source beam overall D = 350 mm",
+      "arithmetic": "d < 350 mm, so end cap including 75 mm allowance remains < 87.5 mm",
+      "conditional_result": "Source 100 mm pitch exceeds cap if NBC105 Annex A beam scope applies; need actual d for precise cap and 2d zone."
+    },
+    {
+      "member": "source hoop 10phi tail",
+      "arithmetic": "10phi >= max(6phi,65) only if 10phi >= 65 mm; phi8 tail = 80 mm",
+      "conditional_result": "Preserve source 10phi; show length-only check separately; does not verify bend radius or core embedment."
+    }
+  ],
+  "unconfirmed_project_inputs": [
+    "permit / adopted code edition",
+    "member structural system and axial stress classification",
+    "loads and design forces",
+    "concrete and steel grades",
+    "clear cover basis and exposure / fire",
+    "inside bend diameter / shape standard",
+    "effective depth / actual bar centroids",
+    "clear span / height / support faces",
+    "yield regions and joint requirements",
+    "lap / anchorage / coupler details",
+    "supplier nominal table / MTC"
+  ],
+  "recommended_states": [
+    "Source stated",
+    "Calculated from confirmed inputs",
+    "Conditional codal check",
+    "Trial input / engineer confirmation",
+    "Not established"
+  ]
+}
