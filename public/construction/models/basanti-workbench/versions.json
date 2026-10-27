@@ -1,22 +1,22 @@
 {
   "project_name": "14_Basanti Poudel Baral",
   "hub_path": "../basanti-residence/milestone.html",
-  "current_version": "v4",
+  "current_version": "v5",
   "source_pdf_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
   "versions": [
     {
       "id": "v1",
-      "title": "Version 1 \u00b7 before five-project QA",
+      "title": "Version 1 · before five-project QA",
       "purpose": "Review the original construction workbench before validation, interaction, programme-label and IFC QA improvements.",
       "path": "./v1/",
       "commit": "3ac12287867cd6449adea550b89ba8b8909b4261",
       "archive": "./history/v1-source.json.gz",
       "archive_sha256": "9454dad8eeafde51a59afc62284fcb21d28366b6b40d1be7dec47c5575391969",
-      "status": "Frozen historical model and calculations; shared navigation and responsive presentation. Use v4 for the current detailed review."
+      "status": "Frozen historical model and calculations; shared navigation and responsive presentation. Use v5 for the current proposed basis, or v4 for its preserved audited baseline."
     },
     {
       "id": "v2",
-      "title": "Version 2 \u00b7 five-project QA improvements",
+      "title": "Version 2 · five-project QA improvements",
       "purpose": "Use the maintained linked 2D, 3D, quantity and Gantt workbench, with stronger validation, inspection controls and exchange checks.",
       "path": "./v2/",
       "baseline_commit": "f3feb52d6bc77f0a43b52eb7de4f3e7023123ead",
@@ -25,7 +25,7 @@
     },
     {
       "id": "v3",
-      "title": "Version 3 \u00b7 detailed drawings and quantities",
+      "title": "Version 3 · detailed drawings and quantities",
       "purpose": "Inspect excavation cut-edge clearances, named members, source-linked reinforcement and individual bars, configurable annotation layers and concrete material scenarios.",
       "path": "./v3/",
       "based_on": "v2",
@@ -35,15 +35,25 @@
     },
     {
       "id": "v4",
-      "title": "Version 4 \u00b7 checked detailing and BBS study",
+      "title": "Version 4 · checked detailing and BBS study",
       "purpose": "Use audited source dimensions, coherent stair steel, union concrete quantities, conditional Nepal-code spacing checks, explicit trial layouts and a readable mobile BBS study.",
       "path": "./v4/",
       "based_on": "v3",
       "baseline_commit": "9e679dadd31539d243ac3f81f26beb6c4629a513",
       "source": "Build-time derivation from v3 plus v4 checked-model / drawing / interface modules",
-      "status": "Current audited review and conditional calculations; final structural design and issued BBS require coordinated project inputs."
+      "status": "Preserved v4 audited baseline. V5 adds proposed shaped pieces and separately labelled design assumptions."
+    },
+    {
+      "id": "v5",
+      "title": "Version 5 · proposed fabrication and 3D checks",
+      "purpose": "Review explicit material/cover decisions, rounded bar shapes, exact proposed cuts, confinement-area and lap-fit checks, stock estimates and actual-browser rendering diagnostics.",
+      "path": "./v5/",
+      "based_on": "v4",
+      "baseline_commit": "13fcfc461c7b2151777c2c5a330c211c2d51a1de",
+      "source": "Build-time v4 derivation plus v5 proposed-model / shape / viewer modules",
+      "status": "Current proposed calculation basis, not an issued structural design or approved steel order."
     }
   ],
   "change_report": "./changes/",
-  "policy": "V1 is a checksum-verified frozen model/calculation snapshot with a shared navigation and mobile reading shell. V2 and the existing URL are generated from the same maintained workbench source. The hub and change report derive from this version record and shared comparison text. Historical snapshots are not duplicate editable masters. V3 derives from the same base model and v2 work calculators with a separate, source-linked review patch record; v2 geometry and quantities are preserved. V4 derives its page/controller at build time from v3 and shares the canonical model; corrections and code scenarios live only in v4 modules. V1-v3 remain available."
+  "policy": "V1 is a checksum-verified frozen model/calculation snapshot with a shared navigation and mobile reading shell. V2 and the existing URL are generated from the same maintained workbench source. The hub and change report derive from this version record and shared comparison text. Historical snapshots are not duplicate editable masters. V3 derives from the same base model and v2 work calculators with a separate, source-linked review patch record; v2 geometry and quantities are preserved. V4 derives its page/controller at build time from v3 and shares the canonical model; corrections and code scenarios live only in v4 modules. V1-v3 remain available. V5 derives from v4 without another editable building model; proposed choices are separate from source facts and earlier versions."
 }
