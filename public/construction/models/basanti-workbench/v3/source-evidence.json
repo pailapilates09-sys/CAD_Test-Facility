@@ -1,0 +1,81 @@
+{
+  "schema": "basanti-v3-source-evidence-1.0",
+  "source_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
+  "review_date": "2026-10-27",
+  "sheets_visually_reviewed": [
+    8,
+    9,
+    10,
+    14,
+    15,
+    20
+  ],
+  "observations": [
+    {
+      "id": "S08",
+      "pages": [
+        8
+      ],
+      "written": "C1/C2 sections 355×355 mm; eight longitudinal bars per column; four-legged Ø8 ties @100 support /150 mid. Bar diameter sets vary by column type and source storey."
+    },
+    {
+      "id": "S10",
+      "pages": [
+        10
+      ],
+      "written": "Longitudinal plinth TB 300×350; transverse members A1–B1 through A4–B4 are TB225×300. Centre span A–B is 3445 mm. Floor edge A1–A2 is MB250×425; SB is inside the first bay without a written perpendicular offset."
+    },
+    {
+      "id": "S14",
+      "pages": [
+        14
+      ],
+      "written": "TB longitudinal sections along A–A/B–B: top 3×Ø12, bottom 3×Ø12; Ø8 links @100 near supports and 150 at mid. Numeric zone boundary lengths are not dimensioned."
+    },
+    {
+      "id": "S15",
+      "pages": [
+        15
+      ],
+      "written": "1035/895/900 mm annotations describe extra top bars by span. They are not explicitly dimensioned as stirrup-zone boundaries."
+    },
+    {
+      "id": "S20",
+      "pages": [
+        20
+      ],
+      "written": "Column H/6 end-zone notation; generic beam detail shows 2d, first hoop 50 mm max, hoop spacing<d/2. Clear H and effective d remain unconfirmed. Do not replace these with a universal L/4 or L/3."
+    },
+    {
+      "id": "S07-S09",
+      "pages": [
+        7,
+        9
+      ],
+      "written": "PCC 75 mm in 1:3:6 is written. RCC grade and approved per-m³ mix quantities are not assigned in the extracted source."
+    }
+  ],
+  "unresolved": [
+    "Actual excavation sides, eccentric footing offsets, slope/shoring, boundary and formation survey",
+    "Tie-beam transverse reinforcement and strap-section conflict",
+    "Member-specific close-link boundaries and effective beam depth",
+    "Confirmed clear column H, cover, grade, laps, bends, anchorage and final BBS",
+    "Approved RCC mixture and aggregate moisture, yield and batching-water corrections"
+  ],
+  "planning_example": {
+    "pcc_ratio": [
+      1,
+      3,
+      6
+    ],
+    "ratio_source_pages": [
+      7,
+      9
+    ],
+    "dry_factor": 1.54,
+    "cement_bulk_kg_m3": 1440,
+    "water_cement_ratio": 0.5,
+    "bag_mass_kg": 50,
+    "note": "Only ratio is from the project PDF. Other values are explicit editable illustrative assumptions, not approved batching instructions. RCC uses unfilled per-m³ inputs."
+  }
+}
