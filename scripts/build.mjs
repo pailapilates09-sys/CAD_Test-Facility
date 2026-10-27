@@ -27,6 +27,7 @@ import {CATALOG} from '../public/construction/models/layout-designer/design-mode
 import {buildBuildingProject} from './building-project.mjs';
 import {buildBuildingHistory} from './building-history.mjs';
 import {buildBuildingV3} from './building-v3.mjs';
+import {buildBuildingV4} from './building-v4.mjs';
 import {programmeInputs,buildProgrammeData,renderProgramme} from './construction-v14.mjs';
 const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
 await rm(dist,{recursive:true,force:true});await mkdir(dist,{recursive:true});
@@ -172,6 +173,7 @@ await readFile(new URL('downloads/Column_Formwork_Inches_Only.pdf',dist));
 await buildBuildingProject(root,dist);
 await buildBuildingHistory(root,dist);
 await buildBuildingV3(root,dist);
+await buildBuildingV4(root,dist);
 const themedPages=await applySiteExperience(fileURLToPath(dist));
 await checkSite(fileURLToPath(dist));
 console.log(`Built ${themedPages} pages with shared light/dark themes and companion. CAD includes 5 SVG sheets, PDF and CSV.`);

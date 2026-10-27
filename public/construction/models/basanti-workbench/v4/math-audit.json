@@ -1,0 +1,361 @@
+{
+  "auditDate": "2026-10-27",
+  "baseCommitProvided": "9e679dadd31539d243ac3f81f26beb6c4629a513",
+  "scope": "Independent read-only audit of v3 detail/drawing code, shared work/construction/stair/quantity models and source project JSON. Source sheets inspected: 8, 9, 10, 12, 14, 15, 20.",
+  "findings": [
+    {
+      "id": "MATH-01",
+      "severity": "high",
+      "type": "confirmed source dimension error",
+      "title": "EF1 footing A1 has its written plan axes transposed",
+      "files": [
+        {
+          "path": "public/construction/models/basanti-residence/data/project.json",
+          "lines": "4996-5017"
+        },
+        {
+          "path": "public/construction/models/basanti-workbench/work-model.js",
+          "lines": "12-16"
+        },
+        {
+          "path": "public/construction/models/basanti-workbench/v3/detail-model.js",
+          "lines": "27-39"
+        }
+      ],
+      "source": {
+        "pages": [
+          9
+        ],
+        "evidence": "Original sheet 9 EF1 at grid A1: horizontal dimension 1800; vertical dimension 2100. Existing sheet-09.png visually inspected."
+      },
+      "example": {
+        "member": "footing-1A",
+        "current": {
+          "width_m": 2.1,
+          "depth_m": 1.8
+        },
+        "written_plan_axes": {
+          "width_m": 1.8,
+          "depth_m": 2.1
+        },
+        "current_centered_scenario_gaps_m": {
+          "A1\u2013A2": 1.44,
+          "A1\u2013B1": 1.12
+        },
+        "axis_corrected_centered_scenario_gaps_m": {
+          "A1\u2013A2": 1.59,
+          "A1\u2013B1": 0.97
+        }
+      },
+      "formula": "With 0.30 m pit clearance: A1\u2013A2 = 4.140 \u2212 ((1.800+0.600)+(2.100+0.600))/2 = 1.590 m. A1\u2013B1 = 3.445 \u2212 ((2.100+0.600)+(1.650+0.600))/2 = 0.970 m.",
+      "impact": "Changes gap dimensions, excavation envelope orientation and bar mesh orientation. The area/volume of this rotated rectangle is unchanged, so a volume-only test misses the defect.",
+      "action": "Apply an explicitly documented v4-only axis correction. Retain the separate unresolved eccentric-offset/ground-support hold; source axis correction does not resolve eccentricity.",
+      "v4_resolution": "Corrected EF1 to 1800\u00d72100 in v4. Gaps A1\u2013A2=1.590 m and A1\u2013B1=0.970 m in the centred scenario; eccentric offsets remain unknown."
+    },
+    {
+      "id": "MATH-02",
+      "severity": "high",
+      "type": "confirmed mathematical geometry inconsistency",
+      "title": "Stair steel and concrete use different flight slopes",
+      "files": [
+        {
+          "path": "public/construction/models/basanti-residence/stair-model.js",
+          "lines": "4-6,9-20"
+        },
+        {
+          "path": "public/construction/models/basanti-residence/construction-model.js",
+          "lines": "56"
+        }
+      ],
+      "source": {
+        "pages": [
+          12
+        ],
+        "evidence": "Original sheet 12 inspected after rendering from original PDF. It provides 176 mm riser, 255 mm tread and a 150 mm waist; it does not resolve the application's 9/8 flight split."
+      },
+      "example": {
+        "member": "ground-stair (also first-stair)",
+        "rise_m": 0.17647058823529413,
+        "first": {
+          "risers": 9,
+          "goings": 8,
+          "run_m": 2.04,
+          "profile_pitch_rise_m": 1.411764705882353,
+          "steel_pitch_rise_m": 1.588235294117647,
+          "profile_pitch_length_m": 2.4808626694710627,
+          "shown_main_path_m": 2.585360790146126,
+          "bar_above_last_tread_midpoint_m": 0.07720588235294112
+        },
+        "return": {
+          "risers": 8,
+          "goings": 7,
+          "run_m": 1.785,
+          "profile_pitch_rise_m": 1.2352941176470589,
+          "steel_pitch_rise_m": 1.411764705882353,
+          "profile_pitch_length_m": 2.17075483578718,
+          "shown_main_path_m": 2.275808738717953,
+          "bar_above_last_tread_midpoint_m": 0.07563025210084029
+        }
+      },
+      "formula": "Concrete soffit and takeoff pitch: sqrt(run\u00b2 + (goings\u00d7rise)\u00b2). Steel endpoints: sqrt(run\u00b2 + (risers\u00d7rise)\u00b2). Since goings=risers\u22121, steel gains one extra riser over the same run. At first-flight x=7.5\u00d70.255=1.9125 m, steel z=(x/2.04)\u00d79\u00d73/17=1.4889706 m while the tread top is 8\u00d73/17=1.4117647 m.",
+      "impact": "The displayed cage crosses above the concrete tread profile, and individual shown path lengths disagree with the concrete/soffit geometry by about 104.5 and 105.1 mm. This is a model consistency defect, independent of unknown anchorage/cutting allowances.",
+      "action": "Use one explicit, source-reviewed flight geometry for concrete, soffit, bar display and measurement. Withhold the current stair cage until that mapping is reconciled. Do not turn either of these diagnostic lengths into final bar cuts.",
+      "v4_resolution": "Rebuilt stair steel on the same (goings \u00d7 rise) pitch as the concrete model. Waist-normal display inset remains explicit; cuts and landing joints remain unknown."
+    },
+    {
+      "id": "MATH-03",
+      "severity": "high",
+      "type": "confirmed mathematical spacing inconsistency",
+      "title": "Stair distribution bar pitch is applied to horizontal projection instead of the displayed sloping path",
+      "files": [
+        {
+          "path": "public/construction/models/basanti-residence/construction-model.js",
+          "lines": "12,56"
+        }
+      ],
+      "source": {
+        "pages": [
+          12
+        ],
+        "evidence": "Source sheet 12 annotates \u00d88 distribution bars at 150 mm c/c on the stair section."
+      },
+      "example": {
+        "first_flight": {
+          "current_bar_count": 15,
+          "horizontal_intervals": 14,
+          "current_horizontal_step_m": 0.1457142857142857,
+          "actual_distance_on_current_drawn_slope_m": 0.1846686407734323
+        },
+        "return_flight": {
+          "current_bar_count": 13,
+          "horizontal_intervals": 12,
+          "current_horizontal_step_m": 0.14875,
+          "actual_distance_on_current_drawn_slope_m": 0.18965071302219508
+        }
+      },
+      "formula": "Current stations use N=ceil(horizontal_run/0.150), then dt=horizontal_run/N. Actual distance between adjacent bars on their sloping plane is dt\u00d7sqrt(1+(flight_rise/horizontal_run)\u00b2), approximately 184.67 mm / 189.65 mm for the current steel geometry.",
+      "impact": "The displayed 150 mm recipe is inconsistent with its own 3D bar locations. Counts must not be presented as confirming the source spacing.",
+      "action": "After resolving MATH-02, space distribution bars using the intended sloping-plane distance and explicit end settings. Keep counts/cuts unreleased until the source flight geometry and cover are resolved.",
+      "v4_resolution": "Distribution stations now use actual sloping distance, with each displayed interval no larger than150 mm."
+    },
+    {
+      "id": "MATH-04",
+      "severity": "medium",
+      "type": "confirmed quantity double counting in current model",
+      "title": "Foundation tie-beam package bypasses net-joint ownership and feeds gross volumes into material calculations",
+      "files": [
+        {
+          "path": "public/construction/models/basanti-workbench/work-model.js",
+          "lines": "21,28,38"
+        },
+        {
+          "path": "public/construction/models/basanti-workbench/v3/detail-model.js",
+          "lines": "59"
+        }
+      ],
+      "source": {
+        "pages": [
+          10,
+          14
+        ],
+        "evidence": "Model tie beams meet at grid intersections; source sections show connected members. This finding concerns the current model's union, not approved foundation dimensions."
+      },
+      "example": {
+        "task": "plinth-concrete",
+        "sum_gross_m3": 3.3063,
+        "current_model_union_m3": 3.24555,
+        "double_count_m3": 0.06075,
+        "relative_to_union_percent": 1.8717936867403058
+      },
+      "formula": "At each A/B row, two internal joints contribute 0.225\u00d70.150\u00d70.300 each, and two end joints contribute 0.1125\u00d70.150\u00d70.300 each. Across two rows: 2\u00d7(2\u00d70.010125+2\u00d70.0050625)=0.060750 m\u00b3. Gross\u2212overlap = 3.245550 m\u00b3.",
+      "impact": "concreteQuantities deliberately excludes foundation components, so rccRows falls back to boxVolume. concreteVolume still accepts the resulting finite package sum. Text saying foundation intersections are unresolved does not prevent using the double-counted number as the mix-calculator input.",
+      "action": "Apply a union/joint-ownership calculation to the selected foundation model scope or withhold its combined total/material conversion. Preserve unresolved foundation source geometry as a separate hold.",
+      "v4_resolution": "Tie-to-tie intersections are counted once:3.245550 m\u00b3 union rather than3.306300 m\u00b3 gross. Other foundation-package junctions remain unresolved."
+    },
+    {
+      "id": "MATH-05",
+      "severity": "high",
+      "type": "confirmed incomplete-scope quantity inference",
+      "title": "Finite deck/material totals omit known unpositioned structural members and accept uncertain roof framing",
+      "files": [
+        {
+          "path": "public/construction/models/basanti-workbench/v3/detail-model.js",
+          "lines": "18-21,59"
+        },
+        {
+          "path": "public/construction/models/basanti-workbench/work-model.js",
+          "lines": "38"
+        }
+      ],
+      "source": {
+        "pages": [
+          10,
+          18
+        ],
+        "evidence": "Sheet 10 has an internal SB within bay 1\u20132. reviewProject explicitly records internal-sb-position pending and says no replacement member/concrete quantity is invented. Roof-frame layout is also pending."
+      },
+      "example": {
+        "tasks": [
+          {
+            "id": "frame-ground-pour",
+            "current_volume_m3": 10.411291521465001
+          },
+          {
+            "id": "frame-first-pour",
+            "current_volume_m3": 10.411291521465001
+          },
+          {
+            "id": "frame-second-pour",
+            "current_volume_m3": 4.224527187500001
+          }
+        ],
+        "missing_row": "No explicit null/unmeasured row represents the omitted internal SB in deck package rows."
+      },
+      "formula": "concreteVolume returns sum(rows) whenever all present rows are finite. A known omitted member creates no row, so it behaves as zero rather than unknown. The number is a sum of modeled parts, not a complete source deck volume.",
+      "impact": "The material calculator can produce a determinate cement/sand/aggregate requirement for a package whose model itself records missing/unconfirmed framing. This is a completeness issue, not proof that the existing slab/beam boolean arithmetic is wrong.",
+      "action": "Propagate pending source members into the relevant deck's quantity completeness state. Present finite modeled-part subtotals separately and withhold a complete deck/material quantity until the missing scope is resolved; do not invent an SB position or final quantity.",
+      "v4_resolution": "Added explicit incomplete-scope rows. A whole deck/strap material conversion is withheld; finite modeled-part rows remain visible."
+    },
+    {
+      "id": "MATH-06",
+      "severity": "high",
+      "type": "confirmed source/display contradiction",
+      "title": "v3 says L/4 link-zone limits are not inferred, but its shared cage generator still uses them",
+      "files": [
+        {
+          "path": "public/construction/models/basanti-residence/construction-model.js",
+          "lines": "51-52"
+        },
+        {
+          "path": "public/construction/models/basanti-workbench/v3/detail-model.js",
+          "lines": "51"
+        },
+        {
+          "path": "public/construction/models/basanti-workbench/v3/drawings.js",
+          "lines": "53-58"
+        }
+      ],
+      "source": {
+        "pages": [
+          14,
+          15,
+          20
+        ],
+        "evidence": "Member sheets give 100 mm support / 150 mm mid link spacing but no numeric support-zone boundary. Generic sheet 20 illustrates 2d and first hoop 50 mm max. V3 detail text correctly says not to substitute L/4 or L/3."
+      },
+      "example": {
+        "member": "first-beam-x-0-0",
+        "length_m": 4.14,
+        "current_stirrup_paths": 37,
+        "hardcoded_zone_boundaries_m": [
+          1.035,
+          3.105
+        ],
+        "first_station_m": 0.03,
+        "near_end_spacing_m": 0.091364,
+        "mid_spacing_m": 0.147857
+      },
+      "formula": "The cage concatenates stations(inset,L\u00d70.25,support), stations(L\u00d70.25,L\u00d70.75,mid), stations(L\u00d70.75,L\u2212inset,support). For L=4.140 m this fixes close-link boundaries at 1.035 and 3.105 m, coinciding numerically with an extra-bar extent but not established as a link-zone rule.",
+      "impact": "3D/plan paths and displayed path counts still embed a rule the v3 member drawing explicitly disclaims. Existing tests only check the metadata zone.source_boundary_mm===null and therefore miss the actual cage generation.",
+      "action": "Prevent v4 from reusing the arbitrary zoned cage, or expose it only as an explicit separate scenario with unknown source-based count. Make the source member view and 3D geometry use the same resolved/pending state.",
+      "v4_resolution": "Removed arbitrary placed source beam stirrups. A separate trial uses2d and explicit first-link offsets; it is never labelled as a source detail."
+    },
+    {
+      "id": "MATH-07",
+      "severity": "medium",
+      "type": "confirmed parameter-to-geometry inconsistency",
+      "title": "Entered clear column H changes the detail text but not the displayed H/6 tie zones",
+      "files": [
+        {
+          "path": "public/construction/models/basanti-residence/construction-model.js",
+          "lines": "41-44"
+        },
+        {
+          "path": "public/construction/models/basanti-workbench/v3/detail-model.js",
+          "lines": "50"
+        },
+        {
+          "path": "public/construction/models/basanti-workbench/v3/drawings.js",
+          "lines": "48-50"
+        }
+      ],
+      "source": {
+        "pages": [
+          8,
+          20
+        ],
+        "evidence": "Sheet 8 confirms eight longitudinal bars and four-legged \u00d88 ties at 100/150. Sheet 20 draws H between beam faces and H/6 end confinement regions."
+      },
+      "example": {
+        "member": "ground-column-1A",
+        "model_storey_height_mm": 3000,
+        "current_zone_depth_mm": 500,
+        "current_outer_tie_sets": 25,
+        "entered_clear_H_mm": 2700,
+        "reported_each_zone_mm": 450,
+        "reported_middle_mm": 1800,
+        "current_geometry_boundaries_m": [
+          0.5,
+          2.5
+        ]
+      },
+      "formula": "buildConstructionModel uses zone=g.height/6=3000/6=500 mm. reinforcementDetail({clearColumnHeightMm:2700}) returns 2700/6=450 mm while retaining exactly the previously generated bars. There is no geometry rebuild using the entered clear H.",
+      "impact": "The inspector and model can disagree about where dense ties end. Storey interval is not established clear H, and the current 25 displayed tie stations are not a source-verified count.",
+      "action": "Keep the H-dependent cage withheld until a clear-height datum and end settings are explicit, or generate it from the same explicit scenario used by the text. Do not silently substitute floor-to-floor height.",
+      "v4_resolution": "Source height-dependent link placement is withheld. A trial rebuilds its actual station coordinates from the same clearH and code lo used in the inspector/drawing."
+    },
+    {
+      "id": "MATH-08",
+      "severity": "medium",
+      "type": "confirmed source classification error",
+      "title": "Three square footings have source marks reversed between F2 and EF2",
+      "files": [
+        {
+          "path": "public/construction/models/basanti-residence/data/project.json",
+          "lines": "5065-5086,5111-5155"
+        }
+      ],
+      "source": {
+        "pages": [
+          9
+        ],
+        "evidence": "Original sheet 9 marks grid 2B F2, grid 3B F2 and grid 4A EF2."
+      },
+      "example": [
+        {
+          "id": "footing-2B",
+          "current": "EF2",
+          "source": "F2"
+        },
+        {
+          "id": "footing-3B",
+          "current": "EF2",
+          "source": "F2"
+        },
+        {
+          "id": "footing-4A",
+          "current": "F2",
+          "source": "EF2"
+        }
+      ],
+      "formula": "All three current footprints are 1.650\u00d71.650 m, so correcting labels alone has no arithmetic volume change.",
+      "impact": "Misclassifies centered versus eccentric source details and can cause a future detail or source-offset rule to be applied to the wrong member even though today's square-area tests pass.",
+      "action": "Correct source marks in v4-only review data and preserve unresolved eccentric positioning; do not derive a new offset from the corrected mark.",
+      "v4_resolution": "Corrected2B/3B toF2 and4A toEF2. No eccentric offsets are invented."
+    }
+  ],
+  "verifiedNonFindings": [
+    "Clear-span deduction is correct for current square 355 mm supports: 4140\u2212355=3785, 3575\u2212355=3220, 3600\u2212355=3245 and 3445\u2212355=3090 mm. Sheet 12 independently writes 3785 and 3090.",
+    "Default centered excavation rectangles do not overlap. Independent plan sum: 2.7\u00d72.4 + 2.7\u00d72.7 + 6\u00d72.25\u00d72.25 = 44.145 m\u00b2; \u00d71.8 =79.461 m\u00b3. Swapping EF1 axes does not change this total.",
+    "Source sheet 8 agrees with eight longitudinal bars in each inspected column schedule. Ground/first C1 =4\u00d720+4\u00d716; C2 =8\u00d716. The code's outer-square plus inner-diamond topology matches the source schematic. No different bar arrangement is authored here.",
+    "17 nominal 176 mm risers total 2992 mm, leaving 8 mm against 3000 mm. The existing project explicitly discloses 17 equal 176.470588 mm model risers and an unresolved 9/8 split; that disclosure is not itself a new arithmetic defect.",
+    "Final cutting lengths, laps, hooks, cover, bar grade and procurement quantities remain null/held. Shown paths must continue to be distinguished from fabrication cuts.",
+    "No independently verified full-model boolean union verdict is made for all suspended RCC. The confirmed double-count finding is limited to foundation tie-beam joints."
+  ],
+  "verification": {
+    "existingTargetedTests": "node --test test/building-v3.test.mjs: 15 passed, 0 failed. Several pass assertions preserve current wrong source dimensions or check only metadata rather than generated geometry.",
+    "independentCalculations": "Explicit formula checks for source axes/gaps, rectangle union at default excavation, foundation tie joint overlaps, stair steel/profile pitch, and sloping distribution pitch.",
+    "repositoryWrites": "None. Scratch outputs only."
+  },
+  "boundaries": "Findings identify source/mathematical defects and incomplete quantities. They do not constitute an approved BBS, reinforcement design, construction release or newly chosen design assumptions."
+}
