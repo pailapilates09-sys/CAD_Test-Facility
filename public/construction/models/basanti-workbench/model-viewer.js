@@ -5,7 +5,7 @@ import {createBuildingAdapter} from '../basanti-residence/three-adapter.js';
 import {createViewMath} from '../basanti-residence/view-math.js';
 import {wallPanels,escapeHTML} from '../basanti-residence/building-model.js';
 const {boundsForGroups,fitOrthographic,projectPoint,faceTowardCamera}=createViewMath(THREE);
-export function createModelViewer({host,svg,note,empty,onPick,onHover}){
+export function createModelViewer({host,svg,note,empty,onPick,onHover,onFrame}){
  const adapter=createBuildingAdapter(THREE),scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(-10,10,10,-10,.01,250);let renderer=null,model=null,controls=null,selected=null,mode='iso',dirty=true,items=[],showContext=true,gesture=pickGesture();
  scene.add(new THREE.HemisphereLight(0xffffff,0x657579,2.5));const sun=new THREE.DirectionalLight(0xffffff,2.5);sun.position.set(8,-10,18);scene.add(sun);
  function fallback(){renderer=null;host.dataset.renderer='vector';svg.removeAttribute('hidden');note.textContent='Interactive vector 3D · same geometry as Three.js · drag to orbit; scroll/pinch to zoom.';document.documentElement.dataset.workbenchRenderer='svg-fallback';}
@@ -23,6 +23,6 @@ export function createModelViewer({host,svg,note,empty,onPick,onHover}){
  const captureView=()=>({position:camera.position.toArray(),quaternion:camera.quaternion.toArray(),up:camera.up.toArray(),target:controls?.target.toArray(),left:camera.left,right:camera.right,top:camera.top,bottom:camera.bottom,near:camera.near,far:camera.far,zoom:camera.zoom});
  const restoreView=v=>{if(!v?.target)return;camera.position.fromArray(v.position);camera.quaternion.fromArray(v.quaternion);camera.up.fromArray(v.up);for(const k of ['left','right','top','bottom','near','far','zoom'])camera[k]=v[k];camera.updateProjectionMatrix();camera.updateMatrixWorld(true);setControls(new THREE.Vector3(...v.target));dirty=true;};
  const resize=()=>{const r=host.getBoundingClientRect();renderer?.setSize(r.width,r.height,false);fit();};new ResizeObserver(resize).observe(host);new MutationObserver(()=>{dirty=true}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
- function frame(){requestAnimationFrame(frame);controls?.update();if(!dirty||!model)return;camera.updateMatrixWorld(true);scene.background=new THREE.Color(getComputedStyle(document.body).getPropertyValue('--surface-2').trim()||'#eaf0f5');if(renderer){try{renderer.render(scene,camera)}catch{fallback();fit();vector();}}else vector();dirty=false;}frame();
- return {setData,select,fit,captureView,restoreView,setCamera:v=>{mode=v;fit();},setContext:v=>{showContext=v;appearance();if(!controls)fit();}};
+ function frame(){requestAnimationFrame(frame);controls?.update();if(!dirty||!model)return;camera.updateMatrixWorld(true);scene.background=new THREE.Color(getComputedStyle(document.body).getPropertyValue('--surface-2').trim()||'#eaf0f5');if(renderer){try{renderer.render(scene,camera)}catch{fallback();fit();vector();}}else vector();if(onFrame){const r=host.getBoundingClientRect();onFrame({width:r.width,height:r.height,project:p=>projectPoint(p,camera,r.width,r.height)});}dirty=false;}frame();
+ return {setData,select,fit,captureView,restoreView,invalidate:()=>{dirty=true;},setCamera:v=>{mode=v;fit();},setContext:v=>{showContext=v;appearance();if(!controls)fit();}};
 }

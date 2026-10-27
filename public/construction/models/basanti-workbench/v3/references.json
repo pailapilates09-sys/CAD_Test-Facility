@@ -1,0 +1,721 @@
+{
+  "schema": "basanti-v3-reference-review-1.0",
+  "reviewed": "2026-10-27",
+  "projects": [
+    {
+      "name": "CadQuery",
+      "repository": "https://github.com/CadQuery/cadquery",
+      "commit": "8178185a24a035c9af7f4679033be14267f6a6ef",
+      "commit_url": "https://github.com/CadQuery/cadquery/commit/8178185a24a035c9af7f4679033be14267f6a6ef",
+      "license": "Apache-2.0",
+      "docs": [
+        "https://cadquery.readthedocs.io/en/latest/importexport.html#exporting-svg",
+        "https://cadquery.readthedocs.io/en/latest/classreference.html"
+      ],
+      "idea": "Drive plan, elevation and isometric linework from one member geometry record; use orthographic projections for measured views and separate hidden-edge styling. Give every beam/column/rebar set a stable ID and a metadata-backed inspector so selection connects geometry, dimensions and quantity rows.",
+      "limitations": [
+        "SVG projection options do not automatically create a shop-drawing dimension scheme or collision-free callouts.",
+        "A mesh/display or perspective view should not become the measurement source; retain original units and model parameters.",
+        "Generic CAD geometry and metadata do not determine rebar development, anchorage, loads, detailing-code compliance or a concrete mix."
+      ],
+      "review": {
+        "name": "CadQuery",
+        "repository": "https://github.com/CadQuery/cadquery",
+        "sha": "8178185a24a035c9af7f4679033be14267f6a6ef",
+        "date": "2026-10-24T15:18:33Z",
+        "url": "https://github.com/CadQuery/cadquery/commit/8178185a24a035c9af7f4679033be14267f6a6ef",
+        "default_branch": "master",
+        "license": {
+          "spdx": "Apache-2.0",
+          "verified_file": "LICENSE",
+          "url": "https://github.com/CadQuery/cadquery/blob/8178185a24a035c9af7f4679033be14267f6a6ef/LICENSE",
+          "note": "Verified actual LICENSE text; repository metadata reports NOASSERTION, so metadata alone is not sufficient."
+        },
+        "verified_feature": "The SVG exporter accepts projectionDir, visible-edge stroke width/color, hidden-edge color, showHidden and optional perspective focus. Assembly objects have names, locations, color/material and user metadata.",
+        "evidence": [
+          {
+            "url": "https://cadquery.readthedocs.io/en/latest/importexport.html#exporting-svg",
+            "section": "Exporting SVG; options and box_custom_options example"
+          },
+          {
+            "url": "https://cadquery.readthedocs.io/en/latest/classreference.html",
+            "section": "Assembly.add: name, color, material and metadata"
+          },
+          {
+            "path": "doc/importexport.rst",
+            "pinned_url": "https://github.com/CadQuery/cadquery/blob/8178185a24a035c9af7f4679033be14267f6a6ef/doc/importexport.rst"
+          },
+          {
+            "path": "cadquery/occ_impl/exporters/svg.py",
+            "pinned_url": "https://github.com/CadQuery/cadquery/blob/8178185a24a035c9af7f4679033be14267f6a6ef/cadquery/occ_impl/exporters/svg.py",
+            "verified_symbols": [
+              "getSVG",
+              "projectionDir",
+              "showHidden",
+              "hlr"
+            ]
+          },
+          {
+            "path": "cadquery/assembly.py",
+            "pinned_url": "https://github.com/CadQuery/cadquery/blob/8178185a24a035c9af7f4679033be14267f6a6ef/cadquery/assembly.py",
+            "verified_symbols": [
+              "Assembly",
+              "add",
+              "metadata",
+              "_subshape_layers"
+            ]
+          }
+        ],
+        "transferable_idea": "Drive plan, elevation and isometric linework from one member geometry record; use orthographic projections for measured views and separate hidden-edge styling. Give every beam/column/rebar set a stable ID and a metadata-backed inspector so selection connects geometry, dimensions and quantity rows.",
+        "limitations": [
+          "SVG projection options do not automatically create a shop-drawing dimension scheme or collision-free callouts.",
+          "A mesh/display or perspective view should not become the measurement source; retain original units and model parameters.",
+          "Generic CAD geometry and metadata do not determine rebar development, anchorage, loads, detailing-code compliance or a concrete mix."
+        ]
+      }
+    },
+    {
+      "name": "build123d",
+      "repository": "https://github.com/gumyr/build123d",
+      "commit": "c49a0493ad0003ae2bf940be1d59b6d1f41d0788",
+      "commit_url": "https://github.com/gumyr/build123d/commit/c49a0493ad0003ae2bf940be1d59b6d1f41d0788",
+      "license": "Apache-2.0",
+      "docs": [
+        "https://build123d.readthedocs.io/en/latest/tech_drawing_tutorial.html",
+        "https://build123d.readthedocs.io/en/latest/objects.html"
+      ],
+      "idea": "Use a coordinated member-detail sheet: 3D orientation thumbnail plus two or three orthographic views, consistent unit/precision/text/arrow styling, section/member ID, revision and scale. Place selected dimensions in ordered lanes outside the object, and classify visible/hidden/reference geometry before rendering.",
+      "limitations": [
+        "This is a mechanical-part example, not building or rebar detailing.",
+        "The example's StepperMotor requires bd_warehouse and its preview uses ocp_vscode; they are not needed to adapt the visual pattern.",
+        "The default branch is dev. Dimensional intent, scale handling and annotation placement still need explicit application logic; never measure paper-scaled geometry as the true member size.",
+        "Changing a DimensionLine/ExtensionLine label_str after construction does not rebuild its geometry, per the source/docstring."
+      ],
+      "review": {
+        "name": "build123d",
+        "repository": "https://github.com/gumyr/build123d",
+        "sha": "c49a0493ad0003ae2bf940be1d59b6d1f41d0788",
+        "date": "2026-10-26T20:24:39Z",
+        "url": "https://github.com/gumyr/build123d/commit/c49a0493ad0003ae2bf940be1d59b6d1f41d0788",
+        "default_branch": "dev",
+        "license": {
+          "spdx": "Apache-2.0",
+          "verified_file": "LICENSE",
+          "url": "https://github.com/gumyr/build123d/blob/c49a0493ad0003ae2bf940be1d59b6d1f41d0788/LICENSE"
+        },
+        "verified_feature": "The official Technical Drawing Tutorial builds a Nema23 sheet with plan/front/side/isometric views, shared Draft annotation settings, outside ExtensionLine dimensions, an A4 TechnicalDrawing title block and visible/hidden SVG layers.",
+        "evidence": [
+          {
+            "url": "https://build123d.readthedocs.io/en/latest/tech_drawing_tutorial.html",
+            "section": "How It Works and Code"
+          },
+          {
+            "url": "https://build123d.readthedocs.io/en/latest/objects.html",
+            "section": "DimensionLine, ExtensionLine and TechnicalDrawing"
+          },
+          {
+            "path": "docs/tech_drawing_tutorial.rst",
+            "pinned_url": "https://github.com/gumyr/build123d/blob/c49a0493ad0003ae2bf940be1d59b6d1f41d0788/docs/tech_drawing_tutorial.rst"
+          },
+          {
+            "path": "docs/technical_drawing.py",
+            "pinned_url": "https://github.com/gumyr/build123d/blob/c49a0493ad0003ae2bf940be1d59b6d1f41d0788/docs/technical_drawing.py"
+          },
+          {
+            "path": "src/build123d/drafting.py",
+            "pinned_url": "https://github.com/gumyr/build123d/blob/c49a0493ad0003ae2bf940be1d59b6d1f41d0788/src/build123d/drafting.py",
+            "verified_symbols": [
+              "Draft",
+              "DimensionLine",
+              "ExtensionLine",
+              "TechnicalDrawing"
+            ]
+          }
+        ],
+        "transferable_idea": "Use a coordinated member-detail sheet: 3D orientation thumbnail plus two or three orthographic views, consistent unit/precision/text/arrow styling, section/member ID, revision and scale. Place selected dimensions in ordered lanes outside the object, and classify visible/hidden/reference geometry before rendering.",
+        "limitations": [
+          "This is a mechanical-part example, not building or rebar detailing.",
+          "The example's StepperMotor requires bd_warehouse and its preview uses ocp_vscode; they are not needed to adapt the visual pattern.",
+          "The default branch is dev. Dimensional intent, scale handling and annotation placement still need explicit application logic; never measure paper-scaled geometry as the true member size.",
+          "Changing a DimensionLine/ExtensionLine label_str after construction does not rebuild its geometry, per the source/docstring."
+        ]
+      }
+    },
+    {
+      "name": "LibreCAD",
+      "repository": "https://github.com/LibreCAD/LibreCAD",
+      "commit": "f37ef6b10f96434f505715841cd3712513c9365d",
+      "commit_url": "https://github.com/LibreCAD/LibreCAD/commit/f37ef6b10f96434f505715841cd3712513c9365d",
+      "license": "GPL-2.0-only",
+      "docs": [
+        "https://docs.librecad.org/en/latest/guides/annotate.html",
+        "https://docs.librecad.org/en/latest/ref/widgets.html#layer-list-dock"
+      ],
+      "idea": "Create independent annotation categories—overall, member, reinforcement, reference—and a searchable visibility panel. Default to a sparse overall view; show selected-member dimensions and leaders on inspection. Keep measured values automatic, support units as formatting, and reserve consistent outside lanes so labels do not collide.",
+      "limitations": [
+        "LibreCAD is primarily2D; its isometric drawing is a2D representation, not a3D reinforcement model.",
+        "The manual flags itself as work in progress for pre-release builds; pinned source confirms the cited dimension/layer implementations.",
+        "Overriding an automatic dimension with arbitrary text can detach it from measured geometry; distinguish calculated values from manual notes.",
+        "Use the drafting ideas independently; no GPL code was copied into Basanti."
+      ],
+      "review": {
+        "name": "LibreCAD",
+        "repository": "https://github.com/LibreCAD/LibreCAD",
+        "sha": "f37ef6b10f96434f505715841cd3712513c9365d",
+        "date": "2026-10-26T02:37:04Z",
+        "url": "https://github.com/LibreCAD/LibreCAD/commit/f37ef6b10f96434f505715841cd3712513c9365d",
+        "default_branch": "master",
+        "license": {
+          "spdx": "GPL-2.0-only",
+          "verified_file": "LICENSE",
+          "url": "https://github.com/LibreCAD/LibreCAD/blob/f37ef6b10f96434f505715841cd3712513c9365d/LICENSE",
+          "note": "Main project LICENSE explicitly says GPL version2; bundled third-party components/fonts have their own terms."
+        },
+        "verified_feature": "The official annotation guide specifies dimension types, outside dimension placement, non-crossing extension lines, shorter dimensions inside longer dimensions, paper-size annotation scaling and automatic-value placeholder <>. Layer List supports name/wildcard filtering plus visibility, lock, printing and construction-layer controls.",
+        "evidence": [
+          {
+            "url": "https://docs.librecad.org/en/latest/guides/annotate.html",
+            "section": "Dimensioning Appearance; Rules for Dimensioning; Entity Handles; <> placeholder"
+          },
+          {
+            "url": "https://docs.librecad.org/en/latest/ref/widgets.html#layer-list-dock",
+            "section": "Layer List Dock"
+          },
+          {
+            "path": "librecad/src/lib/engine/document/entities/rs_dimension.cpp",
+            "pinned_url": "https://github.com/LibreCAD/LibreCAD/blob/f37ef6b10f96434f505715841cd3712513c9365d/librecad/src/lib/engine/document/entities/rs_dimension.cpp"
+          },
+          {
+            "path": "librecad/src/ui/dock_widgets/layer_widget/qg_layerwidget.cpp",
+            "pinned_url": "https://github.com/LibreCAD/LibreCAD/blob/f37ef6b10f96434f505715841cd3712513c9365d/librecad/src/ui/dock_widgets/layer_widget/qg_layerwidget.cpp"
+          }
+        ],
+        "transferable_idea": "Create independent annotation categories—overall, member, reinforcement, reference—and a searchable visibility panel. Default to a sparse overall view; show selected-member dimensions and leaders on inspection. Keep measured values automatic, support units as formatting, and reserve consistent outside lanes so labels do not collide.",
+        "limitations": [
+          "LibreCAD is primarily2D; its isometric drawing is a2D representation, not a3D reinforcement model.",
+          "The manual flags itself as work in progress for pre-release builds; pinned source confirms the cited dimension/layer implementations.",
+          "Overriding an automatic dimension with arbitrary text can detach it from measured geometry; distinguish calculated values from manual notes.",
+          "Use the drafting ideas independently; no GPL code was copied into Basanti."
+        ]
+      }
+    },
+    {
+      "name": "QCAD Community Edition",
+      "repository": "https://github.com/qcad/qcad",
+      "commit": "f07c755ad56f63c27c6fc4fba604a33d0ed0b65a",
+      "commit_url": "https://github.com/qcad/qcad/commit/f07c755ad56f63c27c6fc4fba604a33d0ed0b65a",
+      "license": "GPL-3.0 with optional exceptions",
+      "docs": [
+        "https://www.qcad.org/en/features/",
+        "https://qcad.org/en/tutorials/property-editor/"
+      ],
+      "idea": "Make a persistent selected-member inspector that reports ID, type, level, true length/width/depth, reinforcement summary and associated quantity rows. On multiple selection show shared values or 'varies', never a fabricated single value. Pair this with isolate-active-layer and restore-all controls and architectural-style dimension ticks.",
+      "limitations": [
+        "Do not attribute the global property/type Selection Filter widget to CE: the current matrix marks it Pro-only. The property editor's type scoping inside an existing selection is a different, narrower behavior.",
+        "Other matrix Pro-only features include total selected-entity length, SVG export, dimension styles/per-entity overrides, tolerances/GD&T and named views.",
+        "QCAD CE is2D; property editing and measurements do not validate a3D structural model. No GPL code copied."
+      ],
+      "review": {
+        "name": "QCAD Community Edition",
+        "repository": "https://github.com/qcad/qcad",
+        "sha": "f07c755ad56f63c27c6fc4fba604a33d0ed0b65a",
+        "date": "2026-10-26T20:53:09Z",
+        "url": "https://github.com/qcad/qcad/commit/f07c755ad56f63c27c6fc4fba604a33d0ed0b65a",
+        "default_branch": "master",
+        "license": {
+          "spdx": "GPL-3.0 with optional exceptions",
+          "verified_file": "LICENSE.txt",
+          "url": "https://github.com/qcad/qcad/blob/f07c755ad56f63c27c6fc4fba604a33d0ed0b65a/LICENSE.txt",
+          "note": "Project wording: GPL version3 with optional exceptions. Icons/documentation are CC-BY-3.0; third-party libraries/fonts have separate terms."
+        },
+        "verified_feature": "The current official edition matrix includes CE aligned/linear/horizontal/vertical/radius/diameter/angular dimensions, leaders, architectural ticks, automatic labels, individual linear factors, layer isolate/hide, property modification and polygonal area/circumference. The property-editor tutorial shows selected-entity count, common values and a 'varies' state.",
+        "evidence": [
+          {
+            "url": "https://www.qcad.org/en/features/",
+            "section": "Construction/Dimensions; Modification; Selection; Organization; Measuring; CE column"
+          },
+          {
+            "url": "https://qcad.org/en/tutorials/property-editor/",
+            "section": "Selected entity properties, mixed selection, varies and entity-type scoping within the editor"
+          },
+          {
+            "path": "scripts/Draw/Dimension/DimHorizontal/DimHorizontal.js",
+            "pinned_url": "https://github.com/qcad/qcad/blob/f07c755ad56f63c27c6fc4fba604a33d0ed0b65a/scripts/Draw/Dimension/DimHorizontal/DimHorizontal.js"
+          },
+          {
+            "path": "scripts/Widgets/PropertyEditor/PropertyEditor.js",
+            "pinned_url": "https://github.com/qcad/qcad/blob/f07c755ad56f63c27c6fc4fba604a33d0ed0b65a/scripts/Widgets/PropertyEditor/PropertyEditor.js"
+          },
+          {
+            "path": "scripts/Layer/ShowActiveLayer/ShowActiveLayer.js",
+            "pinned_url": "https://github.com/qcad/qcad/blob/f07c755ad56f63c27c6fc4fba604a33d0ed0b65a/scripts/Layer/ShowActiveLayer/ShowActiveLayer.js"
+          }
+        ],
+        "transferable_idea": "Make a persistent selected-member inspector that reports ID, type, level, true length/width/depth, reinforcement summary and associated quantity rows. On multiple selection show shared values or 'varies', never a fabricated single value. Pair this with isolate-active-layer and restore-all controls and architectural-style dimension ticks.",
+        "limitations": [
+          "Do not attribute the global property/type Selection Filter widget to CE: the current matrix marks it Pro-only. The property editor's type scoping inside an existing selection is a different, narrower behavior.",
+          "Other matrix Pro-only features include total selected-entity length, SVG export, dimension styles/per-entity overrides, tolerances/GD&T and named views.",
+          "QCAD CE is2D; property editing and measurements do not validate a3D structural model. No GPL code copied."
+        ]
+      }
+    },
+    {
+      "name": "Maker.js",
+      "repository": "https://github.com/microsoft/maker.js",
+      "commit": "fa2636b585dfb36d5041459be7bd9246986a4537",
+      "commit_url": "https://github.com/microsoft/maker.js/commit/fa2636b585dfb36d5041459be7bd9246986a4537",
+      "license": "Apache-2.0",
+      "docs": [
+        "https://maker.js.org/docs/exporting/",
+        "https://maker.js.org/docs/intermediate-drawing/#Layers",
+        "https://maker.js.org/docs/api/modules/makerjs.measure.html#modelextents"
+      ],
+      "idea": "Keep each2D member, rebar centerline and annotation in a semantic group with a stable ID. Individual SVG entities enable precise hover/selection and filtered overlays; per-layer styles allow dimensions to remain visually distinct. Derive true centerline length and extents from the geometric model, then connect those calculations to a transparent quantity breakdown.",
+      "limitations": [
+        "annotate:true prints path IDs, not engineering dimension values; explicit dimension arrows, numeric labels and layout logic are still required.",
+        "Path-only export merges entities, weakening per-member DOM inspection; Separate mode preserves identity but has fill limitations.",
+        "modelPathLength sums every path, so duplicate paths, outlines, dimensions and reference lines must be excluded before interpreting a value as bar/cut length.",
+        "Missing units default SVG output to pixels; canonical model units must be explicit. Maker.js is chiefly2D/CNC linework, not a building/rebar design engine."
+      ],
+      "review": {
+        "name": "Maker.js",
+        "repository": "https://github.com/microsoft/maker.js",
+        "sha": "fa2636b585dfb36d5041459be7bd9246986a4537",
+        "date": "2026-09-29T04:23:14Z",
+        "url": "https://github.com/microsoft/maker.js/commit/fa2636b585dfb36d5041459be7bd9246986a4537",
+        "default_branch": "master",
+        "license": {
+          "spdx": "Apache-2.0",
+          "verified_file": "LICENSE",
+          "url": "https://github.com/microsoft/maker.js/blob/fa2636b585dfb36d5041459be7bd9246986a4537/LICENSE"
+        },
+        "verified_feature": "Models/paths inherit logical layers. SVG Separate mode preserves nested model groups and individual line/circle/path elements; annotate:true adds path-ID text. Path-only mode merges geometry to one path per layer. measure.modelExtents gives the bounding rectangle; modelPathLength sums all path lengths.",
+        "evidence": [
+          {
+            "url": "https://maker.js.org/docs/exporting/",
+            "section": "SVG Advanced options: Separate mode, annotate, layers, units"
+          },
+          {
+            "url": "https://maker.js.org/docs/intermediate-drawing/#Layers",
+            "section": "Layers"
+          },
+          {
+            "url": "https://maker.js.org/docs/api/modules/makerjs.measure.html#modelextents",
+            "section": "modelExtents; modelPathLength; pathLength"
+          },
+          {
+            "path": "packages/maker.js/src/core/svg.ts",
+            "pinned_url": "https://github.com/microsoft/maker.js/blob/fa2636b585dfb36d5041459be7bd9246986a4537/packages/maker.js/src/core/svg.ts",
+            "verified_symbols": [
+              "toSVG",
+              "toSVGPathData",
+              "useSvgPathOnly",
+              "annotate",
+              "layerOptions"
+            ]
+          },
+          {
+            "path": "packages/maker.js/src/core/measure.ts",
+            "pinned_url": "https://github.com/microsoft/maker.js/blob/fa2636b585dfb36d5041459be7bd9246986a4537/packages/maker.js/src/core/measure.ts",
+            "verified_symbols": [
+              "modelExtents",
+              "modelPathLength",
+              "pathLength",
+              "pointDistance"
+            ]
+          }
+        ],
+        "transferable_idea": "Keep each2D member, rebar centerline and annotation in a semantic group with a stable ID. Individual SVG entities enable precise hover/selection and filtered overlays; per-layer styles allow dimensions to remain visually distinct. Derive true centerline length and extents from the geometric model, then connect those calculations to a transparent quantity breakdown.",
+        "limitations": [
+          "annotate:true prints path IDs, not engineering dimension values; explicit dimension arrows, numeric labels and layout logic are still required.",
+          "Path-only export merges entities, weakening per-member DOM inspection; Separate mode preserves identity but has fill limitations.",
+          "modelPathLength sums every path, so duplicate paths, outlines, dimensions and reference lines must be excluded before interpreting a value as bar/cut length.",
+          "Missing units default SVG output to pixels; canonical model units must be explicit. Maker.js is chiefly2D/CNC linework, not a building/rebar design engine."
+        ]
+      }
+    },
+    {
+      "name": "FreeCAD TechDraw",
+      "repository": "https://github.com/FreeCAD/FreeCAD",
+      "commit": "1ec79da434be621d89c97287188b53b2ec2ce8a3",
+      "commit_url": "https://github.com/FreeCAD/FreeCAD/commit/1ec79da434be621d89c97287188b53b2ec2ce8a3",
+      "license": "LGPL-2.1-or-later (SPDX identifier on inspected TechDraw source)",
+      "docs": [
+        "https://freecad.github.io/Website/news/tutorial-getting-started-with-techdraw/"
+      ],
+      "idea": [
+        "Store each dimension as a semantic record linked to member/geometry IDs. Compute the physical value from model geometry, keeping per-view label offsets separate from measurement anchors.",
+        "Offer dedicated overall, member section, reinforcement and quantity layers. Use short elbow leaders and deliberate label lanes outside the drawing silhouette.",
+        "Label projected spans explicitly; do not label an arbitrary screen-space span as true length."
+      ],
+      "limitations": [
+        "These references show dimension data and leader controls, not a verified general automatic collision-avoidance algorithm.",
+        "FreeCAD wiki pages returned an access-denied challenge; the official project tutorial and pinned C++ source were inspected instead.",
+        "TechDraw formatting does not validate reinforcement detailing or structural safety."
+      ],
+      "review": {
+        "name": "FreeCAD TechDraw",
+        "repo": "FreeCAD/FreeCAD",
+        "license": "LGPL-2.1-or-later (SPDX identifier on inspected TechDraw source)",
+        "licensePath": "LICENSE",
+        "docs": [
+          {
+            "url": "https://freecad.github.io/Website/news/tutorial-getting-started-with-techdraw/"
+          }
+        ],
+        "verifiedFeatures": [
+          "Dimension types include Distance, axis distances, Radius, Diameter, Angle and Area; true and projected measurement are distinct metadata, with separate 2D projected and 3D geometry references.",
+          "Balloon center and arrow-tip anchor are separate coordinates; balloon supports source view, text wrap, end symbol, bubble shape and kink length.",
+          "Official TechDraw tutorial demonstrates model-driven dimension updates and balloon placement with leader lines."
+        ],
+        "transferableIdeas": [
+          "Store each dimension as a semantic record linked to member/geometry IDs. Compute the physical value from model geometry, keeping per-view label offsets separate from measurement anchors.",
+          "Offer dedicated overall, member section, reinforcement and quantity layers. Use short elbow leaders and deliberate label lanes outside the drawing silhouette.",
+          "Label projected spans explicitly; do not label an arbitrary screen-space span as true length."
+        ],
+        "limitations": [
+          "These references show dimension data and leader controls, not a verified general automatic collision-avoidance algorithm.",
+          "FreeCAD wiki pages returned an access-denied challenge; the official project tutorial and pinned C++ source were inspected instead.",
+          "TechDraw formatting does not validate reinforcement detailing or structural safety."
+        ],
+        "sha": "1ec79da434be621d89c97287188b53b2ec2ce8a3",
+        "date": "2026-10-27T01:02:16Z",
+        "url": "https://github.com/FreeCAD/FreeCAD/commit/1ec79da434be621d89c97287188b53b2ec2ce8a3",
+        "tree": "864a6f68345dc479261bf375f95576032ecbb9a7",
+        "licenseUrl": "https://github.com/FreeCAD/FreeCAD/blob/1ec79da434be621d89c97287188b53b2ec2ce8a3/LICENSE",
+        "sources": [
+          {
+            "path": "src/Mod/TechDraw/App/DrawViewDimension.cpp",
+            "url": "https://github.com/FreeCAD/FreeCAD/blob/1ec79da434be621d89c97287188b53b2ec2ce8a3/src/Mod/TechDraw/App/DrawViewDimension.cpp",
+            "blobSha": "22a1afbb4f1a754b871966498fc7fdefdb67fcb4"
+          },
+          {
+            "path": "src/Mod/TechDraw/App/DrawViewBalloon.cpp",
+            "url": "https://github.com/FreeCAD/FreeCAD/blob/1ec79da434be621d89c97287188b53b2ec2ce8a3/src/Mod/TechDraw/App/DrawViewBalloon.cpp",
+            "blobSha": "ed327aff0f9649448066cc14a9c7e9cb5918ce96"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bonsai",
+      "repository": "https://github.com/IfcOpenShell/IfcOpenShell",
+      "commit": "b786afc3631129df3696cb343acb2857a70df2b7",
+      "commit_url": "https://github.com/IfcOpenShell/IfcOpenShell/commit/b786afc3631129df3696cb343acb2857a70df2b7",
+      "license": "GPL-3.0-or-later (Bonsai source headers); counted as Bonsai only, not a separate IfcOpenShell project",
+      "docs": [
+        "https://docs.bonsaibim.org/studio/reference/toolbar/annotation.html",
+        "https://docs.bonsaibim.org/studio/guides/drawings/index.html"
+      ],
+      "idea": [
+        "Use typed annotation groups with matching filtering in plan, elevation, section and 3D instead of a global labels switch.",
+        "Keep measured geometry and physical units separate from projected sheet geometry; relocate short-span labels outside their endpoints rather than squeezing them inside.",
+        "Synchronize drawing filters and selected-member inspection. Treat export linework, fills and labels as separate render layers."
+      ],
+      "limitations": [
+        "The inspected stable annotation/drawings docs mark themselves incomplete; detailed behavior was verified in pinned source.",
+        "Bonsai is a Blender/IFC authoring environment. Do not imply its annotation APIs can be dropped into the browser app.",
+        "Drawing and annotation behavior does not verify a structural design."
+      ],
+      "review": {
+        "name": "Bonsai",
+        "repo": "IfcOpenShell/IfcOpenShell",
+        "license": "GPL-3.0-or-later (Bonsai source headers); counted as Bonsai only, not a separate IfcOpenShell project",
+        "licensePath": "src/bonsai/COPYING",
+        "docs": [
+          {
+            "url": "https://docs.bonsaibim.org/studio/reference/toolbar/annotation.html"
+          },
+          {
+            "url": "https://docs.bonsaibim.org/studio/guides/drawings/index.html"
+          }
+        ],
+        "verifiedFeatures": [
+          "Decorations dispatch by semantic annotation type: dimension, angle, grid, hidden line, leader, radius, diameter, level, section, text and more.",
+          "SVG annotation dispatch preserves typed classes and draws fill areas before other annotations.",
+          "The SVG dimension routine projects world anchors into camera/sheet coordinates, formats values with precision and units, and moves text beyond the endpoint when the sheet dimension is too short to fit.",
+          "Viewport annotation handler is camera-view-specific and suppresses decorations when entering local isolation without a selected IfcAnnotation."
+        ],
+        "transferableIdeas": [
+          "Use typed annotation groups with matching filtering in plan, elevation, section and 3D instead of a global labels switch.",
+          "Keep measured geometry and physical units separate from projected sheet geometry; relocate short-span labels outside their endpoints rather than squeezing them inside.",
+          "Synchronize drawing filters and selected-member inspection. Treat export linework, fills and labels as separate render layers."
+        ],
+        "limitations": [
+          "The inspected stable annotation/drawings docs mark themselves incomplete; detailed behavior was verified in pinned source.",
+          "Bonsai is a Blender/IFC authoring environment. Do not imply its annotation APIs can be dropped into the browser app.",
+          "Drawing and annotation behavior does not verify a structural design."
+        ],
+        "sha": "b786afc3631129df3696cb343acb2857a70df2b7",
+        "date": "2026-10-26T13:35:17Z",
+        "url": "https://github.com/IfcOpenShell/IfcOpenShell/commit/b786afc3631129df3696cb343acb2857a70df2b7",
+        "tree": "cbf7e29cf86c267ebbbc82c3d94f68e262ae8872",
+        "licenseUrl": "https://github.com/IfcOpenShell/IfcOpenShell/blob/b786afc3631129df3696cb343acb2857a70df2b7/src/bonsai/COPYING",
+        "sources": [
+          {
+            "path": "src/bonsai/bonsai/bim/module/drawing/decoration.py",
+            "url": "https://github.com/IfcOpenShell/IfcOpenShell/blob/b786afc3631129df3696cb343acb2857a70df2b7/src/bonsai/bonsai/bim/module/drawing/decoration.py",
+            "blobSha": "a8079f494fb87d3976d49b56ff2ea01b7e01296d"
+          },
+          {
+            "path": "src/bonsai/bonsai/bim/module/drawing/svgwriter.py",
+            "url": "https://github.com/IfcOpenShell/IfcOpenShell/blob/b786afc3631129df3696cb343acb2857a70df2b7/src/bonsai/bonsai/bim/module/drawing/svgwriter.py",
+            "blobSha": "7b3692fba7126ed5428d0583d526ea8cf823fea3"
+          }
+        ]
+      }
+    },
+    {
+      "name": "That Open Engine / Components",
+      "repository": "https://github.com/ThatOpen/engine_components",
+      "commit": "ad540db9c60362865362cbcdea2a1dfc623bc299",
+      "commit_url": "https://github.com/ThatOpen/engine_components/commit/ad540db9c60362865362cbcdea2a1dfc623bc299",
+      "license": "MIT (package.json plus LICENSE.md)",
+      "docs": [
+        "https://docs.thatopen.com/Tutorials/Components/Front/LengthMeasurement",
+        "https://docs.thatopen.com/Tutorials/Components/Core/Hider",
+        "https://docs.thatopen.com/Tutorials/Components/Front/Highlighter"
+      ],
+      "idea": [
+        "Use a focused dimension preset by default, with optional axis/projected dimensions in the selected member panel.",
+        "Connect selection, isolate, reset, property inspection and the quantities table through one canonical member ID instead of separate renderer-only selections.",
+        "Store primary member dimensions in model units and format only at the display boundary; let the user inspect selected-member inputs before applying quantity calculations."
+      ],
+      "limitations": [
+        "Rendered-geometry measurement and selection are not fabrication detailing, rebar clash checking or structural design validation.",
+        "Current upstream examples may depend on matching Fragments workers and model versions; the recommendation is to reproduce the interaction pattern locally, not add that stack.",
+        "A model-local selection ID should be paired with a model ID; it is not automatically a persistent cross-model identifier."
+      ],
+      "review": {
+        "name": "That Open Engine / Components",
+        "repo": "ThatOpen/engine_components",
+        "license": "MIT (package.json plus LICENSE.md)",
+        "licensePath": "LICENSE.md",
+        "docs": [
+          {
+            "url": "https://docs.thatopen.com/Tutorials/Components/Front/LengthMeasurement"
+          },
+          {
+            "url": "https://docs.thatopen.com/Tutorials/Components/Core/Hider"
+          },
+          {
+            "url": "https://docs.thatopen.com/Tutorials/Components/Front/Highlighter"
+          }
+        ],
+        "verifiedFeatures": [
+          "Current LengthMeasurement example starts with the linear dimension only, with optional rectangular axis-aligned and projection complements; it exposes point/line/face snapping, units, rounding and measurement list events.",
+          "Hider example isolates or hides categories using ModelIdMap selections and supports resetting visibility.",
+          "Highlighter example provides click and Ctrl-click selection and retrieves selected element attributes through model.getItemsData(localIds)."
+        ],
+        "transferableIdeas": [
+          "Use a focused dimension preset by default, with optional axis/projected dimensions in the selected member panel.",
+          "Connect selection, isolate, reset, property inspection and the quantities table through one canonical member ID instead of separate renderer-only selections.",
+          "Store primary member dimensions in model units and format only at the display boundary; let the user inspect selected-member inputs before applying quantity calculations."
+        ],
+        "limitations": [
+          "Rendered-geometry measurement and selection are not fabrication detailing, rebar clash checking or structural design validation.",
+          "Current upstream examples may depend on matching Fragments workers and model versions; the recommendation is to reproduce the interaction pattern locally, not add that stack.",
+          "A model-local selection ID should be paired with a model ID; it is not automatically a persistent cross-model identifier."
+        ],
+        "sha": "ad540db9c60362865362cbcdea2a1dfc623bc299",
+        "date": "2026-10-22T19:32:10Z",
+        "url": "https://github.com/ThatOpen/engine_components/commit/ad540db9c60362865362cbcdea2a1dfc623bc299",
+        "tree": "988c826c7b5c162c99804f5be9f566a5f55778e3",
+        "licenseUrl": "https://github.com/ThatOpen/engine_components/blob/ad540db9c60362865362cbcdea2a1dfc623bc299/LICENSE.md",
+        "sources": [
+          {
+            "path": "packages/front/src/measurement/LengthMeasurement/example.ts",
+            "url": "https://github.com/ThatOpen/engine_components/blob/ad540db9c60362865362cbcdea2a1dfc623bc299/packages/front/src/measurement/LengthMeasurement/example.ts",
+            "blobSha": "8ff339ad9a802da7565753acc8969a963d19db76"
+          },
+          {
+            "path": "packages/core/src/fragments/Hider/example.ts",
+            "url": "https://github.com/ThatOpen/engine_components/blob/ad540db9c60362865362cbcdea2a1dfc623bc299/packages/core/src/fragments/Hider/example.ts",
+            "blobSha": "24616f40d639e2c608fa72ea24aa036ec34d1bf7"
+          },
+          {
+            "path": "packages/front/src/fragments/Highlighter/example.ts",
+            "url": "https://github.com/ThatOpen/engine_components/blob/ad540db9c60362865362cbcdea2a1dfc623bc299/packages/front/src/fragments/Highlighter/example.ts",
+            "blobSha": "e9a1b14c009427da6aecc40e6fb19d21cb9a957e"
+          }
+        ]
+      }
+    },
+    {
+      "name": "xeokit SDK",
+      "repository": "https://github.com/xeokit/xeokit-sdk",
+      "commit": "4e771bf20218f7cf794e046ff954e278aa1e2d2a",
+      "commit_url": "https://github.com/xeokit/xeokit-sdk/commit/4e771bf20218f7cf794e046ff954e278aa1e2d2a",
+      "license": "AGPL-3.0 (package.json and LICENSE); README also offers commercial licensing",
+      "docs": [
+        "https://xeokit.github.io/xeokit-sdk/typedocs/classes/DistanceMeasurementsPlugin.html",
+        "https://xeokit.github.io/xeokit-sdk/docs/class/src/plugins/DistanceMeasurementsPlugin/DistanceMeasurement.js~DistanceMeasurement.html",
+        "https://xeokit.github.io/xeokit-sdk/docs/class/src/plugins/SectionPlanesPlugin/SectionPlanesPlugin.js~SectionPlanesPlugin.html"
+      ],
+      "idea": [
+        "Offer overall length separately from optional X/Y/Z decompositions; show axis components on demand.",
+        "Suppress secondary labels when their projected span becomes too short, while retaining exact values in an inspectable list and allowing selected labels to remain visible.",
+        "Use clipping/isolating to reveal reinforcement inside the selected beam/column, with a visible reset action and consistent member inspector."
+      ],
+      "limitations": [
+        "Pixel-threshold label suppression is not a complete collision solver and does not prove physical geometry accuracy.",
+        "The source includes open-source AGPL licensing and a separately offered commercial model; do not copy or embed SDK source for this task.",
+        "Section views and measurements do not validate reinforcement design."
+      ],
+      "review": {
+        "name": "xeokit SDK",
+        "repo": "xeokit/xeokit-sdk",
+        "license": "AGPL-3.0 (package.json and LICENSE); README also offers commercial licensing",
+        "licensePath": "LICENSE",
+        "docs": [
+          {
+            "url": "https://xeokit.github.io/xeokit-sdk/typedocs/classes/DistanceMeasurementsPlugin.html"
+          },
+          {
+            "url": "https://xeokit.github.io/xeokit-sdk/docs/class/src/plugins/DistanceMeasurementsPlugin/DistanceMeasurement.js~DistanceMeasurement.html"
+          },
+          {
+            "url": "https://xeokit.github.io/xeokit-sdk/docs/class/src/plugins/SectionPlanesPlugin/SectionPlanesPlugin.js~SectionPlanesPlugin.html"
+          }
+        ],
+        "verifiedFeatures": [
+          "Distance measurements have world-space endpoints, optional axis-aligned wires/labels and independent visibility channels for the length label and X/Y/Z components.",
+          "labelMinAxisLength suppresses an axis label when its on-screen wire is below a pixel threshold; typed documentation states 25px default.",
+          "DistanceMeasurement distinguishes approximate measurements and formats their displayed prefix accordingly.",
+          "SectionPlanesPlugin exposes independently managed section planes and an overview/control surface."
+        ],
+        "transferableIdeas": [
+          "Offer overall length separately from optional X/Y/Z decompositions; show axis components on demand.",
+          "Suppress secondary labels when their projected span becomes too short, while retaining exact values in an inspectable list and allowing selected labels to remain visible.",
+          "Use clipping/isolating to reveal reinforcement inside the selected beam/column, with a visible reset action and consistent member inspector."
+        ],
+        "limitations": [
+          "Pixel-threshold label suppression is not a complete collision solver and does not prove physical geometry accuracy.",
+          "The source includes open-source AGPL licensing and a separately offered commercial model; do not copy or embed SDK source for this task.",
+          "Section views and measurements do not validate reinforcement design."
+        ],
+        "sha": "4e771bf20218f7cf794e046ff954e278aa1e2d2a",
+        "date": "2026-10-05T10:01:16Z",
+        "url": "https://github.com/xeokit/xeokit-sdk/commit/4e771bf20218f7cf794e046ff954e278aa1e2d2a",
+        "tree": "8e68fb776170a640535d0a092504e82f4b6495ba",
+        "licenseUrl": "https://github.com/xeokit/xeokit-sdk/blob/4e771bf20218f7cf794e046ff954e278aa1e2d2a/LICENSE",
+        "sources": [
+          {
+            "path": "src/plugins/DistanceMeasurementsPlugin/DistanceMeasurementsPlugin.js",
+            "url": "https://github.com/xeokit/xeokit-sdk/blob/4e771bf20218f7cf794e046ff954e278aa1e2d2a/src/plugins/DistanceMeasurementsPlugin/DistanceMeasurementsPlugin.js",
+            "blobSha": "1a93d08d005cbeb09fd127320172e74f8668df9e"
+          },
+          {
+            "path": "src/plugins/DistanceMeasurementsPlugin/DistanceMeasurement.js",
+            "url": "https://github.com/xeokit/xeokit-sdk/blob/4e771bf20218f7cf794e046ff954e278aa1e2d2a/src/plugins/DistanceMeasurementsPlugin/DistanceMeasurement.js",
+            "blobSha": "0fd01093134fc015a8cefdb03c135e18d7da7f1b"
+          },
+          {
+            "path": "src/plugins/SectionPlanesPlugin/SectionPlanesPlugin.js",
+            "url": "https://github.com/xeokit/xeokit-sdk/blob/4e771bf20218f7cf794e046ff954e278aa1e2d2a/src/plugins/SectionPlanesPlugin/SectionPlanesPlugin.js",
+            "blobSha": "f93b0404927ee13a9d9c4f1ad1f0ff53a976cb0c"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Three.js",
+      "repository": "https://github.com/mrdoob/three.js",
+      "commit": "e06d724a29df5b44c6ad878207974eb09ed7e0d9",
+      "commit_url": "https://github.com/mrdoob/three.js/commit/e06d724a29df5b44c6ad878207974eb09ed7e0d9",
+      "license": "MIT",
+      "docs": [
+        "https://threejs.org/docs/pages/CSS2DRenderer.html",
+        "https://threejs.org/examples/css2d_label",
+        "https://threejs.org/examples/webgl_clipping_advanced.html"
+      ],
+      "idea": [
+        "Use explicit semantic label layers and a selected-member-only detail layer, preserving geometry visibility independently from label visibility.",
+        "Use DOM/SVG text companions for legible member metadata, keyboard-accessible selection controls and a synchronized textual inspection table.",
+        "Implement an original screen-space label layout over the existing renderer: project anchors, measure label bounds, assign outside lanes, resolve overlaps by priority and draw short elbow leaders."
+      ],
+      "limitations": [
+        "The official label example does not by itself provide automatic collision resolution, geometry occlusion handling, keyboard navigation or screen-reader semantics; those are application work.",
+        "CSS2DRenderer documents a 100% browser/display zoom limitation; test the app's chosen overlay implementation with its actual zoom behavior.",
+        "Three.js is a rendering foundation and does not supply BIM semantics, quantity formulas or structural checking."
+      ],
+      "review": {
+        "name": "Three.js",
+        "repo": "mrdoob/three.js",
+        "license": "MIT",
+        "licensePath": "LICENSE",
+        "docs": [
+          {
+            "url": "https://threejs.org/docs/pages/CSS2DRenderer.html"
+          },
+          {
+            "url": "https://threejs.org/examples/css2d_label"
+          },
+          {
+            "url": "https://threejs.org/examples/webgl_clipping_advanced.html"
+          }
+        ],
+        "verifiedFeatures": [
+          "Official CSS2D label example puts name labels and mass labels on separate layers, then independently toggles those layers through camera.layers.",
+          "CSS2D labels are DOM elements attached to objects in the scene graph with per-label placement/centering.",
+          "Advanced clipping example uses per-material clipping planes and transformed clipping volumes.",
+          "CSS2DRenderer documentation describes DOM label rendering, renderOrder/distance-based z-index sorting and 100% browser/display zoom support."
+        ],
+        "transferableIdeas": [
+          "Use explicit semantic label layers and a selected-member-only detail layer, preserving geometry visibility independently from label visibility.",
+          "Use DOM/SVG text companions for legible member metadata, keyboard-accessible selection controls and a synchronized textual inspection table.",
+          "Implement an original screen-space label layout over the existing renderer: project anchors, measure label bounds, assign outside lanes, resolve overlaps by priority and draw short elbow leaders."
+        ],
+        "limitations": [
+          "The official label example does not by itself provide automatic collision resolution, geometry occlusion handling, keyboard navigation or screen-reader semantics; those are application work.",
+          "CSS2DRenderer documents a 100% browser/display zoom limitation; test the app's chosen overlay implementation with its actual zoom behavior.",
+          "Three.js is a rendering foundation and does not supply BIM semantics, quantity formulas or structural checking."
+        ],
+        "sha": "e06d724a29df5b44c6ad878207974eb09ed7e0d9",
+        "date": "2026-10-26T22:41:02Z",
+        "url": "https://github.com/mrdoob/three.js/commit/e06d724a29df5b44c6ad878207974eb09ed7e0d9",
+        "tree": "1f21d47799c3f38f99faa551a04a31face33dc30",
+        "licenseUrl": "https://github.com/mrdoob/three.js/blob/e06d724a29df5b44c6ad878207974eb09ed7e0d9/LICENSE",
+        "sources": [
+          {
+            "path": "examples/css2d_label.html",
+            "url": "https://github.com/mrdoob/three.js/blob/e06d724a29df5b44c6ad878207974eb09ed7e0d9/examples/css2d_label.html",
+            "blobSha": "c20e7a9903796da1eee026cbf7d60e162e0343f5"
+          },
+          {
+            "path": "examples/webgl_clipping_advanced.html",
+            "url": "https://github.com/mrdoob/three.js/blob/e06d724a29df5b44c6ad878207974eb09ed7e0d9/examples/webgl_clipping_advanced.html",
+            "blobSha": "99855a92710fd50ca81a37dea85aa3765c775d84"
+          }
+        ]
+      }
+    }
+  ],
+  "policy": "Ten primary project references inform an original implementation; no upstream runtime or source code is copied. These references do not validate structural design, safe excavation or final bar cutting.",
+  "engineering_sources": [
+    {
+      "id": "NRMCA-water",
+      "title": "NRMCA concrete materials FAQ",
+      "url": "https://www.nrmca.org/association-resources/research-and-engineering/frequently-asked-questions-on-concrete-materials/",
+      "use": "Total mixture water and all contributions must be distinguished; additions must remain within the mixture design."
+    },
+    {
+      "id": "ACI-water",
+      "title": "ACI: water-cementitious ratio",
+      "url": "https://www.concrete.org/frequentlyaskedquestions.aspx?faqid=756",
+      "use": "Water/cementitious ratio uses mass; aggregate moisture and admixture water affect the total."
+    },
+    {
+      "id": "NBC110",
+      "title": "DUDBC: NBC 110, Plain and Reinforced Concrete",
+      "url": "https://www.dudbc.gov.np/content/2404/2404-nbc-110-plain-and-reinforced/",
+      "use": "Official Nepal code reference. This viewer does not claim code compliance or substitute for the coordinated project design."
+    },
+    {
+      "id": "OSHA-excavation",
+      "title": "OSHA 1926.651: excavation",
+      "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.651",
+      "use": "International context for spoil, utilities, access and inspections; not applied as Nepal site-specific design or local law."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "project_name": "14_Basanti Poudel Baral",
   "hub_path": "../basanti-residence/milestone.html",
-  "current_version": "v2",
+  "current_version": "v3",
   "source_pdf_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
   "versions": [
     {
@@ -12,7 +12,7 @@
       "commit": "3ac12287867cd6449adea550b89ba8b8909b4261",
       "archive": "./history/v1-source.json.gz",
       "archive_sha256": "9454dad8eeafde51a59afc62284fcb21d28366b6b40d1be7dec47c5575391969",
-      "status": "Frozen historical model and calculations; shared navigation and responsive presentation. Use v2 for current planning."
+      "status": "Frozen historical model and calculations; shared navigation and responsive presentation. Use v3 for the current detailed review."
     },
     {
       "id": "v2",
@@ -21,9 +21,19 @@
       "path": "./v2/",
       "baseline_commit": "f3feb52d6bc77f0a43b52eb7de4f3e7023123ead",
       "source": "./index.html",
-      "status": "Current workbench, derived from one maintained source"
+      "status": "Preserved v2 workbench baseline; the existing root address and v2 still derive from one source."
+    },
+    {
+      "id": "v3",
+      "title": "Version 3 · detailed drawings and quantities",
+      "purpose": "Inspect excavation cut-edge clearances, named members, source-linked reinforcement and individual bars, configurable annotation layers and concrete material scenarios.",
+      "path": "./v3/",
+      "based_on": "v2",
+      "baseline_commit": "f24f2ad6363dd1d7e1f01b65cf0eafb136cb5c9b",
+      "source": "./v3/index.html",
+      "status": "Current detailed source review; not issued for construction or bar fabrication."
     }
   ],
   "change_report": "./changes/",
-  "policy": "V1 is a checksum-verified frozen model/calculation snapshot with a shared navigation and mobile reading shell. V2 and the existing URL are generated from the same maintained workbench source. The hub and change report derive from this version record and shared comparison text. Historical snapshots are not duplicate editable masters."
+  "policy": "V1 is a checksum-verified frozen model/calculation snapshot with a shared navigation and mobile reading shell. V2 and the existing URL are generated from the same maintained workbench source. The hub and change report derive from this version record and shared comparison text. Historical snapshots are not duplicate editable masters. V3 derives from the same base model and v2 work calculators with a separate, source-linked review patch record; v2 geometry and quantities are preserved."
 }
