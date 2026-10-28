@@ -42,7 +42,7 @@ test('recovery reports stage-specific progress and preserves unknown totals and 
  assert.ok(visible.includes('Terminal closure incomplete'));
  assert.ok(visible.includes('total unknown'));
  assert.ok(visible.includes(recovery.lanes.every(l=>l.sync.pendingSequences===0)?'Main acknowledgements verified':'Local verified · Main pending'));
- assert.ok(visible.includes('No pending notice'));
+ assert.equal(visible.includes('No pending notice'),recovery.lanes.some(l=>l.sync.noticeState==='IDLE'));
  assert.equal(visible.includes('Local work is ahead'),recovery.lanes.some(l=>l.sync.pendingSequences>0));
  const lsa=recovery.lanes.find(l=>l.id==='LSA');
  assert.equal(lsa.sourceTreeAudit.folderListings,140);
@@ -70,7 +70,17 @@ test('resumed run meets its time window and its checkpoint deltas reconcile to c
  assert.ok(Math.abs(elapsed-run.elapsedMinutes)<0.01);
  assert.equal(run.checkpoints.length,recovery.session.lastSessionCheckpoints);
  assert.equal(run.debtClearance.initialEvents+run.debtClearance.newEvents-run.debtClearance.remainingEvents,run.debtClearance.totalAcknowledgedEvents);
- assert.equal(run.debtClearance.newEvents,run.checkpoints.length);
+ const supplemental=run.supplementalEvents??[];
+ assert.equal(run.debtClearance.newEvents,run.checkpoints.length+supplemental.length);
+ assert.equal(new Set(supplemental.map(e=>e.lane)).size,supplemental.length);
+ for(const event of supplemental){
+  const lane=recovery.lanes.find(l=>l.id===event.lane);
+  assert.ok(lane);
+  assert.equal(event.sequence,lane.sync.local);
+  assert.equal(event.providerReadback,'PASS');
+  assert.equal(event.canonicalPromotion,false);
+  assert.match(lane.supplementalEvidence.sha256,/^[a-f0-9]{64}$/);
+ }
  assert.equal(run.debtClearance.remainingEvents,recovery.lanes.reduce((n,l)=>n+l.sync.pendingSequences,0));
  if(!run.inProgress)assert.equal(run.debtClearance.remainingEvents,0);
  for(const id of ['LSA','MSCH']){

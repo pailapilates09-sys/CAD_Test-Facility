@@ -1,23 +1,23 @@
 export const livePhase = {
-  "phase": "531",
-  "title": "Run32 complete — 14 checkpoints through CP514",
+  "phase": "539",
+  "title": "Run33 complete — 5 checkpoints through CP519",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-28T06:05:13.855Z",
-  "checkpoint": "MSCH-CORPUS-CP514",
+  "completedAt": "2026-10-28T23:38:47.584Z",
+  "checkpoint": "MSCH-CORPUS-CP519",
   "before": {
-    "rows": 6748,
-    "folders": 1159,
-    "files": 5589,
-    "pending": 621
-  },
-  "after": {
     "rows": 6836,
     "folders": 1159,
     "files": 5677,
     "pending": 607
   },
-  "completedBatches": 14,
-  "scope": "User-authorized maximum 60-minute four-lane continuation; 14 MSCH metadata checkpoints. Existing source-stage gates retained.",
+  "after": {
+    "rows": 6874,
+    "folders": 1159,
+    "files": 5715,
+    "pending": 602
+  },
+  "completedBatches": 5,
+  "scope": "User-authorized maximum 60-minute four-lane continuation; 5 MSCH metadata checkpoints. Existing source-stage gates retained.",
   "providerReadback": "PASS",
   "localRegistration": "VERIFIED",
   "mainAck": "ACKED",
@@ -26,26 +26,26 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 38.52973333333333,
+    "sourceElapsedMinutes": 30.313566666666667,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 505,
-  "mainCursor": 505,
-  "nextBatch": "B515",
-  "nextTarget": "25",
-  "newRows": 88,
+  "localHighWater": 510,
+  "mainCursor": 510,
+  "nextBatch": "B520",
+  "nextTarget": "2a",
+  "newRows": 38,
   "newFolders": 0,
-  "newFiles": 88,
-  "newKnownBytes": 346476,
-  "sessionStartedAt": "2026-10-28T05:20:21.237Z",
-  "sessionElapsedMinutes": 44.87696666666667,
-  "knownBytes": 66629756025,
+  "newFiles": 38,
+  "newKnownBytes": 855479,
+  "sessionStartedAt": "2026-10-28T23:01:10.764Z",
+  "sessionElapsedMinutes": 37.61366666666667,
+  "knownBytes": 66630611504,
   "sessionReport": {
-    "startedAt": "2026-10-28T05:20:21.237Z",
-    "sourceStoppedAt": "2026-10-28T05:58:53.021Z",
-    "milestones": 14,
-    "advancedLanes": 1,
+    "startedAt": "2026-10-28T23:01:10.764Z",
+    "sourceStoppedAt": "2026-10-28T23:31:29.578Z",
+    "milestones": 5,
+    "advancedLanes": 4,
     "MSCS": {
       "checkpoint": "AQ-CP87 /B075",
       "beforeHashed": 1059,
@@ -53,11 +53,21 @@ export const livePhase = {
       "addedHashes": 0,
       "pending": 808,
       "physicalRecords": 2187,
-      "local": 6,
-      "mainCursor": 6,
+      "local": 7,
+      "mainCursor": 7,
       "notice": "N3 acknowledged",
       "tier3EligibleRemaining": 0,
-      "next": "B076 policy gate"
+      "next": "B076 policy gate",
+      "status": "POLICY_GATE",
+      "pilot": {
+        "verifiedFiles": 3,
+        "verifiedBytes": 6014094,
+        "distinctContentHashes": 1,
+        "canonicalAdmission": "PENDING",
+        "maxFiles": 3,
+        "maxIndividualBytes": 5000000,
+        "maxCumulativeBytes": 10000000
+      }
     },
     "LSA": {
       "checkpoint": "CP80 /B080",
@@ -66,32 +76,41 @@ export const livePhase = {
       "addedFolders": 0,
       "addedFiles": 0,
       "addedMetadataBytes": 0,
-      "local": 31,
-      "mainCursor": 31,
+      "local": 32,
+      "mainCursor": 32,
       "notice": "N27 acknowledged",
       "nativeGridRows": 1500,
-      "next": "B081 baseline reconciliation"
+      "next": "B081 baseline reconciliation",
+      "status": "BASELINE_RECONCILIATION_REQUIRED",
+      "pilot": {
+        "verifiedFiles": 3,
+        "verifiedBytes": 55242,
+        "distinctContentHashes": 1,
+        "canonicalInventoryChanged": false
+      }
     },
     "MSCH": {
-      "checkpoint": "CP514 /B514",
-      "beforeRows": 6748,
-      "afterRows": 6836,
+      "checkpoint": "CP519 /B519",
+      "beforeRows": 6836,
+      "afterRows": 6874,
       "addedFolders": 0,
-      "addedFiles": 88,
-      "addedMetadataBytes": 346476,
-      "pending": 607,
-      "local": 505,
-      "mainCursor": 505,
-      "notice": "N459 ACKED",
-      "next": "B515"
+      "addedFiles": 38,
+      "addedMetadataBytes": 855479,
+      "pending": 602,
+      "local": 510,
+      "mainCursor": 510,
+      "notice": "N464 ACKED",
+      "next": "B520"
     },
     "AEC": {
       "status": "TERMINAL_RECONCILIATION_REQUIRED",
-      "local": 11,
-      "mainCursor": 11,
+      "local": 12,
+      "mainCursor": 12,
       "newRateWrites": 0,
       "g075CheckpointReadable": true,
-      "g076TerminalRecovered": false
+      "g076TerminalRecovered": false,
+      "sourceAndSnapshotVerified": true,
+      "transportRecovered": true
     },
     "sourceContentExtraction": false,
     "sourceMutation": "NONE",
@@ -103,21 +122,22 @@ export const livePhase = {
     ],
     "debtClearance": {
       "initialEvents": 0,
-      "newEvents": 14,
-      "totalAcknowledgedEvents": 14,
+      "newEvents": 8,
+      "totalAcknowledgedEvents": 8,
       "remainingEvents": 0,
       "recoveredEventsAcknowledged": 0,
-      "newEventsAcknowledged": 14,
+      "newEventsAcknowledged": 8,
       "pending": 0
     },
     "remaining": [
       "LSA historical 2 files /9,304 bytes unresolved.",
-      "AEC G075 checkpoint readable; G076 terminal not recovered.",
-      "MSCS oversized/native hashing-policy gate.",
-      "MSCH 607 FIFO folders; source-content extraction remains."
-    ]
+      "AEC source/snapshot reconciled; original terminal404; formal terminal reissue pending.",
+      "MSCS 3 larger-file pilot proofs verified; canonical promotion and remaining native/oversize handling pending.",
+      "MSCH 602 FIFO folders; source-content extraction remains."
+    ],
+    "canonicalSourceAdvanceLanes": 1
   },
-  "scannedFolders": 506,
+  "scannedFolders": 511,
   "phases": [
     {
       "phase": "01",
@@ -3862,6 +3882,62 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B514 24: 4 metadata records",
       "stop": "MSCH-CORPUS-CP514 +Local/Main505/505 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "532",
+      "lane": "MSCH /Local /Main",
+      "work": "B515 25: 6 metadata records",
+      "stop": "MSCH-CORPUS-CP515 +Local/Main506/506 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "533",
+      "lane": "MSCH /Local /Main",
+      "work": "B516 26: 7 metadata records",
+      "stop": "MSCH-CORPUS-CP516 +Local/Main507/507 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "534",
+      "lane": "MSCH /Local /Main",
+      "work": "B517 27: 8 metadata records",
+      "stop": "MSCH-CORPUS-CP517 +Local/Main508/508 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "535",
+      "lane": "MSCH /Local /Main",
+      "work": "B518 28: 8 metadata records",
+      "stop": "MSCH-CORPUS-CP518 +Local/Main509/509 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "536",
+      "lane": "MSCH /Local /Main",
+      "work": "B519 29: 9 metadata records",
+      "stop": "MSCH-CORPUS-CP519 +Local/Main510/510 acknowledged by final reconciliation",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "537",
+      "lane": "MSCS / Local / Main",
+      "work": "3 larger-file integrity proofs; canonical promotion pending",
+      "stop": "Local/Main 7/7 acknowledged; canonical source checkpoint remains separately stated",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "538",
+      "lane": "LSA / Local / Main",
+      "work": "3 subset integrity proofs; historical variance preserved",
+      "stop": "Local/Main 32/32 acknowledged; canonical source checkpoint remains separately stated",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "539",
+      "lane": "AEC / Local / Main",
+      "work": "2 existing rates source/recovery verified; terminal reissue pending",
+      "stop": "Local/Main 12/12 acknowledged; canonical source checkpoint remains separately stated",
       "status": "Complete - stopped"
     }
   ]
