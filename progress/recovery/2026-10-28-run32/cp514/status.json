@@ -1,0 +1,729 @@
+{
+  "schema": "cad-facility.four-project-recovery.v1",
+  "checkedAt": "2026-10-28T06:05:13.855Z",
+  "timezone": "Asia/Kathmandu",
+  "lastSourceSessionCompletedAt": "2026-10-28T05:58:53.021Z",
+  "recoveryStatus": "RUN32_CP514_MAIN_ACKED",
+  "basis": "Recovered and independently verified CP500 four-CURRENT hashes, native PRE and Local/Main491/491; 14 verified FIFO metadata checkpoints; exact raw and Local/Main readbacks; native POST and terminal artifact registration verified.",
+  "scope": "User-authorized maximum 60-minute four-lane continuation; 14 MSCH metadata checkpoints. Existing source-stage gates retained.",
+  "preservedSourceCommit": "ead7ccbc0135eaaf4ecab0be0b0582df9c554ca5",
+  "rollbackCommit": "ead7ccbc0135eaaf4ecab0be0b0582df9c554ca5",
+  "session": {
+    "completedPhases": 531,
+    "lastSessionCheckpoints": 14,
+    "sourceElapsedMinutes": 38.52973333333333
+  },
+  "findings": [
+    "CP501–CP514 added 88 physical metadata identities; source bodies remain unextracted.",
+    "Catalogue 6836 records / 1159 folders / 5677 files; 607 folders queued.",
+    "Local/Main 505/505; N459 ACKED; no acknowledgement debt.",
+    "Complete folder listings and individual parent metadata confirmed before writes; capped text views used a second full direct listing.",
+    "Fresh other-lane SyncState and Main cursors agree: MSCS6/6, LSA31/31, AEC11/11.",
+    "AEC G075 checkpoint access verified; G076 terminal not recovered. No rates were rewritten."
+  ],
+  "lanes": [
+    {
+      "id": "MSCS",
+      "name": "MSc Structural Engineering",
+      "checkpoint": "AQ-CP87",
+      "batch": "B075",
+      "stage": "Source byte hashing",
+      "state": "POLICY_GATE",
+      "stateLabel": "Hashing policy gate",
+      "metric": {
+        "label": "Source files hashed",
+        "done": 1059,
+        "total": 1867,
+        "remaining": 808,
+        "unit": "files"
+      },
+      "inventory": {
+        "rows": 2187,
+        "folders": 320,
+        "files": 1867
+      },
+      "evidence": {
+        "type": "CURRENT JSONL independently downloaded and parsed",
+        "bytes": 2253033,
+        "sha256": "b785742928367c6043258a1f45eb7d96db986c6e573cdffeb9f37c8695e9ff39",
+        "uniqueIds": 2187,
+        "hashValuesPresent": 1059,
+        "agreement": "Run32 CURRENT progress bytes and Local/Main cursors were read. Prior independent manifest/tree evidence is retained; the existing source-stage gate remains."
+      },
+      "sync": {
+        "local": 6,
+        "mainConsumed": 6,
+        "pendingSequences": 0,
+        "notice": "N3",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-10-28T05:59:43.435Z"
+      },
+      "contentExtraction": "Not started",
+      "blocker": "Current Tier 3 eligibility is zero:798 oversized files and 10 Google-native files remain deferred.",
+      "next": {
+        "batch": "B076",
+        "target": "Oversized or Google-native files",
+        "action": "Define the separately governed hashing policy before another source batch."
+      },
+      "comparison": {
+        "onboardingDone": 1015,
+        "addedSinceOnboarding": 44
+      }
+    },
+    {
+      "id": "LSA",
+      "name": "Lok Sewa Study Archive",
+      "checkpoint": "CP80",
+      "batch": "B080",
+      "stage": "Physical catalogue and live-tree reconciliation",
+      "state": "BASELINE_RECONCILIATION_REQUIRED",
+      "stateLabel": "Live tree matched; baseline gap",
+      "metric": {
+        "label": "Historical baseline reconciliation",
+        "done": 1242,
+        "total": 1244,
+        "remaining": 2,
+        "unit": "rows"
+      },
+      "inventory": {
+        "rows": 1242,
+        "folders": 140,
+        "files": 1102,
+        "metadataBytes": 148118054319
+      },
+      "evidence": {
+        "type": "CURRENT JSONL independently downloaded and parsed",
+        "bytes": 726104,
+        "sha256": "997b18a4449b280a9cb77abad790d51730c788414742cc87ae4fe9ebc6b4a59c",
+        "uniqueIds": 1242,
+        "checkpointHashMatch": true,
+        "agreement": "Run32 CURRENT progress bytes and Local/Main cursors were read. Prior independent manifest/tree evidence is retained; the existing source-stage gate remains."
+      },
+      "sync": {
+        "local": 31,
+        "mainConsumed": 31,
+        "pendingSequences": 0,
+        "notice": "N27",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-10-28T05:59:43.435Z"
+      },
+      "contentExtraction": "PDF/OCR, video transcription and semantic extraction not started",
+      "blocker": "Historical baseline differs by 2 files /9,304 bytes: one file /4,652 bytes each in NEA Class files and Standard files-Package. The expected identities are unknown.",
+      "next": {
+        "batch": "B081 reconciliation",
+        "target": "Historical identity inventory for the two baseline discrepancies",
+        "action": "Recover the expected identity-level inventory before the Phase1B freeze or source-content work."
+      },
+      "comparison": {
+        "onboardingDone": 416,
+        "addedSinceOnboarding": 826
+      },
+      "sourceTreeAudit": {
+        "folderListings": 140,
+        "observedRows": 1242,
+        "observedFiles": 1102,
+        "observedFoldersIncludingRoots": 140,
+        "observedTreeFullyRepresented": true,
+        "historicalFileGap": 2,
+        "historicalBytesGap": 9304,
+        "branchGaps": [
+          {
+            "branch": "NEA/Class files",
+            "files": 1,
+            "metadataBytes": 4652
+          },
+          {
+            "branch": "NEA/Standard files-Package",
+            "files": 1,
+            "metadataBytes": 4652
+          }
+        ],
+        "expectedMissingIdsKnown": false
+      }
+    },
+    {
+      "id": "AEC",
+      "name": "AEC Cost & Rate Intelligence",
+      "checkpoint": "G075 closed / G076 PART1",
+      "batch": "G076",
+      "stage": "Original terminal recovery",
+      "state": "TERMINAL_RECONCILIATION_REQUIRED",
+      "stateLabel": "G076 terminal recovery required",
+      "metric": null,
+      "inventory": null,
+      "evidence": {
+        "type": "Original lock and G075 checkpoint read; bounded G076 discovery; Local/Main readback",
+        "rateIds": [
+          "RO-2436",
+          "RO-2437"
+        ],
+        "ratesPresent": true,
+        "originalLockBoundary": "G075 / expected next RO-2436",
+        "agreement": "Run32 G075 checkpoint metadata and content are readable. No matching G076 terminal was recovered in bounded filename discovery. Local/Main11/11 agrees; prior existing-rate evidence is retained and no rate rows were rewritten.",
+        "historicalTerminalReadStatus": 404,
+        "g075CheckpointReadStatus": 200,
+        "g075CheckpointTitle": "CR02_CHECKPOINT__SRC-0005_G075_COMPLETE__20260914_NPT.md",
+        "g076TerminalRecovered": false
+      },
+      "sync": {
+        "local": 11,
+        "mainConsumed": 11,
+        "pendingSequences": 0,
+        "notice": null,
+        "noticeState": "IDLE",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-10-28T05:59:43.435Z"
+      },
+      "contentExtraction": "Two G076 rate rows exist; terminal closure incomplete",
+      "blocker": "G075 checkpoint is readable. G076 still lacks a recovered terminal checkpoint matching the preserved rate evidence; terminal closure remains incomplete.",
+      "next": {
+        "batch": "G076 recovery",
+        "target": "Original terminal checkpoint and original lock",
+        "action": "Recover and reconcile the original G076 terminal with the original lock and existing rows before any further rate writes."
+      }
+    },
+    {
+      "id": "MSCH",
+      "name": "MSc Hydropower Research Corpus",
+      "checkpoint": "CP514",
+      "batch": "B514",
+      "stage": "Recursive physical catalogue",
+      "state": "READY_FIFO_CONTINUATION",
+      "stateLabel": "Saved checkpoint; FIFO remains",
+      "metric": null,
+      "inventory": {
+        "rows": 6836,
+        "folders": 1159,
+        "files": 5677,
+        "pendingFolders": 607,
+        "metadataBytes": 66629756025,
+        "overallDenominator": null
+      },
+      "evidence": {
+        "type": "Four CURRENT raw files independently byte/hash verified per checkpoint",
+        "bytes": 4046256,
+        "sha256": "96b1887d25d367cf705a61f8092ae0b2077059fd93bd3b1e5fa3b250ac0a8ffe",
+        "uniqueIds": 6836,
+        "checkpointHashMatch": true,
+        "agreement": "Run32 CP500 baseline and 14 PRE/CURRENT/checkpoint byte/hash readbacks passed. Exact Local registrations, bounded Main projections and reciprocal ACK 505/505 N459 passed. Native PRE/POST and same-sequence audit registrations verified."
+      },
+      "sync": {
+        "local": 505,
+        "mainConsumed": 505,
+        "pendingSequences": 0,
+        "notice": "N459",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-10-28T06:05:13.855Z"
+      },
+      "contentExtraction": "Source-content extraction and model execution not started",
+      "blocker": "607 FIFO folders remain; complete corpus denominator is unknown. Source-content extraction is a later stage.",
+      "next": {
+        "batch": "B515",
+        "target": "25",
+        "action": "Fresh provider/FIFO/idempotency preflight; one verified checkpoint per phase; coordinated PRE, CURRENT readback and Local/Main closeout."
+      },
+      "comparison": {
+        "onboardingDone": 500,
+        "addedSinceOnboarding": 6336
+      }
+    }
+  ],
+  "continuation": {
+    "rotation": [
+      "MSCH",
+      "LSA",
+      "AEC",
+      "MSCS"
+    ],
+    "phases": [
+      {
+        "lane": "MSCH",
+        "phase": "—",
+        "batch": "B515",
+        "state": "QUEUED"
+      },
+      {
+        "lane": "LSA",
+        "phase": "—",
+        "batch": "B081 reconciliation",
+        "state": "BASELINE_RECONCILIATION_REQUIRED"
+      },
+      {
+        "lane": "AEC",
+        "phase": "—",
+        "batch": "G076 recovery",
+        "state": "TERMINAL_RECONCILIATION_REQUIRED"
+      },
+      {
+        "lane": "MSCS",
+        "phase": "—",
+        "batch": "B076",
+        "state": "POLICY_GATE"
+      }
+    ],
+    "limits": {
+      "checkpointsPerPhase": 1,
+      "maxMinutesPerPhase": 20,
+      "maximumRunMinutes": 60,
+      "authority": "Latest user request: resume the four-in-one extraction for 60 minutes maximum. 14 work units completed with a separate closeout reserve."
+    },
+    "mainSync": "MSCH 505/505 N459 ACKED; MSCS6/6, LSA31/31 and AEC11/11 agree. Source-stage gates remain.",
+    "scheduler": "Manual user-authorized run; no scheduler changes."
+  },
+  "separatePipeline": {
+    "id": "JP Cost",
+    "checkpoint": "M02 v0.5.14",
+    "pages": 697,
+    "sources": 6,
+    "state": "RAW_ARCHIVE_REPORTED_COMPLETE_SEMANTIC_QA_PENDING",
+    "basis": "Historical handover and onboarding snapshot only; source archives not reverified in this recovery.",
+    "note": "Separate from the four lanes and from AEC G076 terminal debt."
+  },
+  "execution": {
+    "startedAt": "2026-10-28T05:20:21.237Z",
+    "stoppedAt": "2026-10-28T06:05:13.855Z",
+    "sourceStoppedAt": "2026-10-28T05:58:53.021Z",
+    "inProgress": false,
+    "durationPolicy": "maximum",
+    "maximumMinutes": 60,
+    "deadline": "2026-10-28T06:20:21.237Z",
+    "maximumWindowRespected": true,
+    "elapsedMinutes": 44.87696666666667,
+    "sourceElapsedMinutes": 38.52973333333333,
+    "added": {
+      "LSA": 0,
+      "MSCH": 88
+    },
+    "checkpoints": [
+      {
+        "lane": "MSCH",
+        "batch": "B501",
+        "checkpoint": "CP501",
+        "added": {
+          "rows": 9,
+          "files": 9,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6757,
+          "files": 5598,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 3999614,
+          "sha256": "8cc26b6b52a2f9a8769fa892d8d7f54e319d19fd304e1acbd9f00dfcd1cad83a"
+        },
+        "createdAt": "2026-10-28T11:08:24.530332+05:45",
+        "completedAt": "2026-10-28T05:24:45.521Z",
+        "local": 492,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B502",
+        "checkpoint": "CP502",
+        "added": {
+          "rows": 9,
+          "files": 9,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6766,
+          "files": 5607,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4004945,
+          "sha256": "0a9936ff2040149afbe5260324c9f2ed198976fbe7f7c1874c48c4f4bf71c513"
+        },
+        "createdAt": "2026-10-28T11:10:01.728872+05:45",
+        "completedAt": "2026-10-28T05:26:38.583Z",
+        "local": 493,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B503",
+        "checkpoint": "CP503",
+        "added": {
+          "rows": 5,
+          "files": 5,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6771,
+          "files": 5612,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4007890,
+          "sha256": "ad740a97a3e594b241eeae5ca2ff9fa29b0c5cdc948d2dba0eab2aeb54b09b06"
+        },
+        "createdAt": "2026-10-28T11:13:33.817843+05:45",
+        "completedAt": "2026-10-28T05:29:54.820Z",
+        "local": 494,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B504",
+        "checkpoint": "CP504",
+        "added": {
+          "rows": 10,
+          "files": 10,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6781,
+          "files": 5622,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4013831,
+          "sha256": "4298bbbfd6de4b02665bd4f617a6db2ca305ac6af9ea46f8fd041e894e433880"
+        },
+        "createdAt": "2026-10-28T11:15:10.477484+05:45",
+        "completedAt": "2026-10-28T05:31:36.509Z",
+        "local": 495,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B505",
+        "checkpoint": "CP505",
+        "added": {
+          "rows": 6,
+          "files": 6,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6787,
+          "files": 5628,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4017372,
+          "sha256": "8e730230f8c9249302d55a3142d118cb54655f4cada61ea474bc61190e4c1fa5"
+        },
+        "createdAt": "2026-10-28T11:18:32.822069+05:45",
+        "completedAt": "2026-10-28T05:34:54.684Z",
+        "local": 496,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B506",
+        "checkpoint": "CP506",
+        "added": {
+          "rows": 4,
+          "files": 4,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6791,
+          "files": 5632,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4019721,
+          "sha256": "6326539bc535758678bf27ca84e30f6e9d67d78c68c034e6ab89463d7cafed5b"
+        },
+        "createdAt": "2026-10-28T11:20:09.034283+05:45",
+        "completedAt": "2026-10-28T05:36:32.337Z",
+        "local": 497,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B507",
+        "checkpoint": "CP507",
+        "added": {
+          "rows": 6,
+          "files": 6,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6797,
+          "files": 5638,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4023263,
+          "sha256": "53ce41ea20a203ee4f2c798f2fa3ec2e0b8a7e3b4b89ee2c65ef347d11f1beb4"
+        },
+        "createdAt": "2026-10-28T11:23:32.223316+05:45",
+        "completedAt": "2026-10-28T05:39:58.683Z",
+        "local": 498,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B508",
+        "checkpoint": "CP508",
+        "added": {
+          "rows": 6,
+          "files": 6,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6803,
+          "files": 5644,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4026805,
+          "sha256": "174b1e82ba9154372b9a19b71aff5f77734c6225a91b5c7279d82f5dbc293e05"
+        },
+        "createdAt": "2026-10-28T11:25:13.316152+05:45",
+        "completedAt": "2026-10-28T05:41:35.098Z",
+        "local": 499,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B509",
+        "checkpoint": "CP509",
+        "added": {
+          "rows": 5,
+          "files": 5,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6808,
+          "files": 5649,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4029743,
+          "sha256": "6145ebf682899d26850745e4bd425b39af265d4f24f6cd68d92e47366f739c0e"
+        },
+        "createdAt": "2026-10-28T11:28:34.410894+05:45",
+        "completedAt": "2026-10-28T05:44:55.392Z",
+        "local": 500,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B510",
+        "checkpoint": "CP510",
+        "added": {
+          "rows": 6,
+          "files": 6,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6814,
+          "files": 5655,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4033287,
+          "sha256": "e157d91851ae28474611cfdcc661e795b8da5bcc978d1ec6be8bba8b91ec5dfd"
+        },
+        "createdAt": "2026-10-28T11:30:09.793176+05:45",
+        "completedAt": "2026-10-28T05:46:40.599Z",
+        "local": 501,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B511",
+        "checkpoint": "CP511",
+        "added": {
+          "rows": 5,
+          "files": 5,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6819,
+          "files": 5660,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4036233,
+          "sha256": "10f35e393c3d5c13f9a2dfd03cc1a07a5ceacdf33ddcd3bffe8b3bcb33641c30"
+        },
+        "createdAt": "2026-10-28T11:33:43.419811+05:45",
+        "completedAt": "2026-10-28T05:50:12.259Z",
+        "local": 502,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B512",
+        "checkpoint": "CP512",
+        "added": {
+          "rows": 6,
+          "files": 6,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6825,
+          "files": 5666,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4039778,
+          "sha256": "75be84ce9c989f1d416003cdca13980060d9c73ccb277717c694e3fcab8e324c"
+        },
+        "createdAt": "2026-10-28T11:35:27.839922+05:45",
+        "completedAt": "2026-10-28T05:51:49.864Z",
+        "local": 503,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B513",
+        "checkpoint": "CP513",
+        "added": {
+          "rows": 7,
+          "files": 7,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6832,
+          "files": 5673,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4043907,
+          "sha256": "cecfcff1a2996341a1b42e9fdf22eb8799f7a61ebe20f1dd5d56eaef8178d7bc"
+        },
+        "createdAt": "2026-10-28T11:38:53.507313+05:45",
+        "completedAt": "2026-10-28T05:55:15.203Z",
+        "local": 504,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B514",
+        "checkpoint": "CP514",
+        "added": {
+          "rows": 4,
+          "files": 4,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6836,
+          "files": 5677,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4046256,
+          "sha256": "96b1887d25d367cf705a61f8092ae0b2077059fd93bd3b1e5fa3b250ac0a8ffe"
+        },
+        "createdAt": "2026-10-28T11:40:30.203535+05:45",
+        "completedAt": "2026-10-28T05:56:56.790Z",
+        "local": 505,
+        "mainAck": "ACKED"
+      }
+    ],
+    "debtClearance": {
+      "initialEvents": 0,
+      "newEvents": 14,
+      "totalAcknowledgedEvents": 14,
+      "remainingEvents": 0,
+      "recoveredEventsAcknowledged": 0,
+      "newEventsAcknowledged": 14,
+      "pending": 0
+    },
+    "sourceBodiesReadOrExecuted": false,
+    "sourceObjectsMutated": false,
+    "schedulerChanged": false
+  },
+  "previousRuntimeIncident": {
+    "checkpoint": "CP122",
+    "status": "CLEARED",
+    "verification": "Raw PRE/CURRENT/checkpoint/POST transfers and exact provider readbacks passed from CP123 onward. Previous49-item preflight was reverified and promoted only as B123–B126 closed."
+  },
+  "branchRecovery": {
+    "transcriptRestored": false,
+    "recoveredFrom": "CP500 / Local/Main491/491",
+    "current": "CP514 / Local/Main505/505",
+    "lsaProgressRechecked": true,
+    "mscsProgressRechecked": true,
+    "aecTerminalRechecked404": true,
+    "otherLaneLocalCursors": "Fresh Run32 Local SyncStates and final Main directory readback agree.",
+    "nativeSnapshotCapacityIncident": "New Local snapshot tabs rejected atomically by provider cell limit; separate full native PRE/POST copies verified; no history removed."
+  },
+  "previousRun": {
+    "checkpoint": "CP500",
+    "local": 491,
+    "main": 491,
+    "path": "2026-10-28-run31/cp500/status.json"
+  },
+  "roadmap": {
+    "schema": "four-lane.roadmap.v1",
+    "stages": [
+      "Inventory",
+      "Integrity",
+      "Approved content extraction",
+      "Validated knowledge",
+      "Use and maintenance"
+    ],
+    "currentSourceStage": "Metadata cataloguing only",
+    "overallCompletionPercent": null,
+    "finishDate": null,
+    "lanes": [
+      {
+        "id": "MSCS",
+        "checkpoint": "AQ-CP87",
+        "nextBatch": "B076",
+        "nextTarget": "Oversized or Google-native files",
+        "gate": "Current Tier 3 eligibility is zero:798 oversized files and 10 Google-native files remain deferred."
+      },
+      {
+        "id": "LSA",
+        "checkpoint": "CP80",
+        "nextBatch": "B081 reconciliation",
+        "nextTarget": "Historical identity inventory for the two baseline discrepancies",
+        "gate": "Historical baseline differs by 2 files /9,304 bytes: one file /4,652 bytes each in NEA Class files and Standard files-Package. The expected identities are unknown."
+      },
+      {
+        "id": "AEC",
+        "checkpoint": "G075 closed / G076 PART1",
+        "nextBatch": "G076 recovery",
+        "nextTarget": "Original terminal checkpoint and original lock",
+        "gate": "G075 checkpoint is readable. G076 still lacks a recovered terminal checkpoint matching the preserved rate evidence; terminal closure remains incomplete."
+      },
+      {
+        "id": "MSCH",
+        "checkpoint": "CP514",
+        "nextBatch": "B515",
+        "nextTarget": "25",
+        "gate": "607 FIFO folders remain; complete corpus denominator is unknown. Source-content extraction is a later stage."
+      }
+    ]
+  },
+  "derivationReadiness": {
+    "inventoryAndIntegrity": "AVAILABLE_WITH_RECORDED_GAPS",
+    "aecStructuredRates": "EXISTING_PARTIAL_SOURCE_LINKED_TABLES",
+    "corpusContentExtraction": "PENDING",
+    "formats": [
+      "JSONL/NDJSON",
+      "JSON",
+      "SQLite (MSCS)",
+      "Markdown",
+      "Google Sheets",
+      "SHA-256 text",
+      "ZIP recovery archives"
+    ],
+    "limitations": "Inventory does not establish extracted source text or validated engineering/study conclusions."
+  },
+  "run32": {
+    "sourceCheckpointCount": 14,
+    "sourceWindowStopped": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "resolvedRegistrationCapacityIncidents": 0,
+    "resolvedTerminalTransportIncidents": 0,
+    "localSaveWaitRecovery": false,
+    "sourceBatchesReplayed": 0,
+    "duplicateRecoveryUploads": 0
+  }
+}
