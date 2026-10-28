@@ -1,0 +1,83 @@
+[
+  {
+    "id": 11,
+    "item_id": 11,
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction material reference for a bill of quantities; not a photograph of the actual project.\nPrimary request: METALLIC STUCCO WALL FINISH, subtle reflective pearlescent metallic trowelled layers with a protective sheen.\nScene/backdrop: quiet contemporary unfinished interior corner, neutral daylight.\nSubject: a broad wall surface with a close foreground material sample of the same finish, showing fine hand-trowelled overlapping texture and restrained silver-warm-grey reflective highlights.\nComposition/framing: square, close architectural product-detail photograph; surface texture in sharp focus, enough surrounding wall context to understand the finish.\nLighting/mood: soft natural side lighting that reveals texture, realistic subdued reflections.\nMaterials/textures: mineral plaster stucco, subtle metallic pigments, satin protective sheen, believable hand-applied variation.\nConstraints: reference example only, no people, no text, no numbers, no dimension labels, no logos, no watermarks, no certificates or claims, no actual studio branding, no collage, preserve natural photographic realism.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-c4d4aeeb-bcac-43b2-b9d3-01e3cdf80da2.png",
+    "output_asset_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-11.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": 12,
+    "item_id": 12,
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction material reference for a bill of quantities; not the actual project.\nPrimary request: DOUBLE-SIDED PLYWOOD PARTITION WITH FORMICA LAMINATE.\nScene/backdrop: plain contemporary fit-out interior with a short freestanding partition demonstration panel on a neutral concrete floor.\nSubject: believable laminated plywood partition, with a small open cutaway at its near end exposing substantial plywood sheets on both faces, each approximately eighteen millimetres in real construction, clean laminated outer finish, internal galvanized steel studs and a timber support member, and pale PU foam acoustic filling between the faces. Plywood grain layers clearly visible in the exposed section. Present both faces in perspective, no gypsum board.\nStyle/medium: natural architectural product-detail photography, realistic construction materials, not a schematic drawing.\nComposition/framing: square three-quarter view, close enough to see layered plywood, internal frame and foam, with most of the partition finished and a limited exposed portion.\nLighting/mood: soft daylight, restrained neutral palette, crisp realistic detail.\nConstraints: illustrative reference example only; no people, no labels, no text, no numbers, no dimension marks, no logos, no watermarks. Do not render plasterboard or gypsum drywall. No claim that this is an approved design.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-8ad175d5-88d6-49ee-9dcb-ed04df42c537.png",
+    "output_asset_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-12.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": 13,
+    "item_id": 13,
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction workmanship reference for a bill of quantities; not the actual project.\nPrimary request: PLYWOOD BULLNOSE EDGE PROFILING.\nScene/backdrop: clean wood fabrication sample on a neutral workbench, no tools needed in frame.\nSubject: close view of a substantial plywood countertop or shelf sample whose exposed long edge is smoothly routed into a true semi-circular full bullnose. The rounded arc smoothly joins top and bottom faces, and must be visibly rounded rather than a square edge or a small chamfer. A small unfinished cross-section at one end exposes many thin veneer layers of the plywood core. The main curved edge is finely sanded and clean with no splinters or chips.\nStyle/medium: realistic close product-detail photography, natural wood color, believable layered birch-type plywood.\nComposition/framing: square macro three-quarter angle along the rounded edge with enough top surface and end cross-section visible to establish the shape; shallow but adequate depth of field.\nLighting/mood: soft natural side light showing the rounded profile and smooth workmanship.\nConstraints: illustrative reference only; no people, no hands, no text, no numbers, no labels, no dimension marks, no logos, no watermarks, no actual studio branding, no drawing or diagram.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-b7ac419c-433c-47d0-8ea9-3803c8dcd832.png",
+    "output_asset_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-13.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": 14,
+    "item_id": 14,
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction workmanship reference for a bill of quantities; not the actual studio.\nPrimary request: FIBRE CEMENT BOARD COLUMN-TO-CEILING FILLET OR CORNICE.\nScene/backdrop: quiet neutral interior fit-out, view upward at a square column meeting a flat ceiling.\nSubject: a smooth simple coved transition gently curving from the vertical column faces outward into the horizontal ceiling, fabricated with flexible fibre cement board on a curved galvanized-steel framework. Most of the fillet is finished with a plain off-white skim surface. A small discreet open construction section along one edge reveals a thin grey cement board sheet, its fibrous unfinished cut edge, screws, and curved GI support members behind the surface. This should read as a practical fabricated board detail rather than stone or ornamental carving.\nStyle/medium: realistic architectural construction-detail photograph, natural materials.\nComposition/framing: square close upward oblique view; column top, ceiling, smooth cove, and limited exposed board/framework section are all visible.\nLighting/mood: soft side daylight, understated white and grey palette.\nConstraints: illustrative reference only, no people, no text, no labels, no numbers, no dimension marks, no logos, no watermarks. No carved marble, no marble veining, no classical capitals, no decorative plaster ornament, no actual project claim.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-a511377e-28ed-4917-b4d6-39fd152740b3.png",
+    "output_asset_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-14.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": 15,
+    "item_id": 15,
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative interior construction reference for a bill of quantities, not the actual studio.\nPrimary request: FRAMELESS TOUGHENED GLASS PARTITION AND PATCH-FITTED DOOR, representing substantial twelve-millimetre clear glass with no printed measurements.\nScene/backdrop: neutral contemporary commercial interior with soft daylight and a simple pale floor and walls.\nSubject: clear fixed frameless glass panels beside one closed clear glass swing door, polished stainless-steel patch fittings at the door top and bottom, a floor-spring cover plate at the base, and a stainless H-shaped pull handle. Show realistic substantial polished glass edges, precise gaps, believable reflections and transparent view through the partition. Keep adjacent fixed panels frameless, minimal hardware.\nStyle/medium: realistic architectural product photograph, physical glass transparency and subtle green edges.\nComposition/framing: square wide-enough three-quarter view to show the complete door from top patch to floor spring, the handle, and an adjacent fixed glass panel.\nLighting/mood: natural side daylight, quiet neutral palette, controlled reflections.\nConstraints: illustrative reference example only, no people or reflected people, no text, no numbers, no dimension marks, no labels, no logos, no watermarks, no actual studio branding, no certification claims. No heavy framed door system.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-d656095c-43a1-4f97-aeda-ebc9282e0b76.png",
+    "output_asset_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-15.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": 16,
+    "item_id": 16,
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction hardware reference for a bill of quantities, not an actual project photograph.\nPrimary request: CURTAIN ROD OR TRACK BRACKETS AND FIXINGS, focus on support hardware.\nScene/backdrop: pale interior wall and ceiling junction beside a window, neutral natural daylight.\nSubject: close-up of a sturdy brushed metal wall-mounted bracket supporting a simple metal curtain rod or slim track. Clearly show the bracket arm, mounting plate, neat screw heads, secure wall fixing positions, rod or track attachment, and a clean end cap. Include a loose matching wall plug and screw resting on the nearby ledge as unlabelled product context, not an assembly tutorial. Only a narrow sliver of plain neutral curtain fabric at the distant edge provides context; the fabric is not the subject.\nStyle/medium: natural macro product-detail photograph, believable metallic texture and clean construction finish.\nComposition/framing: square close three-quarter perspective, support bracket and mounting plate sharply focused, minimal background, hardware clearly dominates frame.\nLighting/mood: soft natural window light, neutral whites and brushed steel.\nConstraints: reference example only; no people, no hands, no text, no numbers, no labels, no dimension markings, no logos, no watermarks, no actual studio branding. Do not feature a full curtain installation or imply curtain fabric is part of the hardware package.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-d5324c9b-e07a-473b-9cd7-cb8cc7736fa3.png",
+    "output_asset_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-16.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": 17,
+    "item_id": 17,
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative interior electrical and lighting reference for a bill of quantities; not the actual studio or an installation plan.\nPrimary request: INTERIOR ELECTRICAL AND ARCHITECTURAL LIGHTING PACKAGE.\nScene/backdrop: simple finished contemporary commercial interior corner, warm-neutral walls and ceiling, no studio equipment or branding.\nSubject: coordinated finished lighting elements in one believable room view: a recessed linear LED profile, soft indirect cove light, a restrained pendant, and small recessed downlights. On the near wall show a neatly finished switch plate and electrical socket; a small area of tidy surface conduit ending in a closed service box can indicate electrical services without exposing any terminals. Include a short neatly coiled insulated cable offcut resting on a shallow construction sample ledge, with no bare copper and no connections demonstrated.\nStyle/medium: photorealistic natural architectural photograph with real material textures, subtle light glow, believable warm-white illumination.\nComposition/framing: square oblique interior view, lighting fixtures readable above and switch/socket and clean conduit detail visible in near foreground; balanced uncluttered composition.\nConstraints: illustrative reference only, no wiring diagram, no invented circuit plan, no assembly instructions, no exposed energized terminals, no sparks, no people, no text, no numbers, no labels, no logos, no watermarks. No claim of actual project fixture selection or quantities.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-9eb22038-3534-4d66-87ec-965d960b216b.png",
+    "output_asset_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-17.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": 18,
+    "item_id": 18,
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative interior fixture reference for a bill of quantities; not an actual studio photograph.\nPrimary request: ILLUMINATED LED VANITY WALL MIRROR.\nScene/backdrop: clean neutral washroom vanity wall with pale textured plaster, a simple light-colored counter and basin partly visible below.\nSubject: polished wall mirror with a frameless-looking glass face and concealed support frame, diffused warm-white perimeter or backlit LED halo evenly illuminating the wall around it. The slim edge and soft halo should be clearly visible from a slight angle. Reflect only a quiet plain interior wall, no people. The subject is the illuminated mirror, not a smart display.\nStyle/medium: realistic natural architectural product photograph, believable glass reflection and light falloff.\nComposition/framing: square three-quarter close view, full rectangular mirror visible with restrained vanity context, no fixed size implied.\nLighting/mood: calm soft ambient light, LED halo distinct but not overexposed.\nConstraints: illustrative reference only, no people or reflected people, no text, no numbers, no labels, no dimension marks, no logos, no watermarks, no actual studio branding. No anti-fog symbols, no demister controls, no optional smart features or certification claims.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-ebb80389-94d5-43f6-a1c1-08dae6c9ad05.png",
+    "output_asset_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-18.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": 19,
+    "item_id": 19,
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative LED signage product reference for a construction bill of quantities; not an approved brand design or actual studio photograph.\nPrimary request: ILLUMINATED LED BRAND SIGNAGE ON CLEAR ACRYLIC BACKBOARD, represented by an unbranded abstract motif rather than words.\nScene/backdrop: quiet pale interior wall, neutral understated commercial setting.\nSubject: a simple abstract flowing LED neon motif composed of a few smooth continuous curved strokes, with no recognizable letters or readable words, mounted onto a visible clear laser-cut acrylic backer following its general outline. Show polished acrylic edges, small cylindrical stainless-steel wall standoffs, wall shadow gaps, and discreet thin concealed power wiring emerging behind the backer. Warm-white LED tube is evenly illuminated and physically attached to the transparent acrylic.\nStyle/medium: realistic close architectural product photograph, believable transparent acrylic, stainless fixings and soft light spill.\nComposition/framing: square three-quarter angle with the whole abstract sign in frame and one acrylic edge and standoff clearly visible, enough wall context to understand installation.\nLighting/mood: soft ambient light, restrained LED glow without overexposure.\nConstraints: illustrative product example only, no people, no text, no letters, no numbers, no readable brand, no invented Paila typography, no logos, no labels, no dimension marks, no watermarks, no certificates. Do not imply this is an approved visual identity or design.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-853d0e71-00f6-4df3-ab53-fb16003a1361.png",
+    "output_asset_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-19.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  }
+]

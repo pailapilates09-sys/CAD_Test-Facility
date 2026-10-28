@@ -1,0 +1,374 @@
+{
+  "categories": {
+    "walls": "Wall finishes",
+    "storage": "Cabinets, shelves and edges",
+    "ceilings": "Ceilings and cornices",
+    "mirrors": "Mirrors and backing",
+    "floors": "Flooring",
+    "partitions": "Partitions and glass",
+    "fittings": "Fittings and lighting"
+  },
+  "items": [
+    {
+      "id": "hamro-01",
+      "short_title": "PVC fluted wall panels",
+      "category": "walls",
+      "plain_summary": "Grooved PVC panels give the walls a decorative finish.",
+      "included": "Wall panels, hidden clips and adhesive, corner trims and end caps.",
+      "key_specs": [
+        "Moisture-resistant PVC",
+        "Tongue-and-groove joints",
+        "Matching trims included"
+      ],
+      "confirm": "Confirm panel thickness, finish sample and which walls the 61.34 m² covers.",
+      "illustration": {
+        "file": "images/work-01.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-02",
+      "short_title": "Full-height plywood wardrobe",
+      "category": "storage",
+      "plain_summary": "A fitted wardrobe with shelves, hanging space and laminated doors.",
+      "included": "Plywood body and backing, Formica finish, edge bands, hinges, runners, rods, handles and locks.",
+      "key_specs": [
+        "18 mm plywood;6/9 mm backing",
+        "0.8 mm Formica laminate",
+        "Soft-close hardware specified"
+      ],
+      "confirm": "Confirm wardrobe dimensions, internal layout and how the quoted square metres are measured.",
+      "illustration": {
+        "file": "images/work-02.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-03",
+      "short_title": "Custom plywood base cabinets",
+      "category": "storage",
+      "plain_summary": "Low fitted cabinets below the counter, with drawers and storage.",
+      "included": "Plywood body and backing, laminate, edge bands, hinges, drawer runners, handles and levelling legs/skirting.",
+      "key_specs": [
+        "18 mm plywood;6/9 mm backing",
+        "0.8 mm Formica laminate",
+        "Full-extension drawer runners"
+      ],
+      "confirm": "Confirm cabinet layout and billing-area method. A countertop/sink is not expressly priced in this line.",
+      "illustration": {
+        "file": "images/work-03.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-04",
+      "short_title": "Wall-mounted open plywood shelves",
+      "category": "storage",
+      "plain_summary": "Open shelves fixed neatly to the wall with concealed supports.",
+      "included": "Plywood shelves, Formica finish, sealed edges, concealed brackets and wall anchors.",
+      "key_specs": [
+        "18 mm or 36 mm plywood",
+        "0.8 mm laminate",
+        "Concealed heavy-duty brackets"
+      ],
+      "confirm": "Confirm shelf lengths, depths, number of shelves and the square-metre measurement method.",
+      "illustration": {
+        "file": "images/work-04.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-05",
+      "short_title": "Decorative gypsum false ceiling",
+      "category": "ceilings",
+      "plain_summary": "A suspended ceiling with steps, light coves and openings for services.",
+      "included": "Gypsum boards, suspended GI frame, hangers, cutouts, joint tape, compound and sanding; ready for paint.",
+      "key_specs": [
+        "9.5/12.5 mm gypsum boards",
+        "Suspended GI framework",
+        "Paint application is separate"
+      ],
+      "confirm": "Confirm the reflected ceiling plan and why only 17.50 m² is quoted.",
+      "illustration": {
+        "file": "images/work-05.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-06",
+      "short_title": "Cement-board mirror backing",
+      "category": "mirrors",
+      "plain_summary": "A flat, rigid backing surface prepared to support wall mirrors.",
+      "included": "Fibre-cement boards, supporting frame, fasteners, joint tape and joint finishing.",
+      "key_specs": [
+        "8–12 mm fibre-cement board",
+        "GI studs or treated timber",
+        "Prepared to receive mirror adhesive"
+      ],
+      "confirm": "This line prepares the backing. Mirror glass and its mounting quantity need separate confirmation.",
+      "illustration": {
+        "file": "images/work-06.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-07",
+      "short_title": "SPC click-lock plank flooring",
+      "category": "floors",
+      "plain_summary": "Rigid click-lock floor planks with an acoustic underlay and matching edges.",
+      "included": "SPC planks, attached pad, subfloor preparation, skirting and doorway transition profiles.",
+      "key_specs": [
+        "4–5 mm rigid core",
+        "0.3–0.5 mm wear layer",
+        "IXPE/EVA pad; Indian-made specified"
+      ],
+      "confirm": "Confirm product/brand, wear layer, floor plan and whether 181.15 m² is net coverage or includes wastage.",
+      "illustration": {
+        "file": "images/work-07.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-08",
+      "short_title": "Matte distemper ceiling paint",
+      "category": "ceilings",
+      "plain_summary": "A smooth matte painted ceiling, including preparation and primer.",
+      "included": "Surface preparation, putty, sanding, one primer coat and at least two acrylic distemper coats.",
+      "key_specs": [
+        "Ceiling painting",
+        "One primer coat",
+        "Minimum two finishing coats"
+      ],
+      "confirm": "The paint description names fibre-cement board, while item 5 specifies gypsum. Confirm the actual ceiling substrate.",
+      "illustration": {
+        "file": "images/work-08.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-09",
+      "short_title": "Textured emulsion wall paint",
+      "category": "walls",
+      "plain_summary": "Washable emulsion paint with the agreed decorative wall texture.",
+      "included": "Two putty coats, sanding, one primer coat and at least two textured emulsion coats.",
+      "key_specs": [
+        "Acrylic emulsion",
+        "Two putty base coats",
+        "Approve a texture sample"
+      ],
+      "confirm": "Confirm wall locations, colour and texture sample. The76.20 m² is a wall-work quantity, not the studio floor area.",
+      "illustration": {
+        "file": "images/work-09.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-10",
+      "short_title": "White limewash wall finish",
+      "category": "walls",
+      "plain_summary": "A soft, chalky white finish with a natural mottled brush texture.",
+      "included": "Wall preparation, mineral-compatible primer, two to three limewash coats and sealer if specified.",
+      "key_specs": [
+        "White slaked-lime finish",
+        "Two to three coats",
+        "Sealer only if specified"
+      ],
+      "confirm": "Confirm wall locations, sample and whether a protective sealer is included.",
+      "illustration": {
+        "file": "images/work-10.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-11",
+      "short_title": "Metallic stucco wall finish",
+      "category": "walls",
+      "plain_summary": "A decorative, reflective wall texture applied by hand with trowels.",
+      "included": "Surface preparation, primer, metallic/pearlescent stucco layers and protective wax/acrylic sealer.",
+      "key_specs": [
+        "Hand-trowelled layers",
+        "Metallic/pearlescent effect",
+        "Protective finish included"
+      ],
+      "confirm": "Approve the colour, sheen and physical sample; confirm which walls receive this finish.",
+      "illustration": {
+        "file": "images/work-11.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-12",
+      "short_title": "Laminated plywood partition wall",
+      "category": "partitions",
+      "plain_summary": "A room divider with plywood and laminate on both sides and foam inside.",
+      "included": "Anchored GI/timber frame, PU foam cavity fill, plywood both sides, laminate, adhesive and sealed edges.",
+      "key_specs": [
+        "18 mm plywood both sides",
+        "0.8 mm Formica laminate",
+        "PU foam cavity fill"
+      ],
+      "confirm": "Confirm partition height/length and whether 9.18 m² measures one face or both faces. Do not double it without confirmation.",
+      "illustration": {
+        "file": "images/work-12.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-13",
+      "short_title": "Rounded plywood bullnose edges",
+      "category": "storage",
+      "plain_summary": "Smooth, rounded edges routed into the plywood joinery.",
+      "included": "Routing, filler/putty and sanding to prepare the edge for the specified finish.",
+      "key_specs": [
+        "Charged by length",
+        "Rounded semi-circular profile",
+        "Prepared for a later finish"
+      ],
+      "confirm": "Confirm the radius and edge locations. Final Duco/PU/melamine coating is mentioned as a later finish, not clearly included here.",
+      "illustration": {
+        "file": "images/work-13.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted running length; width and component count are not supplied."
+    },
+    {
+      "id": "hamro-14",
+      "short_title": "Curved column-to-ceiling cornice",
+      "category": "ceilings",
+      "plain_summary": "A shaped transition where a column meets the ceiling.",
+      "included": "Flexible fibre-cement board, shaped GI/timber support, fasteners, tape, compound and sanding; ready for paint.",
+      "key_specs": [
+        "6–8 mm flexible cement board",
+        "Curved or angled profile",
+        "Charged by running metre"
+      ],
+      "confirm": "Confirm the profile, width, radius and total run. The8.94 m is a length, not a surface area.",
+      "illustration": {
+        "file": "images/work-14.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted running length; width and component count are not supplied."
+    },
+    {
+      "id": "hamro-15",
+      "short_title": "Frameless glass walls and doors",
+      "category": "partitions",
+      "plain_summary": "Clear glass partitions with matching glass doors and stainless hardware.",
+      "included": "Tempered glass, fixed-panel channels, polished edges, patch fittings, closers, handles, locks and silicone joints.",
+      "key_specs": [
+        "12 mm toughened glass",
+        "SS304/316 hardware",
+        "Doors included in stated scope"
+      ],
+      "confirm": "Confirm glass panel sizes, door count, opening direction and hardware brands. The quotation gives only a combined area.",
+      "illustration": {
+        "file": "images/work-15.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted billing area. Exact layout and dimensions are not supplied."
+    },
+    {
+      "id": "hamro-16",
+      "short_title": "Curtain rod and track brackets",
+      "category": "fittings",
+      "plain_summary": "Supports and fittings for the curtain rods or tracks.",
+      "included": "Metal brackets, anchors, screws, mounting plates, end caps and matching finials as described.",
+      "key_specs": [
+        "SS or coated aluminium",
+        "Single/double drapery support",
+        "Quoted by length"
+      ],
+      "confirm": "Confirm rod/track supply, bracket spacing and quantity. Curtain fabric is not expressly included.",
+      "illustration": {
+        "file": "images/work-16.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted running length; width and component count are not supplied."
+    },
+    {
+      "id": "hamro-17",
+      "short_title": "Interior electrical and lighting",
+      "category": "fittings",
+      "plain_summary": "One complete package for internal wiring, switches, sockets and architectural lights.",
+      "included": "FRLS copper wiring, PVC conduits, modular switches/sockets, specified LED profiles/coves/pendants/downlights, drivers, earthing, testing and commissioning.",
+      "key_specs": [
+        "One lump-sum package",
+        "Fixtures included as specified",
+        "Testing and commissioning included"
+      ],
+      "confirm": "Request a point/fixture schedule, brands, circuit/DB details, earthing scope and exclusions. No point count or area is supplied.",
+      "illustration": {
+        "file": "images/work-17.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Whole package; point counts and area are not supplied."
+    },
+    {
+      "id": "hamro-18",
+      "short_title": "LED-backlit vanity mirror sets",
+      "category": "mirrors",
+      "plain_summary": "Five illuminated mirror sets with hidden frames and LED lighting.",
+      "included": "Mirror glass, polished edges, concealed frame, LED strips/drivers, wall mounting and electrical connection.",
+      "key_specs": [
+        "5 mm mirror glass",
+        "Five sets quoted",
+        "Touch/demister only if specified"
+      ],
+      "confirm": "Confirm size of each set, lighting/IP rating and whether optional touch sensors or demisters are included.",
+      "illustration": {
+        "file": "images/work-18.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted sets; individual dimensions are not supplied."
+    },
+    {
+      "id": "hamro-19",
+      "short_title": "Illuminated acrylic brand signs",
+      "category": "fittings",
+      "plain_summary": "Two illuminated brand-sign sets on clear acrylic backboards.",
+      "included": "LED neon strip lettering/graphics, acrylic backer, drivers, concealed wiring and stainless standoff fixings.",
+      "key_specs": [
+        "Two sets quoted",
+        "Clear acrylic backing",
+        "Final brand design to be approved"
+      ],
+      "confirm": "Confirm sign sizes, final artwork, lighting colour, installation locations and warranty.",
+      "illustration": {
+        "file": "images/work-19.jpg",
+        "kind": "AI_GENERATED_ILLUSTRATIVE_REFERENCE",
+        "caption": "AI-generated example of this type of work. The studio design and quantities come from the quotation, not this image."
+      },
+      "measurement_note": "Quoted sets; individual dimensions are not supplied."
+    }
+  ]
+}
