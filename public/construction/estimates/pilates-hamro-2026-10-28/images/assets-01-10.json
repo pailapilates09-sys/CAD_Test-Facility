@@ -1,0 +1,82 @@
+[
+  {
+    "id": "01",
+    "prompt": "Use case: photorealistic-natural\nAsset type: square construction material reference image for an illustrative commercial interior estimate\nPrimary request: Architectural PVC fluted wall panels, clearly a manufactured PVC panel system rather than solid wood. Close-to-mid view of completed vertical tongue-and-groove panels in a quiet neutral commercial interior. Show a clean finished external corner with matching corner trim. At one small unfinished edge, reveal a modest installation detail with adhesive and concealed clips behind a panel.\nStyle/medium: natural editorial architectural product photograph, realistic material texture and soft daylight, no people.\nComposition/framing: square composition, wall panels fill most of frame, sufficient context to understand the corner and small exposed edge, no collage, no exploded diagram.\nConstraints: illustrative sample interior only, not any actual studio or job site. No text, numbers, labels, measurements, costs, logos, watermark, people, or certification marks.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-da4e9dd7-4665-4be5-9146-62eda4bfd867.png",
+    "output_file_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-01.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": "02",
+    "prompt": "Use case: photorealistic-natural\nAsset type: square construction work reference photograph for an illustrative commercial interior estimate\nPrimary request: A floor-to-ceiling built-in commercial plywood wardrobe with clean Formica laminate exterior and visible PVC edge banding. Show a pair of simple neutral laminated doors, one partly open so interior plywood shelves, a hanging rail, and realistic soft-close concealed hinges are clearly visible. The material should read as laminated plywood cabinetry, not solid timber.\nScene/backdrop: calm generic commercial changing or storage room, simple uncluttered interior.\nStyle/medium: realistic natural architectural product photography with soft daylight and believable joinery.\nComposition/framing: square image, three-quarter view, wardrobe fills most of frame with floor and ceiling context, partly open door reveals hardware.\nConstraints: illustrative sample only, no claim to depict an actual studio. No text, numbers, dimensions, costs, logos, watermarks, people, collage, or labels.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-9156d9db-3637-4d2c-8a36-2ecf6337b3d6.png",
+    "output_file_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-02.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": "03",
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction work reference photograph\nPrimary request: Under-counter base cabinets built from commercial plywood with a clean Formica laminate exterior and PVC edge banding. A neutral worktop sits above the cabinets. One soft-close drawer is partly open, revealing the drawer runner hardware and laminated plywood box. Show a recessed adjustable skirting/toe-kick, with one small unobtrusive end opening revealing an adjustable cabinet leg behind it.\nScene/backdrop: simple generic commercial interior with clean wall and modest floor context, no decorative clutter.\nStyle/medium: believable natural architectural product photo with soft daylight, crisp material detail.\nComposition/framing: square three-quarter close-to-mid view, cabinetry is the dominant subject; no collage or diagram.\nConstraints: illustrative example only, not a photograph of an actual studio. No text, numbers, labels, dimensions, costs, brand logos, watermark, people, or certification.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-ca16791c-5b29-402c-a6e4-5f66642e1f57.png",
+    "output_file_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-03.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": "04",
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction work reference photograph\nPrimary request: Wall-attached open plywood shelves with smooth neutral laminate finish and carefully finished edge banding, mounted with concealed internal brackets so the main shelves appear cleanly floating. Show two or three practical straight horizontal shelves in a generic commercial interior. At one small uncompleted shelf end, a discreet exposed concealed bracket pin and the layered plywood core can be seen, while the rest is finished.\nScene/backdrop: plain warm-white wall, uncluttered, no merchandise or decorative objects.\nStyle/medium: natural architectural product photography, soft daylight, believable joinery and material detail.\nComposition/framing: square clean close-to-mid three-quarter view, shelves fill most of image, no collage or exploded diagram.\nConstraints: illustrative material example only, not an actual studio photograph. No text, numbers, labels, dimensions, costs, logos, watermark, people, or certification symbols.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-6450d017-e6ab-45a0-bb01-ccdbff4527df.png",
+    "output_file_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-04.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": "05",
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction work reference photograph\nPrimary request: Decorative suspended gypsum false ceiling in a generic commercial interior, viewed clearly upward so the ceiling is unmistakably the main subject. Show a clean stepped ceiling drop with a perimeter light cove. A small unfinished edge reveals the concealed galvanized iron suspension framework, thin metal channels and hangers behind gypsum board. Most of the ceiling is neatly finished matte white.\nStyle/medium: realistic architectural detail photography with gentle daylight and subtle warm cove lighting, believable gypsum board and GI material.\nComposition/framing: square upward three-quarter camera view, ceiling occupies most of frame, only small upper-wall context, no collage or exploded illustration.\nConstraints: illustrative material and work example only, no actual studio or job-site claim. No text, numbers, labels, dimensions, costs, logos, watermarks, people, or certification marks.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-58296b8d-db0a-40e2-8787-35c2d663993f.png",
+    "output_file_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-05.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": "06",
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction work reference photograph\nPrimary request: Fibre cement board backing prepared for a large interior wall mirror, clearly a board installation rather than a plain concrete wall. Show several smooth grey fibre cement sheets on a concealed galvanized steel framework, neat countersunk screw fasteners and taped board joints. At a small unfinished outside edge, reveal the thin board thickness and a glimpse of galvanized framework behind. A small unbranded mirror sample leans safely beside the installed backing, reflecting a neutral empty interior, so the backing remains dominant and visible.\nScene/backdrop: generic quiet commercial interior under fit-out, no people or clutter.\nStyle/medium: believable natural construction detail photography, soft daylight, realistic board texture and fastening details.\nComposition/framing: square, three-quarter close-to-mid view of wall backing, no collage or exploded drawing.\nConstraints: illustrative sample only, not an actual studio or construction instruction. No text, numbers, dimensions, costs, labels, logos, watermarks, people or certification.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-94ee290d-8b1c-432f-a723-09560f931d24.png",
+    "output_file_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-06.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": "07",
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction work reference photograph\nPrimary request: SPC rigid-core click-lock plank flooring installed in a generic commercial interior, with a realistic lightly textured neutral oak-look vinyl surface, clearly long narrow planks rather than ceramic tiles. Show matching perimeter skirting at a wall. At one small unfinished edge in the foreground, a loose same-material plank exposes its rigid core and click-lock edge, with a thin acoustic underlay pad visible beneath the installed floor.\nStyle/medium: believable natural architectural material photograph with soft daylight and crisp close detail.\nComposition/framing: square low three-quarter view looking across floor to skirting, floor dominates, no collage, no exploded drawing.\nConstraints: illustrative material sample only, no actual studio or installation claim. No text, numbers, labels, dimensions, costs, logos, watermarks, people, or certification marks. Avoid ceramic tile grout and stone slab appearance.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-3e466927-0ff8-463b-92a5-ab64fff82703.png",
+    "output_file_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-07.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": "08",
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction work reference photograph\nPrimary request: Acrylic distemper ceiling paint shown as a clean even matte off-white finish on a suspended ceiling in a generic commercial interior. The ceiling is the main subject. Include a small painting-in-progress detail at one edge: an unbranded paint roller on an extension pole resting against a small freshly rolled patch of ceiling, with the pole extending out of frame and no painter or hands visible. Most of the ceiling is completed and subtly matte, not glossy.\nStyle/medium: realistic natural architectural detail photography, soft daylight that reveals an even paint finish.\nComposition/framing: square upward oblique view, ceiling fills most of frame, a small amount of upper-wall context, no collage or diagram.\nConstraints: illustrative finish example only, no claim to show actual studio. No text, numbers, labels, measurements, costs, logos, watermarks, people, faces, hands, or certification marks.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-15ba1b4c-14f7-4946-b96e-11a82b7cd0a7.png",
+    "output_file_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-08.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": "09",
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction work reference photograph\nPrimary request: Acrylic emulsion textured wall paint in a generic commercial interior. A warm neutral wall with subtle fine architectural texture is mostly cleanly finished, with enough side daylight to reveal the delicate paint surface. Show one small painting-work detail at the lower edge: an unbranded texture roller and plain paint brush on a folded protective cloth, no worker or hands. The wall texture should be refined and even, finer than rough plaster and distinct from mottled limewash.\nStyle/medium: natural close architectural surface photography, believable matte paint, soft raking daylight.\nComposition/framing: square close-to-mid wall view with a little floor/skirting context, wall surface dominates, no collage or diagram.\nConstraints: illustrative finish sample only, not an actual studio photograph. No text, numbers, labels, dimensions, costs, logos, watermark, people, or certification marks.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-69549c9c-48d8-4781-9bac-1187a002744a.png",
+    "output_file_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-09.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  },
+  {
+    "id": "10",
+    "prompt": "Use case: photorealistic-natural\nAsset type: square illustrative construction work reference photograph\nPrimary request: White limewash wall finish with characteristic softly mottled chalky mineral appearance and overlapping broad brush cross-hatch marks. Show the natural finished surface close enough to appreciate translucent tonal variation and hand-brushed texture, with a little corner, skirting and daylight context from a generic commercial interior. Finish is white to soft off-white, matte and breathable-looking, not glossy paint, not heavy stucco, no cracks or damage.\nStyle/medium: realistic natural architectural surface photography, gentle raking daylight with authentic mineral texture.\nComposition/framing: square close-to-mid wall detail, surface fills most of frame, simple quiet context, no collage or diagram.\nConstraints: illustrative finish sample only, not an actual studio photograph or approved design. No text, numbers, labels, dimensions, costs, logos, watermarks, people, tools with brand labels, or certification marks.",
+    "raw_generated_path": "/workspace/scratch/063f991233cc/generated_images/exec-50861339-a68f-43bc-a18b-e640b5cafe2a.png",
+    "output_file_path": "/workspace/scratch/063f991233cc/building-pdf/public/construction/estimates/pilates-hamro-2026-10-28/images/work-10.jpg",
+    "media_type": "image/jpeg",
+    "generated": true
+  }
+]
