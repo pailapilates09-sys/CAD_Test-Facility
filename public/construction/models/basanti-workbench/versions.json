@@ -1,7 +1,7 @@
 {
   "project_name": "14_Basanti Poudel Baral",
   "hub_path": "../basanti-residence/milestone.html",
-  "current_version": "v5",
+  "current_version": "v6",
   "source_pdf_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
   "versions": [
     {
@@ -51,9 +51,19 @@
       "based_on": "v4",
       "baseline_commit": "13fcfc461c7b2151777c2c5a330c211c2d51a1de",
       "source": "Build-time v4 derivation plus v5 proposed-model / shape / viewer modules",
-      "status": "Current proposed calculation basis, not an issued structural design or approved steel order."
+      "status": "Preserved v5 proposed basis; its nominal column closures remain unresolved. V6 adds two-piece beam closures, rejected reference-coupler fit checks and default vector3D."
+    },
+    {
+      "id": "v6",
+      "title": "Version6 · beam closures and column connections",
+      "purpose": "Inspect dimensioned two-piece beam links, separate U/cap quantities, staggered column splice levels, actual sleeve/hoop clash checks and a reliable vector3D default.",
+      "path": "./v6/",
+      "based_on": "v5",
+      "baseline_commit": "8adf52719494c5fda06d7723cced3de6e7713d0a",
+      "source": "Build-time v5 derivation plus v6 connection geometry, view and decision modules; canonical source unchanged",
+      "status": "Current dimensioned coordination workspace. Reference TT product rejected for seismic supply and cage clashes. Column closures remain held; no structural/fabrication release."
     }
   ],
   "change_report": "./changes/",
-  "policy": "V1 is a checksum-verified frozen model/calculation snapshot with a shared navigation and mobile reading shell. V2 and the existing URL are generated from the same maintained workbench source. The hub and change report derive from this version record and shared comparison text. Historical snapshots are not duplicate editable masters. V3 derives from the same base model and v2 work calculators with a separate, source-linked review patch record; v2 geometry and quantities are preserved. V4 derives its page/controller at build time from v3 and shares the canonical model; corrections and code scenarios live only in v4 modules. V1-v3 remain available. V5 derives from v4 without another editable building model; proposed choices are separate from source facts and earlier versions."
+  "policy": "V1 is a checksum-verified frozen model/calculation snapshot with a shared navigation and mobile reading shell. V2 and the existing URL are generated from the same maintained workbench source. The hub and change report derive from this version record and shared comparison text. Historical snapshots are not duplicate editable masters. V3 derives from the same base model and v2 work calculators with a separate, source-linked review patch record; v2 geometry and quantities are preserved. V4 derives its page/controller at build time from v3 and shares the canonical model; corrections and code scenarios live only in v4 modules. V1-v3 remain available. V5 derives from v4 without another editable building model; proposed choices are separate from source facts and earlier versions. V6 reuses v5/v4 and the canonical building source; new connection geometry and decisions have one versioned owner. V1-v5 are preserved."
 }
