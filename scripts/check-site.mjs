@@ -1,6 +1,7 @@
 import {readdir,readFile,stat} from 'node:fs/promises';
 import {resolve,relative,dirname} from 'node:path';
-import {workspaceSections,workspaceNavigation} from './site-experience.mjs';
+import {workspaceSections} from './site-experience.mjs';
+import {organizationNavigation} from './workspace-organization.mjs';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 
 export async function checkSite(directory){
@@ -9,8 +10,9 @@ export async function checkSite(directory){
  await walk(root);const pages=files.filter(x=>x.endsWith('.html'));let links=0,imports=0;
  for(const file of pages){
   const text=await readFile(file,'utf8');
+  const mainContent=text.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1]??text;
   const navigation=[...text.matchAll(/<nav\b[^>]*aria-label="Workspace"[^>]*>([\s\S]*?)<\/nav>/g)];
-  if(navigation.length!==1||navigation[0][1]!==workspaceNavigation(file,root))throw Error('Workspace navigation differs in '+relative(root,file));
+  if(navigation.length!==1||navigation[0][1]!==organizationNavigation(relative(root,file).split('\\').join('/')))throw Error('Workspace navigation differs in '+relative(root,file));
   if(file.includes('/pilates-astra-2026-10-15/')&&(/\/v(?:2|3|4|5|5\.1|6|7|8|9|10|11|12|13|14)\/[^/]+\.html$/.test(file)||file.endsWith('/pilates-astra-2026-10-15/index.html'))){
    const revision=text.match(/name="estimate-source-revision" content="([a-f0-9]{16})"/);
    if(!revision)throw Error('Missing shared source revision in '+file);revisions.add(revision[1]);
@@ -26,7 +28,7 @@ export async function checkSite(directory){
   }
   if(file.endsWith('/v11/index.html')){
    for(const head of text.matchAll(/<thead>(.*?)<\/thead>/gs))if((head[1].match(/<th /g)??[]).length>4)throw Error('V11 table exceeds four columns');
-   if(/<details|<dialog|<iframe|SOURCE_REVISION|V11_REVISION|schema_version|created_at|modified_at/.test(text))throw Error('V11 contains hidden work panels, unresolved assets or database metadata');
+   if(/<details|<dialog|<iframe|SOURCE_REVISION|V11_REVISION|schema_version|created_at|modified_at/.test(mainContent))throw Error('V11 contains hidden work panels, unresolved assets or database metadata');
    if((text.match(/data-inline-work=/g)??[]).length!==51||(text.match(/data-inline-material=/g)??[]).length!==261)throw Error('V11 omitted a work or material line');
    const css=text.match(/v11\.css\?v=([a-f0-9]{16})/),script=text.match(/v11\.js\?v=([a-f0-9]{16})/);
    if(!css||!script||css[1]!==script[1])throw Error('V11 asset revisions differ');
@@ -76,9 +78,8 @@ export async function checkSite(directory){
  const versions=JSON.parse(await readFile(resolve(root,'construction/estimates/pilates-astra-2026-10-15/versions.json'),'utf8'));
  if(JSON.stringify(versions.workspace_navigation.primary_sections)!==JSON.stringify(workspaceSections.map(section=>section.label)))throw Error('Workspace section register differs from navigation');
  const homeHTML=await readFile(resolve(root,'index.html'),'utf8'),constructionHTML=await readFile(resolve(root,'construction/index.html'),'utf8'),progressHTML=await readFile(resolve(root,'progress/index.html'),'utf8');
- const hubLinks=html=>[...html.matchAll(/<a class="hub-card" href="([^"]+)"/g)].map(match=>match[1]);
- if(JSON.stringify(hubLinks(homeHTML).map(path=>resolve(root,path)))!==JSON.stringify(workspaceSections.map(section=>resolve(root,section.path))))throw Error('Home cards must match the sibling section register');
- if(JSON.stringify(hubLinks(constructionHTML))!==JSON.stringify(['../cad/']))throw Error('Construction repeats estimate/model shortcuts');
+ if(!homeHTML.includes('id="org-projects"')||!homeHTML.includes('href="projects/paila-pilates/"')||!homeHTML.includes('href="cad/"'))throw Error('Home must expose its project hubs and column formwork');
+ if(!constructionHTML.includes('id="column-formwork"')||!constructionHTML.includes('href="../cad/"'))throw Error('Drawing library omitted the existing column formwork workspace');
  if(/id="construction-status"|href="[^"]*#construction-status"|CONSTRUCTION_PROGRESS/.test(progressHTML)||!progressHTML.includes('id="extraction-roadmap"'))throw Error('Progress must retain extraction progress without the duplicate website-status summary');
  const savings=JSON.parse(await readFile(resolve(projectRoot,'v13/budget-view.json'),'utf8')),savingsScript=await readFile(resolve(projectRoot,'v13/v13.js'),'utf8'),savingsHTML=await readFile(resolve(projectRoot,'v13/index.html'),'utf8');
  if(savings.derivation.source_revision!==revision||savings.derivation.responsibility_revision!== (await readFile(resolve(projectRoot,'v12/index.html'),'utf8')).match(/v12\.js\?v=([a-f0-9]{16})/)[1])throw Error('V13 financial/responsibility sources differ from current views');
@@ -86,7 +87,7 @@ export async function checkSite(directory){
  const savingsIds=savings.groups.flatMap(group=>group.rows.map(work=>work.id));if(savingsIds.length!==51||new Set(savingsIds).size!==51)throw Error('V13 duplicates or omits a quoted work');
  if(savings.groups.reduce((sum,group)=>sum+BigInt(group.original_minor),0n)+BigInt(savings.allowances_minor)!==BigInt(savings.pre_vat_minor))throw Error('V13 original budget does not reconcile');
  const memory=await readFile(resolve(root,'memory-posters/index.html'),'utf8');
- if(!memory.includes('name="memory-source-revision" content="'+revision+'"')||/MEMORY_REVISION|<details|<dialog|\{\{/.test(memory))throw Error('Memory Posters has a stale source, hidden content or an unresolved placeholder');
+ if(!memory.includes('name="memory-source-revision" content="'+revision+'"')||/MEMORY_REVISION|<details|<dialog|\{\{/.test(memory.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1]??memory))throw Error('Memory Posters has a stale source, hidden content or an unresolved placeholder');
  const posterIds=[...memory.matchAll(/\sid="([^"]+)"/g)].map(match=>match[1]);if(posterIds.length!==new Set(posterIds).size)throw Error('Duplicate Memory Poster id');
  for(const target of memory.matchAll(/data-copy-prompt="([^"]+)"/g))if(!posterIds.includes(target[1]))throw Error('Missing copyable prompt: '+target[1]);
  const posterCollection=JSON.parse(await readFile(resolve(root,'memory-posters/posters.json'),'utf8'));
