@@ -1,0 +1,75 @@
+/* Scope every rule to this page; earlier versions keep their existing style sheets. */
+.mep-page{--mep-blue:#246a98;--mep-soft:#e8f2f7;--mep-surface:var(--surface,#fff)}
+.mep-page .workspace-head{position:relative}
+.mep-page .container{max-width:1600px;padding:0 28px 44px}
+.mep-page .mep-hero{padding:32px 0 18px;display:flex;justify-content:space-between;align-items:start;gap:24px}
+.mep-page .mep-hero h1{font-size:clamp(29px,4vw,48px);line-height:1.13;letter-spacing:-1.3px;max-width:820px;margin:10px 0 17px}
+.mep-page .mep-hero p{max-width:820px;margin:7px 0;font-size:15px}
+.mep-page .mep-hero .stamp{padding:16px;border:1px solid var(--line);border-left:4px solid #d69a3a;background:var(--mep-surface);min-width:210px;max-width:320px;font-size:13px}
+.mep-page .stamp strong{display:block;color:var(--amber,#986118);font-size:15px;margin-bottom:5px}
+.mep-page .mep-nav{display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;z-index:20;background:var(--paper);padding:10px 0;border-bottom:1px solid var(--line)}
+.mep-page .mep-nav a{padding:9px 13px;background:var(--mep-surface);border:1px solid var(--line);border-radius:6px;font-size:13px;font-weight:700;min-height:42px;text-decoration:none}
+.mep-page section[id],.mep-page aside[id]{scroll-margin-top:85px}
+.mep-page .mep-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}
+.mep-page .mep-stats article{padding:17px 20px;background:var(--mep-surface);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;gap:4px}
+.mep-page .mep-stats strong{font-size:25px;color:var(--teal)}
+.mep-page .mep-stats span{font-size:13px;color:var(--muted)}
+.mep-page .mep-section{padding:24px;background:var(--mep-surface);border:1px solid var(--line);border-radius:12px;margin:18px 0}
+.mep-page .mep-section h2{font-size:23px;margin:0 0 12px;line-height:1.35;letter-spacing:-.3px}
+.mep-page .mep-section h3{font-size:18px;line-height:1.4;margin:18px 0 9px}
+.mep-page .small-note{font-size:13px;color:var(--muted);line-height:1.7;margin:8px 0}
+.mep-page .mep-controls{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:12px;padding:18px;background:var(--mep-surface);border:1px solid var(--line);border-radius:10px}
+.mep-page label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;min-width:0}
+.mep-page :is(select,input,button){max-width:100%;min-width:0;min-height:44px;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--mep-surface);color:var(--ink);font-size:14px}
+.mep-page input[type=checkbox]{min-height:20px;width:20px}
+.mep-page .toolbar{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.mep-page .toolbar label{flex:1 1 170px}
+.mep-page .toolbar button,.mep-page .toolbar a{font-size:13px;padding:8px 12px;min-height:42px;border:1px solid var(--line);border-radius:6px;color:var(--teal);text-decoration:none;background:var(--mep-surface)}
+.mep-page .mep-views{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mep-page .mep-views>.mep-section{margin-bottom:0;min-width:0;padding:19px}
+.mep-page .span-two{grid-column:1/-1}
+.mep-page .drawing-scroll{overflow:auto;max-width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;overscroll-behavior-x:contain;max-height:650px;scrollbar-gutter:stable}
+.mep-page .drawing-scroll>svg{display:block;width:auto;min-width:100%;max-width:none;height:auto}
+.mep-page #model-view{touch-action:pan-y}
+.mep-page #model-view>svg{min-width:0;width:100%;height:auto}
+.mep-page #gantt-view>svg{min-width:1170px}
+.mep-page .badge{display:inline-flex;font-size:11px;line-height:1.5;font-weight:800;letter-spacing:.3px;padding:4px 8px;border-radius:5px;color:var(--teal);background:var(--teal-soft,#e5f1ef);vertical-align:middle}
+.mep-page .badge.hold{color:var(--amber,#9a5b13);background:var(--amber-soft,#fff2dd)}
+.mep-page .key{display:flex;flex-wrap:wrap;gap:7px 15px;margin:13px 0}
+.mep-page .key span{font-size:12px;display:flex;align-items:center;gap:6px}
+.mep-page .key i{display:inline-block;width:20px;height:4px;background:var(--key)}
+.mep-page .mep-table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+.mep-page .mep-table th,.mep-page .mep-table td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;white-space:normal;overflow-wrap:anywhere;line-height:1.65}
+.mep-page .mep-table thead{background:var(--surface-2,#edf2f4)}
+.mep-page .mep-table th:first-child{width:19%}
+.mep-page .mep-table button{font-weight:700;color:var(--teal);text-align:left;min-height:42px;padding:6px 8px}
+.mep-page .mep-table tr.is-selected{background:var(--teal-soft,#e4f2f0)}
+.mep-page .mep-table small{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+.mep-page .mep-dl{display:grid;grid-template-columns:150px 1fr;gap:10px 16px;font-size:14px;margin:15px 0}
+.mep-page .mep-dl dt{color:var(--muted)}
+.mep-page .mep-dl dd{margin:0;overflow-wrap:anywhere}
+.mep-page .route-title{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:8px}
+.mep-page .route-title h3{margin:0}
+.mep-page details{border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;background:var(--mep-surface)}
+.mep-page summary{cursor:pointer;font-size:15px;font-weight:700;min-height:30px;line-height:1.7}
+.mep-page details p,.mep-page details li{font-size:14px;line-height:1.85}
+.mep-page li{padding:4px 0}
+.mep-page .basis-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:15px 0}
+.mep-page .basis-form button{align-self:end;font-weight:700;background:var(--teal);color:var(--paper)}
+.mep-page .basis-form p{grid-column:1/-1;margin:0}
+.mep-page .ref-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.mep-page .ref-grid details{min-width:0}
+.mep-page .ref-grid a{overflow-wrap:anywhere}
+.mep-page .callout{padding:14px 17px;border-left:4px solid #d6a44b;background:var(--amber-soft,#fff4e2);font-size:14px;line-height:1.8}
+.mep-page .mep-actions{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.mep-page .mep-actions>a{padding:11px 14px;border:1px solid var(--line);border-radius:7px;background:var(--mep-surface);min-height:44px;font-size:13px;font-weight:700;text-decoration:none}
+.mep-page pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;background:var(--surface-2,#edf2f4);font-size:13px;line-height:1.8;border-radius:8px}
+.mep-page .ref-link{font-size:12px;font-weight:700;margin-right:7px}
+.mep-page .error{color:var(--red,#ae473f);font-weight:700}
+.mep-page .point-table{max-height:350px;overflow:auto}
+@media(min-width:1500px){.mep-page .drawing-scroll>svg{min-width:0}}
+@media(max-width:1100px){.mep-page .mep-views{grid-template-columns:1fr}.mep-page .mep-hero{flex-direction:column}.mep-page .mep-hero .stamp{max-width:none;min-width:0;width:100%}.mep-page .ref-grid{grid-template-columns:1fr}}
+@media(max-width:760px){
+ .mep-page .container{padding:0 14px 30px}.mep-page .mep-hero{padding-top:22px;gap:14px}.mep-page .mep-hero h1{letter-spacing:-.7px}.mep-page .mep-nav{flex-wrap:nowrap;overflow:auto;gap:6px;padding:8px 0}.mep-page .mep-nav a{flex:0 0 auto;padding:10px;font-size:12px}.mep-page .mep-stats{grid-template-columns:1fr 1fr;gap:8px}.mep-page .mep-stats article{padding:13px}.mep-page .mep-stats strong{font-size:22px}.mep-page .mep-section,.mep-page .mep-views>.mep-section{padding:16px 12px}.mep-page .mep-controls,.mep-page .basis-form{grid-template-columns:1fr;padding:13px}.mep-page .mep-dl{grid-template-columns:1fr;gap:3px}.mep-page .mep-dl dd{margin-bottom:10px}.mep-page .mep-table thead{display:none}.mep-page .mep-table,.mep-page .mep-table tbody,.mep-page .mep-table tr,.mep-page .mep-table th,.mep-page .mep-table td{display:block;width:100%!important}.mep-page .mep-table tr{padding:9px 0;border-bottom:1px solid var(--line)}.mep-page .mep-table th,.mep-page .mep-table td{padding:7px 9px;border:0;line-height:1.8}.mep-page .mep-table td:before{content:attr(data-label);display:block;color:var(--muted);font-size:11px;font-weight:700;margin-bottom:2px}.mep-page .mep-table th{font-size:14px}.mep-page .point-table{max-height:450px}.mep-page .drawing-scroll{max-height:520px}.mep-page #model-view>svg{min-width:900px}.mep-page #model-view{touch-action:pan-y}.mep-page .ref-grid{display:block}.mep-page .mep-section h2{font-size:21px}.mep-page .mep-actions{display:grid;grid-template-columns:1fr}.mep-page section[id],.mep-page aside[id]{scroll-margin-top:76px}
+}
+@media print{.mep-page .workspace-head,.mep-page .mep-controls,.mep-page .mep-nav,.mep-page .experience-controls{display:none}.mep-page .mep-views{display:block}.mep-page .drawing-scroll{overflow:visible;max-height:none}.mep-page .drawing-scroll>svg{min-width:0;width:100%}.mep-page details{break-inside:avoid}.mep-page .mep-section{break-inside:avoid}}

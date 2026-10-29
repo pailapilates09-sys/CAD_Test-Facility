@@ -1,0 +1,197 @@
+{
+  "schema": "basanti-mep-references-1",
+  "reviewed_on": "2026-10-29",
+  "policy": "Nepal provisions control the basis. Foreign guidance is supplementary and identified by jurisdiction. A code listing is not proof of local approval. Numerical assumptions, source defects and unverified product conditions remain visible.",
+  "sources": [
+    {
+      "id": "SRC",
+      "title": "Basanti Poudel Baral original architectural / structural drawings",
+      "publisher": "Vristi Engineering & Construction Pvt. Ltd.; supplied project PDF",
+      "url": "../../basanti-residence/source/original.pdf",
+      "locator": "Sheets 2–5, 7, 10, 21",
+      "application": "Kitchen, T/B rooms, store, grid spans, floor datums, roof outline and nominal septic outlet. Calibrated source geometry, not a site survey.",
+      "limitations": "No complete coordinated MEP scheme, accepted utility connection, located tank or outfall; structural v6 holds remain.",
+      "verification": "Original pages 2–5 and 21 rendered and visually reviewed; SHA-256 retained."
+    },
+    {
+      "id": "N208",
+      "title": "NBC 208:2003 · Sanitary and Plumbing Design Requirements",
+      "publisher": "Government of Nepal / DUDBC; Kathmandu municipal official PDF",
+      "url": "https://ebps.kathmandu.gov.np/UploadFiles/NBC208SanitaryandPlumbing.pdf",
+      "locator": "A1 Table A1; A2.1–2.3; A3.1–3.11; B2.1–2.5 Tables B14/B15; C1–9 Tables C1–C3",
+      "application": "Domestic demand, water hygiene and testing, hydraulic method, medium GI wording, separate storm drainage, foul gradients and roof sizing. Reference values are applied to explicitly stated scenarios.",
+      "limitations": "A3.2 contains conflicting residual-pressure units, recorded as I03. Rainfall intensity and site discharge are project inputs. Old materials listed in the document are not blanket recommendations.",
+      "verification": "Downloaded 956716-byte official PDF; all relevant text read and roof/drain tables inspected."
+    },
+    {
+      "id": "N207",
+      "title": "NBC 207:2003 · Electrical Design Requirements for Public Buildings",
+      "publisher": "Government of Nepal / DUDBC; preserved primary document at IIBH",
+      "url": "https://iibh.org/kijun/pdf/Nepal_26_NBC_207_2003_Electrical_Design.pdf",
+      "locator": "3 planning; 4 supply; 5 ratings; 6.1.2–6.1.6; 6.2.3 conduit table; 7 earthing; 8 testing / completion drawings",
+      "application": "Coordination, separated lighting/power circuits, numbered points, conduit checks, earthing and inspection records.",
+      "limitations": "Its stated public-building scope is identified. Used as Nepal good-practice guidance for this residence alongside Electricity Rules and utility requirements; not a residential compliance certificate. Older referenced standards require edition confirmation.",
+      "verification": "391715-byte government-authored PDF downloaded, relevant provisions read; DUDBC current listing independently checked."
+    },
+    {
+      "id": "N206",
+      "title": "NBC 206:2024 · Architectural Design Requirements",
+      "publisher": "Government of Nepal / DUDBC; Kathmandu municipal official PDF",
+      "url": "https://ebps.kathmandu.gov.np/UploadFiles/NBC206Amended.pdf",
+      "locator": "1 occupancy; 3.1 minimum room dimensions; 3.3 light and ventilation; 6.1 residences",
+      "application": "Residential classification, room review and natural openings. Combined T/B width discrepancy is retained rather than silently corrected.",
+      "limitations": "Local bylaw and approved building category must also be checked; extract-fan targets are not substituted for all natural-opening requirements.",
+      "verification": "880036-byte official PDF downloaded; table and ventilation clauses read."
+    },
+    {
+      "id": "N107",
+      "title": "NBC 107:1994 · Provisional Recommendation on Fire Safety",
+      "publisher": "Government of Nepal / DUDBC; primary document preserved at IIBH",
+      "url": "https://iibh.org/kijun/pdf/Nepal_12_NBC_107_1994_Fire_Safety.pdf",
+      "locator": "Foreword; 3 appliances; 5–6 escape and access; 8 lightning",
+      "application": "Ordinary building fire-safety scope, kitchen extract/access and portable-extinguisher review; keep service equipment clear of escape routes.",
+      "limitations": "Does not by itself determine a complete alarm, sprinkler or lightning design for this property.",
+      "verification": "Primary PDF opened and relevant text read."
+    },
+    {
+      "id": "LAW",
+      "title": "Electricity Rules, 2050",
+      "publisher": "Nepal Law Commission",
+      "url": "https://repository.lawcommission.gov.np/np/category/documents/prevailing-law/rules-and-regulations/विद्युत-नियमावली-२०५०/",
+      "locator": "Rules 40, 59–64",
+      "application": "230/400 V supply basis, consumer isolation, earthing and internal wiring requirements.",
+      "limitations": "Competent electrical designer must check the adopted consolidated rules and utility conditions; voltage-drop design targets are separately identified.",
+      "verification": "Official law repository search and published text reviewed."
+    },
+    {
+      "id": "NEA",
+      "title": "Electricity Distribution Regulations 2078, with amendments",
+      "publisher": "Nepal Electricity Authority",
+      "url": "https://nea.org.np/en/detail/electricity-distribution-regulations-2078-with-amendments",
+      "locator": "Official consolidated-regulations download page",
+      "application": "Utility approval and sanctioned-load / meter / service-connection gate M03.",
+      "limitations": "Download endpoint timed out in this run. No specific uninspected regulation clause or existing sanctioned capacity is claimed.",
+      "verification": "Official metadata page read; PDF not verified."
+    },
+    {
+      "id": "LOCAL",
+      "title": "Pokhara building and infrastructure construction standard, first amendment 2081",
+      "publisher": "Pokhara Metropolitan City",
+      "url": "https://pokharamun.gov.np/node/2160",
+      "locator": "Municipal publication dated 1 June 2025; acts/directives index",
+      "application": "Local approval checklist for setbacks, sanitation and service outfalls.",
+      "limitations": "Official listing found; publication body returned 503/timeouts. No unseen setback or sewer provision is asserted. Marked local compliance unresolved.",
+      "verification": "Official listing indexed; full contents unavailable."
+    },
+    {
+      "id": "EA",
+      "title": "Recommended simplified approach for cable sizing",
+      "publisher": "Schneider Electric · Electrical Installation Guide",
+      "url": "https://www.electrical-installation.org/enwiki/Recommended_simplified_approach_for_cable_sizing",
+      "locator": "Figure G21, copper unburied current-capacity table",
+      "application": "Use the lowest published unburied values across displayed columns for 1.5–25 mm² as a conservative conditional screening envelope; apply an explicit derating scenario.",
+      "limitations": "Not a selected product or verified installation method. Grouping, temperature, harmonic loading and actual route conditions can change Iz.",
+      "verification": "Primary manufacturer guide opened and numeric table read."
+    },
+    {
+      "id": "EAM",
+      "title": "General method for cable sizing",
+      "publisher": "Schneider Electric · Electrical Installation Guide",
+      "url": "https://www.electrical-installation.org/enwiki/General_method_for_cable_sizing",
+      "locator": "Figures G8–G20; reference methods, factors and PVC three-loaded-conductor table",
+      "application": "Cable installation / derating basis. Figure G20 minimum copper row values provide the conservative ampacity screen; 35 mm² reference Iz=83 A before derating.",
+      "limitations": "Does not provide field conditions or prove the chosen combined factor for this project.",
+      "verification": "Primary guide opened and methods / factor sections read."
+    },
+    {
+      "id": "EL",
+      "title": "Maximum voltage drop limit",
+      "publisher": "Schneider Electric · Electrical Installation Guide",
+      "url": "https://www.electrical-installation.org/enwiki/Maximum_voltage_drop_limit",
+      "locator": "Figure G27; IEC 60364-5-52 table G.52.1 discussion",
+      "application": "Supplementary design targets of 3% lighting and 5% other uses, including feeder plus terminal-route allowance.",
+      "limitations": "International guidance, not claimed as a verbatim Nepal statutory limit; motor starting and reactance not verified.",
+      "verification": "Primary table opened and reviewed."
+    },
+    {
+      "id": "ER",
+      "title": "Residential electrical installation · Protection of people",
+      "publisher": "Schneider Electric · Electrical Installation Guide",
+      "url": "https://www.electrical-installation.org/enwiki/Residential_electrical_installation_-_Protection_of_people",
+      "locator": "TT/TN fault protection and 30 mA final-circuit protection",
+      "application": "Individual 30 mA RCBO proposal, separation of fault protection / additional protection and need to confirm supply earthing arrangement.",
+      "limitations": "Final RCD type, selectivity, electrode/loop values and protection settings require selected equipment and tests.",
+      "verification": "Primary guide opened and read."
+    },
+    {
+      "id": "VF",
+      "title": "Approved Document F, Volume 1: Dwellings, 2026 edition",
+      "publisher": "UK Ministry of Housing, Communities and Local Government",
+      "url": "https://assets.publishing.service.gov.uk/media/6a9a918a01bbff0bf8f97e1b/Approved_Document_F__Volume_1_Dwellings.pdf",
+      "locator": "Table 1.1; 1.13–1.15; performance and commissioning provisions",
+      "application": "Supplementary intermittent extract targets: 15 L/s bathroom and 30 L/s outdoor-ducted cooker hood; verify actual installed airflow.",
+      "limitations": "Applies to England, not Nepal law. These are engineering targets pending Nepal/local acceptance and product fan / pressure calculation.",
+      "verification": "Current official publication and Table 1.1 opened and read."
+    },
+    {
+      "id": "SH",
+      "title": "Approved Document H · Drainage and Waste Disposal, 2015 edition",
+      "publisher": "UK Government",
+      "url": "https://assets.publishing.service.gov.uk/media/5a80cf9ded915d74e33fc8ae/BR_PDF_AD_H_2015.pdf",
+      "locator": "H1 1.3–1.31; Tables 1–3; branch ventilation and stack base diagrams",
+      "application": "Supplementary trap seals, branch bore, swept connections, vent takeoff and nearby-opening terminal detail.",
+      "limitations": "Foreign supplementary guidance. Final pipe/vent geometry, fixture outlet compatibility and authority acceptance remain project specific; no mixed-code compliance certificate.",
+      "verification": "Official PDF opened and relevant branch / trap / vent text reviewed."
+    },
+    {
+      "id": "DHM",
+      "title": "Department of Hydrology and Meteorology Nepal",
+      "publisher": "Government of Nepal / DHM",
+      "url": "https://dhm.gov.np/",
+      "locator": "Official rainfall / station data authority",
+      "application": "Identifies the authority for the required Pokhara design rainfall / duration / return period.",
+      "limitations": "No project IDF series was supplied or obtained. The 200 mm/h default is a labelled scenario, not a DHM result.",
+      "verification": "Official source identified; no fabricated numerical rainfall citation."
+    },
+    {
+      "id": "RHY",
+      "title": "Guidelines on Hydrologic Analysis and Hydraulic Design of Bridges",
+      "publisher": "Government of Nepal / Department of Roads",
+      "url": "https://dor.gov.np/uploads/publication/publication_1642315873.pdf",
+      "locator": "Rainfall intensity / duration frequency methodology",
+      "application": "Supports the need for duration- and return-period-specific local rainfall evidence rather than monthly averages.",
+      "limitations": "Bridge/road guidance is contextual; no road design value is transferred into the building rainwater calculation.",
+      "verification": "Official government publication identified; not used for any project numeric sizing value."
+    },
+    {
+      "id": "G1",
+      "title": "Reviewing proposed changes in a pull request",
+      "publisher": "GitHub Docs",
+      "url": "https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/reviewing-proposed-changes-in-a-pull-request",
+      "locator": "Files changed; file filtering; Viewed; submitting a review",
+      "application": "User guide for reviewing this multi-page change by file and dependency scope.",
+      "limitations": "A code review does not establish engineering approval.",
+      "verification": "Official documentation opened and read."
+    },
+    {
+      "id": "G2",
+      "title": "About code owners",
+      "publisher": "GitHub Docs",
+      "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners",
+      "locator": "Ownership by path, base-branch CODEOWNERS and protection rules",
+      "application": "Explains optional page/folder ownership; no fake reviewer identities or repository rules are installed.",
+      "limitations": "Named reviewers require access; automatic requests / required approvals depend on repo configuration.",
+      "verification": "Official documentation opened and read."
+    },
+    {
+      "id": "G3",
+      "title": "Events that trigger workflows",
+      "publisher": "GitHub Docs",
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+      "locator": "pull_request and push events",
+      "application": "Explain existing PR checks and main-branch Pages deployment; keep full-site regressions when shared build/nav are involved.",
+      "limitations": "Path filters optimise jobs, not isolation of shared CSS/data; a Pages deployment can rebuild the whole site.",
+      "verification": "Official documentation opened and read."
+    }
+  ]
+}

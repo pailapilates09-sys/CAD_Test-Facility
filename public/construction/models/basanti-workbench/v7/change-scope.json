@@ -1,0 +1,80 @@
+{
+  "schema": "basanti-v7-change-scope-1",
+  "project": "14_Basanti Poudel Baral",
+  "branch": "work/14-basanti-poudel-baral-v7-mep-2026-10-29",
+  "base_commit": "de7dd681c701851ea38a56b120324a0246f97c7b",
+  "allowed_paths": [
+    "public/construction/models/basanti-workbench/v7/",
+    "scripts/building-v7.mjs",
+    "test/building-v7.test.mjs",
+    "scripts/build.mjs",
+    "scripts/building-navigation.mjs",
+    "public/construction/models/basanti-workbench/versions.json"
+  ],
+  "expected_effects": {
+    "new_v7": "New MEP views, calculations, exports and guide",
+    "scripts/build.mjs": "Import and call exactly one new builder",
+    "scripts/building-navigation.mjs": "Hub TOC, v7 panel and preserved-v6 wording only; shared workbench navigation unchanged",
+    "versions.json": "Add version directory entry; historical model and algorithms are not edited"
+  },
+  "protected_sources": [
+    {
+      "path": "public/construction/models/basanti-residence/data/project.json",
+      "sha256": "ec7ed1ecd1467b98609032e75f94628aca379ec926125cf7d4ef783b17e7cc66"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/history/v1-source.json.gz",
+      "sha256": "9454dad8eeafde51a59afc62284fcb21d28366b6b40d1be7dec47c5575391969"
+    },
+    {
+      "path": "public/construction/estimates/pilates-astra-2026-10-15/v9/register.json",
+      "sha256": "943691f37bb4ec43a7486334e0e419c06c61a5074c4eddba1525aa81c2d350e0"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/v6/QA_REVIEW_2026-10-28.md",
+      "sha256": "adc39c8b611ee4ffed99e3227043196893724f694d2b21679be3349dfd84da99"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/v6/README.md",
+      "sha256": "135bd5b2eeefe9c43f3e7763a79a61528732045ab9c322eca36025b0773478d3"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/v6/connection-math.js",
+      "sha256": "8093a6aad8dd6f81d692d46b7529811d2017ae1e8f9d751858ee90cb2e2476b7"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/v6/connection-view.js",
+      "sha256": "1d2846fcfaea8206e81349737765709723a82fd5518336ddb0ad860cd462368f"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/v6/detail-panels.inc",
+      "sha256": "74d5e9b5a915a33dd2556679337a45866928ccce8935a2b8d0dd4957ada3b387"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/v6/panels.inc",
+      "sha256": "3081ca89134403161c3cfbb6484d1e4c64f52ead4b7446f6c17072394653233c"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/v6/proposed-model.js",
+      "sha256": "cd489c97094c42834a0f95082a436ddbc957f5125c19e3173c10e1adadcbc6c7"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/v6/references.json",
+      "sha256": "b2868278c7a53c26c9f335d8aee5e2d49823f7482afdb96a15a521fad586628b"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/v6/v6.css",
+      "sha256": "39424d1f8bb8b09f106dcf692c38a83bc168308b7d5a42c47fadff87dafdbe21"
+    },
+    {
+      "path": "public/construction/models/basanti-workbench/v6/v6.js",
+      "sha256": "2ffe62c255ea77f430bb5f9d63cf0b415261fd6b85d76f5b21efb91677e94c05"
+    },
+    {
+      "path": "public/construction/estimates/pilates-hamro-2026-10-28/quotation.json",
+      "sha256": "03e4bac3a2635748f326e9aab4900bfc7dcc1eeef7f89af328a506b3cef22c4b"
+    }
+  ],
+  "status": "VERIFIED local software QA; 339 tests pass, allowed scope checked; publication readback reported separately",
+  "preserved_independent_checkpoint": "CP519 / Run33"
+}

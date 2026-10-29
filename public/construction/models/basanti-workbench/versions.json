@@ -1,7 +1,7 @@
 {
   "project_name": "14_Basanti Poudel Baral",
   "hub_path": "../basanti-residence/milestone.html",
-  "current_version": "v6",
+  "current_version": "v7",
   "source_pdf_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
   "versions": [
     {
@@ -61,9 +61,19 @@
       "based_on": "v5",
       "baseline_commit": "8adf52719494c5fda06d7723cced3de6e7713d0a",
       "source": "Build-time v5 derivation plus v6 connection geometry, view and decision modules; canonical source unchanged",
-      "status": "Current dimensioned coordination workspace. Reference TT product rejected for seismic supply and cage clashes. Column closures remain held; no structural/fabrication release."
+      "status": "Preserved v6 structural connection coordination. Column closures and longitudinal cuts remain held; v7 adds separate MEP proposals."
+    },
+    {
+      "id": "v7",
+      "title": "Version 7 · MEP services and coordination",
+      "purpose": "Inspect sized water and drain routes, roof runoff, electrical circuits and mechanical extract with linked 2D / 3D / table / Gantt views and a scoped-change guide.",
+      "path": "./v7/",
+      "based_on": "v6",
+      "baseline_commit": "de7dd681c701851ea38a56b120324a0246f97c7b",
+      "source": "Separate v7 MEP modules and build entry; canonical building source and v1–v6 algorithms remain unchanged",
+      "status": "Current preliminary MEP coordination. Site outfalls, equipment, local approval and engineering release remain visible gates; not an issued installation design."
     }
   ],
   "change_report": "./changes/",
-  "policy": "V1 is a checksum-verified frozen model/calculation snapshot with a shared navigation and mobile reading shell. V2 and the existing URL are generated from the same maintained workbench source. The hub and change report derive from this version record and shared comparison text. Historical snapshots are not duplicate editable masters. V3 derives from the same base model and v2 work calculators with a separate, source-linked review patch record; v2 geometry and quantities are preserved. V4 derives its page/controller at build time from v3 and shares the canonical model; corrections and code scenarios live only in v4 modules. V1-v3 remain available. V5 derives from v4 without another editable building model; proposed choices are separate from source facts and earlier versions. V6 reuses v5/v4 and the canonical building source; new connection geometry and decisions have one versioned owner. V1-v5 are preserved."
+  "policy": "V1 is a checksum-verified frozen model/calculation snapshot with a shared navigation and mobile reading shell. V2 and the existing URL are generated from the same maintained workbench source. The hub and change report derive from this version record and shared comparison text. Historical snapshots are not duplicate editable masters. V3 derives from the same base model and v2 work calculators with a separate, source-linked review patch record; v2 geometry and quantities are preserved. V4 derives its page/controller at build time from v3 and shares the canonical model; corrections and code scenarios live only in v4 modules. V1-v3 remain available. V5 derives from v4 without another editable building model; proposed choices are separate from source facts and earlier versions. V6 reuses v5/v4 and the canonical building source; new connection geometry and decisions have one versioned owner. V1-v5 are preserved. V7 adds one isolated MEP proposal model, not a duplicate building master; all four service views, calculations and exports derive from it. Shared source facts, prior algorithms and unrelated projects are preserved."
 }
