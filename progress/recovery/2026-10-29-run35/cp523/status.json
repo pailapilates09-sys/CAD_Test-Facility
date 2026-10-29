@@ -1,0 +1,622 @@
+{
+  "schema": "cad-facility.four-project-recovery.v1",
+  "checkedAt": "2026-10-29T10:10:52.198Z",
+  "timezone": "Asia/Kathmandu",
+  "lastSourceSessionCompletedAt": "2026-10-29T10:00:59.776Z",
+  "recoveryStatus": "RUN35_FOUR_LANES_MAIN_ACKED",
+  "basis": "Verified CP521 preflight; MSCS CP89/B077 fresh hashes; AEC G076 PART2 new source rates; LSA provisional metadata index and additional hashes; 2 verified MSCH FIFO checkpoints. Exact source/register readbacks and reciprocal ACKs passed.",
+  "scope": "User-authorized maximum 60-minute four-lane continuation; 5 MSCH metadata checkpoints. Existing source-stage gates retained.",
+  "preservedSourceCommit": "4232f3d5324be574dca21ddb4e0623d36ee41c94",
+  "rollbackCommit": "4232f3d5324be574dca21ddb4e0623d36ee41c94",
+  "session": {
+    "completedPhases": 549,
+    "lastSessionCheckpoints": 2,
+    "sourceElapsedMinutes": 37.284016666666666,
+    "lastSessionWorkUnits": 5
+  },
+  "findings": [
+    "MSCS: Three new original PDFs /6,014,094 bytes size/SHA-256 verified. Official1,065/1,867 files hashed;802 pending;706,169,125 hashed bytes. SQLite integrity and native controls/session seal passed.",
+    "LSA: Three additional PDFs /166,649 bytes verified. Cumulative9 physical files /378,880 bytes /6 distinct hashes. Provisional SQLite and CSV cover1,242 observed identities, with exact JSONL/SQLite/CSV agreement, database integrity/FK and provider readback. Historical2-file/9,304-byte gap remains; full freeze and semantic parsing pending.",
+    "AEC: Three new materials and RO-2438..RO-2440 passed source/native verification. Normalized JSON/CSV, terminal, manifest, lock, Source Index and native master PRE/POST verified. Adjacent formula preserved.",
+    "MSCH: 2 CP522–CP523 inventory checkpoints; complete PRE/CURRENT/checkpoint byte/SHA readbacks and Local/Main514/514 ACKED. Source bodies unparsed."
+  ],
+  "lanes": [
+    {
+      "id": "MSCS",
+      "name": "MSc Structural Engineering",
+      "checkpoint": "AQ-CP89",
+      "batch": "B077",
+      "stage": "Source byte hashing",
+      "state": "READY_BOUNDED_HASH_CONTINUATION",
+      "stateLabel": "Fresh hashes verified; hashing continues",
+      "metric": {
+        "label": "Source files hashed",
+        "done": 1065,
+        "total": 1867,
+        "remaining": 802,
+        "unit": "files"
+      },
+      "inventory": {
+        "rows": 2187,
+        "folders": 320,
+        "files": 1867
+      },
+      "evidence": {
+        "type": "Five canonical files fully read back; JSONL/SQLite identity and hash agreement",
+        "bytes": 2254716,
+        "sha256": "ce950a06052180649c302ac2196dc7e813be8811abf4b52382143d117c6fda8e",
+        "uniqueIds": 2187,
+        "hashValuesPresent": 1065,
+        "checkpointHashMatch": true,
+        "agreement": "Three new original PDFs /6,014,094 bytes size/SHA-256 verified. Official1,065/1,867 files hashed;802 pending;706,169,125 hashed bytes. SQLite integrity and native controls/session seal passed."
+      },
+      "sync": {
+        "local": 9,
+        "mainConsumed": 9,
+        "pendingSequences": 0,
+        "notice": "N6",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-10-29T09:36:59.843Z"
+      },
+      "contentExtraction": "Not started",
+      "blocker": "802 source files remain; Google-native export hashes remain separate from original-byte hashes.",
+      "next": {
+        "batch": "B078",
+        "target": "Fresh bounded original-byte hash selection",
+        "action": "Fresh metadata/size preflight and bounded original-byte hashing; preserve each physical occurrence."
+      },
+      "comparison": {
+        "onboardingDone": 1015,
+        "addedSinceOnboarding": 50
+      },
+      "supplementalEvidence": {
+        "type": "RUN35 verified lane work",
+        "sha256": "d79b5fa02cb2ec89d6f025ac97b435160c79e9308eaa6b2c784ea75ef8c27f3b",
+        "bytes": 1295,
+        "providerReadback": "PASS",
+        "localMainAck": "ACKED",
+        "canonicalPromotion": true
+      },
+      "integrityPilot": {
+        "verifiedFiles": 3,
+        "verifiedBytes": 6014094,
+        "distinctContentHashes": 1,
+        "canonicalAdmission": "CP89_B077_NEW_SOURCE_HASHES",
+        "canonicalHashedFiles": 1065
+      }
+    },
+    {
+      "id": "LSA",
+      "name": "Lok Sewa Study Archive",
+      "checkpoint": "CP80",
+      "batch": "B080",
+      "stage": "Provisional observed metadata query index",
+      "state": "BASELINE_RECONCILIATION_REQUIRED",
+      "stateLabel": "Provisional index; historical gap remains",
+      "metric": {
+        "label": "Historical baseline reconciliation",
+        "done": 1242,
+        "total": 1244,
+        "remaining": 2,
+        "unit": "rows"
+      },
+      "inventory": {
+        "rows": 1242,
+        "folders": 140,
+        "files": 1102,
+        "metadataBytes": 148118054319
+      },
+      "evidence": {
+        "type": "CURRENT JSONL independently downloaded and parsed",
+        "bytes": 726104,
+        "sha256": "997b18a4449b280a9cb77abad790d51730c788414742cc87ae4fe9ebc6b4a59c",
+        "uniqueIds": 1242,
+        "checkpointHashMatch": true,
+        "agreement": "Three additional PDFs /166,649 bytes verified. Cumulative9 physical files /378,880 bytes /6 distinct hashes. Provisional SQLite and CSV cover1,242 observed identities, with exact JSONL/SQLite/CSV agreement, database integrity/FK and provider readback. Historical2-file/9,304-byte gap remains; full freeze and semantic parsing pending."
+      },
+      "sync": {
+        "local": 34,
+        "mainConsumed": 34,
+        "pendingSequences": 0,
+        "notice": "N30",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-10-29T09:54:38.179Z"
+      },
+      "contentExtraction": "PDF/OCR, video transcription and semantic extraction not started",
+      "blocker": "The observed 1,242-row tree matches the prior audit, but its historical baseline has 2 additional files /9,304 bytes whose identities are unknown. This blocks full freeze and semantic extraction; it did not prevent the verified read-only subset integrity pass.",
+      "next": {
+        "batch": "B081 reconciliation",
+        "target": "Historical identity inventory for the two baseline discrepancies",
+        "action": "Recover the two unknown historical identities before full freeze or semantic parsing; retain the provisional observed index and all nine verified occurrences."
+      },
+      "comparison": {
+        "onboardingDone": 416,
+        "addedSinceOnboarding": 826
+      },
+      "sourceTreeAudit": {
+        "folderListings": 140,
+        "observedRows": 1242,
+        "observedFiles": 1102,
+        "observedFoldersIncludingRoots": 140,
+        "observedTreeFullyRepresented": true,
+        "historicalFileGap": 2,
+        "historicalBytesGap": 9304,
+        "branchGaps": [
+          {
+            "branch": "NEA/Class files",
+            "files": 1,
+            "metadataBytes": 4652
+          },
+          {
+            "branch": "NEA/Standard files-Package",
+            "files": 1,
+            "metadataBytes": 4652
+          }
+        ],
+        "expectedMissingIdsKnown": false
+      },
+      "supplementalEvidence": {
+        "type": "RUN35 verified lane work",
+        "sha256": "57786ca8f26f1e56f10b729b3f07f21d7fd76281fbceaceb439b692b8fa59458",
+        "bytes": 1895,
+        "providerReadback": "PASS",
+        "localMainAck": "ACKED",
+        "canonicalPromotion": false
+      },
+      "integrityPilot": {
+        "verifiedFilesThisRun": 3,
+        "verifiedBytesThisRun": 166649,
+        "cumulativeVerifiedFiles": 9,
+        "cumulativeVerifiedBytes": 378880,
+        "cumulativeDistinctContentHashes": 6,
+        "canonicalInventoryChanged": false
+      },
+      "provisionalIndex": {
+        "records": 1242,
+        "formats": [
+          "SQLite",
+          "CSV"
+        ],
+        "fullFreeze": false,
+        "semanticParsing": false
+      }
+    },
+    {
+      "id": "AEC",
+      "name": "AEC Cost & Rate Intelligence",
+      "checkpoint": "G076 PART2",
+      "batch": "G076 PART2",
+      "stage": "Source-verified normalized rate extraction",
+      "state": "READY_BOUNDED_SOURCE_CONTINUATION",
+      "stateLabel": "Three new rates verified",
+      "metric": null,
+      "inventory": null,
+      "evidence": {
+        "type": "Fresh source page and exact native-row/readback agreement",
+        "rateIds": [
+          "RO-2436",
+          "RO-2437"
+        ],
+        "ratesPresent": true,
+        "originalLockBoundary": "G075 / expected next RO-2436",
+        "agreement": "Three new materials and RO-2438..RO-2440 passed source/native verification. Normalized JSON/CSV, terminal, manifest, lock, Source Index and native master PRE/POST verified. Adjacent formula preserved.",
+        "historicalTerminalReadStatus": 404,
+        "g075CheckpointReadStatus": 200,
+        "g075CheckpointTitle": "CR02_CHECKPOINT__SRC-0005_G075_COMPLETE__20260914_NPT.md",
+        "g076TerminalRecovered": false,
+        "g076TransportRecovered": true,
+        "originalTerminalReadStatus": 404,
+        "sourcePDFPage": 39,
+        "printedPage": 34,
+        "sourceAndSnapshotAgreement": true,
+        "g076RecoveryReissued": true,
+        "g076RecoveryClosure": "CLOSED",
+        "latestVerifiedBatch": "G076 PART2",
+        "g076Part2Completed": true,
+        "newCanonicalRateObservations": 3
+      },
+      "sync": {
+        "local": 14,
+        "mainConsumed": 14,
+        "pendingSequences": 0,
+        "notice": "N3",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-10-29T09:47:23.145Z"
+      },
+      "contentExtraction": "Three new materials and three new rate observations",
+      "blocker": "Unknown-unit rows remain deferred. FY2083/84 retained; exact Gregorian effective day unasserted. Further source rows require fresh verification.",
+      "next": {
+        "batch": "G076 PART3",
+        "target": "Source-clear observations starting at expected RO-2441",
+        "action": "Fresh exact source/unit check before allocating the next observation."
+      },
+      "supplementalEvidence": {
+        "type": "RUN35 verified lane work",
+        "sha256": "cfbf09fa1325413c1721e6979693883f2c4d8616e19cd201040ad519135bfb56",
+        "bytes": 1379,
+        "providerReadback": "PASS",
+        "localMainAck": "ACKED",
+        "canonicalPromotion": true
+      },
+      "verifiedRates": [
+        {
+          "id": "RO-2436",
+          "label": "Rice husk",
+          "rateNPR": 3.25,
+          "unit": "kg"
+        },
+        {
+          "id": "RO-2437",
+          "label": "Cow-dung manure",
+          "rateNPR": 4,
+          "unit": "kg"
+        }
+      ],
+      "newRates": [
+        {
+          "id": "RO-2438",
+          "label": "Poultry manure",
+          "rateNPR": 6.7,
+          "unit": "kg"
+        },
+        {
+          "id": "RO-2439",
+          "label": "Earthworm manure",
+          "rateNPR": 30,
+          "unit": "kg"
+        },
+        {
+          "id": "RO-2440",
+          "label": "Compost manure",
+          "rateNPR": 25,
+          "unit": "kg"
+        }
+      ],
+      "rateSource": {
+        "fiscalYear": "2083/84",
+        "pdfPage": 39,
+        "printedPage": 34,
+        "exactEffectiveDay": null
+      }
+    },
+    {
+      "id": "MSCH",
+      "name": "MSc Hydropower Research Corpus",
+      "checkpoint": "CP523",
+      "batch": "B523",
+      "stage": "Recursive physical catalogue",
+      "state": "READY_FIFO_CONTINUATION",
+      "stateLabel": "Saved checkpoint; FIFO remains",
+      "metric": null,
+      "inventory": {
+        "rows": 6907,
+        "files": 5748,
+        "folders": 1159,
+        "pendingFolders": 598,
+        "metadataBytes": 66630730559,
+        "overallDenominator": null
+      },
+      "evidence": {
+        "type": "Four CURRENT raw files verified at each checkpoint",
+        "bytes": 4088301,
+        "sha256": "61747c0f5a88faa4b553e12edb57b688fe23118f06efe10ddefdb7c431db241d",
+        "uniqueIds": 6907,
+        "checkpointHashMatch": true,
+        "agreement": "2 CP522–CP523 inventory checkpoints; complete PRE/CURRENT/checkpoint byte/SHA readbacks and Local/Main514/514 ACKED. Source bodies unparsed."
+      },
+      "sync": {
+        "local": 514,
+        "mainConsumed": 514,
+        "pendingSequences": 0,
+        "notice": "N468",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-10-29T10:10:52.198Z"
+      },
+      "contentExtraction": "Source-content extraction and model execution not started",
+      "blocker": "598 FIFO folders remain; full corpus denominator unknown. Content parsing and model execution are later stages.",
+      "next": {
+        "batch": "B524",
+        "target": "2e",
+        "action": "Fresh FIFO/source/identity preflight; one verified checkpoint per phase; coordinated PRE and complete CURRENT readback."
+      },
+      "comparison": {
+        "onboardingDone": 500,
+        "addedSinceOnboarding": 6407
+      }
+    }
+  ],
+  "continuation": {
+    "rotation": [
+      "MSCH",
+      "LSA",
+      "AEC",
+      "MSCS"
+    ],
+    "phases": [
+      {
+        "lane": "MSCH",
+        "phase": "—",
+        "batch": "B524",
+        "state": "READY_FIFO_CONTINUATION"
+      },
+      {
+        "lane": "LSA",
+        "phase": "—",
+        "batch": "B081 reconciliation",
+        "state": "BASELINE_RECONCILIATION_REQUIRED"
+      },
+      {
+        "lane": "AEC",
+        "phase": "—",
+        "batch": "G076 PART3",
+        "state": "READY_BOUNDED_SOURCE_CONTINUATION"
+      },
+      {
+        "lane": "MSCS",
+        "phase": "—",
+        "batch": "B078",
+        "state": "READY_BOUNDED_HASH_CONTINUATION"
+      }
+    ],
+    "limits": {
+      "checkpointsPerPhase": 1,
+      "maxMinutesPerPhase": 20,
+      "maximumRunMinutes": 60,
+      "authority": "User request: four-in-one extraction, maximum60 minutes including verification and publication. 5 work units plus closeout."
+    },
+    "mainSync": "All four lanes ACKED: MSCS9/9, LSA34/34, AEC14/14, MSCH514/514.",
+    "scheduler": "Manual user-authorized run; no scheduler changes."
+  },
+  "separatePipeline": {
+    "id": "JP Cost",
+    "checkpoint": "M02 v0.5.14",
+    "pages": 697,
+    "sources": 6,
+    "state": "RAW_ARCHIVE_REPORTED_COMPLETE_SEMANTIC_QA_PENDING",
+    "basis": "Historical handover and onboarding snapshot only; source archives not reverified in this recovery.",
+    "note": "Separate from the four lanes and from AEC G076 terminal debt."
+  },
+  "execution": {
+    "startedAt": "2026-10-29T09:23:42.735Z",
+    "stoppedAt": "2026-10-29T10:10:52.198Z",
+    "sourceStoppedAt": "2026-10-29T10:00:59.776Z",
+    "inProgress": false,
+    "durationPolicy": "maximum",
+    "maximumMinutes": 60,
+    "deadline": "2026-10-29T10:23:42.735Z",
+    "maximumWindowRespected": true,
+    "elapsedMinutes": 47.157716666666666,
+    "sourceElapsedMinutes": 37.284016666666666,
+    "added": {
+      "LSA": 0,
+      "MSCH": 14
+    },
+    "checkpoints": [
+      {
+        "lane": "MSCH",
+        "batch": "B522",
+        "checkpoint": "CP522",
+        "added": {
+          "rows": 7,
+          "files": 7,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6900,
+          "files": 5741,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4084159,
+          "sha256": "193be0b7b030d05f8b939d95f6cd567c5b3c616d80dc3a327c7d65aefc2960a0"
+        },
+        "createdAt": "2026-10-29T15:40:43.605438+05:45",
+        "completedAt": "2026-10-29T09:57:09.063Z",
+        "local": 513,
+        "mainAck": "ACKED"
+      },
+      {
+        "lane": "MSCH",
+        "batch": "B523",
+        "checkpoint": "CP523",
+        "added": {
+          "rows": 7,
+          "files": 7,
+          "folders": 0
+        },
+        "after": {
+          "rows": 6907,
+          "files": 5748,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4088301,
+          "sha256": "61747c0f5a88faa4b553e12edb57b688fe23118f06efe10ddefdb7c431db241d"
+        },
+        "createdAt": "2026-10-29T15:42:24.827363+05:45",
+        "completedAt": "2026-10-29T09:58:54.790Z",
+        "local": 514,
+        "mainAck": "ACKED"
+      }
+    ],
+    "supplementalEvents": [
+      {
+        "lane": "MSCS",
+        "sequence": 9,
+        "kind": "NEW_ORIGINAL_BYTE_HASHES",
+        "providerReadback": "PASS",
+        "canonicalPromotion": true
+      },
+      {
+        "lane": "LSA",
+        "sequence": 34,
+        "kind": "PROVISIONAL_METADATA_INDEX_AND_HASHES",
+        "providerReadback": "PASS",
+        "canonicalPromotion": false
+      },
+      {
+        "lane": "AEC",
+        "sequence": 14,
+        "kind": "NEW_SOURCE_RATE_EXTRACTION",
+        "providerReadback": "PASS",
+        "canonicalPromotion": true
+      }
+    ],
+    "laneWork": {
+      "MSCH": {
+        "inventoryCheckpoints": 2,
+        "addedRows": 14,
+        "summary": "2 inventory checkpoints; 14 file records added",
+        "pending": "598 queued folders; source parsing"
+      },
+      "MSCS": {
+        "newIntegrityProofs": 3,
+        "promotedProofs": 0,
+        "canonicalHashedFiles": 1065,
+        "canonicalPromotion": true,
+        "summary": "3 new source hashes; 1,065/1,867 files hashed",
+        "pending": "802 files remain"
+      },
+      "LSA": {
+        "newIntegrityProofs": 3,
+        "historicalVarianceFiles": 2,
+        "summary": "3 new hashes; provisional SQLite/CSV index of 1,242 records",
+        "pending": "Two historical identities; full freeze and semantic parsing"
+      },
+      "AEC": {
+        "existingRatesSourceVerified": 0,
+        "newRateRows": 3,
+        "terminalReissuePending": false,
+        "summary": "G076 PART2: 3 new materials and 3 source-verified rates",
+        "pending": "Unknown-unit rows deferred; PART3 next"
+      }
+    },
+    "debtClearance": {
+      "initialEvents": 0,
+      "newEvents": 5,
+      "totalAcknowledgedEvents": 5,
+      "remainingEvents": 0,
+      "recoveredEventsAcknowledged": 0,
+      "newEventsAcknowledged": 5,
+      "pending": 0
+    },
+    "sourceBodiesReadOrExecuted": true,
+    "sourceModelsExecuted": false,
+    "bulkContentExtractionStarted": false,
+    "sourceObjectsMutated": false,
+    "schedulerChanged": false
+  },
+  "previousRuntimeIncident": {
+    "checkpoint": "CP122",
+    "status": "CLEARED",
+    "verification": "Raw PRE/CURRENT/checkpoint/POST transfers and exact provider readbacks passed from CP123 onward. Previous49-item preflight was reverified and promoted only as B123–B126 closed."
+  },
+  "branchRecovery": {
+    "transcriptRestored": false,
+    "recoveredFrom": "CP521 /MSCH512/512; MSCS8/8, LSA33/33, AEC13/13",
+    "current": "CP523 /MSCH514/514",
+    "lsaProgressRechecked": true,
+    "mscsProgressRechecked": true,
+    "aecTerminalRechecked404": true,
+    "otherLaneLocalCursors": "RUN35 all four Local/Main exact ACK readbacks passed.",
+    "nativeSnapshotCapacityIncident": "New Local snapshot tabs rejected atomically by provider cell limit; separate full native PRE/POST copies verified; no history removed."
+  },
+  "previousRun": {
+    "checkpoint": "CP521",
+    "local": 512,
+    "main": 512,
+    "path": "2026-10-29-run34/cp521/status.json"
+  },
+  "roadmap": {
+    "schema": "four-lane.roadmap.v1",
+    "stages": [
+      "Inventory",
+      "Integrity",
+      "Approved content extraction",
+      "Validated knowledge",
+      "Use and maintenance"
+    ],
+    "currentSourceStage": "Metadata cataloguing only",
+    "overallCompletionPercent": null,
+    "finishDate": null,
+    "lanes": [
+      {
+        "id": "MSCS",
+        "checkpoint": "AQ-CP89",
+        "nextBatch": "B078",
+        "nextTarget": "Fresh bounded original-byte hash selection",
+        "gate": "802 source files remain; Google-native export hashes remain separate from original-byte hashes."
+      },
+      {
+        "id": "LSA",
+        "checkpoint": "CP80",
+        "nextBatch": "B081 reconciliation",
+        "nextTarget": "Historical identity inventory for the two baseline discrepancies",
+        "gate": "The observed 1,242-row tree matches the prior audit, but its historical baseline has 2 additional files /9,304 bytes whose identities are unknown. This blocks full freeze and semantic extraction; it did not prevent the verified read-only subset integrity pass."
+      },
+      {
+        "id": "AEC",
+        "checkpoint": "G076 PART2",
+        "nextBatch": "G076 PART3",
+        "nextTarget": "Source-clear observations starting at expected RO-2441",
+        "gate": "Unknown-unit rows remain deferred. FY2083/84 retained; exact Gregorian effective day unasserted. Further source rows require fresh verification."
+      },
+      {
+        "id": "MSCH",
+        "checkpoint": "CP523",
+        "nextBatch": "B524",
+        "nextTarget": "2e",
+        "gate": "598 FIFO folders remain; full corpus denominator unknown. Content parsing and model execution are later stages."
+      }
+    ]
+  },
+  "derivationReadiness": {
+    "inventoryAndIntegrity": "AVAILABLE_WITH_RECORDED_GAPS",
+    "aecStructuredRates": "EXISTING_PARTIAL_SOURCE_LINKED_TABLES",
+    "corpusContentExtraction": "PENDING",
+    "formats": [
+      "JSONL/NDJSON",
+      "JSON",
+      "SQLite (MSCS and provisional LSA metadata)",
+      "CSV (AEC rates and provisional LSA metadata)",
+      "Markdown",
+      "Google Sheets",
+      "SHA-256 text",
+      "ZIP recovery archives"
+    ],
+    "limitations": "Inventory and hashes do not establish extracted source text or validated engineering/study conclusions. AEC source-page normalization is partial."
+  },
+  "run34": {
+    "sourceCheckpointCount": 2,
+    "workUnits": 5,
+    "mscsCanonicalPromotion": true,
+    "aecRecoveryClosed": true,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "resolvedTruncatedReadbacks": 1,
+    "sourceBatchesReplayed": 0,
+    "duplicateRecoveryUploads": 0,
+    "aecInheritedParentCorrected": true
+  },
+  "run35": {
+    "sourceCheckpointCount": 2,
+    "workUnits": 5,
+    "mscsCanonicalPromotion": true,
+    "aecRecoveryClosed": true,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "resolvedTruncatedReadbacks": 0,
+    "sourceBatchesReplayed": 0,
+    "duplicateRecoveryUploads": 0
+  }
+}

@@ -25,7 +25,7 @@ test('the view exposes four lane paths, clear content boundaries and conditional
  const ids=[...html.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);assert.equal(ids.length,new Set(ids).size);
  for(const lane of view.lanes){assert.ok(html.includes('data-lane-tab="'+lane.id+'"'));assert.ok(html.includes(lane.checkpoint));assert.equal(lane.stages.length,5);assert.equal(lane.outputs.length,2);}
  assert.equal((html.match(/proposed products, not completed findings/g)??[]).length,4);
- assert.ok(html.includes(status.lanes.find(l=>l.id==='AEC').evidence.g076RecoveryReissued?'G076 PART1 recovery closure verified':'G076 terminal reconciliation required'));
+ assert.ok(html.includes(status.lanes.find(l=>l.id==='AEC').evidence.latestVerifiedBatch?status.lanes.find(l=>l.id==='AEC').evidence.latestVerifiedBatch+' source and readback verified':status.lanes.find(l=>l.id==='AEC').evidence.g076RecoveryReissued?'G076 PART1 recovery closure verified':'G076 terminal reconciliation required'));
  assert.ok(!html.includes('original terminal checkpoint is unavailable'));
  assert.ok(html.includes('Full corpus total is unknown'));
  assert.ok(html.includes('Stages show readiness, not equal percentages'));
@@ -61,3 +61,5 @@ test('Actions verifies the built view before upload and the live Pages result be
  assert.match(workflow,/release-estimate-milestone:[\s\S]*needs: deploy/);
  assert.match(workflow,/ref: \$\{\{ github.sha \}\}/);
 });
+
+test('source rate table preserves exact rates, source period and unknown effective day',()=>{const html=renderExtractionExplorer(status),a=buildExtractionView(status).lanes.find(l=>l.id==='AEC');assert.equal(a.newRates.length,3);assert.equal(a.rateSource.exactEffectiveDay,null);for(const r of a.newRates){assert.ok(html.includes(r.id));assert.ok(html.includes(r.rateNPR.toFixed(2)));}assert.ok(html.includes('Exact Gregorian effective day is unasserted'));});
