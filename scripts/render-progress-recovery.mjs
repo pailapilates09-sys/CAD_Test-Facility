@@ -22,7 +22,7 @@ export function renderRecovery(status) {
       ? `${number(lane.metric.done)} / ${number(lane.metric.total)} ${esc(lane.metric.unit)} · ${percent(lane.metric)}%<br><small>${esc(lane.metric.label)}; ${number(lane.metric.remaining)} remaining</small>`
       : lane.inventory
         ? `${number(lane.inventory.rows)} catalogue entries<br><small>${number(lane.inventory.folders)} folders · ${number(lane.inventory.files)} files · ${number(lane.inventory.pendingFolders)} folders pending; total unknown</small>`
-        : `${esc(lane.evidence.rateIds.join(' / '))} present<br><small>Terminal closure incomplete; overall total unknown</small>`;
+        : `${esc(lane.evidence.rateIds.join(' / '))} present<br><small>${lane.evidence.g076RecoveryReissued?'Recovery closure verified; overall total unknown':'Terminal closure incomplete; overall total unknown'}</small>`;
     return `<tr><th scope="row">${esc(lane.id)}<br><small>${esc(lane.stage)}</small></th><td>${esc(lane.checkpoint)}<br><small>${esc(lane.batch)}</small></td><td>${progress}</td><td><span class="pill ${lane.state.startsWith('READY') ? 'green' : 'amber'}">${esc(lane.stateLabel)}</span><br><small>${esc(lane.blocker)}</small></td><td><b>${esc(lane.next.batch)}</b><br>${esc(lane.next.target)}</td></tr>`;
   }).join('');
   const sync = status.lanes.map(lane => `<tr><th scope="row">${esc(lane.id)}</th><td>${number(lane.sync.local)}</td><td>${number(lane.sync.mainConsumed)}</td><td>${number(lane.sync.pendingSequences)}</td><td>${lane.sync.notice ? esc(lane.sync.notice) + (lane.sync.mainAck === 'ACKED' ? ' acknowledged' : ' pending') : lane.sync.pendingSequences === 0 ? 'No pending notice' : 'Pending sync'}</td></tr>`).join('');

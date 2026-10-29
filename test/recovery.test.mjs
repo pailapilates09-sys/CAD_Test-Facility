@@ -39,7 +39,7 @@ test('recovery reports stage-specific progress and preserves unknown totals and 
  const json=JSON.stringify(recovery);
  assert.ok(!/@gmail\.com|download_url|[?&]sig=|b64_string|npr_per_kg|1kyKGgFi5KRHHw-PLHsyntG2_36ameSYJ|1-6TwlYLwF8-xMa1An-KJFCBfdA1ZLrNU/i.test(json));
  assert.ok(!/NaN|undefined|Infinity/.test(visible));
- assert.ok(visible.includes('Terminal closure incomplete'));
+ assert.ok(visible.includes(recovery.lanes.find(l=>l.id==='AEC').evidence.g076RecoveryReissued?'Recovery closure verified':'Terminal closure incomplete'));
  assert.ok(visible.includes('total unknown'));
  assert.ok(visible.includes(recovery.lanes.every(l=>l.sync.pendingSequences===0)?'Main acknowledgements verified':'Local verified · Main pending'));
  assert.equal(visible.includes('No pending notice'),recovery.lanes.some(l=>l.sync.noticeState==='IDLE'));
@@ -78,7 +78,7 @@ test('resumed run meets its time window and its checkpoint deltas reconcile to c
   assert.ok(lane);
   assert.equal(event.sequence,lane.sync.local);
   assert.equal(event.providerReadback,'PASS');
-  assert.equal(event.canonicalPromotion,false);
+  assert.equal(event.canonicalPromotion,lane.supplementalEvidence.canonicalPromotion);
   assert.match(lane.supplementalEvidence.sha256,/^[a-f0-9]{64}$/);
  }
  assert.equal(run.debtClearance.remainingEvents,recovery.lanes.reduce((n,l)=>n+l.sync.pendingSequences,0));

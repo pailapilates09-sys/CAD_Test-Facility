@@ -1,22 +1,22 @@
 export const livePhase = {
-  "phase": "539",
-  "title": "Run33 complete — 5 checkpoints through CP519",
+  "phase": "544",
+  "title": "Run34 complete — all four lanes; CP521",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-28T23:38:47.584Z",
-  "checkpoint": "MSCH-CORPUS-CP519",
+  "completedAt": "2026-10-29T05:55:53.067Z",
+  "checkpoint": "MSCH-CORPUS-CP521",
   "before": {
-    "rows": 6836,
-    "folders": 1159,
-    "files": 5677,
-    "pending": 607
-  },
-  "after": {
     "rows": 6874,
     "folders": 1159,
     "files": 5715,
     "pending": 602
   },
-  "completedBatches": 5,
+  "after": {
+    "rows": 6893,
+    "folders": 1159,
+    "files": 5734,
+    "pending": 600
+  },
+  "completedBatches": 2,
   "scope": "User-authorized maximum 60-minute four-lane continuation; 5 MSCH metadata checkpoints. Existing source-stage gates retained.",
   "providerReadback": "PASS",
   "localRegistration": "VERIFIED",
@@ -26,38 +26,38 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 30.313566666666667,
+    "sourceElapsedMinutes": 33.8957,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 510,
-  "mainCursor": 510,
-  "nextBatch": "B520",
-  "nextTarget": "2a",
-  "newRows": 38,
+  "localHighWater": 512,
+  "mainCursor": 512,
+  "nextBatch": "B522",
+  "nextTarget": "2c",
+  "newRows": 19,
   "newFolders": 0,
-  "newFiles": 38,
-  "newKnownBytes": 855479,
-  "sessionStartedAt": "2026-10-28T23:01:10.764Z",
-  "sessionElapsedMinutes": 37.61366666666667,
-  "knownBytes": 66630611504,
+  "newFiles": 19,
+  "newKnownBytes": 53438,
+  "sessionStartedAt": "2026-10-29T05:06:01.896Z",
+  "sessionElapsedMinutes": 49.85285,
+  "knownBytes": 66630664942,
   "sessionReport": {
-    "startedAt": "2026-10-28T23:01:10.764Z",
-    "sourceStoppedAt": "2026-10-28T23:31:29.578Z",
-    "milestones": 5,
+    "startedAt": "2026-10-29T05:06:01.896Z",
+    "sourceStoppedAt": "2026-10-29T05:39:55.638Z",
+    "milestones": 2,
     "advancedLanes": 4,
     "MSCS": {
-      "checkpoint": "AQ-CP87 /B075",
+      "checkpoint": "AQ-CP88 /B076",
       "beforeHashed": 1059,
-      "afterHashed": 1059,
+      "afterHashed": 1062,
       "addedHashes": 0,
       "pending": 808,
       "physicalRecords": 2187,
-      "local": 7,
-      "mainCursor": 7,
+      "local": 8,
+      "mainCursor": 8,
       "notice": "N3 acknowledged",
       "tier3EligibleRemaining": 0,
-      "next": "B076 policy gate",
+      "next": "B077",
       "status": "POLICY_GATE",
       "pilot": {
         "verifiedFiles": 3,
@@ -67,7 +67,8 @@ export const livePhase = {
         "maxFiles": 3,
         "maxIndividualBytes": 5000000,
         "maxCumulativeBytes": 10000000
-      }
+      },
+      "canonicalPromotion": true
     },
     "LSA": {
       "checkpoint": "CP80 /B080",
@@ -76,8 +77,8 @@ export const livePhase = {
       "addedFolders": 0,
       "addedFiles": 0,
       "addedMetadataBytes": 0,
-      "local": 32,
-      "mainCursor": 32,
+      "local": 33,
+      "mainCursor": 33,
       "notice": "N27 acknowledged",
       "nativeGridRows": 1500,
       "next": "B081 baseline reconciliation",
@@ -87,30 +88,35 @@ export const livePhase = {
         "verifiedBytes": 55242,
         "distinctContentHashes": 1,
         "canonicalInventoryChanged": false
-      }
+      },
+      "newIntegrityProofs": 3,
+      "cumulativeIntegrityProofs": 6
     },
     "MSCH": {
-      "checkpoint": "CP519 /B519",
-      "beforeRows": 6836,
-      "afterRows": 6874,
+      "checkpoint": "CP521 /B521",
+      "beforeRows": 6874,
+      "afterRows": 6893,
       "addedFolders": 0,
-      "addedFiles": 38,
-      "addedMetadataBytes": 855479,
-      "pending": 602,
-      "local": 510,
-      "mainCursor": 510,
-      "notice": "N464 ACKED",
-      "next": "B520"
+      "addedFiles": 19,
+      "addedMetadataBytes": 53438,
+      "pending": 600,
+      "local": 512,
+      "mainCursor": 512,
+      "notice": "N466 ACKED",
+      "next": "B522"
     },
     "AEC": {
-      "status": "TERMINAL_RECONCILIATION_REQUIRED",
-      "local": 12,
-      "mainCursor": 12,
+      "status": "RECOVERY_CLOSED",
+      "local": 13,
+      "mainCursor": 13,
       "newRateWrites": 0,
       "g075CheckpointReadable": true,
       "g076TerminalRecovered": false,
       "sourceAndSnapshotVerified": true,
-      "transportRecovered": true
+      "transportRecovered": true,
+      "checkpoint": "G076 PART1 recovery closed /G076 PART1",
+      "g076RecoveryReissued": true,
+      "next": "G076 PART2"
     },
     "sourceContentExtraction": false,
     "sourceMutation": "NONE",
@@ -122,22 +128,24 @@ export const livePhase = {
     ],
     "debtClearance": {
       "initialEvents": 0,
-      "newEvents": 8,
-      "totalAcknowledgedEvents": 8,
+      "newEvents": 5,
+      "totalAcknowledgedEvents": 5,
       "remainingEvents": 0,
       "recoveredEventsAcknowledged": 0,
-      "newEventsAcknowledged": 8,
+      "newEventsAcknowledged": 5,
       "pending": 0
     },
     "remaining": [
-      "LSA historical 2 files /9,304 bytes unresolved.",
-      "AEC source/snapshot reconciled; original terminal404; formal terminal reissue pending.",
-      "MSCS 3 larger-file pilot proofs verified; canonical promotion and remaining native/oversize handling pending.",
-      "MSCH 602 FIFO folders; source-content extraction remains."
+      "MSCH 600 queued folders and later source parsing.",
+      "MSCS805 pending files; bounded oversize/native handling.",
+      "LSA historical2 files /9,304 bytes unresolved.",
+      "AEC source continuation; goat-manure unit deferred."
     ],
-    "canonicalSourceAdvanceLanes": 1
+    "canonicalSourceAdvanceLanes": 1,
+    "workUnits": 5,
+    "closedAt": "2026-10-29T05:55:53.067Z"
   },
-  "scannedFolders": 511,
+  "scannedFolders": 513,
   "phases": [
     {
       "phase": "01",
@@ -3938,6 +3946,41 @@ export const livePhase = {
       "lane": "AEC / Local / Main",
       "work": "2 existing rates source/recovery verified; terminal reissue pending",
       "stop": "Local/Main 12/12 acknowledged; canonical source checkpoint remains separately stated",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "540",
+      "lane": "MSCS /Local /Main",
+      "work": "3 saved proofs promoted; 1,062 official file hashes",
+      "stop": "Local/Main 8/8 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "541",
+      "lane": "AEC /Local /Main",
+      "work": "G076 PART1 normalized recovery closed; 2 existing rates",
+      "stop": "Local/Main 13/13 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "542",
+      "lane": "LSA /Local /Main",
+      "work": "3 additional PDF hash proofs; 6 physical files verified",
+      "stop": "Local/Main 33/33 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "543",
+      "lane": "MSCH /Local /Main",
+      "work": "B520 2a: 7 file records",
+      "stop": "CP520 Local/Main511/511 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "544",
+      "lane": "MSCH /Local /Main",
+      "work": "B521 2b: 12 file records",
+      "stop": "CP521 Local/Main512/512 ACKED",
       "status": "Complete - stopped"
     }
   ]
