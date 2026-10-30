@@ -38,7 +38,7 @@ export function classifyPage(path='') {
     return {project:'paila',category:supplier?'Supplier quotation':p.includes('/pilates-sketchup')?'Model & quantities':p.includes('/v14')?'Programme':p.endsWith('milestone.html')?'Versions':p==='projects/paila-pilates'?'Project hub':'Estimate & materials',active:'paila'};
   }
   if(/construction\/models\/basanti-(?:residence|workbench)/.test(p)) {
-    return {project:'basanti',category:p.includes('/v7')?'MEP coordination':p.endsWith('milestone.html')?'Project hub':p.includes('basanti-residence')?'Building drawings':p.includes('/changes')?'Change report':'Structure & quantities',active:'basanti'};
+    return {project:'basanti',category:p.includes('/v7')?'MEP coordination':p.endsWith('milestone.html')?'Project hub':p.endsWith('/interior.html')?'Interior & furniture':p.includes('basanti-residence')?'Building drawings':p.includes('/changes')?'Change report':'Structure & quantities',active:'basanti'};
   }
   if(p==='cad')return {project:'formwork',category:'Drawings & quantities',active:'formwork'};
   if(p==='construction')return {project:'workspace',category:'Drawing library',active:'drawings'};
