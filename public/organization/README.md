@@ -1,6 +1,6 @@
 # CAD Test Facility · shared website organisation
 
-The website groups projects, drawings/design tools, and records/learning without relocating project source files or historical URLs.
+The website groups Workspace utilities, Projects, Drawings & tools, Progress & source files, and Learning & guides without relocating project source files or historical URLs.
 
 ## Ownership
 
@@ -19,3 +19,9 @@ The website groups projects, drawings/design tools, and records/learning without
 `node scripts/verify-site-organization.mjs --preserve-baseline` additionally requires the dated source and non-HTML output hashes to match. `preservation-baseline.json` is the comparison for this presentation release, based on the current CP523/Run35 provider commit. It is not a rule that prevents later authorised project-data updates: future data changes should be documented in a new dated comparison. The original source evidence must not be silently rewritten to make an audit pass.
 
 The existing Actions workflow continues to run the repository checks and deploy Pages. This redesign does not change engineering assumptions, prices, sanctioned loads, fabrication status or approval requirements.
+
+## Category refinement - 31 October 2026
+
+`PAGE_KINDS` and `pageKind` in `site-model.js` classify every HTML page as a hub/directory, original quotation, versioned workspace, individual work detail, drawing/tool or reference page. The directory defaults to main pages; the All pages and Individual work details filters expose the complete catalogue. Global search opens all page types. Project and page-type selections remain in the URL. The library includes recognized gzip-compressed exports with an explicit format label.
+
+The dated 29 October comparison is retained. The current navigation review compares against provider commit `2c8ff8a93da8b7fef0bd1a244d1f1d919919dcad`; see `QA_2026-10-31.md`. Navigation work does not change the extraction checkpoint, engineering model, source PDFs, original quote values or source archives.

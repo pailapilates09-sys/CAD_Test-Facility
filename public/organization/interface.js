@@ -55,24 +55,28 @@ export function initOrganization(win=window,doc=document) {
   for(const catalogue of doc.querySelectorAll('[data-org-catalogue]')){
     const node=catalogue.querySelector('[data-org-catalogue-data]');if(!node)continue;
     let records;try{records=JSON.parse(node.textContent);}catch{continue;}
-    const query=catalogue.querySelector('[data-org-filter-query]'),project=catalogue.querySelector('[data-org-filter-project]'),format=catalogue.querySelector('[data-org-filter-format]'),reset=catalogue.querySelector('[data-org-filter-reset]');
+    const query=catalogue.querySelector('[data-org-filter-query]'),project=catalogue.querySelector('[data-org-filter-project]'),format=catalogue.querySelector('[data-org-filter-format]'),kind=catalogue.querySelector('[data-org-filter-kind]'),reset=catalogue.querySelector('[data-org-filter-reset]');
     const rows=[...catalogue.querySelectorAll('[data-org-record]')],count=catalogue.querySelector('[data-org-result-count]'),empty=catalogue.querySelector('[data-org-no-results]');
     const apply=(syncURL=true)=>{
-      const results=new Set(searchRecords(records,query.value,{project:project.value,format:format?.value??''}));
+      const results=new Set(searchRecords(records,query.value,{project:project.value,format:format?.value??'',kind:kind?.value??''}));
       rows.forEach(row=>{row.hidden=!results.has(records[Number(row.dataset.orgRecord)]);});
       count.textContent=`${results.size} of ${records.length} ${catalogue.dataset.orgCatalogue==='pages'?'pages':'files'}`;
-      empty.hidden=results.size>0;reset.hidden=!(query.value||project.value||format?.value);
+      empty.hidden=results.size>0;reset.hidden=!(query.value||project.value||format?.value||(kind&&kind.value!=='main'));
       if(syncURL){
         const url=new URL(win.location.href);
-        for(const [key,value]of [['q',query.value.trim()],['project',project.value],['format',format?.value??'']]){if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);}
+        for(const [key,value]of [['q',query.value.trim()],['project',project.value],['format',format?.value??''],['kind',kind?.value??'']]){if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);}
         win.history.replaceState(null,'',url);
       }
     };
     const params=new URLSearchParams(win.location.search);query.value=params.get('q')??'';
     if([...project.options].some(o=>o.value===params.get('project')))project.value=params.get('project');
     if(format&&[...format.options].some(o=>o.value===params.get('format')))format.value=params.get('format');
-    query.addEventListener('input',()=>apply());project.addEventListener('change',()=>apply());format?.addEventListener('change',()=>apply());
-    reset.addEventListener('click',()=>{query.value='';project.value='';if(format)format.value='';apply();query.focus();});apply(false);
+    if(kind){
+      if([...kind.options].some(o=>o.value===params.get('kind')))kind.value=params.get('kind');
+      else if(query.value)kind.value='all';
+    }
+    query.addEventListener('input',()=>apply());project.addEventListener('change',()=>apply());format?.addEventListener('change',()=>apply());kind?.addEventListener('change',()=>apply());
+    reset.addEventListener('click',()=>{query.value='';project.value='';if(format)format.value='';if(kind)kind.value='main';apply();query.focus();});apply(false);
   }
 
   const dialog=doc.querySelector('[data-org-search-dialog]'),input=dialog?.querySelector('[data-org-search-input]'),results=dialog?.querySelector('[data-org-search-results]'),status=dialog?.querySelector('[data-org-search-status]'),all=dialog?.querySelector('[data-org-search-all]');
@@ -83,14 +87,14 @@ export function initOrganization(win=window,doc=document) {
   })();
   const renderResults=()=>{
     if(!index)return;
-    const featured=['index.html','projects/paila-pilates/index.html','construction/models/basanti-residence/milestone.html','cad/index.html','construction/models/basanti-workbench/v7/index.html','construction/estimates/pilates-astra-2026-10-15/milestone.html','construction/estimates/pilates-hamro-2026-10-28/index.html','directory/index.html','library/index.html','guide/organization/index.html'];
+    const featured=['index.html','projects/paila-pilates/index.html','construction/models/basanti-residence/milestone.html','cad/index.html','construction/models/basanti-workbench/v8/index.html','construction/models/basanti-workbench/v7/index.html','construction/estimates/pilates-astra-2026-10-15/milestone.html','construction/estimates/pilates-hamro-2026-10-28/index.html','directory/index.html','library/index.html','guide/organization/index.html'];
     const matches=input.value.trim()?searchRecords(index,input.value,{limit:10}):featured.map(path=>index.find(item=>item.path===path)).filter(Boolean);results.replaceChildren();
     for(const item of matches){
       const link=doc.createElement('a'),strong=doc.createElement('strong'),smallLabel=doc.createElement('small');
       link.href=new URL(item.path,root).href;strong.textContent=item.title;smallLabel.textContent=`${item.project_label} · ${item.category}`;link.append(strong,smallLabel);results.append(link);
     }
     status.textContent=matches.length?`${matches.length} page${matches.length===1?'':'s'} shown · use All pages for the complete list.`:'No matching pages. Try fewer words.';
-    const destination=new URL('directory/',root);if(input.value.trim())destination.searchParams.set('q',input.value.trim());all.href=destination.href;
+    const destination=new URL('directory/',root);destination.searchParams.set('kind','all');if(input.value.trim())destination.searchParams.set('q',input.value.trim());all.href=destination.href;
   };
   const openSearch=async event=>{
     if(!dialog?.showModal)return;
