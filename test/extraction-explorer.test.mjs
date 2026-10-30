@@ -63,3 +63,14 @@ test('Actions verifies the built view before upload and the live Pages result be
 });
 
 test('source rate table preserves exact rates, source period and unknown effective day',()=>{const html=renderExtractionExplorer(status),a=buildExtractionView(status).lanes.find(l=>l.id==='AEC');assert.equal(a.newRates.length,3);assert.equal(a.rateSource.exactEffectiveDay,null);for(const r of a.newRates){assert.ok(html.includes(r.id));assert.ok(html.includes(r.rateNPR.toFixed(2)));}assert.ok(html.includes('Exact Gregorian effective day is unasserted'));});
+
+
+test('source rate table keeps kilogram and three-piece-set observations distinct',()=>{
+ const changed=structuredClone(status),a=changed.lanes.find(l=>l.id==='AEC');
+ a.newRates=[{id:'TEST-KG',label:'Kg material',rateNPR:35,unit:'kg'},{id:'TEST-SET',label:'Set material',rateNPR:5.51,unit:'set',unitDetail:'set (3 pieces)'}];
+ const html=renderExtractionExplorer(changed);
+ assert.ok(html.includes('<th scope="col">Source unit</th>'));
+ assert.ok(html.includes('<td>35.00</td><td>kg</td>'));
+ assert.ok(html.includes('<td>5.51</td><td>set (3 pieces)</td>'));
+ assert.doesNotMatch(html,/<th[^>]*>NPR\s*\/\s*kg<\/th>/);
+});
