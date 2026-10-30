@@ -1,0 +1,32 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import * as v6 from '../public/construction/models/basanti-workbench/v6/proposed-model.js';
+import {scheduleTasks,phaseNames} from '../public/construction/models/basanti-workbench/work-packages.js';
+import {createQuantityRegister,taskDiscipline,csv} from '../public/construction/models/basanti-workbench/v8/register-model.js';
+import {SYSTEMS} from '../public/construction/models/basanti-workbench/v7/mep-model.js';
+import {programmeSVG} from '../public/construction/models/basanti-workbench/v8/drawings.js';
+import {groupProgramme} from '../public/construction/models/basanti-workbench/v8/register-model.js';
+export async function buildBuildingV8(root,dist){
+ const base=new URL('construction/models/basanti-workbench/v8/',dist),sourceBase=new URL('public/construction/models/basanti-workbench/v8/',root);await mkdir(new URL('data/',base),{recursive:true});
+ const project=JSON.parse(await readFile(new URL('../../basanti-residence/data/project.json',base))),mep=JSON.parse(await readFile(new URL('../v7/data/mep.json',base))),references=JSON.parse(await readFile(new URL('references.json',sourceBase)));
+ if(project.source_sha256!==mep.source_sha256)throw Error('V8 building and MEP sources differ');
+ v6.setBasisMode('proposal');const ctx=v6.protectV3Steel(v6.createWorkContext(v6.reviewProject(project).project)),packages=ctx.tasks.map(task=>({task,rows:v6.packageForTask(ctx,task).rows}));
+ mep.system_names=Object.fromEntries(Object.entries(SYSTEMS).map(([id,s])=>[id,s.name]));
+ const register=createQuantityRegister(packages,mep,[...ctx.project.components,...ctx.project.rooms,...ctx.proposals,...ctx.steel]),building=scheduleTasks(ctx.tasks);
+ const schedules={building:{name:'Building',unit:'calendar days',duration:building.duration,groups:phaseNames,tasks:building.tasks.map(t=>({...t,discipline:taskDiscipline(t)})),basis:'Existing 112-task building dependency programme. Durations are unapproved calendar-day allowances; no crew, holiday or weather capacity model.'},mep:{name:'MEP',unit:'workdays',duration:mep.schedule.working_days,groups:{design:'Design',procure:'Procurement',first:'First fix',second:'Second fix',test:'Testing',finish:'Finishes',handover:'Handover'},tasks:mep.schedule.tasks.map(t=>({...t,code:t.id,duration:t.days,depends:t.after,hold:t.gate,scope:'all',discipline:'mep'})),basis:'Existing v7 MEP installation programme. Relative workdays are a separate baseline; no shared calendar start or coordinated building finish is inferred.'}};
+ const hash=createHash('sha256');for(const file of ['index.html','v8.js','v8.css','register-model.js','drawings.js','references.json'])hash.update(await readFile(new URL(file,sourceBase)));hash.update(JSON.stringify(register));const revision=hash.digest('hex').slice(0,16),header={schema:'basanti-workspace-8.0',revision,date:'2026-10-30',source_sha256:project.source_sha256,release:'QUANTITY_AND_PROGRAMME_REVIEW',based_on:['v6 structural/quantity basis','v7 MEP routes and schedule']};
+ for(const programme of Object.values(schedules))if(programme.tasks.some(t=>!programme.groups[t.phase]))throw Error('Programme phase has no readable label');
+ const data={...header,...register,schedules,rooms:project.rooms,source_furniture_schedule:false,proposal_furniture:ctx.proposals.filter(c=>['furniture','joinery','appliance'].includes(c.kind)).map(c=>c.id),references};
+ const put=(name,value)=>writeFile(new URL(name,base),typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');
+ await put('data/workspace.json',data);await put('data/boq.csv',csv([['id','code','discipline','item','floor','quantity','unit','basis','source_view'],...register.items.map(r=>[r.id,r.code,r.discipline,r.label,r.floor,r.quantity,r.unit,r.basis,r.source_path])]));
+ await put('data/quantity-lines.json',{...header,packages,omitted_legacy_service_quantities:register.omitted});
+ await put('data/programme-building.csv',csv([['id','code','activity','discipline','phase','floor','start_day_0','finish_day_exclusive','duration_calendar_days','predecessors','hold'],...schedules.building.tasks.map(t=>[t.id,t.code,t.label,t.discipline,t.phase,t.scope,t.start,t.finish,t.duration,t.depends.join(' '),t.hold])]));
+ await put('data/programme-mep.csv',csv([['id','activity','phase','start_workday_0','finish_workday_exclusive','duration_workdays','predecessors','gate'],...schedules.mep.tasks.map(t=>[t.id,t.label,t.phase,t.start,t.finish,t.duration,t.depends.join(' '),t.hold])]));
+ for(const [id,programme]of Object.entries(schedules))await put('data/gantt-'+id+'.svg',programmeSVG(groupProgramme(programme),programme,{expanded:true}));
+ await put('data/scene.json',{...header,project,components:ctx.project.components.map(c=>c.kind==='footing'?ctx.layers.footing.find(f=>f.id===c.id)??c:c),proposals:ctx.proposals,mep});
+ await put('data/steel.json',{...header,components:ctx.steel});
+ await put('data/checks.json',{...header,boq_items:register.items.length,boq_line_records:register.items.reduce((n,i)=>n+i.lines.length,0),disciplines:[...new Set(register.items.map(i=>i.discipline))],building_tasks:schedules.building.tasks.length,mep_tasks:schedules.mep.tasks.length,null_quantities:register.items.filter(i=>i.quantity===null).length,original_source_preserved:true,approved_rates_supplied:false,approved_furniture_schedule_supplied:false});
+ let html=await readFile(new URL('index.html',sourceBase),'utf8');await put('index.html',html.replaceAll('V8_REVISION',revision));
+ for(const file of ['v8.js','register-model.js','drawings.js'])await put(file,(await readFile(new URL(file,sourceBase),'utf8')).replaceAll('V8_REVISION',revision).replace(/(from\s*['"])(\.{1,2}\/[^'"?]+\.js)(['"])/g,`$1$2?v=${revision}$3`));
+ console.log(`Basanti v8: ${register.items.length} BOQ items across four disciplines plus shared activities; ${building.tasks.length} building / ${mep.schedule.tasks.length} MEP Gantt tasks.`);return header;
+}

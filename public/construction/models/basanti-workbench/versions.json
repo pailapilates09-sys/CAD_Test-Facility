@@ -1,7 +1,7 @@
 {
   "project_name": "14_Basanti Poudel Baral",
   "hub_path": "../basanti-residence/milestone.html",
-  "current_version": "v7",
+  "current_version": "v8",
   "source_pdf_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
   "versions": [
     {
@@ -72,6 +72,19 @@
       "baseline_commit": "de7dd681c701851ea38a56b120324a0246f97c7b",
       "source": "Separate v7 MEP modules and build entry; canonical building source and v1–v6 algorithms remain unchanged",
       "status": "Current preliminary MEP coordination. Site outfalls, equipment, local approval and engineering release remain visible gates; not an issued installation design."
+    },
+    {
+      "id": "v8",
+      "title": "Version 8 · BOQ, views and Gantt",
+      "purpose": "Use five concise panels for the four-discipline quantity register, linked plan/model views, separate building and MEP programmes, and grouped source/panel navigation.",
+      "path": "./v8/",
+      "based_on": [
+        "v6",
+        "v7"
+      ],
+      "baseline_commit": "c6479ec33826d2a376ced35d55c805e932ed21c8",
+      "source": "Shared v6 quantities and v7 MEP data, with a new presentation and quantity-register layer",
+      "status": "Current review workspace. Source/model/scenario/proposal quantities remain distinct; no confirmed furniture schedule or approved rates supplied."
     }
   ],
   "change_report": "./changes/",
