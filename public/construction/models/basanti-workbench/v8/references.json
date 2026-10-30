@@ -1,0 +1,9 @@
+{
+  "reviewed": "2026-10-30",
+  "sources": [
+    {"title":"RICS NRM 2 · current measurement guidance","publisher":"Royal Institution of Chartered Surveyors","url":"https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm","application":"Group work items with identifiable descriptions, quantities, units and measurement basis.","scope":"Presentation and measurement-register reference. This preliminary project register does not claim NRM compliance or supply a priced contract BOQ."},
+    {"title":"Work breakdown structure","publisher":"Procore","url":"https://support.procore.com/faq/what-is-work-breakdown-structure-wbs","application":"Use short discipline and work-section groups instead of one long navigation list.","scope":"Navigation reference; project activities and quantities come from the retained Basanti models."},
+    {"title":"Gantt programme views","publisher":"Procore","url":"https://en-gb.support.procore.com/products/online/user-guide/project-level/schedule/tutorials/view-a-gantt-schedule","application":"Provide summary bars, expandable tasks, dependencies, filters and timeline zoom.","scope":"Interface reference; no imported Procore programme or actual construction progress is implied."},
+    {"title":"Accessible tabs pattern","publisher":"W3C Web Accessibility Initiative","url":"https://www.w3.org/WAI/ARIA/apg/patterns/tabs/","application":"Use named tab panels, selected states and arrow/Home/End keyboard navigation.","scope":"Applied to the five in-page workspace tabs; ordinary links remain links when they open another page."}
+  ]
+}

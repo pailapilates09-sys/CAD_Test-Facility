@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "c6479ec33826d2a376ced35d55c805e932ed21c8",
+  "scope": "Basanti v8 compact workspace, four-discipline BOQ, two retained Gantt programmes and grouped legacy contents",
+  "source_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
+  "preservation": {
+    "original_pages": 142,
+    "retained_pages": 142,
+    "lost_ids": [],
+    "changed_table_counts": [],
+    "original_basanti_files": 359,
+    "retained_basanti_files": 359,
+    "unchanged_basanti_bytes": 301,
+    "data_files": 244,
+    "data_exact": 234,
+    "data_revision_only": 10,
+    "unexpected_data_changes": [],
+    "sqlite_semantic_equal": null
+  },
+  "quantity_register": {
+    "records": 221,
+    "structure": 74,
+    "architecture": 26,
+    "mep": 92,
+    "interior": 24,
+    "shared": 5,
+    "priced": false,
+    "source_furniture_schedule": false,
+    "legacy_furniture_proposals_retained": true
+  },
+  "programmes": {
+    "building": {
+      "activities": 112,
+      "duration": 241,
+      "unit": "calendar days"
+    },
+    "mep": {
+      "activities": 23,
+      "duration": 37,
+      "unit": "workdays"
+    },
+    "combined_finish_date_inferred": false
+  },
+  "automated_tests": {
+    "passed": 361,
+    "failed": 0
+  },
+  "browser": {
+    "widths": [
+      320,
+      375,
+      430,
+      768,
+      1280
+    ],
+    "panels": [
+      "Overview",
+      "Views",
+      "BOQ",
+      "Gantt",
+      "Sources"
+    ],
+    "flows": [
+      "BOQ discipline/floor/search/basis/pagination and empty state",
+      "item measurement evidence and source links",
+      "BOQ to Gantt and Gantt to BOQ",
+      "programme selection, grouped/expanded chart and dependencies",
+      "plan/model layout, camera and selection",
+      "legacy grouped contents and v8 links",
+      "keyboard tabs and browser Back",
+      "filtered BOQ CSV export"
+    ],
+    "export_evidence": {
+      "filtered_csv_rows": 9,
+      "work_code": "M10",
+      "quantity_precision_retained": true
+    },
+    "renderer": "Interactive vector 3D fallback verified; hardware WebGL and physical touch devices not claimed as tested."
+  }
+}
