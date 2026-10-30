@@ -38,9 +38,10 @@ export function initOrganization(win=window,doc=document) {
     button.setAttribute('aria-controls',list.id);
     let touched=false;
     const setOpen=open=>{button.setAttribute('aria-expanded',String(open));list.hidden=!open;button.querySelector('span').textContent=open?'−':'+';};
-    button.hidden=!small.matches;setOpen(!small.matches);
+    const compact=!!nav.closest('.basanti-discipline');
+    button.hidden=!(small.matches||compact);setOpen(!(small.matches||compact));
     button.addEventListener('click',()=>{touched=true;setOpen(button.getAttribute('aria-expanded')!=='true');});
-    small.addEventListener('change',()=>{button.hidden=!small.matches;if(!touched||!small.matches)setOpen(!small.matches);});
+    small.addEventListener('change',()=>{button.hidden=!(small.matches||compact);if(!touched||(!small.matches&&!compact))setOpen(!(small.matches||compact));});
     list.addEventListener('click',event=>{if(event.target.closest('a')&&small.matches){touched=true;setOpen(false);}});
   }
   // Section links open any native disclosure that contains their target, without changing its data.

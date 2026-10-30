@@ -101,7 +101,7 @@ function libraryPage(records) {
 function projectTaskLinks(page) {
  const {project}=classifyPage(page);
  if(project==='paila')return [['projects/paila-pilates/','Project hub'],['construction/estimates/pilates-astra-2026-10-15/milestone.html','Astra versions'],['construction/estimates/pilates-hamro-2026-10-28/','Hamro quotation'],['construction/models/pilates-sketchup/','Studio model'],['construction/estimates/pilates-astra-2026-10-15/v14/','Programme'],['library/?project=paila','Source files']];
- if(project==='basanti')return [['construction/models/basanti-residence/milestone.html','Project hub & versions'],['construction/models/basanti-residence/','Building plans'],['construction/models/basanti-workbench/v6/','Structure v6'],['construction/models/basanti-workbench/v7/','MEP v7'],['library/?project=basanti','Source files']];
+ if(project==='basanti')return [['construction/models/basanti-residence/milestone.html','Project hub & versions'],['construction/models/basanti-residence/','Architecture'],['construction/models/basanti-workbench/v6/','Structure v6'],['construction/models/basanti-workbench/v7/','MEP v7'],['construction/models/basanti-residence/interior.html','Interior & Furniture'],['library/?project=basanti','Source files']];
  if(project==='formwork')return [['construction/','Drawing library'],['cad/#model','3D assembly'],['cad/#drawings','2D sheets'],['cad/#materials','Materials'],['cad/#downloads','Downloads']];
  return [];
 }

@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "e4a6f78103812d757e06967767446522a08d331a",
+  "scope": "Basanti discipline navigation, form layout, room view and browser QA",
+  "source_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
+  "preservation": {
+    "original_files": 353,
+    "retained_files": 353,
+    "byte_identical": 292,
+    "data_and_drawing_files": 244,
+    "data_and_drawing_identical": 229,
+    "json_revision_only": 18,
+    "javascript_cache_revision_only": 30,
+    "html_pages": 11,
+    "missing": [],
+    "lost_ids": [],
+    "changed_tables": [],
+    "unexpected": []
+  },
+  "tests": {
+    "passed": 352,
+    "failed": 0,
+    "html_pages_verified": 142,
+    "local_links_verified": 10230,
+    "module_imports_verified": 232
+  },
+  "browser": {
+    "viewport_widths": [
+      320,
+      375,
+      430,
+      768,
+      1280
+    ],
+    "pages": [
+      "Architecture",
+      "Structure",
+      "MEP",
+      "Interior & Furniture"
+    ],
+    "horizontal_page_overflow": 0,
+    "clipped_visible_text": 0,
+    "source_sheet_mode_verified": true,
+    "verified_flows": [
+      "architecture filters, empty result, reset, pointer and keyboard selection, source sheet",
+      "interior floor and text filters, room selection, empty result, reset, architectural deep link",
+      "structural presets, member selection, annotations, material calculation",
+      "MEP service/floor/search filters, reset, route/profile selection, scenario apply/reset",
+      "light/dark theme"
+    ],
+    "renderer": "Vector 3D verified in the browser; hardware WebGL was unavailable."
+  },
+  "furniture_status": "No furniture schedule, quantities or furniture dimensions in the shared model; no invented items added."
+}
