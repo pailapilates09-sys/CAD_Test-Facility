@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile} from 'node:fs/promises';
-import {addHeadingAnchors,siteHref,organizationNavigation,decorateOrganization} from '../scripts/workspace-organization.mjs';
+import {readFile,mkdtemp,mkdir,writeFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {resolve} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {addHeadingAnchors,siteHref,organizationNavigation,decorateOrganization,applyWorkspaceOrganization} from '../scripts/workspace-organization.mjs';
 import {classifyPage,searchRecords} from '../public/organization/site-model.js';
 
 const review=JSON.parse(await readFile(new URL('../public/organization/references.json',import.meta.url)));
@@ -34,7 +37,7 @@ test('page search matches project, path and section words together and combines 
  assert.deepEqual(searchRecords(rows,'does not exist'),[]);
 });
 
-test('shared shell preserves a working drawing and its controllers while placing all fifteen references in the footer',()=>{
+test('shared shell preserves drawing controls, references and one cache revision for page and model',async()=>{
  assert.equal(review.products.length,15);assert.equal(new Set(review.products.map(r=>r.product)).size,15);
  const source='<html><head><script src="./controller.js"></script></head><body class="original"><header class="workspace-head"><nav aria-label="Workspace">Old global navigation</nav></header><header class="header"><nav aria-label="Drawing tools"><a href="#source">Original tools</a></nav></header><main id="main"><section id="source"><h2>Source</h2><table><tr><td>100 mm</td></tr></table></section></main></body></html>';
  const decorated=decorateOrganization(source,'cad/index.html',review,'test');
@@ -45,6 +48,18 @@ test('shared shell preserves a working drawing and its controllers while placing
  for(const r of review.products)assert.ok(footer.includes(r.url));
  assert.ok(organizationNavigation('cad/index.html').includes('aria-current="location"'));
  assert.throws(()=>decorateOrganization(decorated,'cad/index.html',review,'test'),/already applied/);
+ const temp=await mkdtemp(resolve(tmpdir(),'cad-org-cache-'));
+ try{
+  await mkdir(resolve(temp,'organization'));
+  await writeFile(resolve(temp,'index.html'),source);
+  await writeFile(resolve(temp,'organization/interface.js'),await readFile(new URL('../public/organization/interface.js',import.meta.url)));
+  const built=await applyWorkspaceOrganization(fileURLToPath(new URL('../',import.meta.url)),temp);
+  const module=await readFile(resolve(temp,'organization/interface.js'),'utf8'),page=await readFile(resolve(temp,'index.html'),'utf8');
+  assert.ok(module.includes("from './site-model.js?v="+built.revision+"'"));
+  assert.ok(page.includes('organization/interface.js?v='+built.revision));
+  assert.ok(!module.includes("from './site-model.js'"));
+ }finally{await rm(temp,{recursive:true,force:true})}
+
 });
 
 test('category groups keep the two projects distinct and give formwork a direct drawing-tool link',async()=>{

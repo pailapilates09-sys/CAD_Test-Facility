@@ -221,5 +221,8 @@ export async function applyWorkspaceOrganization(root,dist) {
  for(const p of ['public/organization/interface.css','public/organization/interface.js','public/organization/site-model.js','scripts/workspace-organization.mjs','public/organization/references.json'])hash.update(await readFile(resolve(root,p)));
  const revision=hash.digest('hex').slice(0,16),pages=(await walk(base)).filter(p=>p.endsWith('.html'));
  for(const file of pages)await writeFile(file,decorateOrganization(await readFile(file,'utf8'),relative(base,file).split('\\').join('/'),review,revision));
+  const modulePath=resolve(base,'organization/interface.js'),module=await readFile(modulePath,'utf8');
+  if(!module.includes("from './site-model.js'"))throw Error('Missing unversioned organisation model import');
+  await writeFile(modulePath,module.replace("from './site-model.js'",`from './site-model.js?v=${revision}'`));
  return {pages:pages.length,revision};
 }

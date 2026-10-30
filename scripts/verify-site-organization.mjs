@@ -21,9 +21,12 @@ export async function verifyWorkspaceOrganization(dist,root,{preserveBaseline=fa
   return cache.get(file);
  };
  const review=JSON.parse(await readFile(resolve(base,'organization/references.json'),'utf8'));
+ const interfaceModule=await readFile(resolve(base,'organization/interface.js'),'utf8'),modelRevision=interfaceModule.match(/from '\.\/site-model\.js\?v=([a-f0-9]{16})'/)?.[1];
+ if(!modelRevision)throw Error('Organisation model dependency has no build revision');
  if(review.products.length!==15||new Set(review.products.map(p=>p.product)).size!==15||new Set(review.products.map(p=>p.url)).size!==15)throw Error('Expected fifteen independently referenced products');
  for(const file of pages){
   const {html}=await getPage(file),page=relative(base,file).split('\\').join('/');
+  if(!html.includes('organization/interface.js?v='+modelRevision))throw Error('Organisation page and model cache revisions differ: '+page);
   const nav=[...html.matchAll(/<nav\b[^>]*aria-label="Workspace"[^>]*>([\s\S]*?)<\/nav>/g)];
   if(nav.length!==1||nav[0][1]!==organizationNavigation(page))throw Error('Shared navigation mismatch: '+page);
   const foot=html.match(/<footer class="org-footer"[\s\S]*?<\/footer>/)?.[0];
