@@ -25,3 +25,5 @@ The existing Actions workflow continues to run the repository checks and deploy 
 `PAGE_KINDS` and `pageKind` in `site-model.js` classify every HTML page as a hub/directory, original quotation, versioned workspace, individual work detail, drawing/tool or reference page. The directory defaults to main pages; the All pages and Individual work details filters expose the complete catalogue. Global search opens all page types. Project and page-type selections remain in the URL. The library includes recognized gzip-compressed exports with an explicit format label.
 
 The dated 29 October comparison is retained. The current navigation review compares against provider commit `2c8ff8a93da8b7fef0bd1a244d1f1d919919dcad`; see `QA_2026-10-31.md`. Navigation work does not change the extraction checkpoint, engineering model, source PDFs, original quote values or source archives.
+
+The published interface module and its search/filter model use the same derived build revision, so a returning browser requests the matching dependency. The build and integration test verify this relationship.
