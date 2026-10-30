@@ -1,0 +1,43 @@
+{
+  "schema": "cad-navigation-qa-2026-10-31",
+  "baseline_commit": "2c8ff8a93da8b7fef0bd1a244d1f1d919919dcad",
+  "date": "2026-10-31",
+  "tests_passed": 366,
+  "before_pages": 143,
+  "after_pages": 143,
+  "removed_page_addresses": [],
+  "removed_existing_section_ids": {},
+  "changed_project_tables": [],
+  "changed_project_main_content": [],
+  "project_main_contents_compared": 138,
+  "protected_non_html_files": 638,
+  "changed_protected_non_html_files": [],
+  "page_kinds": {
+    "version": 23,
+    "model": 6,
+    "reference": 5,
+    "overview": 5,
+    "quotation": 2,
+    "work-detail": 102
+  },
+  "source_exports_before": 424,
+  "source_exports_after": 457,
+  "newly_listed_existing_archives": 33,
+  "checked_local_links_assets": 10385,
+  "checked_module_imports": 240,
+  "checked_section_links": 2799,
+  "browser_qa": [
+    "Desktop directory filters, zero results, reset, global search and URL handoff",
+    "Source library format/project filters and reload persistence",
+    "320, 375, 430 and 768 px frames without document overflow",
+    "Phone menu open, close button and Escape",
+    "Light/dark themes and mascot visibility control",
+    "Five CAD sheets and eight material rows",
+    "Paila project hub to Hamro expanded item on phone"
+  ],
+  "limits": [
+    "No physical iPhone or GPU/WebGL validation. Column formwork static fallback was observed.",
+    "This is website/navigation QA, not engineering design approval."
+  ],
+  "comparison_policy": "Fresh navigation-only comparison at the recorded provider commit. The older 29 October preservation report remains a separate historical comparison."
+}

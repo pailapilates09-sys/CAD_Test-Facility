@@ -46,3 +46,56 @@ test('shared shell preserves a working drawing and its controllers while placing
  assert.ok(organizationNavigation('cad/index.html').includes('aria-current="location"'));
  assert.throws(()=>decorateOrganization(decorated,'cad/index.html',review,'test'),/already applied/);
 });
+
+test('category groups keep the two projects distinct and give formwork a direct drawing-tool link',async()=>{
+ const {GROUPS}=await import('../public/organization/site-model.js');
+ assert.deepEqual(GROUPS.map(g=>g.id),['workspace','projects','tools','records','learning']);
+ assert.deepEqual(GROUPS.find(g=>g.id==='projects').items.map(i=>i.id),['paila','basanti']);
+ assert.equal(GROUPS.find(g=>g.id==='tools').items[0].path,'cad/');
+ assert.deepEqual(GROUPS.find(g=>g.id==='records').items.map(i=>i.id),['sources','progress']);
+ assert.deepEqual(GROUPS.find(g=>g.id==='learning').items.map(i=>i.id),['memory','guide']);
+ const links=GROUPS.flatMap(g=>g.items.map(i=>i.path));assert.equal(new Set(links).size,links.length);
+});
+
+test('page types separate original offers, technical versions and individual material worksheets',async()=>{
+ const {pageKind}=await import('../public/organization/site-model.js');
+ const a='construction/estimates/pilates-astra-2026-10-15/';
+ for(const p of [a+'v8/item-01.html',a+'v10/work-01.html'])assert.equal(pageKind(p),'work-detail');
+ for(const p of [a+'v8/index.html',a+'v9/index.html',a+'v5.1/index.html','construction/models/basanti-workbench/v8/index.html'])assert.equal(pageKind(p),'version');
+ assert.equal(pageKind(a+'index.html'),'quotation');
+ assert.equal(pageKind('construction/estimates/pilates-hamro-2026-10-28/index.html'),'quotation');
+ assert.equal(pageKind(a+'milestone.html'),'overview');
+ assert.equal(pageKind('construction/models/pilates-sketchup/index.html'),'model');
+ assert.equal(classifyPage(a+'v9/index.html').category,'Technical source register');
+});
+
+test('main-page filtering retains all offers and version views, while all/detail filters recover every individual work',()=>{
+ const rows=[{title:'Astra',project:'paila',kind:'quotation'},{title:'Materials v11',project:'paila',kind:'version'},{title:'Plywood material work',project:'paila',kind:'work-detail'},{title:'Formwork',project:'formwork',kind:'model'}];
+ assert.deepEqual(searchRecords(rows,'',{kind:'main'}),[rows[0],rows[1],rows[3]]);
+ assert.deepEqual(searchRecords(rows,'',{kind:'all'}),rows);
+ assert.deepEqual(searchRecords(rows,'plywood',{project:'paila',kind:'work-detail'}),[rows[2]]);
+ assert.deepEqual(searchRecords(rows,'',{project:'paila',kind:'quotation'}),[rows[0]]);
+});
+
+test('the source library exposes compressed database, SQL and JSON archives without mislabelling or moving them',async()=>{
+ const {libraryRecords}=await import('../scripts/workspace-organization.mjs');
+ const paths=['construction/models/basanti-residence/data/building.sqlite.gz','construction/models/basanti-residence/data/building.sql.gz','construction/models/basanti-workbench/history/v1-source.json.gz','downloads/Material_Quantities.csv','organization/page-index.json','assets/spec.mjs'];
+ const rows=libraryRecords(paths.map(p=>'/site/'+p),'/site');
+ assert.equal(rows.length,4);
+ assert.equal(rows.find(r=>r.path===paths[0]).format,'SQLite (gzip)');
+ assert.equal(rows.find(r=>r.path===paths[1]).format,'SQL (gzip)');
+ assert.equal(rows.find(r=>r.path===paths[2]).format,'JSON (gzip)');
+ assert.equal(rows.find(r=>r.path===paths[0]).project,'basanti');
+ assert.deepEqual(searchRecords(rows,'sqlite gzip'),[rows.find(r=>r.path===paths[0])]);
+ assert.equal(rows.find(r=>r.path===paths[3]).project,'formwork');
+});
+
+test('directory JSON preserves literal markup safely, and all work records remain available without JavaScript',async()=>{
+ const {directoryPage}=await import('../scripts/workspace-organization.mjs');
+ const record={title:'Plywood </script> source',description:'<b>original wording</b>',path:'work.html',project:'paila',project_label:'Paila Pilates',kind:'work-detail',category:'Materials',headings:[]};
+ const html=directoryPage([record]);
+ const payload=html.match(/<script type="application\/json" data-org-catalogue-data>([\s\S]*?)<\/script>/)[1];
+ assert.deepEqual(JSON.parse(payload),[record]);
+ assert.doesNotMatch(payload,/<\/script>/);
+ assert.match(html,/data-org-record="0"/);assert.match(html,/Page type/);assert.match(html,/value="all"/);
+});

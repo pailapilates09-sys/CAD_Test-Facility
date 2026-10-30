@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 import {resolve,relative,dirname} from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {organizationNavigation} from './workspace-organization.mjs';
+import {PAGE_KINDS,pageKind} from '../public/organization/site-model.js';
 
 const sha=data=>createHash('sha256').update(data).digest('hex');
 const ids=html=>[...html.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);
@@ -64,7 +65,10 @@ export async function verifyWorkspaceOrganization(dist,root,{preserveBaseline=fa
  const index=JSON.parse(await readFile(resolve(base,'organization/page-index.json'),'utf8'));
  const expected=pages.map(p=>relative(base,p).split('\\').join('/')).sort(),indexed=index.pages.map(p=>p.path).sort();
  if(JSON.stringify(expected)!==JSON.stringify(indexed))throw Error('Page directory does not cover every published HTML page');
- for(const record of index.pages){const p=await getPage(resolve(base,record.path));for(const h of record.headings)if(!p.ids.has(h.id))throw Error('Stale search heading: '+record.path+'#'+h.id);}
+ for(const record of index.pages){
+  if(!Object.hasOwn(PAGE_KINDS,record.kind)||record.kind!==pageKind(record.path))throw Error('Incorrect page type: '+record.path);
+  const p=await getPage(resolve(base,record.path));for(const h of record.headings)if(!p.ids.has(h.id))throw Error('Stale search heading: '+record.path+'#'+h.id);
+ }
  const report={schema:'cad-site-organization-preservation-report-1',date:'2026-10-29',base_commit:baseline.base_commit,status:'VERIFIED website structure and dated preservation comparison',original_page_addresses:baseline.pages?Object.keys(baseline.pages).length:0,current_pages:pages.length,original_published_files:Object.keys(baseline.published_files).length,retained_original_files:Object.keys(baseline.published_files).length-missingPublished.length,protected_source_files_checked:checkedSource,unchanged_source_files:checkedSource-changedSource.length,non_html_outputs_checked:checkedBytes,unchanged_non_html_outputs:checkedBytes-changedPublished.length,changed_source_files:changedSource,changed_non_html_outputs:changedPublished,removed_pages:missingPages,removed_section_ids:missingIds,changed_project_table_counts:changedTables,checked_section_links:anchors,pages_with_contents:contents,reference_products:review.products.length,policy:'Dated comparison for this redesign. Later authorised project-data changes should be documented in a new comparison rather than treated as presentation-only changes.'};
  await writeFile(resolve(base,'organization/preservation-report.json'),JSON.stringify(report,null,2)+'\n');
  console.log(`Organisation QA: ${pages.length} pages, ${anchors} section links, ${contents} contents lists; ${checkedSource-changedSource.length}/${checkedSource} source files and ${checkedBytes-changedPublished.length}/${checkedBytes} original non-HTML outputs unchanged.`);
