@@ -5,7 +5,7 @@
   "baseline_commit": "8d1c607ce5248f694c452a74797056bc36a17aa0",
   "scope": "Basanti user experience, source preservation, build and publication; no change to engineering assumptions or quantities.",
   "automated": {
-    "tests_passed": 371,
+    "tests_passed": 373,
     "tests_failed": 0,
     "html_pages": 144,
     "local_links_and_assets": 10461,
@@ -554,7 +554,8 @@
         "inside_shared_footer": true,
         "opens_from_source_link": true
       }
-    ]
+    ],
+    "floor_label_collision_checks": true
   },
   "preservation": {
     "previous_pages": 143,

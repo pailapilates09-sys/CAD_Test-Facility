@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createMEP} from '../public/construction/models/basanti-workbench/v7/mep-model.js';
-import {workspaceState,filterItems,filteredRuns,routeComponents,preferredSelection,selectedPlanLevel} from '../public/construction/models/basanti-workbench/v9/workspace-model.js';
+import {workspaceState,filterItems,filteredRuns,routeComponents,preferredSelection,selectedPlanLevel,placeFloorLabels} from '../public/construction/models/basanti-workbench/v9/workspace-model.js';
 
 const project=JSON.parse(await readFile(new URL('../public/construction/models/basanti-residence/data/project.json',import.meta.url)));
 const mep=createMEP(project);
@@ -49,4 +49,21 @@ test('activity-to-BOQ navigation matches the exact task and origin, not a simila
   assert.deepEqual(filterItems(items,{related:'building:frame'}).map(r=>r.id),['a','d']);
   assert.equal(filterItems(items,{related:'mep:frame'}).length,0);
   assert.equal(filterItems(items,{related:'building:frame',floor:'ground'}).length,1);
+});
+
+test('coincident floor labels stay readable in top and steep views without changing their anchors',()=>{
+  const labels=['ground','first','second','roof'].map(id=>({id,anchor:[150,200,0]})),before=JSON.stringify(labels);
+  const placed=placeFloorLabels(labels,320,400);
+  assert.equal(placed.length,4);
+  for(let i=1;i<placed.length;i++)assert.ok(placed[i].y-placed[i-1].y>=18);
+  assert.ok(placed.every(label=>label.y>=14&&label.y<=386&&label.x>=14&&label.x+126<=320));
+  assert.equal(JSON.stringify(labels),before);
+});
+
+test('floor labels at the viewport edge remain inside it and off-screen anchors are omitted',()=>{
+  const labels=[{id:'a',anchor:[310,399]},{id:'b',anchor:[315,398]},{id:'c',anchor:[100,397]},{id:'hidden',anchor:[-20,100]}];
+  const placed=placeFloorLabels(labels,320,400);
+  assert.equal(placed.length,3);assert.ok(!placed.some(label=>label.id==='hidden'));
+  for(let i=1;i<placed.length;i++)assert.ok(placed[i].y-placed[i-1].y>=18);
+  assert.ok(placed.every(label=>label.y>=14&&label.y<=386&&label.x>=14&&label.x+126<=320));
 });

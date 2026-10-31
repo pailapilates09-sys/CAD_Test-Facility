@@ -50,3 +50,15 @@ export function preferredSelection(items,selected,floor='all'){
 export function selectedPlanLevel(items,selected,floor='all'){
   return floor!=='all'?floor:items.find(item=>item.id===selected)?.level??'ground';
 }
+
+export function placeFloorLabels(labels,width,height){
+  const margin=14,gap=18;
+  const rows=labels.filter(label=>Number.isFinite(label.anchor[0])&&Number.isFinite(label.anchor[1])&&
+    label.anchor[0]>=0&&label.anchor[0]<=width&&label.anchor[1]>=0&&label.anchor[1]<=height)
+    .map(label=>({...label,x:Math.max(margin,Math.min(width-140,label.anchor[0]+9)),y:label.anchor[1]-8}))
+    .sort((a,b)=>a.y-b.y);
+  let previous=0;
+  for(const row of rows){row.y=Math.max(margin,row.y,previous+gap);previous=row.y;}
+  const excess=Math.max(0,(rows.at(-1)?.y??0)-(height-margin));
+  return rows.map(row=>({...row,y:row.y-excess}));
+}

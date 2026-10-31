@@ -1,4 +1,4 @@
-import {DISCIPLINES,BASIS,FLOORS,filterItems,workspaceState,groupProgramme,csv,filteredRuns,routeComponents,preferredSelection,selectedPlanLevel} from './workspace-model.js';
+import {DISCIPLINES,BASIS,FLOORS,filterItems,workspaceState,groupProgramme,csv,filteredRuns,routeComponents,preferredSelection,selectedPlanLevel,placeFloorLabels} from './workspace-model.js';
 import {buildingPlan,programmeSVG} from './drawings.js';
 import {escapeHTML as e,componentDimensions} from '../../basanti-residence/building-model.js';
 import {ARCHITECTURE_KINDS} from '../../basanti-residence/discipline-model.js';
@@ -116,7 +116,8 @@ function renderViewScope(){
 }
 function renderModelLabels(frame){
  const overlay=$('model-labels');overlay.setAttribute('viewBox',`0 0 ${frame.width} ${frame.height}`);
- overlay.innerHTML=state.discipline==='mep'&&$('view-context').checked&&modelItems.length?scene.components.filter(c=>c.kind==='slab'&&(state.floor==='all'||c.level===state.floor)).map(c=>{const point=frame.project([...c.geometry.points[0],c.geometry.z+c.geometry.height]);return `<text x="${point[0]+8}" y="${point[1]-8}">${e(FLOORS[c.level]??c.level)} · ${fmt(c.geometry.z+c.geometry.height)} m</text>`;}).join(''):'';
+ const labels=state.discipline==='mep'&&$('view-context').checked&&modelItems.length?scene.components.filter(c=>c.kind==='slab'&&(state.floor==='all'||c.level===state.floor)).map(c=>({label:(FLOORS[c.level]??c.level)+' · '+fmt(c.geometry.z+c.geometry.height)+' m',anchor:frame.project([...c.geometry.points[0],c.geometry.z+c.geometry.height])})):[];
+ overlay.innerHTML=placeFloorLabels(labels,frame.width,frame.height).map(label=>`<path d="M${label.anchor[0]},${label.anchor[1]} L${label.x-4},${label.y-4}" fill="none" stroke="currentColor" stroke-opacity=".5" stroke-width=".7"/><text x="${label.x}" y="${label.y}">${e(label.label)}</text>`).join('');
 }
 function renderLegend(){
  $('service-legend').hidden=state.discipline!=='mep';
