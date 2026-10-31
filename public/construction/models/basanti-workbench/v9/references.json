@@ -1,0 +1,106 @@
+{
+  "reviewed": "2026-10-31",
+  "sources": [
+    {
+      "title": "RICS NRM 2 \u00b7 current measurement guidance",
+      "publisher": "Royal Institution of Chartered Surveyors",
+      "url": "https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/construction-standards/nrm",
+      "application": "Group work items with identifiable descriptions, quantities, units and measurement basis.",
+      "scope": "Presentation and measurement-register reference. This preliminary project register does not claim NRM compliance or supply a priced contract BOQ."
+    },
+    {
+      "title": "Work breakdown structure",
+      "publisher": "Procore",
+      "url": "https://support.procore.com/faq/what-is-work-breakdown-structure-wbs",
+      "application": "Use short discipline and work-section groups instead of one long navigation list.",
+      "scope": "Navigation reference; project activities and quantities come from the retained Basanti models."
+    },
+    {
+      "title": "Gantt programme views",
+      "publisher": "Procore",
+      "url": "https://en-gb.support.procore.com/products/online/user-guide/project-level/schedule/tutorials/view-a-gantt-schedule",
+      "application": "Provide summary bars, expandable tasks, dependencies, filters and timeline zoom.",
+      "scope": "Interface reference; no imported Procore programme or actual construction progress is implied."
+    },
+    {
+      "title": "Accessible tabs pattern",
+      "publisher": "W3C Web Accessibility Initiative",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+      "application": "Use named tab panels, selected states and arrow/Home/End keyboard navigation.",
+      "scope": "Applied to the five in-page workspace tabs; ordinary links remain links when they open another page."
+    }
+  ],
+  "open_source_projects": [
+    {
+      "title": "xeokit BIM Viewer",
+      "repository": "https://github.com/xeokit/xeokit-bim-viewer",
+      "url": "https://xeokit.github.io/xeokit-bim-viewer/docs/",
+      "pattern": "Orbit and camera presets",
+      "application": "Use the same orbitable viewer for MEP and building elements, with Fit and Focus controls."
+    },
+    {
+      "title": "That Open Engine",
+      "repository": "https://github.com/ThatOpen/engine_components",
+      "url": "https://docs.thatopen.com/Tutorials/Components/Core/Worlds",
+      "pattern": "Linked scene, camera and selection",
+      "application": "Keep route IDs, selection and geometry shared between the plan, model and inspector."
+    },
+    {
+      "title": "Speckle",
+      "repository": "https://github.com/specklesystems/speckle-server",
+      "url": "https://speckle.systems/updates/advanced-filtering/",
+      "pattern": "Visible, composable filters",
+      "application": "Show active filters, add an MEP route-service selector, and keep selections in shareable links."
+    },
+    {
+      "title": "Bonsai / IfcOpenShell",
+      "repository": "https://github.com/IfcOpenShell/IfcOpenShell",
+      "url": "https://docs.ifcopenshell.org/introduction.html",
+      "pattern": "Open model and evidence",
+      "application": "Retain IFC/source exports and keep proposed geometry distinct from confirmed source facts."
+    },
+    {
+      "title": "FreeCAD BIM",
+      "repository": "https://github.com/FreeCAD/FreeCAD",
+      "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/BIM_IfcQuantities.md",
+      "pattern": "Explicit quantity basis",
+      "application": "Keep units and measurement lines visible; do not infer that an exported quantity proves site accuracy."
+    },
+    {
+      "title": "OpenProject",
+      "repository": "https://github.com/opf/openproject",
+      "url": "https://www.openproject.org/docs/user-guide/gantt-chart/",
+      "pattern": "Filtered tasks and dependencies",
+      "application": "Preserve expanded task groups and chart position; connect activities to their exact related BOQ records."
+    },
+    {
+      "title": "Frappe Gantt",
+      "repository": "https://github.com/frappe/gantt",
+      "url": "https://docs.frappe.io/gantt/config",
+      "pattern": "Readable timeline scales",
+      "application": "Make Compact use the available width, keep task labels fixed, and provide larger detail scales."
+    },
+    {
+      "title": "GanttProject",
+      "repository": "https://github.com/bardsoftware/ganttproject",
+      "url": "https://github.com/bardsoftware/ganttproject/blob/master/README.md",
+      "pattern": "Task breakdown and exports",
+      "application": "Keep building and MEP programmes separate, with grouped tasks, predecessor inspection and source CSV/SVG exports."
+    },
+    {
+      "title": "BookStack",
+      "repository": "https://github.com/BookStackApp/BookStack",
+      "url": "https://www.bookstackapp.com/docs/user/getting-around/",
+      "pattern": "Hierarchy and finding content",
+      "application": "Keep one Sources area, grouped legacy panels and a short task-oriented guide."
+    },
+    {
+      "title": "Docusaurus",
+      "repository": "https://github.com/facebook/docusaurus",
+      "url": "https://docusaurus.io/docs/sidebar",
+      "pattern": "Collapsible navigation groups",
+      "application": "Keep five short tabs and compact disclosure groups; preserve stable links to older content."
+    }
+  ],
+  "retained_methods_reviewed": "2026-10-30"
+}

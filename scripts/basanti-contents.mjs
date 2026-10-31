@@ -10,7 +10,7 @@ const map={
 };
 const text=s=>s.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
 export function compactBasantiContents(html,page){
- if(page.includes('/v8/'))return html.replace(/<nav\b[^>]*class="[^"]*\borg-contents\b[^"]*"[^>]*>[\s\S]*?<\/nav>/,'');
+ if(/\/v[89]\//.test(page))return html.replace(/<nav\b[^>]*class="[^"]*\borg-contents\b[^"]*"[^>]*>[\s\S]*?<\/nav>/,'');
  const aliases=new Map(),sections=[];
  for(const tag of html.matchAll(/<section\b[^>]*>|<\/section>|<h2\b[^>]*>/g)){
   if(tag[0]==='</section>'){sections.pop();continue;}
@@ -24,7 +24,7 @@ export function compactBasantiContents(html,page){
    const id=m[1].split('#')[1]??'',version=id.match(/^version-(\d+)$/),known=map[id]??aliases.get(id),label=text(m[2]);
    const [group,short]=version?['Versions','V'+version[1]]:known??['Sources',label.split(' ').slice(0,4).join(' ')];add(group,short,m[1]);
   }
-  add('Quantities','BOQ · v8',siteHref(page,'construction/models/basanti-workbench/v8/?panel=boq#boq'));add('Gantt','Gantt · v8',siteHref(page,'construction/models/basanti-workbench/v8/?panel=gantt#gantt'));
+  add('Quantities','BOQ · v9',siteHref(page,'construction/models/basanti-workbench/v9/?panel=boq#boq'));add('Gantt','Gantt · v9',siteHref(page,'construction/models/basanti-workbench/v9/?panel=gantt#gantt'));
   const headingAttrs=body.match(/<h2([^>]*)>/)?.[1]??'',ordered=['Views','Quantities','Steel','Gantt','Versions','Sources'].filter(g=>groups.has(g));
   return `<nav${attrs.replace(/class="([^"]*)"/,'class="$1 bd-compact-toc"')}><h2${headingAttrs}>Contents</h2><div class="bd-toc-groups">${ordered.map(group=>`<details class="bd-toc-group" name="basanti-contents"><summary>${e(group)}</summary><ul>${groups.get(group).map(l=>`<li><a href="${l.href}">${e(l.label)}</a></li>`).join('')}</ul></details>`).join('')}</div></nav>`;
  });

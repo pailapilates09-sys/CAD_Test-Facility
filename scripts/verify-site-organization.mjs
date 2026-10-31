@@ -31,6 +31,10 @@ export async function verifyWorkspaceOrganization(dist,root,{preserveBaseline=fa
   if(nav.length!==1||nav[0][1]!==organizationNavigation(page))throw Error('Shared navigation mismatch: '+page);
   const foot=html.match(/<footer class="org-footer"[\s\S]*?<\/footer>/)?.[0];
   if(!foot||review.products.some(r=>!foot.includes(r.url)))throw Error('Footer omits a product reference: '+page);
+  if(page==='construction/models/basanti-workbench/v9/index.html'){
+   const comparison=JSON.parse(await readFile(resolve(base,'construction/models/basanti-workbench/v9/references.json'),'utf8'));
+   if(!foot.includes('id="open-source-review"')||comparison.open_source_projects.length!==10||comparison.open_source_projects.some(project=>!foot.includes(project.url)||!foot.includes(project.repository)))throw Error('V9 footer must retain all ten open-source comparisons and its stable anchor');
+  }
   if(!html.includes('aria-label="Breadcrumb"')||!html.includes('data-org-root='))throw Error('Page lacks workspace context: '+page);
   if(html.includes('class="org-contents'))contents++;
   for(const [,raw]of html.matchAll(/\shref="([^"]*#[^"]*)"/g)){

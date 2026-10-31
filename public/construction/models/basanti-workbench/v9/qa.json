@@ -1,0 +1,582 @@
+{
+  "version": "v9",
+  "date": "2026-10-31",
+  "status": "VERIFIED_WITH_LIMITS",
+  "baseline_commit": "8d1c607ce5248f694c452a74797056bc36a17aa0",
+  "scope": "Basanti user experience, source preservation, build and publication; no change to engineering assumptions or quantities.",
+  "automated": {
+    "tests_passed": 371,
+    "tests_failed": 0,
+    "html_pages": 144,
+    "local_links_and_assets": 10461,
+    "module_imports": 257,
+    "extraction_checkpoint": "CP539",
+    "ifc_schema_errors": 0
+  },
+  "browser": {
+    "mep_drag_rotation_changed_geometry": true,
+    "drag_preserves_selection": true,
+    "keyboard_rotation": true,
+    "service_and_floor_filters": true,
+    "plan_follows_selected_floor": true,
+    "focus_and_isolate": true,
+    "empty_filters": true,
+    "steel_studies": true,
+    "boq_unknown_values_remain_pending": true,
+    "boq_unit_and_order_controls": true,
+    "boq_detail_focus_and_bookmarks": true,
+    "task_to_boq_exact_origin_and_id": true,
+    "gantt_23_mep_tasks_and_112_building_tasks": true,
+    "gantt_scroll_after_selecting_M23_px": 1712,
+    "filtered_csv_exact_source_quantities": true,
+    "full_chart_svg_http_preview": true,
+    "plan_svg_tab_creation": true,
+    "keyboard_tabs_and_browser_back": true,
+    "light_and_dark_theme": true,
+    "responsive": {
+      "version": "v9",
+      "date": "2026-10-31",
+      "workspace_layouts": [
+        {
+          "cssWidth": "320",
+          "requested": "overview",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 305,
+          "floorWidth": 0,
+          "panel": "overview",
+          "viewport": 305
+        },
+        {
+          "cssWidth": "320",
+          "requested": "architecture",
+          "clippedControls": [],
+          "discipline": "Architecture",
+          "documentWidth": 305,
+          "floorWidth": 241,
+          "panel": "views",
+          "viewport": 305
+        },
+        {
+          "cssWidth": "320",
+          "requested": "mep",
+          "clippedControls": [],
+          "discipline": "MEP",
+          "documentWidth": 305,
+          "floorWidth": 241,
+          "panel": "views",
+          "viewport": 305
+        },
+        {
+          "cssWidth": "320",
+          "requested": "boq",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 305,
+          "floorWidth": 241,
+          "panel": "boq",
+          "viewport": 305
+        },
+        {
+          "cssWidth": "320",
+          "requested": "gantt",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 305,
+          "floorWidth": 241,
+          "panel": "gantt",
+          "viewport": 305
+        },
+        {
+          "cssWidth": "320",
+          "requested": "sources",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 305,
+          "floorWidth": 0,
+          "panel": "sources",
+          "viewport": 305
+        },
+        {
+          "cssWidth": "375",
+          "requested": "overview",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 360,
+          "floorWidth": 0,
+          "panel": "overview",
+          "viewport": 360
+        },
+        {
+          "cssWidth": "375",
+          "requested": "architecture",
+          "clippedControls": [],
+          "discipline": "Architecture",
+          "documentWidth": 360,
+          "floorWidth": 296,
+          "panel": "views",
+          "viewport": 360
+        },
+        {
+          "cssWidth": "375",
+          "requested": "mep",
+          "clippedControls": [],
+          "discipline": "MEP",
+          "documentWidth": 360,
+          "floorWidth": 296,
+          "panel": "views",
+          "viewport": 360
+        },
+        {
+          "cssWidth": "375",
+          "requested": "boq",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 360,
+          "floorWidth": 296,
+          "panel": "boq",
+          "viewport": 360
+        },
+        {
+          "cssWidth": "375",
+          "requested": "gantt",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 360,
+          "floorWidth": 296,
+          "panel": "gantt",
+          "viewport": 360
+        },
+        {
+          "cssWidth": "375",
+          "requested": "sources",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 360,
+          "floorWidth": 0,
+          "panel": "sources",
+          "viewport": 360
+        },
+        {
+          "cssWidth": "430",
+          "requested": "overview",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 415,
+          "panel": "overview",
+          "viewport": 415
+        },
+        {
+          "cssWidth": "430",
+          "requested": "architecture",
+          "clippedControls": [],
+          "discipline": "Architecture",
+          "documentWidth": 415,
+          "panel": "views",
+          "viewport": 415
+        },
+        {
+          "cssWidth": "430",
+          "requested": "mep",
+          "clippedControls": [],
+          "discipline": "MEP",
+          "documentWidth": 415,
+          "panel": "views",
+          "viewport": 415
+        },
+        {
+          "cssWidth": "430",
+          "requested": "structure",
+          "clippedControls": [],
+          "discipline": "Structure",
+          "documentWidth": 415,
+          "panel": "views",
+          "viewport": 415
+        },
+        {
+          "cssWidth": "430",
+          "requested": "interior",
+          "clippedControls": [],
+          "discipline": "Interior",
+          "documentWidth": 415,
+          "panel": "views",
+          "viewport": 415
+        },
+        {
+          "cssWidth": "430",
+          "requested": "boq",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 415,
+          "panel": "boq",
+          "viewport": 415
+        },
+        {
+          "cssWidth": "430",
+          "requested": "gantt",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 415,
+          "panel": "gantt",
+          "viewport": 415
+        },
+        {
+          "cssWidth": "430",
+          "requested": "sources",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 415,
+          "panel": "sources",
+          "viewport": 415
+        },
+        {
+          "cssWidth": "768",
+          "requested": "overview",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 753,
+          "panel": "overview",
+          "viewport": 753
+        },
+        {
+          "cssWidth": "768",
+          "requested": "architecture",
+          "clippedControls": [],
+          "discipline": "Architecture",
+          "documentWidth": 753,
+          "panel": "views",
+          "viewport": 753
+        },
+        {
+          "cssWidth": "768",
+          "requested": "mep",
+          "clippedControls": [],
+          "discipline": "MEP",
+          "documentWidth": 753,
+          "panel": "views",
+          "viewport": 753
+        },
+        {
+          "cssWidth": "768",
+          "requested": "structure",
+          "clippedControls": [],
+          "discipline": "Structure",
+          "documentWidth": 753,
+          "panel": "views",
+          "viewport": 753
+        },
+        {
+          "cssWidth": "768",
+          "requested": "interior",
+          "clippedControls": [],
+          "discipline": "Interior",
+          "documentWidth": 753,
+          "panel": "views",
+          "viewport": 753
+        },
+        {
+          "cssWidth": "768",
+          "requested": "boq",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 753,
+          "panel": "boq",
+          "viewport": 753
+        },
+        {
+          "cssWidth": "768",
+          "requested": "gantt",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 753,
+          "panel": "gantt",
+          "viewport": 753
+        },
+        {
+          "cssWidth": "768",
+          "requested": "sources",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 753,
+          "panel": "sources",
+          "viewport": 753
+        },
+        {
+          "cssWidth": "1280",
+          "requested": "overview",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 1265,
+          "panel": "overview",
+          "viewport": 1265
+        },
+        {
+          "cssWidth": "1280",
+          "requested": "architecture",
+          "clippedControls": [],
+          "discipline": "Architecture",
+          "documentWidth": 1265,
+          "panel": "views",
+          "viewport": 1265
+        },
+        {
+          "cssWidth": "1280",
+          "requested": "mep",
+          "clippedControls": [],
+          "discipline": "MEP",
+          "documentWidth": 1265,
+          "panel": "views",
+          "viewport": 1265
+        },
+        {
+          "cssWidth": "1280",
+          "requested": "structure",
+          "clippedControls": [],
+          "discipline": "Structure",
+          "documentWidth": 1265,
+          "panel": "views",
+          "viewport": 1265
+        },
+        {
+          "cssWidth": "1280",
+          "requested": "interior",
+          "clippedControls": [],
+          "discipline": "Interior",
+          "documentWidth": 1265,
+          "panel": "views",
+          "viewport": 1265
+        },
+        {
+          "cssWidth": "1280",
+          "requested": "boq",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 1265,
+          "panel": "boq",
+          "viewport": 1265
+        },
+        {
+          "cssWidth": "1280",
+          "requested": "gantt",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 1265,
+          "panel": "gantt",
+          "viewport": 1265
+        },
+        {
+          "cssWidth": "1280",
+          "requested": "sources",
+          "clippedControls": [],
+          "discipline": "All",
+          "documentWidth": 1265,
+          "panel": "sources",
+          "viewport": 1265
+        },
+        {
+          "cssWidth": "320",
+          "requested": "structure",
+          "discipline": "Structure",
+          "documentWidth": 305,
+          "panel": "views",
+          "viewport": 305
+        },
+        {
+          "cssWidth": "320",
+          "requested": "interior",
+          "discipline": "Interior",
+          "documentWidth": 305,
+          "panel": "views",
+          "viewport": 305
+        },
+        {
+          "cssWidth": "375",
+          "requested": "structure",
+          "discipline": "Structure",
+          "documentWidth": 360,
+          "panel": "views",
+          "viewport": 360
+        },
+        {
+          "cssWidth": "375",
+          "requested": "interior",
+          "discipline": "Interior",
+          "documentWidth": 360,
+          "panel": "views",
+          "viewport": 360
+        }
+      ],
+      "legacy_layouts": [
+        {
+          "cssWidth": "320",
+          "page": "v8",
+          "url": "http://terminal.local:4173/construction/models/basanti-workbench/v8/",
+          "viewport": 305,
+          "width": 305
+        },
+        {
+          "cssWidth": "320",
+          "page": "v7",
+          "url": "http://terminal.local:4173/construction/models/basanti-workbench/v7/?system=cold&level=ground&run=CW-G-B",
+          "viewport": 305,
+          "width": 305
+        },
+        {
+          "cssWidth": "320",
+          "page": "v6",
+          "url": "http://terminal.local:4173/construction/models/basanti-workbench/v6/",
+          "viewport": 305,
+          "width": 305
+        },
+        {
+          "cssWidth": "320",
+          "page": "architecture",
+          "url": "http://terminal.local:4173/construction/models/basanti-residence/?level=ground&package=architecture",
+          "viewport": 305,
+          "width": 305
+        },
+        {
+          "cssWidth": "320",
+          "page": "interior",
+          "url": "http://terminal.local:4173/construction/models/basanti-residence/interior.html?level=ground&room=g-living",
+          "viewport": 305,
+          "width": 305
+        },
+        {
+          "cssWidth": "320",
+          "page": "hub",
+          "url": "http://terminal.local:4173/construction/models/basanti-residence/milestone.html",
+          "viewport": 305,
+          "width": 305
+        },
+        {
+          "cssWidth": "768",
+          "page": "architecture",
+          "url": "http://terminal.local:4173/construction/models/basanti-residence/?level=ground&package=architecture",
+          "viewport": 753,
+          "width": 753
+        },
+        {
+          "cssWidth": "768",
+          "page": "interior",
+          "url": "http://terminal.local:4173/construction/models/basanti-residence/interior.html?level=ground&room=g-living",
+          "viewport": 753,
+          "width": 753
+        },
+        {
+          "cssWidth": "768",
+          "page": "hub",
+          "url": "http://terminal.local:4173/construction/models/basanti-residence/milestone.html",
+          "viewport": 753,
+          "width": 753
+        },
+        {
+          "cssWidth": "1280",
+          "page": "architecture",
+          "url": "http://terminal.local:4173/construction/models/basanti-residence/?level=ground&package=architecture",
+          "viewport": 1265,
+          "width": 1265
+        },
+        {
+          "cssWidth": "1280",
+          "page": "interior",
+          "url": "http://terminal.local:4173/construction/models/basanti-residence/interior.html?level=ground&room=g-living",
+          "viewport": 1265,
+          "width": 1265
+        },
+        {
+          "cssWidth": "1280",
+          "page": "hub",
+          "url": "http://terminal.local:4173/construction/models/basanti-residence/milestone.html",
+          "viewport": 1265,
+          "width": 1265
+        },
+        {
+          "cssWidth": "768",
+          "page": "v8",
+          "url": "http://terminal.local:4173/construction/models/basanti-workbench/v8/",
+          "viewport": 753,
+          "width": 753
+        },
+        {
+          "cssWidth": "768",
+          "page": "v7",
+          "url": "http://terminal.local:4173/construction/models/basanti-workbench/v7/?system=cold&level=ground&run=CW-G-B",
+          "viewport": 753,
+          "width": 753
+        },
+        {
+          "cssWidth": "1280",
+          "page": "v8",
+          "url": "http://terminal.local:4173/construction/models/basanti-workbench/v8/",
+          "viewport": 1265,
+          "width": 1265
+        },
+        {
+          "cssWidth": "1280",
+          "page": "v7",
+          "url": "http://terminal.local:4173/construction/models/basanti-workbench/v7/?system=cold&level=ground&run=CW-G-B",
+          "viewport": 1265,
+          "width": 1265
+        },
+        {
+          "cssWidth": "768",
+          "page": "v6",
+          "ready": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
+          "url": "http://terminal.local:4173/construction/models/basanti-workbench/v6/?work=plinth-steel&member=tb-0-0",
+          "viewport": 753,
+          "width": 753
+        },
+        {
+          "cssWidth": "1280",
+          "page": "v6",
+          "url": "http://terminal.local:4173/construction/models/basanti-workbench/v6/?work=plinth-steel&member=tb-0-0",
+          "viewport": 1265,
+          "width": 1265
+        }
+      ]
+    },
+    "footer_ten_project_references_and_stable_anchor": true,
+    "footer_layouts": [
+      {
+        "css_width": 320,
+        "viewport": 305,
+        "document_width": 305,
+        "projects": 10,
+        "inside_shared_footer": true,
+        "opens_from_source_link": true
+      },
+      {
+        "css_width": 1280,
+        "viewport": 1265,
+        "document_width": 1265,
+        "projects": 10,
+        "inside_shared_footer": true,
+        "opens_from_source_link": true
+      }
+    ]
+  },
+  "preservation": {
+    "previous_pages": 143,
+    "current_pages": 144,
+    "missing_pages": [],
+    "lost_original_ids": {},
+    "reduced_original_table_counts": {},
+    "prior_basanti_files": 377,
+    "missing_basanti_files": [],
+    "identical_basanti_files": 363,
+    "changed_non_html_basanti_files": [],
+    "boq_records": 221,
+    "building_tasks": 112,
+    "mep_tasks": 23,
+    "source_pdf_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
+    "quantity_and_schedule_data_identical": true
+  },
+  "open_source_projects_reviewed": 10,
+  "limits": [
+    "Cloud browser blocks inspecting blob: URLs. The generated plan preview tab was observed to open with its expected title, but its separate contents were not inspected. Inline plan selection/floor behavior was checked.",
+    "3D rendering was verified in interactive vector fallback. Hardware WebGL and context-loss recovery were not exercised in this browser.",
+    "Phone/tablet widths were checked in browser viewports; physical touch devices were not tested.",
+    "Existing source contradictions, engineering approval gates, proposed furniture and unpriced quantities remain unchanged."
+  ]
+}

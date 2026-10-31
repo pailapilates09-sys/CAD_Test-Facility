@@ -62,7 +62,7 @@ export function classifyPage(path='') {
     return {project:'paila',category:supplier?'Hamro quotation':p.includes('/pilates-sketchup')?'Studio model & quantities':p.endsWith('milestone.html')?'Astra versions':p==='projects/paila-pilates'?'Project hub':estimateCategories[version]??'Astra original quotation',active:'paila'};
   }
   if(/construction\/models\/basanti-(?:residence|workbench)/.test(p)) {
-    return {project:'basanti',category:p.includes('/v8')?'BOQ & programme':p.includes('/v7')?'MEP coordination':p.endsWith('milestone.html')?'Project hub':p.endsWith('/interior.html')?'Interior & furniture':p.includes('basanti-residence')?'Building drawings':p.includes('/changes')?'Change report':'Structure & quantities',active:'basanti'};
+    return {project:'basanti',category:/\/v[89](?:\/|$)/.test(p)?'BOQ & programme':p.includes('/v7')?'MEP coordination':p.endsWith('milestone.html')?'Project hub':p.endsWith('/interior.html')?'Interior & furniture':p.includes('basanti-residence')?'Building drawings':p.includes('/changes')?'Change report':'Structure & quantities',active:'basanti'};
   }
   if(p==='cad')return {project:'formwork',category:'Drawings & quantities',active:'formwork'};
   if(p==='construction')return {project:'workspace',category:'Drawing library',active:'drawings'};

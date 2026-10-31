@@ -87,7 +87,7 @@ export function initOrganization(win=window,doc=document) {
   })();
   const renderResults=()=>{
     if(!index)return;
-    const featured=['index.html','projects/paila-pilates/index.html','construction/models/basanti-residence/milestone.html','cad/index.html','construction/models/basanti-workbench/v8/index.html','construction/models/basanti-workbench/v7/index.html','construction/estimates/pilates-astra-2026-10-15/milestone.html','construction/estimates/pilates-hamro-2026-10-28/index.html','directory/index.html','library/index.html','guide/organization/index.html'];
+    const featured=['index.html','projects/paila-pilates/index.html','construction/models/basanti-residence/milestone.html','cad/index.html','construction/models/basanti-workbench/v9/index.html','construction/models/basanti-workbench/v7/index.html','construction/estimates/pilates-astra-2026-10-15/milestone.html','construction/estimates/pilates-hamro-2026-10-28/index.html','directory/index.html','library/index.html','guide/organization/index.html'];
     const matches=input.value.trim()?searchRecords(index,input.value,{limit:10}):featured.map(path=>index.find(item=>item.path===path)).filter(Boolean);results.replaceChildren();
     for(const item of matches){
       const link=doc.createElement('a'),strong=doc.createElement('strong'),smallLabel=doc.createElement('small');
