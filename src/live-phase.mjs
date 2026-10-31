@@ -1,23 +1,23 @@
 export const livePhase = {
-  "phase": "565",
-  "title": "Run37 complete — all four lanes; CP533",
+  "phase": "574",
+  "title": "Run38 complete — all four lanes; CP539",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-10-30T15:03:16.327Z",
-  "checkpoint": "MSCH-CORPUS-CP533",
+  "completedAt": "2026-10-31T09:34:32.997Z",
+  "checkpoint": "MSCH-CORPUS-CP539",
   "before": {
-    "rows": 6941,
-    "folders": 1159,
-    "files": 5782,
-    "pending": 594
-  },
-  "after": {
     "rows": 6983,
     "folders": 1159,
     "files": 5824,
     "pending": 588
   },
+  "after": {
+    "rows": 7024,
+    "folders": 1159,
+    "files": 5865,
+    "pending": 582
+  },
   "completedBatches": 6,
-  "scope": "User-authorized maximum 60-minute four-lane continuation; 5 MSCH metadata checkpoints. Existing source-stage gates retained.",
+  "scope": "User-authorized maximum60-minute four-lane continuation;6 MSCH metadata checkpoints,3 MSCS original hashes,3 LSA integrity proofs and metadata-index refresh,3 AEC rates plus Napier unit erratum.",
   "providerReadback": "PASS",
   "localRegistration": "VERIFIED",
   "mainAck": "ACKED",
@@ -26,44 +26,44 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 39.59096666666667,
+    "sourceElapsedMinutes": 38.08873333333333,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 524,
-  "mainCursor": 524,
-  "nextBatch": "B534",
-  "nextTarget": "38",
-  "newRows": 42,
+  "localHighWater": 530,
+  "mainCursor": 530,
+  "nextBatch": "B540",
+  "nextTarget": "3e",
+  "newRows": 41,
   "newFolders": 0,
-  "newFiles": 42,
-  "newKnownBytes": 130922,
-  "sessionStartedAt": "2026-10-30T14:18:57.000Z",
-  "sessionElapsedMinutes": 44.322116666666666,
-  "knownBytes": 66630936202,
+  "newFiles": 41,
+  "newKnownBytes": 398143,
+  "sessionStartedAt": "2026-10-31T08:53:00.000Z",
+  "sessionElapsedMinutes": 41.54995,
+  "knownBytes": 66631334345,
   "sessionReport": {
-    "startedAt": "2026-10-30T14:18:57.000Z",
-    "sourceStoppedAt": "2026-10-30T14:58:32.458Z",
+    "startedAt": "2026-10-31T08:53:00.000Z",
+    "sourceStoppedAt": "2026-10-31T09:31:05.324Z",
     "milestones": 6,
     "advancedLanes": 4,
     "MSCS": {
-      "checkpoint": "AQ-CP91 /B079",
-      "beforeHashed": 1068,
-      "afterHashed": 1071,
-      "addedHashes": 0,
-      "pending": 808,
+      "checkpoint": "AQ-CP92 /B080",
+      "beforeHashed": 1071,
+      "afterHashed": 1074,
+      "addedHashes": 3,
+      "pending": 793,
       "physicalRecords": 2187,
-      "local": 11,
-      "mainCursor": 11,
-      "notice": "N3 acknowledged",
+      "local": 12,
+      "mainCursor": 12,
+      "notice": "N9 ACKED",
       "tier3EligibleRemaining": 0,
-      "next": "B080",
-      "status": "POLICY_GATE",
+      "next": "B081",
+      "status": "READY_BOUNDED_HASH_CONTINUATION",
       "pilot": {
         "verifiedFiles": 3,
-        "verifiedBytes": 6014094,
-        "distinctContentHashes": 1,
-        "canonicalAdmission": "PENDING",
+        "verifiedBytes": 6146922,
+        "distinctContentHashes": 2,
+        "canonicalAdmission": "AQ-CP92/B080",
         "maxFiles": 3,
         "maxIndividualBytes": 5000000,
         "maxCumulativeBytes": 10000000
@@ -77,47 +77,52 @@ export const livePhase = {
       "addedFolders": 0,
       "addedFiles": 0,
       "addedMetadataBytes": 0,
-      "local": 36,
-      "mainCursor": 36,
-      "notice": "N27 acknowledged",
+      "local": 37,
+      "mainCursor": 37,
+      "notice": "N33 ACKED",
       "nativeGridRows": 1500,
       "next": "B081 baseline reconciliation",
       "status": "BASELINE_RECONCILIATION_REQUIRED",
       "pilot": {
         "verifiedFiles": 3,
-        "verifiedBytes": 55242,
-        "distinctContentHashes": 1,
+        "verifiedBytes": 352059,
+        "distinctContentHashes": 3,
         "canonicalInventoryChanged": false
       },
       "newIntegrityProofs": 3,
-      "cumulativeIntegrityProofs": 15,
-      "metadataFTS5": true
+      "cumulativeIntegrityProofs": 18,
+      "metadataFTS5": true,
+      "cumulativeVerifiedBytes": 1118897,
+      "cumulativeDistinctHashes": 14
     },
     "MSCH": {
-      "checkpoint": "CP533 /B533",
-      "beforeRows": 6941,
-      "afterRows": 6983,
+      "checkpoint": "CP539 /B539",
+      "beforeRows": 6983,
+      "afterRows": 7024,
       "addedFolders": 0,
-      "addedFiles": 42,
-      "addedMetadataBytes": 130922,
-      "pending": 588,
-      "local": 524,
-      "mainCursor": 524,
-      "notice": "N478 ACKED",
-      "next": "B534"
+      "addedFiles": 41,
+      "addedMetadataBytes": 398143,
+      "pending": 582,
+      "local": 530,
+      "mainCursor": 530,
+      "notice": "N484 ACKED",
+      "next": "B540"
     },
     "AEC": {
       "status": "NEW_RATES_VERIFIED",
-      "local": 16,
-      "mainCursor": 16,
-      "newRateWrites": 0,
+      "local": 17,
+      "mainCursor": 17,
+      "newRateWrites": 3,
       "g075CheckpointReadable": true,
       "g076TerminalRecovered": false,
       "sourceAndSnapshotVerified": true,
       "transportRecovered": true,
-      "checkpoint": "G076 PART4",
+      "checkpoint": "G076 PART5",
       "g076RecoveryReissued": true,
-      "next": "G076 PART5"
+      "next": "G076 PART6",
+      "unitCorrections": 1,
+      "notice": "N6 ACKED",
+      "correction": "RO-2444 Napier:piece→set;4.51 unchanged"
     },
     "sourceContentExtraction": false,
     "sourceMutation": "NONE",
@@ -137,8 +142,8 @@ export const livePhase = {
       "pending": 0
     },
     "remaining": [
-      "MSCH 588 queued folders and later source parsing.",
-      "MSCS796 pending files; bounded oversized/native handling.",
+      "MSCH 582 queued folders and later source parsing.",
+      "MSCS793 pending files; bounded oversized/native handling.",
       "LSA historical2 files /9,304 bytes unresolved; metadata index remains provisional.",
       "AEC source continuation; unknown-unit rows deferred."
     ],
@@ -146,7 +151,7 @@ export const livePhase = {
     "workUnits": 9,
     "closedAt": "2026-10-29T05:55:53.067Z"
   },
-  "scannedFolders": 525,
+  "scannedFolders": 531,
   "phases": [
     {
       "phase": "01",
@@ -4129,6 +4134,69 @@ export const livePhase = {
       "lane": "MSCH /Local /Main",
       "work": "B533 37: 5 file records",
       "stop": "CP533 Local/Main524/524 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "566",
+      "lane": "MSCS /Local /Main",
+      "work": "3 new source hashes; 1,074/1,867 files hashed",
+      "stop": "Local/Main 12/12 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "567",
+      "lane": "AEC /Local /Main",
+      "work": "G076 PART5: 3 new materials and 3 rates; piece, m² and kg units preserved; Napier corrected to set",
+      "stop": "Local/Main 17/17 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "568",
+      "lane": "LSA /Local /Main",
+      "work": "3 new hashes; provisional SQLite/CSV index with title/path search",
+      "stop": "Local/Main 37/37 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "569",
+      "lane": "MSCH /Local /Main",
+      "work": "B534 38: 7 file records",
+      "stop": "CP534 Local/Main525/525 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "570",
+      "lane": "MSCH /Local /Main",
+      "work": "B535 39: 6 file records",
+      "stop": "CP535 Local/Main526/526 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "571",
+      "lane": "MSCH /Local /Main",
+      "work": "B536 3a: 5 file records",
+      "stop": "CP536 Local/Main527/527 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "572",
+      "lane": "MSCH /Local /Main",
+      "work": "B537 3b: 11 file records",
+      "stop": "CP537 Local/Main528/528 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "573",
+      "lane": "MSCH /Local /Main",
+      "work": "B538 3c: 5 file records",
+      "stop": "CP538 Local/Main529/529 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "574",
+      "lane": "MSCH /Local /Main",
+      "work": "B539 3d: 7 file records",
+      "stop": "CP539 Local/Main530/530 ACKED",
       "status": "Complete - stopped"
     }
   ]
