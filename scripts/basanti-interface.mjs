@@ -6,7 +6,7 @@ import {escapeHTML as e} from '../public/construction/models/basanti-residence/b
 import {compactBasantiContents} from './basanti-contents.mjs';
 const residence='construction/models/basanti-residence/',workbench='construction/models/basanti-workbench/';
 export const disciplines=[['architecture','Architecture',residence,'Plans & openings'],['structure','Structure',workbench+'v6/','Members & reinforcement'],['mep','MEP',workbench+'v7/','Services & sizing'],['interior','Interior & Furniture',residence+'interior.html','Rooms & source dimensions']];
-export function disciplineForPage(page){return page.startsWith(workbench+'v8/')?null:page===residence+'interior.html'?'interior':page===residence+'index.html'?'architecture':page.startsWith(workbench)?(page.startsWith(workbench+'v7/')?'mep':'structure'):null;}
+export function disciplineForPage(page){return /^v[89]\//.test(page.slice(workbench.length))?null:page===residence+'interior.html'?'interior':page===residence+'index.html'?'architecture':page.startsWith(workbench)?(page.startsWith(workbench+'v7/')?'mep':'structure'):null;}
 export function disciplineNavigation(page){const active=disciplineForPage(page);return `<div class="bd-project-heading"><span>Basanti Residence</span><a href="${siteHref(page,residence+'milestone.html')}">Overview &amp; versions ↗</a><a href="${siteHref(page,'library/?project=basanti')}">Source files ↗</a></div><nav class="bd-discipline-tabs" aria-label="Basanti disciplines">${disciplines.map(([id,label,path,note],i)=>`<a href="${siteHref(page,path)}"${id===active?' aria-current="page"':''}><span class="bd-tab-number" aria-hidden="true">0${i+1}</span><span><strong>${label}</strong><small>${note}</small></span></a>`).join('')}</nav>`;}
 export function groupStructureControls(html){
  const match=html.match(/(<section class="v3-controls block"[^>]*>[\s\S]*?<h2[^>]*>)[\s\S]*?(<\/h2>)<div class="v3-control-grid">([\s\S]*?)<\/div><div class="v3-checks">/);
@@ -50,7 +50,7 @@ export async function applyBasantiInterface(dist){
  const css=await readFile(join(dist,residence+'discipline-ui.css'),'utf8'),revision=createHash('sha256').update(css).digest('hex').slice(0,12);
  async function visit(folder){for(const item of await readdir(join(dist,folder),{withFileTypes:true})){const path=folder+item.name;if(item.isDirectory())await visit(path+'/');else if(item.name.endsWith('.html')){
   let html=await readFile(join(dist,path),'utf8');const active=disciplineForPage(path);
-  const projectNav=path.startsWith(workbench+'v8/')?`<div class="bd-project-heading"><span>Basanti Residence · v8</span><a href="${siteHref(path,residence+'milestone.html')}">Versions ↗</a><a href="${siteHref(path,'library/?project=basanti')}">Source files ↗</a></div>`:disciplineNavigation(path).replace('<span>Basanti Residence</span>',`<span>Basanti Residence</span><a class="bd-current-workspace" href="${siteHref(path,workbench+'v8/')}">Workspace v8 →</a>`);
+  const projectNav=/^v[89]\//.test(path.slice(workbench.length))?`<div class="bd-project-heading"><span>Basanti Residence · ${path.startsWith(workbench+'v9/')?'v9':'v8'}</span><a href="${siteHref(path,residence+'milestone.html')}">Versions ↗</a><a href="${siteHref(path,'library/?project=basanti')}">Source files ↗</a></div>`:disciplineNavigation(path).replace('<span>Basanti Residence</span>',`<span>Basanti Residence</span><a class="bd-current-workspace" href="${siteHref(path,workbench+'v9/')}">Workspace v9 →</a>`);
   html=html.replace(/(<body[^>]*class=")([^"]*)"/,`$1$2 basanti-discipline${active?' bd-'+active:''}"`).replace(/<nav class="org-project-links"[^>]*>[\s\S]*?<\/nav>/,projectNav);
   html=html.replace('</head>',`<link rel="stylesheet" href="${siteHref(path,residence+'discipline-ui.css')}?v=${revision}"></head>`);
   // Legacy project links remain reachable without duplicating the main discipline tabs.
@@ -58,7 +58,12 @@ export async function applyBasantiInterface(dist){
   html=html.replace(/<details class="v4-mobile-fold" open><summary>Page contents<\/summary>(<nav[\s\S]*?<\/nav>)<\/details>/,'$1');
   html=compactBasantiContents(html,path);
   if(path.startsWith(workbench+'v7/'))html=html.replace(/<nav class="mep-nav"[^>]*>[\s\S]*?<\/nav>/,'');
-  if(path.startsWith(workbench+'v8/')){const ownStyle=html.match(/<link rel="stylesheet" href="\.\/v8\.css\?v=[^"]+">/)?.[0];if(ownStyle)html=html.replace(ownStyle,'').replace('</head>',ownStyle+'</head>');}
+  if(/^v[89]\//.test(path.slice(workbench.length))){const ownStyle=html.match(/<link rel="stylesheet" href="\.\/v[89]\.css\?v=[^"]+">/)?.[0];if(ownStyle)html=html.replace(ownStyle,'').replace('</head>',ownStyle+'</head>');}
+  if(path===workbench+'v9/index.html'){
+   const localReview=html.match(/<section class="v9-local-footer" id="open-source-review"[^>]*>[\s\S]*?<\/section>/)?.[0];
+   if(!localReview||!html.includes('<section class="org-footer-references"'))throw Error('V9 open-source footer review is missing');
+   html=html.replace(localReview,'').replace('<section class="org-footer-references"',localReview+'<section class="org-footer-references"');
+  }
   await writeFile(join(dist,path),html);
  }}}
  await visit(residence);await visit(workbench);

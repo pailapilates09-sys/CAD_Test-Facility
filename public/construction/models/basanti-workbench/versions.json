@@ -1,12 +1,12 @@
 {
   "project_name": "14_Basanti Poudel Baral",
   "hub_path": "../basanti-residence/milestone.html",
-  "current_version": "v8",
+  "current_version": "v9",
   "source_pdf_sha256": "a951721f046d4321542ae0c6b386c9a54b5575bc4c0676544daaff98a9e77611",
   "versions": [
     {
       "id": "v1",
-      "title": "Version 1 · before five-project QA",
+      "title": "Version 1 \u00b7 before five-project QA",
       "purpose": "Review the original construction workbench before validation, interaction, programme-label and IFC QA improvements.",
       "path": "./v1/",
       "commit": "3ac12287867cd6449adea550b89ba8b8909b4261",
@@ -16,7 +16,7 @@
     },
     {
       "id": "v2",
-      "title": "Version 2 · five-project QA improvements",
+      "title": "Version 2 \u00b7 five-project QA improvements",
       "purpose": "Use the maintained linked 2D, 3D, quantity and Gantt workbench, with stronger validation, inspection controls and exchange checks.",
       "path": "./v2/",
       "baseline_commit": "f3feb52d6bc77f0a43b52eb7de4f3e7023123ead",
@@ -25,7 +25,7 @@
     },
     {
       "id": "v3",
-      "title": "Version 3 · detailed drawings and quantities",
+      "title": "Version 3 \u00b7 detailed drawings and quantities",
       "purpose": "Inspect excavation cut-edge clearances, named members, source-linked reinforcement and individual bars, configurable annotation layers and concrete material scenarios.",
       "path": "./v3/",
       "based_on": "v2",
@@ -35,7 +35,7 @@
     },
     {
       "id": "v4",
-      "title": "Version 4 · checked detailing and BBS study",
+      "title": "Version 4 \u00b7 checked detailing and BBS study",
       "purpose": "Use audited source dimensions, coherent stair steel, union concrete quantities, conditional Nepal-code spacing checks, explicit trial layouts and a readable mobile BBS study.",
       "path": "./v4/",
       "based_on": "v3",
@@ -45,7 +45,7 @@
     },
     {
       "id": "v5",
-      "title": "Version 5 · proposed fabrication and 3D checks",
+      "title": "Version 5 \u00b7 proposed fabrication and 3D checks",
       "purpose": "Review explicit material/cover decisions, rounded bar shapes, exact proposed cuts, confinement-area and lap-fit checks, stock estimates and actual-browser rendering diagnostics.",
       "path": "./v5/",
       "based_on": "v4",
@@ -55,7 +55,7 @@
     },
     {
       "id": "v6",
-      "title": "Version6 · beam closures and column connections",
+      "title": "Version6 \u00b7 beam closures and column connections",
       "purpose": "Inspect dimensioned two-piece beam links, separate U/cap quantities, staggered column splice levels, actual sleeve/hoop clash checks and a reliable vector3D default.",
       "path": "./v6/",
       "based_on": "v5",
@@ -65,17 +65,17 @@
     },
     {
       "id": "v7",
-      "title": "Version 7 · MEP services and coordination",
+      "title": "Version 7 \u00b7 MEP services and coordination",
       "purpose": "Inspect sized water and drain routes, roof runoff, electrical circuits and mechanical extract with linked 2D / 3D / table / Gantt views and a scoped-change guide.",
       "path": "./v7/",
       "based_on": "v6",
       "baseline_commit": "de7dd681c701851ea38a56b120324a0246f97c7b",
-      "source": "Separate v7 MEP modules and build entry; canonical building source and v1–v6 algorithms remain unchanged",
+      "source": "Separate v7 MEP modules and build entry; canonical building source and v1\u2013v6 algorithms remain unchanged",
       "status": "Current preliminary MEP coordination. Site outfalls, equipment, local approval and engineering release remain visible gates; not an issued installation design."
     },
     {
       "id": "v8",
-      "title": "Version 8 · BOQ, views and Gantt",
+      "title": "Version 8 \u00b7 BOQ, views and Gantt",
       "purpose": "Use five concise panels for the four-discipline quantity register, linked plan/model views, separate building and MEP programmes, and grouped source/panel navigation.",
       "path": "./v8/",
       "based_on": [
@@ -85,6 +85,16 @@
       "baseline_commit": "c6479ec33826d2a376ced35d55c805e932ed21c8",
       "source": "Shared v6 quantities and v7 MEP data, with a new presentation and quantity-register layer",
       "status": "Current review workspace. Source/model/scenario/proposal quantities remain distinct; no confirmed furniture schedule or approved rates supplied."
+    },
+    {
+      "id": "v9",
+      "title": "Version 9 \u00b7 orbitable MEP and user QA",
+      "purpose": "Rotate and inspect every discipline consistently, filter MEP by service, share selected views, and navigate BOQ/activity evidence with fewer steps.",
+      "path": "./v9/",
+      "based_on": "v8",
+      "baseline_commit": "8d1c607ce5248f694c452a74797056bc36a17aa0",
+      "source": "V8 quantities/programmes and v7 MEP coordinates; isolated v9 viewer and presentation modules",
+      "status": "Current user-experience review. Quantities, engineering holds and previous versions are preserved. Ten open-source interface references are recorded."
     }
   ],
   "change_report": "./changes/",
