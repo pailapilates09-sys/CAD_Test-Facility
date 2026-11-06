@@ -1,0 +1,367 @@
+{
+  "schema": "cad-buildera-market-rates-1",
+  "benchmark_date": "2026-11-01",
+  "market": "Kathmandu, Nepal",
+  "inputs": [
+    {
+      "name": "Paila_Pilates_BOQ_Rate_Bands_Interactive_2026-11-01.html",
+      "sha256": "f96cd453c3c05d1d51523abf97dacad7961ed2c06962669283fe7fb8583054e9"
+    },
+    {
+      "name": "Paila_Pilates_Kathmandu_BOQ_rate_comparison_2026-11-01.xlsx",
+      "sha256": "f881e6ce7fc2d17fa163676192988bdbeca3933953ad52ed3bf35fbd1977ae33"
+    }
+  ],
+  "bands": {
+    "laminate": {
+      "minimum": 250,
+      "maximum": 500,
+      "unit": "sq-ft",
+      "method": "Published installed guide",
+      "scope": "Materials and installation",
+      "sources": [
+        "S01"
+      ]
+    },
+    "custom-counters": {
+      "minimum": 1100,
+      "maximum": 3200,
+      "unit": "sq-ft",
+      "method": "Similar joinery proxy",
+      "scope": "Fabricated joinery; comparable fitting scope uncertain",
+      "sources": [
+        "S02",
+        "S03"
+      ]
+    },
+    "led-strip": {
+      "minimum": 200,
+      "maximum": 600,
+      "unit": "running-ft",
+      "method": "Assembled allowance",
+      "scope": "LED components and basic fitting; backing unpriced",
+      "sources": [
+        "S04",
+        "S05"
+      ]
+    },
+    "standard-fittings": {
+      "minimum": 600,
+      "maximum": 2500,
+      "unit": "each",
+      "method": "Assembled allowance",
+      "scope": "Ordinary LED fittings and basic installation",
+      "sources": [
+        "S04",
+        "S05"
+      ]
+    },
+    "chandelier": {
+      "minimum": 7000,
+      "maximum": 50000,
+      "unit": "each",
+      "method": "Retail proxy",
+      "scope": "Selected retail models with fitting allowance",
+      "sources": [
+        "S06"
+      ]
+    },
+    "premium-paint": {
+      "minimum": 55,
+      "maximum": 80,
+      "unit": "sq-ft",
+      "method": "Published installed guide",
+      "scope": "Materials and labour for premium interior paint",
+      "sources": [
+        "S07"
+      ]
+    },
+    "decorative-ceiling": {
+      "minimum": 180,
+      "maximum": 400,
+      "unit": "sq-ft",
+      "method": "Published design ceiling guide",
+      "scope": "Gypsum materials and labour; finish scope varies",
+      "sources": [
+        "S08"
+      ]
+    },
+    "gypsum-partition": {
+      "minimum": 265,
+      "maximum": 450,
+      "unit": "sq-ft",
+      "method": "Assembly proxy",
+      "scope": "Assembly proxy; board sides, framing and finishing vary",
+      "sources": [
+        "S09"
+      ]
+    },
+    "existing-ceiling-lights": {
+      "minimum": 400,
+      "maximum": 2000,
+      "unit": "each",
+      "method": "Assembled allowance",
+      "scope": "Ordinary fittings and installation into existing ceiling",
+      "sources": [
+        "S04",
+        "S05"
+      ]
+    },
+    "pendant": {
+      "minimum": 4500,
+      "maximum": 14500,
+      "unit": "each",
+      "method": "Retail plus installation proxy",
+      "scope": "Retail pendant and fitting allowance",
+      "sources": [
+        "S10",
+        "S05"
+      ]
+    },
+    "sliding-glass": {
+      "minimum": 1200,
+      "maximum": 1800,
+      "unit": "sq-ft",
+      "method": "Starting rate plus allowance",
+      "scope": "Installed partition; upper end allows for sliding hardware",
+      "sources": [
+        "S11",
+        "S12"
+      ]
+    },
+    "air-conditioner": {
+      "minimum": 81000,
+      "maximum": 150000,
+      "unit": "each",
+      "method": "Retail plus installation proxy",
+      "scope": "Retail unit and basic installation; extra pipework may cost more",
+      "sources": [
+        "S13",
+        "S14"
+      ]
+    }
+  },
+  "items": {
+    "FL-01": {
+      "band": "laminate",
+      "note": "2026 installed laminate reference; confirm brand, AC class, skirting and substrate"
+    },
+    "RE-01": {
+      "band": "custom-counters",
+      "note": "Non-identical built-in counter examples; custom curved finish not specified"
+    },
+    "RE-02": {
+      "band": "led-strip",
+      "note": "Built from profile, strip, driver and installation indications; gypsum backing not specified"
+    },
+    "RE-03": {
+      "band": "standard-fittings",
+      "note": "Assumes standard LED fixtures, not designer fittings; verify models and electrical overlap"
+    },
+    "RE-04": {
+      "band": "chandelier",
+      "note": "Large design-dependent retail range with installation allowance; model unspecified"
+    },
+    "RE-05": {
+      "band": "premium-paint",
+      "note": "Premium interior paint benchmark; confirm authentic Royale grade and primer"
+    },
+    "RE-06": {
+      "band": "decorative-ceiling",
+      "note": "Design ceiling rate; confirm whether paint, GI channels and lighting recesses included"
+    },
+    "RE-07": {
+      "band": null,
+      "note": "No reliable Kathmandu rate for this exact cutting and make-good scope"
+    },
+    "RE-08": {
+      "band": "gypsum-partition",
+      "note": "Reference complete double-sided gypsum/rockwool partitions; BOQ sides/finish unclear"
+    },
+    "RE-09": {
+      "band": "existing-ceiling-lights",
+      "note": "Assumes ordinary installed concealed/surface light, not designer fixture"
+    },
+    "LO-01": {
+      "band": "pendant",
+      "note": "Pendant-light model and support dimensions unspecified"
+    },
+    "LO-02": {
+      "band": "premium-paint",
+      "note": "Premium paint benchmark; same BOQ specification as reception"
+    },
+    "LO-03": {
+      "band": "led-strip",
+      "note": "Material-plus-install allowance; profile width and driver layout unknown"
+    },
+    "LO-04": {
+      "band": "sliding-glass",
+      "note": "Supplier installed work starts at 1200; higher cap allows door/track/fittings; get shop drawing"
+    },
+    "CO-01": {
+      "band": "custom-counters",
+      "note": "Custom counter dimensions and measured face area need drawing"
+    },
+    "CO-02": {
+      "band": "premium-paint",
+      "note": "Premium paint benchmark"
+    },
+    "CO-03": {
+      "band": "led-strip",
+      "note": "Short runs cost more per metre due to driver and mobilisation"
+    },
+    "CO-04": {
+      "band": "pendant",
+      "note": "The pendant model is unspecified. The separate Coffee Lounge subtotal discrepancy is shown under Quotation checks."
+    },
+    "ST-01": {
+      "band": "premium-paint",
+      "note": "Premium paint benchmark"
+    },
+    "ST-02": {
+      "band": "led-strip",
+      "note": "Driver count and gypsum backing details unknown"
+    },
+    "ST-03": {
+      "band": "air-conditioner",
+      "note": "Model, inverter class, copper line lengths and electrical work not specified The PDF calls the capacity “1.5 MT”; the comparison assumes a 1.5-ton split unit."
+    },
+    "ST-04": {
+      "band": "gypsum-partition",
+      "note": "Sides, board layer, acoustic infill and finishing unclear"
+    },
+    "ST-05": {
+      "band": "standard-fittings",
+      "note": "PDF page 6 prints 12 sq ft at NPR 4,000 per sq ft. The light-fitting description suggests 12 fixtures. The plotted position assumes NPR 4,000 per fixture; confirm the unit before using it.",
+      "conditional_unit": true
+    }
+  },
+  "sources": {
+    "S01": {
+      "publisher": "House Design in Nepal",
+      "topic": "Installed laminate flooring",
+      "url": "https://housedesigninnepal.com/flooring-price-in-nepal/",
+      "published_low": 250,
+      "published_high": 500,
+      "published_unit": "NPR/sq ft",
+      "limits": "2026 indicative installed laminate band, not specifically 8mm and underlay"
+    },
+    "S02": {
+      "publisher": "Aghor Design Studio",
+      "topic": "Similar interior fabrication",
+      "url": "https://www.scribd.com/document/977029722/Ten-Group-Office-Renovation-Works",
+      "published_low": 1100,
+      "published_high": 2200,
+      "published_unit": "NPR/sq ft",
+      "limits": "Reception table face redesign and new back cabinet are different from curved new counter"
+    },
+    "S03": {
+      "publisher": "Jalpa Furniture / Hamrobazar",
+      "topic": "Custom reception desk rate",
+      "url": "https://hamrobazaar.com/detail/c863be93d90a77d7c69ff81fdd5a0195",
+      "published_low": 3200,
+      "published_high": 3200,
+      "published_unit": "NPR/sq ft",
+      "limits": "Rate advertisement is illustrative; do not treat it as like-for-like scope"
+    },
+    "S04": {
+      "publisher": "HEAVEN LED Nepal",
+      "topic": "Light fittings, strips, drivers, channels",
+      "url": "https://www.heavenskye.com.np/price-list",
+      "published_low": null,
+      "published_high": null,
+      "published_unit": "NPR/piece or metre",
+      "limits": "Product prices only; e.g. 17mm channel 200/m, strip 250/m, PSU 1400/pc, concealed panels 235-1400"
+    },
+    "S05": {
+      "publisher": "DoorStep Nepal",
+      "topic": "Light installation labour",
+      "url": "https://doorstepsnepal.com/services/tube-lightled-strip-installation",
+      "published_low": null,
+      "published_high": null,
+      "published_unit": "NPR/point",
+      "limits": "Sample installation postings; scope varies, not a BOQ turnkey quote"
+    },
+    "S06": {
+      "publisher": "Sixkey Nepal",
+      "topic": "Chandelier retail prices",
+      "url": "https://sixkey.com.np/blog/chandeliers-trends-in-kathmandu-nepal/",
+      "published_low": 6300,
+      "published_high": 175500,
+      "published_unit": "NPR/piece",
+      "limits": "Selected 7000-50000 comparison is standard/decorative subset, not whole catalog"
+    },
+    "S07": {
+      "publisher": "Expert Sewa",
+      "topic": "Premium interior painting",
+      "url": "https://www.expertsewa.com/blog/paint-price-in-nepal-2026-cost-calculator-brand-comparison",
+      "published_low": 55,
+      "published_high": 80,
+      "published_unit": "NPR/sq ft",
+      "limits": "Published installed premium interior rate; Royale grade and coatings must match"
+    },
+    "S08": {
+      "publisher": "Construction Sewa",
+      "topic": "Designed gypsum ceilings",
+      "url": "https://www.constructionsewa.com/blogs/gypsum-false-ceiling-price-nepal",
+      "published_low": 180,
+      "published_high": 400,
+      "published_unit": "NPR/sq ft",
+      "limits": "Single-step and multi-level design rates including material/labour"
+    },
+    "S09": {
+      "publisher": "Prefab House Nepal",
+      "topic": "Gypsum partition assemblies",
+      "url": "https://prefabnepal.com/rates/",
+      "published_low": 265,
+      "published_high": 410,
+      "published_unit": "NPR/sq ft",
+      "limits": "2850/m2 = approx 265/sq ft; historical 410/sq ft; upper comparison cap 450 is allowance"
+    },
+    "S10": {
+      "publisher": "ID Studio Nepal",
+      "topic": "Pendant light retail",
+      "url": "https://idstudionepal.com/collections/pendant-lights",
+      "published_low": 3899,
+      "published_high": 12899,
+      "published_unit": "NPR/piece",
+      "limits": "Published hanging light list prices; fitted range includes labour allowance"
+    },
+    "S11": {
+      "publisher": "Prospace Designing & Engineering",
+      "topic": "Glass partition installation starting rate",
+      "url": "https://prospace.com.np/toughened-glass-partation-price-in-kathmandu-nepal/",
+      "published_low": 1200,
+      "published_high": null,
+      "published_unit": "NPR/sq ft",
+      "limits": "Starts at 1200 installed; doors/track/fittings change total"
+    },
+    "S12": {
+      "publisher": "Remodelers Nepal",
+      "topic": "8mm toughened glass and installation",
+      "url": "https://www.remodelersnepal.com/magazine/toughened-glass-price-in-kathmandu-interior-design-cost-in-nepal-2026-remodelers-nepal-9z4unq",
+      "published_low": 700,
+      "published_high": 1300,
+      "published_unit": "NPR/sq ft",
+      "limits": "700-950 glass + 150-350 fitting; sliding hardware separate"
+    },
+    "S13": {
+      "publisher": "SewasMart",
+      "topic": "1.5 ton split AC product prices",
+      "url": "https://sewasmart.com/product-category/air-conditioner/1-5-ton-ac-price-in-nepal/",
+      "published_low": 76490,
+      "published_high": 145800,
+      "published_unit": "NPR/unit",
+      "limits": "Retail product range; quality and brands differ; regular installation 5000-12000"
+    },
+    "S14": {
+      "publisher": "Aircon Nepal",
+      "topic": "1.5 ton wall AC installation",
+      "url": "https://www.airconnepal.com/installation",
+      "published_low": 4500,
+      "published_high": 4500,
+      "published_unit": "NPR/unit",
+      "limits": "Base labour/installation reference; additional piping and electrical scope may be extra"
+    }
+  }
+}

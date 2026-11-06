@@ -1,0 +1,298 @@
+{
+  "schema": "cad-buildera-quotation-1",
+  "contractor": "BuildEra Consulting Pvt. Ltd",
+  "currency": "NPR",
+  "source": {
+    "name": "Pilates BOQ Final.pdf",
+    "sha256": "df835c36975ef4310fe5fcc32a622f34b4a5f4e326ae2abbfaf0d1d1f897a331",
+    "pages": 6
+  },
+  "summary": {
+    "interior_subtotal": 1884962.03,
+    "electrical_allowance": 94248.1,
+    "quoted_total": 1979210.13
+  },
+  "areas": [
+    {
+      "id": "flooring",
+      "label": "Flooring",
+      "pdf_page": 2,
+      "summary_amount": 517461.0,
+      "detail_subtotal": 517461.0
+    },
+    {
+      "id": "reception",
+      "label": "Reception",
+      "pdf_page": 3,
+      "summary_amount": 276897.78,
+      "detail_subtotal": 276897.775
+    },
+    {
+      "id": "locker",
+      "label": "Locker",
+      "pdf_page": 4,
+      "summary_amount": 536578.75,
+      "detail_subtotal": 536578.75
+    },
+    {
+      "id": "coffee-lounge",
+      "label": "Coffee Lounge",
+      "pdf_page": 5,
+      "summary_amount": 92302.5,
+      "detail_subtotal": 92302.5
+    },
+    {
+      "id": "studio",
+      "label": "Studio",
+      "pdf_page": 6,
+      "summary_amount": 461722.0,
+      "detail_subtotal": 461722.0
+    },
+    {
+      "id": "changing-room",
+      "label": "Changing Room",
+      "pdf_page": null,
+      "summary_amount": null,
+      "detail_subtotal": null
+    },
+    {
+      "id": "washroom",
+      "label": "Washroom",
+      "pdf_page": null,
+      "summary_amount": null,
+      "detail_subtotal": null
+    }
+  ],
+  "items": [
+    {
+      "id": "FL-01",
+      "area": "flooring",
+      "pdf_item": 1,
+      "title": "8 mm laminate flooring with underlay",
+      "unit": "sq-ft",
+      "quantity": 1724.87,
+      "quoted_rate": 300,
+      "printed_amount": 517461
+    },
+    {
+      "id": "RE-01",
+      "area": "reception",
+      "pdf_item": 1,
+      "title": "Custom curved plywood reception counter",
+      "unit": "sq-ft",
+      "quantity": 44.41,
+      "quoted_rate": 2200,
+      "printed_amount": 97702
+    },
+    {
+      "id": "RE-02",
+      "area": "reception",
+      "pdf_item": 2,
+      "title": "3000K strip light, profile and driver",
+      "unit": "running-ft",
+      "quantity": 83.07,
+      "quoted_rate": 400,
+      "printed_amount": 33228
+    },
+    {
+      "id": "RE-03",
+      "area": "reception",
+      "pdf_item": 3,
+      "title": "Ceiling and wardrobe light fittings",
+      "unit": "each",
+      "quantity": 7,
+      "quoted_rate": 4000,
+      "printed_amount": 28000
+    },
+    {
+      "id": "RE-04",
+      "area": "reception",
+      "pdf_item": 4,
+      "title": "Chandelier supplied and installed",
+      "unit": "each",
+      "quantity": 1,
+      "quoted_rate": 25500,
+      "printed_amount": 25500
+    },
+    {
+      "id": "RE-05",
+      "area": "reception",
+      "pdf_item": 5,
+      "title": "Putty, sanding, two coats Royale paint",
+      "unit": "sq-ft",
+      "quantity": 318.753,
+      "quoted_rate": 65,
+      "printed_amount": 20718.945
+    },
+    {
+      "id": "RE-06",
+      "area": "reception",
+      "pdf_item": 6,
+      "title": "12 mm designed gypsum ceiling with coves",
+      "unit": "sq-ft",
+      "quantity": 73.192,
+      "quoted_rate": 120,
+      "printed_amount": 8783.04
+    },
+    {
+      "id": "RE-07",
+      "area": "reception",
+      "pdf_item": 7,
+      "title": "Gypsum groove cutting and make-good",
+      "unit": "running-ft",
+      "quantity": 9.083,
+      "quoted_rate": 80,
+      "printed_amount": 726.64
+    },
+    {
+      "id": "RE-08",
+      "area": "reception",
+      "pdf_item": 8,
+      "title": "Gypsum panelling on GI or ply framework",
+      "unit": "sq-ft",
+      "quantity": 62.253,
+      "quoted_rate": 550,
+      "printed_amount": 34239.15
+    },
+    {
+      "id": "RE-09",
+      "area": "reception",
+      "pdf_item": 9,
+      "title": "Lights installed in existing false ceiling",
+      "unit": "each",
+      "quantity": 7,
+      "quoted_rate": 4000,
+      "printed_amount": 28000
+    },
+    {
+      "id": "LO-01",
+      "area": "locker",
+      "pdf_item": 1,
+      "title": "Decorative hanging lights",
+      "unit": "each",
+      "quantity": 2,
+      "quoted_rate": 8500,
+      "printed_amount": 17000
+    },
+    {
+      "id": "LO-02",
+      "area": "locker",
+      "pdf_item": 2,
+      "title": "Putty, sanding, two coats Royale paint",
+      "unit": "sq-ft",
+      "quantity": 612.75,
+      "quoted_rate": 65,
+      "printed_amount": 39828.75
+    },
+    {
+      "id": "LO-03",
+      "area": "locker",
+      "pdf_item": 3,
+      "title": "3000K strip light, profile and driver",
+      "unit": "running-ft",
+      "quantity": 65,
+      "quoted_rate": 400,
+      "printed_amount": 26000
+    },
+    {
+      "id": "LO-04",
+      "area": "locker",
+      "pdf_item": 4,
+      "title": "8 mm toughened glass with sliding door",
+      "unit": "sq-ft",
+      "quantity": 363,
+      "quoted_rate": 1250,
+      "printed_amount": 453750
+    },
+    {
+      "id": "CO-01",
+      "area": "coffee-lounge",
+      "pdf_item": 1,
+      "title": "Custom curved plywood coffee counter",
+      "unit": "sq-ft",
+      "quantity": 32.2,
+      "quoted_rate": 2200,
+      "printed_amount": 70840
+    },
+    {
+      "id": "CO-02",
+      "area": "coffee-lounge",
+      "pdf_item": 2,
+      "title": "Putty, sanding, two coats Royale paint",
+      "unit": "sq-ft",
+      "quantity": 152.5,
+      "quoted_rate": 65,
+      "printed_amount": 9912.5
+    },
+    {
+      "id": "CO-03",
+      "area": "coffee-lounge",
+      "pdf_item": 3,
+      "title": "3000K strip light, profile and driver",
+      "unit": "running-ft",
+      "quantity": 11.5,
+      "quoted_rate": 400,
+      "printed_amount": 4600
+    },
+    {
+      "id": "CO-04",
+      "area": "coffee-lounge",
+      "pdf_item": 4,
+      "title": "Decorative hanging light",
+      "unit": "each",
+      "quantity": 1,
+      "quoted_rate": 6500,
+      "printed_amount": 6500
+    },
+    {
+      "id": "ST-01",
+      "area": "studio",
+      "pdf_item": 1,
+      "title": "Putty, sanding, two coats Royale paint",
+      "unit": "sq-ft",
+      "quantity": 648,
+      "quoted_rate": 65,
+      "printed_amount": 42120
+    },
+    {
+      "id": "ST-02",
+      "area": "studio",
+      "pdf_item": 2,
+      "title": "3000K strip light, profile and driver",
+      "unit": "running-ft",
+      "quantity": 110.88,
+      "quoted_rate": 400,
+      "printed_amount": 44352
+    },
+    {
+      "id": "ST-03",
+      "area": "studio",
+      "pdf_item": 3,
+      "title": "1.5-ton wall AC, supply and installation",
+      "unit": "each",
+      "quantity": 2,
+      "quoted_rate": 110000,
+      "printed_amount": 220000
+    },
+    {
+      "id": "ST-04",
+      "area": "studio",
+      "pdf_item": 4,
+      "title": "Gypsum panelling on GI or ply framework",
+      "unit": "sq-ft",
+      "quantity": 195,
+      "quoted_rate": 550,
+      "printed_amount": 107250
+    },
+    {
+      "id": "ST-05",
+      "area": "studio",
+      "pdf_item": 5,
+      "title": "Ceiling and wardrobe light fittings",
+      "unit": "sq-ft",
+      "quantity": 12,
+      "quoted_rate": 4000,
+      "printed_amount": 48000
+    }
+  ]
+}
