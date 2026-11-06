@@ -1,0 +1,130 @@
+{
+  "schema": "cad-buildera-2-work-images-1",
+  "astra_register": "../pilates-astra-2026-10-15/v6/image-register.json",
+  "assets": [
+    {
+      "id": "laminate-flooring",
+      "kind": "generated",
+      "path": "images/laminate-flooring.webp",
+      "width": 960,
+      "height": 640,
+      "sha256": "b848a997654d6520d00fe9ebf7c28be86b6f614c609ecbd82548765e748a2deb",
+      "generator": "OpenAI ImageGen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape construction reference for a studio works register. Primary request: clean editorial photograph of installing wood-look 8 mm laminate planks over a thin foam underlay in a generic bright commercial studio. Low oblique camera angle: finished interlocking oak-look boards, one loose plank with a visible brown HDF edge, and a small exposed section of underlay beside the installation edge. Show a plausible installation scene, no people, no tools needed, no measurements, no branding, no text. Soft natural daylight, neutral walls, honest material texture. The image is an illustrative reference, not a photograph of an actual project."
+    },
+    {
+      "id": "curved-plywood-table",
+      "kind": "generated",
+      "path": "images/curved-plywood-table.webp",
+      "width": 960,
+      "height": 540,
+      "sha256": "66189a50cc5661f7d3892b6933e35465f7d1ce4deb577d76646f39aaacd29bea",
+      "generator": "OpenAI ImageGen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape reference for a coffee lounge plywood furniture BOQ line. Primary request: a custom elongated café service table with a gentle curved plywood front, realistic timber veneer, one partially open end showing a credible layered plywood edge and framed plywood backing. Photograph in a quiet generic workshop or café fit-out. Show the plywood joinery as the subject; leave the granite worktop off so the furniture base and top support are visible. Clean ambient daylight, modest neutral colors, no people, no logos, no text, no dimensions, no construction claims. Illustrative reference, not a project photo or shop drawing."
+    },
+    {
+      "id": "sliding-glass-partition",
+      "kind": "generated",
+      "path": "images/sliding-glass-partition.webp",
+      "width": 960,
+      "height": 640,
+      "sha256": "673b141dcd16ba0c053a9ad4136beba7cb36b8d63aa4a3953684eef4964c068d",
+      "generator": "OpenAI ImageGen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape reference for a commercial Pilates studio fit-out BOQ. Primary request: an interior toughened clear glass partition between a locker area and a neutral exercise studio, with fixed floor-to-ceiling panels and one clearly sliding clear glass door on a visible slim upper track. Door is partly open, show a small discreet floor guide without close-up engineering detail. A faint glimpse of lockers and exercise equipment provides scale, while the glass partition and track stay the subject. Architectural documentary photography, soft natural daylight, realistic glass reflections and edges. No people, no labels, no logos, no measurements. Illustrative reference only; do not imply an actual installation."
+    },
+    {
+      "id": "reception-desk",
+      "kind": "astra-v6",
+      "asset_id": "reception-desk"
+    },
+    {
+      "id": "granite-table",
+      "kind": "astra-v6",
+      "asset_id": "granite-table"
+    },
+    {
+      "id": "painting",
+      "kind": "astra-v6",
+      "asset_id": "painting"
+    },
+    {
+      "id": "gypsum",
+      "kind": "astra-v6",
+      "asset_id": "gypsum"
+    }
+  ],
+  "items": [
+    {
+      "work_id": 1,
+      "asset_id": "laminate-flooring",
+      "alt": "Wood-look laminate planks laid over a thin underlay",
+      "scope_note": "Illustrates the plank and underlay layers. Confirm the approved laminate and fixing method."
+    },
+    {
+      "work_id": 2,
+      "asset_id": "reception-desk",
+      "alt": "Wooden reception desks and chairs in a hotel reception",
+      "scope_note": "A timber reception desk in another interior. Confirm the quoted plywood, finish and dimensions separately."
+    },
+    {
+      "work_id": 3,
+      "asset_id": "granite-table",
+      "alt": "Polished dark granite table top",
+      "scope_note": "A polished granite table surface; thickness, shape, edge detail and installation are illustrative."
+    },
+    {
+      "work_id": 4,
+      "asset_id": "painting",
+      "alt": "Paint roller and brush beside a tray of paint",
+      "scope_note": "Roller and brush as a reference for applying paint. The approved colour and putty system are to be confirmed."
+    },
+    {
+      "work_id": 5,
+      "asset_id": "gypsum",
+      "alt": "Close view of a plasterboard joint and screws",
+      "scope_note": "Plasterboard edges and joints as a visual reference. Confirm the quoted 3-inch build-up before ordering."
+    },
+    {
+      "work_id": 6,
+      "asset_id": "painting",
+      "alt": "Paint roller and brush beside a tray of paint",
+      "scope_note": "Roller and brush as a reference for applying paint. The approved colour and putty system are to be confirmed."
+    },
+    {
+      "work_id": 7,
+      "asset_id": "sliding-glass-partition",
+      "alt": "Clear interior glass partition with a sliding panel between a studio and lockers",
+      "scope_note": "Illustrates fixed panels, a sliding leaf and its track. Verify the opening, glass system and hardware before fabrication."
+    },
+    {
+      "work_id": 8,
+      "asset_id": "curved-plywood-table",
+      "alt": "Curved plywood counter base with the top support framing visible",
+      "scope_note": "Illustrates the curved plywood base before fitting the separately quoted stone top."
+    },
+    {
+      "work_id": 9,
+      "asset_id": "granite-table",
+      "alt": "Polished dark granite table top",
+      "scope_note": "A polished granite table surface; thickness, shape, edge detail and installation are illustrative."
+    },
+    {
+      "work_id": 10,
+      "asset_id": "painting",
+      "alt": "Paint roller and brush beside a tray of paint",
+      "scope_note": "Roller and brush as a reference for applying paint. The approved colour and putty system are to be confirmed."
+    },
+    {
+      "work_id": 11,
+      "asset_id": "painting",
+      "alt": "Paint roller and brush beside a tray of paint",
+      "scope_note": "Roller and brush as a reference for applying paint. The approved colour and putty system are to be confirmed."
+    },
+    {
+      "work_id": 12,
+      "asset_id": "gypsum",
+      "alt": "Close view of a plasterboard joint and screws",
+      "scope_note": "Plasterboard edges and joints as a visual reference. Confirm the quoted 3-inch build-up before ordering."
+    }
+  ]
+}

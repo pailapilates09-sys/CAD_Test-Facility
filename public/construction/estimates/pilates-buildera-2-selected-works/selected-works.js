@@ -69,3 +69,9 @@ print.addEventListener('click',()=>window.print());
 form.hidden=false;
 print.hidden=false;
 update();
+
+// A programme link can point to a work hidden by the cost table's filters.
+report.querySelector('.swx-gantt')?.addEventListener('click',event=>{
+ const link=event.target.closest('a[href^="#selected-work-"]');
+ if(link&&document.getElementById(link.hash.slice(1))?.hidden)form.reset();
+});
