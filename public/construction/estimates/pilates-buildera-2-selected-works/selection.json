@@ -1,0 +1,151 @@
+{
+  "schema": "cad-buildera-2-selected-works-1",
+  "currency": "NPR",
+  "source": {
+    "attachment": "Pilates_Selected_Works_Cost_Extract.html",
+    "sha256": "bccfb729b02b3751c528c35c4a833cd5fa0e5da8014f8e76f6e0ddfcee455b4c",
+    "estimate": "Pilates Estimate Final_Buildera_2.pdf",
+    "contractor": "BuildEra Consulting Pvt. Ltd."
+  },
+  "areas": [
+    "Flooring",
+    "Reception Area",
+    "Locker Space",
+    "Coffee Lounge",
+    "Studio"
+  ],
+  "items": [
+    {
+      "id": 1,
+      "area": "Flooring",
+      "page": 2,
+      "unit": "sq ft",
+      "qty": "1724.87",
+      "rate": "300.00",
+      "amount": "517461",
+      "work": "Providing and fixing of 8 mm thick laminated flooring in a shade approved by the client, complete with adhesives, fixing and underlay, as per design and instruction of the site engineer.",
+      "title": "8 mm laminate flooring"
+    },
+    {
+      "id": 2,
+      "area": "Reception Area",
+      "page": 3,
+      "unit": "sq ft",
+      "qty": "44.41",
+      "rate": "2150.00",
+      "amount": "95481.5",
+      "work": "Providing and fixing of reception table of size 9 ft × 3 ft 2 in, made of 12 mm thick B-grade commercial plywood, with aluminium or plywood framework backing for horizontal and vertical framing, as per design and approval of the site engineer or client.",
+      "title": "Plywood reception table"
+    },
+    {
+      "id": 3,
+      "area": "Reception Area",
+      "page": 3,
+      "unit": "sq ft",
+      "qty": "24.47",
+      "rate": "750.00",
+      "amount": "18352.5",
+      "work": "Providing, supplying and fixing granite top in the reception desk and coffee table, with adhesive and polishing/painting, complete as per approved design and instruction of the site engineer.",
+      "title": "Granite reception and coffee top"
+    },
+    {
+      "id": 4,
+      "area": "Reception Area",
+      "page": 3,
+      "unit": "sq ft",
+      "qty": "318.753",
+      "rate": "65.00",
+      "amount": "20718.945",
+      "work": "Providing and applying two or more coats of putty, including two coats of Royale flush paint in the client-approved shade, on prepared plastered surfaces, including surface preparation, sanding and finishing to achieve a smooth finish.",
+      "title": "Reception putty and paint"
+    },
+    {
+      "id": 5,
+      "area": "Reception Area",
+      "page": 3,
+      "unit": "sq ft",
+      "qty": "62.253",
+      "rate": "500.00",
+      "amount": "31126.5",
+      "work": "Providing and fixing gypsum panelling for a dry-wall partition comprising 3-inch-thick gypsum board backing, supported on GI C-section studs or plywood framework with horizontal and vertical framing, including adhesives, screws and fasteners.",
+      "title": "Reception gypsum partition"
+    },
+    {
+      "id": 6,
+      "area": "Locker Space",
+      "page": 4,
+      "unit": "sq ft",
+      "qty": "612.75",
+      "rate": "65.00",
+      "amount": "39828.75",
+      "work": "Providing and applying two or more coats of putty, including two coats of Royale flush paint in the client-approved shade, on prepared plastered surfaces, including surface preparation, sanding and finishing to achieve a smooth finish.",
+      "title": "Locker putty and paint"
+    },
+    {
+      "id": 7,
+      "area": "Locker Space",
+      "page": 4,
+      "unit": "sq ft",
+      "qty": "363.00",
+      "rate": "1250.00",
+      "amount": "453750",
+      "work": "Providing and fixing 8 mm thick toughened glass partition between the locker space and studio room, including floor and ceiling clips, joints, a sliding door at the opening, tracks, fittings and bottom guard rail.",
+      "title": "Toughened glass sliding partition"
+    },
+    {
+      "id": 8,
+      "area": "Coffee Lounge",
+      "page": 5,
+      "unit": "sq ft",
+      "qty": "32.20",
+      "rate": "2200.00",
+      "amount": "70840",
+      "work": "Providing and fixing a table of size 9 ft 6 in × 2 ft 6 in, made of 12 mm thick B-grade commercial plywood and curved or flexible plywood, with aluminium or plywood framework backing for horizontal and vertical framing, as per design and approval of the site engineer or client.",
+      "title": "Plywood coffee table"
+    },
+    {
+      "id": 9,
+      "area": "Coffee Lounge",
+      "page": 5,
+      "unit": "sq ft",
+      "qty": "22.08",
+      "rate": "750.00",
+      "amount": "16560",
+      "work": "Providing, supplying and fixing granite top in the reception desk, with adhesive and polishing/painting, complete as per approved design and instruction of the site engineer (as stated in the Coffee Lounge AOC).",
+      "title": "Coffee lounge granite top"
+    },
+    {
+      "id": 10,
+      "area": "Coffee Lounge",
+      "page": 5,
+      "unit": "sq ft",
+      "qty": "152.50",
+      "rate": "65.00",
+      "amount": "9912.5",
+      "work": "Providing and applying two or more coats of putty, including two coats of Royale flush paint in the client-approved shade, on prepared plastered surfaces, including surface preparation, sanding and finishing to achieve a smooth finish.",
+      "title": "Coffee lounge putty and paint"
+    },
+    {
+      "id": 11,
+      "area": "Studio",
+      "page": 6,
+      "unit": "sq ft",
+      "qty": "648.00",
+      "rate": "65.00",
+      "amount": "42120",
+      "work": "Providing and applying two or more coats of putty, including two coats of Royale flush paint in the client-approved shade, on prepared plastered surfaces, including surface preparation, sanding and finishing to achieve a smooth finish.",
+      "title": "Studio putty and paint"
+    },
+    {
+      "id": 12,
+      "area": "Studio",
+      "page": 6,
+      "unit": "sq ft",
+      "qty": "195.00",
+      "rate": "500.00",
+      "amount": "97500",
+      "work": "Providing and fixing gypsum panelling for a dry-wall partition comprising 3-inch-thick gypsum board backing, supported on GI C-section studs or plywood framework with horizontal and vertical framing, including adhesives (as stated in the Studio AOC).",
+      "title": "Studio gypsum partition"
+    }
+  ]
+}
