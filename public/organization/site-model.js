@@ -29,9 +29,12 @@ export const PROJECTS = {
   workspace:{id:'workspace',label:'Workspace',subtitle:'Shared tools and records',path:''}
 };
 
+export const BUILDERA_MARKET_PATH = 'construction/estimates/pilates-buildera-2026-11-01/';
+
 export const PAGE_KINDS = {
   overview:'Hubs & directories',
   quotation:'Original quotations',
+  'rate-comparison':'Market rate comparisons',
   version:'Versioned workspaces',
   'work-detail':'Individual work details',
   model:'Drawings & design tools',
@@ -43,6 +46,7 @@ export function pageKind(path='') {
   if(/\/pilates-astra-[^/]+\/v(?:8|10)\/[^/]+\.html$/.test(p))return 'work-detail';
   if(!p||p==='directory'||p==='projects/paila-pilates'||p.endsWith('/milestone.html'))return 'overview';
   if(/^construction\/estimates\/pilates-(?:astra|hamro)-[^/]+$/.test(p))return 'quotation';
+  if(p===normalisePath(BUILDERA_MARKET_PATH))return 'rate-comparison';
   if(/\/basanti-workbench(?:\/v\d+)?$/.test(p)||/\/pilates-astra-[^/]+\/v[\d.]+$/.test(p))return 'version';
   if(p==='cad'||p==='construction'||/\/models\/(?:pilates-sketchup|layout-designer|basanti-residence)(?:\/interior\.html)?$/.test(p))return 'model';
   return 'reference';
@@ -57,6 +61,7 @@ export function normalisePath(path='') {
 export function classifyPage(path='') {
   const p=normalisePath(path);
   if(p==='projects/paila-pilates'||/construction\/(?:estimates\/pilates-|models\/pilates-sketchup)/.test(p)) {
+    if(p.startsWith(normalisePath(BUILDERA_MARKET_PATH)))return {project:'paila',category:'BuildEra market rate comparison',active:'paila'};
     const supplier=p.includes('pilates-hamro-');
     const version=p.match(/\/pilates-astra-[^/]+\/(v[\d.]+)(?:\/|$)/)?.[1];
     return {project:'paila',category:supplier?'Hamro quotation':p.includes('/pilates-sketchup')?'Studio model & quantities':p.endsWith('milestone.html')?'Astra versions':p==='projects/paila-pilates'?'Project hub':estimateCategories[version]??'Astra original quotation',active:'paila'};
