@@ -1,0 +1,970 @@
+{
+  "schema": "cad-facility.four-project-recovery.v1",
+  "checkedAt": "2026-11-07T10:13:36.058Z",
+  "timezone": "Asia/Kathmandu",
+  "lastSourceSessionCompletedAt": "2026-11-07T10:11:57.115Z",
+  "recoveryStatus": "RUN42_FOUR_LANES_MAIN_ACKED",
+  "basis": "Run 41 saved MScS B083, Lok Sewa proofs and AEC Part 8. Its MScS and AEC registry closeout was recovered without replay. Run 42 advanced four lanes and verified all Local/Main acknowledgements.",
+  "scope": "User-authorized continuation of all four extraction lanes within a 60-minute window.",
+  "preservedSourceCommit": "9c70c5c342e00bd0b6e26525c37d65bdbdcd8f40",
+  "rollbackCommit": "9c70c5c342e00bd0b6e26525c37d65bdbdcd8f40",
+  "session": {
+    "completedPhases": 599,
+    "lastSessionCheckpoints": 1,
+    "sourceElapsedMinutes": 31.010416666666668,
+    "lastSessionWorkUnits": 4
+  },
+  "findings": [
+    "Verified three additional original PDF occurrences and 6,784,481 bytes. The catalogue retains all 2,187 physical identities. 1,086 of 1,867 files are hashed, 781 remain, and the cumulative verified bytes are 750,967,086. The JSONL and SQLite records agree.",
+    "Verified three additional original PDF occurrences, for 30 physical proofs, 19 distinct SHA-256 hashes and 2,817,200 bytes. The provisional metadata index still covers 1,242 identities. Historical records give aggregate totals for the two-file, 9,304-byte gap. Both missing identities remain unknown.",
+    "Verified three Kaski FY2083/84 benchmarks in section 14(c), PDF pages 39–40. Cerana frame feeder NPR 200 per piece, grafting needle NPR 250 per piece and grafting rod NPR 150 per piece. The normalized files, rate sheet, source register and project checkpoint agree.",
+    "Verified B552 against two complete source-folder listings. Added eight file metadata records and 69,131 metadata-reported bytes. The catalogue has 7,099 records, including 5,940 files and 1,159 folders. The queue has 569 folders. The four current control files and the new checkpoint passed exact byte readback."
+  ],
+  "lanes": [
+    {
+      "id": "MSCS",
+      "name": "MSc Structural Engineering",
+      "checkpoint": "AQ-CP96",
+      "batch": "B084",
+      "stage": "Source byte hashing",
+      "state": "READY_BOUNDED_HASH_CONTINUATION",
+      "stateLabel": "Fresh hashes verified; hashing continues",
+      "metric": {
+        "label": "Source files hashed",
+        "done": 1086,
+        "total": 1867,
+        "remaining": 781,
+        "unit": "files"
+      },
+      "inventory": {
+        "rows": 2187,
+        "folders": 320,
+        "files": 1867
+      },
+      "evidence": {
+        "type": "Five current files read back exactly. JSONL and SQLite identity and hash agreement.",
+        "bytes": 2260649,
+        "sha256": "e5ba2945d188b11543d828108950088b375fd558889c3001036c698e091bdc46",
+        "uniqueIds": 2187,
+        "hashValuesPresent": 1086,
+        "checkpointHashMatch": true,
+        "agreement": "Verified three additional original PDF occurrences and 6,784,481 bytes. The catalogue retains all 2,187 physical identities. 1,086 of 1,867 files are hashed, 781 remain, and the cumulative verified bytes are 750,967,086. The JSONL and SQLite records agree."
+      },
+      "sync": {
+        "local": 16,
+        "mainConsumed": 16,
+        "pendingSequences": 0,
+        "notice": "N13",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-11-07T10:12:01.242Z"
+      },
+      "contentExtraction": "Not started",
+      "blocker": "781 source files remain. Native export hashes follow a separate policy.",
+      "next": {
+        "batch": "B085",
+        "target": "Fresh bounded original-byte hash selection",
+        "action": "Verify the selected files against size and parent metadata. Keep native exports and original-byte hashes separate."
+      },
+      "comparison": {
+        "onboardingDone": 1015,
+        "addedSinceOnboarding": 71
+      },
+      "supplementalEvidence": {
+        "type": "Run 42 verified lane work",
+        "sha256": "265783c608e59576261df8944c673bd90a88926cc9a3e5295ba734f9c8eb72fe",
+        "bytes": 2533,
+        "providerReadback": "PASS",
+        "localMainAck": "ACKED",
+        "canonicalPromotion": true
+      },
+      "integrityPilot": {
+        "verifiedFiles": 3,
+        "verifiedBytes": 6784481,
+        "distinctContentHashes": 3,
+        "canonicalAdmission": "CP96_B084_NEW_SOURCE_HASHES",
+        "canonicalHashedFiles": 1086
+      }
+    },
+    {
+      "id": "LSA",
+      "name": "Lok Sewa Study Archive",
+      "checkpoint": "CP80",
+      "batch": "B080",
+      "stage": "Provisional observed metadata search index",
+      "state": "BASELINE_RECONCILIATION_REQUIRED",
+      "stateLabel": "Metadata search; historical gap remains",
+      "metric": {
+        "label": "Historical baseline reconciliation",
+        "done": 1242,
+        "total": 1244,
+        "remaining": 2,
+        "unit": "rows"
+      },
+      "inventory": {
+        "rows": 1242,
+        "folders": 140,
+        "files": 1102,
+        "metadataBytes": 148118054319
+      },
+      "evidence": {
+        "type": "CURRENT JSONL independently downloaded and parsed",
+        "bytes": 726104,
+        "sha256": "997b18a4449b280a9cb77abad790d51730c788414742cc87ae4fe9ebc6b4a59c",
+        "uniqueIds": 1242,
+        "checkpointHashMatch": true,
+        "agreement": "Verified three additional original PDF occurrences, for 30 physical proofs, 19 distinct SHA-256 hashes and 2,817,200 bytes. The provisional metadata index still covers 1,242 identities. Historical records give aggregate totals for the two-file, 9,304-byte gap. Both missing identities remain unknown."
+      },
+      "sync": {
+        "local": 41,
+        "mainConsumed": 41,
+        "pendingSequences": 0,
+        "notice": "N37",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-11-07T10:12:01.242Z"
+      },
+      "contentExtraction": "PDF/OCR, video transcription and semantic extraction not started",
+      "blocker": "The observed 1,242-row tree is indexed. Two historical files totaling 9,304 bytes still need identity-level evidence before the full freeze or semantic extraction.",
+      "next": {
+        "batch": "B081 reconciliation",
+        "target": "Identity-level historical inventory for the two missing files",
+        "action": "Preserve the 30 verified physical occurrences and the provisional metadata index. The historical gap still needs source identities."
+      },
+      "comparison": {
+        "onboardingDone": 416,
+        "addedSinceOnboarding": 826
+      },
+      "sourceTreeAudit": {
+        "folderListings": 140,
+        "observedRows": 1242,
+        "observedFiles": 1102,
+        "observedFoldersIncludingRoots": 140,
+        "observedTreeFullyRepresented": true,
+        "historicalFileGap": 2,
+        "historicalBytesGap": 9304,
+        "branchGaps": [
+          {
+            "branch": "NEA/Class files",
+            "files": 1,
+            "metadataBytes": 4652
+          },
+          {
+            "branch": "NEA/Standard files-Package",
+            "files": 1,
+            "metadataBytes": 4652
+          }
+        ],
+        "expectedMissingIdsKnown": false
+      },
+      "supplementalEvidence": {
+        "type": "Run 42 verified lane work",
+        "sha256": "e0111058b01a8e6c2990b60e5befbbc5871a10cc415efc22ff942ef7215e2833",
+        "bytes": 3137,
+        "providerReadback": "PASS",
+        "localMainAck": "ACKED",
+        "canonicalPromotion": false
+      },
+      "integrityPilot": {
+        "verifiedFilesThisRun": 3,
+        "verifiedBytesThisRun": 454581,
+        "cumulativeVerifiedFiles": 30,
+        "cumulativeVerifiedBytes": 2817200,
+        "cumulativeDistinctContentHashes": 19,
+        "canonicalInventoryChanged": false
+      },
+      "provisionalIndex": {
+        "records": 1242,
+        "formats": [
+          "SQLite",
+          "CSV"
+        ],
+        "metadataSearch": "FTS5 names,paths,branches",
+        "fullFreeze": false,
+        "semanticParsing": false
+      }
+    },
+    {
+      "id": "AEC",
+      "name": "AEC Cost & Rate Intelligence",
+      "checkpoint": "G076 PART9",
+      "batch": "G076 PART9",
+      "stage": "Source-verified normalized rate extraction",
+      "state": "READY_BOUNDED_SOURCE_CONTINUATION",
+      "stateLabel": "Three new beekeeping equipment rates verified",
+      "metric": null,
+      "inventory": null,
+      "evidence": {
+        "type": "Fresh full original PDF review and exact native readback",
+        "rateIds": [
+          "RO-2459",
+          "RO-2460",
+          "RO-2461"
+        ],
+        "ratesPresent": true,
+        "originalLockBoundary": "G075 / expected next RO-2436",
+        "agreement": "Verified three Kaski FY2083/84 benchmarks in section 14(c), PDF pages 39–40. Cerana frame feeder NPR 200 per piece, grafting needle NPR 250 per piece and grafting rod NPR 150 per piece. The normalized files, rate sheet, source register and project checkpoint agree.",
+        "historicalTerminalReadStatus": 404,
+        "g075CheckpointReadStatus": 200,
+        "g075CheckpointTitle": "CR02_CHECKPOINT__SRC-0005_G075_COMPLETE__20260914_NPT.md",
+        "g076TerminalRecovered": false,
+        "g076TransportRecovered": true,
+        "originalTerminalReadStatus": 404,
+        "sourcePDFPage": "39–40",
+        "printedPage": "34–35",
+        "sourceAndSnapshotAgreement": true,
+        "g076RecoveryReissued": true,
+        "g076RecoveryClosure": "CLOSED",
+        "latestVerifiedBatch": "G076 PART9",
+        "g076Part2Completed": true,
+        "newCanonicalRateObservations": 3,
+        "g076Part3Completed": true,
+        "g076Part4Completed": true,
+        "g076Part5Completed": true,
+        "corrections": [
+          {
+            "id": "RO-2444",
+            "field": "unit",
+            "before": "piece",
+            "after": "set",
+            "rateNPR": 4.51,
+            "reason": "Original PDF p39 explicitly shows सेट; prior RUN37 normalization was incorrect; set composition unasserted."
+          }
+        ],
+        "g076Part6Completed": true,
+        "priorNapierUnitCorrectionRetained": true,
+        "g076Part7Completed": true,
+        "g076Part8Completed": true,
+        "g076Part9Completed": true
+      },
+      "sync": {
+        "local": 21,
+        "mainConsumed": 21,
+        "pendingSequences": 0,
+        "notice": "N10",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-11-07T10:12:01.242Z"
+      },
+      "contentExtraction": "Three new material identities and three rate observations;source item variants preserved",
+      "blocker": "Earlier deferred rows still need source units or an explicit numeric rate. The exact Gregorian effective day, taxes and transport remain unasserted.",
+      "next": {
+        "batch": "G076 PART10",
+        "target": "RO-2462, section 14(c) item 10, tin bee smoker",
+        "action": "Verify the next source row, fiscal year and explicit unit before registering it."
+      },
+      "supplementalEvidence": {
+        "type": "Run 42 verified lane work",
+        "sha256": "88904357654a648438549dc3e247244beb1519f8efebb0bcab19cf80ab9b4e53",
+        "bytes": 7684,
+        "providerReadback": "PASS",
+        "localMainAck": "ACKED",
+        "canonicalPromotion": true
+      },
+      "verifiedRates": [
+        {
+          "id": "RO-2436",
+          "label": "Rice husk",
+          "rateNPR": 3.25,
+          "unit": "kg"
+        },
+        {
+          "id": "RO-2437",
+          "label": "Cow-dung manure",
+          "rateNPR": 4,
+          "unit": "kg"
+        }
+      ],
+      "newRates": [
+        {
+          "id": "RO-2459",
+          "label": "Cerana frame feeder",
+          "rateNPR": 200,
+          "unit": "piece",
+          "pdfPage": 39,
+          "printedPage": 34,
+          "sourceItem": "7"
+        },
+        {
+          "id": "RO-2460",
+          "label": "Grafting needle",
+          "rateNPR": 250,
+          "unit": "piece",
+          "pdfPage": 39,
+          "printedPage": 34,
+          "sourceItem": "8"
+        },
+        {
+          "id": "RO-2461",
+          "label": "Grafting rod",
+          "rateNPR": 150,
+          "unit": "piece",
+          "pdfPage": 40,
+          "printedPage": 35,
+          "sourceItem": "9"
+        }
+      ],
+      "rateSource": {
+        "fiscalYear": "2083/84",
+        "pdfPage": "39–40",
+        "printedPage": "34–35",
+        "section": "14(c)",
+        "sourceItems": [
+          "7",
+          "8",
+          "9"
+        ],
+        "exactEffectiveDay": null
+      },
+      "priorExtractedBatches": [
+        {
+          "batch": "G076 PART2",
+          "rates": [
+            {
+              "id": "RO-2438",
+              "label": "Poultry manure",
+              "rateNPR": 6.7,
+              "unit": "kg"
+            },
+            {
+              "id": "RO-2439",
+              "label": "Earthworm manure",
+              "rateNPR": 30,
+              "unit": "kg"
+            },
+            {
+              "id": "RO-2440",
+              "label": "Compost manure",
+              "rateNPR": 25,
+              "unit": "kg"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART3",
+          "rates": [
+            {
+              "id": "RO-2441",
+              "label": "Tricho earthworm manure",
+              "rateNPR": 35,
+              "unit": "kg"
+            },
+            {
+              "id": "RO-2442",
+              "label": "Tricho compost manure",
+              "rateNPR": 30,
+              "unit": "kg"
+            },
+            {
+              "id": "RO-2443",
+              "label": "Broom-grass rhizome (3-piece set)",
+              "rateNPR": 5.51,
+              "unit": "set",
+              "unitDetail": "set (3 pieces)"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART4",
+          "rates": [
+            {
+              "id": "RO-2444",
+              "label": "Napier Grass Cutting",
+              "rateNPR": 4.51,
+              "unit": "set",
+              "originallyPublishedUnit": "piece",
+              "correctedIn": "RUN38",
+              "unitDetail": "set; source composition unasserted"
+            },
+            {
+              "id": "RO-2445",
+              "label": "Bamboo Seedling (polythene-grown)",
+              "rateNPR": 77.11,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2446",
+              "label": "Bamboo Seedling (culm cutting)",
+              "rateNPR": 82.36,
+              "unit": "piece"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART5",
+          "rates": [
+            {
+              "id": "RO-2447",
+              "label": "Bamboo with Soil (transplanting)",
+              "rateNPR": 440.65,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2448",
+              "label": "Nylon Sheet (300 micron, UV)",
+              "rateNPR": 110.16,
+              "unit": "m²"
+            },
+            {
+              "id": "RO-2449",
+              "label": "Jute Netting",
+              "rateNPR": 220.32,
+              "unit": "kg"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART6",
+          "rates": [
+            {
+              "id": "RO-2450",
+              "label": "Apis cerana Hive /Newton A /Tuni-wood Frame",
+              "rateNPR": 3500,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2451",
+              "label": "Apis cerana Hive /Newton A /Tuni Wood",
+              "rateNPR": 4000,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2452",
+              "label": "Apis cerana Hive /Newton B /Tuni-wood Frame",
+              "rateNPR": 4000,
+              "unit": "piece"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "section": "14(c)",
+            "sourceItems": [
+              "1.1.1",
+              "1.1.2",
+              "1.2.1"
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART7",
+          "rates": [
+            {
+              "id": "RO-2453",
+              "label": "Cerana hive, Newton B, Tuni wood",
+              "rateNPR": 4500,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2454",
+              "label": "Cerana bee colony, minimum five frames",
+              "rateNPR": 5000,
+              "unit": "colony"
+            },
+            {
+              "id": "RO-2455",
+              "label": "Comb foundation",
+              "rateNPR": 1400,
+              "unit": "kg"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "section": "14(c)",
+            "sourceItems": [
+              "1.2.2",
+              "2",
+              "3"
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART8",
+          "rates": [
+            {
+              "id": "RO-2456",
+              "label": "Nucleus hive",
+              "rateNPR": 3000,
+              "unit": "hive"
+            },
+            {
+              "id": "RO-2457",
+              "label": "Beekeeping hood/hat",
+              "rateNPR": 500,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2458",
+              "label": "Stainless steel honey extractor, four frames",
+              "rateNPR": 15000,
+              "unit": "piece"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "section": "14(c)",
+            "sourceItems": [
+              "4",
+              "5",
+              "6"
+            ],
+            "exactEffectiveDay": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "MSCH",
+      "name": "MSc Hydropower Research Corpus",
+      "checkpoint": "CP552",
+      "batch": "B552",
+      "stage": "Recursive physical catalogue",
+      "state": "READY_FIFO_CONTINUATION",
+      "stateLabel": "Saved checkpoint; FIFO remains",
+      "metric": null,
+      "inventory": {
+        "rows": 7099,
+        "files": 5940,
+        "folders": 1159,
+        "pendingFolders": 569,
+        "metadataBytes": 66631820301,
+        "overallDenominator": null
+      },
+      "evidence": {
+        "type": "Four current control files and checkpoint read back exactly",
+        "bytes": 4201672,
+        "sha256": "cbe2eb6329b8f6fa8c09d12d7d38362cbc4e95d85bdade4521f3186785fb135e",
+        "uniqueIds": 7099,
+        "checkpointHashMatch": true,
+        "agreement": "Verified B552 against two complete source-folder listings. Added eight file metadata records and 69,131 metadata-reported bytes. The catalogue has 7,099 records, including 5,940 files and 1,159 folders. The queue has 569 folders. The four current control files and the new checkpoint passed exact byte readback."
+      },
+      "sync": {
+        "local": 543,
+        "mainConsumed": 543,
+        "pendingSequences": 0,
+        "notice": "N497",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-11-07T10:12:01.242Z"
+      },
+      "contentExtraction": "Source-content extraction and model execution not started",
+      "blocker": "569 FIFO folders remain. The full corpus denominator is unknown. Source-content parsing and model execution are later stages.",
+      "next": {
+        "batch": "B553",
+        "target": "4b",
+        "action": "Verify the next FIFO folder and create a new metadata checkpoint with a rollback snapshot."
+      },
+      "comparison": {
+        "onboardingDone": 500,
+        "addedSinceOnboarding": 6599
+      }
+    }
+  ],
+  "continuation": {
+    "rotation": [
+      "MSCH",
+      "LSA",
+      "AEC",
+      "MSCS"
+    ],
+    "phases": [
+      {
+        "lane": "MSCH",
+        "phase": "—",
+        "batch": "B553",
+        "state": "READY_FIFO_CONTINUATION"
+      },
+      {
+        "lane": "LSA",
+        "phase": "—",
+        "batch": "B081 reconciliation",
+        "state": "BASELINE_RECONCILIATION_REQUIRED"
+      },
+      {
+        "lane": "AEC",
+        "phase": "—",
+        "batch": "G076 PART10",
+        "state": "READY_BOUNDED_SOURCE_CONTINUATION"
+      },
+      {
+        "lane": "MSCS",
+        "phase": "—",
+        "batch": "B085",
+        "state": "READY_BOUNDED_HASH_CONTINUATION"
+      }
+    ],
+    "limits": {
+      "checkpointsPerPhase": 1,
+      "maxMinutesPerPhase": 20,
+      "maximumRunMinutes": 60,
+      "authority": "User authorized one four-lane continuation with a 60-minute maximum."
+    },
+    "mainSync": "All four lanes acknowledged. MSCS 16/16, LSA 41/41, AEC 21/21, MSCH 543/543.",
+    "scheduler": "Manual user-authorized run; no scheduler changes."
+  },
+  "separatePipeline": {
+    "id": "JP Cost",
+    "checkpoint": "M02 v0.5.14",
+    "pages": 697,
+    "sources": 6,
+    "state": "RAW_ARCHIVE_REPORTED_COMPLETE_SEMANTIC_QA_PENDING",
+    "basis": "Historical handover and onboarding snapshot only; source archives not reverified in this recovery.",
+    "note": "Separate from the four lanes and from AEC G076 terminal debt."
+  },
+  "execution": {
+    "startedAt": "2026-11-07T09:40:56.490Z",
+    "stoppedAt": "2026-11-07T10:13:36.058Z",
+    "sourceStoppedAt": "2026-11-07T10:11:57.115Z",
+    "inProgress": false,
+    "durationPolicy": "maximum",
+    "maximumMinutes": 60,
+    "deadline": "2026-11-07T10:40:56.490Z",
+    "maximumWindowRespected": true,
+    "elapsedMinutes": 32.65946666666667,
+    "sourceElapsedMinutes": 31.010416666666668,
+    "added": {
+      "LSA": 0,
+      "MSCH": 8
+    },
+    "checkpoints": [
+      {
+        "lane": "MSCH",
+        "batch": "B552",
+        "checkpoint": "CP552",
+        "added": {
+          "rows": 8,
+          "files": 8,
+          "folders": 0
+        },
+        "after": {
+          "rows": 7099,
+          "files": 5940,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4201672,
+          "sha256": "cbe2eb6329b8f6fa8c09d12d7d38362cbc4e95d85bdade4521f3186785fb135e"
+        },
+        "createdAt": "2026-11-07T15:37:34.439000+05:45",
+        "completedAt": "2026-11-07T10:12:01.242Z",
+        "local": 543,
+        "mainAck": "ACKED"
+      }
+    ],
+    "supplementalEvents": [
+      {
+        "lane": "LSA",
+        "sequence": 41,
+        "kind": "PROVISIONAL_METADATA_SEARCH_AND_HASHES",
+        "providerReadback": "PASS",
+        "canonicalPromotion": false
+      },
+      {
+        "lane": "MSCS",
+        "sequence": 16,
+        "kind": "NEW_ORIGINAL_BYTE_HASHES",
+        "providerReadback": "PASS",
+        "canonicalPromotion": true
+      },
+      {
+        "lane": "AEC",
+        "sequence": 21,
+        "kind": "NEW_SOURCE_RATE_EXTRACTION",
+        "providerReadback": "PASS",
+        "canonicalPromotion": true
+      }
+    ],
+    "laneWork": {
+      "MSCH": {
+        "inventoryCheckpoints": 1,
+        "newMetadataRows": 8,
+        "summary": "One FIFO checkpoint, eight new file metadata records",
+        "pending": "569 folders queued"
+      },
+      "MSCS": {
+        "newCanonicalSourceHashes": 3,
+        "verifiedBytes": 6784481,
+        "canonicalPromotion": true,
+        "summary": "Three original PDF occurrences verified; 1,086 of 1,867 files hashed",
+        "pending": "781 files remain"
+      },
+      "LSA": {
+        "newIntegrityProofs": 3,
+        "historicalVarianceFiles": 2,
+        "summary": "Three new PDF proofs; 30 occurrences in the provisional index",
+        "pending": "Two historical identities remain unknown"
+      },
+      "AEC": {
+        "newRateRows": 3,
+        "newUnitCorrections": 0,
+        "priorNapierCorrectionRetained": true,
+        "summary": "G076 Part 9 added three source-verified rate observations",
+        "pending": "G076 Part 10 item 10 next"
+      }
+    },
+    "debtClearance": {
+      "initialEvents": 2,
+      "newEvents": 4,
+      "totalAcknowledgedEvents": 6,
+      "remainingEvents": 0,
+      "recoveredEventsAcknowledged": 2,
+      "newEventsAcknowledged": 4,
+      "pending": 0
+    },
+    "sourceBodiesReadOrExecuted": true,
+    "sourceModelsExecuted": false,
+    "bulkContentExtractionStarted": false,
+    "sourceObjectsMutated": false,
+    "schedulerChanged": false
+  },
+  "previousRuntimeIncident": {
+    "checkpoint": "CP122",
+    "status": "CLEARED",
+    "verification": "Raw PRE/CURRENT/checkpoint/POST transfers and exact provider readbacks passed from CP123 onward. Previous49-item preflight was reverified and promoted only as B123–B126 closed."
+  },
+  "branchRecovery": {
+    "transcriptRestored": false,
+    "interruptedRun": "RUN41",
+    "cause": "The reason the old chat became unavailable could not be determined.",
+    "recoveredFrom": "Run 40 dashboard and Run 41 durable Drive artifacts",
+    "recoveredLanes": {
+      "MSCS": "AQ-CP95/B083",
+      "LSA": "CP80 with 27 verified occurrences",
+      "AEC": "G076 PART8",
+      "MSCH": "CP551 remained the durable queue boundary"
+    },
+    "closeout": "Run 41 MScS and AEC Local/Main acknowledgements were added after exact provider readback. Existing Lok Sewa acknowledgement was verified.",
+    "current": "CP552 / MSCH 543/543"
+  },
+  "previousRun": {
+    "checkpoint": "CP551",
+    "local": 542,
+    "main": 542,
+    "path": "2026-11-06-run40/cp551/status.json"
+  },
+  "roadmap": {
+    "schema": "four-lane.roadmap.v1",
+    "stages": [
+      "Inventory",
+      "Integrity",
+      "Approved content extraction",
+      "Validated knowledge",
+      "Use and maintenance"
+    ],
+    "currentSourceStage": "Metadata cataloguing, source-byte integrity and bounded AEC rate extraction",
+    "overallCompletionPercent": null,
+    "finishDate": null,
+    "lanes": [
+      {
+        "id": "MSCS",
+        "checkpoint": "AQ-CP96",
+        "nextBatch": "B085",
+        "nextTarget": "Fresh bounded original-byte hash selection",
+        "gate": "781 source files remain. Native export hashes follow a separate policy."
+      },
+      {
+        "id": "LSA",
+        "checkpoint": "CP80",
+        "nextBatch": "B081 reconciliation",
+        "nextTarget": "Identity-level historical inventory for the two missing files",
+        "gate": "The observed 1,242-row tree is indexed. Two historical files totaling 9,304 bytes still need identity-level evidence before the full freeze or semantic extraction."
+      },
+      {
+        "id": "AEC",
+        "checkpoint": "G076 PART9",
+        "nextBatch": "G076 PART10",
+        "nextTarget": "RO-2462, section 14(c) item 10, tin bee smoker",
+        "gate": "Earlier deferred rows still need source units or an explicit numeric rate. The exact Gregorian effective day, taxes and transport remain unasserted."
+      },
+      {
+        "id": "MSCH",
+        "checkpoint": "CP552",
+        "nextBatch": "B553",
+        "nextTarget": "4b",
+        "gate": "569 FIFO folders remain. The full corpus denominator is unknown. Source-content parsing and model execution are later stages."
+      }
+    ]
+  },
+  "derivationReadiness": {
+    "inventoryAndIntegrity": "AVAILABLE_WITH_RECORDED_GAPS",
+    "aecStructuredRates": "EXISTING_PARTIAL_SOURCE_LINKED_TABLES",
+    "corpusContentExtraction": "PENDING",
+    "formats": [
+      "JSONL/NDJSON",
+      "JSON",
+      "SQLite (MSCS and provisional LSA metadata search)",
+      "CSV (AEC rates and provisional LSA metadata)",
+      "Markdown",
+      "Google Sheets",
+      "SHA-256 text",
+      "ZIP recovery archives"
+    ],
+    "limitations": "Inventory/hashes and metadata search do not establish extracted full text or validated engineering/study conclusions. AEC extraction remains a partial government benchmark table."
+  },
+  "run34": {
+    "sourceCheckpointCount": 2,
+    "workUnits": 5,
+    "mscsCanonicalPromotion": true,
+    "aecRecoveryClosed": true,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "resolvedTruncatedReadbacks": 1,
+    "sourceBatchesReplayed": 0,
+    "duplicateRecoveryUploads": 0,
+    "aecInheritedParentCorrected": true
+  },
+  "run35": {
+    "sourceCheckpointCount": 2,
+    "workUnits": 5,
+    "mscsCanonicalPromotion": true,
+    "aecRecoveryClosed": true,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "resolvedTruncatedReadbacks": 0,
+    "sourceBatchesReplayed": 0,
+    "duplicateRecoveryUploads": 0
+  },
+  "run36": {
+    "sourceCheckpointCount": 4,
+    "workUnits": 7,
+    "mscsNewSourceHashes": 3,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaMetadataFTS5": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "registrationWindowRecovery": 1,
+    "sourceBatchesReplayed": 0,
+    "canonicalRawWritesReplayed": 0
+  },
+  "run37": {
+    "sourceCheckpointCount": 6,
+    "workUnits": 9,
+    "mscsNewSourceHashes": 3,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaMetadataFTS5": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "registrationWindowRecovery": 0,
+    "sourcePhaseIncompleteLocalReads": 2,
+    "archiveReadbackRecovery": 1,
+    "sourceBatchesReplayed": 0,
+    "canonicalRawWritesReplayed": 0
+  },
+  "run38": {
+    "sourceCheckpointCount": 6,
+    "workUnits": 9,
+    "mscsNewSourceHashes": 3,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaMetadataFTS5": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "registrationWindowRecovery": 0,
+    "sourcePhaseIncompleteLocalReads": 1,
+    "archiveReadbackRecovery": 0,
+    "sourceBatchesReplayed": 0,
+    "canonicalRawWritesReplayed": 0
+  },
+  "run39": {
+    "sourceCheckpointCount": 6,
+    "workUnits": 9,
+    "mscsNewSourceHashes": 3,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaMetadataFTS5": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "docsReadQuotaRecovered": true,
+    "emptyCanonicalRunlogReadRecovered": 1,
+    "sourceBatchesReplayed": 0,
+    "canonicalRawWritesReplayed": 0
+  },
+  "run40": {
+    "sourceCheckpointCount": 6,
+    "workUnits": 9,
+    "mscsNewSourceHashes": 3,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaMetadataFTS5": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "priorArchiveShortReadRecovered": true,
+    "aecControlCloseoutResumedWithoutRowReplay": true,
+    "sourceBatchesReplayed": 0,
+    "canonicalRawWritesReplayed": 0
+  },
+  "run41": {
+    "status": "RECOVERED_AFTER_INTERRUPTION",
+    "sourceWorkSaved": {
+      "MSCS": 3,
+      "LSA": 3,
+      "AEC": 3,
+      "MSCH": 0
+    },
+    "lateAcknowledgements": [
+      "MSCS 15/15",
+      "AEC 20/20"
+    ],
+    "existingAcknowledgement": "LSA 40/40",
+    "sourceBatchesReplayed": 0
+  },
+  "run42": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "sourceBatchesReplayed": 0
+  }
+}
