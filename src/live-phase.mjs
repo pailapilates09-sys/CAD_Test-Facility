@@ -1,23 +1,23 @@
 export const livePhase = {
-  "phase": "611",
-  "title": "Run 45 complete across four lanes at CP555",
+  "phase": "615",
+  "title": "Run 46 complete across four lanes at CP556",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-11-07T13:13:55.345Z",
-  "checkpoint": "MSCH-CORPUS-CP555",
+  "completedAt": "2026-11-08T11:48:34.588Z",
+  "checkpoint": "MSCH-CORPUS-CP556",
   "before": {
-    "rows": 7104,
-    "files": 5945,
+    "rows": 7109,
     "folders": 1159,
-    "pending": 567
+    "files": 5950,
+    "pending": 565
   },
   "after": {
-    "rows": 7108,
+    "rows": 7109,
     "folders": 1159,
-    "files": 5949,
-    "pending": 566
+    "files": 5950,
+    "pending": 565
   },
   "completedBatches": 1,
-  "scope": "Run 45 advanced all four lanes within 60 minutes. It catalogued hydropower files, verified MScS and Lok Sewa originals and extracted three AEC rates.",
+  "scope": "Run 46 advanced all four lanes within 60 minutes. It catalogued hydropower files, verified MScS and Lok Sewa originals and extracted three AEC rates.",
   "providerReadback": "PASS",
   "localRegistration": "VERIFIED",
   "mainAck": "ACKED",
@@ -26,44 +26,44 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 20.88635,
+    "sourceElapsedMinutes": 12.596266666666667,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 546,
-  "mainCursor": 546,
-  "nextBatch": "B556",
-  "nextTarget": "4e",
-  "newRows": 4,
+  "localHighWater": 547,
+  "mainCursor": 547,
+  "nextBatch": "B557",
+  "nextTarget": "4f",
+  "newRows": 1,
   "newFolders": 0,
-  "newFiles": 4,
-  "newKnownBytes": 20285,
-  "sessionStartedAt": "2026-11-07T12:51:04.000Z",
-  "sessionElapsedMinutes": 22.85575,
-  "knownBytes": 66631849612,
+  "newFiles": 1,
+  "newKnownBytes": 2410,
+  "sessionStartedAt": "2026-11-08T11:34:39.632Z",
+  "sessionElapsedMinutes": 13.915933333333333,
+  "knownBytes": 66631852022,
   "sessionReport": {
-    "startedAt": "2026-11-07T12:51:04.000Z",
-    "sourceStoppedAt": "2026-11-07T13:11:57.181Z",
+    "startedAt": "2026-11-08T11:34:39.632Z",
+    "sourceStoppedAt": "2026-11-08T11:47:15.408Z",
     "milestones": 1,
     "advancedLanes": 4,
     "MSCS": {
-      "checkpoint": "AQ-CP99/B087",
-      "beforeHashed": 1092,
-      "afterHashed": 1095,
+      "checkpoint": "AQ-CP100/B088",
+      "beforeHashed": 1095,
+      "afterHashed": 1098,
       "addedHashes": 3,
-      "pending": 772,
+      "pending": 769,
       "physicalRecords": 2187,
-      "local": 19,
-      "mainCursor": 19,
-      "notice": "N16 ACKED",
-      "next": "B088",
+      "local": 20,
+      "mainCursor": 20,
+      "notice": "N17 ACKED",
+      "next": "B089",
       "status": "READY_BOUNDED_HASH_CONTINUATION",
       "canonicalPromotion": true,
       "pilot": {
         "verifiedFiles": 3,
-        "verifiedBytes": 7315984,
-        "distinctContentHashes": 3,
-        "canonicalAdmission": "AQ-CP99/B087",
+        "verifiedBytes": 7519619,
+        "distinctContentHashes": 2,
+        "canonicalAdmission": "AQ-CP100/B088",
         "maxFiles": 3,
         "maxIndividualBytes": 5000000,
         "maxCumulativeBytes": 10000000
@@ -76,49 +76,49 @@ export const livePhase = {
       "addedFolders": 0,
       "addedFiles": 0,
       "addedMetadataBytes": 0,
-      "local": 44,
-      "mainCursor": 44,
-      "notice": "N40 ACKED",
+      "local": 45,
+      "mainCursor": 45,
+      "notice": "N41 ACKED",
       "nativeGridRows": 1500,
       "next": "B081 baseline reconciliation",
       "status": "BASELINE_RECONCILIATION_REQUIRED",
       "pilot": {
         "verifiedFiles": 3,
-        "verifiedBytes": 471383,
+        "verifiedBytes": 519249,
         "distinctContentHashes": 1,
         "canonicalInventoryChanged": false
       },
       "newIntegrityProofs": 3,
-      "cumulativeIntegrityProofs": 39,
-      "cumulativeVerifiedBytes": 4252042,
-      "cumulativeDistinctHashes": 24,
+      "cumulativeIntegrityProofs": 42,
+      "cumulativeVerifiedBytes": 4771291,
+      "cumulativeDistinctHashes": 25,
       "metadataFTS5": true
     },
     "MSCH": {
-      "checkpoint": "CP555/B555",
-      "beforeRows": 7104,
-      "afterRows": 7108,
+      "checkpoint": "CP556/B556",
+      "beforeRows": 7108,
+      "afterRows": 7109,
       "addedFolders": 0,
-      "addedFiles": 4,
-      "addedMetadataBytes": 20285,
-      "pending": 566,
-      "local": 546,
-      "mainCursor": 546,
-      "notice": "N500 ACKED",
-      "next": "B556"
+      "addedFiles": 1,
+      "addedMetadataBytes": 2410,
+      "pending": 565,
+      "local": 547,
+      "mainCursor": 547,
+      "notice": "N501 ACKED",
+      "next": "B557"
     },
     "AEC": {
       "status": "NEW_RATES_VERIFIED",
-      "local": 24,
-      "mainCursor": 24,
-      "notice": "N13 ACKED",
+      "local": 25,
+      "mainCursor": 25,
+      "notice": "N14 ACKED",
       "newRateWrites": 3,
       "unitCorrections": 0,
       "priorNapierUnitCorrectionRetained": true,
-      "checkpoint": "G076 PART12",
+      "checkpoint": "G076 PART13",
       "sourceAndSnapshotVerified": true,
       "aecControlCloseoutResumedWithoutRowReplay": true,
-      "next": "G076 PART13"
+      "next": "G076 PART14"
     },
     "sourceContentExtraction": false,
     "sourceMutation": "NONE",
@@ -138,16 +138,16 @@ export const livePhase = {
       "pending": 0
     },
     "remaining": [
-      "MScH has 566 folders queued. Source parsing is pending.",
-      "MScS has 772 files awaiting SHA-256 verification.",
+      "MScH has 565 folders queued. Source parsing is pending.",
+      "MScS has 769 files awaiting SHA-256 verification.",
       "Lok Sewa has two unresolved historical identities. The index remains provisional.",
-      "AEC Part 13 starts after the queen cage. The hive-with-colony rate stays deferred while its unit is blank."
+      "AEC Part 14 starts after the gloves. The hive-with-colony rate stays deferred while its unit is blank."
     ],
     "canonicalSourceAdvanceLanes": 3,
     "workUnits": 4,
-    "closedAt": "2026-11-07T13:13:55.345Z"
+    "closedAt": "2026-11-08T11:48:34.588Z"
   },
-  "scannedFolders": 547,
+  "scannedFolders": 549,
   "phases": [
     {
       "phase": "01",
@@ -4452,6 +4452,62 @@ export const livePhase = {
       "lane": "MSCS / Local / Main",
       "work": "Run 45 AQ-CP99/B087 verified three original PDFs.",
       "stop": "Local/Main 19/19 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "612",
+      "lane": "MSCH / Local / Main",
+      "work": "Run 46 B556 4d added one file metadata record.",
+      "stop": "Local/Main 547/547 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "613",
+      "lane": "LSA / Local / Main",
+      "work": "Run 46 verified three PDF occurrences and refreshed the provisional index.",
+      "stop": "Local/Main 45/45 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "614",
+      "lane": "AEC / Local / Main",
+      "work": "Run 46 G076 Part 13 extracted three source-verified benchmark rates.",
+      "stop": "Local/Main 25/25 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "615",
+      "lane": "MSCS / Local / Main",
+      "work": "Run 46 AQ-CP100/B088 verified three original PDFs.",
+      "stop": "Local/Main 20/20 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "612",
+      "lane": "MSCH / Local / Main",
+      "work": "Run 46 B556 4e added one file metadata record.",
+      "stop": "Local/Main 547/547 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "613",
+      "lane": "LSA / Local / Main",
+      "work": "Run 46 verified three PDF occurrences and refreshed the provisional index.",
+      "stop": "Local/Main 45/45 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "614",
+      "lane": "AEC / Local / Main",
+      "work": "Run 46 G076 Part 13 extracted three source-verified benchmark rates.",
+      "stop": "Local/Main 25/25 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "615",
+      "lane": "MSCS / Local / Main",
+      "work": "Run 46 AQ-CP100/B088 verified three original PDFs.",
+      "stop": "Local/Main 20/20 ACKED",
       "status": "Complete - stopped"
     }
   ]
