@@ -5,10 +5,10 @@ export const livePhase = {
   "completedAt": "2026-11-08T11:48:34.588Z",
   "checkpoint": "MSCH-CORPUS-CP556",
   "before": {
-    "rows": 7109,
+    "rows": 7108,
     "folders": 1159,
-    "files": 5950,
-    "pending": 565
+    "files": 5949,
+    "pending": 566
   },
   "after": {
     "rows": 7109,
@@ -147,7 +147,7 @@ export const livePhase = {
     "workUnits": 4,
     "closedAt": "2026-11-08T11:48:34.588Z"
   },
-  "scannedFolders": 549,
+  "scannedFolders": 548,
   "phases": [
     {
       "phase": "01",
@@ -4452,34 +4452,6 @@ export const livePhase = {
       "lane": "MSCS / Local / Main",
       "work": "Run 45 AQ-CP99/B087 verified three original PDFs.",
       "stop": "Local/Main 19/19 ACKED",
-      "status": "Complete - stopped"
-    },
-    {
-      "phase": "612",
-      "lane": "MSCH / Local / Main",
-      "work": "Run 46 B556 4d added one file metadata record.",
-      "stop": "Local/Main 547/547 ACKED",
-      "status": "Complete - stopped"
-    },
-    {
-      "phase": "613",
-      "lane": "LSA / Local / Main",
-      "work": "Run 46 verified three PDF occurrences and refreshed the provisional index.",
-      "stop": "Local/Main 45/45 ACKED",
-      "status": "Complete - stopped"
-    },
-    {
-      "phase": "614",
-      "lane": "AEC / Local / Main",
-      "work": "Run 46 G076 Part 13 extracted three source-verified benchmark rates.",
-      "stop": "Local/Main 25/25 ACKED",
-      "status": "Complete - stopped"
-    },
-    {
-      "phase": "615",
-      "lane": "MSCS / Local / Main",
-      "work": "Run 46 AQ-CP100/B088 verified three original PDFs.",
-      "stop": "Local/Main 20/20 ACKED",
       "status": "Complete - stopped"
     },
     {
