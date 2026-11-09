@@ -62,7 +62,19 @@ test('Actions verifies the built view before upload and the live Pages result be
  assert.match(workflow,/ref: \$\{\{ github.sha \}\}/);
 });
 
-test('source rate table preserves exact rates, source period and unknown effective day',()=>{const html=renderExtractionExplorer(status),a=buildExtractionView(status).lanes.find(l=>l.id==='AEC');assert.equal(a.newRates.length,3);assert.equal(a.rateSource.exactEffectiveDay,null);for(const r of a.newRates){assert.ok(html.includes(r.id));assert.ok(html.includes(r.rateNPR.toFixed(2)));}assert.ok(html.includes('Exact Gregorian effective day is unasserted'));});
+test('source rate table preserves exact rates, source pages and unknown effective day',()=>{
+ const html=renderExtractionExplorer(status), a=buildExtractionView(status).lanes.find(l=>l.id==='AEC');
+ const saved=status.lanes.find(l=>l.id==='AEC');
+ assert.ok(a.newRates.length>0);
+ assert.deepEqual(a.newRates.map(r=>r.id),saved.evidence.rateIds);
+ assert.equal(a.rateSource.exactEffectiveDay,null);
+ for(const r of a.newRates){
+  const row=html.split('<th scope="row">'+r.id+'</th>')[1]?.split('</tr>')[0]??'';
+  assert.ok(row.includes('<td>'+r.rateNPR.toFixed(2)+'</td>'));
+  if(r.printedPage&&r.pdfPage)assert.ok(row.includes('<td>'+r.printedPage+' / '+r.pdfPage+'</td>'));
+ }
+ assert.ok(html.includes('Exact Gregorian effective day is unasserted'));
+});
 
 
 test('source rate table keeps kilogram and three-piece-set observations distinct',()=>{

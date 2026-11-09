@@ -10,7 +10,7 @@ const rawStatus=await readFile(new URL(pointer.path,recoveryRoot),'utf8');
 const status=JSON.parse(rawStatus),expected=buildExtractionView(status);
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const live=process.argv.indexOf('--live');
-const fileNames=['progress/extraction-view.json','progress/recovery/status.json','progress/extraction-explorer.css','progress/extraction-explorer.js','progress/monitoring.json','progress/monitoring.css','progress/monitoring.js','progress/monitoring-charts.js','progress/visualization-references.json'];
+const fileNames=['progress/extraction-view.json','progress/recovery/status.json','progress/recovery/report.md','progress/extraction-explorer.css','progress/extraction-explorer.js','progress/monitoring.json','progress/monitoring.css','progress/monitoring.js','progress/monitoring-charts.js','progress/visualization-references.json'];
 const monitoring=buildMonitoring(status);
 const references=JSON.parse(await readFile(new URL('public/progress/visualization-references.json',root),'utf8'));
 assert.equal(references.projects.length,10,'Exactly ten reviewed projects required');
@@ -31,6 +31,14 @@ function checkHTML(html){
  for(const marker of ['evidence-dashboard','readiness-map','evidence-lineage','open-source-patterns','data-em-growth','data-em-metric'])assert.ok(html.includes(marker),'Monitoring marker missing: '+marker);
  for(const p of references.projects)assert.ok(html.includes(p.repo),'Reference missing: '+p.name);
  assert.ok(html.includes('CP'+monitoring.history.at(-1).cp),'Monitoring checkpoint missing');
+ if(status.issues?.length){
+  assert.ok(html.includes('id="extraction-issues"'),'Issue register missing');
+  for(const issue of status.issues){
+   assert.match(issue.id,/^[A-Z0-9-]+$/,'Unexpected issue ID');
+   assert.ok(['RESOLVED','UNRESOLVED','INCOMPLETE'].includes(issue.state),'Unexpected issue state');
+   assert.ok(html.includes('data-extraction-issue="'+issue.id+'" data-issue-state="'+issue.state+'"'),'Issue missing: '+issue.id);
+  }
+ }
  const section=html.split('data-extraction-view=')[1]?.split('</section></details>')[0]??'';
  assert.ok(!/download_url|[?&]sig=|@gmail\.com|drive\.google\.com\/file/.test(section),'Private source material exposed');
 }
@@ -38,6 +46,7 @@ function checkHTML(html){
 const expectedFiles={
  'progress/extraction-view.json':Buffer.from(JSON.stringify(expected,null,2)+'\n'),
  'progress/recovery/status.json':Buffer.from(rawStatus),
+ 'progress/recovery/report.md':await readFile(new URL(pointer.report,recoveryRoot)),
  'progress/extraction-explorer.css':await readFile(new URL('public/progress/extraction-explorer.css',root)),
  'progress/extraction-explorer.js':await readFile(new URL('public/progress/extraction-explorer.js',root))
 };
@@ -56,7 +65,7 @@ if(live!==-1){
     assert.equal(response.status,200,'HTTP '+name);const bytes=Buffer.from(await response.arrayBuffer());assert.ok(bytes.equals(expectedFiles[name]),'Live bytes differ: '+name);return {file:name,sha256:sha(bytes),exact:true};
    }));
    const response=await fetch(new URL('progress/?verify='+Date.now(),url),{signal:AbortSignal.timeout(15000)});assert.equal(response.status,200);checkHTML(await response.text());
-   proof={mode:'live',checks:results,html:'lane/format/readiness markers verified'};lastError=null;break;
+   proof={mode:'live',checks:results,html:'lane/format/readiness and recorded issue markers verified'};lastError=null;break;
   }catch(error){lastError=error;if(attempt<7)await new Promise(resolve=>setTimeout(resolve,10000));}
  }
  if(lastError)throw lastError;
@@ -64,7 +73,7 @@ if(live!==-1){
  const dist=new URL('dist/',root);const checks=[];
  for(const name of fileNames){const bytes=await readFile(new URL(name,dist));assert.ok(bytes.equals(expectedFiles[name]),'Built bytes differ: '+name);checks.push({file:name,sha256:sha(bytes),exact:true});}
  checkHTML(await readFile(new URL('progress/index.html',dist),'utf8'));
- proof={mode:'build',checks,html:'lane/format/readiness markers verified'};
+ proof={mode:'build',checks,html:'lane/format/readiness and recorded issue markers verified'};
  await writeFile(new URL('progress/extraction-proof.json',dist),JSON.stringify({schema:'extraction-view-proof.v1',sourceStatusSha256:sha(rawStatus),sourceCheckpoints:expected.sourceCheckpoints,...proof},null,2)+'\n');
 }
 console.log(JSON.stringify({sourceCheckpoints:expected.sourceCheckpoints,...proof},null,2));

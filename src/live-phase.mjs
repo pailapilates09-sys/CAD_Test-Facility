@@ -1,23 +1,23 @@
 export const livePhase = {
-  "phase": "623",
-  "title": "Run 48 complete across four lanes at CP558",
+  "phase": "627",
+  "title": "Run 49 complete across four lanes at CP559",
   "status": "STOPPED_AT_VERIFIED_CHECKPOINT_MAIN_ACKED",
-  "completedAt": "2026-11-09T00:00:02.993Z",
-  "checkpoint": "MSCH-CORPUS-CP558",
+  "completedAt": "2026-11-09T05:13:57.292Z",
+  "checkpoint": "MSCH-CORPUS-CP559",
   "before": {
-    "rows": 7111,
-    "folders": 1159,
-    "files": 5952,
-    "pending": 564
-  },
-  "after": {
     "rows": 7114,
     "folders": 1159,
     "files": 5955,
     "pending": 563
   },
+  "after": {
+    "rows": 7120,
+    "folders": 1159,
+    "files": 5961,
+    "pending": 562
+  },
   "completedBatches": 1,
-  "scope": "Run 48 advanced all four lanes within 60 minutes. It catalogued hydropower files, verified MScS and Lok Sewa originals and extracted three AEC rates.",
+  "scope": "Run 49 catalogued six files, verified six PDFs and added five benchmark rates. The investigation recorded resolved and open issues.",
   "providerReadback": "PASS",
   "localRegistration": "VERIFIED",
   "mainAck": "ACKED",
@@ -26,48 +26,49 @@ export const livePhase = {
     "maximumWindowRespected": true,
     "checkpointsPerPhase": 1,
     "maxMinutesPerPhase": 20,
-    "sourceElapsedMinutes": 13.67435,
+    "sourceElapsedMinutes": 20.7337,
     "accountUsageRemaining": "Not observable"
   },
   "usageVisibility": "Account usage remaining is not observable here; fixed phase limits bound the work but do not predict exact credits.",
-  "localHighWater": 549,
-  "mainCursor": 549,
-  "nextBatch": "B559",
-  "nextTarget": "51",
-  "newRows": 3,
+  "localHighWater": 550,
+  "mainCursor": 550,
+  "nextBatch": "B560",
+  "nextTarget": "52",
+  "newRows": 6,
   "newFolders": 0,
-  "newFiles": 3,
-  "newKnownBytes": 4891,
-  "sessionStartedAt": "2026-11-08T23:43:49.681Z",
-  "sessionElapsedMinutes": 16.221866666666667,
-  "knownBytes": 66631863242,
+  "newFiles": 6,
+  "newKnownBytes": 18383,
+  "sessionStartedAt": "2026-11-09T04:50:42.356Z",
+  "sessionElapsedMinutes": 23.248933333333333,
+  "knownBytes": 66631881625,
   "sessionReport": {
-    "startedAt": "2026-11-08T23:43:49.681Z",
-    "sourceStoppedAt": "2026-11-08T23:57:30.142Z",
+    "startedAt": "2026-11-09T04:50:42.356Z",
+    "sourceStoppedAt": "2026-11-09T05:11:26.378Z",
     "milestones": 1,
     "advancedLanes": 4,
     "MSCS": {
-      "checkpoint": "AQ-CP102/B090",
-      "beforeHashed": 1101,
-      "afterHashed": 1104,
+      "checkpoint": "AQ-CP103/B091",
+      "beforeHashed": 1104,
+      "afterHashed": 1107,
       "addedHashes": 3,
-      "pending": 763,
+      "pending": 760,
       "physicalRecords": 2187,
-      "local": 22,
-      "mainCursor": 22,
-      "notice": "N19 ACKED",
-      "next": "B091",
+      "local": 23,
+      "mainCursor": 23,
+      "notice": "N20 ACKED",
+      "next": "B092",
       "status": "READY_BOUNDED_HASH_CONTINUATION",
       "canonicalPromotion": true,
       "pilot": {
         "verifiedFiles": 3,
-        "verifiedBytes": 7715129,
+        "verifiedBytes": 7945839,
         "distinctContentHashes": 3,
-        "canonicalAdmission": "AQ-CP102/B090",
+        "canonicalAdmission": "AQ-CP103/B091",
         "maxFiles": 3,
         "maxIndividualBytes": 5000000,
         "maxCumulativeBytes": 10000000
-      }
+      },
+      "nativeExportsPending": 10
     },
     "LSA": {
       "checkpoint": "CP80/B080",
@@ -76,49 +77,52 @@ export const livePhase = {
       "addedFolders": 0,
       "addedFiles": 0,
       "addedMetadataBytes": 0,
-      "local": 47,
-      "mainCursor": 47,
-      "notice": "N43 ACKED",
+      "local": 48,
+      "mainCursor": 48,
+      "notice": "N44 ACKED",
       "nativeGridRows": 1500,
       "next": "B081 baseline reconciliation",
       "status": "BASELINE_RECONCILIATION_REQUIRED",
       "pilot": {
         "verifiedFiles": 3,
-        "verifiedBytes": 563623,
+        "verifiedBytes": 629852,
         "distinctContentHashes": 3,
         "canonicalInventoryChanged": false
       },
       "newIntegrityProofs": 3,
-      "cumulativeIntegrityProofs": 48,
-      "cumulativeVerifiedBytes": 5796837,
-      "cumulativeDistinctHashes": 28,
-      "metadataFTS5": true
+      "cumulativeIntegrityProofs": 51,
+      "cumulativeVerifiedBytes": 6426689,
+      "cumulativeDistinctHashes": 31,
+      "metadataFTS5": true,
+      "historicalEvidenceFilesCompared": 62
     },
     "MSCH": {
-      "checkpoint": "CP558/B558",
-      "beforeRows": 7111,
-      "afterRows": 7114,
+      "checkpoint": "CP559/B559",
+      "beforeRows": 7114,
+      "afterRows": 7120,
       "addedFolders": 0,
-      "addedFiles": 3,
-      "addedMetadataBytes": 4891,
-      "pending": 563,
-      "local": 549,
-      "mainCursor": 549,
-      "notice": "N503 ACKED",
-      "next": "B559"
+      "addedFiles": 6,
+      "addedMetadataBytes": 18383,
+      "pending": 562,
+      "local": 550,
+      "mainCursor": 550,
+      "notice": "N504 ACKED",
+      "next": "B560"
     },
     "AEC": {
       "status": "NEW_RATES_VERIFIED",
-      "local": 27,
-      "mainCursor": 27,
-      "notice": "N16 ACKED",
-      "newRateWrites": 3,
+      "local": 28,
+      "mainCursor": 28,
+      "notice": "N17 ACKED",
+      "newRateWrites": 5,
       "unitCorrections": 0,
       "priorNapierUnitCorrectionRetained": true,
-      "checkpoint": "G076 PART15",
+      "checkpoint": "G076 PART16",
       "sourceAndSnapshotVerified": true,
       "aecControlCloseoutResumedWithoutRowReplay": true,
-      "next": "G076 PART16"
+      "next": "G076 PART17",
+      "recoveredDeferredRates": 2,
+      "priorVatFieldsCorrected": 995
     },
     "sourceContentExtraction": false,
     "sourceMutation": "NONE",
@@ -138,16 +142,16 @@ export const livePhase = {
       "pending": 0
     },
     "remaining": [
-      "MScH has 563 folders queued. Source parsing is pending.",
-      "MScS has 763 files awaiting SHA-256 verification.",
-      "Lok Sewa has two unresolved historical identities. The index remains provisional.",
-      "AEC Part 16 starts in the seeds section. The hive-with-colony rate stays deferred while its unit is blank."
+      "MScH has 562 known folders queued. Source parsing is pending.",
+      "MScS has 750 stored originals and ten native export proofs pending.",
+      "Lok Sewa has two unresolved historical identities. The index is provisional.",
+      "AEC Part 17 starts at RO-2485. Two units, a fertilizer schedule, exact effective day and transport need evidence."
     ],
     "canonicalSourceAdvanceLanes": 3,
     "workUnits": 4,
-    "closedAt": "2026-11-09T00:00:02.993Z"
+    "closedAt": "2026-11-09T05:13:57.292Z"
   },
-  "scannedFolders": 550,
+  "scannedFolders": 551,
   "phases": [
     {
       "phase": "01",
@@ -4536,6 +4540,34 @@ export const livePhase = {
       "lane": "MSCS / Local / Main",
       "work": "Run 48 AQ-CP102/B090 verified three original PDFs.",
       "stop": "Local/Main 22/22 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "624",
+      "lane": "MSCH / Local / Main",
+      "work": "Run 49 B559 51 added six file metadata records.",
+      "stop": "Local/Main 550/550 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "625",
+      "lane": "LSA / Local / Main",
+      "work": "Run 49 verified three PDF occurrences and compared 62 earlier evidence files.",
+      "stop": "Local/Main 48/48 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "626",
+      "lane": "AEC / Local / Main",
+      "work": "Run 49 Part 16 verified five rates and reconciled the VAT evidence.",
+      "stop": "Local/Main 28/28 ACKED",
+      "status": "Complete - stopped"
+    },
+    {
+      "phase": "627",
+      "lane": "MSCS / Local / Main",
+      "work": "Run 49 AQ-CP103/B091 verified three original PDFs.",
+      "stop": "Local/Main 23/23 ACKED",
       "status": "Complete - stopped"
     }
   ]
