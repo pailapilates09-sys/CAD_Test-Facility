@@ -60,9 +60,9 @@ function renderIssueRegister(status){
   const rows=issues.map(issue=>{
     const references=(issue.references??[]).filter(ref=>ref.url.startsWith('https://'))
       .map(ref=>'<a href="'+esc(ref.url)+'">'+esc(ref.label)+'</a>').join(' · ');
-    return '<tr data-extraction-issue="'+esc(issue.id)+'" data-issue-state="'+esc(issue.state)+'"><th scope="row">'+esc(issue.label)+'</th><td><strong>'+esc(issue.state)+'</strong></td><td>'+esc(issue.evidence)+(references?'<br><small>'+references+'</small>':'')+'</td><td>'+esc(issue.next)+'</td></tr>';
+    return '<li data-extraction-issue="'+esc(issue.id)+'" data-issue-state="'+esc(issue.state)+'"><details><summary><strong>'+esc(issue.label)+'</strong> · '+esc(issue.state)+'</summary><p>'+esc(issue.evidence)+'</p><p>'+esc(issue.next)+'</p>'+(references?'<p><small>'+references+'</small></p>':'')+'</details></li>';
   }).join('');
-  return '<section class="xe-run-work" id="extraction-issues" aria-labelledby="extraction-issues-title"><h3 id="extraction-issues-title">Issue register</h3><p>The evidence column shows why each issue was closed or remains open. <a href="./recovery/report.md">Read the investigation history and sources ↗</a></p><div class="table-wrap"><table><thead><tr><th scope="col">Issue</th><th scope="col">Status</th><th scope="col">Evidence</th><th scope="col">What would close it</th></tr></thead><tbody>'+rows+'</tbody></table></div></section>';
+  return '<section class="xe-run-work" id="extraction-issues" aria-labelledby="extraction-issues-title"><h3 id="extraction-issues-title">Issue register</h3><p>Expand an issue to see the evidence and what would close it. <a href="./recovery/report.md">Read the investigation history and sources ↗</a></p><ul>'+rows+'</ul></section>';
 }
 
 export function renderExtractionExplorer(status){
