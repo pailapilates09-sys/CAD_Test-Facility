@@ -49,7 +49,7 @@ The government supplier notice is titled as effective from 2080-04-01 BS. The Po
 | Issue | State | Evidence and closure requirement |
 | --- | --- | --- |
 | Layer and broiler manure units | **RESOLVED** | The standalone kg cells are visible on printed p34 / PDF p39. RO-2483 is NPR 9.27/kg and RO-2484 is NPR 7.21/kg. Both rates passed canonical readback. |
-| Kaski published-rate VAT basis | **RESOLVED** | Other Decisions item 6 on printed p75 / PDF p80 excludes VAT. Corrected 995 earlier published rows and 86 notes. The five new rates record the same VAT basis. |
+| Kaski published-rate VAT basis | **RESOLVED** | Other Decisions item 6 on printed p75 / PDF p80 excludes VAT. Corrected 995 earlier published rows and 86 notes. The five Run 49 rates and the three Run 50 rates record the same VAT basis. |
 | Kaski year columns and bee-catching bag | **RESOLVED** | Printed p35 / PDF p40 labels the three columns by fiscal year. NPR 500.00 is FY 2083/84 and NPR 509.30 belongs to the two earlier years. The current observation retains its source year and unit. |
 | Two historical Lok Sewa NEA identities | **UNRESOLVED** | The two blank mirror rows have no IDs and sit between APEX rows. Two older raw manifest revision reads returned HTTP 403. The historical NEA identities remain unresolved. Obtain an authorized folder-scoped Activity export or the Phase 1A identity inventory. |
 | Lok Sewa blank mirror rows | **RESOLVED** | Rows 345 and 355 have zero file IDs in the 16 manifest columns. Adjacent records are APEX entries. Keep the blanks outside source identity counts. |
@@ -79,4 +79,8 @@ The government supplier notice is titled as effective from 2080-04-01 BS. The Po
 | 2026-11-10 19:29:47 NPT | Recorded reciprocal acknowledgements at 551, 24, 49 and 29. |
 | 2026-11-10 19:30:30 NPT | Verified all five Local/Main POST snapshots. |
 
-The published issue register and this report are checked by the Pages build and deployment workflow. [Live issue register](https://pailapilates09-sys.github.io/CAD_Test-Facility/progress/#extraction-issues) · [Checkpoint version history](https://github.com/pailapilates09-sys/CAD_Test-Facility/commits/main/src/live-phase.mjs)
+The Pages workflow checks the issue register and report before upload and again after a successful deployment. [Live issue register](https://pailapilates09-sys.github.io/CAD_Test-Facility/progress/#extraction-issues) · [Checkpoint version history](https://github.com/pailapilates09-sys/CAD_Test-Facility/commits/main/src/live-phase.mjs)
+
+## Publication attempts before the fresh run
+
+The first build passed the checkpoint checks. The first deploy and its failed-job retry each reached the ten-minute Pages deployment timeout. The rerun of the build and its dependent deploy created a second artifact named `github-pages` in the same run. The deploy job stopped when it found both artifacts. This report records those attempts and starts a new run with a single Pages artifact. [Initial Actions run](https://github.com/pailapilates09-sys/CAD_Test-Facility/actions/runs/42827930699) · [Deploy Pages inputs](https://github.com/actions/deploy-pages) · [GitHub job and dependent reruns](https://docs.github.com/en/rest/actions/workflow-runs#re-run-a-job-from-a-workflow-run)
