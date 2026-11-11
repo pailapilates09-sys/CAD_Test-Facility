@@ -3,10 +3,10 @@ import {gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
-import {validateProject,componentDimensions,escapeHTML} from '../public/construction/models/basanti-residence/building-model.js';
+import {validateProject,componentDimensions} from '../public/construction/models/basanti-residence/building-model.js';
 import {buildConstructionModel,barSchedule,constructionSteps} from '../public/construction/models/basanti-residence/construction-model.js';
 import {detailSVG,drawingDocument,dimensionedPlanMarkup} from '../public/construction/models/basanti-residence/shop-drawings.js';
-import {renderRegister} from '../public/construction/models/basanti-residence/register-view.js';
+import {renderBuildingViewer} from './building-viewer.mjs';
 import {buildingSections,contents} from './building-navigation.mjs';
 import {buildWorkbench} from './building-workbench.mjs';
 import {buildBuildingIFC} from './building-ifc.mjs';
@@ -46,7 +46,6 @@ export async function buildBuildingProject(root,dist){
  const assets=versionBuildingAssets(inputs);
  for(const [name,text]of Object.entries(assets.scripts).filter(([name])=>assetNames.includes(name)))await writeFile(new URL(name,base),text);
  const page=new URL('index.html',base);let html=(await readFile(page,'utf8')).replace('src="./building.js"',`src="./building.js?v=${assets.revision}"`).replace('href="./building.css"',`href="./building.css?v=${assets.revision}"`).replace(/href="(\.\/data\/[^"?#]+)"/g,`href="$1?v=${assets.revision}"`);
- const rows=renderRegister(construction,project.components).html;
- html=html.replace('<!-- BASANTI_CONTENTS -->',contents(buildingSections)).replace('href="./project.css"',`href="./project.css?v=${assets.revision}"`).replace('<!-- BUILDING_ROWS -->',rows).replace('<!-- FLOOR_OPTIONS -->',project.levels.map(l=>`<option value="${l.id}">${escapeHTML(l.label)} · +${l.elevation_m} m</option>`).join('')).replace('<!-- BUILDING_DATA -->',JSON.stringify(project).replaceAll('<','\\u003c'));
- await writeFile(page,html);await buildWorkbench(dist,project,assets.revision);return {components:project.components.length,pages:21,source:manifest.sha256};
+ html=html.replace('<!-- BASANTI_CONTENTS -->',contents(buildingSections)).replace('href="./project.css"',`href="./project.css?v=${assets.revision}"`).replace('<!-- BUILDING_VIEWER -->',()=>renderBuildingViewer(project,construction)).replace('<!-- BUILDING_DATA -->',JSON.stringify(project).replaceAll('<','\\u003c'));
+ await writeFile(page,html);await buildWorkbench(dist,project,assets.revision);return {components:project.components.length,pages:21,source:manifest.sha256,revision:assets.revision};
 }

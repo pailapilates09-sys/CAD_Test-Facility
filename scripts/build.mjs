@@ -25,6 +25,7 @@ import {renderModelBoq} from './render-model-boq.mjs';
 import {reusableComponents} from './layout-designer-assets.mjs';
 import {CATALOG} from '../public/construction/models/layout-designer/design-model.js';
 import {buildBuildingProject} from './building-project.mjs';
+import {buildSaugatVirtualStore} from './saugat-virtual-store.mjs';
 import {buildBuildingHistory} from './building-history.mjs';
 import {buildBuildingV3} from './building-v3.mjs';
 import {buildBuildingV4} from './building-v4.mjs';
@@ -181,7 +182,8 @@ await writeFile(new URL('downloads/Column_Formwork_Specification.json',dist),JSO
 await writeFile(new URL('downloads/Open_Source_Review.json',dist),JSON.stringify(sources,null,2));
 await writeFile(new URL('.nojekyll',dist),'');
 await readFile(new URL('downloads/Column_Formwork_Inches_Only.pdf',dist));
-await buildBuildingProject(root,dist);
+const building=await buildBuildingProject(root,dist);
+await buildSaugatVirtualStore(dist,building.revision);
 await buildBuildingHistory(root,dist);
 await buildBuildingV3(root,dist);
 await buildBuildingV4(root,dist);
