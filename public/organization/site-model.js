@@ -1,3 +1,6 @@
+export const SAUGAT_STORE_PATH = 'construction/models/saugat-paneru-virtual-store/';
+const saugatStore = {id:'saugat',label:'Saugat Paneru Virtual Store',subtitle:'Reference layout',path:SAUGAT_STORE_PATH};
+
 export const GROUPS = [
   {id:'workspace',label:'Workspace',items:[
     {id:'home',label:'Overview',path:'',icon:'home'},
@@ -5,7 +8,8 @@ export const GROUPS = [
   ]},
   {id:'projects',label:'Projects',items:[
     {id:'paila',label:'Paila Pilates',note:'Studio interior',path:'projects/paila-pilates/',icon:'studio'},
-    {id:'basanti',label:'Basanti Poudel Baral',note:'Residence · project 14',path:'construction/models/basanti-residence/milestone.html',icon:'building'}
+    {id:'basanti',label:'Basanti Poudel Baral',note:'Residence · project 14',path:'construction/models/basanti-residence/milestone.html',icon:'building'},
+    {...saugatStore,note:saugatStore.subtitle,icon:'layout'}
   ]},
   {id:'tools',label:'Drawings & tools',items:[
     {id:'formwork',label:'Column formwork CAD',path:'cad/',icon:'ruler'},
@@ -25,6 +29,7 @@ export const GROUPS = [
 export const PROJECTS = {
   paila:{id:'paila',label:'Paila Pilates',subtitle:'Studio interior',path:'projects/paila-pilates/'},
   basanti:{id:'basanti',label:'Basanti Poudel Baral',subtitle:'Residence · project 14',path:'construction/models/basanti-residence/milestone.html'},
+  saugat:saugatStore,
   formwork:{id:'formwork',label:'Column formwork',subtitle:'Reusable CAD study',path:'cad/'},
   workspace:{id:'workspace',label:'Workspace',subtitle:'Shared tools and records',path:''}
 };
@@ -51,7 +56,7 @@ export function pageKind(path='') {
   if(p===normalisePath(BUILDERA_MARKET_PATH))return 'rate-comparison';
   if(p===normalisePath(BUILDERA_SELECTED_PATH))return 'cost-extract';
   if(/\/basanti-workbench(?:\/v\d+)?$/.test(p)||/\/pilates-astra-[^/]+\/v[\d.]+$/.test(p))return 'version';
-  if(p==='cad'||p==='construction'||/\/models\/(?:pilates-sketchup|layout-designer|basanti-residence)(?:\/interior\.html)?$/.test(p))return 'model';
+  if(p==='cad'||p==='construction'||p===normalisePath(SAUGAT_STORE_PATH)||/\/models\/(?:pilates-sketchup|layout-designer|basanti-residence)(?:\/interior\.html)?$/.test(p))return 'model';
   return 'reference';
 }
 
@@ -63,6 +68,7 @@ export function normalisePath(path='') {
 
 export function classifyPage(path='') {
   const p=normalisePath(path);
+  if(p===normalisePath(SAUGAT_STORE_PATH)||p.startsWith(SAUGAT_STORE_PATH))return {project:'saugat',category:'Reference plans & model',active:'saugat'};
   if(p==='projects/paila-pilates'||/construction\/(?:estimates\/pilates-|models\/pilates-sketchup)/.test(p)) {
     if(p.startsWith(normalisePath(BUILDERA_MARKET_PATH)))return {project:'paila',category:'BuildEra market rate comparison',active:'paila'};
     if(p===normalisePath(BUILDERA_SELECTED_PATH)||p.startsWith(BUILDERA_SELECTED_PATH))return {project:'paila',category:'BuildEra 2 selected works',active:'paila'};
