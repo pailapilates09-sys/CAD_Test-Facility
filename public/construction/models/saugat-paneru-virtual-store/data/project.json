@@ -1,12 +1,12 @@
 {
-  "schema": "saugat-virtual-store-1",
+  "schema": "saugat-virtual-store-2",
   "id": "saugat-paneru-virtual-store",
   "title": "Saugat Paneru Virtual Store",
   "layout_status": "concept",
   "catalog_status": "sample",
   "currency": "NPR",
   "grid": {"unit": "ft", "spacing_ft": 12, "columns": 4, "rows": 2},
-  "display": {"floor_to_floor_ft": 10, "pillar_width_ft": 0.75, "shelf_depth_ft": 1.75, "shelf_levels_ft": [0.85, 2.25, 3.8]},
+  "display": {"floor_to_floor_ft": 10, "pillar_width_ft": 0.75, "shelf_depth_ft": 1.75, "shelf_cell_height_ft": 1},
   "floors": [
     {
       "id": "ground", "label": "Ground floor",
@@ -26,19 +26,19 @@
     }
   ],
   "products": [
-    {"id":"daily-chappal","name":"Everyday Chappal","brand":"Demo Footwear","price_npr":280,"type":"footwear","room":"footwear","shelf":"rear","tier":2,"slot":0.35,"shape":"slippers","color":"#255b7c","size_ft":[1.15,1.05,0.25]},
+    {"id":"daily-chappal","name":"Everyday Chappal","brand":"Demo Footwear","price_npr":280,"type":"footwear","room":"footwear","shelf":"rear","tier":3,"slot":0.35,"shape":"slippers","color":"#255b7c","size_ft":[1.15,1.05,0.25]},
     {"id":"bath-chappal","name":"Bathroom Chappal","brand":"Demo Footwear","price_npr":340,"type":"footwear","room":"footwear","shelf":"left","tier":2,"slot":0.45,"shape":"slippers","color":"#bf654b","size_ft":[1.2,1.05,0.25]},
-    {"id":"food-box","name":"Snap-lid Food Box","brand":"Demo Kitchen","price_npr":230,"type":"plastic","room":"kitchen","shelf":"rear","tier":2,"slot":0.25,"shape":"box","color":"#59a896","size_ft":[1.35,0.88,0.65]},
-    {"id":"mixing-bowl","name":"Plastic Mixing Bowl","brand":"Demo Kitchen","price_npr":190,"type":"plastic","room":"kitchen","shelf":"rear","tier":2,"slot":0.70,"shape":"bowl","color":"#df7859","size_ft":[1.18,1.18,0.55]},
-    {"id":"water-jug","name":"Plastic Water Jug","brand":"Demo Kitchen","price_npr":360,"type":"plastic","room":"kitchen","shelf":"left","tier":2,"slot":0.38,"shape":"jug","color":"#4d93bb","size_ft":[1.12,0.78,1.05]},
+    {"id":"food-box","name":"Snap-lid Food Box","brand":"Demo Kitchen","price_npr":230,"type":"plastic","room":"kitchen","shelf":"rear","tier":4,"slot":0.25,"shape":"box","color":"#59a896","size_ft":[1.35,0.88,0.65]},
+    {"id":"mixing-bowl","name":"Plastic Mixing Bowl","brand":"Demo Kitchen","price_npr":190,"type":"plastic","room":"kitchen","shelf":"rear","tier":6,"slot":0.70,"shape":"bowl","color":"#df7859","size_ft":[1.18,1.18,0.55]},
+    {"id":"water-jug","name":"Plastic Water Jug","brand":"Demo Kitchen","price_npr":360,"type":"plastic","room":"kitchen","shelf":"left","tier":3,"slot":0.38,"shape":"jug","color":"#4d93bb","size_ft":[1.12,0.78,1.05]},
     {"id":"serving-tray","name":"Plastic Serving Tray","brand":"Demo Kitchen","price_npr":250,"type":"plastic","room":"kitchen","shelf":"right","tier":2,"slot":0.48,"shape":"tray","color":"#d09d47","size_ft":[1.36,1.17,0.2]},
-    {"id":"bucket","name":"Plastic Cleaning Bucket","brand":"Demo Home","price_npr":490,"type":"plastic","room":"cleaning","shelf":"rear","tier":2,"slot":0.31,"shape":"bucket","color":"#367aaf","size_ft":[1.23,1.23,1.13]},
-    {"id":"dustpan","name":"Plastic Dustpan","brand":"Demo Home","price_npr":175,"type":"plastic","room":"cleaning","shelf":"left","tier":2,"slot":0.48,"shape":"dustpan","color":"#dfad51","size_ft":[1.05,1.3,0.36]},
+    {"id":"bucket","name":"Plastic Cleaning Bucket","brand":"Demo Home","price_npr":490,"type":"plastic","room":"cleaning","shelf":"rear","tier":1,"slot":0.31,"shape":"bucket","color":"#367aaf","size_ft":[1.23,1.23,1.13]},
+    {"id":"dustpan","name":"Plastic Dustpan","brand":"Demo Home","price_npr":175,"type":"plastic","room":"cleaning","shelf":"left","tier":4,"slot":0.48,"shape":"dustpan","color":"#dfad51","size_ft":[1.05,1.3,0.36]},
     {"id":"waste-bin","name":"Plastic Waste Bin","brand":"Demo Home","price_npr":445,"type":"plastic","room":"cleaning","shelf":"right","tier":2,"slot":0.46,"shape":"bin","color":"#579271","size_ft":[1.13,1.12,1.15]},
     {"id":"storage-crate","name":"Lidded Storage Crate","brand":"Demo Home","price_npr":720,"type":"plastic","room":"storage","shelf":"rear","tier":2,"slot":0.36,"shape":"box","color":"#6c85b3","size_ft":[1.65,1.28,0.83]},
-    {"id":"laundry-basket","name":"Plastic Laundry Basket","brand":"Demo Home","price_npr":625,"type":"plastic","room":"storage","shelf":"left","tier":2,"slot":0.45,"shape":"basket","color":"#a783bf","size_ft":[1.33,1.42,1.1]},
-    {"id":"bath-mug","name":"Plastic Bath Mug","brand":"Demo Home","price_npr":135,"type":"plastic","room":"bath","shelf":"left","tier":2,"slot":0.48,"shape":"mug","color":"#57aeb1","size_ft":[0.9,0.66,0.7]},
-    {"id":"wash-basin","name":"Plastic Wash Basin","brand":"Demo Home","price_npr":350,"type":"plastic","room":"bath","shelf":"rear","tier":2,"slot":0.65,"shape":"bowl","color":"#da8365","size_ft":[1.55,1.44,0.5]},
-    {"id":"step-stool","name":"Plastic Step Stool","brand":"Demo Home","price_npr":580,"type":"plastic","room":"utility","shelf":"rear","tier":2,"slot":0.52,"shape":"stool","color":"#c48044","size_ft":[1.36,1.18,1.08]}
+    {"id":"laundry-basket","name":"Plastic Laundry Basket","brand":"Demo Home","price_npr":625,"type":"plastic","room":"storage","shelf":"left","tier":4,"slot":0.45,"shape":"basket","color":"#a783bf","size_ft":[1.33,1.42,1.1]},
+    {"id":"bath-mug","name":"Plastic Bath Mug","brand":"Demo Home","price_npr":135,"type":"plastic","room":"bath","shelf":"left","tier":3,"slot":0.48,"shape":"mug","color":"#57aeb1","size_ft":[0.9,0.66,0.7]},
+    {"id":"wash-basin","name":"Plastic Wash Basin","brand":"Demo Home","price_npr":350,"type":"plastic","room":"bath","shelf":"rear","tier":5,"slot":0.65,"shape":"bowl","color":"#da8365","size_ft":[1.55,1.44,0.5]},
+    {"id":"step-stool","name":"Plastic Step Stool","brand":"Demo Home","price_npr":580,"type":"plastic","room":"utility","shelf":"rear","tier":1,"slot":0.52,"shape":"stool","color":"#c48044","size_ft":[1.36,1.18,1.08]}
   ]
 }

@@ -56,3 +56,42 @@
 .store-source{margin:14px 0;font-size:.85rem;color:var(--muted);line-height:1.55}.store-source p{margin:7px 0}.store-source summary{cursor:pointer;font-weight:750;color:var(--ink)}
 @media(max-width:1050px){.store-views{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr)}.store-camera-tools{gap:5px}.store-scene{height:300px}}
 @media(max-width:760px){.store-intro{padding-top:12px}.store-views{grid-template-columns:minmax(0,1fr)}.store-scene{height:clamp(235px,58vw,340px)}.store-controls{gap:10px}.store-page button:not(.store-pin):not(.store-product){min-height:39px}.store-pin{width:27px;height:27px}}
+
+/* Give shelf browsing the large view; retain the plan and elevation as references below. */
+.store-level-label{display:grid;gap:5px;min-width:0}
+.store-level-label select{border:1px solid var(--store-edge);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;font-size:.82rem;padding:7px 9px;min-height:35px}
+#store-3d-shop{scroll-margin-top:82px}
+.store-stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,23%);min-width:0}
+.store-canvas-area{min-width:0}
+.store-scene{height:clamp(410px,53vh,600px)}
+.store-display-note{font-size:.81rem;margin:0;padding:9px 13px;line-height:1.4;background:var(--surface);color:var(--muted);border-top:1px solid var(--store-edge)}
+.store-stage-detail{min-width:0;background:var(--store-tint);border-left:1px solid var(--store-edge);padding:4px 0 14px}
+.store-stage-detail>button{margin:4px 14px 0;max-width:calc(100% - 28px)}
+.store-elevation-link{display:block;margin:12px 14px 2px;font-size:.8rem;font-weight:700}
+.store-full-dialog .store-elevation-link{display:none}
+#store-shelf-levels{scroll-margin-top:82px}
+.store-stage-detail .store-product-facts{gap:7px 15px}
+.store-camera-tools .store-expand{margin-left:auto}
+.store-scene[data-display=showcase] .store-pin{width:44px;height:44px;font-size:1rem}
+.store-secondary-views{margin-top:14px;grid-template-columns:minmax(0,1.16fr) minmax(0,1fr)}
+.store-elevation-grid{padding:10px 11px}
+.store-elevation{width:100%;border-collapse:separate;border-spacing:4px;table-layout:fixed;font-size:.76rem}
+.store-elevation caption{text-align:left;font-weight:750;padding:0 4px 4px;color:var(--ink)}
+.store-elevation :is(th,td){padding:4px 5px;line-height:1.2;overflow-wrap:anywhere}
+.store-elevation thead th{text-align:left;color:var(--muted)}
+.store-elevation thead th:first-child{width:24%}
+.store-elevation tbody th{padding:0}
+.store-elevation tbody td{border:1px solid var(--store-edge);border-radius:7px;background:var(--surface);vertical-align:middle;text-align:center}
+.store-elevation .store-level-button{width:100%;min-height:44px;text-align:left;display:grid;gap:3px}
+.store-level-button small{font-size:.68rem;color:var(--muted)}
+.store-elevation .store-level-active td{background:var(--store-tint);border-color:var(--store-green)}
+.store-elevation .store-elevation-item{display:flex;align-items:center;gap:4px;text-align:left;width:100%;min-width:0}
+.store-elevation-item span{font-weight:800;color:var(--store-green);flex:none}.store-elevation-item small{font-size:.66rem;line-height:1.2}
+.store-cell-empty{color:var(--muted)}
+.store-full-dialog{width:min(1480px,96vw);max-width:96vw;max-height:94vh;max-height:94dvh;border:1px solid var(--store-edge);padding:0;border-radius:14px;background:var(--surface);color:var(--ink);overflow:auto}
+.store-full-dialog::backdrop{background:#0d171bd9}
+.store-full-dialog .store-panel{border:0;border-radius:0}
+.store-full-dialog .store-scene{height:clamp(370px,67vh,760px)}
+@media(max-width:900px){.store-stage{grid-template-columns:minmax(0,1fr) minmax(172px,24%)}.store-scene{height:clamp(390px,52vh,520px)}}
+@media(max-width:760px){.store-stage,.store-secondary-views{grid-template-columns:minmax(0,1fr)}.store-stage-detail{border-left:0;border-top:1px solid var(--store-edge)}.store-scene{height:clamp(360px,55vh,470px)}.store-full-dialog .store-scene{height:clamp(330px,58vh,620px)}.store-elevation-grid{padding:8px 5px}.store-elevation :is(th,td){padding-inline:3px}}
+@media(max-width:420px){.store-elevation-item small{display:none}.store-elevation .store-elevation-item{justify-content:center}.store-camera-tools .store-expand{margin-left:0}.store-page .store-elevation .store-level-button{padding-inline:6px}}
