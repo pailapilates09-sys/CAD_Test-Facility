@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {buildStore,floorItems} from '../public/construction/models/saugat-paneru-virtual-store/store-model.js';
-import {storeScene} from '../public/construction/models/saugat-paneru-virtual-store/store-geometry.js';
-import {renderPlan,storeFaces} from '../public/construction/models/saugat-paneru-virtual-store/store-view.js';
+import {storeScene,showcaseScene} from '../public/construction/models/saugat-paneru-virtual-store/store-geometry.js';
+import {renderPlan,renderShelfLevels,storeFaces} from '../public/construction/models/saugat-paneru-virtual-store/store-view.js';
 import {pointInTriangle} from '../public/construction/models/layout-designer/design-view3d.js';
 const base=new URL('../public/construction/models/saugat-paneru-virtual-store/',import.meta.url);
 const raw=JSON.parse(await readFile(new URL('data/project.json',base),'utf8'));
@@ -38,17 +38,36 @@ test('catalog has distinct Chappal and plastic products tied to the right plan, 
  }
 });
 
-test('each product has a visible selectable surface in the 3D cutaway for its room',()=>{
+test('each storey has ten one-foot bands and every product falls inside its assigned height',()=>{
+ assert.deepEqual(store.levels.map(l=>l.elevation),[0,10]);
+ assert.deepEqual(store.bands.map(b=>[b.low,b.high]),Array.from({length:10},(_,i)=>[i,i+1]));
+ for(const item of store.items){
+  assert.ok(item.z>=item.band.low && item.z+item.h<=item.band.high);
+  assert.equal(floorItems(store,item.floor,item.room,item.band.level).find(p=>p.id===item.id),item);
+ }
+ const elevation=renderShelfLevels(store,'kitchen','mixing-bowl',7);
+ assert.equal((elevation.match(/data-shelf-band=/g)??[]).length,10);
+ assert.match(elevation,/data-shelf-band="7"[^>]*class="store-level-active"/);
+ assert.match(elevation,/data-elevation-item="mixing-bowl"/);
+});
+
+test('spaced shelves keep each product visible and selectable without moving its saved location',()=>{
  for(const room of store.roomMap.values()){
-  const scene=storeScene(store,room.floor,room.id);
-  const faces=storeFaces(scene.meshes,{yaw:284,pitch:43}).reverse();
+  const scene=showcaseScene(store,room.floor,room.id);
+  const faces=storeFaces(scene.meshes,scene.camera).reverse();
   for(const p of scene.products){
+   const original=store.productMap.get(p.id);
+   assert.ok(p.w>original.w && p.d>original.d && p.h>original.h);
+   assert.equal(p.band,original.band);
    assert.ok(faces.filter(f=>f.itemId===p.id).some(f=>{
     const point=[0,1].map(i=>f.points.reduce((n,v)=>n+v[i],0)/3);
     return faces.find(other=>pointInTriangle(point,other.points))?.itemId===p.id;
    }),'No surface visible for '+p.id);
   }
  }
+ const filtered=showcaseScene(store,'ground','kitchen',7);
+ assert.deepEqual(filtered.products.map(p=>p.id),['mixing-bowl']);
+ assert.equal(showcaseScene(store,'ground','kitchen',10).products.length,0);
 });
 
 test('a catalog edit that puts a product outside its shelf is caught before publishing',()=>{

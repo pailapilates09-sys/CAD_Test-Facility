@@ -1,5 +1,5 @@
 // Display geometry in feet. The 2D plan and the 3D scene use the same shelf and product locations.
-import {viewScope} from './store-model.js';
+import {floorItems,viewScope} from './store-model.js';
 
 const faces = [0,2,1,0,3,2,4,5,6,4,6,7,0,1,5,0,5,4,1,2,6,1,6,5,2,3,7,2,7,6,3,0,4,3,4,7];
 const rgb = color => color.match(/[0-9a-f]{2}/gi).map(h=>parseInt(h,16));
@@ -125,12 +125,37 @@ export function storeScene(store,floorId,roomId) {
   if(r.x>start)push('wall-partition-'+r.id,wall,r.x,depth*.72,0,.19,depth*.56,2.7);
   for(const s of r.shelves){
    const id='shelf-'+r.id+'-'+s.id, x=s.x+s.w/2,y=s.y+s.d/2;
-   for(const z of store.tiers)push(id,board,x,y,z-.12,s.w,s.d,.12);
-   for(const a of [s.x+.07,s.x+s.w-.07])for(const b of [s.y+.07,s.y+s.d-.07])push(id,posts,a,b,0,.14,.14,store.tiers.at(-1)+.08);
-   if(s.along==='x')push(id,trim,x,s.y+s.d-.09,store.tiers[0],s.w,.13,store.tiers.at(-1)-store.tiers[0]);
+   for(const band of store.bands)push(id,board,x,y,band.low,s.w,s.d,store.board);
+   push(id,board,x,y,store.storeyHeight-store.board,s.w,s.d,store.board);
+   for(const a of [s.x+.07,s.x+s.w-.07])for(const b of [s.y+.07,s.y+s.d-.07])push(id,posts,a,b,0,.14,.14,store.storeyHeight);
   }
  }
  for(const p of pillars)push('pillar-'+p.id,trim,p.x,p.y,0,store.pillarWidth,store.pillarWidth,wallHeight+.22);
  for(const p of products)add.push(...productMeshes(p));
  return {...scope,meshes:add};
+}
+
+// Separate the stocked cubbies for browsing. Their display coordinates and
+// product magnification are intentionally independent of the floor geometry.
+export function showcaseScene(store,floor,room,level=0,focus=''){
+ const items=floorItems(store,floor,room,level).filter(p=>!focus||p.id===focus);
+ const width=3.75,depth=2.4,height=2.6,gapX=1.22,gapZ=.97;
+ const cells=items.length?items:[null];
+ const meshes=[],products=[],columns=Math.min(cells.length,2),rows=Math.ceil(cells.length/columns);
+ for(const [i,p] of cells.entries()){
+  const x=(i%columns)*(width+gapX),y=0,z=(rows-1-Math.floor(i/columns))*(height+gapZ);
+  const id=p?'cell-'+p.id:'empty-cell';
+  const base=p?rgb(p.roomColor):[70,117,104],wood=mix([210,179,133],base,.16),back=mix([235,232,219],base,.17);
+  meshes.push(box(id,wood,x,y,z,width,depth,.15),
+   box(id,back,x,depth/2-.06,z+.15,width,.12,height-.24),
+   box(id,wood,x-width/2+.06,y,z+.15,.12,depth,height-.24),
+   box(id,wood,x+width/2-.06,y,z+.15,.12,depth,height-.24),
+   box(id,wood,x,y,z+height-.1,width,depth,.1));
+  if(!p)continue;
+  const scale=Math.min(width*.72/p.w,depth*.72/p.d,height*.68/p.h);
+  const view={...p,x,y:y-.17,z:z+.155,w:p.w*scale,d:p.d*scale,h:p.h*scale,
+   pin:[x-width*.32,-depth/2-.1,z+height-.38]};
+  products.push(view);meshes.push(...productMeshes(view));
+ }
+ return {meshes,products,display:'showcase',camera:{yaw:279,pitch:16,zoom:1}};
 }

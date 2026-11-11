@@ -44,10 +44,22 @@ export function renderProduct(product) {
  if(!product)return '<p>Select a product to see its name, brand and price.</p>';
  return `<p class="store-product-place"><span class="store-item-number" style="--item-color:${e(product.roomColor)}">${product.number}</span>${e(product.roomName)} · ${e(shelfLabels[product.shelf])}</p>
   <h3>${e(product.name)}</h3><dl class="store-product-facts"><div><dt>Brand</dt><dd>${e(product.brand)}</dd></div><div><dt>Sample price</dt><dd class="store-detail-price">${priceLabel(product.price_npr)}</dd></div></dl>
-  <p class="store-location">${e(product.floorLabel)} · Shelf level ${product.tier+1}</p>`;
+  <p class="store-location">${e(product.floorLabel)} · Level ${product.band.level} · ${product.band.low}–${product.band.high} ft above this floor</p>`;
 }
 
-const defaultCamera=()=>({yaw:284,pitch:43,zoom:1});
+export function renderShelfLevels(store,roomId,selected='',level=0){
+ const room=store.roomMap.get(roomId);
+ const items=store.items.filter(p=>p.room===roomId);
+ const shelves=Object.entries(shelfLabels);
+ return `<table class="store-elevation"><caption>${e(room.name)} · ${e(room.floorLabel)}</caption>
+ <thead><tr><th scope="col">Height</th>${shelves.map(([,label])=>`<th scope="col">${e(label)}</th>`).join('')}</tr></thead>
+ <tbody>${[...store.bands].reverse().map(b=>`<tr data-shelf-band="${b.level}"${b.level===level?' class="store-level-active"':''}>
+ <th scope="row"><button type="button" class="store-level-button" data-store-level="${b.level}" aria-label="Show level ${b.level}, ${b.low} to ${b.high} feet" aria-pressed="${b.level===level}"><strong>L${b.level}</strong><small>${b.low}–${b.high} ft</small></button></th>
+ ${shelves.map(([s])=>{const found=items.filter(p=>p.shelf===s&&p.band.level===b.level);return `<td>${found.length?found.map(p=>`<button type="button" class="store-elevation-item" data-elevation-item="${p.id}" aria-label="Inspect ${e(p.name)}" aria-pressed="${p.id===selected}"><span>${p.number}</span><small>${e(p.name)}</small></button>`).join(''):'<span class="store-cell-empty" aria-label="Empty">—</span>'}</td>`;}).join('')}
+ </tr>`).join('')}</tbody></table>`;
+}
+
+const defaultCamera=scene=>({...(scene?.camera??{yaw:284,pitch:43,zoom:1})});
 const clamp=(v,lo,hi)=>Math.min(hi,Math.max(lo,v));
 const colorCSS=rgb=>'rgb('+rgb.map(c=>Math.round(c)).join(',')+')';
 export const storeFaces=(meshes,camera)=>projectedFaces(meshes,camera).filter(({points:[a,b,c]})=>
@@ -57,7 +69,7 @@ export function createStore3D(canvas,pins,onSelect) {
  const ctx=canvas.getContext('2d');
  if(!ctx)return null;
  let scene, selected='', camera=defaultCamera(), frame=0, faces=[], map, drag;
- const pinButtons=new Map(), productIds=new Set();
+ const pinButtons=new Map(), pickable=new Map();
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(draw);};
  const project=point=>[point[0]*map.scale+map.ox,point[1]*map.scale+map.oy];
 
@@ -72,7 +84,8 @@ export function createStore3D(canvas,pins,onSelect) {
   let loX=Infinity,loY=Infinity,hiX=-Infinity,hiY=-Infinity;
   for(const f of faces)for(const [x,y] of f.points){loX=Math.min(loX,x);loY=Math.min(loY,y);hiX=Math.max(hiX,x);hiY=Math.max(hiY,y);}
   const scale=Math.min((width-40)/Math.max(hiX-loX,.01),(height-52)/Math.max(hiY-loY,.01))*camera.zoom;
-  map={scale,ox:width/2-(loX+hiX)*scale/2,oy:height/2-(loY+hiY)*scale/2+8};
+  const topFit=scene.display==='showcase'&&camera.zoom===1?Math.max(0,(height-(hiY-loY)*scale)/2-25):0;
+  map={scale,ox:width/2-(loX+hiX)*scale/2,oy:height/2-(loY+hiY)*scale/2+8-topFit};
   for(const f of faces){
    const points=f.points.map(project);ctx.beginPath();ctx.moveTo(...points[0]);ctx.lineTo(...points[1]);ctx.lineTo(...points[2]);ctx.closePath();
    ctx.fillStyle=colorCSS(f.itemId===selected?f.rgb.map((v,i)=>v*.45+[255,182,60][i]*.55):f.rgb);
@@ -80,9 +93,10 @@ export function createStore3D(canvas,pins,onSelect) {
   }
   const occupied=[];
   for(const item of scene.products){
-   const button=pinButtons.get(item.id),[x,y]=project(projectPoint([item.x,item.y,item.z+item.h+.30],camera));
-   let bx=clamp(x,17,width-17),by=clamp(y-8,17,height-17);
-   for(const [ox,oy] of occupied)if(Math.abs(bx-ox)<22&&Math.abs(by-oy)<22)by=clamp(oy-23,17,height-17);
+   const button=pinButtons.get(item.id),large=scene.display==='showcase',edge=large?25:17;
+   const [x,y]=project(projectPoint(item.pin??[item.x,item.y,item.z+item.h+.30],camera));
+   let bx=clamp(x,edge,width-edge),by=clamp(y-(large?0:8),edge,height-edge);
+   for(const [ox,oy] of occupied)if(Math.abs(bx-ox)<edge*1.5&&Math.abs(by-oy)<edge*1.5)by=clamp(oy-edge*1.6,edge,height-edge);
    occupied.push([bx,by]);
    button.style.left=bx+'px';button.style.top=by+'px';button.style.visibility='';
   }
@@ -91,7 +105,7 @@ export function createStore3D(canvas,pins,onSelect) {
  function hit(e){
   if(!map)return null;
   const r=canvas.getBoundingClientRect(),point=[(e.clientX-r.left-map.ox)/map.scale,(e.clientY-r.top-map.oy)/map.scale];
-  for(let i=faces.length-1;i>=0;i--)if(pointInTriangle(point,faces[i].points))return productIds.has(faces[i].itemId)?faces[i].itemId:null;
+  for(let i=faces.length-1;i>=0;i--)if(pointInTriangle(point,faces[i].points))return pickable.get(faces[i].itemId)??null;
   return null;
  }
  canvas.addEventListener('pointerdown',e=>{
@@ -123,19 +137,22 @@ export function createStore3D(canvas,pins,onSelect) {
  }
  new ResizeObserver(schedule).observe(canvas);
  return {
-  setScene(next,id){
-   scene=next;map=null;pinButtons.clear();productIds.clear();
+  setScene(next,id,{reset=false}={}){
+   scene=next;map=null;pinButtons.clear();pickable.clear();
+   if(reset)camera=defaultCamera(scene);
+   canvas.parentElement.dataset.display=scene.display??'floor';
    const group=document.createDocumentFragment();
    for(const item of scene.products){
     const b=document.createElement('button');b.type='button';b.className='store-pin';b.textContent=item.number;
     b.dataset.pinItem=item.id;b.style.setProperty('--item-color',item.roomColor);b.style.visibility='hidden';
     b.title=item.name;b.setAttribute('aria-label','Inspect '+item.name);
     b.addEventListener('click',()=>onSelect(item.id));group.append(b);
-    pinButtons.set(item.id,b);productIds.add(item.id);
+    pinButtons.set(item.id,b);pickable.set(item.id,item.id);
+    if(scene.display==='showcase')pickable.set('cell-'+item.id,item.id);
    }
    pins.replaceChildren(group);select(id);
   },
   select,turn(delta){camera.yaw+=delta;schedule();},
-  zoom(value){camera.zoom=value;schedule();},fit(){camera=defaultCamera();schedule();}
+  zoom(value){camera.zoom=value;schedule();},fit(){camera=defaultCamera(scene);schedule();}
  };
 }
