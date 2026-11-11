@@ -1,5 +1,5 @@
 export const SAUGAT_STORE_PATH = 'construction/models/saugat-paneru-virtual-store/';
-const saugatStore = {id:'saugat',label:'Saugat Paneru Virtual Store',subtitle:'Reference layout',path:SAUGAT_STORE_PATH};
+const saugatStore = {id:'saugat',label:'Saugat Paneru Virtual Store',subtitle:'Two-floor virtual shop',path:SAUGAT_STORE_PATH};
 
 export const GROUPS = [
   {id:'workspace',label:'Workspace',items:[
@@ -68,7 +68,7 @@ export function normalisePath(path='') {
 
 export function classifyPage(path='') {
   const p=normalisePath(path);
-  if(p===normalisePath(SAUGAT_STORE_PATH)||p.startsWith(SAUGAT_STORE_PATH))return {project:'saugat',category:'Reference plans & model',active:'saugat'};
+  if(p===normalisePath(SAUGAT_STORE_PATH)||p.startsWith(SAUGAT_STORE_PATH))return {project:'saugat',category:'Store plans & catalog',active:'saugat'};
   if(p==='projects/paila-pilates'||/construction\/(?:estimates\/pilates-|models\/pilates-sketchup)/.test(p)) {
     if(p.startsWith(normalisePath(BUILDERA_MARKET_PATH)))return {project:'paila',category:'BuildEra market rate comparison',active:'paila'};
     if(p===normalisePath(BUILDERA_SELECTED_PATH)||p.startsWith(BUILDERA_SELECTED_PATH))return {project:'paila',category:'BuildEra 2 selected works',active:'paila'};
