@@ -1,7 +1,7 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {SAUGAT_STORE_PATH,PROJECTS} from '../public/organization/site-model.js';
-import {buildStore,floorItems,escapeHTML as e} from '../public/construction/models/saugat-paneru-virtual-store/store-model.js';
+import {buildStore,floorItems,escapeHTML as e,shelfLabels} from '../public/construction/models/saugat-paneru-virtual-store/store-model.js';
 import {renderPlan,renderCatalog,renderProduct,renderShelfLevels} from '../public/construction/models/saugat-paneru-virtual-store/store-view.js';
 
 export async function buildSaugatVirtualStore(dist){
@@ -14,48 +14,52 @@ export async function buildSaugatVirtualStore(dist){
  for(const file of files.filter(f=>f.endsWith('.js')&&!f.startsWith('../'))){
   await writeFile(new URL(file,base),input[file].replace(/(from\s*['"])(\.\.?\/[^'"]+\.js)(['"])/g,`$1$2?v=${revision}$3`));
  }
- const floor=store.levels[0],room=floor.rooms[0],items=floorItems(store,floor.id,room.id),active=items[0],title=e(store.title);
+ const floor=store.levels[0],room=floor.rooms[0],items=floorItems(store,floor.id,room.id,0,'rear'),active=items[0],facing=store.home.get(active.id),title=e(store.title);
  const buttons=(list,key,value)=>list.map(r=>`<button type="button" data-store-${key}="${r.id}" aria-pressed="${r.id===value}">${e(r.name??r.label)}</button>`).join('');
  const html=`<!doctype html>
 <html lang="en"><head>
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <title>${title} | CAD Test Facility</title>
- <meta name="description" content="Browse spacious 3D shelves, select individual products and see ten one-foot shelf levels in the Saugat Paneru Virtual Store.">
+ <meta name="description" content="Browse stocked racks from the front, explore footwear, umbrellas and household goods, and find each product on the plan and shelf elevation.">
  <link rel="icon" href="../../../favicon.svg"><link rel="stylesheet" href="../../../workspace.css"><link rel="stylesheet" href="./store.css?v=${revision}">
 </head><body>
 <main id="main" class="container store-page">
  <header class="store-intro">
-  <p class="store-eyebrow">Virtual shop · Shelf browser</p><h1>${title}</h1>
-  <p>Choose a room and tap a product. Use the shelf heights to find it from floor to ceiling.</p>
+  <p class="store-eyebrow">Virtual shop · Stocked racks</p><h1>${title}</h1>
+  <p>Choose a room and category, then tap a product on the shelf. The front view shows the rack straight on.</p>
   <div class="store-tags"><span class="store-tag">${store.levels.length} storeys · ${store.storeyHeight} ft each</span><span class="store-tag">${store.bands.length} shelf levels · ${store.cellHeight} ft each</span><span class="store-tag store-sample">${store.items.length} sample products</span></div>
  </header>
  <div id="store-workspace" data-floor="${floor.id}" data-view="shelves">
   <div class="store-controls" aria-label="Store navigation">
    <div><span class="store-eyebrow" id="store-floor-label">Choose a floor</span><div class="store-button-row" role="group" aria-labelledby="store-floor-label">${buttons(store.levels,'floor',floor.id)}</div></div>
    <div><span class="store-eyebrow" id="store-room-label">Choose a room</span><div class="store-button-row" id="store-rooms" role="group" aria-labelledby="store-room-label">${buttons([{id:'all',name:'All rooms'},...floor.rooms],'room',room.id)}</div></div>
-   <label class="store-level-label"><span class="store-eyebrow">Shelf height</span><select id="store-level-select"><option value="0">All heights</option>${store.bands.map(b=>`<option value="${b.level}">L${b.level} · ${b.low}–${b.high} ft</option>`).join('')}</select></label>
+   <div id="store-rack-controls" class="store-rack-controls">
+    <label class="store-level-label"><span class="store-eyebrow">Category rack</span><select id="store-rack-select">${Object.entries(room.rack_labels).map(([id,label])=>`<option value="${id}">${e(label)} · ${shelfLabels[id]}</option>`).join('')}</select></label>
+    <label class="store-level-label"><span class="store-eyebrow">Shelf height</span><select id="store-level-select"><option value="0">All heights</option>${store.bands.map(b=>`<option value="${b.level}">L${b.level} · ${b.low}–${b.high} ft</option>`).join('')}</select></label></div>
   </div>
   <div id="store-3d-slot">
-   <section class="store-panel" id="store-3d-shop">
-    <div class="store-panel-head"><div><h2><span>01</span> 3D shop</h2><p id="store-model-scope">${e(floor.label)} · ${e(room.name)}</p></div>
-     <div class="store-button-row store-mode-buttons" role="group" aria-label="3D view">${buttons([{id:'shelves',name:'Spaced shelves'},{id:'floor',name:'Floor overview'}],'mode','shelves')}</div>
+   <section class="store-panel" id="store-3d-shop" data-camera="front">
+    <div class="store-panel-head"><div><h2><span>01</span> 3D shop</h2><p id="store-model-scope">${e(floor.label)} · ${e(room.name)} · ${e(room.rack_labels.rear)}</p></div>
+     <div class="store-button-row store-mode-buttons" role="group" aria-label="3D view">${buttons([{id:'shelves',name:'Stocked shelves'},{id:'floor',name:'Floor overview'}],'mode','shelves')}</div>
     </div>
     <div class="store-camera-tools" aria-label="3D camera controls">
-     <button type="button" id="store-left" aria-label="Rotate left">↶ Left</button><button type="button" id="store-right" aria-label="Rotate right">Right ↷</button><button type="button" id="store-fit">Fit view</button>
+     <div class="store-button-row" role="group" aria-label="Camera angle">${buttons([{id:'front',name:'Front'},{id:'angled',name:'Angled'}],'camera','front')}</div>
+     <div class="store-button-row store-angle-only"><button type="button" id="store-left" aria-label="Rotate left">↶ Left</button><button type="button" id="store-right" aria-label="Rotate right">Right ↷</button></div>
+     <button type="button" id="store-fit">Fit view</button>
      <label>Zoom <input id="store-zoom" type="range" min="1" max="2.5" step=".1" value="1"></label>
      <button type="button" class="store-expand" id="store-expand" aria-controls="store-full-dialog" aria-expanded="false">Expand 3D</button>
     </div>
     <div class="store-stage">
      <div class="store-canvas-area">
-      <div class="store-scene" data-display="showcase">
+      <div class="store-scene-viewport"><div class="store-scene" data-display="rack" data-camera="front">
        <canvas id="store-canvas" tabindex="0" aria-label="3D shop. Select a shelf cell or product, or use arrow keys to rotate."></canvas>
-       <div id="store-pins" class="store-pins" aria-label="Products on shelves"></div>
-      </div>
-      <p class="store-display-note" id="store-display-note" role="status">Display view: products are enlarged and the stocked cells are spaced apart.</p>
+       <div id="store-targets" class="store-targets" aria-label="Select products on this rack"></div>
+      </div></div>
+      <p class="store-display-note" id="store-display-note" role="status">Tap an item on the rack. Repeated display stock fills each level of the sample assortment.</p>
       <p id="store-3d-unavailable" class="store-panel-note" hidden>The 3D viewer is unavailable here. Choose a product from the shelf elevation or list.</p>
      </div>
      <div class="store-stage-detail">
-      <div id="store-detail" class="store-detail" role="region" aria-label="Selected product" aria-live="polite" aria-atomic="true" data-selected-item="${active?.id??''}">${renderProduct(active)}</div>
+      <div id="store-detail" class="store-detail" role="region" aria-label="Selected product" aria-live="polite" aria-atomic="true" data-selected-item="${active?.id??''}">${renderProduct(active,facing)}</div>
       <button type="button" id="store-item-focus" aria-pressed="false">Enlarge this item</button>
       <a class="store-elevation-link" href="#store-shelf-levels">See all ${store.bands.length} shelf levels ↓</a>
      </div>
@@ -63,27 +67,28 @@ export async function buildSaugatVirtualStore(dist){
    </section>
   </div>
   <section id="store-products" class="store-catalog">
-   <div class="store-catalog-head"><h2>Browse products</h2><span id="store-catalog-count" aria-live="polite">${items.length} products</span><span>Sample brands and prices in NPR</span></div>
+   <div class="store-catalog-head"><h2>Browse products</h2><span id="store-catalog-count" aria-live="polite">${items.length} products</span><span>Sample assortment · prices shown where supplied in the demo</span></div>
    <div class="store-catalog-items" id="store-catalog-items">${renderCatalog(items,active?.id)}</div>
   </section>
   <div class="store-views store-secondary-views">
    <section class="store-panel" id="store-shelf-levels">
     <div class="store-panel-head"><div><h2><span>02</span> Shelf elevation</h2><p>Front view · tap a height to browse that level, or tap a product.</p></div></div>
-    <div id="store-elevation-grid" class="store-elevation-grid">${renderShelfLevels(store,room.id,active?.id)}</div>
-    <p class="store-panel-note">Each row represents ${store.cellHeight} ft of height. Empty cells are shown with a dash.</p>
+    <div id="store-elevation-grid" class="store-elevation-grid">${renderShelfLevels(store,room.id,facing.id,0,'rear')}</div>
+    <p class="store-panel-note">Each row represents ${store.cellHeight} ft of height. Tap a product to find the same position in 3D and on the plan.</p>
    </section>
    <section class="store-panel" id="store-floor-plan">
     <div class="store-panel-head"><div><h2><span>03</span> 2D floor plan</h2><p>${floor.rooms.length} rooms along one open front aisle</p></div></div>
-    <div class="store-plan-wrap" id="store-plan-wrap">${renderPlan(store,floor,room.id,active?.id)}</div>
-    <div class="store-plan-legend"><span><i class="store-key" aria-hidden="true"></i>Pillar</span><span><i class="store-key store-key-shelf" aria-hidden="true"></i>Corner shelf</span><span><i class="store-key store-key-product" aria-hidden="true"></i>Product</span></div>
+    <div class="store-plan-wrap" id="store-plan-wrap">${renderPlan(store,floor,room.id,facing,'rear')}</div>
+    <div class="store-plan-legend"><span><i class="store-key" aria-hidden="true"></i>Pillar</span><span><i class="store-key store-key-shelf" aria-hidden="true"></i>Category rack</span><span><i class="store-key store-key-product" aria-hidden="true"></i>Selected product</span></div>
     <p class="store-panel-note">Pillar centres remain ${store.step} ft apart in both directions.</p>
    </section>
   </div>
  </div>
  <dialog id="store-full-dialog" class="store-full-dialog" aria-label="Expanded 3D shop"></dialog>
  <details class="store-source" id="store-layout-basis"><summary>Layout basis and model data</summary>
-  <p>The store keeps its two ${store.storeyHeight} ft storeys and original pillar grid. The shelf elevation shows actual height bands for this concept. The separated 3D cells and enlarged items are for browsing.</p>
-  <p>The items, brands and prices are examples. <a href="./data/project.json" download>Download the layout and catalog JSON</a>.</p>
+  <p>The store keeps its two ${store.storeyHeight} ft storeys and original pillar grid. The shelf elevation shows actual height bands for this concept. The straight-on rack view faces each shelf from its aisle.</p>
+  <p><strong>${e(raw.catalog_basis.store)} reference:</strong> the supplied storefront and review describe ${e(raw.catalog_basis.documented_groups.join(', ').toLowerCase())}. The specific styles and repeated display stock are examples. Current inventory, brands and prices were not supplied.</p>
+  <p><a href="${e(raw.catalog_basis.merchant_directory)}">eSewa merchant directory</a> · ${raw.catalog_basis.examples.map(s=>`<a href="${e(s.url)}">${e(s.label)}</a>`).join(' · ')} · <a href="./data/project.json" download>Layout and catalog JSON</a></p>
  </details>
  <noscript><p>Enable JavaScript to switch floors, rotate the 3D shop and select products.</p></noscript>
 </main>
