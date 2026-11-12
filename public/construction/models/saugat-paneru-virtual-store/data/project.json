@@ -1,44 +1,1449 @@
 {
-  "schema": "saugat-virtual-store-2",
+  "schema": "saugat-virtual-store-3",
   "id": "saugat-paneru-virtual-store",
   "title": "Saugat Paneru Virtual Store",
   "layout_status": "concept",
   "catalog_status": "sample",
   "currency": "NPR",
-  "grid": {"unit": "ft", "spacing_ft": 12, "columns": 4, "rows": 2},
-  "display": {"floor_to_floor_ft": 10, "pillar_width_ft": 0.75, "shelf_depth_ft": 1.75, "shelf_cell_height_ft": 1},
+  "grid": {
+    "unit": "ft",
+    "spacing_ft": 12,
+    "columns": 4,
+    "rows": 2
+  },
+  "display": {
+    "floor_to_floor_ft": 10,
+    "pillar_width_ft": 0.75,
+    "shelf_depth_ft": 1.75,
+    "shelf_cell_height_ft": 1,
+    "facings_per_level": 3
+  },
   "floors": [
     {
-      "id": "ground", "label": "Ground floor",
+      "id": "ground",
+      "label": "Ground floor",
       "rooms": [
-        {"id": "footwear", "name": "Chappal", "color": "#9b5633"},
-        {"id": "kitchen", "name": "Kitchen plastics", "color": "#20766b"},
-        {"id": "cleaning", "name": "Cleaning supplies", "color": "#3d6c99"}
+        {
+          "id": "footwear",
+          "name": "Footwear",
+          "color": "#9b5633",
+          "rack_labels": {
+            "rear": "Chappal & slides",
+            "left": "Sandals & slippers",
+            "right": "Shoes"
+          }
+        },
+        {
+          "id": "kitchen",
+          "name": "Kitchen plastics",
+          "color": "#20766b",
+          "rack_labels": {
+            "rear": "Food storage & prep",
+            "left": "Drinkware",
+            "right": "Serving ware"
+          }
+        },
+        {
+          "id": "cleaning",
+          "name": "Cleaning supplies",
+          "color": "#3d6c99",
+          "rack_labels": {
+            "rear": "Buckets & basins",
+            "left": "Sweep & collect",
+            "right": "Waste bins"
+          }
+        }
       ]
     },
     {
-      "id": "first", "label": "First floor",
+      "id": "first",
+      "label": "First floor",
       "rooms": [
-        {"id": "storage", "name": "Storage & laundry", "color": "#5f5793"},
-        {"id": "bath", "name": "Bath plastics", "color": "#1d7788"},
-        {"id": "utility", "name": "Home utility", "color": "#8a6727"}
+        {
+          "id": "storage",
+          "name": "Storage & laundry",
+          "color": "#5f5793",
+          "rack_labels": {
+            "rear": "Storage boxes",
+            "left": "Laundry baskets",
+            "right": "Organizers"
+          }
+        },
+        {
+          "id": "bath",
+          "name": "Bath plastics",
+          "color": "#1d7788",
+          "rack_labels": {
+            "rear": "Wash basins",
+            "left": "Bath mugs",
+            "right": "Bath accessories"
+          }
+        },
+        {
+          "id": "utility",
+          "name": "Umbrellas & utility",
+          "color": "#8a6727",
+          "rack_labels": {
+            "rear": "Utility plastics",
+            "left": "Folding umbrellas",
+            "right": "Straight umbrellas"
+          }
+        }
       ]
     }
   ],
   "products": [
-    {"id":"daily-chappal","name":"Everyday Chappal","brand":"Demo Footwear","price_npr":280,"type":"footwear","room":"footwear","shelf":"rear","tier":3,"slot":0.35,"shape":"slippers","color":"#255b7c","size_ft":[1.15,1.05,0.25]},
-    {"id":"bath-chappal","name":"Bathroom Chappal","brand":"Demo Footwear","price_npr":340,"type":"footwear","room":"footwear","shelf":"left","tier":2,"slot":0.45,"shape":"slippers","color":"#bf654b","size_ft":[1.2,1.05,0.25]},
-    {"id":"food-box","name":"Snap-lid Food Box","brand":"Demo Kitchen","price_npr":230,"type":"plastic","room":"kitchen","shelf":"rear","tier":4,"slot":0.25,"shape":"box","color":"#59a896","size_ft":[1.35,0.88,0.65]},
-    {"id":"mixing-bowl","name":"Plastic Mixing Bowl","brand":"Demo Kitchen","price_npr":190,"type":"plastic","room":"kitchen","shelf":"rear","tier":6,"slot":0.70,"shape":"bowl","color":"#df7859","size_ft":[1.18,1.18,0.55]},
-    {"id":"water-jug","name":"Plastic Water Jug","brand":"Demo Kitchen","price_npr":360,"type":"plastic","room":"kitchen","shelf":"left","tier":3,"slot":0.38,"shape":"jug","color":"#4d93bb","size_ft":[1.12,0.78,1.05]},
-    {"id":"serving-tray","name":"Plastic Serving Tray","brand":"Demo Kitchen","price_npr":250,"type":"plastic","room":"kitchen","shelf":"right","tier":2,"slot":0.48,"shape":"tray","color":"#d09d47","size_ft":[1.36,1.17,0.2]},
-    {"id":"bucket","name":"Plastic Cleaning Bucket","brand":"Demo Home","price_npr":490,"type":"plastic","room":"cleaning","shelf":"rear","tier":1,"slot":0.31,"shape":"bucket","color":"#367aaf","size_ft":[1.23,1.23,1.13]},
-    {"id":"dustpan","name":"Plastic Dustpan","brand":"Demo Home","price_npr":175,"type":"plastic","room":"cleaning","shelf":"left","tier":4,"slot":0.48,"shape":"dustpan","color":"#dfad51","size_ft":[1.05,1.3,0.36]},
-    {"id":"waste-bin","name":"Plastic Waste Bin","brand":"Demo Home","price_npr":445,"type":"plastic","room":"cleaning","shelf":"right","tier":2,"slot":0.46,"shape":"bin","color":"#579271","size_ft":[1.13,1.12,1.15]},
-    {"id":"storage-crate","name":"Lidded Storage Crate","brand":"Demo Home","price_npr":720,"type":"plastic","room":"storage","shelf":"rear","tier":2,"slot":0.36,"shape":"box","color":"#6c85b3","size_ft":[1.65,1.28,0.83]},
-    {"id":"laundry-basket","name":"Plastic Laundry Basket","brand":"Demo Home","price_npr":625,"type":"plastic","room":"storage","shelf":"left","tier":4,"slot":0.45,"shape":"basket","color":"#a783bf","size_ft":[1.33,1.42,1.1]},
-    {"id":"bath-mug","name":"Plastic Bath Mug","brand":"Demo Home","price_npr":135,"type":"plastic","room":"bath","shelf":"left","tier":3,"slot":0.48,"shape":"mug","color":"#57aeb1","size_ft":[0.9,0.66,0.7]},
-    {"id":"wash-basin","name":"Plastic Wash Basin","brand":"Demo Home","price_npr":350,"type":"plastic","room":"bath","shelf":"rear","tier":5,"slot":0.65,"shape":"bowl","color":"#da8365","size_ft":[1.55,1.44,0.5]},
-    {"id":"step-stool","name":"Plastic Step Stool","brand":"Demo Home","price_npr":580,"type":"plastic","room":"utility","shelf":"rear","tier":1,"slot":0.52,"shape":"stool","color":"#c48044","size_ft":[1.36,1.18,1.08]}
-  ]
+    {
+      "id": "daily-chappal",
+      "name": "Everyday Chappal",
+      "brand": "Demo Footwear",
+      "price_npr": 280,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "rear",
+      "tier": 3,
+      "slot": 0.35,
+      "shape": "slippers",
+      "color": "#255b7c",
+      "size_ft": [
+        1.15,
+        1.05,
+        0.25
+      ]
+    },
+    {
+      "id": "bath-chappal",
+      "name": "Bathroom Chappal",
+      "brand": "Demo Footwear",
+      "price_npr": 340,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "left",
+      "tier": 2,
+      "slot": 0.45,
+      "shape": "slippers",
+      "color": "#bf654b",
+      "size_ft": [
+        1.2,
+        1.05,
+        0.25
+      ]
+    },
+    {
+      "id": "food-box",
+      "name": "Snap-lid Food Box",
+      "brand": "Demo Kitchen",
+      "price_npr": 230,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "rear",
+      "tier": 4,
+      "slot": 0.25,
+      "shape": "box",
+      "color": "#59a896",
+      "size_ft": [
+        1.35,
+        0.88,
+        0.65
+      ]
+    },
+    {
+      "id": "mixing-bowl",
+      "name": "Plastic Mixing Bowl",
+      "brand": "Demo Kitchen",
+      "price_npr": 190,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "rear",
+      "tier": 6,
+      "slot": 0.7,
+      "shape": "bowl",
+      "color": "#df7859",
+      "size_ft": [
+        1.18,
+        1.18,
+        0.55
+      ]
+    },
+    {
+      "id": "water-jug",
+      "name": "Plastic Water Jug",
+      "brand": "Demo Kitchen",
+      "price_npr": 360,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "left",
+      "tier": 3,
+      "slot": 0.38,
+      "shape": "jug",
+      "color": "#4d93bb",
+      "size_ft": [
+        1.12,
+        0.78,
+        1.05
+      ]
+    },
+    {
+      "id": "serving-tray",
+      "name": "Plastic Serving Tray",
+      "brand": "Demo Kitchen",
+      "price_npr": 250,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "right",
+      "tier": 2,
+      "slot": 0.48,
+      "shape": "tray",
+      "color": "#d09d47",
+      "size_ft": [
+        1.36,
+        1.17,
+        0.2
+      ]
+    },
+    {
+      "id": "bucket",
+      "name": "Plastic Cleaning Bucket",
+      "brand": "Demo Home",
+      "price_npr": 490,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "rear",
+      "tier": 1,
+      "slot": 0.31,
+      "shape": "bucket",
+      "color": "#367aaf",
+      "size_ft": [
+        1.23,
+        1.23,
+        1.13
+      ]
+    },
+    {
+      "id": "dustpan",
+      "name": "Plastic Dustpan",
+      "brand": "Demo Home",
+      "price_npr": 175,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "left",
+      "tier": 4,
+      "slot": 0.48,
+      "shape": "dustpan",
+      "color": "#dfad51",
+      "size_ft": [
+        1.05,
+        1.3,
+        0.36
+      ]
+    },
+    {
+      "id": "waste-bin",
+      "name": "Plastic Waste Bin",
+      "brand": "Demo Home",
+      "price_npr": 445,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "right",
+      "tier": 2,
+      "slot": 0.46,
+      "shape": "bin",
+      "color": "#579271",
+      "size_ft": [
+        1.13,
+        1.12,
+        1.15
+      ]
+    },
+    {
+      "id": "storage-crate",
+      "name": "Lidded Storage Crate",
+      "brand": "Demo Home",
+      "price_npr": 720,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "rear",
+      "tier": 2,
+      "slot": 0.36,
+      "shape": "box",
+      "color": "#6c85b3",
+      "size_ft": [
+        1.65,
+        1.28,
+        0.83
+      ]
+    },
+    {
+      "id": "laundry-basket",
+      "name": "Plastic Laundry Basket",
+      "brand": "Demo Home",
+      "price_npr": 625,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "left",
+      "tier": 4,
+      "slot": 0.45,
+      "shape": "basket",
+      "color": "#a783bf",
+      "size_ft": [
+        1.33,
+        1.42,
+        1.1
+      ]
+    },
+    {
+      "id": "bath-mug",
+      "name": "Plastic Bath Mug",
+      "brand": "Demo Home",
+      "price_npr": 135,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "left",
+      "tier": 3,
+      "slot": 0.48,
+      "shape": "mug",
+      "color": "#57aeb1",
+      "size_ft": [
+        0.9,
+        0.66,
+        0.7
+      ]
+    },
+    {
+      "id": "wash-basin",
+      "name": "Plastic Wash Basin",
+      "brand": "Demo Home",
+      "price_npr": 350,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "rear",
+      "tier": 5,
+      "slot": 0.65,
+      "shape": "bowl",
+      "color": "#da8365",
+      "size_ft": [
+        1.55,
+        1.44,
+        0.5
+      ]
+    },
+    {
+      "id": "step-stool",
+      "name": "Plastic Step Stool",
+      "brand": "Demo Home",
+      "price_npr": 580,
+      "type": "plastic",
+      "room": "utility",
+      "shelf": "rear",
+      "tier": 1,
+      "slot": 0.52,
+      "shape": "stool",
+      "color": "#c48044",
+      "size_ft": [
+        1.36,
+        1.18,
+        1.08
+      ]
+    },
+    {
+      "id": "rubber-flip-flops",
+      "name": "Rubber flip-flops",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "rear",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "slippers",
+      "color": "#287f85",
+      "size_ft": [
+        1.15,
+        1.02,
+        0.27
+      ]
+    },
+    {
+      "id": "soft-sole-slide",
+      "name": "Soft-sole slides",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "rear",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "slides",
+      "color": "#765f9a",
+      "size_ft": [
+        1.25,
+        0.72,
+        0.41
+      ]
+    },
+    {
+      "id": "kids-chappal",
+      "name": "Children’s chappal",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "rear",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "slippers",
+      "color": "#cf5752",
+      "size_ft": [
+        1.15,
+        1.02,
+        0.27
+      ]
+    },
+    {
+      "id": "cushioned-slide",
+      "name": "Cushioned slides",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "rear",
+      "tier": 8,
+      "slot": 0.5,
+      "shape": "slides",
+      "color": "#416982",
+      "size_ft": [
+        1.25,
+        0.72,
+        0.41
+      ]
+    },
+    {
+      "id": "double-strap-sandals",
+      "name": "Double-strap sandals",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "left",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "sandals",
+      "color": "#9c6948",
+      "size_ft": [
+        1.22,
+        0.78,
+        0.48
+      ]
+    },
+    {
+      "id": "back-strap-sandals",
+      "name": "Back-strap sandals",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "left",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "sandals",
+      "color": "#38674c",
+      "size_ft": [
+        1.22,
+        0.78,
+        0.48
+      ]
+    },
+    {
+      "id": "indoor-slippers",
+      "name": "Indoor slippers",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "left",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "slides",
+      "color": "#be745d",
+      "size_ft": [
+        1.25,
+        0.72,
+        0.41
+      ]
+    },
+    {
+      "id": "black-school-shoes",
+      "name": "Black school shoes",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "right",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "school-shoe",
+      "color": "#374353",
+      "size_ft": [
+        1.25,
+        0.62,
+        0.57
+      ]
+    },
+    {
+      "id": "white-canvas-shoes",
+      "name": "White canvas shoes",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "right",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "sneaker",
+      "color": "#e4e4d7",
+      "size_ft": [
+        1.22,
+        0.64,
+        0.62
+      ]
+    },
+    {
+      "id": "casual-sneakers",
+      "name": "Casual sneakers",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "right",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "sneaker",
+      "color": "#457799",
+      "size_ft": [
+        1.22,
+        0.64,
+        0.62
+      ]
+    },
+    {
+      "id": "walking-shoes",
+      "name": "Walking shoes",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "right",
+      "tier": 8,
+      "slot": 0.5,
+      "shape": "sneaker",
+      "color": "#a66348",
+      "size_ft": [
+        1.22,
+        0.64,
+        0.62
+      ]
+    },
+    {
+      "id": "slip-on-loafers",
+      "name": "Slip-on loafers",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "right",
+      "tier": 4,
+      "slot": 0.5,
+      "shape": "school-shoe",
+      "color": "#855f40",
+      "size_ft": [
+        1.25,
+        0.62,
+        0.57
+      ]
+    },
+    {
+      "id": "ankle-shoes",
+      "name": "Ankle shoes",
+      "brand": null,
+      "price_npr": null,
+      "type": "footwear",
+      "room": "footwear",
+      "shelf": "right",
+      "tier": 9,
+      "slot": 0.5,
+      "shape": "boot",
+      "color": "#55684b",
+      "size_ft": [
+        1.25,
+        0.64,
+        0.86
+      ]
+    },
+    {
+      "id": "stacking-food-tubs",
+      "name": "Stackable food tubs",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "rear",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "box",
+      "color": "#7e91bf",
+      "size_ft": [
+        1.38,
+        0.9,
+        0.66
+      ]
+    },
+    {
+      "id": "snack-container",
+      "name": "Snack container",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "rear",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "box",
+      "color": "#d4a745",
+      "size_ft": [
+        1.38,
+        0.9,
+        0.66
+      ]
+    },
+    {
+      "id": "prep-bowl",
+      "name": "Deep prep bowl",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "rear",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "bowl",
+      "color": "#a2699e",
+      "size_ft": [
+        1.13,
+        1.08,
+        0.57
+      ]
+    },
+    {
+      "id": "drinking-tumbler",
+      "name": "Drinking tumbler",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "left",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "mug",
+      "color": "#72a15b",
+      "size_ft": [
+        0.85,
+        0.65,
+        0.72
+      ]
+    },
+    {
+      "id": "water-bottle",
+      "name": "Reusable water bottle",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "left",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "bottle",
+      "color": "#347d9e",
+      "size_ft": [
+        0.48,
+        0.48,
+        0.88
+      ]
+    },
+    {
+      "id": "small-pitcher",
+      "name": "Small water pitcher",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "left",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "jug",
+      "color": "#a470aa",
+      "size_ft": [
+        1.03,
+        0.75,
+        0.9
+      ]
+    },
+    {
+      "id": "divided-tray",
+      "name": "Divided serving tray",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "right",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "tray",
+      "color": "#7c8fc3",
+      "size_ft": [
+        1.3,
+        1,
+        0.23
+      ]
+    },
+    {
+      "id": "serving-bowl",
+      "name": "Serving bowl",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "right",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "bowl",
+      "color": "#bd6d4c",
+      "size_ft": [
+        1.13,
+        1.08,
+        0.57
+      ]
+    },
+    {
+      "id": "snack-tray",
+      "name": "Snack tray",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "kitchen",
+      "shelf": "right",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "tray",
+      "color": "#5b9e7c",
+      "size_ft": [
+        1.3,
+        1,
+        0.23
+      ]
+    },
+    {
+      "id": "utility-bucket",
+      "name": "Utility bucket",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "rear",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "bucket",
+      "color": "#5b9e7c",
+      "size_ft": [
+        1.17,
+        1.1,
+        0.94
+      ]
+    },
+    {
+      "id": "mop-bucket",
+      "name": "Mop bucket",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "rear",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "bucket",
+      "color": "#b46d46",
+      "size_ft": [
+        1.17,
+        1.1,
+        0.94
+      ]
+    },
+    {
+      "id": "rinse-basin",
+      "name": "Rinse basin",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "rear",
+      "tier": 8,
+      "slot": 0.5,
+      "shape": "bowl",
+      "color": "#7184be",
+      "size_ft": [
+        1.13,
+        1.08,
+        0.57
+      ]
+    },
+    {
+      "id": "hand-brush",
+      "name": "Hand scrub brush",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "left",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "brush",
+      "color": "#6f8ab7",
+      "size_ft": [
+        1.08,
+        0.53,
+        0.42
+      ]
+    },
+    {
+      "id": "long-grip-dustpan",
+      "name": "Long-grip dustpan",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "left",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "dustpan",
+      "color": "#71a06a",
+      "size_ft": [
+        1.05,
+        1.13,
+        0.38
+      ]
+    },
+    {
+      "id": "compact-dustpan",
+      "name": "Compact dustpan",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "left",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "dustpan",
+      "color": "#bf7465",
+      "size_ft": [
+        1.05,
+        1.13,
+        0.38
+      ]
+    },
+    {
+      "id": "swing-lid-bin",
+      "name": "Swing-lid bin",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "right",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "bin",
+      "color": "#6881ac",
+      "size_ft": [
+        1.05,
+        0.97,
+        0.95
+      ]
+    },
+    {
+      "id": "desk-waste-bin",
+      "name": "Desk waste bin",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "right",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "bin",
+      "color": "#b78c59",
+      "size_ft": [
+        1.05,
+        0.97,
+        0.95
+      ]
+    },
+    {
+      "id": "small-lidded-bin",
+      "name": "Small lidded bin",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "cleaning",
+      "shelf": "right",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "bin",
+      "color": "#947da5",
+      "size_ft": [
+        1.05,
+        0.97,
+        0.95
+      ]
+    },
+    {
+      "id": "shoe-storage-box",
+      "name": "Shoe storage box",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "rear",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "box",
+      "color": "#b681ad",
+      "size_ft": [
+        1.38,
+        0.9,
+        0.66
+      ]
+    },
+    {
+      "id": "stacking-crate",
+      "name": "Stackable crate",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "rear",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "box",
+      "color": "#678f88",
+      "size_ft": [
+        1.38,
+        0.9,
+        0.66
+      ]
+    },
+    {
+      "id": "small-storage-box",
+      "name": "Small storage box",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "rear",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "box",
+      "color": "#ce9a5b",
+      "size_ft": [
+        1.38,
+        0.9,
+        0.66
+      ]
+    },
+    {
+      "id": "oval-laundry-basket",
+      "name": "Oval laundry basket",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "left",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "basket",
+      "color": "#608fa7",
+      "size_ft": [
+        1.28,
+        1.06,
+        0.88
+      ]
+    },
+    {
+      "id": "round-laundry-basket",
+      "name": "Round laundry basket",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "left",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "basket",
+      "color": "#d2964f",
+      "size_ft": [
+        1.28,
+        1.06,
+        0.88
+      ]
+    },
+    {
+      "id": "carry-basket",
+      "name": "Carry basket",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "left",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "basket",
+      "color": "#7f9c61",
+      "size_ft": [
+        1.28,
+        1.06,
+        0.88
+      ]
+    },
+    {
+      "id": "drawer-tray",
+      "name": "Drawer organizer tray",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "right",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "tray",
+      "color": "#7d93bd",
+      "size_ft": [
+        1.3,
+        1,
+        0.23
+      ]
+    },
+    {
+      "id": "open-organizer",
+      "name": "Open organizer basket",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "right",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "basket",
+      "color": "#bc7589",
+      "size_ft": [
+        1.28,
+        1.06,
+        0.88
+      ]
+    },
+    {
+      "id": "small-parts-case",
+      "name": "Small parts case",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "storage",
+      "shelf": "right",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "box",
+      "color": "#68a291",
+      "size_ft": [
+        1.38,
+        0.9,
+        0.66
+      ]
+    },
+    {
+      "id": "round-wash-basin",
+      "name": "Round wash basin",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "rear",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "bowl",
+      "color": "#65a1af",
+      "size_ft": [
+        1.13,
+        1.08,
+        0.57
+      ]
+    },
+    {
+      "id": "deep-wash-basin",
+      "name": "Deep wash basin",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "rear",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "bowl",
+      "color": "#8e7aac",
+      "size_ft": [
+        1.13,
+        1.08,
+        0.57
+      ]
+    },
+    {
+      "id": "compact-wash-basin",
+      "name": "Compact wash basin",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "rear",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "bowl",
+      "color": "#83a669",
+      "size_ft": [
+        1.13,
+        1.08,
+        0.57
+      ]
+    },
+    {
+      "id": "bath-dipper",
+      "name": "Bath dipper",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "left",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "mug",
+      "color": "#8d8ec0",
+      "size_ft": [
+        0.85,
+        0.65,
+        0.72
+      ]
+    },
+    {
+      "id": "wide-handle-mug",
+      "name": "Wide-handle bath mug",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "left",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "mug",
+      "color": "#b76e5f",
+      "size_ft": [
+        0.85,
+        0.65,
+        0.72
+      ]
+    },
+    {
+      "id": "small-bath-mug",
+      "name": "Small bath mug",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "left",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "mug",
+      "color": "#7a9c67",
+      "size_ft": [
+        0.85,
+        0.65,
+        0.72
+      ]
+    },
+    {
+      "id": "soap-dish",
+      "name": "Soap dish",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "right",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "tray",
+      "color": "#78a1af",
+      "size_ft": [
+        1.3,
+        1,
+        0.23
+      ]
+    },
+    {
+      "id": "toothbrush-holder",
+      "name": "Toothbrush holder",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "right",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "mug",
+      "color": "#d1a759",
+      "size_ft": [
+        0.85,
+        0.65,
+        0.72
+      ]
+    },
+    {
+      "id": "bathroom-caddy",
+      "name": "Bathroom caddy",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "bath",
+      "shelf": "right",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "basket",
+      "color": "#8d80b9",
+      "size_ft": [
+        1.28,
+        1.06,
+        0.88
+      ]
+    },
+    {
+      "id": "low-plastic-stool",
+      "name": "Low plastic stool",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "utility",
+      "shelf": "rear",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "stool",
+      "color": "#69929e",
+      "size_ft": [
+        1.24,
+        1.02,
+        0.92
+      ]
+    },
+    {
+      "id": "carry-utility-box",
+      "name": "Carry utility box",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "utility",
+      "shelf": "rear",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "box",
+      "color": "#c7914c",
+      "size_ft": [
+        1.38,
+        0.9,
+        0.66
+      ]
+    },
+    {
+      "id": "plastic-planter",
+      "name": "Plastic planter",
+      "brand": null,
+      "price_npr": null,
+      "type": "plastic",
+      "room": "utility",
+      "shelf": "rear",
+      "tier": 8,
+      "slot": 0.5,
+      "shape": "bowl",
+      "color": "#789465",
+      "size_ft": [
+        1.13,
+        1.08,
+        0.57
+      ]
+    },
+    {
+      "id": "compact-folding-umbrella",
+      "name": "Compact folding umbrella",
+      "brand": null,
+      "price_npr": null,
+      "type": "umbrella",
+      "room": "utility",
+      "shelf": "left",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "folded-umbrella",
+      "color": "#335c86",
+      "size_ft": [
+        0.55,
+        0.44,
+        0.82
+      ]
+    },
+    {
+      "id": "three-fold-umbrella",
+      "name": "Three-fold umbrella",
+      "brand": null,
+      "price_npr": null,
+      "type": "umbrella",
+      "room": "utility",
+      "shelf": "left",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "open-umbrella",
+      "color": "#4b8e7f",
+      "size_ft": [
+        1.45,
+        0.78,
+        0.93
+      ]
+    },
+    {
+      "id": "pocket-umbrella",
+      "name": "Pocket umbrella",
+      "brand": null,
+      "price_npr": null,
+      "type": "umbrella",
+      "room": "utility",
+      "shelf": "left",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "folded-umbrella",
+      "color": "#c98496",
+      "size_ft": [
+        0.55,
+        0.44,
+        0.82
+      ]
+    },
+    {
+      "id": "bright-folding-umbrella",
+      "name": "Bright folding umbrella",
+      "brand": null,
+      "price_npr": null,
+      "type": "umbrella",
+      "room": "utility",
+      "shelf": "left",
+      "tier": 8,
+      "slot": 0.5,
+      "shape": "open-umbrella",
+      "color": "#ba5967",
+      "size_ft": [
+        1.45,
+        0.78,
+        0.93
+      ]
+    },
+    {
+      "id": "classic-stick-umbrella",
+      "name": "Classic stick umbrella",
+      "brand": null,
+      "price_npr": null,
+      "type": "umbrella",
+      "room": "utility",
+      "shelf": "right",
+      "tier": 0,
+      "slot": 0.5,
+      "shape": "stick-umbrella",
+      "color": "#4e586c",
+      "size_ft": [
+        0.6,
+        0.5,
+        1
+      ]
+    },
+    {
+      "id": "curved-handle-umbrella",
+      "name": "Curved-handle umbrella",
+      "brand": null,
+      "price_npr": null,
+      "type": "umbrella",
+      "room": "utility",
+      "shelf": "right",
+      "tier": 7,
+      "slot": 0.5,
+      "shape": "open-umbrella",
+      "color": "#476ca4",
+      "size_ft": [
+        1.45,
+        0.78,
+        0.93
+      ]
+    },
+    {
+      "id": "childrens-umbrella",
+      "name": "Children’s umbrella",
+      "brand": null,
+      "price_npr": null,
+      "type": "umbrella",
+      "room": "utility",
+      "shelf": "right",
+      "tier": 1,
+      "slot": 0.5,
+      "shape": "open-umbrella",
+      "color": "#d39b38",
+      "size_ft": [
+        1.45,
+        0.78,
+        0.93
+      ]
+    },
+    {
+      "id": "large-rain-umbrella",
+      "name": "Large rain umbrella",
+      "brand": null,
+      "price_npr": null,
+      "type": "umbrella",
+      "room": "utility",
+      "shelf": "right",
+      "tier": 8,
+      "slot": 0.5,
+      "shape": "stick-umbrella",
+      "color": "#667e53",
+      "size_ft": [
+        0.6,
+        0.5,
+        1
+      ]
+    }
+  ],
+  "catalog_basis": {
+    "store": "New Laxmi Stores, Pokhara",
+    "documented_groups": [
+      "Shoes",
+      "Slippers and chappal",
+      "Umbrellas"
+    ],
+    "evidence": "Storefront and review supplied by the user. Styles are examples; live inventory, brands and prices were not provided.",
+    "merchant_directory": "https://blog.esewa.com.np/storage/uploads/VU9o7uyTR5LCiUbr1HJN5wuZwBzm9UCJS51gx99x.pdf",
+    "examples": [
+      {
+        "label": "Nepal footwear examples",
+        "url": "https://www.afnobazar.com.np/brands/goldstar"
+      },
+      {
+        "label": "Nepal compact umbrella example",
+        "url": "https://www.daraz.com.np/products/5-fold-compact-umbrella-with-cover-uv-protection-from-sun-rain-i131327708-s1052637056.html"
+      }
+    ]
+  }
 }

@@ -1,23 +1,22 @@
 import {projectPoint,projectedFaces,pointInTriangle} from '../layout-designer/design-view3d.js';
-import {escapeHTML as e,priceLabel,shelfLabels} from './store-model.js';
+import {escapeHTML as e,priceLabel,rackKey,shelfLabels} from './store-model.js';
+import {productMeshes} from './store-geometry.js';
 
-export function renderPlan(store,floor,roomId='all',selected='') {
+export function renderPlan(store,floor,roomId='all',selected=null,rack='all'){
  const scale=13,left=48,top=55,w=store.length*scale,h=store.depth*scale;
  const width=left+w+57,height=top+h+57,px=x=>left+x*scale,py=y=>top+(store.depth-y)*scale;
  const roomMarkup=floor.rooms.map(r=>{
-  const roomX=px(r.x), active=roomId==='all'||roomId===r.id, name=r.name.split(' ');
+  const roomX=px(r.x),active=roomId==='all'||roomId===r.id,name=r.name.split(' ');
   const lines=name.length>1?[name.slice(0,-1).join(' '),name.at(-1)]:name;
   return `<g class="store-plan-room${active?'':' is-muted'}"><rect x="${roomX+2}" y="${top+2}" width="${store.step*scale-4}" height="${h*.61}" fill="${e(r.color)}" opacity=".12"/>
-   ${r.shelves.map(s=>`<rect class="store-plan-shelf" x="${px(s.x)}" y="${py(s.y+s.d)}" width="${s.w*scale}" height="${s.d*scale}" rx="2"/>`).join('')}
+   ${r.shelves.map(s=>{const chosen=selected?.room===r.id&&selected.shelf===s.id||roomId===r.id&&rack===s.id;return `<g role="button" tabindex="0" data-plan-rack="${r.id}/${s.id}" aria-label="Show ${e(r.rack_labels[s.id])} in ${e(r.name)}" aria-pressed="${chosen}"><title>${e(r.rack_labels[s.id])}</title><rect class="store-plan-shelf${chosen?' is-selected':''}" x="${px(s.x)}" y="${py(s.y+s.d)}" width="${s.w*scale}" height="${s.d*scale}" rx="2"/></g>`;}).join('')}
    <text class="store-plan-room-name" x="${roomX+store.step*scale/2}" y="${top+h*.33}">${lines.map((l,i)=>`<tspan x="${roomX+store.step*scale/2}" dy="${i?14:0}">${e(l)}</tspan>`).join('')}</text></g>`;
  }).join('');
  const columns=Array.from({length:store.grid.columns},(_,i)=>i*store.step);
  const dim=(x1,y1,x2,y2)=>`<line class="store-plan-dimension" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
  const boundaries=columns.map(x=>dim(px(x),top-27,px(x),top-12)).join('');
  const bays=columns.slice(0,-1).map(x=>`${dim(px(x),top-19,px(x+store.step),top-19)}<text class="store-plan-measure" x="${px(x+store.step/2)}" y="${top-25}">${store.step} ft</text>`).join('');
- const planItems=store.items.filter(p=>p.floor===floor.id && (roomId==='all'||p.room===roomId));
- const items=planItems.map(p=>`<g role="button" tabindex="0" data-plan-item="${p.id}" aria-label="Inspect ${e(p.name)}" aria-pressed="${p.id===selected}" class="store-plan-item${p.id===selected?' is-selected':''}">
-  <circle cx="${px(p.x)}" cy="${py(p.y)}" r="8.5" fill="${e(p.roomColor)}"/><text x="${px(p.x)}" y="${py(p.y)+3.8}">${p.number}</text></g>`).join('');
+ const spot=selected?.floor===floor.id?`<rect class="store-plan-placement" data-plan-placement="${selected.id}" x="${px(selected.x-selected.w/2)}" y="${py(selected.y+selected.d/2)}" width="${selected.w*scale}" height="${selected.d*scale}" rx="2" fill="${e(selected.color)}"><title>${e(selected.name)}</title></rect>`:'';
  return `<svg id="store-plan" class="store-plan" viewBox="0 0 ${width} ${height}" role="group" aria-label="${e(floor.label)} plan; ${store.pillars.length} pillars and ${floor.rooms.length} rooms">
   <rect class="store-plan-base" x="${left}" y="${top}" width="${w}" height="${h}" rx="2"/>
   ${roomMarkup}
@@ -29,130 +28,141 @@ export function renderPlan(store,floor,roomId='all',selected='') {
   <text class="store-plan-measure" x="${left+w+31}" y="${top+h/2}" transform="rotate(90 ${left+w+31} ${top+h/2})">${store.depth} ft</text>
   ${store.pillars.map(p=>`<g data-pillar="${p.id}"><rect class="store-plan-pillar" x="${px(p.x)-5}" y="${py(p.y)-5}" width="10" height="10" rx="1"/>
    <text class="store-plan-grid-label" x="${px(p.x)}" y="${py(p.y)+(p.y===0?19:-8)}">${p.id}</text></g>`).join('')}
-  ${items}
+  ${spot}
   <text class="store-plan-caption" x="${left+w/2}" y="${height-9}">${store.length} × ${store.depth} ft pillar grid · centre to centre</text>
  </svg>`;
 }
 
-export function renderCatalog(items,selected) {
- return items.map(p=>`<button type="button" class="store-product" data-catalog-item="${p.id}" aria-pressed="${p.id===selected}">
-  <span class="store-item-number" style="--item-color:${e(p.roomColor)}">${p.number}</span><span class="store-product-text"><strong>${e(p.name)}</strong><small>${e(p.roomName)}</small></span>
-  <span class="store-card-price">${priceLabel(p.price_npr)}</span></button>`).join('');
+export function renderCatalog(items,selected){
+ return `<table class="store-catalog-table"><thead><tr><th scope="col">Product</th><th scope="col">Category</th><th scope="col">Sample price</th></tr></thead><tbody>${items.map(p=>`<tr data-catalog-row="${p.id}"${p.id===selected?' class="is-selected"':''}><th scope="row"><button type="button" data-catalog-item="${p.id}" aria-pressed="${p.id===selected}"><i class="store-color-chip" style="--item-color:${e(p.color)}" aria-hidden="true"></i>${e(p.name)}</button></th><td>${e(p.category)}</td><td>${priceLabel(p.price_npr)}</td></tr>`).join('')}</tbody></table>`;
 }
 
-export function renderProduct(product) {
- if(!product)return '<p>Select a product to see its name, brand and price.</p>';
- return `<p class="store-product-place"><span class="store-item-number" style="--item-color:${e(product.roomColor)}">${product.number}</span>${e(product.roomName)} · ${e(shelfLabels[product.shelf])}</p>
-  <h3>${e(product.name)}</h3><dl class="store-product-facts"><div><dt>Brand</dt><dd>${e(product.brand)}</dd></div><div><dt>Sample price</dt><dd class="store-detail-price">${priceLabel(product.price_npr)}</dd></div></dl>
-  <p class="store-location">${e(product.floorLabel)} · Level ${product.band.level} · ${product.band.low}–${product.band.high} ft above this floor</p>`;
+const colorCSS=rgb=>'rgb('+rgb.map(c=>Math.round(c)).join(',')+')';
+export const cameraPreset=(view='front',mode='rack')=>view==='front'?{yaw:270,pitch:0,zoom:1}:{yaw:284,pitch:mode==='floor'?36:15,zoom:1};
+export const storeFaces=(meshes,camera)=>projectedFaces(meshes,camera).filter(({points:[a,b,c]})=>
+ (b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0])<-1e-9);
+
+export function faceBounds(faces){
+ let left=Infinity,top=Infinity,right=-Infinity,bottom=-Infinity;
+ for(const f of faces)for(const [x,y] of f.points){left=Math.min(left,x);top=Math.min(top,y);right=Math.max(right,x);bottom=Math.max(bottom,y);}
+ return {left,top,right,bottom};
+}
+export function renderCloseup(p){
+ const faces=storeFaces(productMeshes({...p,x:0,y:0,z:0}),{yaw:292,pitch:22});
+ const b=faceBounds(faces),pad=.1,view=[b.left-pad,b.top-pad,b.right-b.left+pad*2,b.bottom-b.top+pad*2].join(' ');
+ return `<svg class="store-closeup" viewBox="${view}" role="img" aria-label="Close-up of ${e(p.name)}">${faces.map(f=>`<polygon points="${f.points.map(v=>v.slice(0,2).join(',')).join(' ')}" fill="${colorCSS(f.rgb)}" stroke="${colorCSS(f.rgb)}" stroke-width=".004"/>`).join('')}</svg>`;
 }
 
-export function renderShelfLevels(store,roomId,selected='',level=0){
+export function renderProduct(p,facing){
+ if(!p||!facing)return '<p>Select a product to see its details.</p>';
+ return `<p class="store-product-place">${e(p.category)} · ${e(shelfLabels[facing.shelf])}</p><h3>${e(p.name)}</h3>
+  ${renderCloseup(p)}
+  <dl class="store-product-facts"><div><dt>Brand</dt><dd>${e(p.brand??'Not specified')}</dd></div><div><dt>Sample price</dt><dd class="store-detail-price">${priceLabel(p.price_npr)}</dd></div></dl>
+  <p class="store-location">${e(facing.floorLabel)} · Level ${facing.band.level} · ${facing.band.low}–${facing.band.high} ft</p>`;
+}
+
+export function renderShelfLevels(store,roomId,selected='',level=0,activeRack='all'){
  const room=store.roomMap.get(roomId);
- const items=store.items.filter(p=>p.room===roomId);
- const shelves=Object.entries(shelfLabels);
+ const shelves=Object.entries(shelfLabels).filter(([id])=>activeRack==='all'||id===activeRack).map(([id,label])=>({id,label,rack:store.racks.get(rackKey(roomId,id))}));
  return `<table class="store-elevation"><caption>${e(room.name)} · ${e(room.floorLabel)}</caption>
- <thead><tr><th scope="col">Height</th>${shelves.map(([,label])=>`<th scope="col">${e(label)}</th>`).join('')}</tr></thead>
+ <thead><tr><th scope="col">Height</th>${shelves.map(s=>`<th scope="col"${activeRack===s.id?' class="store-elevation-active-rack"':''}>${e(s.rack.label)}<small>${e(s.label)}</small></th>`).join('')}</tr></thead>
  <tbody>${[...store.bands].reverse().map(b=>`<tr data-shelf-band="${b.level}"${b.level===level?' class="store-level-active"':''}>
  <th scope="row"><button type="button" class="store-level-button" data-store-level="${b.level}" aria-label="Show level ${b.level}, ${b.low} to ${b.high} feet" aria-pressed="${b.level===level}"><strong>L${b.level}</strong><small>${b.low}–${b.high} ft</small></button></th>
- ${shelves.map(([s])=>{const found=items.filter(p=>p.shelf===s&&p.band.level===b.level);return `<td>${found.length?found.map(p=>`<button type="button" class="store-elevation-item" data-elevation-item="${p.id}" aria-label="Inspect ${e(p.name)}" aria-pressed="${p.id===selected}"><span>${p.number}</span><small>${e(p.name)}</small></button>`).join(''):'<span class="store-cell-empty" aria-label="Empty">—</span>'}</td>`;}).join('')}
+ ${shelves.map(({rack})=>`<td>${rack.facings.filter(f=>f.band.level===b.level).map(f=>`<button type="button" class="store-elevation-item" data-elevation-facing="${f.id}" title="${e(f.name)}" aria-label="Inspect ${e(f.name)} at level ${b.level}" aria-pressed="${f.id===selected}"><i class="store-color-chip" style="--item-color:${e(f.color)}" aria-hidden="true"></i><small>${e(f.name)}</small></button>`).join('')}</td>`).join('')}
  </tr>`).join('')}</tbody></table>`;
 }
 
-const defaultCamera=scene=>({...(scene?.camera??{yaw:284,pitch:43,zoom:1})});
 const clamp=(v,lo,hi)=>Math.min(hi,Math.max(lo,v));
-const colorCSS=rgb=>'rgb('+rgb.map(c=>Math.round(c)).join(',')+')';
-export const storeFaces=(meshes,camera)=>projectedFaces(meshes,camera).filter(({points:[a,b,c]})=>
- (b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0])<0);
-
-export function createStore3D(canvas,pins,onSelect) {
- const ctx=canvas.getContext('2d');
- if(!ctx)return null;
- let scene, selected='', camera=defaultCamera(), frame=0, faces=[], map, drag;
- const pinButtons=new Map(), pickable=new Map();
+export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange){
+ const ctx=canvas.getContext('2d');if(!ctx)return null;
+ let scene,selected='',orientation='front',camera=cameraPreset(),frame=0,faces=[],map,drag,geometryKey='';
+ const targets=new Map(),pickable=new Set();
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(draw);};
- const project=point=>[point[0]*map.scale+map.ox,point[1]*map.scale+map.oy];
+ const project=([x,y])=>[x*map.scale+map.ox,y*map.scale+map.oy];
 
  function draw(){
-  frame=0;
-  const width=canvas.clientWidth,height=canvas.clientHeight;
+  frame=0;const width=canvas.clientWidth,height=canvas.clientHeight;
   if(!width||!height||!scene)return;
   const ratio=Math.min(devicePixelRatio||1,2);
-  canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);
+  if(canvas.width!==Math.round(width*ratio))canvas.width=Math.round(width*ratio);
+  if(canvas.height!==Math.round(height*ratio))canvas.height=Math.round(height*ratio);
   ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,width,height);
-  faces=storeFaces(scene.meshes,camera);
-  let loX=Infinity,loY=Infinity,hiX=-Infinity,hiY=-Infinity;
-  for(const f of faces)for(const [x,y] of f.points){loX=Math.min(loX,x);loY=Math.min(loY,y);hiX=Math.max(hiX,x);hiY=Math.max(hiY,y);}
-  const scale=Math.min((width-40)/Math.max(hiX-loX,.01),(height-52)/Math.max(hiY-loY,.01))*camera.zoom;
-  const topFit=scene.display==='showcase'&&camera.zoom===1?Math.max(0,(height-(hiY-loY)*scale)/2-25):0;
-  map={scale,ox:width/2-(loX+hiX)*scale/2,oy:height/2-(loY+hiY)*scale/2+8-topFit};
+  const key=camera.yaw+'/'+camera.pitch;
+  if(key!==geometryKey){faces=storeFaces(scene.meshes,camera);geometryKey=key;}
+  const b=faceBounds(faces);if(!Number.isFinite(b.left))return;
+  const scale=Math.min((width-24)/Math.max(b.right-b.left,.01),(height-28)/Math.max(b.bottom-b.top,.01))*camera.zoom;
+  map={scale,ox:width/2-(b.left+b.right)*scale/2,oy:height/2-(b.top+b.bottom)*scale/2};
   for(const f of faces){
-   const points=f.points.map(project);ctx.beginPath();ctx.moveTo(...points[0]);ctx.lineTo(...points[1]);ctx.lineTo(...points[2]);ctx.closePath();
-   ctx.fillStyle=colorCSS(f.itemId===selected?f.rgb.map((v,i)=>v*.45+[255,182,60][i]*.55):f.rgb);
+   const points=f.points.map(project);
+   ctx.beginPath();ctx.moveTo(...points[0]);ctx.lineTo(...points[1]);ctx.lineTo(...points[2]);ctx.closePath();
+   ctx.fillStyle=colorCSS(f.itemId===selected&&orientation==='angled'?f.rgb.map((v,i)=>v*.7+[255,199,88][i]*.3):f.rgb);
    ctx.fill();ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=.45;ctx.stroke();
   }
-  const occupied=[];
-  for(const item of scene.products){
-   const button=pinButtons.get(item.id),large=scene.display==='showcase',edge=large?25:17;
-   const [x,y]=project(projectPoint(item.pin??[item.x,item.y,item.z+item.h+.30],camera));
-   let bx=clamp(x,edge,width-edge),by=clamp(y-(large?0:8),edge,height-edge);
-   for(const [ox,oy] of occupied)if(Math.abs(bx-ox)<edge*1.5&&Math.abs(by-oy)<edge*1.5)by=clamp(oy-edge*1.6,edge,height-edge);
-   occupied.push([bx,by]);
-   button.style.left=bx+'px';button.style.top=by+'px';button.style.visibility='';
+  for(const t of scene.targets??[]){
+   const button=targets.get(t.id);if(!button)continue;
+   const points=[[t.x,t.y,t.z],[t.x+t.w,t.y,t.z],[t.x,t.y,t.z+t.h],[t.x+t.w,t.y,t.z+t.h]].map(p=>project(projectPoint(p,camera)));
+   const [x,y]=[0,1].map(i=>Math.min(...points.map(p=>p[i])));
+   const w=Math.max(...points.map(p=>p[0]))-x,h=Math.max(...points.map(p=>p[1]))-y;
+   const visible=orientation==='front'&&x+w>0&&x<width&&y+h>0&&y<height;
+   Object.assign(button.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px'});
+   button.hidden=!visible;button.tabIndex=visible?0:-1;
   }
  }
 
- function hit(e){
+ function hit(ev){
   if(!map)return null;
-  const r=canvas.getBoundingClientRect(),point=[(e.clientX-r.left-map.ox)/map.scale,(e.clientY-r.top-map.oy)/map.scale];
-  for(let i=faces.length-1;i>=0;i--)if(pointInTriangle(point,faces[i].points))return pickable.get(faces[i].itemId)??null;
+  const r=canvas.getBoundingClientRect(),point=[(ev.clientX-r.left-map.ox)/map.scale,(ev.clientY-r.top-map.oy)/map.scale];
+  for(let i=faces.length-1;i>=0;i--)if(pointInTriangle(point,faces[i].points))return pickable.has(faces[i].itemId)?faces[i].itemId:null;
   return null;
  }
- canvas.addEventListener('pointerdown',e=>{
-  if(!e.isPrimary||e.button!==0)return;
-  drag={x:e.clientX,y:e.clientY,yaw:camera.yaw,pitch:camera.pitch,pointer:e.pointerId,moved:false};
-  canvas.setPointerCapture(e.pointerId);
+ function angle(){
+  if(orientation==='angled')return;
+  orientation='angled';onAngleChange('angled');
+ }
+ canvas.addEventListener('pointerdown',ev=>{
+  if(!ev.isPrimary||ev.button!==0)return;
+  drag={x:ev.clientX,y:ev.clientY,yaw:camera.yaw,pitch:camera.pitch,pointer:ev.pointerId,moved:false};
+  canvas.setPointerCapture(ev.pointerId);
  });
- canvas.addEventListener('pointermove',e=>{
-  if(!drag){if(e.pointerType==='mouse')canvas.style.cursor=hit(e)?'pointer':'grab';return;}
-  if(drag.pointer!==e.pointerId)return;
-  const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+ canvas.addEventListener('pointermove',ev=>{
+  if(!drag){if(ev.pointerType==='mouse')canvas.style.cursor=hit(ev)?'pointer':'grab';return;}
+  if(drag.pointer!==ev.pointerId)return;
+  const dx=ev.clientX-drag.x,dy=ev.clientY-drag.y;
   if(!drag.moved&&Math.hypot(dx,dy)<5)return;
-  drag.moved=true;camera.yaw=drag.yaw+dx*.45;camera.pitch=clamp(drag.pitch+dy*.28,17,78);schedule();
+  drag.moved=true;angle();camera.yaw=drag.yaw+dx*.45;camera.pitch=clamp(drag.pitch+dy*.28,0,68);schedule();
  });
- canvas.addEventListener('pointerup',e=>{
-  if(drag?.pointer!==e.pointerId)return;
-  const pick=!drag.moved?hit(e):null;drag=null;
+ canvas.addEventListener('pointerup',ev=>{
+  if(drag?.pointer!==ev.pointerId)return;
+  const pick=!drag.moved?hit(ev):null;drag=null;
   if(pick)onSelect(pick);
  });
  canvas.addEventListener('pointercancel',()=>{drag=null;});
- canvas.addEventListener('keydown',e=>{
-  if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;
-  e.preventDefault();
-  if(e.key==='ArrowLeft')camera.yaw-=15;if(e.key==='ArrowRight')camera.yaw+=15;
-  if(e.key==='ArrowUp')camera.pitch=clamp(camera.pitch+6,17,78);if(e.key==='ArrowDown')camera.pitch=clamp(camera.pitch-6,17,78);schedule();
+ canvas.addEventListener('keydown',ev=>{
+  if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(ev.key))return;
+  ev.preventDefault();angle();
+  if(ev.key==='ArrowLeft')camera.yaw-=15;if(ev.key==='ArrowRight')camera.yaw+=15;
+  if(ev.key==='ArrowUp')camera.pitch=clamp(camera.pitch+6,0,68);if(ev.key==='ArrowDown')camera.pitch=clamp(camera.pitch-6,0,68);schedule();
  });
  function select(id){
-  selected=id;for(const [key,b] of pinButtons)b.setAttribute('aria-pressed',String(key===id));schedule();
+  selected=id;for(const [key,b] of targets)b.setAttribute('aria-pressed',String(key===id));schedule();
  }
  new ResizeObserver(schedule).observe(canvas);
  return {
-  setScene(next,id,{reset=false}={}){
-   scene=next;map=null;pinButtons.clear();pickable.clear();
-   if(reset)camera=defaultCamera(scene);
-   canvas.parentElement.dataset.display=scene.display??'floor';
-   const group=document.createDocumentFragment();
-   for(const item of scene.products){
-    const b=document.createElement('button');b.type='button';b.className='store-pin';b.textContent=item.number;
-    b.dataset.pinItem=item.id;b.style.setProperty('--item-color',item.roomColor);b.style.visibility='hidden';
-    b.title=item.name;b.setAttribute('aria-label','Inspect '+item.name);
-    b.addEventListener('click',()=>onSelect(item.id));group.append(b);
-    pinButtons.set(item.id,b);pickable.set(item.id,item.id);
-    if(scene.display==='showcase')pickable.set('cell-'+item.id,item.id);
+  setScene(next,id,view='front'){
+   scene=next;geometryKey='';map=null;targets.clear();pickable.clear();orientation=view;
+   camera=cameraPreset(orientation,scene.display);
+   canvas.parentElement.dataset.display=scene.display;canvas.parentElement.style.setProperty('--rack-rows',scene.rows??1);
+   const group=document.createDocumentFragment(),stock=new Map(scene.stock.map(f=>[f.id,f]));
+   for(const f of scene.stock)pickable.add(f.id);
+   for(const t of scene.targets??[]){
+    const f=stock.get(t.id),b=document.createElement('button');b.type='button';b.className='store-model-target';b.hidden=true;
+    b.dataset.modelFacing=f.id;b.title=f.name;b.setAttribute('aria-label','Inspect '+f.name+' at shelf level '+f.band.level);
+    b.addEventListener('click',()=>onSelect(f.id));group.append(b);targets.set(f.id,b);
    }
-   pins.replaceChildren(group);select(id);
+   targetsRoot.replaceChildren(group);select(id);
   },
-  select,turn(delta){camera.yaw+=delta;schedule();},
-  zoom(value){camera.zoom=value;schedule();},fit(){camera=defaultCamera(scene);schedule();}
+  select,orientation(value){orientation=value;camera=cameraPreset(value,scene?.display);schedule();},
+  turn(delta){if(orientation==='front'){angle();camera=cameraPreset('angled',scene?.display);}camera.yaw+=delta;schedule();},
+  zoom(value){camera.zoom=value;schedule();},fit(){camera=cameraPreset(orientation,scene?.display);schedule();}
  };
 }

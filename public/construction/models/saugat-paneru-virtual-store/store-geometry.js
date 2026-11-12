@@ -1,5 +1,5 @@
 // Display geometry in feet. The 2D plan and the 3D scene use the same shelf and product locations.
-import {floorItems,viewScope} from './store-model.js';
+import {rackKey,viewScope} from './store-model.js';
 
 const faces = [0,2,1,0,3,2,4,5,6,4,6,7,0,1,5,0,5,4,1,2,6,1,6,5,2,3,7,2,7,6,3,0,4,3,4,7];
 const rgb = color => color.match(/[0-9a-f]{2}/gi).map(h=>parseInt(h,16));
@@ -35,13 +35,22 @@ function rings(id,color,x,y,profile,{caps=false,sides=12}={}) {
  return mesh(id,color,points,indices);
 }
 
-export function productMeshes(p) {
+function profileSolid(id,color,x,y,z,w,d,h,outline){
+ const front=outline.map(([a,b])=>[x+a*w,y-d/2,z+b*h]),n=front.length;
+ const triangles=[];
+ for(let i=1;i<n-1;i++)triangles.push(0,i,i+1,n,n+i+1,n+i);
+ for(let i=0;i<n;i++){const j=(i+1)%n;triangles.push(i,n+i,n+j,i,n+j,j);}
+ return mesh(id,color,[...front,...front.map(([a,b,c])=>[a,b+d,c])],triangles);
+}
+
+export function productMeshes(p,{compact=false}={}) {
  const id=p.id, color=rgb(p.color), dark=tone(color,.62), light=mix(color,[255,255,255],.36), {x,y,z,w,d,h}=p, out=[];
  const block=(cx,cy,bottom,a,b,c,shade=color)=>out.push(box(id,shade,cx,cy,bottom,a,b,c));
  const rail=(a,b,r,shade=color)=>out.push(bar(id,shade,a,b,r));
  const hollow=(cx,cy,bottom,a,b,c,taper,shade=color)=>{
-  out.push(rings(id,shade,cx,cy,[[a*taper,b*taper,bottom],[a,b,bottom+c],[a*.86,b*.86,bottom+c],[a*taper*.83,b*taper*.83,bottom+c*.17]],{sides:14}));
-  out.push(rings(id,tone(shade,.64),cx,cy,[[a*taper*.84,b*taper*.84,bottom+c*.16],[a*taper*.84,b*taper*.84,bottom+c*.18]],{caps:true,sides:14}));
+  const sides=compact?8:14;
+  out.push(rings(id,shade,cx,cy,[[a*taper,b*taper,bottom],[a,b,bottom+c],[a*.86,b*.86,bottom+c],[a*taper*.83,b*taper*.83,bottom+c*.17]],{sides}));
+  if(!compact)out.push(rings(id,tone(shade,.64),cx,cy,[[a*taper*.84,b*taper*.84,bottom+c*.16],[a*taper*.84,b*taper*.84,bottom+c*.18]],{caps:true,sides}));
  };
  const handle=(cx,cy,bottom,a,c,shade=dark)=>{
   const points=[[cx,cy,bottom],[cx+a*.64,cy,bottom+c*.14],[cx+a,cy,bottom+c*.53],[cx+a*.64,cy,bottom+c*.92],[cx,cy,bottom+c]];
@@ -49,14 +58,63 @@ export function productMeshes(p) {
  };
  switch(p.shape){
   case 'slippers':
-   for(const offset of [-.25,.25]){
-    const cx=x+offset*w, cy=y+(offset>0?.055:-.055)*d;
-    out.push(rings(id,dark,cx,cy,[[w*.37,d*.86,z],[w*.39,d*.9,z+h*.25]],{caps:true,sides:14}));
-    out.push(rings(id,color,cx,cy,[[w*.39,d*.9,z+h*.25],[w*.36,d*.87,z+h*.42]],{caps:true,sides:14}));
-    const toe=[cx,cy-d*.25,z+h*.81];
-    rail([cx-w*.16,cy+d*.12,z+h*.45],toe,w*.032,light);
-    rail(toe,[cx+w*.16,cy+d*.12,z+h*.45],w*.032,light);
+  case 'slides':
+  case 'sandals': {
+   const sole=[[-.49,.08],[.44,.08],[.5,.22],[.44,.37],[-.43,.37],[-.5,.27]];
+   for(const [offset,depthOffset] of [[.1,.2],[-.1,-.21]]){
+    const cx=x+offset*w,cy=y+depthOffset*d;
+    out.push(profileSolid(id,dark,cx,cy,z,w*.8,d*.42,h,sole));
+    const front=[cx-w*.21,cy-d*.16,z+h*.29],arch=[cx-w*.08,cy,z+h*.91],heel=[cx+w*.04,cy+d*.16,z+h*.28];
+    rail(front,arch,h*.09,light);rail(arch,heel,h*.09,light);
+    if(p.shape!=='slippers'){
+     rail([cx+w*.16,cy-d*.18,z+h*.31],[cx+w*.14,cy,z+h*.72],h*.10,color);
+     rail([cx+w*.14,cy,z+h*.72],[cx+w*.16,cy+d*.18,z+h*.31],h*.10,color);
+    }
    }
+   break;
+  }
+  case 'sneaker':
+  case 'school-shoe':
+  case 'boot': {
+   const sole=[[-.49,.04],[.44,.04],[.5,.14],[.47,.27],[-.44,.27],[-.5,.17]];
+   const upper=[[-.46,.22],[.47,.22],[.48,.46],[.37,.93],[.11,.94],[-.04,.70],[-.29,.49],[-.45,.43]];
+   out.push(profileSolid(id,p.shape==='sneaker'?[227,225,215]:dark,x,y,z,w,d,h,sole));
+   out.push(profileSolid(id,color,x,y,z,w,d*.91,h,upper));
+   for(let i=0;i<(compact?2:3);i++)block(x+(-.19+i*.105)*w,y-d*.46,z+(.41+i*.095)*h,w*.105,d*.035,h*.065,light);
+   block(x+w*.29,y-d*.462,z+h*.25,w*.21,d*.04,h*.31,dark);
+   break;
+  }
+  case 'open-umbrella': {
+   const shaft=[91,104,106],rim=z+h*.64;
+   rail([x,y,z+h*.08],[x,y,z+h*.95],Math.min(w,h)*.025,shaft);
+   rail([x,y,z+h*.08],[x+w*.075,y,z+h*.027],h*.032,dark);
+   rail([x+w*.075,y,z+h*.027],[x+w*.14,y,z+h*.095],h*.032,dark);
+   const n=8, canopy=Array.from({length:n},(_,i)=>{
+    const a=2*Math.PI*i/n+Math.PI/8,b=2*Math.PI*(i+1)/n+Math.PI/8;
+    return [[x+w*.5*Math.cos(a),y+d*.5*Math.sin(a),rim],[x+w*.5*Math.cos(b),y+d*.5*Math.sin(b),rim],[x,y,z+h*.98]];
+   });
+   for(const [i,ps] of canopy.entries())out.push(mesh(id,i%2?light:color,ps,[0,1,2,2,1,0]));
+   break;
+  }
+  case 'folded-umbrella':
+  case 'stick-umbrella': {
+   const long=p.shape==='stick-umbrella',r=w*(long?.26:.47),stem=[86,95,101];
+   out.push(rings(id,color,x,y,[[r*.76,d*.58,z+h*.19],[r,d*.73,z+h*.33],[r*.42,d*.37,z+h*.91]],{caps:true,sides:8}));
+   out.push(rings(id,light,x,y,[[r*1.05,d*.77,z+h*.43],[r*1.05,d*.77,z+h*.51]],{caps:true,sides:8}));
+   rail([x,y,z+h*.13],[x,y,z+h*.98],h*.028,stem);
+   if(long)handle(x,y,z+h*.032,w*.34,h*.18,dark);
+   else block(x,y,z+h*.02,w*.52,d*.66,h*.18,dark);
+   break;
+  }
+  case 'bottle':
+   out.push(rings(id,color,x,y,[[w*.89,d*.89,z],[w,d,z+h*.15],[w,d,z+h*.71],[w*.49,d*.49,z+h*.88]],{caps:true,sides:10}));
+   out.push(rings(id,dark,x,y,[[w*.51,d*.51,z+h*.85],[w*.51,d*.51,z+h]],{caps:true,sides:10}));
+   block(x,y-d*.48,z+h*.34,w*.55,d*.06,h*.16,light);
+   break;
+  case 'brush':
+   block(x,y,z+h*.18,w,d*.88,h*.37,color);
+   for(let i=0;i<6;i++)block(x+(i-2.5)*w*.15,y,z,w*.093,d*.76,h*.25,dark);
+   rail([x-w*.25,y,z+h*.54],[x+w*.31,y,z+h*.92],h*.08,light);
    break;
   case 'box':
    block(x,y,z,w*.92,d*.91,h*.84); block(x,y,z+h*.81,w,d,h*.19,light);
@@ -111,7 +169,7 @@ export function productMeshes(p) {
 }
 
 export function storeScene(store,floorId,roomId) {
- const scope=viewScope(store,floorId,roomId),{rooms,start,end,depth,pillars,products}=scope;
+ const scope=viewScope(store,floorId,roomId),{rooms,start,end,depth,pillars,stock}=scope;
  const slab=[203,216,209], wall=[221,227,221], trim=[128,149,141], board=[217,180,131], posts=[91,112,105], wallHeight=store.storeyHeight*.58;
  const add=[], push=(...args)=>add.push(box(...args)), span=end-start;
  push('floor',slab,(start+end)/2,depth/2,-.28,span+.78,depth+.8,.28);
@@ -131,31 +189,30 @@ export function storeScene(store,floorId,roomId) {
   }
  }
  for(const p of pillars)push('pillar-'+p.id,trim,p.x,p.y,0,store.pillarWidth,store.pillarWidth,wallHeight+.22);
- for(const p of products)add.push(...productMeshes(p));
- return {...scope,meshes:add};
+ for(const p of stock)add.push(...productMeshes(p,{compact:true}));
+ return {...scope,meshes:add,display:'floor'};
 }
 
-// Separate the stocked cubbies for browsing. Their display coordinates and
-// product magnification are intentionally independent of the floor geometry.
-export function showcaseScene(store,floor,room,level=0,focus=''){
- const items=floorItems(store,floor,room,level).filter(p=>!focus||p.id===focus);
- const width=3.75,depth=2.4,height=2.6,gapX=1.22,gapZ=.97;
- const cells=items.length?items:[null];
- const meshes=[],products=[],columns=Math.min(cells.length,2),rows=Math.ceil(cells.length/columns);
- for(const [i,p] of cells.entries()){
-  const x=(i%columns)*(width+gapX),y=0,z=(rows-1-Math.floor(i/columns))*(height+gapZ);
-  const id=p?'cell-'+p.id:'empty-cell';
-  const base=p?rgb(p.roomColor):[70,117,104],wood=mix([210,179,133],base,.16),back=mix([235,232,219],base,.17);
-  meshes.push(box(id,wood,x,y,z,width,depth,.15),
-   box(id,back,x,depth/2-.06,z+.15,width,.12,height-.24),
-   box(id,wood,x-width/2+.06,y,z+.15,.12,depth,height-.24),
-   box(id,wood,x+width/2-.06,y,z+.15,.12,depth,height-.24),
-   box(id,wood,x,y,z+height-.1,width,depth,.1));
-  if(!p)continue;
-  const scale=Math.min(width*.72/p.w,depth*.72/p.d,height*.68/p.h);
-  const view={...p,x,y:y-.17,z:z+.155,w:p.w*scale,d:p.d*scale,h:p.h*scale,
-   pin:[x-width*.32,-depth/2-.1,z+height-.38]};
-  products.push(view);meshes.push(...productMeshes(view));
+// Straighten each rack to face its aisle. Extra spacing here is for browsing;
+// the floor model and plan keep the real rack coordinates.
+export function showcaseScene(store,room,shelf,level=0,focus=''){
+ const rack=store.racks.get(rackKey(room,shelf));
+ const stock=rack.facings.filter(f=>(!level||f.band.level===level)&&(!focus||f.id===focus));
+ const levels=[...new Set(stock.map(f=>f.band.level))],cols=focus?1:store.slots;
+ const cellW=focus?3.9:2.24,depth=focus?2.6:1.36,h=focus?2.62:1.08,pitch=h+(focus ? .12 : .13);
+ const width=cols*cellW+.16,wood=[187,152,109],back=[235,234,222],metal=[117,125,112];
+ const meshes=[],targets=[];
+ const height=levels.length*pitch;
+ meshes.push(box('rack-back',back,width/2,depth/2,0,width,.11,height),
+  box('rack-side-left',metal,.04,0,0,.08,depth,height),box('rack-side-right',metal,width-.04,0,0,.08,depth,height));
+ for(const [i] of levels.entries())meshes.push(box('rack-board',wood,width/2,0,i*pitch,width,depth,.073));
+ meshes.push(box('rack-top',wood,width/2,0,height,width,depth,.07));
+ for(const f of stock){
+  const column=focus?0:f.column,x=.08+cellW*(column+.5),z=levels.indexOf(f.band.level)*pitch;
+  const scale=Math.min(cellW*.86/f.w,depth*.89/f.d,(h-.13)/f.h);
+  const view={...f,x,y:-.04,z:z+.075,w:f.w*scale,d:f.d*scale,h:f.h*scale};
+  meshes.push(...productMeshes(view));
+  targets.push({id:f.id,x:x-cellW*.48,z:z+.08,w:cellW*.96,h:pitch-.12,y:-depth/2-.01});
  }
- return {meshes,products,display:'showcase',camera:{yaw:279,pitch:16,zoom:1}};
+ return {meshes,stock,targets,display:focus?'item':'rack',rows:levels.length};
 }
