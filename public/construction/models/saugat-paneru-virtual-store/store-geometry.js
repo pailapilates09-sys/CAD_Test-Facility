@@ -78,8 +78,13 @@ export function productMeshes(p,{compact=false}={}) {
   case 'boot': {
    const sole=[[-.49,.04],[.44,.04],[.5,.14],[.47,.27],[-.44,.27],[-.5,.17]];
    const upper=[[-.46,.22],[.47,.22],[.48,.46],[.37,.93],[.11,.94],[-.04,.70],[-.29,.49],[-.45,.43]];
-   out.push(profileSolid(id,p.shape==='sneaker'?[227,225,215]:dark,x,y,z,w,d,h,sole));
-   out.push(profileSolid(id,color,x,y,z,w,d*.91,h,upper));
+   const pale=color.every(c=>c>190),edge=[73,94,105];
+   out.push(profileSolid(id,pale?edge:p.shape==='sneaker'?[227,225,215]:dark,x,y,z,w,d,h,sole));
+   out.push(profileSolid(id,pale?edge:color,x,y,z,w,d*.91,h,upper));
+   if(pale){
+    // Contrast seam on both sides so light canvas remains distinct against the rack.
+    for(const side of [-1,1])out.push(profileSolid(id,color,x,y+side*d*.46,z+h*.045,w*.955,d*.034,h*.91,upper));
+   }
    for(let i=0;i<(compact?2:3);i++)block(x+(-.19+i*.105)*w,y-d*.46,z+(.41+i*.095)*h,w*.105,d*.035,h*.065,light);
    block(x+w*.29,y-d*.462,z+h*.25,w*.21,d*.04,h*.31,dark);
    break;
