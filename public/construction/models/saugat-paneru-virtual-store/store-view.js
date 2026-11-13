@@ -1,5 +1,5 @@
 import {projectPoint,projectedFaces,pointInTriangle} from '../layout-designer/design-view3d.js';
-import {escapeHTML as e,priceLabel,rackKey,shelfLabels} from './store-model.js';
+import {displayDimensions,escapeHTML as e,priceLabel,rackKey,shelfLabels} from './store-model.js';
 import {productMeshes} from './store-geometry.js';
 
 export function renderPlan(store,floor,roomId='all',selected=null,rack='all'){
@@ -48,16 +48,17 @@ export function faceBounds(faces){
  return {left,top,right,bottom};
 }
 export function renderCloseup(p){
- const faces=storeFaces(productMeshes({...p,x:0,y:0,z:0}),{yaw:292,pitch:22});
+ const faces=storeFaces(productMeshes({...p,...displayDimensions(p),x:0,y:0,z:0}),{yaw:292,pitch:22});
  const b=faceBounds(faces),pad=.1,view=[b.left-pad,b.top-pad,b.right-b.left+pad*2,b.bottom-b.top+pad*2].join(' ');
  return `<svg class="store-closeup" viewBox="${view}" role="img" aria-label="Close-up of ${e(p.name)}">${faces.map(f=>`<polygon points="${f.points.map(v=>v.slice(0,2).join(',')).join(' ')}" fill="${colorCSS(f.rgb)}" stroke="${colorCSS(f.rgb)}" stroke-width=".004"/>`).join('')}</svg>`;
 }
 
 export function renderProduct(p,facing){
  if(!p||!facing)return '<p>Select a product to see its details.</p>';
+ const apparelFacts=p.type==='apparel'?`<div><dt>Fabric</dt><dd>${e(p.fabric)}</dd></div><div><dt>Sample sizes</dt><dd>${e(p.sizes)}</dd></div>`:'';
  return `<p class="store-product-place">${e(p.category)} · ${e(shelfLabels[facing.shelf])}</p><h3>${e(p.name)}</h3>
   ${renderCloseup(p)}
-  <dl class="store-product-facts"><div><dt>Brand</dt><dd>${e(p.brand??'Not specified')}</dd></div><div><dt>Sample price</dt><dd class="store-detail-price">${priceLabel(p.price_npr)}</dd></div></dl>
+  <dl class="store-product-facts"><div><dt>Brand</dt><dd>${e(p.brand??'Not specified')}</dd></div><div><dt>Sample price</dt><dd class="store-detail-price">${priceLabel(p.price_npr)}</dd></div>${apparelFacts}</dl>
   <p class="store-location">${e(facing.floorLabel)} · Level ${facing.band.level} · ${facing.band.low}–${facing.band.high} ft</p>`;
 }
 
@@ -95,7 +96,7 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange){
   for(const f of faces){
    const points=f.points.map(project);
    ctx.beginPath();ctx.moveTo(...points[0]);ctx.lineTo(...points[1]);ctx.lineTo(...points[2]);ctx.closePath();
-   ctx.fillStyle=colorCSS(f.itemId===selected&&orientation==='angled'?f.rgb.map((v,i)=>v*.7+[255,199,88][i]*.3):f.rgb);
+   ctx.fillStyle=colorCSS(f.itemId===selected&&(orientation==='angled'||scene.display==='floor')?f.rgb.map((v,i)=>v*.7+[255,199,88][i]*.3):f.rgb);
    ctx.fill();ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=.45;ctx.stroke();
   }
   for(const t of scene.targets??[]){

@@ -5,7 +5,7 @@ import {tmpdir} from 'node:os';
 import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {addHeadingAnchors,siteHref,organizationNavigation,decorateOrganization,applyWorkspaceOrganization} from '../scripts/workspace-organization.mjs';
-import {classifyPage,searchRecords,SAUGAT_STORE_PATH} from '../public/organization/site-model.js';
+import {classifyPage,searchRecords,SAUGAT_STORE_PATH,NABIN_STORE_PATH} from '../public/organization/site-model.js';
 
 const review=JSON.parse(await readFile(new URL('../public/organization/references.json',import.meta.url)));
 
@@ -14,6 +14,7 @@ test('project ownership keeps both studio quotations together, separates Basanti
  assert.equal(classifyPage('construction/estimates/pilates-astra-2026-10-15/v11/index.html').project,'paila');
  assert.equal(classifyPage('construction/models/basanti-workbench/v7/index.html').category,'MEP coordination');
  assert.equal(classifyPage(SAUGAT_STORE_PATH+'data/project.json').project,'saugat');
+ assert.equal(classifyPage(NABIN_STORE_PATH+'data/project.json').project,'nabin');
  assert.equal(classifyPage('cad/index.html').project,'formwork');
  assert.equal(classifyPage('progress/index.html').project,'workspace');
  assert.equal(siteHref('construction/models/basanti-workbench/v7/index.html','cad/#drawings'),'../../../../cad/#drawings');
@@ -66,7 +67,7 @@ test('shared shell preserves drawing controls, references and one cache revision
 test('category groups keep projects distinct and give formwork a direct drawing-tool link',async()=>{
  const {GROUPS}=await import('../public/organization/site-model.js');
  assert.deepEqual(GROUPS.map(g=>g.id),['workspace','projects','tools','records','learning']);
- assert.deepEqual(GROUPS.find(g=>g.id==='projects').items.map(i=>i.id),['paila','basanti','saugat']);
+ assert.deepEqual(GROUPS.find(g=>g.id==='projects').items.map(i=>i.id),['paila','basanti','saugat','nabin']);
  assert.equal(GROUPS.find(g=>g.id==='tools').items[0].path,'cad/');
  assert.deepEqual(GROUPS.find(g=>g.id==='records').items.map(i=>i.id),['sources','progress']);
  assert.deepEqual(GROUPS.find(g=>g.id==='learning').items.map(i=>i.id),['memory','guide']);
@@ -82,6 +83,7 @@ test('page types separate original offers, technical versions and individual mat
  assert.equal(pageKind('construction/estimates/pilates-hamro-2026-10-28/index.html'),'quotation');
  assert.equal(pageKind(a+'milestone.html'),'overview');
  assert.equal(pageKind('construction/models/pilates-sketchup/index.html'),'model');
+ assert.equal(pageKind(NABIN_STORE_PATH+'index.html'),'model');
  assert.equal(classifyPage(a+'v9/index.html').category,'Technical source register');
 });
 
