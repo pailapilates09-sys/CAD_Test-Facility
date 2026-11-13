@@ -52,7 +52,7 @@ function renderRates(rates, source) {
   const hasSourceIds = rates.some(rate => rate.sourceId);
   const hasWorkbookRows = rates.some(rate => rate.sourceId && rate.pdfPage == null && rate.sourceLocator);
   const locationHeader = hasWorkbookRows ? 'Page or workbook cell' : 'Printed / PDF page';
-  const scope = hasWorkbookRows ? 'Kaski district seed rates and Pokhara farmer sale rates at 1 km' : source.pdfPages ? 'Source pages are listed for each row' : `PDF p${source.pdfPage} / printed p${source.printedPage}`;
+  const scope = source.scope ?? (hasWorkbookRows || source.pdfPages ? 'See the source location for each observation' : `PDF p${source.pdfPage} / printed p${source.printedPage}`);
   const rows = rates.map(rate => `<tr><th scope="row">${esc(rate.id)}</th><td>${esc(rate.label)}</td><td>${Number(rate.rateNPR).toFixed(2)}</td><td>${esc(rate.unitDetail??rate.unit)}</td>${hasSourceIds?`<td>${esc(rate.sourceId)}</td>`:''}<td>${esc(rateLocator(rate,source))}</td></tr>`).join('');
   return `<section class="xe-source-rates"><h4>New source-derived rate observations</h4><p>Government published benchmarks · FY${esc(source.fiscalYear)} · ${esc(scope)}. Exact Gregorian effective day is unasserted. Check place, specification and date before applying a benchmark.</p><div class="table-wrap"><table><thead><tr><th scope="col">Observation</th><th scope="col">Material</th><th scope="col">NPR</th><th scope="col">Source unit</th>${hasSourceIds?'<th scope="col">Source ID</th>':''}<th scope="col">${locationHeader}</th></tr></thead><tbody>${rows}</tbody></table></div></section>`;
 }

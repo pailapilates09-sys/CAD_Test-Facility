@@ -413,21 +413,29 @@
       ],
       "rateSource": {
         "fiscalYear": "2083/84",
-        "pdfPage": 40,
-        "printedPage": 35,
-        "sections": [
-          "14(d)"
-        ],
         "exactEffectiveDay": null,
-        "vat": {
-          "included": false,
-          "pdfPage": 80,
-          "printedPage": 75,
-          "clause": "Other Decisions item 6"
-        },
+        "scope": "Kaski district seed rates and Pokhara farmer sale rates at 1 km",
         "sources": [
-          "SRC-0005",
-          "SRC-0008"
+          {
+            "id": "SRC-0005",
+            "jurisdiction": "Kaski district",
+            "vat": {
+              "included": false,
+              "pdfPage": 80,
+              "printedPage": 75,
+              "clause": "Other Decisions item 6"
+            },
+            "transportIncluded": null
+          },
+          {
+            "id": "SRC-0008",
+            "jurisdiction": "Pokhara Metropolitan City",
+            "vat": {
+              "included": null
+            },
+            "transportIncluded": true,
+            "depotToOutletKm": 1
+          }
         ]
       },
       "priorExtractedBatches": [
@@ -1751,7 +1759,7 @@
       "id": "AEC-FERTILIZER",
       "state": "UNRESOLVED",
       "label": "Kaski chemical fertilizer rates",
-      "evidence": "Kaski section 14(b) refers to a government rate. The national procedure distinguishes import, depot and local outlet prices. Pokhara published its own FY 2083/84 farmer outlet rates.",
+      "evidence": "Kaski section 14(b) refers to a government rate. The Ministry procedure, second amendment, gives national import-point benchmarks of NPR 14/kg for urea, 43/kg for DAP and 31/kg for potash. It sets distinct pricing rules for distributor offices and local outlets. Pokhara published its own FY 2083/84 farmer outlet rates.",
       "next": "Obtain an applicable government or district order specifying the price tier, product and effective period for the Kaski entry.",
       "references": [
         {
@@ -1763,8 +1771,8 @@
           "url": "https://www.pokharakrishi.com/notice"
         },
         {
-          "label": "Signed national procedure, section 11",
-          "url": "https://www.thahakhabar.com/uploads/pdf/ministy-1777634858.pdf#page=6"
+          "label": "Ministry procedure, second amendment, p8 §§10–11",
+          "url": "https://giwmscdnone.gov.np/media/pdf_upload/%E0%A4%85%E0%A4%A8%E0%A5%81%E0%A4%A6%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A5%8B%20%E0%A4%AE%E0%A4%B2%20%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%B0%E0%A4%A3%20%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%AA%E0%A4%A8%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BF%20%E0%A5%A8%E0%A5%A6%E0%A5%AE%E0%A5%A8%20(1)_j5mgzng.pdf#page=8"
         },
         {
           "label": "Earlier supplier notice",

@@ -72,6 +72,11 @@ test('source rate table preserves exact rates, source pages and unknown effectiv
   const row=html.split('<th scope="row">'+r.id+'</th>')[1]?.split('</tr>')[0]??'';
   assert.ok(row.includes('<td>'+r.rateNPR.toFixed(2)+'</td>'));
   if(r.printedPage&&r.pdfPage)assert.ok(row.includes('<td>'+r.printedPage+' / '+r.pdfPage+'</td>'));
+  if(r.sourceId)assert.ok(row.includes('<td>'+r.sourceId+'</td>'));
+  if(r.sourceLocator&&r.pdfPage==null){
+   assert.ok(row.includes(r.sourceLocator));
+   assert.doesNotMatch(row,/<td>\d+ \/ \d+<\/td>/);
+  }
  }
  assert.ok(html.includes('Exact Gregorian effective day is unasserted'));
 });
