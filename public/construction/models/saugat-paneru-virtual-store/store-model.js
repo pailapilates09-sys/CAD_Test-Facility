@@ -1,3 +1,5 @@
+import {apparelShapes,apparelPatterns} from '../virtual-store/apparel-geometry.js';
+
 export const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 export const priceLabel = price => price===null?'Price not listed':'NPR ' + new Intl.NumberFormat('en-IN').format(price);
 export const shelfLabels = {rear:'Back wall',left:'Left corner',right:'Right corner'};
@@ -5,10 +7,12 @@ export const rackKey=(room,shelf)=>room+'/'+shelf;
 const shapes = new Set(['slippers','slides','sandals','sneaker','school-shoe','boot','box','bowl','jug','tray','bucket','dustpan','bin','basket','mug','stool','bottle','brush','open-umbrella','folded-umbrella','stick-umbrella']);
 const hex = /^#[0-9a-f]{6}$/i;
 const idPattern = /^[a-z][a-z0-9-]+$/;
+export const displayDimensions = p => p.type==='apparel'&&p.shelf!=='rear'?{w:p.d,d:p.w}:{w:p.w,d:p.d};
 
 export function buildStore(data) {
  const {grid,display,floors,products} = data;
- if (data.schema !== 'saugat-virtual-store-3' || data.currency !== 'NPR' || grid?.unit !== 'ft' ||
+ const apparel=data.schema==='apparel-virtual-store-1';
+ if ((!apparel&&data.schema!=='saugat-virtual-store-3') || data.currency !== 'NPR' || grid?.unit !== 'ft' ||
      !Number.isFinite(grid.spacing_ft) || grid.spacing_ft <= 0 || !Number.isInteger(grid.columns) || grid.columns < 2 ||
      grid.rows !== 2 || !floors?.length || !products?.length) throw Error('Invalid store layout');
  const step = grid.spacing_ft, length = (grid.columns - 1) * step, depth = step;
@@ -45,13 +49,17 @@ export function buildStore(data) {
  const productMap = new Map();
  const items = products.map(p => {
    const room = roomMap.get(p.room), shelf = room?.shelves.find(s => s.id === p.shelf);
+   const validProduct=apparel?
+    p.type==='apparel'&&apparelShapes.has(p.shape)&&apparelPatterns.has(p.pattern)&&p.fabric?.trim()&&p.sizes?.trim():
+    shapes.has(p.shape)&&['plastic','footwear','umbrella'].includes(p.type);
    if (!idPattern.test(p.id) || productMap.has(p.id) || !p.name?.trim() ||
        (p.brand!==null&&!p.brand?.trim()) || (p.price_npr!==null&&(!Number.isSafeInteger(p.price_npr)||p.price_npr<0)) ||
        !shelf || !Number.isInteger(p.tier) || bands[p.tier] === undefined || !Number.isFinite(p.slot) || p.slot <= 0 || p.slot >= 1 ||
-       !shapes.has(p.shape) || !hex.test(p.color) || !['plastic','footwear','umbrella'].includes(p.type) ||
+       !validProduct || !hex.test(p.color) ||
        !Array.isArray(p.size_ft) || p.size_ft.length !== 3 || !p.size_ft.every(n => Number.isFinite(n) && n > 0)) throw Error('Invalid product ' + p.id);
    const band=bands[p.tier], scale=Math.min(1,(cellHeight-board*2)/p.size_ft[2]);
-   const [w,d,h] = p.size_ft.map(n=>n*scale);
+   const [width,depth,h] = p.size_ft.map(n=>n*scale);
+   const {w,d}=displayDimensions({...p,w:width,d:depth});
    const x = shelf.x + shelf.w*(shelf.along==='x'?p.slot:.5), y = shelf.y + shelf.d*(shelf.along==='y'?p.slot:.5), z=band.low+board;
    if (x-w/2 < shelf.x || x+w/2 > shelf.x+shelf.w || y-d/2 < shelf.y || y+d/2 > shelf.y+shelf.d) throw Error('Product does not fit shelf: ' + p.id);
    const item = {...p,x,y,z,w,d,h,band,floor:room.floor,floorLabel:room.floorLabel,roomName:room.name,roomColor:room.color,category:room.rack_labels[p.shelf]};
@@ -72,8 +80,12 @@ export function buildStore(data) {
        if(!nearest)throw Error('Too many assigned products in '+key+' level '+band.level);
        row[nearest.i]=p;
      }
+     const used=new Set(row.filter(Boolean));
      for(let i=0;i<slots;i++){
-       const assigned=row[i],p=assigned??goods[(band.index+i)%goods.length];
+       const assigned=row[i],start=(band.index+i)%goods.length;
+       const sample=apparel?[...goods.slice(start),...goods.slice(0,start)].find(p=>!used.has(p)):null;
+       const p=assigned??sample??goods[start];
+       used.add(p);
        const scale=Math.min(1,(shelf.along==='x'?shelf.w/slots:shelf.w)*.86/p.w,(shelf.along==='y'?shelf.d/slots:shelf.d)*.84/p.d);
        const x=shelf.x+shelf.w*(shelf.along==='x'?(i+.5)/slots:.5),y=shelf.y+shelf.d*(shelf.along==='y'?(i+.5)/slots:.5);
        const id=room.id+'-'+shelf.id+'-'+band.level+'-'+(i+1);
@@ -83,7 +95,7 @@ export function buildStore(data) {
    }
    racks.set(key,{...shelf,key,room:room.id,floor:room.floor,label:room.rack_labels[shelf.id],goods,facings});
  }
- return {...data,levels,pillars,roomMap,productMap,items,step,length,depth,pillarWidth,bands,cellHeight,board,storeyHeight,slots,racks,stockMap,home};
+ return {...data,apparel,levels,pillars,roomMap,productMap,items,step,length,depth,pillarWidth,bands,cellHeight,board,storeyHeight,slots,racks,stockMap,home};
 }
 
 export function stockItems(store,floor,room='all',shelf='all',level=0){

@@ -95,7 +95,7 @@ function renderScope(){
  $('store-level-select').value=String(level);
  for(const b of document.querySelectorAll('[data-store-floor]'))b.setAttribute('aria-pressed',String(b.dataset.storeFloor===floor.id));
  for(const b of document.querySelectorAll('[data-store-mode]'))b.setAttribute('aria-pressed',String(b.dataset.storeMode===mode));
- $('store-rooms').innerHTML=[{id:'all',name:'All rooms'},...floor.rooms].map(r=>`<button type="button" data-store-room="${r.id}" aria-pressed="${r.id===room}">${e(r.name)}</button>`).join('');
+ $('store-rooms').innerHTML=[{id:'all',name:store.apparel?'All departments':'All rooms'},...floor.rooms].map(r=>`<button type="button" data-store-room="${r.id}" aria-pressed="${r.id===room}">${e(r.name)}</button>`).join('');
  $('store-rack-controls').hidden=mode==='floor';
  const selectedRoom=store.roomMap.get(shelfRoom());
  $('store-rack-select').innerHTML=Object.entries(selectedRoom.rack_labels).map(([id,label])=>`<option value="${id}">${e(label)} · ${shelfLabels[id]}</option>`).join('');
@@ -104,9 +104,10 @@ function renderScope(){
  $('store-catalog-items').innerHTML=renderCatalog(items,selected?.productId);
  $('store-catalog-count').textContent=items.length+' '+(items.length===1?'product':'products');
  const band=store.bands.find(b=>b.level===level);
- $('store-model-scope').textContent=floor.label+' · '+(mode==='floor'?'All rooms':selectedRoom.name+' · '+selectedRoom.rack_labels[activeRack()])+(band?' · '+band.low+'–'+band.high+' ft':'');
+ const section=mode==='floor'?(store.apparel?'All departments':'All rooms'):selectedRoom.name+' · '+selectedRoom.rack_labels[activeRack()];
+ $('store-model-scope').textContent=floor.label+' · '+section+(band?' · '+band.low+'–'+band.high+' ft':'');
  $('store-display-note').textContent=mode==='shelves'?
-  (focused?'Product close-up. Return to stocked shelves to see the whole category.':'Tap an item on the rack. Repeated display stock fills each level of the sample assortment.'):
+  (focused?'Product close-up. Return to stocked shelves to see the whole category.':store.apparel?'Tap a garment to inspect it. Each level shows sample display stock.':'Tap an item on the rack. Repeated display stock fills each level of the sample assortment.'):
   'See the racks in their building positions. On a phone, swipe across the front view or choose a category for a closer look.';
  $('store-zoom').value=1;syncAngle();
  model?.setScene(mode==='shelves'?showcaseScene(store,room,shelf,level,focused?selected?.id:''):storeScene(store,floor.id,room),selected?.id,angle);

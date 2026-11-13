@@ -1,5 +1,6 @@
 // Display geometry in feet. The 2D plan and the 3D scene use the same shelf and product locations.
-import {rackKey,viewScope} from './store-model.js';
+import {displayDimensions,rackKey,viewScope} from './store-model.js';
+import {apparelMeshes} from '../virtual-store/apparel-geometry.js';
 
 const faces = [0,2,1,0,3,2,4,5,6,4,6,7,0,1,5,0,5,4,1,2,6,1,6,5,2,3,7,2,7,6,3,0,4,3,4,7];
 const rgb = color => color.match(/[0-9a-f]{2}/gi).map(h=>parseInt(h,16));
@@ -44,6 +45,7 @@ function profileSolid(id,color,x,y,z,w,d,h,outline){
 }
 
 export function productMeshes(p,{compact=false}={}) {
+ if(p.type==='apparel')return apparelMeshes(p,{compact});
  const id=p.id, color=rgb(p.color), dark=tone(color,.62), light=mix(color,[255,255,255],.36), {x,y,z,w,d,h}=p, out=[];
  const block=(cx,cy,bottom,a,b,c,shade=color)=>out.push(box(id,shade,cx,cy,bottom,a,b,c));
  const rail=(a,b,r,shade=color)=>out.push(bar(id,shade,a,b,r));
@@ -194,7 +196,17 @@ export function storeScene(store,floorId,roomId) {
   }
  }
  for(const p of pillars)push('pillar-'+p.id,trim,p.x,p.y,0,store.pillarWidth,store.pillarWidth,wallHeight+.22);
- for(const p of stock)add.push(...productMeshes(p,{compact:true}));
+ for(const p of stock){
+  const meshes=productMeshes({...p,...displayDimensions(p)},{compact:true});
+  if(p.type==='apparel'&&p.shelf!=='rear'){
+   const turn=p.shelf==='left'?1:-1;
+   for(const m of meshes)for(let i=0;i<m.positions.length;i+=3){
+    const dx=m.positions[i]-p.x,dy=m.positions[i+1]-p.y;
+    m.positions[i]=p.x-turn*dy;m.positions[i+1]=p.y+turn*dx;
+   }
+  }
+  add.push(...meshes);
+ }
  return {...scope,meshes:add,display:'floor'};
 }
 
@@ -205,7 +217,8 @@ export function showcaseScene(store,room,shelf,level=0,focus=''){
  const stock=rack.facings.filter(f=>(!level||f.band.level===level)&&(!focus||f.id===focus));
  const levels=[...new Set(stock.map(f=>f.band.level))],cols=focus?1:store.slots;
  const cellW=focus?3.9:2.24,depth=focus?2.6:1.36,h=focus?2.62:1.08,pitch=h+(focus ? .12 : .13);
- const width=cols*cellW+.16,wood=[187,152,109],back=[235,234,222],metal=[117,125,112];
+ const width=cols*cellW+.16,wood=store.apparel?[166,124,85]:[187,152,109];
+ const back=store.apparel?[228,222,211]:[235,234,222],metal=store.apparel?[113,92,76]:[117,125,112];
  const meshes=[],targets=[];
  const height=levels.length*pitch;
  meshes.push(box('rack-back',back,width/2,depth/2,0,width,.11,height),
@@ -214,8 +227,12 @@ export function showcaseScene(store,room,shelf,level=0,focus=''){
  meshes.push(box('rack-top',wood,width/2,0,height,width,depth,.07));
  for(const f of stock){
   const column=focus?0:f.column,x=.08+cellW*(column+.5),z=levels.indexOf(f.band.level)*pitch;
-  const scale=Math.min(cellW*.86/f.w,depth*.89/f.d,(h-.13)/f.h);
-  const view={...f,x,y:-.04,z:z+.075,w:f.w*scale,d:f.d*scale,h:f.h*scale};
+  const size=displayDimensions(f),scale=Math.min(cellW*.86/size.w,depth*.89/size.d,(h-.13)/f.h);
+  const view={...f,x,y:-.04,z:z+.075,w:size.w*scale,d:size.d*scale,h:f.h*scale};
+  if(store.apparel&&!['folded','socks','briefs'].includes(f.shape)&&!focus){
+   const top=view.z+view.h;
+   meshes.push(bar('hanger',[116,93,76],[x,view.y,top-.04],[x+.035,view.y,top+.10],.012));
+  }
   meshes.push(...productMeshes(view));
   targets.push({id:f.id,x:x-cellW*.48,z:z+.08,w:cellW*.96,h:pitch-.12,y:-depth/2-.01});
  }
