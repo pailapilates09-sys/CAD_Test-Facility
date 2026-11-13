@@ -11,6 +11,13 @@ export const extractionFormats = [
 ];
 
 const stage = (label,state,text) => ({label,state,text});
+const rateLocator = (rate, source) => {
+  if (rate.sourceLocator && rate.pdfPage == null) return rate.sourceLocator;
+  const printed = rate.printedPage ?? source.printedPage;
+  const pdf = rate.pdfPage ?? source.pdfPage;
+  if (printed != null && pdf != null) return `${printed} / ${pdf}`;
+  return rate.sourceLocator ?? '';
+};
 export function buildExtractionView(status) {
   const byId = Object.fromEntries(status.lanes.map(lane=>[lane.id,lane]));
   for(const id of ['MSCS','LSA','AEC','MSCH'])if(!byId[id])throw Error('Missing extraction lane '+id);
@@ -36,9 +43,18 @@ function renderLane(lane,index){
   <div class="xe-panel-title"><div><p class="xe-kicker">${esc(lane.id)} · ${esc(lane.checkpoint)}</p><h3>${esc(lane.title)}</h3></div><span class="xe-state ${lane.id==='MSCH'?'active':'gate'}">${esc(lane.short)}</span></div>
   <ol class="xe-journey" aria-label="${esc(lane.id)} extraction stages">${lane.stages.map((s,i)=>`<li class="${s.state}"><span class="xe-stage-index">0${i+1}</span><b>${esc(s.label)}</b><span>${esc(s.text)}</span><small>${({recorded:'Recorded',active:'In progress',gate:'Needs resolution',pending:'Pending',partial:'Partial'})[s.state]}</small></li>`).join('')}</ol>
   <div class="xe-lane-columns"><section class="xe-now"><p class="xe-kicker">Available now</p><h4>A map of the evidence</h4>${inventory}${measure}<ul>${lane.available.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section><section class="xe-potential"><p class="xe-kicker">Possible next products</p><h4>What this can become</h4><p class="xe-unfinished">These are proposed products, not completed findings.</p>${lane.outputs.map(o=>`<details><summary>${esc(o.title)} <span aria-hidden="true">＋</span></summary><p><b>Needs:</b> ${esc(o.requires)}</p></details>`).join('')}</section></div>
-  ${lane.newRates.length?`<section class="xe-source-rates"><h4>New source-derived rate observations</h4><p>Government published benchmarks · FY${esc(lane.rateSource.fiscalYear)} · ${lane.rateSource.pdfPages ? 'Source pages are listed for each row' : 'PDF p'+esc(lane.rateSource.pdfPage)+' / printed p'+esc(lane.rateSource.printedPage)}. Exact Gregorian effective day is unasserted. Check place, specification and date before applying a benchmark.</p><div class="table-wrap"><table><thead><tr><th scope="col">Observation</th><th scope="col">Material</th><th scope="col">NPR</th><th scope="col">Source unit</th><th scope="col">Printed / PDF page</th></tr></thead><tbody>${lane.newRates.map(r=>`<tr><th scope="row">${esc(r.id)}</th><td>${esc(r.label)}</td><td>${Number(r.rateNPR).toFixed(2)}</td><td>${esc(r.unitDetail??r.unit)}</td><td>${esc(r.printedPage??lane.rateSource.printedPage)} / ${esc(r.pdfPage??lane.rateSource.pdfPage)}</td></tr>`).join('')}</tbody></table></div></section>`:''}
+  ${lane.newRates.length?renderRates(lane.newRates,lane.rateSource):''}
   <div class="xe-next"><div><span class="xe-kicker">What must happen next</span><p><b>${esc(lane.next.batch)} · ${esc(lane.next.target)}</b></p><p>${esc(lane.gate)}</p></div><a href="#current-status" data-open-evidence>Read checkpoint evidence ↗</a></div>
   </article>`;
+}
+
+function renderRates(rates, source) {
+  const hasSourceIds = rates.some(rate => rate.sourceId);
+  const hasWorkbookRows = rates.some(rate => rate.sourceId && rate.pdfPage == null && rate.sourceLocator);
+  const locationHeader = hasWorkbookRows ? 'Page or workbook cell' : 'Printed / PDF page';
+  const scope = hasWorkbookRows ? 'Kaski district seed rates and Pokhara farmer sale rates at 1 km' : source.pdfPages ? 'Source pages are listed for each row' : `PDF p${source.pdfPage} / printed p${source.printedPage}`;
+  const rows = rates.map(rate => `<tr><th scope="row">${esc(rate.id)}</th><td>${esc(rate.label)}</td><td>${Number(rate.rateNPR).toFixed(2)}</td><td>${esc(rate.unitDetail??rate.unit)}</td>${hasSourceIds?`<td>${esc(rate.sourceId)}</td>`:''}<td>${esc(rateLocator(rate,source))}</td></tr>`).join('');
+  return `<section class="xe-source-rates"><h4>New source-derived rate observations</h4><p>Government published benchmarks · FY${esc(source.fiscalYear)} · ${esc(scope)}. Exact Gregorian effective day is unasserted. Check place, specification and date before applying a benchmark.</p><div class="table-wrap"><table><thead><tr><th scope="col">Observation</th><th scope="col">Material</th><th scope="col">NPR</th><th scope="col">Source unit</th>${hasSourceIds?'<th scope="col">Source ID</th>':''}<th scope="col">${locationHeader}</th></tr></thead><tbody>${rows}</tbody></table></div></section>`;
 }
 
 function renderRunWork(status,view){
