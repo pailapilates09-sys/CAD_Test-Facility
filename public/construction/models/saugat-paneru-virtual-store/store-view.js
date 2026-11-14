@@ -74,14 +74,16 @@ export function renderShelfLevels(store,roomId,selected='',level=0,activeRack='a
 }
 
 const clamp=(v,lo,hi)=>Math.min(hi,Math.max(lo,v));
-export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange){
+export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,onCabinetControl){
  const ctx=canvas.getContext('2d');if(!ctx)return null;
- let scene,selected='',orientation='front',camera=cameraPreset(),frame=0,faces=[],map,drag,geometryKey='';
+ let scene,selected='',orientation='front',camera=cameraPreset(),frame=0,faces=[],base=[],bounds,map,drag,geometryKey='';
+ let cabinetButton,opening=1,shot=null;
+ const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
  const targets=new Map(),pickable=new Set();
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(draw);};
  const project=([x,y])=>[x*map.scale+map.ox,y*map.scale+map.oy];
 
- function draw(){
+ function draw(time){
   frame=0;const width=canvas.clientWidth,height=canvas.clientHeight;
   if(!width||!height||!scene)return;
   const ratio=Math.min(devicePixelRatio||1,2);
@@ -89,8 +91,23 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange){
   if(canvas.height!==Math.round(height*ratio))canvas.height=Math.round(height*ratio);
   ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,width,height);
   const key=camera.yaw+'/'+camera.pitch;
-  if(key!==geometryKey){faces=storeFaces(scene.meshes,camera);geometryKey=key;}
-  const b=faceBounds(faces);if(!Number.isFinite(b.left))return;
+  if(key!==geometryKey){base=storeFaces(scene.meshes,camera);bounds=faceBounds(base);geometryKey=key;}
+  if(shot){
+   const progress=clamp((time-shot.start)/shot.duration,0,1);
+   const easing=progress*progress*(3-2*progress);
+   opening=shot.from+(shot.to-shot.from)*easing;
+   if(progress<1)schedule();else shot=null;
+  }
+  const movingDoors=scene.cabinet&&opening<1?storeFaces(scene.cabinet.doors(opening),camera):[];
+  if(movingDoors.length){
+   const ordered=[];let i=0;
+   for(const face of base){
+    while(i<movingDoors.length&&movingDoors[i].depth<face.depth)ordered.push(movingDoors[i++]);
+    ordered.push(face);
+   }
+   faces=ordered.concat(movingDoors.slice(i));
+  }else faces=base;
+  const b=bounds;if(!Number.isFinite(b.left))return;
   const scale=Math.min((width-24)/Math.max(b.right-b.left,.01),(height-28)/Math.max(b.bottom-b.top,.01))*camera.zoom;
   map={scale,ox:width/2-(b.left+b.right)*scale/2,oy:height/2-(b.top+b.bottom)*scale/2};
   for(const f of faces){
@@ -99,21 +116,26 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange){
    ctx.fillStyle=colorCSS(f.itemId===selected&&(orientation==='angled'||scene.display==='floor')?f.rgb.map((v,i)=>v*.7+[255,199,88][i]*.3):f.rgb);
    ctx.fill();ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=.45;ctx.stroke();
   }
-  for(const t of scene.targets??[]){
-   const button=targets.get(t.id);if(!button)continue;
+  function position(t,button,enabled){
    const points=[[t.x,t.y,t.z],[t.x+t.w,t.y,t.z],[t.x,t.y,t.z+t.h],[t.x+t.w,t.y,t.z+t.h]].map(p=>project(projectPoint(p,camera)));
    const [x,y]=[0,1].map(i=>Math.min(...points.map(p=>p[i])));
    const w=Math.max(...points.map(p=>p[0]))-x,h=Math.max(...points.map(p=>p[1]))-y;
-   const visible=orientation==='front'&&x+w>0&&x<width&&y+h>0&&y<height;
-   Object.assign(button.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px'});
+   const bw=button===cabinetButton?Math.max(w,44):w,bh=button===cabinetButton?Math.max(h,44):h;
+   const visible=enabled&&orientation==='front'&&x+w>0&&x<width&&y+h>0&&y<height;
+   Object.assign(button.style,{left:x+(w-bw)/2+'px',top:y+(h-bh)/2+'px',width:bw+'px',height:bh+'px'});
    button.hidden=!visible;button.tabIndex=visible?0:-1;
   }
+  for(const t of scene.targets??[])position(t,targets.get(t.id),opening>=.999);
+  if(cabinetButton)position(scene.cabinet.target,cabinetButton,true);
  }
 
  function hit(ev){
   if(!map)return null;
   const r=canvas.getBoundingClientRect(),point=[(ev.clientX-r.left-map.ox)/map.scale,(ev.clientY-r.top-map.oy)/map.scale];
-  for(let i=faces.length-1;i>=0;i--)if(pointInTriangle(point,faces[i].points))return pickable.has(faces[i].itemId)?faces[i].itemId:null;
+  for(let i=faces.length-1;i>=0;i--)if(pointInTriangle(point,faces[i].points)){
+   const id=faces[i].itemId;
+   return id===scene.cabinet?.target.id||opening>=.999&&pickable.has(id)?id:null;
+  }
   return null;
  }
  function angle(){
@@ -135,7 +157,8 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange){
  canvas.addEventListener('pointerup',ev=>{
   if(drag?.pointer!==ev.pointerId)return;
   const pick=!drag.moved?hit(ev):null;drag=null;
-  if(pick)onSelect(pick);
+  if(pick===scene?.cabinet?.target.id&&pick)onCabinetControl?.();
+  else if(pick)onSelect(pick);
  });
  canvas.addEventListener('pointercancel',()=>{drag=null;});
  canvas.addEventListener('keydown',ev=>{
@@ -149,18 +172,32 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange){
  }
  new ResizeObserver(schedule).observe(canvas);
  return {
-  setScene(next,id,view='front'){
+  setScene(next,id,view='front',{open=true,keepCamera=false}={}){
    scene=next;geometryKey='';map=null;targets.clear();pickable.clear();orientation=view;
-   camera=cameraPreset(orientation,scene.display);
+   opening=open?1:0;shot=null;cabinetButton=null;
+   if(!keepCamera)camera=cameraPreset(orientation,scene.display);
    canvas.parentElement.dataset.display=scene.display;canvas.parentElement.style.setProperty('--rack-rows',scene.rows??1);
    const group=document.createDocumentFragment(),stock=new Map(scene.stock.map(f=>[f.id,f]));
    for(const f of scene.stock)pickable.add(f.id);
+   if(scene.cabinet&&onCabinetControl){
+    cabinetButton=document.createElement('button');cabinetButton.type='button';cabinetButton.className='store-model-target store-cabinet-trigger';cabinetButton.hidden=true;
+    cabinetButton.title='Cabinet controls';cabinetButton.dataset.cabinetTrigger='';cabinetButton.setAttribute('aria-label','Open cabinet controls from the cabinet');
+    cabinetButton.setAttribute('aria-controls','store-cabinet-options');cabinetButton.setAttribute('aria-expanded','false');
+    cabinetButton.addEventListener('click',onCabinetControl);group.append(cabinetButton);
+   }
    for(const t of scene.targets??[]){
     const f=stock.get(t.id),b=document.createElement('button');b.type='button';b.className='store-model-target';b.hidden=true;
     b.dataset.modelFacing=f.id;b.title=f.name;b.setAttribute('aria-label','Inspect '+f.name+' at shelf level '+f.band.level);
     b.addEventListener('click',()=>onSelect(f.id));group.append(b);targets.set(f.id,b);
    }
    targetsRoot.replaceChildren(group);select(id);
+  },
+  setCabinetOpen(open){
+   if(!scene?.cabinet)return;
+   if(reducedMotion.matches){opening=open?1:0;shot=null;}
+   else if(opening!==Number(open))shot={from:opening,to:Number(open),start:performance.now(),duration:280};
+   else shot=null;
+   schedule();
   },
   select,orientation(value){orientation=value;camera=cameraPreset(value,scene?.display);schedule();},
   turn(delta){if(orientation==='front'){angle();camera=cameraPreset('angled',scene?.display);}camera.yaw+=delta;schedule();},
