@@ -1,6 +1,7 @@
 import {projectPoint,projectedFaces,pointInTriangle} from '../layout-designer/design-view3d.js';
 import {displayDimensions,escapeHTML as e,priceLabel,rackKey,shelfLabels} from './store-model.js';
 import {productMeshes} from './store-geometry.js';
+import {drawWardrobeDoors,wardrobeFace,wardrobeLights} from '../nabin-bista-clothes-store/wardrobe-visual.js';
 
 export function renderPlan(store,floor,roomId='all',selected=null,rack='all'){
  const scale=13,left=48,top=55,w=store.length*scale,h=store.depth*scale;
@@ -74,14 +75,24 @@ export function renderShelfLevels(store,roomId,selected='',level=0,activeRack='a
 }
 
 const clamp=(v,lo,hi)=>Math.min(hi,Math.max(lo,v));
-export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange){
+export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,wardrobeHotspot){
  const ctx=canvas.getContext('2d');if(!ctx)return null;
  let scene,selected='',orientation='front',camera=cameraPreset(),frame=0,faces=[],map,drag,geometryKey='';
  const targets=new Map(),pickable=new Set();
+ const doors={position:1,target:1,from:1,start:0,light:wardrobeLights.ice};
+ const reducedMotion=wardrobeHotspot&&matchMedia('(prefers-reduced-motion: reduce)');
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(draw);};
  const project=([x,y])=>[x*map.scale+map.ox,y*map.scale+map.oy];
+ const projectMesh=p=>project(projectPoint(p,camera));
+ const positionButton=(button,corners)=>{
+  const points=corners.map(projectMesh);
+  const [x,y]=[0,1].map(i=>Math.min(...points.map(p=>p[i])));
+  const w=Math.max(...points.map(p=>p[0]))-x,h=Math.max(...points.map(p=>p[1]))-y;
+  Object.assign(button.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px'});
+  return {x,y,w,h};
+ };
 
- function draw(){
+ function draw(now){
   frame=0;const width=canvas.clientWidth,height=canvas.clientHeight;
   if(!width||!height||!scene)return;
   const ratio=Math.min(devicePixelRatio||1,2);
@@ -96,22 +107,35 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange){
   for(const f of faces){
    const points=f.points.map(project);
    ctx.beginPath();ctx.moveTo(...points[0]);ctx.lineTo(...points[1]);ctx.lineTo(...points[2]);ctx.closePath();
-   ctx.fillStyle=colorCSS(f.itemId===selected&&(orientation==='angled'||scene.display==='floor')?f.rgb.map((v,i)=>v*.7+[255,199,88][i]*.3):f.rgb);
+   const selectedFace=f.itemId===selected&&(orientation==='angled'||scene.display==='floor');
+   const color=f.itemId==='wardrobe-led'?doors.light:selectedFace?f.rgb.map((v,i)=>v*.7+[255,199,88][i]*.3):f.rgb;
+   ctx.fillStyle=colorCSS(color);
    ctx.fill();ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=.45;ctx.stroke();
   }
+  if(doors.start){
+   const progress=clamp((now-doors.start)/420,0,1);
+   doors.position=doors.from+(doors.target-doors.from)*(1-Math.pow(1-progress,3));
+   if(progress<1)schedule();else doors.start=0;
+  }
+  if(wardrobeHotspot){
+   const cabinet=scene.wardrobe;
+   wardrobeHotspot.hidden=!cabinet||doors.target===1;
+   if(cabinet){
+    if(doors.position<1)drawWardrobeDoors(ctx,cabinet,projectMesh,doors.position,doors.light);
+    if(!wardrobeHotspot.hidden)positionButton(wardrobeHotspot,wardrobeFace(cabinet));
+   }
+  }
+  const stockVisible=!scene.wardrobe||doors.position===1;
   for(const t of scene.targets??[]){
    const button=targets.get(t.id);if(!button)continue;
-   const points=[[t.x,t.y,t.z],[t.x+t.w,t.y,t.z],[t.x,t.y,t.z+t.h],[t.x+t.w,t.y,t.z+t.h]].map(p=>project(projectPoint(p,camera)));
-   const [x,y]=[0,1].map(i=>Math.min(...points.map(p=>p[i])));
-   const w=Math.max(...points.map(p=>p[0]))-x,h=Math.max(...points.map(p=>p[1]))-y;
-   const visible=orientation==='front'&&x+w>0&&x<width&&y+h>0&&y<height;
-   Object.assign(button.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px'});
+   const {x,y,w,h}=positionButton(button,wardrobeFace(t));
+   const visible=stockVisible&&orientation==='front'&&x+w>0&&x<width&&y+h>0&&y<height;
    button.hidden=!visible;button.tabIndex=visible?0:-1;
   }
  }
 
  function hit(ev){
-  if(!map)return null;
+  if(!map||scene.wardrobe&&doors.position<1)return null;
   const r=canvas.getBoundingClientRect(),point=[(ev.clientX-r.left-map.ox)/map.scale,(ev.clientY-r.top-map.oy)/map.scale];
   for(let i=faces.length-1;i>=0;i--)if(pointInTriangle(point,faces[i].points))return pickable.has(faces[i].itemId)?faces[i].itemId:null;
   return null;
@@ -161,6 +185,16 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange){
     b.addEventListener('click',()=>onSelect(f.id));group.append(b);targets.set(f.id,b);
    }
    targetsRoot.replaceChildren(group);select(id);
+  },
+  setWardrobe(open,light,animate=true){
+   doors.light=wardrobeLights[light];
+   const target=Number(open);
+   if(target!==doors.target){
+    doors.target=target;doors.from=doors.position;
+    doors.start=animate&&scene?.wardrobe&&!reducedMotion?.matches?performance.now():0;
+    if(!doors.start)doors.position=target;
+   }
+   schedule();
   },
   select,orientation(value){orientation=value;camera=cameraPreset(value,scene?.display);schedule();},
   turn(delta){if(orientation==='front'){angle();camera=cameraPreset('angled',scene?.display);}camera.yaw+=delta;schedule();},

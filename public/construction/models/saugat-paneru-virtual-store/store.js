@@ -4,6 +4,7 @@ import {createStore3D,renderPlan,renderCatalog,renderProduct,renderShelfLevels} 
 
 const $=id=>document.getElementById(id);
 const store=buildStore(JSON.parse($('store-data').textContent));
+const wardrobeModule=store.apparel?import('../nabin-bista-clothes-store/wardrobe.js'):null;
 const params=new URL(location.href).searchParams;
 const linked=store.stockMap.get(params.get('position')),item=store.productMap.get(linked?.productId??params.get('item'));
 let floor=store.levels.find(l=>l.id===(item?.floor??params.get('floor')))??store.levels[0];
@@ -14,7 +15,8 @@ let level=mode==='shelves'&&store.bands.some(b=>b.level===Number(params.get('lev
 let angle=params.get('camera')==='angled'?'angled':'front',focused=false;
 let selected=linked??(item?store.home.get(item.id):null);
 const panel=$('store-3d-shop'),slot=$('store-3d-slot'),dialog=$('store-full-dialog');
-const model=createStore3D($('store-canvas'),$('store-targets'),id=>selectFacing(id),next=>{angle=next;syncAngle();saveView();});
+const model=createStore3D($('store-canvas'),$('store-targets'),id=>selectFacing(id),next=>{angle=next;syncAngle();saveView();},$('wardrobe-hotspot'));
+let wardrobe;
 const products=()=>floorItems(store,floor.id,room,level,shelf);
 const rackFacings=()=>stockItems(store,floor.id,room,shelf,level);
 const shelfRoom=()=>room==='all'?(selected?.room??floor.rooms[0].id):room;
@@ -33,7 +35,7 @@ function syncAngle(){
  for(const b of document.querySelectorAll('[data-store-camera]'))b.setAttribute('aria-pressed',String(b.dataset.storeCamera===angle));
 }
 function showDetails(){
- if(dialog.open)return;
+ if(wardrobe?.showComparison()||dialog.open)return;
  const detail=$('store-detail'),r=detail.getBoundingClientRect();
  if(r.bottom>innerHeight-82)detail.scrollIntoView({block:'end'});
  else if(r.top<70)detail.scrollIntoView({block:'start'});
@@ -49,7 +51,7 @@ function renderSelection(){
  $('store-detail').innerHTML=renderProduct(p,selected);
  $('store-detail').dataset.selectedItem=p?.id??'';
  $('store-detail').dataset.selectedFacing=selected?.id??'';
- $('store-item-focus').hidden=!p;
+ $('store-item-focus').hidden=!p||Boolean(wardrobe);
  $('store-item-focus').textContent=focused?'Back to stocked shelves':'Enlarge this item';
  $('store-item-focus').setAttribute('aria-pressed',String(focused));
  for(const el of document.querySelectorAll('[data-catalog-item],[data-elevation-facing]')){
@@ -58,10 +60,12 @@ function renderSelection(){
   if(el.dataset.catalogItem)el.closest('tr').classList.toggle('is-selected',active);
  }
  model?.select(selected?.id);
+ wardrobe?.update({mode,focused,selected,product:p});
 }
 function selectFacing(id,fromList=false){
  const facing=store.stockMap.get(id);
  if(!facing||facing.floor!==floor.id)return;
+ wardrobe?.reveal();
  const previous=selected,changedRack=mode==='shelves'&&(facing.room!==room||facing.shelf!==shelf)||fromList&&mode==='floor';
  selected=facing;
  if(changedRack){
@@ -109,6 +113,7 @@ function renderScope(){
  $('store-display-note').textContent=mode==='shelves'?
   (focused?'Product close-up. Return to stocked shelves to see the whole category.':store.apparel?'Tap a garment to inspect it. Each level shows sample display stock.':'Tap an item on the rack. Repeated display stock fills each level of the sample assortment.'):
   'See the racks in their building positions. On a phone, swipe across the front view or choose a category for a closer look.';
+ if(store.apparel)$('store-canvas').parentElement.dataset.display=mode==='floor'?'floor':focused?'item':'rack';
  $('store-zoom').value=1;syncAngle();
  model?.setScene(mode==='shelves'?showcaseScene(store,room,shelf,level,focused?selected?.id:''):storeScene(store,floor.id,room),selected?.id,angle);
  renderSelection();
@@ -117,12 +122,14 @@ function setLevel(n){
  if(n!==0&&!store.bands.some(b=>b.level===n))return;
  const active=shelfRoom(),rack=activeRack();
  room=active;shelf=rack;mode='shelves';level=n;focused=false;
- renderScope();saveView();
+  if(mode==='shelves')wardrobe?.reveal();
+  renderScope();saveView();
 }
 function showRack(key){
  const r=store.racks.get(key);
  if(!r||r.floor!==floor.id)return;
  room=r.room;shelf=r.id;mode='shelves';level=0;focused=false;
+ wardrobe?.reveal();
  renderScope();saveView();
 }
 
@@ -134,9 +141,11 @@ document.addEventListener('click',ev=>{
   room=mode==='shelves'?floor.rooms[0].id:'all';shelf=mode==='shelves'?'rear':'all';level=0;focused=false;selected=null;renderScope();saveView();
  }else if(r&&room!==r.dataset.storeRoom){
   room=r.dataset.storeRoom;mode=room==='all'?'floor':'shelves';shelf=mode==='shelves'?'rear':'all';level=0;focused=false;
+  if(mode==='shelves')wardrobe?.reveal();
   renderScope();saveView();$('store-rooms').querySelector('[aria-pressed="true"]').focus({preventScroll:true});
  }else if(m&&mode!==m.dataset.storeMode){
   const sr=shelfRoom(),ar=activeRack();mode=m.dataset.storeMode;
+  if(mode==='shelves')wardrobe?.reveal();
   room=mode==='floor'?'all':sr;shelf=mode==='floor'?'all':ar;level=0;focused=false;renderScope();saveView();
  }else if(a){
   angle=a.dataset.storeCamera;model?.orientation(angle);$('store-zoom').value=1;syncAngle();saveView();
@@ -156,10 +165,14 @@ $('store-plan-wrap').addEventListener('keydown',ev=>{
 });
 $('store-item-focus').addEventListener('click',()=>{
  if(!selected)return;
- focused=!focused;room=selected.room;shelf=selected.shelf;mode='shelves';
- renderScope();saveView();
+ setGarmentFocus(!focused);
  if(!dialog.open)panel.scrollIntoView({block:'start'});
 });
+function setGarmentFocus(value){
+ if(!selected||focused===value)return;
+ focused=value;room=selected.room;shelf=selected.shelf;mode='shelves';
+ renderScope();saveView();
+}
 $('store-left').addEventListener('click',()=>model?.turn(-18));
 $('store-right').addEventListener('click',()=>model?.turn(18));
 $('store-fit').addEventListener('click',()=>{model?.fit();$('store-zoom').value=1;});
@@ -175,4 +188,8 @@ dialog.addEventListener('close',()=>{
  slot.append(panel);expand.textContent='Expand 3D';expand.setAttribute('aria-expanded','false');expand.focus({preventScroll:true});
 });
 $('store-3d-unavailable').hidden=Boolean(model);
+if(wardrobeModule){
+ const {mountWardrobe}=await wardrobeModule;
+ wardrobe=mountWardrobe(panel,{model,dialog,setGarmentFocus,initiallyOpen:Boolean(item)||!model});
+}
 renderScope();

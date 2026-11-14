@@ -6,13 +6,27 @@ import {renderPlan,renderCatalog,renderProduct,renderShelfLevels} from '../publi
 
 export async function buildVirtualStores(dist){
  const shared=new URL(PROJECTS.saugat.path,dist);
- const files=['store.js','store-model.js','store-view.js','store-geometry.js','store.css','../layout-designer/design-view3d.js','../virtual-store/apparel-geometry.js'];
+ const wardrobeAssets=['wardrobe-visual.js','wardrobe.js'].map(file=>'../'+PROJECTS.nabin.path.split('/').at(-2)+'/'+file);
+ const files=['store.js','store-model.js','store-view.js','store-geometry.js','store.css','../layout-designer/design-view3d.js','../virtual-store/apparel-geometry.js',...wardrobeAssets];
  const input=Object.fromEntries(await Promise.all(files.map(async file=>[file,await readFile(new URL(file,shared),'utf8')])));
  const revision=createHash('sha256').update(JSON.stringify(input)).digest('hex').slice(0,16);
- for(const file of files.filter(f=>f.endsWith('.js')&&!f.startsWith('../'))){
-  await writeFile(new URL(file,shared),input[file].replace(/(from\s*['"])(\.\.?\/[^'"]+\.js)(['"])/g,`$1$2?v=${revision}$3`));
+ for(const file of files.filter(f=>f.endsWith('.js')&&(!f.startsWith('../')||f.endsWith('/wardrobe.js')))){
+  await writeFile(new URL(file,shared),input[file].replace(/((?:from\s*|import\(\s*)['"])(\.\.?\/[^'"]+\.js)(['"])/g,`$1$2?v=${revision}$3`));
  }
  for(const project of [PROJECTS.saugat,PROJECTS.nabin])await buildStorePage(dist,project,revision);
+}
+
+function wardrobeConsole(){
+ return `<div class="wardrobe-console" aria-label="Wardrobe controls">
+  <button type="button" id="wardrobe-toggle" class="wardrobe-power" aria-expanded="false" aria-controls="wardrobe-actions"><span class="wardrobe-power-dot" aria-hidden="true"></span><span data-door-label>Open wardrobe</span></button>
+  <label class="wardrobe-light"><span>Lighting</span><select id="wardrobe-light"><option value="ice">Ice blue</option><option value="amber">Warm amber</option><option value="neutral">Neutral white</option></select></label>
+  <div id="wardrobe-actions" class="wardrobe-actions" hidden>
+   <button type="button" id="wardrobe-browse">Browse rack</button>
+   <button type="button" id="wardrobe-inspect" aria-pressed="false">Inspect garment</button>
+   <button type="button" id="wardrobe-compare" aria-expanded="false" aria-controls="wardrobe-comparison">Compare garments</button>
+  </div>
+  <p id="wardrobe-compare-progress" role="status" hidden></p>
+ </div>`;
 }
 
 async function buildStorePage(dist,project,revision){
@@ -23,7 +37,7 @@ async function buildStorePage(dist,project,revision){
  const sharedAssets=apparel?'../'+PROJECTS.saugat.path.split('/').at(-2)+'/':'./';
  const themeRevision=apparel?createHash('sha256').update(await readFile(new URL('showroom.css',base))).digest('hex').slice(0,16):null;
  const description=apparel?
-  'Explore two floors of sample apparel. Browse stocked racks from the front and locate the selected garment in the 2D floor plan and product table.':
+  'Open the interactive wardrobe, inspect or compare sample garments, and find them in the linked floor plan and product table.':
   'Browse stocked racks from the front, explore footwear, umbrellas and household goods, and find each product on the plan and shelf elevation.';
  const heading=(number,label)=>apparel?label:`<span>${number}</span> ${label}`;
  const floor=store.levels[0],room=floor.rooms[0],items=floorItems(store,floor.id,room.id,0,'rear'),active=items[0],facing=store.home.get(active.id),title=e(store.title);
@@ -38,8 +52,8 @@ async function buildStorePage(dist,project,revision){
 <main id="main" class="container store-page${apparel?' apparel-store':''}">
  <header class="store-intro">
   <p class="store-eyebrow">${apparel?'Apparel showroom · Concept layout':'Virtual shop · Stocked racks'}</p><h1>${title}</h1>
-  <p>${apparel?'Choose a department and tap a garment to see its fabric, sizes, sample price and position.':'Choose a room and category, then tap a product on the shelf. The front view shows the rack straight on.'}</p>
-  <div class="store-tags">${apparel?`<span class="store-tag">${store.levels.length} floors</span><span class="store-tag">${store.racks.size} stocked racks</span><span class="store-tag store-sample">${store.items.length} sample garments</span>`:`<span class="store-tag">${store.levels.length} storeys · ${store.storeyHeight} ft each</span><span class="store-tag">${store.bands.length} shelf levels · ${store.cellHeight} ft each</span><span class="store-tag store-sample">${store.items.length} sample products</span>`}</div>
+  <p>${apparel?'Open the wardrobe to browse, inspect, or compare garments. Each selection is linked to the floor plan and product table.':'Choose a room and category, then tap a product on the shelf. The front view shows the rack straight on.'}</p>
+  <div class="store-tags">${apparel?`<span class="store-tag">${store.levels.length} floors · ${store.racks.size} racks · ${store.items.length} sample garments</span><a class="wardrobe-jump" href="#store-3d-shop">Go to wardrobe <span aria-hidden="true">↓</span></a>`:`<span class="store-tag">${store.levels.length} storeys · ${store.storeyHeight} ft each</span><span class="store-tag">${store.bands.length} shelf levels · ${store.cellHeight} ft each</span><span class="store-tag store-sample">${store.items.length} sample products</span>`}</div>
  </header>
  <div id="store-workspace" data-floor="${floor.id}" data-view="shelves">
   <div class="store-controls" aria-label="Store navigation">
@@ -50,10 +64,11 @@ async function buildStorePage(dist,project,revision){
     <label class="store-level-label"><span class="store-eyebrow">Shelf height</span><select id="store-level-select"><option value="0">All heights</option>${store.bands.map(b=>`<option value="${b.level}">L${b.level} · ${b.low}–${b.high} ft</option>`).join('')}</select></label></div>
   </div>
   <div id="store-3d-slot">
-   <section class="store-panel" id="store-3d-shop" data-camera="front">
-    <div class="store-panel-head"><div><h2>${heading('01',apparel?'3D showroom':'3D shop')}</h2><p id="store-model-scope">${e(floor.label)} · ${e(room.name)} · ${e(room.rack_labels.rear)}</p></div>
+   <section class="store-panel${apparel?' wardrobe-panel':''}" id="store-3d-shop" data-camera="front"${apparel?' data-wardrobe-open="false" data-wardrobe-light="ice"':''}>
+    <div class="store-panel-head"><div><h2>${heading('01',apparel?'Interactive wardrobe':'3D shop')}</h2><p id="store-model-scope">${e(floor.label)} · ${e(room.name)} · ${e(room.rack_labels.rear)}</p></div>
      <div class="store-button-row store-mode-buttons" role="group" aria-label="3D view">${buttons([{id:'shelves',name:'Stocked shelves'},{id:'floor',name:'Floor overview'}],'mode','shelves')}</div>
     </div>
+    ${apparel?wardrobeConsole():''}
     <div class="store-camera-tools" aria-label="3D camera controls">
      <div class="store-button-row" role="group" aria-label="Camera angle">${buttons([{id:'front',name:'Front'},{id:'angled',name:'Angled'}],'camera','front')}</div>
      <div class="store-button-row store-angle-only"><button type="button" id="store-left" aria-label="Rotate left">↶ Left</button><button type="button" id="store-right" aria-label="Rotate right">Right ↷</button></div>
@@ -64,19 +79,21 @@ async function buildStorePage(dist,project,revision){
     <div class="store-stage">
      <div class="store-canvas-area">
       <div class="store-scene-viewport"><div class="store-scene" data-display="rack" data-camera="front">
-       <canvas id="store-canvas" tabindex="0" aria-label="3D ${apparel?'showroom':'shop'}. Select a shelf cell or product, or use arrow keys to rotate."></canvas>
+       <canvas id="store-canvas" tabindex="0" aria-label="3D ${apparel?'wardrobe':'shop'}. Select a shelf cell or product, or use arrow keys to rotate."></canvas>
        <div id="store-targets" class="store-targets" aria-label="Select products on this rack"></div>
+       ${apparel?'<button type="button" id="wardrobe-hotspot" aria-label="Open wardrobe doors" aria-expanded="false" aria-controls="wardrobe-actions" hidden><span aria-hidden="true" class="wardrobe-reticle"><i></i></span><span>Open wardrobe</span></button>':''}
       </div></div>
-      <p class="store-display-note" id="store-display-note" role="status">${apparel?'Tap a garment to inspect it. Each level shows sample display stock.':'Tap an item on the rack. Repeated display stock fills each level of the sample assortment.'}</p>
+      <p class="store-display-note" id="store-display-note" role="status">${apparel?'Tap the glass doors to open the wardrobe.':'Tap an item on the rack. Repeated display stock fills each level of the sample assortment.'}</p>
       <p id="store-3d-unavailable" class="store-panel-note" hidden>The 3D viewer is unavailable here. Choose a product from the shelf elevation or list.</p>
      </div>
      <div class="store-stage-detail">
       <div id="store-detail" class="store-detail" role="region" aria-label="Selected product" aria-live="polite" aria-atomic="true" data-selected-item="${active?.id??''}">${renderProduct(active,facing)}</div>
-      <button type="button" id="store-item-focus" aria-pressed="false">Enlarge this item</button>
+      <button type="button" id="store-item-focus" aria-pressed="false"${apparel?' hidden':''}>Enlarge this item</button>
       ${apparel?'<a class="store-elevation-link" href="#store-floor-plan">Find on the floor plan ↓</a>':''}
       <a class="store-elevation-link" href="#store-shelf-levels">See all ${store.bands.length} shelf levels ↓</a>
      </div>
     </div>
+    ${apparel?'<section id="wardrobe-comparison" aria-labelledby="wardrobe-comparison-title" hidden><div class="wardrobe-comparison-head"><h3 id="wardrobe-comparison-title">Garment comparison</h3><button type="button" id="wardrobe-end-comparison">End comparison</button></div><p id="wardrobe-compare-hint">Choose another garment in the wardrobe or product table.</p><div id="wardrobe-comparison-items" aria-live="polite"></div></section>':''}
    </section>
   </div>
   <section id="store-products" class="store-catalog">
@@ -97,7 +114,7 @@ async function buildStorePage(dist,project,revision){
    </section>
   </div>
  </div>
- <dialog id="store-full-dialog" class="store-full-dialog" aria-label="Expanded 3D shop"></dialog>
+ <dialog id="store-full-dialog" class="store-full-dialog${apparel?' wardrobe-dialog':''}" aria-label="Expanded 3D ${apparel?'wardrobe':'shop'}"></dialog>
  <details class="store-source" id="store-layout-basis"><summary>Layout basis and model data</summary>
   ${apparel?`<p>${e(raw.layout_basis)} The model uses two ${store.storeyHeight} ft storeys, eight pillar positions and ${store.step} ft centre-to-centre spacing.</p>
   <p>${e(raw.catalog_basis)}</p>

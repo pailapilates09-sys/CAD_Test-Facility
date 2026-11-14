@@ -58,3 +58,13 @@ test('the straight-on rack shows a selectable surface for every garment shape',(
   }
  }
 });
+
+test('the wardrobe door face fits the stocked rack and clears the standalone garment',()=>{
+ const rack=showcaseScene(store,'casualwear','rear');
+ assert.ok(rack.meshes.some(m=>m.itemId==='wardrobe-led'));
+ assert.ok(rack.targets.every(t=>t.x>=rack.wardrobe.x&&t.x+t.w<=rack.wardrobe.w&&t.z+t.h<=rack.wardrobe.h));
+ const closeup=showcaseScene(store,'casualwear','rear',0,rack.stock[0].id);
+ assert.equal(closeup.wardrobe,null);
+ assert.deepEqual(closeup.targets,[]);
+ assert.deepEqual(closeup.stock,[rack.stock[0]]);
+});

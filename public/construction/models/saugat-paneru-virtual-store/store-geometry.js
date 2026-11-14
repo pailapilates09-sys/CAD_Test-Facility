@@ -210,6 +210,32 @@ export function storeScene(store,floorId,roomId) {
  return {...scope,meshes:add,display:'floor'};
 }
 
+function wardrobeFrame(width,depth,height,levels,pitch) {
+ const shell=[45,61,76], trim=[91,112,127], brass=[194,140,84], light=[131,225,252];
+ const meshes=[];
+ const add=(id,color,x,y,z,w,d,h)=>meshes.push(box(id,color,x,y,z,w,d,h));
+ const mid=width/2,front=-depth/2;
+ add('wardrobe-back',[139,155,167],mid,depth/2,0,width,.12,height);
+ add('wardrobe-cap',shell,mid,0,height,width+.38,depth+.22,.40);
+ add('wardrobe-plinth',shell,mid,0,-.28,width+.38,depth+.23,.32);
+ add('wardrobe-cap-trim',trim,mid,front-.12,height+.28,width+.26,.08,.075);
+ add('wardrobe-plinth-trim',trim,mid,front-.13,-.24,width+.27,.08,.065);
+ add('wardrobe-led',light,mid,front-.14,height+.12,width*.40,.055,.035);
+ for(const x of [-.085,width+.085]){
+  add('wardrobe-post',shell,x,0,0,.24,depth+.07,height);
+  add('wardrobe-trim',trim,x,front-.045,0,.175,.065,height);
+  add('wardrobe-led',light,x,front-.083,height*.10,.033,.038,height*.80);
+  add('wardrobe-inlay',brass,x,front-.095,.08,.14,.044,.14);
+  add('wardrobe-inlay',brass,x,front-.095,height-.21,.14,.044,.14);
+ }
+ for(let i=0;i<levels;i++){
+  const z=i*pitch;
+  add('wardrobe-shelf',trim,mid,0,z,width,depth,.073);
+  add('wardrobe-shelf-edge',shell,mid,front-.03,z-.01,width,.085,.065);
+ }
+ return meshes;
+}
+
 // Straighten each rack to face its aisle. Extra spacing here is for browsing;
 // the floor model and plan keep the real rack coordinates.
 export function showcaseScene(store,room,shelf,level=0,focus=''){
@@ -217,24 +243,27 @@ export function showcaseScene(store,room,shelf,level=0,focus=''){
  const stock=rack.facings.filter(f=>(!level||f.band.level===level)&&(!focus||f.id===focus));
  const levels=[...new Set(stock.map(f=>f.band.level))],cols=focus?1:store.slots;
  const cellW=focus?3.9:2.24,depth=focus?2.6:1.36,h=focus?2.62:1.08,pitch=h+(focus ? .12 : .13);
- const width=cols*cellW+.16,wood=store.apparel?[166,124,85]:[187,152,109];
- const back=store.apparel?[228,222,211]:[235,234,222],metal=store.apparel?[113,92,76]:[117,125,112];
+ const width=cols*cellW+.16,wood=[187,152,109],back=[235,234,222],metal=[117,125,112];
  const meshes=[],targets=[];
  const height=levels.length*pitch;
- meshes.push(box('rack-back',back,width/2,depth/2,0,width,.11,height),
-  box('rack-side-left',metal,.04,0,0,.08,depth,height),box('rack-side-right',metal,width-.04,0,0,.08,depth,height));
- for(const [i] of levels.entries())meshes.push(box('rack-board',wood,width/2,0,i*pitch,width,depth,.073));
- meshes.push(box('rack-top',wood,width/2,0,height,width,depth,.07));
+ const wardrobe=store.apparel&&!focus?{x:0,y:-depth/2,z:0,w:width,h:height}:null;
+ if(wardrobe)meshes.push(...wardrobeFrame(width,depth,height,levels.length,pitch));
+ else if(!store.apparel){
+  meshes.push(box('rack-back',back,width/2,depth/2,0,width,.11,height),
+   box('rack-side-left',metal,.04,0,0,.08,depth,height),box('rack-side-right',metal,width-.04,0,0,.08,depth,height));
+  for(const [i] of levels.entries())meshes.push(box('rack-board',wood,width/2,0,i*pitch,width,depth,.073));
+  meshes.push(box('rack-top',wood,width/2,0,height,width,depth,.07));
+ }
  for(const f of stock){
   const column=focus?0:f.column,x=.08+cellW*(column+.5),z=levels.indexOf(f.band.level)*pitch;
   const size=displayDimensions(f),scale=Math.min(cellW*.86/size.w,depth*.89/size.d,(h-.13)/f.h);
   const view={...f,x,y:-.04,z:z+.075,w:size.w*scale,d:size.d*scale,h:f.h*scale};
   if(store.apparel&&!['folded','socks','briefs'].includes(f.shape)&&!focus){
    const top=view.z+view.h;
-   meshes.push(bar('hanger',[116,93,76],[x,view.y,top-.04],[x+.035,view.y,top+.10],.012));
+   meshes.push(bar('hanger',[53,73,86],[x,view.y,top-.04],[x+.035,view.y,top+.10],.012));
   }
   meshes.push(...productMeshes(view));
-  targets.push({id:f.id,x:x-cellW*.48,z:z+.08,w:cellW*.96,h:pitch-.12,y:-depth/2-.01});
+  if(!store.apparel||!focus)targets.push({id:f.id,x:x-cellW*.48,z:z+.08,w:cellW*.96,h:pitch-.12,y:-depth/2-.01});
  }
- return {meshes,stock,targets,display:focus?'item':'rack',rows:levels.length};
+ return {meshes,stock,targets,wardrobe,display:focus?'item':'rack',rows:levels.length};
 }
