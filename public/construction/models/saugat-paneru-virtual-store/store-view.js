@@ -1,6 +1,7 @@
 import {projectPoint,projectedFaces,pointInTriangle} from '../layout-designer/design-view3d.js';
 import {displayDimensions,escapeHTML as e,priceLabel,rackKey,shelfLabels} from './store-model.js';
 import {productMeshes} from './store-geometry.js';
+import {drawWardrobeDoors,wardrobeFace,wardrobeLights} from '../nabin-bista-clothes-store/wardrobe-visual.js';
 
 export function renderPlan(store,floor,roomId='all',selected=null,rack='all'){
  const scale=13,left=48,top=55,w=store.length*scale,h=store.depth*scale;
@@ -74,14 +75,34 @@ export function renderShelfLevels(store,roomId,selected='',level=0,activeRack='a
 }
 
 const clamp=(v,lo,hi)=>Math.min(hi,Math.max(lo,v));
-export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,onCabinetControl){
+export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,{onCabinetControl,wardrobeHotspot}={}){
  const ctx=canvas.getContext('2d');if(!ctx)return null;
  let scene,selected='',orientation='front',camera=cameraPreset(),frame=0,faces=[],base=[],bounds,map,drag,geometryKey='';
- let cabinetButton,opening=1,shot=null;
+ let cabinetButton,opening=1,doorTarget=1,shot=null,wardrobeLight=wardrobeLights.ice;
  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
  const targets=new Map(),pickable=new Set();
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(draw);};
  const project=([x,y])=>[x*map.scale+map.ox,y*map.scale+map.oy];
+ const projectMesh=p=>project(projectPoint(p,camera));
+ function positionButton(button,surface,enabled,width,height,minSize=0){
+  const points=wardrobeFace(surface).map(projectMesh);
+  const [x,y]=[0,1].map(i=>Math.min(...points.map(p=>p[i])));
+  const w=Math.max(...points.map(p=>p[0]))-x,h=Math.max(...points.map(p=>p[1]))-y;
+  const bw=Math.max(w,minSize),bh=Math.max(h,minSize);
+  Object.assign(button.style,{left:x+(w-bw)/2+'px',top:y+(h-bh)/2+'px',width:bw+'px',height:bh+'px'});
+  const visible=enabled&&x+w>0&&x<width&&y+h>0&&y<height;
+  button.hidden=!visible;button.tabIndex=visible?0:-1;
+ }
+ function setDoors(open){
+  const target=Number(open);
+  if(target!==doorTarget){
+   doorTarget=target;
+   shot=(scene?.cabinet||scene?.wardrobe)&&!reducedMotion.matches?
+    {from:opening,to:target,start:performance.now(),duration:scene.wardrobe?420:280}:null;
+   if(!shot)opening=target;
+  }
+  schedule();
+ }
 
  function draw(time){
   frame=0;const width=canvas.clientWidth,height=canvas.clientHeight;
@@ -113,20 +134,18 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,onCabine
   for(const f of faces){
    const points=f.points.map(project);
    ctx.beginPath();ctx.moveTo(...points[0]);ctx.lineTo(...points[1]);ctx.lineTo(...points[2]);ctx.closePath();
-   ctx.fillStyle=colorCSS(f.itemId===selected&&(orientation==='angled'||scene.display==='floor')?f.rgb.map((v,i)=>v*.7+[255,199,88][i]*.3):f.rgb);
+   const selectedFace=f.itemId===selected&&(orientation==='angled'||scene.display==='floor');
+   const color=f.itemId==='wardrobe-led'?wardrobeLight:selectedFace?f.rgb.map((v,i)=>v*.7+[255,199,88][i]*.3):f.rgb;
+   ctx.fillStyle=colorCSS(color);
    ctx.fill();ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=.45;ctx.stroke();
   }
-  function position(t,button,enabled){
-   const points=[[t.x,t.y,t.z],[t.x+t.w,t.y,t.z],[t.x,t.y,t.z+t.h],[t.x+t.w,t.y,t.z+t.h]].map(p=>project(projectPoint(p,camera)));
-   const [x,y]=[0,1].map(i=>Math.min(...points.map(p=>p[i])));
-   const w=Math.max(...points.map(p=>p[0]))-x,h=Math.max(...points.map(p=>p[1]))-y;
-   const bw=button===cabinetButton?Math.max(w,44):w,bh=button===cabinetButton?Math.max(h,44):h;
-   const visible=enabled&&orientation==='front'&&x+w>0&&x<width&&y+h>0&&y<height;
-   Object.assign(button.style,{left:x+(w-bw)/2+'px',top:y+(h-bh)/2+'px',width:bw+'px',height:bh+'px'});
-   button.hidden=!visible;button.tabIndex=visible?0:-1;
+  if(scene.wardrobe&&opening<1)drawWardrobeDoors(ctx,scene.wardrobe,projectMesh,opening,wardrobeLight);
+  for(const t of scene.targets??[])positionButton(targets.get(t.id),t,opening>=.999&&orientation==='front',width,height);
+  if(cabinetButton)positionButton(cabinetButton,scene.cabinet.target,orientation==='front',width,height,44);
+  if(wardrobeHotspot){
+   wardrobeHotspot.hidden=!scene.wardrobe||doorTarget===1;
+   if(!wardrobeHotspot.hidden)positionButton(wardrobeHotspot,scene.wardrobe,true,width,height);
   }
-  for(const t of scene.targets??[])position(t,targets.get(t.id),opening>=.999);
-  if(cabinetButton)position(scene.cabinet.target,cabinetButton,true);
  }
 
  function hit(ev){
@@ -174,7 +193,7 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,onCabine
  return {
   setScene(next,id,view='front',{open=true,keepCamera=false}={}){
    scene=next;geometryKey='';map=null;targets.clear();pickable.clear();orientation=view;
-   opening=open?1:0;shot=null;cabinetButton=null;
+   opening=doorTarget=Number(open);shot=null;cabinetButton=null;
    if(!keepCamera)camera=cameraPreset(orientation,scene.display);
    canvas.parentElement.dataset.display=scene.display;canvas.parentElement.style.setProperty('--rack-rows',scene.rows??1);
    const group=document.createDocumentFragment(),stock=new Map(scene.stock.map(f=>[f.id,f]));
@@ -192,13 +211,11 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,onCabine
    }
    targetsRoot.replaceChildren(group);select(id);
   },
-  setCabinetOpen(open){
-   if(!scene?.cabinet)return;
-   if(reducedMotion.matches){opening=open?1:0;shot=null;}
-   else if(opening!==Number(open))shot={from:opening,to:Number(open),start:performance.now(),duration:280};
-   else shot=null;
-   schedule();
+  setWardrobe(open,light){
+   wardrobeLight=wardrobeLights[light];
+   setDoors(open);
   },
+  setCabinetOpen:setDoors,
   select,orientation(value){orientation=value;camera=cameraPreset(value,scene?.display);schedule();},
   turn(delta){if(orientation==='front'){angle();camera=cameraPreset('angled',scene?.display);}camera.yaw+=delta;schedule();},
   zoom(value){camera.zoom=value;schedule();},fit(){camera=cameraPreset(orientation,scene?.display);schedule();}
