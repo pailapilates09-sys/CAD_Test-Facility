@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {buildStore,floorItems,stockItems} from '../public/construction/models/saugat-paneru-virtual-store/store-model.js';
-import {storeScene,showcaseScene} from '../public/construction/models/saugat-paneru-virtual-store/store-geometry.js';
+import {storeScene,showcaseScene,cabinetControlId} from '../public/construction/models/saugat-paneru-virtual-store/store-geometry.js';
 import {renderPlan,renderShelfLevels,renderCatalog,renderProduct,cameraPreset,storeFaces} from '../public/construction/models/saugat-paneru-virtual-store/store-view.js';
 import {projectPoint,pointInTriangle} from '../public/construction/models/layout-designer/design-view3d.js';
 const base=new URL('../public/construction/models/saugat-paneru-virtual-store/',import.meta.url);
@@ -84,6 +84,30 @@ test('selecting a level or a single product keeps the same placement identity',(
  const level=showcaseScene(store,f.room,f.shelf,f.band.level);
  assert.equal(level.stock.length,3);
  assert.ok(level.stock.includes(f));
+});
+
+test('opening either cabinet finish reveals the same selectable stock behind functional shutters',()=>{
+ const camera=cameraPreset(),rack=store.racks.get('footwear/rear');
+ const classic=showcaseScene(store,rack.room,rack.id);
+ assert.equal(classic.cabinet,undefined);
+ const visibleIds=(meshes,ids)=>{
+  const faces=storeFaces(meshes,camera).reverse();
+  return new Set(faces.filter(f=>ids.has(f.itemId)&&(()=>{
+   const centre=[0,1].map(i=>f.points.reduce((n,p)=>n+p[i],0)/3);
+   return faces.find(other=>pointInTriangle(centre,other.points))?.itemId===f.itemId;
+  })()).map(f=>f.itemId));
+ };
+ for(const finish of ['armor','blueprint']){
+  const scene=showcaseScene(store,rack.room,rack.id,0,'',finish);
+  const productIds=new Set(scene.stock.map(f=>f.id));
+  assert.deepEqual(scene.stock,classic.stock);
+  assert.deepEqual(scene.targets,classic.targets);
+  assert.equal(scene.cabinet.target.id,cabinetControlId);
+  assert.equal(visibleIds(scene.meshes,new Set([cabinetControlId])).size,1);
+  assert.deepEqual(visibleIds(scene.meshes,productIds),productIds);
+  assert.equal(visibleIds([...scene.meshes,...scene.cabinet.doors(0)],productIds).size,0);
+  assert.equal(scene.cabinet.doors(1).length,0);
+ }
 });
 
 test('a catalog edit that puts a product outside its shelf is caught before publishing',()=>{

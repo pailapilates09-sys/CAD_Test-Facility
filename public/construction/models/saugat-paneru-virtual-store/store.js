@@ -14,18 +14,63 @@ let level=mode==='shelves'&&store.bands.some(b=>b.level===Number(params.get('lev
 let angle=params.get('camera')==='angled'?'angled':'front',focused=false;
 let selected=linked??(item?store.home.get(item.id):null);
 const panel=$('store-3d-shop'),slot=$('store-3d-slot'),dialog=$('store-full-dialog');
-const model=createStore3D($('store-canvas'),$('store-targets'),id=>selectFacing(id),next=>{angle=next;syncAngle();saveView();});
+const cabinetMenu=$('store-cabinet-menu'),cabinetOptions=$('store-cabinet-options');
+const finishNames={armor:'Armor',blueprint:'Blueprint',classic:'Classic'};
+let finish=cabinetMenu&&Object.hasOwn(finishNames,params.get('finish'))?params.get('finish'):cabinetMenu?'armor':null;
+let doorsOpen=true;
+const model=createStore3D($('store-canvas'),$('store-targets'),id=>selectFacing(id),next=>{angle=next;syncAngle();saveView();},cabinetMenu?()=>toggleCabinetMenu(true):null);
 const products=()=>floorItems(store,floor.id,room,level,shelf);
 const rackFacings=()=>stockItems(store,floor.id,room,shelf,level);
 const shelfRoom=()=>room==='all'?(selected?.room??floor.rooms[0].id):room;
 const activeRack=()=>shelf==='all'?(selected?.shelf??'rear'):shelf;
+const hasDoors=()=>cabinetMenu&&finish!=='classic'&&mode==='shelves'&&!focused&&Boolean(model);
 
 function saveView(){
  const url=new URL(location.href);
  for(const [key,value] of Object.entries({floor:floor.id,room,rack:shelf==='all'?'':shelf,view:mode==='floor'?'floor':'',camera:angle==='angled'?'angled':'',level:level||'',item:selected?.productId??'',position:selected?.id??''})){
   if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);
  }
+ if(cabinetMenu){
+  if(finish==='armor')url.searchParams.delete('finish');else url.searchParams.set('finish',finish);
+ }
  history.replaceState(null,'',url);
+}
+function syncCabinet(){
+ if(!cabinetMenu)return;
+ panel.dataset.finish=finish;panel.dataset.doors=doorsOpen?'open':'closed';
+ $('store-cabinet-status').textContent=finishNames[finish]+' · '+(hasDoors()?(doorsOpen?'Doors open':'Doors closed'):mode==='floor'?'Floor overview':focused?'Product close-up':'Open shelves');
+ for(const b of cabinetOptions.querySelectorAll('[data-store-finish]'))b.setAttribute('aria-pressed',String(b.dataset.storeFinish===finish));
+ const doors=$('store-cabinet-doors'),zoom=$('store-cabinet-shelf');
+ doors.hidden=!hasDoors();
+ doors.textContent=doorsOpen?'Close doors':'Open doors';
+ zoom.disabled=!selected;
+ zoom.textContent=level>0&&!focused?'Show full cabinet':'Zoom to this shelf';
+ $('store-targets').querySelector('[data-cabinet-trigger]')?.setAttribute('aria-expanded',String(!cabinetOptions.hidden));
+}
+function toggleCabinetMenu(focusOptions=false){
+ if(!cabinetMenu)return;
+ cabinetOptions.hidden=!cabinetOptions.hidden;
+ cabinetMenu.setAttribute('aria-expanded',String(!cabinetOptions.hidden));
+ syncCabinet();
+ if(focusOptions)(cabinetOptions.hidden?cabinetMenu:cabinetOptions.querySelector('[aria-pressed="true"]')).focus({preventScroll:true});
+}
+function updateDisplayNote(){
+ $('store-display-note').textContent=mode==='shelves'?
+  (focused?'Product close-up. Return to stocked shelves to see the whole category.':store.apparel?
+   'Tap a garment to inspect it. Each level shows sample display stock.':!doorsOpen?
+   'Open the doors from Cabinet controls to browse the rack.':finish==='classic'||!model?
+   'Tap an item to see its close-up. Repeated products fill the sample shelves.':'Tap a product for a close-up, or tap the crest for cabinet controls.'):
+  'See the racks in their building positions. On a phone, swipe across the front view or choose a category for a closer look.';
+}
+function refreshScene(keepCamera=false){
+ const style=finish==='classic'?null:finish;
+ const scene=mode==='shelves'?showcaseScene(store,room,shelf,level,focused?selected?.id:'',style):storeScene(store,floor.id,room,style);
+ model?.setScene(scene,selected?.id,angle,{open:doorsOpen,keepCamera});
+ syncCabinet();updateDisplayNote();
+}
+function setDoors(open){
+ if(doorsOpen===open)return;
+ doorsOpen=open;model?.setCabinetOpen(open);syncCabinet();updateDisplayNote();
 }
 function syncAngle(){
  $('store-3d-shop').dataset.camera=angle;
@@ -58,6 +103,7 @@ function renderSelection(){
   if(el.dataset.catalogItem)el.closest('tr').classList.toggle('is-selected',active);
  }
  model?.select(selected?.id);
+ syncCabinet();
 }
 function selectFacing(id,fromList=false){
  const facing=store.stockMap.get(id);
@@ -72,6 +118,7 @@ function selectFacing(id,fromList=false){
  if(changedRack||changedLevel||focused&&previous?.id!==id){
   renderScope();
  }else{
+  setDoors(true);
   refreshPlan();
   if(previous?.room!==selected.room||previous?.shelf!==selected.shelf)refreshElevation();
   renderSelection();
@@ -86,6 +133,7 @@ function selectCatalog(id){
 }
 
 function renderScope(){
+ doorsOpen=true;
  const choices=rackFacings(),items=products();
  if(!choices.some(f=>f.id===selected?.id)){
   const home=items[0]&&store.home.get(items[0].id);
@@ -106,11 +154,8 @@ function renderScope(){
  const band=store.bands.find(b=>b.level===level);
  const section=mode==='floor'?(store.apparel?'All departments':'All rooms'):selectedRoom.name+' · '+selectedRoom.rack_labels[activeRack()];
  $('store-model-scope').textContent=floor.label+' · '+section+(band?' · '+band.low+'–'+band.high+' ft':'');
- $('store-display-note').textContent=mode==='shelves'?
-  (focused?'Product close-up. Return to stocked shelves to see the whole category.':store.apparel?'Tap a garment to inspect it. Each level shows sample display stock.':'Tap an item on the rack. Repeated display stock fills each level of the sample assortment.'):
-  'See the racks in their building positions. On a phone, swipe across the front view or choose a category for a closer look.';
  $('store-zoom').value=1;syncAngle();
- model?.setScene(mode==='shelves'?showcaseScene(store,room,shelf,level,focused?selected?.id:''):storeScene(store,floor.id,room),selected?.id,angle);
+ refreshScene();
  renderSelection();
 }
 function setLevel(n){
@@ -150,6 +195,22 @@ document.addEventListener('click',ev=>{
 });
 $('store-level-select').addEventListener('change',ev=>setLevel(Number(ev.target.value)));
 $('store-rack-select').addEventListener('change',ev=>showRack(rackKey(shelfRoom(),ev.target.value)));
+cabinetMenu?.addEventListener('click',()=>toggleCabinetMenu());
+cabinetOptions?.addEventListener('click',ev=>{
+ const button=ev.target.closest('button');
+ if(button?.dataset.storeFinish){
+  if(finish===button.dataset.storeFinish)return;
+  finish=button.dataset.storeFinish;
+  if(finish==='classic')doorsOpen=true;
+  refreshScene(true);saveView();
+ }else if(button?.id==='store-cabinet-doors'){
+  if(hasDoors())setDoors(!doorsOpen);
+ }else if(button?.id==='store-cabinet-shelf'&&selected){
+  setLevel(level>0&&!focused?0:selected.band.level);
+  panel.querySelector('#store-canvas').focus({preventScroll:true});
+  if(!dialog.open)panel.scrollIntoView({block:'start'});
+ }
+});
 $('store-plan-wrap').addEventListener('keydown',ev=>{
  const b=ev.target.closest('[data-plan-rack]');
  if(b&&['Enter',' '].includes(ev.key)){ev.preventDefault();showRack(b.dataset.planRack);panel.scrollIntoView({block:'start'});}

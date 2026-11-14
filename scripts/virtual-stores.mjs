@@ -21,10 +21,11 @@ async function buildStorePage(dist,project,revision){
  if(raw.id!==project.path.split('/').at(-2)||raw.title!==project.label)throw Error('Store page and model identity differ: '+project.id);
  const {apparel}=store;
  const sharedAssets=apparel?'../'+PROJECTS.saugat.path.split('/').at(-2)+'/':'./';
- const themeRevision=apparel?createHash('sha256').update(await readFile(new URL('showroom.css',base))).digest('hex').slice(0,16):null;
+ const theme=apparel?'showroom.css':'arc-vault.css';
+ const themeRevision=createHash('sha256').update(await readFile(new URL(theme,base))).digest('hex').slice(0,16);
  const description=apparel?
   'Explore two floors of sample apparel. Browse stocked racks from the front and locate the selected garment in the 2D floor plan and product table.':
-  'Browse stocked racks from the front, explore footwear, umbrellas and household goods, and find each product on the plan and shelf elevation.';
+  'Explore Arc Vault display cabinets from the front. Open their doors, switch finishes and locate products in the linked 2D floor plan and table.';
  const heading=(number,label)=>apparel?label:`<span>${number}</span> ${label}`;
  const floor=store.levels[0],room=floor.rooms[0],items=floorItems(store,floor.id,room.id,0,'rear'),active=items[0],facing=store.home.get(active.id),title=e(store.title);
  const buttons=(list,key,value)=>list.map(r=>`<button type="button" data-store-${key}="${r.id}" aria-pressed="${r.id===value}">${e(r.name??r.label)}</button>`).join('');
@@ -33,12 +34,12 @@ async function buildStorePage(dist,project,revision){
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <title>${title} | CAD Test Facility</title>
  <meta name="description" content="${e(description)}">
- <link rel="icon" href="../../../favicon.svg"><link rel="stylesheet" href="../../../workspace.css"><link rel="stylesheet" href="${sharedAssets}store.css?v=${revision}">${apparel?`<link rel="stylesheet" href="./showroom.css?v=${themeRevision}">`:''}
+ <link rel="icon" href="../../../favicon.svg"><link rel="stylesheet" href="../../../workspace.css"><link rel="stylesheet" href="${sharedAssets}store.css?v=${revision}"><link rel="stylesheet" href="./${theme}?v=${themeRevision}">
 </head><body>
-<main id="main" class="container store-page${apparel?' apparel-store':''}">
+<main id="main" class="container store-page${apparel?' apparel-store':' arc-store'}">
  <header class="store-intro">
-  <p class="store-eyebrow">${apparel?'Apparel showroom · Concept layout':'Virtual shop · Stocked racks'}</p><h1>${title}</h1>
-  <p>${apparel?'Choose a department and tap a garment to see its fabric, sizes, sample price and position.':'Choose a room and category, then tap a product on the shelf. The front view shows the rack straight on.'}</p>
+  <p class="store-eyebrow">${apparel?'Apparel showroom · Concept layout':'Arc Vault · Virtual showroom'}</p><h1>${title}</h1>
+  <p>${apparel?'Choose a department and tap a garment to see its fabric, sizes, sample price and position.':'Browse the stocked cabinets straight on. Tap a product for a close-up, or tap the glowing crest to control the cabinet.'}</p>
   <div class="store-tags">${apparel?`<span class="store-tag">${store.levels.length} floors</span><span class="store-tag">${store.racks.size} stocked racks</span><span class="store-tag store-sample">${store.items.length} sample garments</span>`:`<span class="store-tag">${store.levels.length} storeys · ${store.storeyHeight} ft each</span><span class="store-tag">${store.bands.length} shelf levels · ${store.cellHeight} ft each</span><span class="store-tag store-sample">${store.items.length} sample products</span>`}</div>
  </header>
  <div id="store-workspace" data-floor="${floor.id}" data-view="shelves">
@@ -50,8 +51,8 @@ async function buildStorePage(dist,project,revision){
     <label class="store-level-label"><span class="store-eyebrow">Shelf height</span><select id="store-level-select"><option value="0">All heights</option>${store.bands.map(b=>`<option value="${b.level}">L${b.level} · ${b.low}–${b.high} ft</option>`).join('')}</select></label></div>
   </div>
   <div id="store-3d-slot">
-   <section class="store-panel" id="store-3d-shop" data-camera="front">
-    <div class="store-panel-head"><div><h2>${heading('01',apparel?'3D showroom':'3D shop')}</h2><p id="store-model-scope">${e(floor.label)} · ${e(room.name)} · ${e(room.rack_labels.rear)}</p></div>
+   <section class="store-panel" id="store-3d-shop" data-camera="front"${apparel?'':' data-finish="armor" data-doors="open"'}>
+    <div class="store-panel-head"><div>${apparel?'':'<p class="arc-kicker">Arc Vault · Display bay</p>'}<h2>${apparel?'3D showroom':'3D cabinet'}</h2><p id="store-model-scope">${e(floor.label)} · ${e(room.name)} · ${e(room.rack_labels.rear)}</p></div>
      <div class="store-button-row store-mode-buttons" role="group" aria-label="3D view">${buttons([{id:'shelves',name:'Stocked shelves'},{id:'floor',name:'Floor overview'}],'mode','shelves')}</div>
     </div>
     <div class="store-camera-tools" aria-label="3D camera controls">
@@ -61,19 +62,38 @@ async function buildStorePage(dist,project,revision){
      <label>Zoom <input id="store-zoom" type="range" min="1" max="2.5" step=".1" value="1"></label>
      <button type="button" class="store-expand" id="store-expand" aria-controls="store-full-dialog" aria-expanded="false">Expand 3D</button>
     </div>
+    ${apparel?'':`<div class="arc-deck">
+     <div class="arc-deck-head">
+      <span class="arc-deck-status" id="store-cabinet-status" role="status">Armor · Doors open</span>
+      <button type="button" id="store-cabinet-menu" aria-controls="store-cabinet-options" aria-expanded="false"><span class="arc-core-icon" aria-hidden="true"></span> Cabinet controls</button>
+     </div>
+     <div id="store-cabinet-options" class="arc-options" hidden>
+      <div class="arc-option-group">
+       <p id="arc-finish-label">Cabinet finish</p>
+       <div class="store-button-row" role="group" aria-labelledby="arc-finish-label">${buttons([{id:'armor',name:'Armor'},{id:'blueprint',name:'Blueprint'},{id:'classic',name:'Classic'}],'finish','armor')}</div>
+      </div>
+      <div class="arc-option-group">
+       <p id="arc-access-label">Cabinet access</p>
+       <div class="store-button-row" role="group" aria-labelledby="arc-access-label">
+        <button type="button" id="store-cabinet-doors">Close doors</button>
+        <button type="button" id="store-cabinet-shelf">Zoom to this shelf</button>
+       </div>
+      </div>
+     </div>
+    </div>`}
     <div class="store-stage">
      <div class="store-canvas-area">
       <div class="store-scene-viewport"><div class="store-scene" data-display="rack" data-camera="front">
        <canvas id="store-canvas" tabindex="0" aria-label="3D ${apparel?'showroom':'shop'}. Select a shelf cell or product, or use arrow keys to rotate."></canvas>
        <div id="store-targets" class="store-targets" aria-label="Select products on this rack"></div>
       </div></div>
-      <p class="store-display-note" id="store-display-note" role="status">${apparel?'Tap a garment to inspect it. Each level shows sample display stock.':'Tap an item on the rack. Repeated display stock fills each level of the sample assortment.'}</p>
+      <p class="store-display-note" id="store-display-note" role="status">${apparel?'Tap a garment to inspect it. Each level shows sample display stock.':'Tap a product for a close-up, or tap the crest for cabinet controls.'}</p>
       <p id="store-3d-unavailable" class="store-panel-note" hidden>The 3D viewer is unavailable here. Choose a product from the shelf elevation or list.</p>
      </div>
      <div class="store-stage-detail">
       <div id="store-detail" class="store-detail" role="region" aria-label="Selected product" aria-live="polite" aria-atomic="true" data-selected-item="${active?.id??''}">${renderProduct(active,facing)}</div>
       <button type="button" id="store-item-focus" aria-pressed="false">Enlarge this item</button>
-      ${apparel?'<a class="store-elevation-link" href="#store-floor-plan">Find on the floor plan ↓</a>':''}
+      <a class="store-elevation-link" href="#store-floor-plan">Find on the floor plan ↓</a>
       <a class="store-elevation-link" href="#store-shelf-levels">See all ${store.bands.length} shelf levels ↓</a>
      </div>
     </div>
