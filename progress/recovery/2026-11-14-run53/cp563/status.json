@@ -1900,8 +1900,8 @@
       "id": "AEC-RATE-YEARS",
       "state": "RESOLVED",
       "label": "Kaski year columns and bee-catching bag",
-      "evidence": "The FY 2083/84 values are in the rightmost year column. The source lists wheat foundation grade across the page break at the top of PDF p41. The prior DCC schedule keeps the three wheat grades together and corroborates all seven new wheat and improved maize rates.",
-      "next": "The current observation retains its source year and unit.",
+      "evidence": "The FY 2083/84 figures are in the rightmost year column. The bee-catching bag is NPR 500.00 in the current column and NPR 509.30 in both preceding columns. Wheat foundation seed continues at the top of PDF p41. The preceding DCC schedule lists all three wheat grades together and corroborates the seven wheat and improved maize rates.",
+      "next": "Keep the bee-catching bag and each seed rate tied to its printed year, unit and source row.",
       "references": [
         {
           "label": "Current Kaski schedule, PDF p40",
