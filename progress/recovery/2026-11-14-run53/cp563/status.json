@@ -1,0 +1,2219 @@
+{
+  "schema": "cad-facility.four-project-recovery.v1",
+  "checkedAt": "2026-11-14T18:18:06.730Z",
+  "timezone": "Asia/Kathmandu",
+  "lastSourceSessionCompletedAt": "2026-11-14T18:11:43.988Z",
+  "recoveryStatus": "RUN53_FOUR_LANES_MAIN_ACKED",
+  "basis": "Run 53 continued from the byte-matched Run 52 source receipt, live dashboard and registers.",
+  "scope": "Bounded source catalogue, original-byte verification, published seed rate extraction, unresolved issue research and dashboard update.",
+  "preservedSourceCommit": "bcb84be840e9fda79e4af96b9f4b207e6e8208d2",
+  "rollbackCommit": "bcb84be840e9fda79e4af96b9f4b207e6e8208d2",
+  "session": {
+    "completedPhases": 643,
+    "lastSessionCheckpoints": 1,
+    "sourceElapsedMinutes": 22.7498,
+    "lastSessionWorkUnits": 4
+  },
+  "findings": [
+    "MScH CP563/B563 added eight file records and 22,714 metadata bytes. The catalogue has 7,154 records with 558 folders queued. Next B564, folder 56.",
+    "MScS AQ-CP107/B095 verified three stored PDFs and 8,129,637 original bytes. Coverage is 1,119 of 1,857, with 738 pending and ten separate native export proofs. Next B096.",
+    "Lok Sewa retains 1,242 inventory records and reached 63 verified PDF occurrences and 36 distinct hashes. Two historical NEA identities remain unresolved.",
+    "AEC G076 Part 20 verified seven wheat and improved maize seed rates, RO-2502 to RO-2508, and five material identities. Next Part 21, RO-2509, certified maize."
+  ],
+  "lanes": [
+    {
+      "id": "MSCS",
+      "name": "MSc Structural Engineering",
+      "checkpoint": "AQ-CP107",
+      "batch": "B095",
+      "stage": "Source byte hashing",
+      "state": "READY_BOUNDED_HASH_CONTINUATION",
+      "stateLabel": "Three more original PDFs verified",
+      "metric": {
+        "label": "Stored files with original-byte SHA-256",
+        "done": 1119,
+        "total": 1857,
+        "remaining": 738,
+        "unit": "files"
+      },
+      "inventory": {
+        "rows": 2187,
+        "folders": 320,
+        "files": 1867
+      },
+      "evidence": {
+        "type": "Five current files read back exactly. JSONL and SQLite identity and hash agreement.",
+        "bytes": 2363121,
+        "sha256": "98176c3f49bca9b545e292df8359e960d2358cbe5fb96e1a99ff8ad201e65085",
+        "uniqueIds": 2187,
+        "hashValuesPresent": 1119,
+        "checkpointHashMatch": true,
+        "agreement": "MScS AQ-CP107/B095 verified three stored PDFs and 8,129,637 original bytes. Coverage is 1,119 of 1,857, with 738 pending and ten separate native export proofs. Next B096."
+      },
+      "sync": {
+        "local": 27,
+        "mainConsumed": 27,
+        "pendingSequences": 0,
+        "notice": "N24",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-11-14T18:16:27.030Z"
+      },
+      "contentExtraction": "Not started",
+      "blocker": "738 stored files still need original-byte hashes. Ten Google-native exports have separate verification.",
+      "next": {
+        "batch": "B096",
+        "target": "Fresh bounded original-byte hash selection",
+        "action": "Select the next bounded stored-file batch. Keep the separate native export proofs linked."
+      },
+      "comparison": {
+        "onboardingDone": 1015,
+        "addedSinceOnboarding": 104
+      },
+      "supplementalEvidence": {
+        "type": "Run 53 verified lane receipt",
+        "bytes": 6480,
+        "sha256": "bca681175f9be023ea39f8a137db75eb2c0ba4479433137af9ed18f520fc98e7",
+        "providerReadback": "PASS",
+        "localMainAck": "ACKED",
+        "canonicalPromotion": true
+      },
+      "integrityPilot": {
+        "verifiedFiles": 3,
+        "verifiedBytes": 8129637,
+        "distinctContentHashes": 3,
+        "canonicalAdmission": "CP107_B095_NEW_SOURCE_HASHES",
+        "canonicalHashedFiles": 1119,
+        "newDistinctHashesInCorpus": 1
+      },
+      "nativeExportGate": {
+        "state": "VERIFIED",
+        "verified": 10,
+        "total": 10,
+        "documents": 7,
+        "nativeSpreadsheets": 3,
+        "exportBytes": 218838,
+        "digestSemantics": "Captured export bytes",
+        "revisionSemantics": "Visible revision and modified time checked before and after"
+      }
+    },
+    {
+      "id": "LSA",
+      "name": "Lok Sewa Study Archive",
+      "checkpoint": "CP80",
+      "batch": "B080",
+      "stage": "Provisional observed metadata search index",
+      "state": "BASELINE_RECONCILIATION_REQUIRED",
+      "stateLabel": "Provisional index. Two historical identities unresolved.",
+      "metric": {
+        "label": "Historical baseline reconciliation",
+        "done": 1242,
+        "total": 1244,
+        "remaining": 2,
+        "unit": "rows"
+      },
+      "inventory": {
+        "rows": 1242,
+        "folders": 140,
+        "files": 1102,
+        "metadataBytes": 148118054319
+      },
+      "evidence": {
+        "type": "Three original PDF occurrences and the Run 53 provisional SQLite index verified",
+        "bytes": 726104,
+        "sha256": "997b18a4449b280a9cb77abad790d51730c788414742cc87ae4fe9ebc6b4a59c",
+        "uniqueIds": 1242,
+        "checkpointHashMatch": true,
+        "agreement": "Lok Sewa retains 1,242 inventory records and reached 63 verified PDF occurrences and 36 distinct hashes. Two historical NEA identities remain unresolved."
+      },
+      "sync": {
+        "local": 52,
+        "mainConsumed": 52,
+        "pendingSequences": 0,
+        "notice": "N48",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-11-14T18:16:26.275Z"
+      },
+      "contentExtraction": "PDF/OCR, video transcription and semantic extraction not started",
+      "blocker": "Two historical 4,652-byte variances remain, one in NEA Class files and one in Standard files-Package. Both expected file identities remain unresolved.",
+      "next": {
+        "batch": "B081 reconciliation",
+        "target": "Identity-level evidence for the two historical files",
+        "action": "Find the original Phase 1A identity inventory or a Drive Activity export for the two affected folders, with target item IDs and event times."
+      },
+      "comparison": {
+        "onboardingDone": 416,
+        "addedSinceOnboarding": 826
+      },
+      "sourceTreeAudit": {
+        "folderListings": 140,
+        "observedRows": 1242,
+        "observedFiles": 1102,
+        "observedFoldersIncludingRoots": 140,
+        "observedTreeFullyRepresented": true,
+        "historicalFileGap": 2,
+        "historicalBytesGap": 9304,
+        "branchGaps": [
+          {
+            "branch": "NEA/Class files",
+            "files": 1,
+            "metadataBytes": 4652
+          },
+          {
+            "branch": "NEA/Standard files-Package",
+            "files": 1,
+            "metadataBytes": 4652
+          }
+        ],
+        "expectedMissingIdsKnown": false
+      },
+      "supplementalEvidence": {
+        "type": "Run 53 verified lane receipt",
+        "bytes": 3253,
+        "sha256": "385f209501db0be88f79ebe187ad26f614aa2019e331e34b6e273864bb7089f6",
+        "providerReadback": "PASS",
+        "localMainAck": "ACKED",
+        "canonicalPromotion": false
+      },
+      "integrityPilot": {
+        "verifiedFilesThisRun": 3,
+        "verifiedBytesThisRun": 1310806,
+        "cumulativeVerifiedFiles": 63,
+        "cumulativeVerifiedBytes": 9582518,
+        "cumulativeDistinctContentHashes": 36,
+        "canonicalInventoryChanged": false,
+        "newDistinctContentHashes": 1
+      },
+      "provisionalIndex": {
+        "records": 1242,
+        "formats": [
+          "SQLite",
+          "CSV"
+        ],
+        "metadataSearch": "FTS5 names,paths,branches",
+        "fullFreeze": false,
+        "semanticParsing": false,
+        "nativeMirrorMatches": true,
+        "previousNativeRevisionAdditionalIdentities": 0,
+        "duplicateContentOccurrencesRetained": true,
+        "preB080ArchiveIdentitiesMatch": true,
+        "preB080ArchiveOnlyIdentities": 0,
+        "historicalSnapshotsReviewedThisRun": 0,
+        "historicalArchiveOnlyIdentities": 0,
+        "historicalMetadataConflicts": 0,
+        "historicalArtifactsReviewedThisRun": 2,
+        "blankMirrorRowsExcludedFromIdentityEvidence": true,
+        "oldRevisionReadsForbidden": 2,
+        "oldRevisionReadsForbiddenInPriorRuns": 2,
+        "branchVariance": [
+          {
+            "branch": "NEA/Class files",
+            "files": 1,
+            "bytes": 4652
+          },
+          {
+            "branch": "NEA/Standard files-Package",
+            "files": 1,
+            "bytes": 4652
+          }
+        ]
+      }
+    },
+    {
+      "id": "AEC",
+      "name": "AEC Cost & Rate Intelligence",
+      "checkpoint": "G076 PART20",
+      "batch": "G076 PART20",
+      "stage": "Source-verified normalized rate extraction",
+      "state": "READY_BOUNDED_SOURCE_CONTINUATION",
+      "stateLabel": "Seven wheat and improved maize seed rates verified",
+      "metric": null,
+      "inventory": null,
+      "evidence": {
+        "type": "Official Kaski PDF and seven exact native master readbacks",
+        "rateIds": [
+          "RO-2502",
+          "RO-2503",
+          "RO-2504",
+          "RO-2505",
+          "RO-2506",
+          "RO-2507",
+          "RO-2508"
+        ],
+        "ratesPresent": true,
+        "originalLockBoundary": "G075 / expected next RO-2436",
+        "agreement": "AEC G076 Part 20 verified seven wheat and improved maize seed rates, RO-2502 to RO-2508, and five material identities. Next Part 21, RO-2509, certified maize.",
+        "historicalTerminalReadStatus": 404,
+        "g075CheckpointReadStatus": 200,
+        "g075CheckpointTitle": "CR02_CHECKPOINT__SRC-0005_G075_COMPLETE__20260914_NPT.md",
+        "g076TerminalRecovered": false,
+        "g076TransportRecovered": true,
+        "originalTerminalReadStatus": 404,
+        "sourcePDFPage": 40,
+        "printedPage": 35,
+        "sourceAndSnapshotAgreement": true,
+        "g076RecoveryReissued": true,
+        "g076RecoveryClosure": "CLOSED",
+        "latestVerifiedBatch": "G076 PART20",
+        "g076Part2Completed": true,
+        "newCanonicalRateObservations": 7,
+        "g076Part3Completed": true,
+        "g076Part4Completed": true,
+        "g076Part5Completed": true,
+        "corrections": [
+          {
+            "id": "RO-2444",
+            "field": "unit",
+            "before": "piece",
+            "after": "set",
+            "rateNPR": 4.51,
+            "reason": "Original PDF p39 explicitly shows सेट; prior RUN37 normalization was incorrect; set composition unasserted."
+          }
+        ],
+        "g076Part6Completed": true,
+        "priorNapierUnitCorrectionRetained": true,
+        "g076Part7Completed": true,
+        "g076Part8Completed": true,
+        "g076Part9Completed": true,
+        "g076Part10Completed": true,
+        "g076Part11Completed": true,
+        "g076Part12Completed": true,
+        "g076Part13Completed": true,
+        "g076Part14Completed": true,
+        "g076Part15Completed": true,
+        "g076Part16Completed": true,
+        "recoveredDeferredRates": 0,
+        "vatFieldsCorrected": 0,
+        "vatNotesReconciled": 0,
+        "g076Part17Completed": true,
+        "priorVatFieldsReconciled": 995,
+        "reusedMaterialIdentity": "MAT-AGRI-GOV-PADDY-SEED-JETHO-BUDHO",
+        "g076Part18Completed": true,
+        "g076Part19Completed": true,
+        "g076Part20Completed": true,
+        "sourcePDFPages": [
+          40,
+          41
+        ],
+        "printedPages": [
+          35,
+          36
+        ],
+        "newMaterialIdentities": 5
+      },
+      "sync": {
+        "local": 32,
+        "mainConsumed": 32,
+        "pendingSequences": 0,
+        "notice": "N21",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-11-14T18:16:25.427Z"
+      },
+      "contentExtraction": "Seven Kaski FY 2083/84 wheat and improved maize seed benchmarks, with explicit grades and kg units.",
+      "blocker": "Kaski district-wide fertilizer applicability, two units, the exact effective day and seed transport terms remain unresolved. Pokhara calculator bag prices require issuer confirmation.",
+      "next": {
+        "batch": "G076 PART21",
+        "target": "RO-2509, certified maize seed",
+        "action": "Continue at the first certified-grade maize row, Manakamana 1, on printed p36 / PDF p41."
+      },
+      "supplementalEvidence": {
+        "type": "Run 53 verified lane receipt",
+        "bytes": 8689,
+        "sha256": "3b453b040bfd4508f28d92695173ce2c1090d576b356090bba93e2bdc3d522e0",
+        "providerReadback": "PASS",
+        "localMainAck": "ACKED",
+        "canonicalPromotion": true
+      },
+      "verifiedRates": [
+        {
+          "id": "RO-2436",
+          "label": "Rice husk",
+          "rateNPR": 3.25,
+          "unit": "kg"
+        },
+        {
+          "id": "RO-2437",
+          "label": "Cow-dung manure",
+          "rateNPR": 4,
+          "unit": "kg"
+        }
+      ],
+      "newRates": [
+        {
+          "id": "RO-2502",
+          "label": "Wheat seed, improved grade",
+          "rateNPR": 85,
+          "unit": "kg",
+          "printedPage": 35,
+          "pdfPage": 40,
+          "section": "14(d)",
+          "sourceId": "SRC-0005",
+          "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), wheat row 1."
+        },
+        {
+          "id": "RO-2503",
+          "label": "Wheat seed, certified grade",
+          "rateNPR": 90,
+          "unit": "kg",
+          "printedPage": 35,
+          "pdfPage": 40,
+          "section": "14(d)",
+          "sourceId": "SRC-0005",
+          "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), wheat row 2."
+        },
+        {
+          "id": "RO-2504",
+          "label": "Wheat seed, foundation grade",
+          "rateNPR": 100,
+          "unit": "kg",
+          "printedPage": 36,
+          "pdfPage": 41,
+          "section": "14(d)",
+          "sourceId": "SRC-0005",
+          "sourceLocator": "SRC-0005, printed p36 / PDF p41, section 14(d), wheat row 3."
+        },
+        {
+          "id": "RO-2505",
+          "label": "Manakamana 1 maize seed, improved grade",
+          "rateNPR": 120,
+          "unit": "kg",
+          "printedPage": 36,
+          "pdfPage": 41,
+          "section": "14(d)",
+          "sourceId": "SRC-0005",
+          "sourceLocator": "SRC-0005, printed p36 / PDF p41, section 14(d), improved maize row 1."
+        },
+        {
+          "id": "RO-2506",
+          "label": "Manakamana 3 maize seed, improved grade",
+          "rateNPR": 120,
+          "unit": "kg",
+          "printedPage": 36,
+          "pdfPage": 41,
+          "section": "14(d)",
+          "sourceId": "SRC-0005",
+          "sourceLocator": "SRC-0005, printed p36 / PDF p41, section 14(d), improved maize row 2."
+        },
+        {
+          "id": "RO-2507",
+          "label": "Manakamana 5 maize seed, improved grade",
+          "rateNPR": 120,
+          "unit": "kg",
+          "printedPage": 36,
+          "pdfPage": 41,
+          "section": "14(d)",
+          "sourceId": "SRC-0005",
+          "sourceLocator": "SRC-0005, printed p36 / PDF p41, section 14(d), improved maize row 3."
+        },
+        {
+          "id": "RO-2508",
+          "label": "Arun 2 maize seed, improved grade",
+          "rateNPR": 125,
+          "unit": "kg",
+          "printedPage": 36,
+          "pdfPage": 41,
+          "section": "14(d)",
+          "sourceId": "SRC-0005",
+          "sourceLocator": "SRC-0005, printed p36 / PDF p41, section 14(d), improved maize row 4."
+        }
+      ],
+      "rateSource": {
+        "fiscalYear": "2083/84",
+        "exactEffectiveDay": null,
+        "scope": "Kaski district wheat and improved maize seed",
+        "printedPages": [
+          35,
+          36
+        ],
+        "pdfPages": [
+          40,
+          41
+        ],
+        "sources": [
+          {
+            "id": "SRC-0005",
+            "jurisdiction": "Kaski district",
+            "vat": {
+              "included": false,
+              "pdfPage": 80,
+              "printedPage": 75,
+              "clause": "Other Decisions item 6"
+            },
+            "transportIncluded": null
+          }
+        ]
+      },
+      "priorExtractedBatches": [
+        {
+          "batch": "G076 PART2",
+          "rates": [
+            {
+              "id": "RO-2438",
+              "label": "Poultry manure",
+              "rateNPR": 6.7,
+              "unit": "kg"
+            },
+            {
+              "id": "RO-2439",
+              "label": "Earthworm manure",
+              "rateNPR": 30,
+              "unit": "kg"
+            },
+            {
+              "id": "RO-2440",
+              "label": "Compost manure",
+              "rateNPR": 25,
+              "unit": "kg"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART3",
+          "rates": [
+            {
+              "id": "RO-2441",
+              "label": "Tricho earthworm manure",
+              "rateNPR": 35,
+              "unit": "kg"
+            },
+            {
+              "id": "RO-2442",
+              "label": "Tricho compost manure",
+              "rateNPR": 30,
+              "unit": "kg"
+            },
+            {
+              "id": "RO-2443",
+              "label": "Broom-grass rhizome (3-piece set)",
+              "rateNPR": 5.51,
+              "unit": "set",
+              "unitDetail": "set (3 pieces)"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART4",
+          "rates": [
+            {
+              "id": "RO-2444",
+              "label": "Napier Grass Cutting",
+              "rateNPR": 4.51,
+              "unit": "set",
+              "originallyPublishedUnit": "piece",
+              "correctedIn": "RUN38",
+              "unitDetail": "set; source composition unasserted"
+            },
+            {
+              "id": "RO-2445",
+              "label": "Bamboo Seedling (polythene-grown)",
+              "rateNPR": 77.11,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2446",
+              "label": "Bamboo Seedling (culm cutting)",
+              "rateNPR": 82.36,
+              "unit": "piece"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART5",
+          "rates": [
+            {
+              "id": "RO-2447",
+              "label": "Bamboo with Soil (transplanting)",
+              "rateNPR": 440.65,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2448",
+              "label": "Nylon Sheet (300 micron, UV)",
+              "rateNPR": 110.16,
+              "unit": "m²"
+            },
+            {
+              "id": "RO-2449",
+              "label": "Jute Netting",
+              "rateNPR": 220.32,
+              "unit": "kg"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART6",
+          "rates": [
+            {
+              "id": "RO-2450",
+              "label": "Apis cerana Hive /Newton A /Tuni-wood Frame",
+              "rateNPR": 3500,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2451",
+              "label": "Apis cerana Hive /Newton A /Tuni Wood",
+              "rateNPR": 4000,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2452",
+              "label": "Apis cerana Hive /Newton B /Tuni-wood Frame",
+              "rateNPR": 4000,
+              "unit": "piece"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "section": "14(c)",
+            "sourceItems": [
+              "1.1.1",
+              "1.1.2",
+              "1.2.1"
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART7",
+          "rates": [
+            {
+              "id": "RO-2453",
+              "label": "Cerana hive, Newton B, Tuni wood",
+              "rateNPR": 4500,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2454",
+              "label": "Cerana bee colony, minimum five frames",
+              "rateNPR": 5000,
+              "unit": "colony"
+            },
+            {
+              "id": "RO-2455",
+              "label": "Comb foundation",
+              "rateNPR": 1400,
+              "unit": "kg"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "section": "14(c)",
+            "sourceItems": [
+              "1.2.2",
+              "2",
+              "3"
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART8",
+          "rates": [
+            {
+              "id": "RO-2456",
+              "label": "Nucleus hive",
+              "rateNPR": 3000,
+              "unit": "hive"
+            },
+            {
+              "id": "RO-2457",
+              "label": "Beekeeping hood/hat",
+              "rateNPR": 500,
+              "unit": "piece"
+            },
+            {
+              "id": "RO-2458",
+              "label": "Stainless steel honey extractor, four frames",
+              "rateNPR": 15000,
+              "unit": "piece"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 39,
+            "printedPage": 34,
+            "section": "14(c)",
+            "sourceItems": [
+              "4",
+              "5",
+              "6"
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART9",
+          "rates": [
+            {
+              "id": "RO-2459",
+              "label": "Cerana frame feeder",
+              "rateNPR": 200,
+              "unit": "piece",
+              "pdfPage": 39,
+              "printedPage": 34,
+              "sourceItem": "7"
+            },
+            {
+              "id": "RO-2460",
+              "label": "Grafting needle",
+              "rateNPR": 250,
+              "unit": "piece",
+              "pdfPage": 39,
+              "printedPage": 34,
+              "sourceItem": "8"
+            },
+            {
+              "id": "RO-2461",
+              "label": "Grafting rod",
+              "rateNPR": 150,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": "9"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": "39–40",
+            "printedPage": "34–35",
+            "section": "14(c)",
+            "sourceItems": [
+              "7",
+              "8",
+              "9"
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART10",
+          "rates": [
+            {
+              "id": "RO-2462",
+              "label": "Tin bee smoker",
+              "rateNPR": 875,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": "10"
+            },
+            {
+              "id": "RO-2463",
+              "label": "Stainless steel bee smoker",
+              "rateNPR": 1600,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": "11"
+            },
+            {
+              "id": "RO-2464",
+              "label": "Beehive stand",
+              "rateNPR": 400,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": "12"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 40,
+            "printedPage": 35,
+            "section": "14(c)",
+            "sourceItems": [
+              "10",
+              "11",
+              "12"
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART11",
+          "rates": [
+            {
+              "id": "RO-2465",
+              "label": "Beehive (unspecified type)",
+              "rateNPR": 4705,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 2
+            },
+            {
+              "id": "RO-2466",
+              "label": "Honey extractor (unspecified type)",
+              "rateNPR": 15279,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 3
+            },
+            {
+              "id": "RO-2467",
+              "label": "Beekeeping equipment set",
+              "rateNPR": 1833.48,
+              "unit": "set",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 4
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 40,
+            "printedPage": 35,
+            "section": "14(c)",
+            "sourceItems": [],
+            "unnumberedRowsAfterItem12": [
+              2,
+              3,
+              4
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART12",
+          "rates": [
+            {
+              "id": "RO-2468",
+              "label": "Beehive stand bowl set",
+              "rateNPR": 1120.46,
+              "unit": "set",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 5
+            },
+            {
+              "id": "RO-2469",
+              "label": "Honey strainer mesh",
+              "rateNPR": 448.18,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 6
+            },
+            {
+              "id": "RO-2470",
+              "label": "Queen cage",
+              "rateNPR": 112.05,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 7
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 40,
+            "printedPage": 35,
+            "section": "14(c)",
+            "sourceItems": [],
+            "unnumberedRowsAfterItem12": [
+              5,
+              6,
+              7
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART13",
+          "rates": [
+            {
+              "id": "RO-2471",
+              "label": "Bee smoker (material unspecified)",
+              "rateNPR": 611.16,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 8
+            },
+            {
+              "id": "RO-2472",
+              "label": "Beehive frame",
+              "rateNPR": 882,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 9
+            },
+            {
+              "id": "RO-2473",
+              "label": "Beekeeping gloves",
+              "rateNPR": 350,
+              "unit": "set",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 10
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 40,
+            "printedPage": 35,
+            "section": "14(c)",
+            "sourceItems": [],
+            "unnumberedRowsAfterItem12": [
+              8,
+              9,
+              10
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART14",
+          "rates": [
+            {
+              "id": "RO-2474",
+              "label": "Comb foundation",
+              "rateNPR": 71.3,
+              "unit": "set",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 11
+            },
+            {
+              "id": "RO-2475",
+              "label": "Beekeeping knife",
+              "rateNPR": 356.51,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 12
+            },
+            {
+              "id": "RO-2476",
+              "label": "Queen gate",
+              "rateNPR": 50.93,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 13
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 40,
+            "printedPage": 35,
+            "section": "14(c)",
+            "sourceItems": [],
+            "unnumberedRowsAfterItem12": [
+              11,
+              12,
+              13
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART15",
+          "rates": [
+            {
+              "id": "RO-2477",
+              "label": "Bee-catching bag",
+              "rateNPR": 500,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 14
+            },
+            {
+              "id": "RO-2478",
+              "label": "Beekeeping brush",
+              "rateNPR": 305.58,
+              "unit": "piece",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 15
+            },
+            {
+              "id": "RO-2479",
+              "label": "Hive tools set",
+              "rateNPR": 356.51,
+              "unit": "set",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "sourceItem": null,
+              "unnumberedRowAfterItem12": 16
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 40,
+            "printedPage": 35,
+            "section": "14(c)",
+            "sourceItems": [],
+            "unnumberedRowsAfterItem12": [
+              14,
+              15,
+              16
+            ],
+            "exactEffectiveDay": null
+          }
+        },
+        {
+          "batch": "G076 PART16",
+          "rates": [
+            {
+              "id": "RO-2480",
+              "label": "Jetho Budho paddy seed",
+              "rateNPR": 219,
+              "unit": "kg",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "section": "14(d)",
+              "decision": "Verified current-year source row"
+            },
+            {
+              "id": "RO-2481",
+              "label": "Masuli, Khumal and other paddy seed",
+              "rateNPR": 109.5,
+              "unit": "kg",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "section": "14(d)",
+              "decision": "Verified current-year source row"
+            },
+            {
+              "id": "RO-2482",
+              "label": "Ram Dhan paddy seed, improved grade",
+              "rateNPR": 68,
+              "unit": "kg",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "section": "14(d)",
+              "decision": "Verified current-year source row"
+            },
+            {
+              "id": "RO-2483",
+              "label": "Layer poultry manure",
+              "rateNPR": 9.27,
+              "unit": "kg",
+              "pdfPage": 39,
+              "printedPage": 34,
+              "section": "14(a)",
+              "decision": "Recovered deferred unit from its own row"
+            },
+            {
+              "id": "RO-2484",
+              "label": "Broiler poultry manure",
+              "rateNPR": 7.21,
+              "unit": "kg",
+              "pdfPage": 39,
+              "printedPage": 34,
+              "section": "14(a)",
+              "decision": "Recovered deferred unit from its own row"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPages": [
+              39,
+              40
+            ],
+            "printedPages": [
+              34,
+              35
+            ],
+            "sections": [
+              "14(a)",
+              "14(d)"
+            ],
+            "exactEffectiveDay": null,
+            "vat": {
+              "included": false,
+              "pdfPage": 80,
+              "printedPage": 75,
+              "clause": "Other Decisions item 6"
+            }
+          }
+        },
+        {
+          "batch": "G076 PART17",
+          "rates": [
+            {
+              "id": "RO-2485",
+              "label": "Sunalo Sugandha paddy seed, improved grade",
+              "rateNPR": 80,
+              "unit": "kg",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "section": "14(d)"
+            },
+            {
+              "id": "RO-2486",
+              "label": "Sabitri paddy seed, improved grade",
+              "rateNPR": 78,
+              "unit": "kg",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "section": "14(d)"
+            },
+            {
+              "id": "RO-2487",
+              "label": "Jetho Budho paddy seed, improved grade",
+              "rateNPR": 200,
+              "unit": "kg",
+              "pdfPage": 40,
+              "printedPage": 35,
+              "section": "14(d)"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "pdfPage": 40,
+            "printedPage": 35,
+            "sections": [
+              "14(d)"
+            ],
+            "exactEffectiveDay": null,
+            "vat": {
+              "included": false,
+              "pdfPage": 80,
+              "printedPage": 75,
+              "clause": "Other Decisions item 6"
+            }
+          }
+        },
+        {
+          "batch": "G076 PART18",
+          "rates": [
+            {
+              "id": "RO-2488",
+              "label": "Other paddy seed, improved grade",
+              "rateNPR": 73,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), improved-grade paddy row 5."
+            },
+            {
+              "id": "RO-2489",
+              "label": "Ram Dhan paddy seed, certified grade",
+              "rateNPR": 84,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), certified-grade paddy row 1."
+            },
+            {
+              "id": "RO-2490",
+              "label": "Sunalo Sugandha paddy seed, certified grade",
+              "rateNPR": 86,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), certified-grade paddy row 2."
+            },
+            {
+              "id": "RO-2491",
+              "label": "Sabitri paddy seed, certified grade",
+              "rateNPR": 84,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), certified-grade paddy row 3."
+            },
+            {
+              "id": "RO-2492",
+              "label": "Jetho Budho paddy seed, certified grade",
+              "rateNPR": 275.5,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), certified-grade paddy row 4."
+            },
+            {
+              "id": "RO-2493",
+              "label": "Other paddy seed, certified grade",
+              "rateNPR": 84,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), certified-grade paddy row 5."
+            },
+            {
+              "id": "RO-2494",
+              "label": "Urea fertilizer, Pokhara farmer sale at 1 km",
+              "rateNPR": 19.45,
+              "unit": "kg",
+              "sourceId": "SRC-0008",
+              "sourceLocator": "Sheet1!B21, supported by row 18 (1 km).",
+              "basis": "Subsidized farmer outlet sale, at 1 km from depot to sales outlet"
+            },
+            {
+              "id": "RO-2495",
+              "label": "DAP fertilizer, Pokhara farmer sale at 1 km",
+              "rateNPR": 48.45,
+              "unit": "kg",
+              "sourceId": "SRC-0008",
+              "sourceLocator": "Sheet1!C21, supported by row 18 (1 km).",
+              "basis": "Subsidized farmer outlet sale, at 1 km from depot to sales outlet"
+            },
+            {
+              "id": "RO-2496",
+              "label": "Potash fertilizer, Pokhara farmer sale at 1 km",
+              "rateNPR": 36.45,
+              "unit": "kg",
+              "sourceId": "SRC-0008",
+              "sourceLocator": "Sheet1!D21, supported by row 18 (1 km).",
+              "basis": "Subsidized farmer outlet sale, at 1 km from depot to sales outlet"
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "exactEffectiveDay": null,
+            "scope": "Kaski district seed rates and Pokhara farmer sale rates at 1 km",
+            "sources": [
+              {
+                "id": "SRC-0005",
+                "jurisdiction": "Kaski district",
+                "vat": {
+                  "included": false,
+                  "pdfPage": 80,
+                  "printedPage": 75,
+                  "clause": "Other Decisions item 6"
+                },
+                "transportIncluded": null
+              },
+              {
+                "id": "SRC-0008",
+                "jurisdiction": "Pokhara Metropolitan City",
+                "vat": {
+                  "included": null
+                },
+                "transportIncluded": true,
+                "depotToOutletKm": 1
+              }
+            ]
+          }
+        },
+        {
+          "batch": "G076 PART19",
+          "rates": [
+            {
+              "id": "RO-2497",
+              "label": "Ram Dhan paddy seed, foundation grade",
+              "rateNPR": 94,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), foundation-grade paddy row 1."
+            },
+            {
+              "id": "RO-2498",
+              "label": "Sunalo Sugandha paddy seed, foundation grade",
+              "rateNPR": 94.05,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), foundation-grade paddy row 2."
+            },
+            {
+              "id": "RO-2499",
+              "label": "Jetho Budho paddy seed, foundation grade",
+              "rateNPR": 285,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), foundation-grade paddy row 3."
+            },
+            {
+              "id": "RO-2500",
+              "label": "Sabitri paddy seed, foundation grade",
+              "rateNPR": 90,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), foundation-grade paddy row 4."
+            },
+            {
+              "id": "RO-2501",
+              "label": "Other paddy seed, foundation grade",
+              "rateNPR": 89,
+              "unit": "kg",
+              "printedPage": 35,
+              "pdfPage": 40,
+              "section": "14(d)",
+              "sourceId": "SRC-0005",
+              "sourceLocator": "SRC-0005, printed p35 / PDF p40, section 14(d), foundation-grade paddy row 5."
+            }
+          ],
+          "source": {
+            "fiscalYear": "2083/84",
+            "exactEffectiveDay": null,
+            "scope": "Kaski district foundation-grade paddy seed",
+            "printedPage": 35,
+            "pdfPage": 40,
+            "sources": [
+              {
+                "id": "SRC-0005",
+                "jurisdiction": "Kaski district",
+                "vat": {
+                  "included": false,
+                  "pdfPage": 80,
+                  "printedPage": 75,
+                  "clause": "Other Decisions item 6"
+                },
+                "transportIncluded": null
+              }
+            ]
+          }
+        }
+      ],
+      "deferredRate": {
+        "label": "Beehive with colony",
+        "rateNPR": 9500,
+        "unit": null,
+        "reason": "Blank source unit",
+        "pdfPage": 40,
+        "printedPage": 35,
+        "unnumberedRowAfterItem12": 1
+      },
+      "remainingDeferrals": [
+        {
+          "label": "Goat manure",
+          "rateNPR": 6,
+          "unit": null,
+          "printedPage": 34,
+          "pdfPage": 39,
+          "state": "UNRESOLVED"
+        },
+        {
+          "label": "Beehive with colony",
+          "rateNPR": 9500,
+          "unit": null,
+          "printedPage": 35,
+          "pdfPage": 40,
+          "state": "UNRESOLVED"
+        },
+        {
+          "label": "Chemical fertilizer",
+          "rateNPR": null,
+          "unit": null,
+          "printedPage": 34,
+          "pdfPage": 39,
+          "state": "UNRESOLVED"
+        }
+      ]
+    },
+    {
+      "id": "MSCH",
+      "name": "MSc Hydropower Research Corpus",
+      "checkpoint": "CP563",
+      "batch": "B563",
+      "stage": "Recursive physical catalogue",
+      "state": "READY_FIFO_CONTINUATION",
+      "stateLabel": "Saved checkpoint. Folder queue remains.",
+      "metric": null,
+      "inventory": {
+        "rows": 7154,
+        "files": 5995,
+        "folders": 1159,
+        "pendingFolders": 558,
+        "metadataBytes": 66632002871,
+        "overallDenominator": null
+      },
+      "evidence": {
+        "type": "Four current control files and checkpoint read back exactly",
+        "bytes": 4083420,
+        "sha256": "4814405f1b5dcbf49eae836d69d0a6d95ce2ff3680c93a639bd945185952962b",
+        "uniqueIds": 7154,
+        "checkpointHashMatch": true,
+        "agreement": "MScH CP563/B563 added eight file records and 22,714 metadata bytes. The catalogue has 7,154 records with 558 folders queued. Next B564, folder 56."
+      },
+      "sync": {
+        "local": 554,
+        "mainConsumed": 554,
+        "pendingSequences": 0,
+        "notice": "N508",
+        "noticeState": "ACKED",
+        "mainAck": "ACKED",
+        "checkedAt": "2026-11-14T18:16:29.643Z"
+      },
+      "contentExtraction": "Source-content extraction and model execution not started",
+      "blocker": "558 folders are queued. The full corpus denominator is unknown. Source-content parsing and model execution are pending.",
+      "next": {
+        "batch": "B564",
+        "target": "56",
+        "action": "Verify the next FIFO folder and save its metadata checkpoint."
+      },
+      "comparison": {
+        "onboardingDone": 500,
+        "addedSinceOnboarding": 6654
+      }
+    }
+  ],
+  "continuation": {
+    "rotation": [
+      "MSCH",
+      "LSA",
+      "AEC",
+      "MSCS"
+    ],
+    "phases": [
+      {
+        "lane": "MSCH",
+        "phase": "—",
+        "batch": "B564",
+        "state": "READY_FIFO_CONTINUATION"
+      },
+      {
+        "lane": "LSA",
+        "phase": "—",
+        "batch": "B081 reconciliation",
+        "state": "BASELINE_RECONCILIATION_REQUIRED"
+      },
+      {
+        "lane": "AEC",
+        "phase": "—",
+        "batch": "G076 PART21",
+        "state": "READY_BOUNDED_SOURCE_CONTINUATION"
+      },
+      {
+        "lane": "MSCS",
+        "phase": "—",
+        "batch": "B096",
+        "state": "READY_BOUNDED_HASH_CONTINUATION"
+      }
+    ],
+    "limits": {
+      "checkpointsPerPhase": 1,
+      "maxMinutesPerPhase": 20,
+      "maximumRunMinutes": 60,
+      "authority": "User authorized one four-lane continuation with a 60-minute maximum."
+    },
+    "mainSync": "All four lanes acknowledged. MSCS 27/27, LSA 52/52, AEC 32/32, MSCH 554/554.",
+    "scheduler": "Manual user-authorized run; no scheduler changes."
+  },
+  "separatePipeline": {
+    "id": "JP Cost",
+    "checkpoint": "M02 v0.5.14",
+    "pages": 697,
+    "sources": 6,
+    "state": "RAW_ARCHIVE_REPORTED_COMPLETE_SEMANTIC_QA_PENDING",
+    "basis": "Historical handover and onboarding snapshot only; source archives not reverified in this recovery.",
+    "note": "Separate from the four lanes and from AEC G076 terminal debt."
+  },
+  "execution": {
+    "startedAt": "2026-11-14T17:48:59Z",
+    "stoppedAt": "2026-11-14T18:18:06.730Z",
+    "sourceStoppedAt": "2026-11-14T18:11:43.988Z",
+    "inProgress": false,
+    "durationPolicy": "maximum",
+    "maximumMinutes": 60,
+    "deadline": "2026-11-14T18:48:59Z",
+    "maximumWindowRespected": true,
+    "elapsedMinutes": 29.128833333333333,
+    "sourceElapsedMinutes": 22.7498,
+    "added": {
+      "LSA": 0,
+      "MSCH": 8
+    },
+    "checkpoints": [
+      {
+        "lane": "MSCH",
+        "batch": "B563",
+        "checkpoint": "CP563",
+        "added": {
+          "rows": 8,
+          "files": 8,
+          "folders": 0
+        },
+        "after": {
+          "rows": 7154,
+          "files": 5995,
+          "folders": 1159
+        },
+        "manifest": {
+          "bytes": 4083420,
+          "sha256": "4814405f1b5dcbf49eae836d69d0a6d95ce2ff3680c93a639bd945185952962b"
+        },
+        "createdAt": "2026-11-14T18:09:35.665Z",
+        "completedAt": "2026-11-14T18:15:57.393Z",
+        "local": 554,
+        "mainAck": "ACKED"
+      }
+    ],
+    "supplementalEvents": [
+      {
+        "lane": "LSA",
+        "sequence": 52,
+        "kind": "PROVISIONAL_METADATA_SEARCH_AND_HASHES",
+        "providerReadback": "PASS",
+        "canonicalPromotion": false
+      },
+      {
+        "lane": "MSCS",
+        "sequence": 27,
+        "kind": "NEW_ORIGINAL_BYTE_HASHES",
+        "providerReadback": "PASS",
+        "canonicalPromotion": true
+      },
+      {
+        "lane": "AEC",
+        "sequence": 32,
+        "kind": "NEW_SOURCE_RATE_EXTRACTION",
+        "providerReadback": "PASS",
+        "canonicalPromotion": true
+      }
+    ],
+    "laneWork": {
+      "MSCH": {
+        "inventoryCheckpoints": 1,
+        "newMetadataRows": 8,
+        "summary": "MScH CP563/B563 added eight file records and 22,714 metadata bytes. The catalogue has 7,154 records with 558 folders queued. Next B564, folder 56.",
+        "pending": "558 folders queued"
+      },
+      "MSCS": {
+        "newCanonicalSourceHashes": 3,
+        "verifiedBytes": 8129637,
+        "canonicalPromotion": true,
+        "summary": "MScS AQ-CP107/B095 verified three stored PDFs and 8,129,637 original bytes. Coverage is 1,119 of 1,857, with 738 pending and ten separate native export proofs. Next B096.",
+        "pending": "738 stored original-byte checks"
+      },
+      "LSA": {
+        "newIntegrityProofs": 3,
+        "historicalVarianceFiles": 2,
+        "summary": "Lok Sewa retains 1,242 inventory records and reached 63 verified PDF occurrences and 36 distinct hashes. Two historical NEA identities remain unresolved.",
+        "pending": "Two historical file identities"
+      },
+      "AEC": {
+        "newRateRows": 7,
+        "newMaterialIdentities": 5,
+        "newUnitCorrections": 0,
+        "priorNapierUnitCorrectionRetained": true,
+        "summary": "AEC G076 Part 20 verified seven wheat and improved maize seed rates, RO-2502 to RO-2508, and five material identities. Next Part 21, RO-2509, certified maize.",
+        "pending": "Part 21 and the open issuer questions"
+      }
+    },
+    "debtClearance": {
+      "initialEvents": 0,
+      "newEvents": 4,
+      "totalAcknowledgedEvents": 4,
+      "remainingEvents": 0,
+      "recoveredEventsAcknowledged": 0,
+      "newEventsAcknowledged": 4,
+      "pending": 0
+    },
+    "sourceBodiesReadOrExecuted": true,
+    "sourceModelsExecuted": false,
+    "bulkContentExtractionStarted": false,
+    "sourceObjectsMutated": false,
+    "schedulerChanged": false,
+    "recoveredFromInterruption": false
+  },
+  "previousRuntimeIncident": {
+    "checkpoint": "CP122",
+    "status": "CLEARED",
+    "verification": "Raw PRE/CURRENT/checkpoint/POST transfers and exact provider readbacks passed from CP123 onward. Previous49-item preflight was reverified and promoted only as B123–B126 closed."
+  },
+  "branchRecovery": {
+    "transcriptRestored": false,
+    "interruptedRun": "RUN51",
+    "cause": "The previous chat reached its length limit after the source artifacts were saved.",
+    "recoveredFrom": "Provider-held source receipts, PRE snapshots, current canonical bytes and Run 50 Git history.",
+    "recoveredLanes": {
+      "MSCS": "AQ-CP105",
+      "LSA": "CP80",
+      "AEC": "G076 PART18",
+      "MSCH": "CP561"
+    },
+    "closeout": "Version 6 verified four Local registrations, eight Main artifacts, nine lineage edges, four reciprocal notices and nine native POST snapshots.",
+    "current": "CP561 / MSCH 552/552"
+  },
+  "previousRun": {
+    "checkpoint": "CP562",
+    "local": 553,
+    "main": 553,
+    "path": "2026-11-14-run52/cp562/status.json"
+  },
+  "roadmap": {
+    "schema": "four-lane.roadmap.v1",
+    "stages": [
+      "Inventory",
+      "Integrity",
+      "Approved content extraction",
+      "Validated knowledge",
+      "Use and maintenance"
+    ],
+    "currentSourceStage": "Metadata cataloguing, source-byte integrity and bounded AEC rate extraction",
+    "overallCompletionPercent": null,
+    "finishDate": null,
+    "lanes": [
+      {
+        "id": "MSCS",
+        "checkpoint": "AQ-CP107",
+        "nextBatch": "B096",
+        "nextTarget": "Fresh bounded original-byte hash selection",
+        "gate": "738 stored files still need original-byte hashes. Ten Google-native exports have separate verification."
+      },
+      {
+        "id": "LSA",
+        "checkpoint": "CP80",
+        "nextBatch": "B081 reconciliation",
+        "nextTarget": "Identity-level evidence for the two historical files",
+        "gate": "Two historical 4,652-byte variances remain, one in NEA Class files and one in Standard files-Package. Both expected file identities remain unresolved."
+      },
+      {
+        "id": "AEC",
+        "checkpoint": "G076 PART20",
+        "nextBatch": "G076 PART21",
+        "nextTarget": "RO-2509, certified maize seed",
+        "gate": "Kaski district-wide fertilizer applicability, two units, the exact effective day and seed transport terms remain unresolved. Pokhara calculator bag prices require issuer confirmation."
+      },
+      {
+        "id": "MSCH",
+        "checkpoint": "CP563",
+        "nextBatch": "B564",
+        "nextTarget": "56",
+        "gate": "558 folders are queued. The full corpus denominator is unknown. Source-content parsing and model execution are pending."
+      }
+    ]
+  },
+  "derivationReadiness": {
+    "inventoryAndIntegrity": "AVAILABLE_WITH_RECORDED_GAPS",
+    "aecStructuredRates": "EXISTING_PARTIAL_SOURCE_LINKED_TABLES",
+    "corpusContentExtraction": "PENDING",
+    "formats": [
+      "JSONL/NDJSON",
+      "JSON",
+      "SQLite (MSCS and provisional LSA metadata search)",
+      "CSV (AEC rates and provisional LSA metadata)",
+      "Markdown",
+      "Google Sheets",
+      "SHA-256 text",
+      "ZIP recovery archives"
+    ],
+    "limitations": "Inventory/hashes and metadata search do not establish extracted full text or validated engineering/study conclusions. AEC extraction remains a partial government benchmark table."
+  },
+  "run34": {
+    "sourceCheckpointCount": 2,
+    "workUnits": 5,
+    "mscsCanonicalPromotion": true,
+    "aecRecoveryClosed": true,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "resolvedTruncatedReadbacks": 1,
+    "sourceBatchesReplayed": 0,
+    "duplicateRecoveryUploads": 0,
+    "aecInheritedParentCorrected": true
+  },
+  "run35": {
+    "sourceCheckpointCount": 2,
+    "workUnits": 5,
+    "mscsCanonicalPromotion": true,
+    "aecRecoveryClosed": true,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "resolvedTruncatedReadbacks": 0,
+    "sourceBatchesReplayed": 0,
+    "duplicateRecoveryUploads": 0
+  },
+  "run36": {
+    "sourceCheckpointCount": 4,
+    "workUnits": 7,
+    "mscsNewSourceHashes": 3,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaMetadataFTS5": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "registrationWindowRecovery": 1,
+    "sourceBatchesReplayed": 0,
+    "canonicalRawWritesReplayed": 0
+  },
+  "run37": {
+    "sourceCheckpointCount": 6,
+    "workUnits": 9,
+    "mscsNewSourceHashes": 3,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaMetadataFTS5": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "registrationWindowRecovery": 0,
+    "sourcePhaseIncompleteLocalReads": 2,
+    "archiveReadbackRecovery": 1,
+    "sourceBatchesReplayed": 0,
+    "canonicalRawWritesReplayed": 0
+  },
+  "run38": {
+    "sourceCheckpointCount": 6,
+    "workUnits": 9,
+    "mscsNewSourceHashes": 3,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaMetadataFTS5": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "registrationWindowRecovery": 0,
+    "sourcePhaseIncompleteLocalReads": 1,
+    "archiveReadbackRecovery": 0,
+    "sourceBatchesReplayed": 0,
+    "canonicalRawWritesReplayed": 0
+  },
+  "run39": {
+    "sourceCheckpointCount": 6,
+    "workUnits": 9,
+    "mscsNewSourceHashes": 3,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaMetadataFTS5": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "docsReadQuotaRecovered": true,
+    "emptyCanonicalRunlogReadRecovered": 1,
+    "sourceBatchesReplayed": 0,
+    "canonicalRawWritesReplayed": 0
+  },
+  "run40": {
+    "sourceCheckpointCount": 6,
+    "workUnits": 9,
+    "mscsNewSourceHashes": 3,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaMetadataFTS5": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "terminalSelfRegistrationReadback": true,
+    "mainNativePostExcludesOnlyOwnRegistration": true,
+    "priorArchiveShortReadRecovered": true,
+    "aecControlCloseoutResumedWithoutRowReplay": true,
+    "sourceBatchesReplayed": 0,
+    "canonicalRawWritesReplayed": 0
+  },
+  "run41": {
+    "status": "RECOVERED_AFTER_INTERRUPTION",
+    "sourceWorkSaved": {
+      "MSCS": 3,
+      "LSA": 3,
+      "AEC": 3,
+      "MSCH": 0
+    },
+    "lateAcknowledgements": [
+      "MSCS 15/15",
+      "AEC 20/20"
+    ],
+    "existingAcknowledgement": "LSA 40/40",
+    "sourceBatchesReplayed": 0
+  },
+  "run42": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "sourceBatchesReplayed": 0
+  },
+  "run43": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "sourceBatchesReplayed": 0
+  },
+  "run44": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "lsaNativeMirrorChecked": true,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "sourceBatchesReplayed": 0
+  },
+  "run45": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "sourceBatchesReplayed": 0
+  },
+  "run46": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "sourceBatchesReplayed": 0
+  },
+  "run47": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "sourceBatchesReplayed": 0
+  },
+  "run48": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "sourceBatchesReplayed": 0,
+    "lsaHistoricalSnapshotsReviewed": 14,
+    "lsaHistoricalArchiveOnlyIds": 0
+  },
+  "run49": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 5,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "sourceBatchesReplayed": 0,
+    "lsaHistoricalSnapshotsReviewed": 11,
+    "lsaHistoricalArchiveOnlyIds": 0,
+    "aecResolvedUnitDeferrals": 2,
+    "aecExistingVatFlagsCorrected": 995,
+    "aecNotesReconciled": 86,
+    "lsaHistoricalEvidenceFilesReviewed": 62
+  },
+  "issues": [
+    {
+      "id": "AEC-POULTRY-UNITS",
+      "state": "RESOLVED",
+      "label": "Layer and broiler manure units",
+      "evidence": "The standalone kg cells are visible on printed p34 / PDF p39. RO-2483 is NPR 9.27/kg and RO-2484 is NPR 7.21/kg.",
+      "next": "Both rates passed canonical readback.",
+      "references": [
+        {
+          "label": "Kaski official schedule",
+          "url": "https://daokaski.moha.gov.np/post/ka-sa-ka-ja-l-l-ka-aa-va-ka-sa-va-ka-ta-ja-l-l-tharara-ta"
+        }
+      ]
+    },
+    {
+      "id": "AEC-VAT",
+      "state": "RESOLVED",
+      "label": "Kaski published-rate VAT basis",
+      "evidence": "Other Decisions item 6 on printed p75 / PDF p80 excludes VAT. Corrected 995 earlier published rows and 86 notes.",
+      "next": "The seven new Kaski wheat and maize observations record VAT excluded. Pokhara fertilizer tax treatment remains unspecified.",
+      "references": [
+        {
+          "label": "Kaski official schedule",
+          "url": "https://daokaski.moha.gov.np/post/ka-sa-ka-ja-l-l-ka-aa-va-ka-sa-va-ka-ta-ja-l-l-tharara-ta"
+        }
+      ]
+    },
+    {
+      "id": "AEC-RATE-YEARS",
+      "state": "RESOLVED",
+      "label": "Kaski year columns and bee-catching bag",
+      "evidence": "The FY 2083/84 values are in the rightmost year column. The source lists wheat foundation grade across the page break at the top of PDF p41. The prior DCC schedule keeps the three wheat grades together and corroborates all seven new wheat and improved maize rates.",
+      "next": "The current observation retains its source year and unit.",
+      "references": [
+        {
+          "label": "Current Kaski schedule, PDF p40",
+          "url": "https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=40"
+        },
+        {
+          "label": "Current Kaski schedule, PDF p41",
+          "url": "https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=41"
+        },
+        {
+          "label": "Prior Kaski schedule, PDF p40",
+          "url": "https://dcckaski.gov.np/dcc-notice-file/Notices-202508031300507062.pdf#page=40"
+        }
+      ]
+    },
+    {
+      "id": "LSA-NEA-IDS",
+      "state": "UNRESOLVED",
+      "label": "Two historical Lok Sewa NEA identities",
+      "evidence": "The B080 audit identifies two separate 4,652-byte shortfalls. One is in NEA Class files and one is in Standard files-Package. Run 49 comparands and the visible trash query yielded no matching identities. The NEA public syllabus describes the study domain. The provisional index has 63 verified occurrences and 36 distinct hashes.",
+      "next": "Locate the Phase 1A identity-level inventory or an authorized Drive Activity export scoped to the two branches. The export must identify the target item and event time.",
+      "references": [
+        {
+          "label": "Drive Activity ancestor query",
+          "url": "https://developers.google.com/workspace/drive/activity/v2/reference/rest/v2/activity/query"
+        },
+        {
+          "label": "NEA public curriculum",
+          "url": "https://www.nea.org.np/en/recruitment/open/ocurriculum"
+        },
+        {
+          "label": "Drive revision access",
+          "url": "https://developers.google.com/workspace/drive/api/guides/manage-revisions"
+        }
+      ]
+    },
+    {
+      "id": "LSA-BLANK-ROWS",
+      "state": "RESOLVED",
+      "label": "Lok Sewa blank mirror rows",
+      "evidence": "Rows 345 and 355 have zero file IDs in the 16 manifest columns. Adjacent records are APEX entries.",
+      "next": "Keep the blanks outside source identity counts.",
+      "references": []
+    },
+    {
+      "id": "AEC-GOAT-UNIT",
+      "state": "UNRESOLVED",
+      "label": "Kaski goat manure unit",
+      "evidence": "The signed current row lists NPR 6.00 with a blank unit. The prior district schedule has no corresponding goat-manure row. Category-level agriculture program material leaves the exact district rate basis unverified. FY 2081/82 section 14(a) also has no equivalent goat-manure line.",
+      "next": "Find a same-district FY 2083/84 issuer clarification.",
+      "references": [
+        {
+          "label": "Kaski signed schedule, PDF p39",
+          "url": "https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=39"
+        },
+        {
+          "label": "Prior Kaski schedule, PDF p39",
+          "url": "https://dcckaski.gov.np/dcc-notice-file/Notices-202508031300507062.pdf#page=39"
+        },
+        {
+          "label": "Kaski Agriculture Development Office",
+          "url": "https://www.kaski.ado.gov.np/"
+        },
+        {
+          "label": "Kaski FY 2081/82 official schedule",
+          "url": "https://daokaski.moha.gov.np/post/aa-b-ka-l-ga-ka-sa-ka-ja-l-l-ka-sa-va-ka-ta-ja-l-l-tharara-ta"
+        }
+      ]
+    },
+    {
+      "id": "AEC-HIVE-UNIT",
+      "state": "UNRESOLVED",
+      "label": "Kaski hive-with-colony unit",
+      "evidence": "Both district schedules give NPR 9,500.00 for the hive with a colony and leave its unit blank. The Kaski agriculture progress report counts colony hives as sets in a separate distribution program. The pricing unit of the district entry still needs confirmation. The FY 2081/82 schedule lists an ordinary hive but gives no separate colony-hive rate.",
+      "next": "Find an applicable written correction or issuer clarification.",
+      "references": [
+        {
+          "label": "Current signed Kaski schedule, PDF p40",
+          "url": "https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=40"
+        },
+        {
+          "label": "Prior signed Kaski schedule, PDF p39",
+          "url": "https://dcckaski.gov.np/dcc-notice-file/Notices-202508031300507062.pdf#page=39"
+        },
+        {
+          "label": "Kaski agriculture program report",
+          "url": "https://kaski.ado.gov.np/sites/default/files/2025-08/%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%AE%20%E0%A4%B8%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A4%BF%E0%A4%95%E0%A4%B0%E0%A4%A3%202082-083.pdf"
+        },
+        {
+          "label": "Kaski FY 2081/82 official schedule",
+          "url": "https://daokaski.moha.gov.np/post/aa-b-ka-l-ga-ka-sa-ka-ja-l-l-ka-sa-va-ka-ta-ja-l-l-tharara-ta"
+        }
+      ]
+    },
+    {
+      "id": "AEC-FERTILIZER",
+      "state": "UNRESOLVED",
+      "label": "Kaski chemical fertilizer rates",
+      "evidence": "Section 14(b) directs users to a Government of Nepal rate. The national procedure distinguishes import-point, depot and outlet prices, and Pokhara publishes a city-specific farmer outlet price. The older city rates are also limited to Pokhara. FY 2081/82 PDF p31 uses the same national-rate cross-reference.",
+      "next": "Obtain an applicable government or district order specifying the price tier, product and effective period for the Kaski entry.",
+      "references": [
+        {
+          "label": "Current Kaski schedule, PDF p39",
+          "url": "https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=39"
+        },
+        {
+          "label": "Government fertilizer procedure and attachments",
+          "url": "https://daorasuwa.moha.gov.np/post/ana-tha-naka-mal-va-taranae-va-yavasa-tha-pana-ka-ra-yava-thha"
+        },
+        {
+          "label": "Current Pokhara city prices",
+          "url": "https://www.pokharakrishi.com/notice"
+        },
+        {
+          "label": "Pokhara historic notice archive",
+          "url": "https://pokharakrishi.gov.np/notice"
+        },
+        {
+          "label": "Kaski FY 2081/82 official schedule",
+          "url": "https://daokaski.moha.gov.np/post/aa-b-ka-l-ga-ka-sa-ka-ja-l-l-ka-sa-va-ka-ta-ja-l-l-tharara-ta"
+        }
+      ]
+    },
+    {
+      "id": "AEC-EFFECTIVE-DATE",
+      "state": "UNRESOLVED",
+      "label": "Kaski exact effective day",
+      "evidence": "The cover and approval minutes record the district decision and FY 2083/84. The DAO and DCC postings record publication. The signed schedule and the procurement rule reviewed during this run leave the exact commencement day unverified.",
+      "next": "Find an issuer decision specifying the date.",
+      "references": [
+        {
+          "label": "Current DAO publication",
+          "url": "https://daokaski.moha.gov.np/post/ka-sa-ka-ja-l-l-ka-aa-va-ka-sa-va-ka-ta-ja-l-l-tharara-ta"
+        },
+        {
+          "label": "Current DCC publication",
+          "url": "https://dcckaski.gov.np/detail/53"
+        },
+        {
+          "label": "Public Procurement Rules, rule 148",
+          "url": "https://old.aepc.gov.np/uploads/docs/public-procurement-rules-2064-1571135921.pdf"
+        }
+      ]
+    },
+    {
+      "id": "AEC-TRANSPORT",
+      "state": "UNRESOLVED",
+      "label": "Transport basis for the new Kaski rates",
+      "evidence": "The signed wheat and maize rows and the prior-year schedule identify grades and kg rates. The general decisions and the Kaski agriculture program materials did not establish freight terms for these entries. The seven master rows record transport Unknown.",
+      "next": "Find source terms for the specific seed rows.",
+      "references": [
+        {
+          "label": "Current Kaski schedule, PDF p41",
+          "url": "https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=41"
+        },
+        {
+          "label": "Prior Kaski schedule, PDF p40",
+          "url": "https://dcckaski.gov.np/dcc-notice-file/Notices-202508031300507062.pdf#page=40"
+        },
+        {
+          "label": "Kaski agriculture program listings",
+          "url": "https://www.kaski.ado.gov.np/"
+        }
+      ]
+    },
+    {
+      "id": "MSCS-NATIVE-EXPORTS",
+      "state": "RESOLVED",
+      "label": "MScS native export verification",
+      "evidence": "All ten native files have verified exports, seven DOCX and three XLSX. Drive revision and modified time matched across capture. Exact export bytes are archived privately.",
+      "next": "Use the separate native proof ledger for these files.",
+      "references": [
+        {
+          "label": "Supported Office formats",
+          "url": "https://developers.google.com/workspace/drive/api/guides/ref-export-formats"
+        },
+        {
+          "label": "Google export method",
+          "url": "https://developers.google.com/workspace/drive/api/reference/rest/v3/files/export"
+        }
+      ]
+    },
+    {
+      "id": "MSCS-HASH-GATE",
+      "state": "INCOMPLETE",
+      "label": "MScS stored original checksums",
+      "evidence": "1,119 of 1,857 stored originals have SHA-256 checksums. 738 are pending. Ten native files have separate export proofs.",
+      "next": "Continue with bounded stored-original batch B096.",
+      "references": [
+        {
+          "label": "Drive checksum field",
+          "url": "https://developers.google.com/workspace/drive/api/reference/rest/v3/files"
+        }
+      ]
+    },
+    {
+      "id": "MSCH-QUEUE",
+      "state": "INCOMPLETE",
+      "label": "MScH corpus coverage",
+      "evidence": "CP563 leaves 558 known folders queued. The full corpus denominator is unknown.",
+      "next": "Continue B564, folder 56.",
+      "references": []
+    },
+    {
+      "id": "CORPUS-CONTENT",
+      "state": "INCOMPLETE",
+      "label": "Corpus text, OCR and model work",
+      "evidence": "The corpus evidence now includes catalogue entries, selected byte proofs and a verified native-export set. Bulk text extraction, OCR and model work remain incomplete.",
+      "next": "Verify source coverage and retain page, recording or model provenance in the later content stage.",
+      "references": []
+    },
+    {
+      "id": "AEC-POKHARA-KG",
+      "state": "RESOLVED",
+      "label": "Pokhara fertilizer farmer prices at 1 km",
+      "evidence": "Official workbook Sheet1 B21:D21 gives NPR 19.45/kg for urea, 48.45/kg for DAP and 36.45/kg for potash. The workbook includes depot-to-outlet transport at 1 km and excludes the plastic bag.",
+      "next": "Use source SRC-0008 and observations RO-2494 to RO-2496 for this location and price basis.",
+      "references": [
+        {
+          "label": "Pokhara FY 2083/84 notice and workbook",
+          "url": "https://www.pokharakrishi.com/notice"
+        }
+      ]
+    },
+    {
+      "id": "AEC-POKHARA-BAG",
+      "state": "UNRESOLVED",
+      "label": "Pokhara fertilizer calculator per 50 kg",
+      "evidence": "The city's current workbook matches the previously verified download byte for byte and retains the external link. At 1 km the bag cells give the depot figures. All 90 cached product-distance checks differ from 50 times the farmer per-kg figures.",
+      "next": "Use the verified per-kg city observations. Seek the city committee's signed 50 kg farmer outlet schedule or corrected workbook for a supplier price observation.",
+      "references": [
+        {
+          "label": "Pokhara published workbook",
+          "url": "https://www.pokharakrishi.com/sites/default/files/Chemical%20fertilizer%20rate%20list%202083.84.xlsx"
+        },
+        {
+          "label": "Current Pokhara notice",
+          "url": "https://www.pokharakrishi.com/notice"
+        },
+        {
+          "label": "Pokhara historic notice archive",
+          "url": "https://pokharakrishi.gov.np/notice"
+        }
+      ]
+    }
+  ],
+  "run50": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 3,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "sourceBatchesReplayed": 0,
+    "lsaHistoricalSnapshotsReviewed": 0,
+    "lsaHistoricalArchiveOnlyIds": 0,
+    "mscsNativeExportsVerified": 10,
+    "mscsStoredOriginalsPending": 747,
+    "lsaHistoricalRevisionReadAttempts": 2,
+    "lsaMirrorBlankRowsChecked": 2
+  },
+  "run51": {
+    "continuationVersion": 6,
+    "interruptedSourceVerifiedAt": "2026-11-13T12:22:41.441Z",
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 9,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "nativeSnapshotsVerified": 9,
+    "sourceBatchesReplayed": 0,
+    "sourceOriginalsRehashed": 6,
+    "mscsNativeExportsVerified": 10,
+    "mscsStoredOriginalsPending": 744,
+    "lsaHistoricalIdentitiesUnresolved": 2
+  },
+  "run52": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 5,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "nativePreSnapshotsVerified": 9,
+    "nativePostSnapshotsVerified": 9,
+    "sourceBatchesReplayed": 0,
+    "originalPdfsVerified": 6,
+    "mscsNativeExportsVerified": 10,
+    "mscsStoredOriginalsPending": 741,
+    "lsaHistoricalIdentitiesUnresolved": 2,
+    "pokharaCachedProductDistancesTested": 90
+  },
+  "run53": {
+    "sourceCheckpointCount": 1,
+    "workUnits": 4,
+    "mscsCanonicalPromotion": true,
+    "aecNewRates": 7,
+    "aecNewMaterials": 5,
+    "lsaNewIntegrityProofs": 3,
+    "nativeLocalPrePostVerified": true,
+    "nativeMainPrePostVerified": true,
+    "nativePreSnapshotsVerified": 9,
+    "nativePostSnapshotsVerified": 9,
+    "sourceBatchesReplayed": 0,
+    "originalPdfsVerified": 6,
+    "mscsNativeExportsVerified": 10,
+    "mscsStoredOriginalsPending": 738,
+    "lsaHistoricalIdentitiesUnresolved": 2,
+    "unresolvedIssueCount": 7
+  }
+}
