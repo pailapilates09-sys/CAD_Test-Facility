@@ -21,7 +21,7 @@ export function mountWardrobe(panel,{model,dialog,setGarmentFocus,initiallyOpen}
   inspect.disabled=!state?.selected;
   inspect.setAttribute('aria-pressed',String(Boolean(state?.focused)));
   inspect.textContent=state?.focused?'Back to rack':'Inspect garment';
-  model?.setWardrobe(open,lighting.value,Boolean(state));
+  model?.setWardrobe(open,lighting.value);
   if(onRack){
    const text=state.focused?'Drag to rotate the garment.':open?'Tap a garment on the rack to inspect it.':'Tap the glass doors to open the wardrobe.';
    if(status.textContent!==text)status.textContent=text;
@@ -108,6 +108,7 @@ export function mountWardrobe(panel,{model,dialog,setGarmentFocus,initiallyOpen}
 
  render();
  return {
+  get open(){return open;},
   showComparison(){
    if(!baseline)return false;
    if(state?.product&&state.product.id!==baseline.id)comparison.scrollIntoView({block:'nearest'});

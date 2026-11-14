@@ -175,9 +175,69 @@ export function productMeshes(p,{compact=false}={}) {
  return out;
 }
 
-export function storeScene(store,floorId,roomId) {
+export const cabinetFinishes = {
+ armor:{back:[150,165,172],frame:[43,54,66],shell:[151,37,52],edge:[215,157,80],light:[105,222,247],door:[104,30,44],inset:[53,62,75]},
+ blueprint:{back:[139,177,198],frame:[25,61,85],shell:[26,94,135],edge:[100,177,213],light:[123,241,253],door:[28,68,103],inset:[33,104,146]}
+};
+export const cabinetControlId='vault-control';
+
+function cabinetShell(width,depth,height,p,controls){
+ const meshes=[],front=-depth/2,mid=width/2,bottom=-.18,top=height+(controls ? .82 : .20);
+ const add=(...a)=>meshes.push(box(...a));
+ const armor=(id,c,x,y,z,w,d,h)=>meshes.push(profileSolid(id,c,x,y,z,w,d,h,[
+  [-.5,.17],[-.41,0],[.38,0],[.5,.22],[.5,.86],[.39,1],[-.4,1],[-.5,.77]
+ ]));
+ add('vault-back',p.back,mid,depth/2,0,width,.11,height);
+ add('vault-base',p.frame,mid,0,bottom,width+.48,depth+.2,.18);
+ add('vault-base-trim',p.edge,mid,front-.08,bottom+.04,width+.35,.12,.043);
+ for(const x of [-.14,width+.14]){
+  add('vault-post',p.frame,x,0,bottom,.28,depth+.26,top-bottom);
+  armor('vault-post-armor',p.shell,x,front-.11,bottom+.03,.34,.15,top-bottom-.08);
+  add('vault-post-trim',p.edge,x,front-.2,bottom+.20,.063,.034,top-bottom-.42);
+  for(const z of [bottom+.08,height-.25]){
+   add('vault-post-light',p.light,x,front-.22,z,.17,.037,.043);
+  }
+ }
+ armor('vault-brow',p.shell,mid,front-.06,height,width+.49,.26,top-height);
+ if(!controls)return {meshes};
+ add('vault-roof',p.frame,mid,0,top-.09,width+.34,depth+.16,.09);
+ for(const side of [-1,1]){
+  const x=mid+side*width*.34;
+  armor('vault-shoulder',p.edge,x,front-.214,height+.18,width*.20,.056,.35);
+  for(let i=0;i<3;i++)add('vault-vent',p.frame,x+side*(i-1)*width*.038,front-.252,height+.284,.095,.034,.14);
+  add('vault-indicator',p.light,mid+side*width*.205,front-.237,height+.51,width*.075,.03,.042);
+ }
+ armor(cabinetControlId,p.frame,mid,front-.224,height+.106,1.62,.092,.55);
+ const core=(color,offset,w,h)=>meshes.push(profileSolid(cabinetControlId,color,mid,front+offset,height+.375-h/2,w,.023,h,[
+  [-.5,.5],[-.25,0],[.25,0],[.5,.5],[.25,1],[-.25,1]
+ ]));
+ core(p.edge,-.286,.59,.40);core(p.light,-.305,.42,.29);core([225,251,255],-.324,.22,.15);
+ return {meshes,cabinet:{
+  target:{id:cabinetControlId,x:mid-.85,y:front-.341,z:height+.07,w:1.70,h:.64},
+  doors(progress){
+   const span=width/2*(1-progress);
+   if(span<.015)return [];
+   return [-1,1].flatMap(side=>{
+    const x=mid+side*(width/2-span/2);
+    return [
+     box('vault-door',p.door,x,front-.075,0,span+.004,.13,height),
+     profileSolid('vault-door',p.shell,x,front-.16,.06,span*.90,.06,height-.12,[
+      [-.5,.06],[-.29,0],[.32,0],[.5,.05],[.5,.94],[.33,1],[-.30,1],[-.5,.93]
+     ]),
+     box('vault-door',p.inset,x,front-.202,height*.29,span*.76,.037,height*.42),
+     box('vault-door',p.edge,x,front-.224,height*.30,span*.81,.029,.052),
+     box('vault-door',p.edge,x,front-.224,height*.70,span*.81,.029,.052),
+     box('vault-door',p.light,x-side*span*.29,front-.227,height*.42,span*.048,.025,height*.16)
+    ];
+   });
+  }
+ }};
+}
+
+export function storeScene(store,floorId,roomId,finish=null) {
  const scope=viewScope(store,floorId,roomId),{rooms,start,end,depth,pillars,stock}=scope;
- const slab=[203,216,209], wall=[221,227,221], trim=[128,149,141], board=[217,180,131], posts=[91,112,105], wallHeight=store.storeyHeight*.58;
+ const p=cabinetFinishes[finish],slab=p?[130,145,155]:[203,216,209],wall=p?[145,164,178]:[221,227,221];
+ const trim=p?.frame??[128,149,141],board=p?.edge??[217,180,131],posts=p?.frame??[91,112,105],wallHeight=store.storeyHeight*.58;
  const add=[], push=(...args)=>add.push(box(...args)), span=end-start;
  push('floor',slab,(start+end)/2,depth/2,-.28,span+.78,depth+.8,.28);
  push('floor',[235,230,214],(start+end)/2,2.22,.005,span-.5,3.9,.02);
@@ -191,7 +251,8 @@ export function storeScene(store,floorId,roomId) {
   for(const s of r.shelves){
    const id='shelf-'+r.id+'-'+s.id, x=s.x+s.w/2,y=s.y+s.d/2;
    for(const band of store.bands)push(id,board,x,y,band.low,s.w,s.d,store.board);
-   push(id,board,x,y,store.storeyHeight-store.board,s.w,s.d,store.board);
+   const cap=p ? .18 : store.board;
+   push(id,p?.shell??board,x,y,store.storeyHeight-cap,s.w,s.d,cap);
    for(const a of [s.x+.07,s.x+s.w-.07])for(const b of [s.y+.07,s.y+s.d-.07])push(id,posts,a,b,0,.14,.14,store.storeyHeight);
   }
  }
@@ -238,21 +299,27 @@ function wardrobeFrame(width,depth,height,levels,pitch) {
 
 // Straighten each rack to face its aisle. Extra spacing here is for browsing;
 // the floor model and plan keep the real rack coordinates.
-export function showcaseScene(store,room,shelf,level=0,focus=''){
+export function showcaseScene(store,room,shelf,level=0,focus='',finish=null){
  const rack=store.racks.get(rackKey(room,shelf));
  const stock=rack.facings.filter(f=>(!level||f.band.level===level)&&(!focus||f.id===focus));
  const levels=[...new Set(stock.map(f=>f.band.level))],cols=focus?1:store.slots;
  const cellW=focus?3.9:2.24,depth=focus?2.6:1.36,h=focus?2.62:1.08,pitch=h+(focus ? .12 : .13);
- const width=cols*cellW+.16,wood=[187,152,109],back=[235,234,222],metal=[117,125,112];
+ const width=cols*cellW+.16,wood=[187,152,109],back=[235,234,222],metal=[117,125,112],p=cabinetFinishes[finish];
  const meshes=[],targets=[];
  const height=levels.length*pitch;
  const wardrobe=store.apparel&&!focus?{x:0,y:-depth/2,z:0,w:width,h:height}:null;
+ const shell=!store.apparel&&p?cabinetShell(width,depth,height,p,!focus):null;
  if(wardrobe)meshes.push(...wardrobeFrame(width,depth,height,levels.length,pitch));
  else if(!store.apparel){
-  meshes.push(box('rack-back',back,width/2,depth/2,0,width,.11,height),
-   box('rack-side-left',metal,.04,0,0,.08,depth,height),box('rack-side-right',metal,width-.04,0,0,.08,depth,height));
-  for(const [i] of levels.entries())meshes.push(box('rack-board',wood,width/2,0,i*pitch,width,depth,.073));
-  meshes.push(box('rack-top',wood,width/2,0,height,width,depth,.07));
+  if(shell)meshes.push(...shell.meshes);
+  else meshes.push(box('rack-back',back,width/2,depth/2,0,width,.11,height),
+   box('rack-side-left',metal,.04,0,0,.08,depth,height),box('rack-side-right',metal,width-.04,0,.08,depth,height),
+   box('rack-top',wood,width/2,0,height,width,depth,.07));
+  for(const [i] of levels.entries()){
+   const z=i*pitch;
+   meshes.push(box('rack-board',p?.frame??wood,width/2,0,z,width,depth,.073));
+   if(p)meshes.push(box('rack-shelf-light',p.light,width/2,-depth/2-.007,z+.019,width-.16,.022,.029));
+  }
  }
  for(const f of stock){
   const column=focus?0:f.column,x=.08+cellW*(column+.5),z=levels.indexOf(f.band.level)*pitch;
@@ -265,5 +332,5 @@ export function showcaseScene(store,room,shelf,level=0,focus=''){
   meshes.push(...productMeshes(view));
   if(!store.apparel||!focus)targets.push({id:f.id,x:x-cellW*.48,z:z+.08,w:cellW*.96,h:pitch-.12,y:-depth/2-.01});
  }
- return {meshes,stock,targets,wardrobe,display:focus?'item':'rack',rows:levels.length};
+ return {meshes,stock,targets,wardrobe,display:focus?'item':'rack',rows:levels.length,cabinet:shell?.cabinet};
 }

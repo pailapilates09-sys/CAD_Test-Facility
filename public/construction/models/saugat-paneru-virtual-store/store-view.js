@@ -75,24 +75,36 @@ export function renderShelfLevels(store,roomId,selected='',level=0,activeRack='a
 }
 
 const clamp=(v,lo,hi)=>Math.min(hi,Math.max(lo,v));
-export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,wardrobeHotspot){
+export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,{onCabinetControl,wardrobeHotspot}={}){
  const ctx=canvas.getContext('2d');if(!ctx)return null;
- let scene,selected='',orientation='front',camera=cameraPreset(),frame=0,faces=[],map,drag,geometryKey='';
+ let scene,selected='',orientation='front',camera=cameraPreset(),frame=0,faces=[],base=[],bounds,map,drag,geometryKey='';
+ let cabinetButton,opening=1,doorTarget=1,shot=null,wardrobeLight=wardrobeLights.ice;
+ const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
  const targets=new Map(),pickable=new Set();
- const doors={position:1,target:1,from:1,start:0,light:wardrobeLights.ice};
- const reducedMotion=wardrobeHotspot&&matchMedia('(prefers-reduced-motion: reduce)');
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(draw);};
  const project=([x,y])=>[x*map.scale+map.ox,y*map.scale+map.oy];
  const projectMesh=p=>project(projectPoint(p,camera));
- const positionButton=(button,corners)=>{
-  const points=corners.map(projectMesh);
+ function positionButton(button,surface,enabled,width,height,minSize=0){
+  const points=wardrobeFace(surface).map(projectMesh);
   const [x,y]=[0,1].map(i=>Math.min(...points.map(p=>p[i])));
   const w=Math.max(...points.map(p=>p[0]))-x,h=Math.max(...points.map(p=>p[1]))-y;
-  Object.assign(button.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px'});
-  return {x,y,w,h};
- };
+  const bw=Math.max(w,minSize),bh=Math.max(h,minSize);
+  Object.assign(button.style,{left:x+(w-bw)/2+'px',top:y+(h-bh)/2+'px',width:bw+'px',height:bh+'px'});
+  const visible=enabled&&x+w>0&&x<width&&y+h>0&&y<height;
+  button.hidden=!visible;button.tabIndex=visible?0:-1;
+ }
+ function setDoors(open){
+  const target=Number(open);
+  if(target!==doorTarget){
+   doorTarget=target;
+   shot=(scene?.cabinet||scene?.wardrobe)&&!reducedMotion.matches?
+    {from:opening,to:target,start:performance.now(),duration:scene.wardrobe?420:280}:null;
+   if(!shot)opening=target;
+  }
+  schedule();
+ }
 
- function draw(now){
+ function draw(time){
   frame=0;const width=canvas.clientWidth,height=canvas.clientHeight;
   if(!width||!height||!scene)return;
   const ratio=Math.min(devicePixelRatio||1,2);
@@ -100,44 +112,49 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,wardrobe
   if(canvas.height!==Math.round(height*ratio))canvas.height=Math.round(height*ratio);
   ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,width,height);
   const key=camera.yaw+'/'+camera.pitch;
-  if(key!==geometryKey){faces=storeFaces(scene.meshes,camera);geometryKey=key;}
-  const b=faceBounds(faces);if(!Number.isFinite(b.left))return;
+  if(key!==geometryKey){base=storeFaces(scene.meshes,camera);bounds=faceBounds(base);geometryKey=key;}
+  if(shot){
+   const progress=clamp((time-shot.start)/shot.duration,0,1);
+   const easing=progress*progress*(3-2*progress);
+   opening=shot.from+(shot.to-shot.from)*easing;
+   if(progress<1)schedule();else shot=null;
+  }
+  const movingDoors=scene.cabinet&&opening<1?storeFaces(scene.cabinet.doors(opening),camera):[];
+  if(movingDoors.length){
+   const ordered=[];let i=0;
+   for(const face of base){
+    while(i<movingDoors.length&&movingDoors[i].depth<face.depth)ordered.push(movingDoors[i++]);
+    ordered.push(face);
+   }
+   faces=ordered.concat(movingDoors.slice(i));
+  }else faces=base;
+  const b=bounds;if(!Number.isFinite(b.left))return;
   const scale=Math.min((width-24)/Math.max(b.right-b.left,.01),(height-28)/Math.max(b.bottom-b.top,.01))*camera.zoom;
   map={scale,ox:width/2-(b.left+b.right)*scale/2,oy:height/2-(b.top+b.bottom)*scale/2};
   for(const f of faces){
    const points=f.points.map(project);
    ctx.beginPath();ctx.moveTo(...points[0]);ctx.lineTo(...points[1]);ctx.lineTo(...points[2]);ctx.closePath();
    const selectedFace=f.itemId===selected&&(orientation==='angled'||scene.display==='floor');
-   const color=f.itemId==='wardrobe-led'?doors.light:selectedFace?f.rgb.map((v,i)=>v*.7+[255,199,88][i]*.3):f.rgb;
+   const color=f.itemId==='wardrobe-led'?wardrobeLight:selectedFace?f.rgb.map((v,i)=>v*.7+[255,199,88][i]*.3):f.rgb;
    ctx.fillStyle=colorCSS(color);
    ctx.fill();ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=.45;ctx.stroke();
   }
-  if(doors.start){
-   const progress=clamp((now-doors.start)/420,0,1);
-   doors.position=doors.from+(doors.target-doors.from)*(1-Math.pow(1-progress,3));
-   if(progress<1)schedule();else doors.start=0;
-  }
+  if(scene.wardrobe&&opening<1)drawWardrobeDoors(ctx,scene.wardrobe,projectMesh,opening,wardrobeLight);
+  for(const t of scene.targets??[])positionButton(targets.get(t.id),t,opening>=.999&&orientation==='front',width,height);
+  if(cabinetButton)positionButton(cabinetButton,scene.cabinet.target,orientation==='front',width,height,44);
   if(wardrobeHotspot){
-   const cabinet=scene.wardrobe;
-   wardrobeHotspot.hidden=!cabinet||doors.target===1;
-   if(cabinet){
-    if(doors.position<1)drawWardrobeDoors(ctx,cabinet,projectMesh,doors.position,doors.light);
-    if(!wardrobeHotspot.hidden)positionButton(wardrobeHotspot,wardrobeFace(cabinet));
-   }
-  }
-  const stockVisible=!scene.wardrobe||doors.position===1;
-  for(const t of scene.targets??[]){
-   const button=targets.get(t.id);if(!button)continue;
-   const {x,y,w,h}=positionButton(button,wardrobeFace(t));
-   const visible=stockVisible&&orientation==='front'&&x+w>0&&x<width&&y+h>0&&y<height;
-   button.hidden=!visible;button.tabIndex=visible?0:-1;
+   wardrobeHotspot.hidden=!scene.wardrobe||doorTarget===1;
+   if(!wardrobeHotspot.hidden)positionButton(wardrobeHotspot,scene.wardrobe,true,width,height);
   }
  }
 
  function hit(ev){
-  if(!map||scene.wardrobe&&doors.position<1)return null;
+  if(!map)return null;
   const r=canvas.getBoundingClientRect(),point=[(ev.clientX-r.left-map.ox)/map.scale,(ev.clientY-r.top-map.oy)/map.scale];
-  for(let i=faces.length-1;i>=0;i--)if(pointInTriangle(point,faces[i].points))return pickable.has(faces[i].itemId)?faces[i].itemId:null;
+  for(let i=faces.length-1;i>=0;i--)if(pointInTriangle(point,faces[i].points)){
+   const id=faces[i].itemId;
+   return id===scene.cabinet?.target.id||opening>=.999&&pickable.has(id)?id:null;
+  }
   return null;
  }
  function angle(){
@@ -159,7 +176,8 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,wardrobe
  canvas.addEventListener('pointerup',ev=>{
   if(drag?.pointer!==ev.pointerId)return;
   const pick=!drag.moved?hit(ev):null;drag=null;
-  if(pick)onSelect(pick);
+  if(pick===scene?.cabinet?.target.id&&pick)onCabinetControl?.();
+  else if(pick)onSelect(pick);
  });
  canvas.addEventListener('pointercancel',()=>{drag=null;});
  canvas.addEventListener('keydown',ev=>{
@@ -173,12 +191,19 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,wardrobe
  }
  new ResizeObserver(schedule).observe(canvas);
  return {
-  setScene(next,id,view='front'){
+  setScene(next,id,view='front',{open=true,keepCamera=false}={}){
    scene=next;geometryKey='';map=null;targets.clear();pickable.clear();orientation=view;
-   camera=cameraPreset(orientation,scene.display);
+   opening=doorTarget=Number(open);shot=null;cabinetButton=null;
+   if(!keepCamera)camera=cameraPreset(orientation,scene.display);
    canvas.parentElement.dataset.display=scene.display;canvas.parentElement.style.setProperty('--rack-rows',scene.rows??1);
    const group=document.createDocumentFragment(),stock=new Map(scene.stock.map(f=>[f.id,f]));
    for(const f of scene.stock)pickable.add(f.id);
+   if(scene.cabinet&&onCabinetControl){
+    cabinetButton=document.createElement('button');cabinetButton.type='button';cabinetButton.className='store-model-target store-cabinet-trigger';cabinetButton.hidden=true;
+    cabinetButton.title='Cabinet controls';cabinetButton.dataset.cabinetTrigger='';cabinetButton.setAttribute('aria-label','Open cabinet controls from the cabinet');
+    cabinetButton.setAttribute('aria-controls','store-cabinet-options');cabinetButton.setAttribute('aria-expanded','false');
+    cabinetButton.addEventListener('click',onCabinetControl);group.append(cabinetButton);
+   }
    for(const t of scene.targets??[]){
     const f=stock.get(t.id),b=document.createElement('button');b.type='button';b.className='store-model-target';b.hidden=true;
     b.dataset.modelFacing=f.id;b.title=f.name;b.setAttribute('aria-label','Inspect '+f.name+' at shelf level '+f.band.level);
@@ -186,16 +211,11 @@ export function createStore3D(canvas,targetsRoot,onSelect,onAngleChange,wardrobe
    }
    targetsRoot.replaceChildren(group);select(id);
   },
-  setWardrobe(open,light,animate=true){
-   doors.light=wardrobeLights[light];
-   const target=Number(open);
-   if(target!==doors.target){
-    doors.target=target;doors.from=doors.position;
-    doors.start=animate&&scene?.wardrobe&&!reducedMotion?.matches?performance.now():0;
-    if(!doors.start)doors.position=target;
-   }
-   schedule();
+  setWardrobe(open,light){
+   wardrobeLight=wardrobeLights[light];
+   setDoors(open);
   },
+  setCabinetOpen:setDoors,
   select,orientation(value){orientation=value;camera=cameraPreset(value,scene?.display);schedule();},
   turn(delta){if(orientation==='front'){angle();camera=cameraPreset('angled',scene?.display);}camera.yaw+=delta;schedule();},
   zoom(value){camera.zoom=value;schedule();},fit(){camera=cameraPreset(orientation,scene?.display);schedule();}
