@@ -70,13 +70,19 @@ function renderRunWork(status,view){
  return `<section class="xe-run-work" aria-labelledby="xe-run-work-title"><h3 id="xe-run-work-title">Verified work in this run</h3><p>All four lanes received work. New integrity and recovery proofs are separate from canonical content extraction.</p><div class="table-wrap"><table><thead><tr><th scope="col">Lane</th><th scope="col">Verified this run</th><th scope="col">Still pending</th></tr></thead><tbody>${view.lanes.map(l=>`<tr><th scope="row">${esc(l.id)}</th><td>${esc(summaries[l.id])}</td><td>${esc(pending[l.id])}</td></tr>`).join('')}</tbody></table></div></section>`;
 }
 
+function renderIssueComparison(comparison) {
+  if (!comparison?.rows?.length) return '';
+  const rows = comparison.rows.map(row => `<li><strong>${esc(row.product)}</strong> · ${esc(row.cityFarmerNprPerKg)} NPR/kg farmer rate · ${esc(row.depotNprPer50Kg)} NPR depot bag · ${esc(row.derivedFarmerNprPer50Kg)} NPR at 50 × farmer rate · ${esc(row.differenceNpr)} NPR difference</li>`).join('');
+  return `<ul aria-label="${esc(comparison.label)}">${rows}</ul>`;
+}
+
 function renderIssueRegister(status){
   const issues=status.issues;
   if(!Array.isArray(issues)||!issues.length)return '';
   const rows=issues.map(issue=>{
     const references=(issue.references??[]).filter(ref=>ref.url.startsWith('https://'))
       .map(ref=>'<a href="'+esc(ref.url)+'">'+esc(ref.label)+'</a>').join(' · ');
-    return '<li data-extraction-issue="'+esc(issue.id)+'" data-issue-state="'+esc(issue.state)+'"><details><summary><strong>'+esc(issue.label)+'</strong> · '+esc(issue.state)+'</summary><p>'+esc(issue.evidence)+'</p><p>'+esc(issue.next)+'</p>'+(references?'<p><small>'+references+'</small></p>':'')+'</details></li>';
+    return '<li data-extraction-issue="'+esc(issue.id)+'" data-issue-state="'+esc(issue.state)+'"><details><summary><strong>'+esc(issue.label)+'</strong> · '+esc(issue.state)+'</summary><p>'+esc(issue.evidence)+'</p>'+renderIssueComparison(issue.comparison)+'<p>'+esc(issue.next)+'</p>'+(references?'<p><small>'+references+'</small></p>':'')+'</details></li>';
   }).join('');
   return '<section class="xe-run-work" id="extraction-issues" aria-labelledby="extraction-issues-title"><h3 id="extraction-issues-title">Issue register</h3><p>Expand an issue to see the evidence and what would close it. <a href="./recovery/report.md">Read the investigation history and sources ↗</a></p><ul>'+rows+'</ul></section>';
 }

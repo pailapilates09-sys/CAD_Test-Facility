@@ -1,0 +1,61 @@
+# Four-in-one extraction · Run 54
+
+16 November 2026, Nepal time. The run opened at 16:16:01 and has a 17:16:01 cutoff. All source receipts and native register reconciliations passed by 16:36:20.
+
+[Live dashboard](https://pailapilates09-sys.github.io/CAD_Test-Facility/progress/) · [Run 53 report](https://github.com/pailapilates09-sys/CAD_Test-Facility/blob/d9e77dc14a37cd81ebb1384afaca2c9ae45bd36b/progress/recovery/2026-11-14-run53/cp563/report.md) · [GitHub Actions](https://github.com/pailapilates09-sys/CAD_Test-Facility/actions/workflows/pages.yml)
+
+| Lane | Verified this run | Local / Main | Resume |
+| --- | --- | ---: | --- |
+| MSCH | MScH CP564/B564 added eight files and 35,482 metadata bytes. The catalogue has 7,162 records with 557 folders queued. Next B565, folder 57. | 555 / 555 | B565 · 57 |
+| MSCS | MScS AQ-CP108/B096 verified three stored PDFs and 7,903,249 original bytes. Coverage is 1,122 of 1,857 with 735 pending and ten separate native export proofs. Next B097. | 28 / 28 | B097 · Fresh bounded original-byte hash selection |
+| LSA | Lok Sewa retains 1,242 catalogue records and reached 66 verified PDF occurrences and 37 distinct hashes. Two historical NEA file identities remain open. | 53 / 53 | B081 reconciliation · Identity-level evidence for the two historical files |
+| AEC | AEC G076 Part 21 verified nine certified and foundation-grade maize seed rates, RO-2509 to RO-2517. Next Part 22, RO-2518, improved potato seed. | 33 / 33 | G076 PART22 · RO-2518, improved potato seed |
+
+## Kaski maize seed prices
+
+The signed FY 2083/84 current column gives nine explicit kg rates on printed page 36 / PDF page 41. The preceding FY confirms all nine, with its first certified row on p40 and the remainder on p41. The Infrastructure Development Office copy gives the same page content. Other Decisions item 6 excludes VAT. Effective day and freight remain open. [DAO posting](https://daokaski.moha.gov.np/post/ka-sa-ka-ja-l-l-ka-aa-va-ka-sa-va-ka-ta-ja-l-l-tharara-ta) · [DCC posting](https://dcckaski.gov.np/detail/53) · [Current page 41](https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=41) · [IDO publication](https://idokaski.gandaki.gov.np/post/district-rate-kaski-2083-84) · [VAT, page 80](https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=80) · [Prior page 40](https://dcckaski.gov.np/dcc-notice-file/Notices-202508031300507062.pdf#page=40) · [Prior page 41](https://dcckaski.gov.np/dcc-notice-file/Notices-202508031300507062.pdf#page=41)
+
+| Observation | Seed | NPR/kg |
+| --- | --- | ---: |
+| RO-2509 | Manakamana 1 maize seed, certified grade | 125.00 |
+| RO-2510 | Manakamana 3 maize seed, certified grade | 125.00 |
+| RO-2511 | Arun 2 maize seed, certified grade | 130.00 |
+| RO-2512 | Rampur Composite maize seed, certified grade | 130.00 |
+| RO-2513 | Manakamana 1 maize seed, foundation grade | 135.00 |
+| RO-2514 | Manakamana 3 maize seed, foundation grade | 135.00 |
+| RO-2515 | Rampur Composite maize seed, foundation grade | 140.00 |
+| RO-2516 | Arun 2 maize seed, foundation grade | 140.00 |
+| RO-2517 | Other maize seed, foundation grade | 135.00 |
+
+## Pokhara fertilizer at 1 km
+
+The static workbook provides depot amounts and farmer per-kg rates. The quantity calculation multiplies the verified farmer rate by 50. A city-issued 50 kg farmer price is still unresolved. The workbook excludes the plastic bag. [City notice](https://www.pokharakrishi.com/notice) · [Issued workbook](https://www.pokharakrishi.com/sites/default/files/Chemical%20fertilizer%20rate%20list%202083.84.xlsx)
+
+| Product | Farmer NPR/kg | Depot NPR/50 kg | 50 × farmer rate, NPR | Difference, NPR |
+| --- | ---: | ---: | ---: | ---: |
+| Urea | 19.45 | 908.50 | 972.50 | 64.00 |
+| DAP | 48.45 | 2358.50 | 2422.50 | 64.00 |
+| Potash | 36.45 | 1758.50 | 1822.50 | 64.00 |
+
+## Open issues
+
+| Issue | State | Evidence and next step |
+| --- | --- | --- |
+| Two historical Lok Sewa NEA identities | UNRESOLVED | The B080 audit records one 4,652-byte shortfall in each of NEA Class files and Standard files-Package. A connected Drive trash query covering all 55 catalogued folders in the two branches returned zero visible results. A targeted archive-name search found the existing B080 audit without a Phase 1A identity list. The confirmed index now holds 66 occurrences and 37 distinct hashes. Obtain the original Phase 1A stable-ID inventory or a permitted folder-scoped Drive Activity export with target item IDs and event times. Visibility depends on the account's access. [Drive Activity ancestor query](https://developers.google.com/workspace/drive/activity/v2/reference/rest/v2/activity/query) · [NEA public curriculum](https://www.nea.org.np/en/recruitment/open/ocurriculum) · [Drive revision access](https://developers.google.com/workspace/drive/api/guides/manage-revisions) · [Drive Activity visibility](https://developers.google.com/workspace/drive/activity/v2) |
+| Kaski goat manure unit | UNRESOLVED | The signed current row lists NPR 6.00 with a blank unit. The prior district schedule has no corresponding goat-manure row. Category-level agriculture program material leaves the exact district rate basis unverified. FY 2081/82 section 14(a) also has no equivalent goat-manure line. The provincial archive's FY 2081/82 attachment matches the earlier DAO PDF byte for byte and supplies the same historical reference. Find a same-district FY 2083/84 issuer clarification. [Kaski signed schedule, PDF p39](https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=39) · [Prior Kaski schedule, PDF p39](https://dcckaski.gov.np/dcc-notice-file/Notices-202508031300507062.pdf#page=39) · [Kaski Agriculture Development Office](https://www.kaski.ado.gov.np/) · [Kaski FY 2081/82 official schedule](https://daokaski.moha.gov.np/post/aa-b-ka-l-ga-ka-sa-ka-ja-l-l-ka-sa-va-ka-ta-ja-l-l-tharara-ta) · [Gandaki Infrastructure Directorate archive](https://idd.gandaki.gov.np/page/district-rate-2081-82) |
+| Kaski hive-with-colony unit | UNRESOLVED | Both district schedules give NPR 9,500.00 for the hive with a colony and leave its unit blank. The Kaski agriculture progress report counts colony hives as sets in a separate distribution program. The pricing unit of the district entry still needs confirmation. The FY 2081/82 schedule lists an ordinary hive but gives no separate colony-hive rate. Myagdi's agriculture report counts hives with colonies as individual items for a separate cost study. The Kaski program counts sets. Neither document identifies the district price unit. Find an applicable written correction or issuer clarification. [Current signed Kaski schedule, PDF p40](https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=40) · [Prior signed Kaski schedule, PDF p39](https://dcckaski.gov.np/dcc-notice-file/Notices-202508031300507062.pdf#page=39) · [Kaski agriculture program report](https://kaski.ado.gov.np/sites/default/files/2025-08/%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%AE%20%E0%A4%B8%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A4%BF%E0%A4%95%E0%A4%B0%E0%A4%A3%202082-083.pdf) · [Kaski FY 2081/82 official schedule](https://daokaski.moha.gov.np/post/aa-b-ka-l-ga-ka-sa-ka-ja-l-l-ka-sa-va-ka-ta-ja-l-l-tharara-ta) · [Myagdi Agriculture Knowledge Centre, table 42](https://myagdi.akc.gov.np/images/news/17555009145004_book%20setting%20%281%29.pdf) |
+| Kaski chemical fertilizer rates | UNRESOLVED | Section 14(b) directs users to a Government of Nepal rate. The national procedure distinguishes import-point, depot and outlet prices, and Pokhara publishes a city-specific farmer outlet price. The older city rates are also limited to Pokhara. FY 2081/82 PDF p31 uses the same national-rate cross-reference. The municipal agriculture handbook independently distinguishes historical depot bag and farmer-sale prices. The FY 2083/84 district cross-reference still lacks an identified tier. Obtain an applicable government or district order specifying the price tier, product and effective period for the Kaski entry. [Current Kaski schedule, PDF p39](https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=39) · [Government fertilizer procedure and attachments](https://daorasuwa.moha.gov.np/post/ana-tha-naka-mal-va-taranae-va-yavasa-tha-pana-ka-ra-yava-thha) · [Current Pokhara city prices](https://www.pokharakrishi.com/notice) · [Pokhara historic notice archive](https://pokharakrishi.gov.np/notice) · [Kaski FY 2081/82 official schedule](https://daokaski.moha.gov.np/post/aa-b-ka-l-ga-ka-sa-ka-ja-l-l-ka-sa-va-ka-ta-ja-l-l-tharara-ta) · [Pokhara agriculture handbook, historical](https://pokharakrishi.gov.np/sites/default/files/2022-08/krishi-book-final-edited.pdf) |
+| Kaski exact effective day | UNRESOLVED | The signed minutes give the approval date. The DCC portal gives Shrawan 7 as the posting date. The signed scope gives FY 2083/84. A search of the DAO and provincial rate archives returned no applicable commencement notice. The Infrastructure Development Office copy has identical page content, including the approval minutes. Find an issuer decision specifying the date. [Current DAO publication](https://daokaski.moha.gov.np/post/ka-sa-ka-ja-l-l-ka-aa-va-ka-sa-va-ka-ta-ja-l-l-tharara-ta) · [Current DCC publication](https://dcckaski.gov.np/detail/53) · [Public Procurement Rules, rule 148](https://old.aepc.gov.np/uploads/docs/public-procurement-rules-2064-1571135921.pdf) · [Infrastructure Development Office, Kaski schedule](https://idokaski.gandaki.gov.np/post/district-rate-kaski-2083-84) |
+| Transport basis for the new Kaski rates | UNRESOLVED | The certified and foundation-grade maize rows and the predecessor schedule provide kg rates. The individual rows have no freight terms. All nine new master rows record transport Unknown. Find source terms for the specific seed rows. [Current Kaski schedule, PDF p41](https://dcckaski.gov.np/dcc-notice-file/Notices-20260723111520765.pdf#page=41) · [Prior Kaski schedule, PDF p40](https://dcckaski.gov.np/dcc-notice-file/Notices-202508031300507062.pdf#page=40) · [Kaski agriculture program listings](https://www.kaski.ado.gov.np/) · [Prior Kaski schedule, PDF p41](https://dcckaski.gov.np/dcc-notice-file/Notices-202508031300507062.pdf#page=41) |
+| Pokhara fertilizer calculator per 50 kg | UNRESOLVED | At 1 km the three calculator amounts equal the explicitly labelled depot bag figures. Subtracting the depot price from 50 times the verified farmer per-kg price gives NPR 64.00 for each product. All 90 cached results differ by NPR 64.00–177.40. The cache's increase above the 1 km bag value follows the unscaled per-kg increase to within NPR 0.21. The workbook does not include the external sheet's formulas. Use the verified per-kg observations for quantity calculations. Keep the 50 kg equivalents labelled as arithmetic. A city-issued bag schedule or corrected workbook would verify the official farmer bag price. [Pokhara published workbook](https://www.pokharakrishi.com/sites/default/files/Chemical%20fertilizer%20rate%20list%202083.84.xlsx) · [Current Pokhara notice](https://www.pokharakrishi.com/notice) · [Pokhara historic notice archive](https://pokharakrishi.gov.np/notice) · [Pokhara agriculture handbook, historical price bases](https://pokharakrishi.gov.np/sites/default/files/2022-08/krishi-book-final-edited.pdf) |
+
+## Evidence and rollback
+
+The four source receipts passed exact byte readback. Main recorded eight artifacts and nine lineage edges with four acknowledgements. The four reciprocal Local receipts and nine native POST snapshots were checked. [Run 53 rollback commit](https://github.com/pailapilates09-sys/CAD_Test-Facility/commit/d9e77dc14a37cd81ebb1384afaca2c9ae45bd36b)
+
+| Lane | Receipt bytes | SHA-256 |
+| --- | ---: | --- |
+| MSCH | 7,822 | `df118983badfbd86cf4c5003fe2a3f0c50b6c349dc7da62a7d635293aac80a63` |
+| MSCS | 6,552 | `457ea113384ba35d8800da764bc3faf886015689d2c2ca762d9313e80cae9d43` |
+| LSA | 3,495 | `adefadda4c00c80ce95f1c984979775f2b7c1442fe6a0d1da34565c90061f02a` |
+| AEC | 10,349 | `8f4e43d8b6ecbd2cb9c046d59c2dce07fd810d3f3e2404b03f111ec19704ca00` |
