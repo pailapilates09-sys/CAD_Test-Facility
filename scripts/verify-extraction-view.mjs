@@ -25,6 +25,10 @@ function checkHTML(html){
   assert.ok(html.includes(lane.checkpoint),'Checkpoint missing '+lane.id);
  }
  for(const f of expected.formats)assert.ok(html.includes('data-format="'+f.id+'"'),'Missing format '+f.id);
+ for(const rate of expected.lanes.flatMap(lane => lane.newRates).filter(rate => rate.status === 'Unresolved')) {
+  assert.match(rate.id, /^RO-[0-9]+$/);
+  assert.ok(html.includes(`<tr data-rate-state="UNRESOLVED"><th scope="row">${rate.id}</th>`), 'Unresolved rate marker missing: '+rate.id);
+ }
  assert.ok(html.includes('proposed products, not completed findings.'),'Readiness boundary missing');
  assert.ok(html.includes('Stages show readiness, not equal percentages.'),'Stage denominator note missing');
  assert.ok(!html.includes('EXTRACTION_REVISION'),'Unresolved asset version');
